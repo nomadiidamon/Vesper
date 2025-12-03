@@ -55,10 +55,13 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>VZ_PLATFORM_WINDOWS;VZ_BUILD_DLL</PreprocessorDefinitions>
+      <PreprocessorDefinitions>VZ_PLATFORM_WINDOWS;VZ_BUILD_DLL;_UNICODE</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(SolutionDir)Vesper\vendor\spdlog\include</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>
@@ -72,10 +75,13 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>VZ_PLATFORM_WINDOWS;VZ_BUILD_DLL</PreprocessorDefinitions>
+      <PreprocessorDefinitions>VZ_PLATFORM_WINDOWS;VZ_BUILD_DLL;_UNICODE</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(SolutionDir)Vesper\vendor\spdlog\include</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>
@@ -84,12 +90,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\Vesper\Log.h" />
     <ClInclude Include="src\Vesper\Application.h" />
     <ClInclude Include="src\Vesper\EntryPoint.h" />
     <ClInclude Include="src\Vesper.h" />
     <ClInclude Include="src\Vesper\Core.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Vesper\Log.cpp" />
     <ClCompile Include="src\Vesper\Application.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
