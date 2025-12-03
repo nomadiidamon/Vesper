@@ -19,6 +19,7 @@
     <ClInclude Include="src\Vesper\Log.h">
       <Filter>Vesper</Filter>
     </ClInclude>
+    <ClInclude Include="src\vzpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Vesper\Application.cpp">
@@ -27,5 +28,6 @@
     <ClCompile Include="src\Vesper\Log.cpp">
       <Filter>Vesper</Filter>
     </ClCompile>
+    <ClCompile Include="src\vzpch.cpp" />
   </ItemGroup>
 </Project>

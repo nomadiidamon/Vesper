@@ -18,6 +18,9 @@ project "Vesper"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+	pchheader "vzpch.h"
+	pchsource "Vesper/src/vzpch.cpp"
+
 	files 
 	{
 		"%{prj.name}/src/**.h",
