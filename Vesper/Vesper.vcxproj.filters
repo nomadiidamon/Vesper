@@ -38,6 +38,7 @@
       <Filter>Vesper</Filter>
     </ClInclude>
     <ClInclude Include="src\vzpch.h" />
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Vesper\Application.cpp">
@@ -47,5 +48,6 @@
       <Filter>Vesper</Filter>
     </ClCompile>
     <ClCompile Include="src\vzpch.cpp" />
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
   </ItemGroup>
 </Project>
