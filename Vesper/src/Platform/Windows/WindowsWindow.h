@@ -1,7 +1,7 @@
 #pragma once
 
-#include <GLFW/glfw3.h>
 #include "Vesper/Window.h"
+#include <GLFW/glfw3.h>
 
 namespace Vesper {
 

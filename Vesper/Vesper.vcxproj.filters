@@ -1,53 +1,117 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Vesper">
-      <UniqueIdentifier>{3A4FDFD7-26F1-09AE-0FAC-1D02FBEC90FE}</UniqueIdentifier>
+    <Filter Include="src">
+      <UniqueIdentifier>{2DAB880B-99B4-887C-2230-9F7C8E38947C}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Vesper\Events">
-      <UniqueIdentifier>{DE55100A-4A16-8C40-1351-D5BD7FD0D01C}</UniqueIdentifier>
+    <Filter Include="src\Platform">
+      <UniqueIdentifier>{21CA02E5-0D2D-9289-B6B2-CA3FA2F45D0C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Platform\OpenGL">
+      <UniqueIdentifier>{35A49437-A105-7245-2A73-B8F796D3A804}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Platform\Windows">
+      <UniqueIdentifier>{5B054582-4794-CE4B-F0B2-E246DC20DFF1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Vesper">
+      <UniqueIdentifier>{71283E35-5DE0-7F82-C6E7-58DEB2BE1A73}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Vesper\Events">
+      <UniqueIdentifier>{35CB4581-A1E1-4317-EA58-CF3856AE149F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Vesper\ImGui">
+      <UniqueIdentifier>{5B6EB932-4767-D884-7099-BD095CF1B790}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor">
+      <UniqueIdentifier>{B3738122-9F15-ACF8-88D0-BF4C74113349}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\imgui">
+      <UniqueIdentifier>{5D3BD0F0-499E-5F95-F223-984BDE652B18}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\imgui\backends">
+      <UniqueIdentifier>{27CEAEAF-933A-6AAA-5C2E-0208C8598C12}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Vesper.h" />
+    <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h">
+      <Filter>src\Platform\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
+      <Filter>src\Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vesper.h">
+      <Filter>src</Filter>
+    </ClInclude>
     <ClInclude Include="src\Vesper\Application.h">
-      <Filter>Vesper</Filter>
+      <Filter>src\Vesper</Filter>
     </ClInclude>
     <ClInclude Include="src\Vesper\Core.h">
-      <Filter>Vesper</Filter>
+      <Filter>src\Vesper</Filter>
     </ClInclude>
     <ClInclude Include="src\Vesper\EntryPoint.h">
-      <Filter>Vesper</Filter>
+      <Filter>src\Vesper</Filter>
     </ClInclude>
     <ClInclude Include="src\Vesper\Events\ApplicationEvent.h">
-      <Filter>Vesper\Events</Filter>
+      <Filter>src\Vesper\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Vesper\Events\Event.h">
-      <Filter>Vesper\Events</Filter>
+      <Filter>src\Vesper\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Vesper\Events\KeyEvent.h">
-      <Filter>Vesper\Events</Filter>
+      <Filter>src\Vesper\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Vesper\Events\MouseEvent.h">
-      <Filter>Vesper\Events</Filter>
+      <Filter>src\Vesper\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vesper\ImGui\ImGuiLayer.h">
+      <Filter>src\Vesper\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vesper\Layer.h">
+      <Filter>src\Vesper</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vesper\LayerStack.h">
+      <Filter>src\Vesper</Filter>
     </ClInclude>
     <ClInclude Include="src\Vesper\Log.h">
-      <Filter>Vesper</Filter>
+      <Filter>src\Vesper</Filter>
     </ClInclude>
     <ClInclude Include="src\Vesper\Window.h">
-      <Filter>Vesper</Filter>
+      <Filter>src\Vesper</Filter>
     </ClInclude>
-    <ClInclude Include="src\vzpch.h" />
-    <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
+    <ClInclude Include="src\vzpch.h">
+      <Filter>src</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp">
+      <Filter>src\Platform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
+      <Filter>src\Platform\Windows</Filter>
+    </ClCompile>
     <ClCompile Include="src\Vesper\Application.cpp">
-      <Filter>Vesper</Filter>
+      <Filter>src\Vesper</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Vesper\ImGui\ImGuiLayer.cpp">
+      <Filter>src\Vesper\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Vesper\Layer.cpp">
+      <Filter>src\Vesper</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Vesper\LayerStack.cpp">
+      <Filter>src\Vesper</Filter>
     </ClCompile>
     <ClCompile Include="src\Vesper\Log.cpp">
-      <Filter>Vesper</Filter>
+      <Filter>src\Vesper</Filter>
     </ClCompile>
-    <ClCompile Include="src\vzpch.cpp" />
-    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
+    <ClCompile Include="src\vzpch.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\imgui\backends\imgui_impl_glfw.cpp">
+      <Filter>vendor\imgui\backends</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\imgui\backends\imgui_impl_opengl3.cpp">
+      <Filter>vendor\imgui\backends</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

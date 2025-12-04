@@ -43,7 +43,6 @@ namespace Vesper
 		{
 			return GetCategoryFlags() & category;
 		}
-	protected:
 		bool Handled = false;
 	};
 

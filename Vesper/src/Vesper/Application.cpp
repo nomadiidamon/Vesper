@@ -1,7 +1,7 @@
 #include "vzpch.h"
 #include "Application.h"
 
-#include <GLFW/glfw3.h>
+#include <glad/glad.h>
 
 
 
@@ -9,8 +9,13 @@ namespace Vesper {
 
 #define BIND_EVENT_FN(x) std::bind(&Application::x, this, std::placeholders::_1)
 
+	Application* Application::s_Instance = nullptr;
+
 	Application::Application()
 	{
+		VZ_CORE_ASSERT(!s_Instance, "Application already exists!");
+		s_Instance = this;
+
 		m_Window = std::unique_ptr<Window>(Window::Create());
 		m_Window->SetEventCallback(BIND_EVENT_FN(OnEvent));
 	}
@@ -19,11 +24,31 @@ namespace Vesper {
 	{
 	}
 
+	void Application::PushLayer(Layer* layer)
+	{
+		m_LayerStack.PushLayer(layer);
+		layer->OnAttach();
+	}
+
+	void Application::PushOverlay(Layer* overlay)
+	{
+		m_LayerStack.PushOverlay(overlay);
+		overlay->OnAttach();
+	}
+
 	void Application::OnEvent(Event& e)
 	{
 		EventDispatcher dispatcher(e);
 		dispatcher.Dispatch<WindowCloseEvent>(BIND_EVENT_FN(OnWindowClose));
 		VZ_CORE_INFO("{0}", e);
+
+		for (auto it = m_LayerStack.end(); it != m_LayerStack.begin(); )
+		{
+			(*--it)->OnEvent(e);
+			if (e.Handled)
+				break;
+		}
+
 	}
 
 
@@ -34,8 +59,13 @@ namespace Vesper {
 		{
 			glClearColor(0.1f, 0.8f, 0.1f, 1.0f);
 			glClear(GL_COLOR_BUFFER_BIT);
-			m_Window->OnUpdate();
 
+			// Update layers first for draw order
+			for (auto layer : m_LayerStack)
+				layer->OnUpdate();
+
+			// Update window second
+			m_Window->OnUpdate();
 		};
 	}
 

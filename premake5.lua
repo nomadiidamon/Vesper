@@ -12,7 +12,12 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 IncludeDir = {}
 IncludeDir["GLFW"] = "Vesper/vendor/GLFW/include"
+IncludeDir["Glad"] = "Vesper/vendor/Glad/include"
+IncludeDir["ImGui"] = "Vesper/vendor/imgui"
+
 include "Vesper/vendor/GLFW"
+include "Vesper/vendor/Glad"
+include "Vesper/vendor/imgui"
 
 project "Vesper"
 	location "Vesper"
@@ -28,19 +33,29 @@ project "Vesper"
 	files 
 	{
 		"%{prj.name}/src/**.h",
-		"%{prj.name}/src/**.cpp"
+		"%{prj.name}/src/**.cpp",
+		"Vesper/vendor/imgui/backends/imgui_impl_glfw.cpp",
+		"Vesper/vendor/imgui/backends/imgui_impl_opengl3.cpp",
 	}
+
+	filter "files:Vesper/vendor/imgui/backends/**.cpp"
+		flags { "NoPCH" }
+	filter {}
 
 	includedirs
 	{
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
-		"%{IncludeDir.GLFW}"
+		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.Glad}",
+		"%{IncludeDir.ImGui}"
 	}
 
 	links
 	{
 		"GLFW",
+		"Glad",
+		"ImGui",
 		"opengl32.lib"
 	}
 
@@ -55,7 +70,9 @@ project "Vesper"
 	defines
 	{
 		"VZ_PLATFORM_WINDOWS", 
-		"VZ_BUILD_DLL" 
+		"VZ_BUILD_DLL",
+		"GLFW_INCLUDE_NONE",
+		"IMGUI_IMPL_OPENGL_LOADER_GLAD"
 	}
 
 	postbuildcommands
