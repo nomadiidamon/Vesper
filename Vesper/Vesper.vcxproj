@@ -159,7 +159,12 @@
     <ClInclude Include="src\Vesper\Application.h" />
     <ClInclude Include="src\Vesper\Core.h" />
     <ClInclude Include="src\Vesper\EntryPoint.h" />
+    <ClInclude Include="src\Vesper\Events\ApplicationEvent.h" />
+    <ClInclude Include="src\Vesper\Events\Event.h" />
+    <ClInclude Include="src\Vesper\Events\KeyEvent.h" />
+    <ClInclude Include="src\Vesper\Events\MouseEvent.h" />
     <ClInclude Include="src\Vesper\Log.h" />
+    <ClInclude Include="src\Vesper\Window.h" />
     <ClInclude Include="src\vzpch.h" />
   </ItemGroup>
   <ItemGroup>

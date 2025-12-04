@@ -4,6 +4,9 @@
     <Filter Include="Vesper">
       <UniqueIdentifier>{3A4FDFD7-26F1-09AE-0FAC-1D02FBEC90FE}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Vesper\Events">
+      <UniqueIdentifier>{DE55100A-4A16-8C40-1351-D5BD7FD0D01C}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Vesper.h" />
@@ -16,7 +19,22 @@
     <ClInclude Include="src\Vesper\EntryPoint.h">
       <Filter>Vesper</Filter>
     </ClInclude>
+    <ClInclude Include="src\Vesper\Events\ApplicationEvent.h">
+      <Filter>Vesper\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vesper\Events\Event.h">
+      <Filter>Vesper\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vesper\Events\KeyEvent.h">
+      <Filter>Vesper\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vesper\Events\MouseEvent.h">
+      <Filter>Vesper\Events</Filter>
+    </ClInclude>
     <ClInclude Include="src\Vesper\Log.h">
+      <Filter>Vesper</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vesper\Window.h">
       <Filter>Vesper</Filter>
     </ClInclude>
     <ClInclude Include="src\vzpch.h" />
