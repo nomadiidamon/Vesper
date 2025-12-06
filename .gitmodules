@@ -3,7 +3,7 @@
 	url = https://github.com/gabime/spdlog
 [submodule "Vesper/vendor/GLFW"]
 	path = Vesper/vendor/GLFW
-	url = https://github.com/TheCherno/glfw
+	url = https://github.com/nomadiidamon/glfw
 [submodule "Vesper/vendor/imgui"]
 	path = Vesper/vendor/imgui
-	url = https://github.com/StudioCherno/imgui
+	url = https://github.com/nomadiidamon/imgui
