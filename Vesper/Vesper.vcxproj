@@ -95,7 +95,7 @@
       <ImportLibrary>..\bin\Debug-windows-x86_64\Vesper\Vesper.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>IF EXIST ..\bin\Debug-windows-x86_64\Vesper\Vesper.dll\ (xcopy /Q /E /Y /I ..\bin\Debug-windows-x86_64\Vesper\Vesper.dll ..\bin\Debug-windows-x86_64\Sandbox &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Debug-windows-x86_64\Vesper\Vesper.dll ..\bin\Debug-windows-x86_64\Sandbox &gt; nul)</Command>
+      <Command>IF EXIST ..\bin\Debug-windows-x86_64\Vesper\Vesper.dll\ (xcopy /Q /E /Y /I ..\bin\Debug-windows-x86_64\Vesper\Vesper.dll "..\bin\Debug-windows-x86_64\Sandbox\" &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Debug-windows-x86_64\Vesper\Vesper.dll "..\bin\Debug-windows-x86_64\Sandbox\" &gt; nul)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -123,7 +123,7 @@
       <ImportLibrary>..\bin\Release-windows-x86_64\Vesper\Vesper.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>IF EXIST ..\bin\Release-windows-x86_64\Vesper\Vesper.dll\ (xcopy /Q /E /Y /I ..\bin\Release-windows-x86_64\Vesper\Vesper.dll ..\bin\Release-windows-x86_64\Sandbox &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Release-windows-x86_64\Vesper\Vesper.dll ..\bin\Release-windows-x86_64\Sandbox &gt; nul)</Command>
+      <Command>IF EXIST ..\bin\Release-windows-x86_64\Vesper\Vesper.dll\ (xcopy /Q /E /Y /I ..\bin\Release-windows-x86_64\Vesper\Vesper.dll "..\bin\Release-windows-x86_64\Sandbox\" &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Release-windows-x86_64\Vesper\Vesper.dll "..\bin\Release-windows-x86_64\Sandbox\" &gt; nul)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">
@@ -151,11 +151,12 @@
       <ImportLibrary>..\bin\Dist-windows-x86_64\Vesper\Vesper.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>IF EXIST ..\bin\Dist-windows-x86_64\Vesper\Vesper.dll\ (xcopy /Q /E /Y /I ..\bin\Dist-windows-x86_64\Vesper\Vesper.dll ..\bin\Dist-windows-x86_64\Sandbox &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Dist-windows-x86_64\Vesper\Vesper.dll ..\bin\Dist-windows-x86_64\Sandbox &gt; nul)</Command>
+      <Command>IF EXIST ..\bin\Dist-windows-x86_64\Vesper\Vesper.dll\ (xcopy /Q /E /Y /I ..\bin\Dist-windows-x86_64\Vesper\Vesper.dll "..\bin\Dist-windows-x86_64\Sandbox\" &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Dist-windows-x86_64\Vesper\Vesper.dll "..\bin\Dist-windows-x86_64\Sandbox\" &gt; nul)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
+    <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\Vesper.h" />
     <ClInclude Include="src\Vesper\Application.h" />
@@ -166,6 +167,7 @@
     <ClInclude Include="src\Vesper\Events\KeyEvent.h" />
     <ClInclude Include="src\Vesper\Events\MouseEvent.h" />
     <ClInclude Include="src\Vesper\ImGui\ImGuiLayer.h" />
+    <ClInclude Include="src\Vesper\Input.h" />
     <ClInclude Include="src\Vesper\Layer.h" />
     <ClInclude Include="src\Vesper\LayerStack.h" />
     <ClInclude Include="src\Vesper\Log.h" />
@@ -174,6 +176,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp" />
+    <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\Vesper\Application.cpp" />
     <ClCompile Include="src\Vesper\ImGui\ImGuiLayer.cpp" />

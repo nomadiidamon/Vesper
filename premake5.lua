@@ -1,6 +1,8 @@
 workspace "Vesper"
 	architecture "x64"
 
+	startproject "Sandbox"
+
 	configurations 
 	{ 
 		"Debug",
@@ -15,9 +17,12 @@ IncludeDir["GLFW"] = "Vesper/vendor/GLFW/include"
 IncludeDir["Glad"] = "Vesper/vendor/Glad/include"
 IncludeDir["ImGui"] = "Vesper/vendor/imgui"
 
-include "Vesper/vendor/GLFW"
-include "Vesper/vendor/Glad"
-include "Vesper/vendor/imgui"
+group "Dependencies"
+	include "Vesper/vendor/GLFW"
+	include "Vesper/vendor/Glad"
+	include "Vesper/vendor/imgui"
+
+group ""
 
 project "Vesper"
 	location "Vesper"
@@ -77,20 +82,23 @@ project "Vesper"
 
 	postbuildcommands
 	{
-		("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox")
+		("{COPY} %{cfg.buildtarget.relpath} \"../bin/" .. outputdir .. "/Sandbox/\"")
 	}
 
 	filter "configurations:Debug"
 		defines "VZ_DEBUG"
-			symbols "On"
+		runtime "Debug"
+		symbols "On"
 
 	filter "configurations:Release"
 		defines "VZ_RELEASE"
-			optimize "On"
+		runtime "Release"
+		optimize "On"
 
 	filter "configurations:Dist"
 		defines "VZ_DIST"
-			optimize "On"
+		runtime "Release"
+		optimize "On"
 
 
 project "Sandbox"
@@ -138,12 +146,15 @@ project "Sandbox"
 
 		filter "configurations:Debug"
 			defines "VZ_DEBUG"
-				symbols "On"
+			runtime "Debug"
+			symbols "On"
 
 		filter "configurations:Release"
 			defines "VZ_RELEASE"
-				optimize "On"
+			runtime "Release"
+			optimize "On"
 
 		filter "configurations:Dist"
 			defines "VZ_DIST"
-				optimize "On"
+			runtime "Release"
+			optimize "On"
