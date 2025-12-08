@@ -81,6 +81,10 @@
     <ClInclude Include="src\vzpch.h">
       <Filter>src</Filter>
     </ClInclude>
+    <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
+    <ClInclude Include="src\Vesper\Input.h" />
+    <ClInclude Include="src\Vesper\KeyCodes.h" />
+    <ClInclude Include="src\Vesper\MouseButtonCodes.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp">
@@ -113,5 +117,6 @@
     <ClCompile Include="vendor\imgui\backends\imgui_impl_opengl3.cpp">
       <Filter>vendor\imgui\backends</Filter>
     </ClCompile>
+    <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
   </ItemGroup>
 </Project>

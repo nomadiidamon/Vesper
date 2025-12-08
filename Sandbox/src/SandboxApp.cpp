@@ -7,13 +7,22 @@ class ExampleLayer : public Vesper::Layer
 		: Layer("Example") 
 	{
 	}
+
 	void OnUpdate() override 
 	{
-		VZ_INFO("ExampleLayer::Update");
+
+		if (Vesper::Input::IsKeyPressed(VZ_KEY_TAB))
+			VZ_TRACE("Tab key is pressed (poll)!");
 	}
 	void OnEvent(Vesper::Event& event) override 
 	{
-		VZ_TRACE("ExampleLayer::OnEvent: {0}", event);
+		if (event.GetEventType() == Vesper::EventType::KeyPressed) 
+		{
+			Vesper::KeyPressedEvent& e = static_cast<Vesper::KeyPressedEvent&>(event);
+			if (e.GetKeyCode() == VZ_KEY_TAB)
+				VZ_TRACE("Tab key pressed (event)!");
+			VZ_TRACE("{0} key pressed (repeat={1})", (char)e.GetKeyCode(), e.GetRepeatCount());
+		}
 	}
 };
 

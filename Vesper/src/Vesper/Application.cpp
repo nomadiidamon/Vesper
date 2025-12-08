@@ -40,7 +40,6 @@ namespace Vesper {
 	{
 		EventDispatcher dispatcher(e);
 		dispatcher.Dispatch<WindowCloseEvent>(BIND_EVENT_FN(OnWindowClose));
-		VZ_CORE_INFO("{0}", e);
 
 		for (auto it = m_LayerStack.end(); it != m_LayerStack.begin(); )
 		{
@@ -63,9 +62,6 @@ namespace Vesper {
 			// Update layers first for draw order
 			for (auto layer : m_LayerStack)
 				layer->OnUpdate();
-
-			auto [x, y] = Input::GetMousePosition();
-			VZ_CORE_TRACE("{0}, {1}", x, y);
 
 			// Update window second
 			m_Window->OnUpdate();

@@ -168,9 +168,11 @@
     <ClInclude Include="src\Vesper\Events\MouseEvent.h" />
     <ClInclude Include="src\Vesper\ImGui\ImGuiLayer.h" />
     <ClInclude Include="src\Vesper\Input.h" />
+    <ClInclude Include="src\Vesper\KeyCodes.h" />
     <ClInclude Include="src\Vesper\Layer.h" />
     <ClInclude Include="src\Vesper\LayerStack.h" />
     <ClInclude Include="src\Vesper\Log.h" />
+    <ClInclude Include="src\Vesper\MouseButtonCodes.h" />
     <ClInclude Include="src\Vesper\Window.h" />
     <ClInclude Include="src\vzpch.h" />
   </ItemGroup>
