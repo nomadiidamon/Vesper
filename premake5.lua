@@ -27,8 +27,10 @@ group ""
 
 project "Vesper"
 	location "Vesper"
-	kind "SharedLib"
+	kind "StaticLib"
 	language "C++"
+	cppdialect "C++17"
+	staticruntime "off"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -40,8 +42,6 @@ project "Vesper"
 	{
 		"%{prj.name}/src/**.h",
 		"%{prj.name}/src/**.cpp",
-		"Vesper/vendor/imgui/backends/imgui_impl_glfw.cpp",
-		"Vesper/vendor/imgui/backends/imgui_impl_opengl3.cpp",
 		"Vesper/vendor/glm/glm/**.hpp",
 		"Vesper/vendor/glm/glm/**.inl"
 	}
@@ -69,8 +69,6 @@ project "Vesper"
 	}
 
 	filter "system:windows"
-		cppdialect "C++17"
-		staticruntime "Off"
 		systemversion "latest"
 
     buildoptions { "/utf-8" }
@@ -79,36 +77,33 @@ project "Vesper"
 	defines
 	{
 		"VZ_PLATFORM_WINDOWS", 
-		"VZ_BUILD_DLL",
 		"GLFW_INCLUDE_NONE",
-		"IMGUI_IMPL_OPENGL_LOADER_GLAD"
-	}
-
-	postbuildcommands
-	{
-		("{COPY} %{cfg.buildtarget.relpath} \"../bin/" .. outputdir .. "/Sandbox/\"")
+		"VZ_BUILD_DLL",
+		"_CRT_SECURE_NO_WARNINGS"
 	}
 
 	filter "configurations:Debug"
 		defines "VZ_DEBUG"
 		runtime "Debug"
-		symbols "On"
+		symbols "on"
 
 	filter "configurations:Release"
 		defines "VZ_RELEASE"
 		runtime "Release"
-		optimize "On"
+		optimize "on"
 
 	filter "configurations:Dist"
 		defines "VZ_DIST"
 		runtime "Release"
-		optimize "On"
+		optimize "on"
 
 
 project "Sandbox"
 	location "Sandbox"
 	kind "ConsoleApp"
 	language "C++"
+	cppdialect "C++17"
+	staticruntime "off"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -123,6 +118,7 @@ project "Sandbox"
 	{
 		"Vesper/vendor/spdlog/include",
 		"Vesper/src",
+		"Vesper/vendor",
 		"%{IncludeDir.glm}"
 	}
 
@@ -131,14 +127,7 @@ project "Sandbox"
 		"Vesper"
 	}
 
-	dependson
-    {
-        "Vesper"
-    }
-
 	filter "system:windows"
-		cppdialect "C++17"
-		staticruntime "Off"
 		systemversion "latest"
 
     buildoptions { "/utf-8" }
@@ -152,14 +141,14 @@ project "Sandbox"
 		filter "configurations:Debug"
 			defines "VZ_DEBUG"
 			runtime "Debug"
-			symbols "On"
+			symbols "on"
 
 		filter "configurations:Release"
 			defines "VZ_RELEASE"
 			runtime "Release"
-			optimize "On"
+			optimize "on"
 
 		filter "configurations:Dist"
 			defines "VZ_DIST"
 			runtime "Release"
-			optimize "On"
+			optimize "on"

@@ -5,6 +5,7 @@
 #include "Vesper/Events/Event.h"
 #include "Events/ApplicationEvent.h"
 
+#include "Vesper/ImGui/ImGuiLayer.h"
 
 namespace Vesper {
 
@@ -26,6 +27,7 @@ namespace Vesper {
 		bool OnWindowClose(WindowCloseEvent& e);
 
 		std::unique_ptr<Window> m_Window;
+		ImGuiLayer* m_ImGuiLayer;
 		bool m_Running = true;
 		LayerStack m_LayerStack;
 	private:

@@ -1,5 +1,7 @@
 #include <Vesper.h>
 
+#include "imgui/imgui.h"
+
 
 
 class ExampleLayer : public Vesper::Layer
@@ -17,6 +19,14 @@ class ExampleLayer : public Vesper::Layer
 		if (Vesper::Input::IsKeyPressed(VZ_KEY_TAB))
 			VZ_TRACE("Tab key is pressed (poll)!");
 	}
+
+	void OnImGuiRender() override 
+	{
+		ImGui::Begin("Example");
+		ImGui::Text("Hello from ImGui!");
+		ImGui::End();
+	}
+
 	void OnEvent(Vesper::Event& event) override 
 	{
 		if (event.GetEventType() == Vesper::EventType::KeyPressed) 
@@ -36,7 +46,6 @@ public:
 	SandboxApp() {
 
 		PushLayer(new ExampleLayer());
-		PushOverlay(new Vesper::ImGuiLayer());
 	}
 	~SandboxApp() {
 
