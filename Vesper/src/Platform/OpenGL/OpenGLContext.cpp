@@ -24,6 +24,11 @@ namespace Vesper {
 		glfwMakeContextCurrent(m_WindowHandle);
 		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
 		VZ_CORE_ASSERT(status, "Failed to initialize Glad!");
+
+		VZ_CORE_INFO("OpenGL Info:");
+		VZ_CORE_INFO("  Vendor: {0}", (const char *)glGetString(GL_VENDOR));
+		VZ_CORE_INFO("  Renderer: {0}", (const char *)glGetString(GL_RENDERER));
+		VZ_CORE_INFO("  Version: {0}", (const char *)glGetString(GL_VERSION));
 	}
 
 	void OpenGLContext::SwapBuffers()
