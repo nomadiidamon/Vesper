@@ -3,6 +3,9 @@
 #include "Vesper/Window.h"
 #include <GLFW/glfw3.h>
 
+#include "Vesper/Renderer/GraphicsContext.h"
+
+
 namespace Vesper {
 
 	class WindowsWindow : public Window
@@ -25,6 +28,7 @@ namespace Vesper {
 		virtual void Shutdown();
 	private:
 		GLFWwindow* m_Window;
+		GraphicsContext* m_Context;
 		struct WindowData
 		{
 			std::string Title;
