@@ -1,11 +1,14 @@
 #include <Vesper.h>
 
+
+
 class ExampleLayer : public Vesper::Layer
 {
 	public:
 	ExampleLayer() 
 		: Layer("Example") 
 	{
+		
 	}
 
 	void OnUpdate() override 

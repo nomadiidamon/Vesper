@@ -16,6 +16,7 @@ IncludeDir = {}
 IncludeDir["GLFW"] = "Vesper/vendor/GLFW/include"
 IncludeDir["Glad"] = "Vesper/vendor/Glad/include"
 IncludeDir["ImGui"] = "Vesper/vendor/imgui"
+IncludeDir["glm"] = "Vesper/vendor/glm"
 
 group "Dependencies"
 	include "Vesper/vendor/GLFW"
@@ -41,6 +42,8 @@ project "Vesper"
 		"%{prj.name}/src/**.cpp",
 		"Vesper/vendor/imgui/backends/imgui_impl_glfw.cpp",
 		"Vesper/vendor/imgui/backends/imgui_impl_opengl3.cpp",
+		"Vesper/vendor/glm/glm/**.hpp",
+		"Vesper/vendor/glm/glm/**.inl"
 	}
 
 	filter "files:Vesper/vendor/imgui/backends/**.cpp"
@@ -53,7 +56,8 @@ project "Vesper"
 		"%{prj.name}/vendor/spdlog/include",
 		"%{IncludeDir.GLFW}",
 		"%{IncludeDir.Glad}",
-		"%{IncludeDir.ImGui}"
+		"%{IncludeDir.ImGui}",
+		"%{IncludeDir.glm}"
 	}
 
 	links
@@ -118,7 +122,8 @@ project "Sandbox"
 	includedirs
 	{
 		"Vesper/vendor/spdlog/include",
-		"Vesper/src"
+		"Vesper/src",
+		"%{IncludeDir.glm}"
 	}
 
 	links

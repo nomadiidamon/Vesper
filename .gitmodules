@@ -7,3 +7,6 @@
 [submodule "Vesper/vendor/imgui"]
 	path = Vesper/vendor/imgui
 	url = https://github.com/nomadiidamon/imgui
+[submodule "Vesper/vendor/glm"]
+	path = Vesper/vendor/glm
+	url = https://github.com/g-truc/glm
