@@ -7,13 +7,9 @@
 
 #include "Vesper/ImGui/ImGuiLayer.h"
 
-#include "Vesper/Renderer/Shader.h"
-#include "Vesper/Renderer/Buffer.h"
-#include "Vesper/Renderer/VertexArray.h"
-
 namespace Vesper {
 
-	class VESPER_API Application
+	class Application
 	{
 	public:
 		Application();
@@ -35,12 +31,6 @@ namespace Vesper {
 		bool m_Running = true;
 		LayerStack m_LayerStack;
 
-		//unsigned int m_VertexArray;
-		std::shared_ptr<VertexArray> m_VertexArray;
-		std::shared_ptr<Shader> m_Shader;
-
-		std::shared_ptr<VertexArray> m_SquareVA;
-		std::shared_ptr<Shader> m_BlueShader;
 	private:
 		static Application* s_Instance;
 	};

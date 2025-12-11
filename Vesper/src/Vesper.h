@@ -12,6 +12,17 @@
 
 #include "Vesper/ImGui/ImGuiLayer.h"
 
+// -- Renderer-------------------
+#include "Vesper/Renderer/Renderer.h"
+#include "Vesper/Renderer/RenderCommand.h"
+
+
+#include "Vesper/Renderer/Buffer.h"
+#include "Vesper/Renderer/Shader.h"
+#include "Vesper/Renderer/VertexArray.h"
+
+#include "Vesper/Renderer/OrthographicCamera.h"
+
 // ---Entry Point----------------
 #include "Vesper/EntryPoint.h"
 // ---Entry Point----------------
