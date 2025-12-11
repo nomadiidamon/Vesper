@@ -4,6 +4,7 @@
 #include "Vesper/LayerStack.h"
 #include "Vesper/Events/Event.h"
 #include "Events/ApplicationEvent.h"
+#include "Vesper/Core/Timestep.h"
 
 #include "Vesper/ImGui/ImGuiLayer.h"
 
@@ -30,6 +31,7 @@ namespace Vesper {
 		ImGuiLayer* m_ImGuiLayer;
 		bool m_Running = true;
 		LayerStack m_LayerStack;
+		float m_LastFrameTime = 0.0f;
 
 	private:
 		static Application* s_Instance;

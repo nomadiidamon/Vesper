@@ -6,6 +6,8 @@
 #include "Vesper/Layer.h"
 #include "Vesper/Log.h"
 
+#include "Vesper/Core/Timestep.h"
+
 #include "Vesper/Input.h"
 #include "Vesper/KeyCodes.h"
 #include "Vesper/MouseButtonCodes.h"

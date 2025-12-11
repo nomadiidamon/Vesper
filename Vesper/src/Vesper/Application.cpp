@@ -5,6 +5,9 @@
 
 #include "Input.h"
 
+/// TEMPORARY
+#include <GLFW/glfw3.h>
+
 namespace Vesper {
 
 #define BIND_EVENT_FN(x) std::bind(&Application::x, this, std::placeholders::_1)
@@ -19,6 +22,7 @@ namespace Vesper {
 
 		m_Window = std::unique_ptr<Window>(Window::Create());
 		m_Window->SetEventCallback(BIND_EVENT_FN(OnEvent));
+		m_Window->SetVSync(false);
 
 		m_ImGuiLayer = new ImGuiLayer();
 		PushOverlay(m_ImGuiLayer);
@@ -61,10 +65,13 @@ namespace Vesper {
 
 		while (m_Running)
 		{
+			float time = (float)glfwGetTime(); // TODO: Platform::GetTime()
+			Timestep timestep = time - m_LastFrameTime;
+			m_LastFrameTime = time;
 
 			// Update layers first for draw order
 			for (auto layer : m_LayerStack)
-				layer->OnUpdate();
+				layer->OnUpdate(timestep);
 
 			m_ImGuiLayer->Begin();
 			for (auto layer : m_LayerStack)

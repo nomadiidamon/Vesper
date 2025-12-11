@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Vesper/Core.h"
+#include "Vesper/Core/Timestep.h"
 #include "Vesper/Events/Event.h"
 
 namespace Vesper {
@@ -13,7 +14,7 @@ namespace Vesper {
 
 		virtual void OnAttach() {};
 		virtual void OnDetach() {};
-		virtual void OnUpdate() {};
+		virtual void OnUpdate(Timestep ts) {};
 		virtual void OnEvent(Event& event){}
 		virtual void OnImGuiRender() {};
 

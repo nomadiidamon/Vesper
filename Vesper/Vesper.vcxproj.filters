@@ -1368,6 +1368,7 @@
     <ClInclude Include="src\Vesper\Renderer\RenderCommand.h" />
     <ClInclude Include="src\Platform\OpenGL\OpenGLRendererAPI.h" />
     <ClInclude Include="src\Vesper\Renderer\OrthographicCamera.h" />
+    <ClInclude Include="src\Vesper\Core\Timestep.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Platform\Windows\WindowsInput.cpp">
