@@ -3,6 +3,8 @@
 #include "imgui/imgui.h"
 
 #include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/type_ptr.hpp>
+#include "Platform/OpenGL/OpenGLShader.h"
 
 
 
@@ -96,6 +98,9 @@ class ExampleLayer : public Vesper::Layer
 			}
 		)";
 
+		m_Shader.reset(Vesper::Shader::Create(vertexSrc, fragmentSrc));
+
+
 		std::string blueShaderVertexSrc = R"(
 			#version 330 core
 			
@@ -113,21 +118,22 @@ class ExampleLayer : public Vesper::Layer
 			}
 		)";
 
-		std::string blueShaderFragmentSrc = R"(
+		std::string flatColorShaderFragmentSrc = R"(
 			#version 330 core
 			
 			layout(location = 0) out vec4 color;
 
 			in vec3 v_Position;
 
+			uniform vec3 u_Color;
+
 			void main()
 			{
-				color = vec4(0.2f, 0.3f, 0.8f, 1.0f);
+				color = vec4(u_Color, 1.0);
 			}
 		)";
 
-		m_Shader.reset(new Vesper::Shader(vertexSrc, fragmentSrc));
-		m_BlueShader.reset(new Vesper::Shader(blueShaderVertexSrc, blueShaderFragmentSrc));
+		m_FlatColorShader.reset(Vesper::Shader::Create(blueShaderVertexSrc, flatColorShaderFragmentSrc));
 	}
 
 	void OnUpdate(Vesper::Timestep ts) override 
@@ -162,13 +168,16 @@ class ExampleLayer : public Vesper::Layer
 
 		static glm::mat4 scale = glm::scale(glm::mat4(1.0f), glm::vec3(0.1f));
 
-		for (int x = 0; x < 20; x++)
+		std::dynamic_pointer_cast<Vesper::OpenGLShader>(m_FlatColorShader)->Bind();
+		std::dynamic_pointer_cast<Vesper::OpenGLShader>(m_FlatColorShader)->UploadUniformFloat3("u_Color", m_SquareColor);
+
+		for (int y = 0; y < 20; y++)
 		{
-			for (int y = 0; y < 20; y++)
+			for (int x = 0; x < 20; x++)
 			{
 				glm::vec3 pos(x * 0.11f, y * 0.11f, 0.0f);
 				glm::mat4 transform = glm::translate(glm::mat4(1.0f), pos) * scale;
-				Vesper::Renderer::Submit(m_BlueShader, m_SquareVA, transform);
+				Vesper::Renderer::Submit(m_FlatColorShader, m_SquareVA, transform);
 			}
 		}
 
@@ -179,6 +188,9 @@ class ExampleLayer : public Vesper::Layer
 
 	void OnImGuiRender() override 
 	{
+		ImGui::Begin("Settings");
+		ImGui::ColorEdit3("Square Color", glm::value_ptr(m_SquareColor));
+		ImGui::End();
 
 	}
 
@@ -192,7 +204,7 @@ private:
 	std::shared_ptr<Vesper::Shader> m_Shader;
 
 	std::shared_ptr<Vesper::VertexArray> m_SquareVA;
-	std::shared_ptr<Vesper::Shader> m_BlueShader;
+	std::shared_ptr<Vesper::Shader> m_FlatColorShader;
 
 	Vesper::OrthographicCamera m_Camera;
 	glm::vec3 m_CameraPosition;
@@ -201,6 +213,7 @@ private:
 	float m_CameraRotation = 0.0f;
 	float m_CameraRotationSpeed = 125.0f;
 
+	glm::vec3 m_SquareColor = { 0.2f, 0.3f, 0.8f };
 };
 
 
