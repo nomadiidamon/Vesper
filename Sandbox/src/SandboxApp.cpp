@@ -10,8 +10,8 @@
 
 class ExampleLayer : public Vesper::Layer
 {
-	public:
-	ExampleLayer() 
+public:
+	ExampleLayer()
 		: Layer("Example"), m_Camera(-1.6f, 1.6f, -0.9f, 0.9f), m_CameraPosition(0.0f)
 	{
 
@@ -23,7 +23,7 @@ class ExampleLayer : public Vesper::Layer
 			 0.0f,  0.5f, 0.0f,		0.8f, 0.8f, 0.2f, 1.0f,
 		};
 
-		std::shared_ptr<Vesper::VertexBuffer> vertexBuffer;
+		Vesper::Ref<Vesper::VertexBuffer> vertexBuffer;
 		vertexBuffer.reset(Vesper::VertexBuffer::Create(vertices, sizeof(vertices)));
 		Vesper::BufferLayout layout = {
 			{ Vesper::ShaderDataType::Float3, "a_Position" },
@@ -34,7 +34,7 @@ class ExampleLayer : public Vesper::Layer
 		m_VertexArray->AddVertexBuffer(vertexBuffer);
 
 		uint32_t indices[3] = { 0, 1, 2 };
-		std::shared_ptr<Vesper::IndexBuffer> indexBuffer;
+		Vesper::Ref<Vesper::IndexBuffer> indexBuffer;
 		indexBuffer.reset(Vesper::IndexBuffer::Create(indices, sizeof(indices) / sizeof(uint32_t)));
 		m_VertexArray->SetIndexBuffer(indexBuffer);
 
@@ -50,7 +50,7 @@ class ExampleLayer : public Vesper::Layer
 			-0.5f,  0.5f, 0.0f
 		};
 
-		std::shared_ptr<Vesper::VertexBuffer> squareVB;
+		Vesper::Ref<Vesper::VertexBuffer> squareVB;
 		squareVB.reset(Vesper::VertexBuffer::Create(squareVertices, sizeof(squareVertices)));
 
 		squareVB->SetLayout({
@@ -59,7 +59,7 @@ class ExampleLayer : public Vesper::Layer
 		m_SquareVA->AddVertexBuffer(squareVB);
 
 		uint32_t squareIndices[6] = { 0, 1, 2, 2, 3, 0 };
-		std::shared_ptr<Vesper::IndexBuffer> squareIB;
+		Vesper::Ref<Vesper::IndexBuffer> squareIB;
 		squareIB.reset(Vesper::IndexBuffer::Create(squareIndices, sizeof(squareIndices) / sizeof(uint32_t)));
 		m_SquareVA->SetIndexBuffer(squareIB);
 
@@ -136,9 +136,9 @@ class ExampleLayer : public Vesper::Layer
 		m_FlatColorShader.reset(Vesper::Shader::Create(blueShaderVertexSrc, flatColorShaderFragmentSrc));
 	}
 
-	void OnUpdate(Vesper::Timestep ts) override 
+	void OnUpdate(Vesper::Timestep ts) override
 	{
-		VZ_TRACE("Delta time: {0}s ({1}ms)", ts.GetSeconds(), ts.GetMilliseconds());	
+		VZ_TRACE("Delta time: {0}s ({1}ms)", ts.GetSeconds(), ts.GetMilliseconds());
 
 		if (Vesper::Input::IsKeyPressed(VZ_KEY_LEFT))
 			m_CameraPosition.x -= m_CameraMoveSpeed * ts;
@@ -186,7 +186,7 @@ class ExampleLayer : public Vesper::Layer
 		Vesper::Renderer::EndScene();
 	}
 
-	void OnImGuiRender() override 
+	void OnImGuiRender() override
 	{
 		ImGui::Begin("Settings");
 		ImGui::ColorEdit3("Square Color", glm::value_ptr(m_SquareColor));
@@ -194,17 +194,17 @@ class ExampleLayer : public Vesper::Layer
 
 	}
 
-	void OnEvent(Vesper::Event& event) override 
+	void OnEvent(Vesper::Event& event) override
 	{
 	}
 
 
 private:
-	std::shared_ptr<Vesper::VertexArray> m_VertexArray;
-	std::shared_ptr<Vesper::Shader> m_Shader;
+	Vesper::Ref<Vesper::VertexArray> m_VertexArray;
+	Vesper::Ref<Vesper::Shader> m_Shader;
 
-	std::shared_ptr<Vesper::VertexArray> m_SquareVA;
-	std::shared_ptr<Vesper::Shader> m_FlatColorShader;
+	Vesper::Ref<Vesper::VertexArray> m_SquareVA;
+	Vesper::Ref<Vesper::Shader> m_FlatColorShader;
 
 	Vesper::OrthographicCamera m_Camera;
 	glm::vec3 m_CameraPosition;
