@@ -6,13 +6,86 @@
 #include <glm/gtc/type_ptr.hpp>
 #include "Platform/OpenGL/OpenGLShader.h"
 
+static void DisplayVesperInfo() 
+{
+	ImGui::Begin("Vesper Engine");
 
+	if (ImGui::TreeNode("About Vesper"))
+	{
+		ImGui::Text("Vesper Engine");
+		ImGui::Text("Version: 0.1.0");
+		ImGui::Text("Author: Damon Green II");
+		ImGui::Text("GitHub: https://github.com/nomadiidamon/Vesper");
+		ImGui::Separator();
+
+		ImGui::Text("Status: ");
+		ImGui::Text("\tEarly Development of API and 2D Renderer");
+		ImGui::Separator();
+
+		ImGui::TextWrapped("Vesper is a cross-platform game engine currently in early development. The engine is being built from the ground up with a focus on modularity, performance, and ease of use. The goal of Vesper is to provide developers with a powerful and flexible toolset for creating games and interactive applications.");
+		ImGui::Separator();
+
+		if (ImGui::TreeNode("Controls:"))
+		{
+			ImGui::Text("\tWASD: Move Camera");
+			ImGui::Text("\tQ/E: Rotate Camera (if enabled {see settings}");
+			ImGui::Text("\tScroll Wheel: Zoom Camera");
+			ImGui::TreePop();
+		}
+		ImGui::Separator();
+
+		if (ImGui::TreeNode("RoadMap")) {
+
+			if (ImGui::TreeNode("Current Features:"))
+			{
+				ImGui::Text("\t- Cross-Platform Design");
+				ImGui::Text("\t\t- Currently Windows only");
+				ImGui::Text("\t- OpenGL Renderer");
+				ImGui::Text("\t- Orthographic Camera");
+				ImGui::Text("\t- Shader System");
+				ImGui::Text("\t- Texture Loading");
+				ImGui::Text("\t- ImGui Integration");
+				ImGui::Text("\t\t- Current settings panel adjusts camera parameters!");
+
+				ImGui::TreePop();
+			}
+			ImGui::Separator();
+
+			if (ImGui::TreeNode("In Progress:"))
+			{
+				ImGui::Text("\t- 2D Rendering Features");
+				ImGui::Text("\t\t- Sprites");
+				ImGui::Text("\t\t- Sprite Sheets");
+				ImGui::Text("\t\t- Animation");
+				ImGui::TreePop();
+			}
+			ImGui::Separator();
+
+			if (ImGui::TreeNode("Planned Features:"))
+			{
+				ImGui::Text("\t- Vulkan Renderer");
+				ImGui::Text("\t- 2D Editor");
+				ImGui::Text("\t- 2D Particles");
+				ImGui::Text("\t- Audio");
+				ImGui::Text("\t- Timelining");
+				ImGui::Text("\t- Video Playback");
+				ImGui::Text("\t- 3D Renderer");
+				ImGui::Text("\t- 3D Particles");
+				ImGui::TreePop();
+			}
+			ImGui::TreePop();
+		}
+
+		ImGui::TreePop();
+	}
+	ImGui::End();
+}
 
 class ExampleLayer : public Vesper::Layer
 {
 public:
 	ExampleLayer()
-		: Layer("Example"), m_Camera(-1.6f, 1.6f, -0.9f, 0.9f), m_CameraPosition(0.0f)
+		: Layer("Example"), m_CameraController(1280.0f / 720.0f)
 	{
 
 		m_VertexArray.reset(Vesper::VertexArray::Create());
@@ -136,7 +209,7 @@ public:
 		m_FlatColorShader = (Vesper::Shader::Create("FlatColor", blueShaderVertexSrc, flatColorShaderFragmentSrc));
 
 		auto textureShader = m_ShaderLibrary.Load("assets/shaders/Texture.glsl");
-		
+
 
 		m_Texture = Vesper::Texture2D::Create("assets/textures/Checkerboard.png");
 		m_Texture2 = Vesper::Texture2D::Create("assets/textures/sheets/fire_01.png");
@@ -148,33 +221,15 @@ public:
 
 	void OnUpdate(Vesper::Timestep ts) override
 	{
-		VZ_TRACE("Delta time: {0}s ({1}ms)", ts.GetSeconds(), ts.GetMilliseconds());
-
-		if (Vesper::Input::IsKeyPressed(VZ_KEY_LEFT))
-			m_CameraPosition.x -= m_CameraMoveSpeed * ts;
-		else if (Vesper::Input::IsKeyPressed(VZ_KEY_RIGHT))
-			m_CameraPosition.x += m_CameraMoveSpeed * ts;
-
-		if (Vesper::Input::IsKeyPressed(VZ_KEY_UP))
-			m_CameraPosition.y += m_CameraMoveSpeed * ts;
-		else if (Vesper::Input::IsKeyPressed(VZ_KEY_DOWN))
-			m_CameraPosition.y -= m_CameraMoveSpeed * ts;
+		// Update
+		m_CameraController.OnUpdate(ts);
 
 
-		if (Vesper::Input::IsKeyPressed(VZ_KEY_A))
-			m_CameraRotation -= m_CameraRotationSpeed * ts;
-		else if (Vesper::Input::IsKeyPressed(VZ_KEY_D))
-			m_CameraRotation += m_CameraRotationSpeed * ts;
-
-
+		// Render
 		Vesper::RenderCommand::SetClearColor({ 0.1f, 0.1f, 0.1f, 1.0f });
 		Vesper::RenderCommand::Clear();
 
-
-		m_Camera.SetPosition(m_CameraPosition);
-		m_Camera.SetRotation(m_CameraRotation);
-
-		Vesper::Renderer::BeginScene(m_Camera);
+		Vesper::Renderer::BeginScene(m_CameraController.GetCamera());
 
 		static glm::mat4 scale = glm::scale(glm::mat4(1.0f), glm::vec3(0.1f));
 
@@ -207,33 +262,36 @@ public:
 
 	void OnImGuiRender() override
 	{
-		ImGui::Begin("Settings");
-		ImGui::ColorEdit3("Square Color", glm::value_ptr(m_SquareColor));
-		ImGui::End();
+		DisplayVesperInfo();
 
+		ImGui::Begin("Settings");
+
+		if (ImGui::TreeNode("Settings"))
+		{
+			ImGui::ColorEdit3("Square Color", glm::value_ptr(m_SquareColor));
+			m_CameraController.OnImGuiRender();
+			ImGui::TreePop();
+		}
+		ImGui::End();
 	}
 
 	void OnEvent(Vesper::Event& event) override
 	{
+		m_CameraController.OnEvent(event);
 	}
 
 
 private:
 	Vesper::ShaderLibrary m_ShaderLibrary;
-	Vesper::Ref<Vesper::VertexArray> m_VertexArray;
 	Vesper::Ref<Vesper::Shader> m_Shader;
+	Vesper::Ref<Vesper::VertexArray> m_VertexArray;
 
-	Vesper::Ref<Vesper::VertexArray> m_SquareVA;
 	Vesper::Ref<Vesper::Shader> m_FlatColorShader;
+	Vesper::Ref<Vesper::VertexArray> m_SquareVA;
+
 	Vesper::Ref<Vesper::Texture2D> m_Texture, m_Texture2;
 
-	Vesper::OrthographicCamera m_Camera;
-	glm::vec3 m_CameraPosition;
-	float m_CameraMoveSpeed = 2.5f;
-
-	float m_CameraRotation = 0.0f;
-	float m_CameraRotationSpeed = 125.0f;
-
+	Vesper::OrthographicCameraController m_CameraController;
 	glm::vec3 m_SquareColor = { 0.2f, 0.3f, 0.8f };
 };
 

@@ -11,6 +11,7 @@
 #include "Vesper/Input.h"
 #include "Vesper/KeyCodes.h"
 #include "Vesper/MouseButtonCodes.h"
+#include "Vesper/OrthographicCameraController.h"
 
 #include "Vesper/ImGui/ImGuiLayer.h"
 
