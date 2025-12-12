@@ -3,17 +3,22 @@
 #include "Vesper/Renderer/Shader.h"
 #include <glm/glm.hpp>
 
+// TODO: Remove this
+typedef unsigned int GLenum;
+
 namespace Vesper {
 
 	class OpenGLShader : public Shader
 	{
 	public:
-
-		OpenGLShader(const std::string& vertexSrc, const std::string& fragmentSrc);
+		OpenGLShader(const std::string& filepath);
+		OpenGLShader(const std::string& name, const std::string& vertexSrc, const std::string& fragmentSrc);
 		~OpenGLShader();
 
 		void Bind() const override;
 		void Unbind() const override;
+
+		virtual const std::string& GetName() const override { return m_Name; }
 
 		void UploadUniformMat4(const std::string& name, const glm::mat4& matrix);
 		void UploadUniformMat3(const std::string& name, const glm::mat3& matrix);
@@ -25,8 +30,12 @@ namespace Vesper {
 
 		void UploadUniformInt(const std::string& name, int value);
 
-
+	private:
+		std::string ReadFile(const std::string& filepath);
+		std::unordered_map<GLenum, std::string> PreProcess(const std::string& source);
+		void Compile(std::unordered_map<GLenum, std::string>& shaderSources);
 	private:
 		unsigned int m_RendererID;
+		std::string m_Name;
 	};
 }
