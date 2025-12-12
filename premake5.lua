@@ -17,6 +17,7 @@ IncludeDir["GLFW"] = "Vesper/vendor/GLFW/include"
 IncludeDir["Glad"] = "Vesper/vendor/Glad/include"
 IncludeDir["ImGui"] = "Vesper/vendor/imgui"
 IncludeDir["glm"] = "Vesper/vendor/glm"
+IncludeDir["stb_image"] = "Vesper/vendor/stb_image"
 
 group "Dependencies"
 	include "Vesper/vendor/GLFW"
@@ -42,6 +43,8 @@ project "Vesper"
 	{
 		"%{prj.name}/src/**.h",
 		"%{prj.name}/src/**.cpp",
+		"%{prj.name}/vendor/stb_image/**.h",
+		"%{prj.name}/vendor/stb_image/**.cpp",
 		"Vesper/vendor/glm/glm/**.hpp",
 		"Vesper/vendor/glm/glm/**.inl"
 	}
@@ -57,7 +60,8 @@ project "Vesper"
 		"%{IncludeDir.GLFW}",
 		"%{IncludeDir.Glad}",
 		"%{IncludeDir.ImGui}",
-		"%{IncludeDir.glm}"
+		"%{IncludeDir.glm}",
+		"%{IncludeDir.stb_image}"
 	}
 
 	links

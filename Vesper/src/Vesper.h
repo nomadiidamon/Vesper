@@ -21,6 +21,7 @@
 
 #include "Vesper/Renderer/Buffer.h"
 #include "Vesper/Renderer/Shader.h"
+#include "Vesper/Renderer/Texture.h"
 #include "Vesper/Renderer/VertexArray.h"
 
 #include "Vesper/Renderer/OrthographicCamera.h"
