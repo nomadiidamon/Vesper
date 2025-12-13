@@ -1,6 +1,5 @@
 #pragma once
 
-#include "Vesper/Core.h"
 #include "Vesper/Core/Timestep.h"
 #include "Vesper/Events/Event.h"
 

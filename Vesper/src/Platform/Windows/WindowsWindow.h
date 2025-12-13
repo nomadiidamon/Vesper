@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Vesper/Window.h"
+#include "Vesper/Core/Window.h"
 #include <GLFW/glfw3.h>
 
 #include "Vesper/Renderer/GraphicsContext.h"

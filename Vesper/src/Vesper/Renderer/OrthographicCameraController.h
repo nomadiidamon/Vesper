@@ -39,6 +39,9 @@ namespace Vesper {
 		bool CanRotate() const { return m_Rotation; }
 		void SetCanRotate(bool canRotate) { m_Rotation = canRotate; }
 
+		void SetZoomLevel(float level) { m_ZoomLevel = level; }
+		float GetZoomLevel() const { return m_ZoomLevel; }
+
 		void OnImGuiRender();
 	private:
 		bool OnMouseScrolled(MouseScrolledEvent& e);

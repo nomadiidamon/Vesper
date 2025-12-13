@@ -2,16 +2,16 @@
 // For use by Vesper applications
 
 
-#include "Vesper/Application.h"
-#include "Vesper/Layer.h"
-#include "Vesper/Log.h"
+#include "Vesper/Core/Application.h"
+#include "Vesper/Core/Layer.h"
+#include "Vesper/Core/Log.h"
 
 #include "Vesper/Core/Timestep.h"
 
-#include "Vesper/Input.h"
-#include "Vesper/KeyCodes.h"
-#include "Vesper/MouseButtonCodes.h"
-#include "Vesper/OrthographicCameraController.h"
+#include "Vesper/Core/Input.h"
+#include "Vesper/Core/KeyCodes.h"
+#include "Vesper/Core/MouseButtonCodes.h"
+#include "Vesper/Renderer/OrthographicCameraController.h"
 
 #include "Vesper/ImGui/ImGuiLayer.h"
 
@@ -26,7 +26,3 @@
 #include "Vesper/Renderer/VertexArray.h"
 
 #include "Vesper/Renderer/OrthographicCamera.h"
-
-// ---Entry Point----------------
-#include "Vesper/EntryPoint.h"
-// ---Entry Point----------------

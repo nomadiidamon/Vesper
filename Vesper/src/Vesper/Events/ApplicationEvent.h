@@ -1,7 +1,7 @@
 #pragma once
 
 #include "vzpch.h"
-#include "Vesper/Core.h"
+#include "Vesper/Core/Core.h"
 #include "Vesper/Events/Event.h"
 
 namespace Vesper {

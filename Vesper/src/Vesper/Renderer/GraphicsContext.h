@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Vesper/Core.h"
+#include "Vesper/Core/Core.h"
 
 namespace Vesper {
 

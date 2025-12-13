@@ -66,6 +66,7 @@ namespace Vesper {
 				data.Width = width;
 
 				WindowResizeEvent event(width, height);
+				VZ_CORE_WARN("Window resized to {0}, {1}", width, height);
 				data.EventCallback(event);
 		});
 

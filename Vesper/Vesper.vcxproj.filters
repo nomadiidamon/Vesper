@@ -78,20 +78,41 @@
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
       <Filter>src\Platform\Windows</Filter>
     </ClInclude>
-    <ClInclude Include="src\Vesper.h">
-      <Filter>src</Filter>
+    <ClInclude Include="src\Vesper\Core\Application.h">
+      <Filter>src\Vesper\Core</Filter>
     </ClInclude>
-    <ClInclude Include="src\Vesper\Application.h">
-      <Filter>src\Vesper</Filter>
+    <ClInclude Include="src\Vesper\Core\Core.h">
+      <Filter>src\Vesper\Core</Filter>
     </ClInclude>
-    <ClInclude Include="src\Vesper\Core.h">
-      <Filter>src\Vesper</Filter>
+    <ClInclude Include="src\Vesper\Core\EntryPoint.h">
+      <Filter>src\Vesper\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vesper\Core\Input.h">
+      <Filter>src\Vesper\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vesper\Core\KeyCodes.h">
+      <Filter>src\Vesper\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vesper\Core\Layer.h">
+      <Filter>src\Vesper\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vesper\Core\LayerStack.h">
+      <Filter>src\Vesper\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vesper\Core\Log.h">
+      <Filter>src\Vesper\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vesper\Core\MouseButtonCodes.h">
+      <Filter>src\Vesper\Core</Filter>
     </ClInclude>
     <ClInclude Include="src\Vesper\Core\Timestep.h">
       <Filter>src\Vesper\Core</Filter>
     </ClInclude>
-    <ClInclude Include="src\Vesper\EntryPoint.h">
-      <Filter>src\Vesper</Filter>
+    <ClInclude Include="src\Vesper\Core\Vesper.h">
+      <Filter>src\Vesper\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vesper\Core\Window.h">
+      <Filter>src\Vesper\Core</Filter>
     </ClInclude>
     <ClInclude Include="src\Vesper\Events\ApplicationEvent.h">
       <Filter>src\Vesper\Events</Filter>
@@ -108,24 +129,6 @@
     <ClInclude Include="src\Vesper\ImGui\ImGuiLayer.h">
       <Filter>src\Vesper\ImGui</Filter>
     </ClInclude>
-    <ClInclude Include="src\Vesper\Input.h">
-      <Filter>src\Vesper</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Vesper\KeyCodes.h">
-      <Filter>src\Vesper</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Vesper\Layer.h">
-      <Filter>src\Vesper</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Vesper\LayerStack.h">
-      <Filter>src\Vesper</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Vesper\Log.h">
-      <Filter>src\Vesper</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Vesper\MouseButtonCodes.h">
-      <Filter>src\Vesper</Filter>
-    </ClInclude>
     <ClInclude Include="src\Vesper\Renderer\Buffer.h">
       <Filter>src\Vesper\Renderer</Filter>
     </ClInclude>
@@ -133,6 +136,9 @@
       <Filter>src\Vesper\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="src\Vesper\Renderer\OrthographicCamera.h">
+      <Filter>src\Vesper\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vesper\Renderer\OrthographicCameraController.h">
       <Filter>src\Vesper\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="src\Vesper\Renderer\RenderCommand.h">
@@ -152,9 +158,6 @@
     </ClInclude>
     <ClInclude Include="src\Vesper\Renderer\VertexArray.h">
       <Filter>src\Vesper\Renderer</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Vesper\Window.h">
-      <Filter>src\Vesper</Filter>
     </ClInclude>
     <ClInclude Include="src\vzpch.h">
       <Filter>src</Filter>
@@ -1445,8 +1448,17 @@
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
       <Filter>src\Platform\Windows</Filter>
     </ClCompile>
-    <ClCompile Include="src\Vesper\Application.cpp">
-      <Filter>src\Vesper</Filter>
+    <ClCompile Include="src\Vesper\Core\Application.cpp">
+      <Filter>src\Vesper\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Vesper\Core\Layer.cpp">
+      <Filter>src\Vesper\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Vesper\Core\LayerStack.cpp">
+      <Filter>src\Vesper\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Vesper\Core\Log.cpp">
+      <Filter>src\Vesper\Core</Filter>
     </ClCompile>
     <ClCompile Include="src\Vesper\ImGui\ImGuiBuild.cpp">
       <Filter>src\Vesper\ImGui</Filter>
@@ -1454,19 +1466,13 @@
     <ClCompile Include="src\Vesper\ImGui\ImGuiLayer.cpp">
       <Filter>src\Vesper\ImGui</Filter>
     </ClCompile>
-    <ClCompile Include="src\Vesper\Layer.cpp">
-      <Filter>src\Vesper</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Vesper\LayerStack.cpp">
-      <Filter>src\Vesper</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Vesper\Log.cpp">
-      <Filter>src\Vesper</Filter>
-    </ClCompile>
     <ClCompile Include="src\Vesper\Renderer\Buffer.cpp">
       <Filter>src\Vesper\Renderer</Filter>
     </ClCompile>
     <ClCompile Include="src\Vesper\Renderer\OrthographicCamera.cpp">
+      <Filter>src\Vesper\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Vesper\Renderer\OrthographicCameraController.cpp">
       <Filter>src\Vesper\Renderer</Filter>
     </ClCompile>
     <ClCompile Include="src\Vesper\Renderer\RenderCommand.cpp">

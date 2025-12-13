@@ -1,7 +1,7 @@
 #include "vzpch.h"
 #include "WindowsInput.h"
 
-#include "Vesper/Application.h"
+#include "Vesper/Core/Application.h"
 #include <GLFW/glfw3.h>
 
 namespace Vesper {

@@ -1,11 +1,11 @@
 #pragma once
 
-#include "Vesper/Core.h"
+#include "Vesper/Core/Core.h"
 #include "Vesper/Events/Event.h"
 #include "Vesper/Events/ApplicationEvent.h"
 #include "Vesper/Events/KeyEvent.h"
 #include "Vesper/Events/MouseEvent.h"
-#include "Vesper/Layer.h"
+#include "Vesper/Core/Layer.h"
 
 namespace Vesper {
 

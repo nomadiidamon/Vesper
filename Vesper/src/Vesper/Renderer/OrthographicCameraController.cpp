@@ -1,8 +1,8 @@
 #include "vzpch.h"
 #include "OrthographicCameraController.h"
 
-#include "Vesper/Input.h"
-#include "Vesper/KeyCodes.h"
+#include "Vesper/Core/Input.h"
+#include "Vesper/Core/KeyCodes.h"
 
 /// Temporary
 #include <imgui.h>

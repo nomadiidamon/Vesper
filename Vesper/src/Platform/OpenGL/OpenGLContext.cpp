@@ -29,6 +29,14 @@ namespace Vesper {
 		VZ_CORE_INFO("  Vendor: {0}", (const char *)glGetString(GL_VENDOR));
 		VZ_CORE_INFO("  Renderer: {0}", (const char *)glGetString(GL_RENDERER));
 		VZ_CORE_INFO("  Version: {0}", (const char *)glGetString(GL_VERSION));
+
+#ifdef VZ_ENABLE_ASSERTS
+		int major = 0, minor = 0;
+		glGetIntegerv(GL_MAJOR_VERSION, &major);
+		glGetIntegerv(GL_MINOR_VERSION, &minor);
+		VZ_CORE_ASSERT(major > 4 || (major == 4 && minor >= 5), "Vesper requires at least OpenGL version 4.5!");
+#endif
+
 	}
 
 	void OpenGLContext::SwapBuffers()

@@ -14,7 +14,7 @@
 #include <unordered_map>
 #include <unordered_set>
 
-#include "Vesper/Log.h"
+#include "Vesper/Core/Log.h"
 
 #ifdef VZ_PLATFORM_WINDOWS
 	#include <windows.h>

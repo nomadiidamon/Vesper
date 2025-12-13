@@ -1,10 +1,14 @@
-#include <Vesper.h>
+#include <Vesper/Vesper.h>
+#include <Vesper/Core/EntryPoint.h>
+
 
 #include "imgui/imgui.h"
 
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 #include "Platform/OpenGL/OpenGLShader.h"
+
+#include "Sandbox2D.h"
 
 static void DisplayVesperInfo() 
 {
@@ -88,7 +92,7 @@ public:
 		: Layer("Example"), m_CameraController(1280.0f / 720.0f)
 	{
 
-		m_VertexArray.reset(Vesper::VertexArray::Create());
+		m_VertexArray = Vesper::VertexArray::Create();
 
 		float vertices[3 * 7] = {
 			-0.5f, -0.5f, 0.0f,		0.8f, 0.2f, 0.8f, 1.0f,
@@ -114,7 +118,7 @@ public:
 
 
 
-		m_SquareVA.reset(Vesper::VertexArray::Create());
+		m_SquareVA = Vesper::VertexArray::Create();
 		float squareVertices[5 * 4] =
 		{
 			-0.5f, -0.5f, 0.0f,		0.0f, 0.0f,
@@ -265,19 +269,24 @@ public:
 		DisplayVesperInfo();
 
 		ImGui::Begin("Settings");
-
-		if (ImGui::TreeNode("Settings"))
-		{
-			ImGui::ColorEdit3("Square Color", glm::value_ptr(m_SquareColor));
-			m_CameraController.OnImGuiRender();
-			ImGui::TreePop();
-		}
+		ImGui::Text("Hello!");
+		//if (ImGui::TreeNode("Settings"))
+		//{
+		//	ImGui::ColorEdit3("Square Color", glm::value_ptr(m_SquareColor));
+		//	m_CameraController.OnImGuiRender();
+		//	ImGui::TreePop();
+		//}
 		ImGui::End();
 	}
 
-	void OnEvent(Vesper::Event& event) override
+	void OnEvent(Vesper::Event& e) override
 	{
-		m_CameraController.OnEvent(event);
+		m_CameraController.OnEvent(e);
+
+		if (e.GetEventType() == Vesper::EventType::WindowResize)
+		{
+
+		}
 	}
 
 
@@ -301,7 +310,8 @@ class SandboxApp : public Vesper::Application
 public:
 	SandboxApp() {
 
-		PushLayer(new ExampleLayer());
+		//PushLayer(new ExampleLayer());
+		PushLayer(new Sandbox2D());
 	}
 	~SandboxApp() {
 
