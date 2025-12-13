@@ -186,6 +186,16 @@
 			UploadUniformFloat3(name, value);
 		}
 
+		void OpenGLShader::SetFloat(const std::string& name, float value)
+		{
+			UploadUniformFloat(name, value);
+		}
+
+		void OpenGLShader::SetInt(const std::string& name, int value)
+		{
+			UploadUniformInt(name, value);
+		}
+
 		void OpenGLShader::SetMat4(const std::string& name, const glm::mat4& value)
 		{
 			UploadUniformMat4(name, value);
