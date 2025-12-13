@@ -47,15 +47,15 @@ void Sandbox2D::OnUpdate(Vesper::Timestep ts)
 		Vesper::Renderer2D::BeginScene(m_CameraController.GetCamera());
 
 		// Checkerboard background
-		Vesper::Renderer2D::DrawQuadTextured({ 0.0f, 0.0f, -0.1f }, { 10.0f, 10.0f }, m_CheckerboardTexture, m_textureScale, m_TextureTintColor);
+		//Vesper::Renderer2D::DrawQuadTextured({ 0.0f, 0.0f, -0.1f }, { 10.0f, 10.0f }, m_CheckerboardTexture, m_textureScale, m_TextureTintColor);
 
 		// Squares
 		Vesper::Renderer2D::DrawQuad({ -1.0f, 0.0f, 0.0f }, { 0.8f, 0.8f }, m_SquareColor);
 		Vesper::Renderer2D::DrawQuad({ 1.0f, -0.5f, 0.0f }, { 0.5f, 0.75 }, { 0.8f, 0.2f, 0.3f, 1.0f });
 		
 		// Rotated Squares
-		Vesper::Renderer2D::DrawQuadTexturedRotated({ 0.0f, 0.0f, -0.05f }, { 0.5f, 0.5f }, glm::radians(m_squareRotation), m_CheckerboardTexture, m_textureScale, m_TextureTintColor);
-		Vesper::Renderer2D::DrawQuadRotated({ 0.0f, 0.0f, -0.05f }, { 1.0f, 1.0f }, glm::radians(45.0f), m_SquareColor);
+		//Vesper::Renderer2D::DrawQuadTexturedRotated({ 0.0f, 0.0f, -0.05f }, { 0.5f, 0.5f }, glm::radians(m_squareRotation), m_CheckerboardTexture, m_textureScale, m_TextureTintColor);
+		//Vesper::Renderer2D::DrawQuadRotated({ 0.0f, 0.0f, -0.05f }, { 1.0f, 1.0f }, glm::radians(45.0f), m_SquareColor);
 		
 		Vesper::Renderer2D::EndScene();
 	}

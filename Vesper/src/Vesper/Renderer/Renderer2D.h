@@ -15,6 +15,7 @@ namespace Vesper {
 
 		static void BeginScene(const OrthographicCamera& camera);
 		static void EndScene();
+		static void Flush();
 
 
 		// Primitives
