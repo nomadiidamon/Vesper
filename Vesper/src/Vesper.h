@@ -17,6 +17,7 @@
 
 // -- Renderer-------------------
 #include "Vesper/Renderer/Renderer.h"
+#include "Vesper/Renderer/Renderer2D.h"
 #include "Vesper/Renderer/RenderCommand.h"
 
 

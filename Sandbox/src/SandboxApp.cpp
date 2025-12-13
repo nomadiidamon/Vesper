@@ -1,4 +1,4 @@
-#include <Vesper/Vesper.h>
+#include <Vesper.h>
 #include <Vesper/Core/EntryPoint.h>
 
 
@@ -219,6 +219,7 @@ public:
 		m_Texture2 = Vesper::Texture2D::Create("assets/textures/sheets/fire_01.png");
 
 
+		// TODO: Shader::SetMat4, Shader::SetFloat4
 		std::dynamic_pointer_cast<Vesper::OpenGLShader>(textureShader)->Bind();
 		std::dynamic_pointer_cast<Vesper::OpenGLShader>(textureShader)->UploadUniformInt("u_Texture", 0);
 	}
@@ -267,16 +268,6 @@ public:
 	void OnImGuiRender() override
 	{
 		DisplayVesperInfo();
-
-		ImGui::Begin("Settings");
-		ImGui::Text("Hello!");
-		//if (ImGui::TreeNode("Settings"))
-		//{
-		//	ImGui::ColorEdit3("Square Color", glm::value_ptr(m_SquareColor));
-		//	m_CameraController.OnImGuiRender();
-		//	ImGui::TreePop();
-		//}
-		ImGui::End();
 	}
 
 	void OnEvent(Vesper::Event& e) override

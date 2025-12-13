@@ -122,6 +122,7 @@ project "Sandbox"
 	{
 		"Vesper/vendor/spdlog/include",
 		"Vesper/src",
+		"Vesper/src/Vesper",
 		"Vesper/vendor",
 		"%{IncludeDir.glm}"
 	}

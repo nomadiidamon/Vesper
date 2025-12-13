@@ -1,6 +1,6 @@
 #pragma once
 
-#include <Vesper/Vesper.h>
+#include <Vesper.h>
 
 #include "Vesper/Core/Layer.h"
 

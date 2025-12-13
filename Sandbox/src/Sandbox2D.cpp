@@ -5,8 +5,6 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 
-#include "Platform/OpenGL/OpenGLShader.h"
-
 Sandbox2D::Sandbox2D()
 	: Layer("Sandbox2D"), m_CameraController(1280.0f / 720.0f, true)
 {
@@ -18,30 +16,7 @@ Sandbox2D::~Sandbox2D()
 
 void Sandbox2D::OnAttach()
 {
-	m_SquareVA = (Vesper::VertexArray::Create());
-	float squareVertices[5 * 4] =
-	{
-		-0.5f, -0.5f, 0.0f,
-		 0.5f, -0.5f, 0.0f,
-		 0.5f,  0.5f, 0.0f,
-		-0.5f,  0.5f, 0.0f
-	};
 
-	Vesper::Ref<Vesper::VertexBuffer> squareVB;
-	squareVB.reset(Vesper::VertexBuffer::Create(squareVertices, sizeof(squareVertices)));
-
-	squareVB->SetLayout({
-		{ Vesper::ShaderDataType::Float3, "a_Position"  },
-		});
-	m_SquareVA->AddVertexBuffer(squareVB);
-
-	uint32_t squareIndices[6] = { 0, 1, 2, 2, 3, 0 };
-	Vesper::Ref<Vesper::IndexBuffer> squareIB;
-	squareIB.reset(Vesper::IndexBuffer::Create(squareIndices, sizeof(squareIndices) / sizeof(uint32_t)));
-	m_SquareVA->SetIndexBuffer(squareIB);
-
-
-	m_FlatColorShader = Vesper::Shader::Create("assets/shaders/FlatColorShader.glsl");
 
 }
 
@@ -51,8 +26,6 @@ void Sandbox2D::OnDetach()
 
 void Sandbox2D::OnUpdate(Vesper::Timestep ts)
 {
-	m_CameraController.OnUpdate(ts);
-
 	// Update
 	m_CameraController.OnUpdate(ts);
 
@@ -61,14 +34,11 @@ void Sandbox2D::OnUpdate(Vesper::Timestep ts)
 	Vesper::RenderCommand::SetClearColor({ 0.1f, 0.1f, 0.1f, 1.0f });
 	Vesper::RenderCommand::Clear();
 
-	Vesper::Renderer::BeginScene(m_CameraController.GetCamera());
+	Vesper::Renderer2D::BeginScene(m_CameraController.GetCamera());
+	Vesper::Renderer2D::DrawQuad({ -1.0f, 0.0f, 0.0f }, { 0.8f, 0.8f }, m_SquareColor);
+	Vesper::Renderer2D::DrawQuad({ 1.0f, -0.5f, 0.0f }, { 0.5f, 0.75}, { 0.8f, 0.2f, 0.3f, 1.0f });
+	Vesper::Renderer2D::EndScene();
 
-	std::dynamic_pointer_cast<Vesper::OpenGLShader>(m_FlatColorShader)->Bind();
-	std::dynamic_pointer_cast<Vesper::OpenGLShader>(m_FlatColorShader)->UploadUniformFloat4("u_Color", m_SquareColor);
-
-	Vesper::Renderer::Submit(m_FlatColorShader, m_SquareVA, glm::scale(glm::mat4(1.0f), glm::vec3(1.5f)));
-
-	Vesper::Renderer::EndScene();
 }
 
 void Sandbox2D::OnImGuiRender()

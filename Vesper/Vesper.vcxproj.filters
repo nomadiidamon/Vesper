@@ -108,9 +108,6 @@
     <ClInclude Include="src\Vesper\Core\Timestep.h">
       <Filter>src\Vesper\Core</Filter>
     </ClInclude>
-    <ClInclude Include="src\Vesper\Core\Vesper.h">
-      <Filter>src\Vesper\Core</Filter>
-    </ClInclude>
     <ClInclude Include="src\Vesper\Core\Window.h">
       <Filter>src\Vesper\Core</Filter>
     </ClInclude>
@@ -158,6 +155,9 @@
     </ClInclude>
     <ClInclude Include="src\Vesper\Renderer\VertexArray.h">
       <Filter>src\Vesper\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vesper\Vesper.h">
+      <Filter>src\Vesper</Filter>
     </ClInclude>
     <ClInclude Include="src\vzpch.h">
       <Filter>src</Filter>
