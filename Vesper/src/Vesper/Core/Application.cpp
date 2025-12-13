@@ -15,12 +15,14 @@ namespace Vesper {
 	Application* Application::s_Instance = nullptr;
 
 
-	Application::Application() 
+	Application::Application()
 	{
+		VZ_PROFILE_FUNCTION();
+
 		VZ_CORE_ASSERT(!s_Instance, "Application already exists!");
 		s_Instance = this;
 
-		m_Window = std::unique_ptr<Window>(Window::Create());
+		m_Window = Window::Create();
 		m_Window->SetEventCallback(BIND_EVENT_FN(OnEvent));
 		m_Window->SetVSync(false);
 
@@ -39,18 +41,21 @@ namespace Vesper {
 
 	void Application::PushLayer(Layer* layer)
 	{
+		VZ_PROFILE_FUNCTION();
 		m_LayerStack.PushLayer(layer);
 		layer->OnAttach();
 	}
 
 	void Application::PushOverlay(Layer* overlay)
 	{
+		VZ_PROFILE_FUNCTION();
 		m_LayerStack.PushOverlay(overlay);
 		overlay->OnAttach();
 	}
 
 	void Application::OnEvent(Event& e)
 	{
+		VZ_PROFILE_FUNCTION();
 		EventDispatcher dispatcher(e);
 		dispatcher.Dispatch<WindowCloseEvent>(BIND_EVENT_FN(OnWindowClose));
 		dispatcher.Dispatch<WindowResizeEvent>(BIND_EVENT_FN(OnWindowResize));
@@ -67,38 +72,48 @@ namespace Vesper {
 
 	void Application::Run()
 	{
-
+		VZ_PROFILE_FUNCTION();
 		while (m_Running)
 		{
+			VZ_PROFILE_SCOPE("RunLoop");
 			float time = (float)glfwGetTime(); // TODO: Platform::GetTime()
 			Timestep timestep = time - m_LastFrameTime;
 			m_LastFrameTime = time;
 
 			if (!m_Minimized)
 			{
+				VZ_PROFILE_SCOPE("LayerStack OnUpdate");
 				// Update layers
 				for (auto layer : m_LayerStack)
 					layer->OnUpdate(timestep);
 			}
 
-			m_ImGuiLayer->Begin();
-			for (auto layer : m_LayerStack)
-				layer->OnImGuiRender();
-			m_ImGuiLayer->End();
+			{
+				VZ_PROFILE_SCOPE("ImGuiLayer OnImGuiRender");
+				m_ImGuiLayer->Begin();
+				for (auto layer : m_LayerStack)
+					layer->OnImGuiRender();
+				m_ImGuiLayer->End();
+			}
 
-			// Update window second
-			m_Window->OnUpdate();
+			{
+				VZ_PROFILE_SCOPE("Window OnUpdate");
+				// Update window second
+				m_Window->OnUpdate();
+			}
 		};
 	}
 
 	bool Application::OnWindowClose(WindowCloseEvent& e)
 	{
+		VZ_PROFILE_FUNCTION();
 		m_Running = false;
 		return true;
 	}
 
 	bool Application::OnWindowResize(WindowResizeEvent& e)
 	{
+		VZ_PROFILE_FUNCTION();
 		if (e.GetWidth() == 0 || e.GetHeight() == 0)
 		{
 			m_Minimized = true;

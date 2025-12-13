@@ -8,15 +8,18 @@ int main(int argc, char** argv)
 {
 
 	Vesper::Log::Init();
-	VZ_CORE_WARN("Starting Vesper Engine...");
-	int a = 5;
-	VZ_INFO("Vesper Engine Initialized. Var={0}", a);
-	VZ_ERROR("This is an error message to test error logging");
-	VZ_FATAL("This is a fatal message to test fatal logging");
 
+	VZ_PROFILE_BEGIN_SESSION("Startup", "VesperProfile-Startup.json");
 	auto app = Vesper::CreateApplication();
+	VZ_PROFILE_END_SESSION();
+
+	VZ_PROFILE_BEGIN_SESSION("Runtime", "VesperProfile-Runtime.json");
 	app->Run();
+	VZ_PROFILE_END_SESSION(); 
+
+	VZ_PROFILE_BEGIN_SESSION("Shutdown", "VesperProfile-Shutdown.json");
 	delete app;
+	VZ_PROFILE_END_SESSION();
 }
 
 #endif

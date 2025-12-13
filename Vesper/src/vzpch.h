@@ -16,6 +16,10 @@
 
 #include "Vesper/Core/Log.h"
 
+
+#include "Vesper/Debug/Instrumentor.h"
+
+
 #ifdef VZ_PLATFORM_WINDOWS
 	#include <windows.h>
 #endif

@@ -146,6 +146,7 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\Vesper\Debug\Instrumentor.h" />
     <ClInclude Include="src\Vesper\ImGui\VesperImGui.h" />
     <ClInclude Include="src\Vesper\Renderer\Renderer2D.h" />
     <ClInclude Include="src\Platform\OpenGL\OpenGLBuffer.h" />
@@ -183,6 +184,7 @@
     <ClInclude Include="src\Vesper\Renderer\Texture.h" />
     <ClInclude Include="src\Vesper\Renderer\VertexArray.h" />
     <ClInclude Include="src\Vesper.h" />
+    <ClInclude Include="src\Vesper\Time\Timer.h" />
     <ClInclude Include="src\vzpch.h" />
     <ClInclude Include="vendor\glm\glm\common.hpp" />
     <ClInclude Include="vendor\glm\glm\detail\_fixes.hpp" />

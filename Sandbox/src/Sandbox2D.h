@@ -22,10 +22,10 @@ private:
 	Vesper::Ref<Vesper::Texture2D> m_CheckerboardTexture;
 
 	float m_textureScale = 1.0f;
+	float m_squareRotation = 0.0f;
 
 	glm::vec4 m_SquareColor = { 0.2f, 0.3f, 0.8f, 1.0f };
 	glm::vec4 m_TextureTintColor = { 1.0f, 1.0f, 1.0f, 1.0f };
-
 
 };
 

@@ -26,7 +26,7 @@ public:
 		};
 
 		Vesper::Ref<Vesper::VertexBuffer> vertexBuffer;
-		vertexBuffer.reset(Vesper::VertexBuffer::Create(vertices, sizeof(vertices)));
+		vertexBuffer = (Vesper::VertexBuffer::Create(vertices, sizeof(vertices)));
 		Vesper::BufferLayout layout = {
 			{ Vesper::ShaderDataType::Float3, "a_Position" },
 			{ Vesper::ShaderDataType::Float4, "a_Color"  }
@@ -37,7 +37,7 @@ public:
 
 		uint32_t indices[3] = { 0, 1, 2 };
 		Vesper::Ref<Vesper::IndexBuffer> indexBuffer;
-		indexBuffer.reset(Vesper::IndexBuffer::Create(indices, sizeof(indices) / sizeof(uint32_t)));
+		indexBuffer = (Vesper::IndexBuffer::Create(indices, sizeof(indices) / sizeof(uint32_t)));
 		m_VertexArray->SetIndexBuffer(indexBuffer);
 
 
@@ -53,7 +53,7 @@ public:
 		};
 
 		Vesper::Ref<Vesper::VertexBuffer> squareVB;
-		squareVB.reset(Vesper::VertexBuffer::Create(squareVertices, sizeof(squareVertices)));
+		squareVB = (Vesper::VertexBuffer::Create(squareVertices, sizeof(squareVertices)));
 
 		squareVB->SetLayout({
 			{ Vesper::ShaderDataType::Float3, "a_Position"  },
@@ -63,7 +63,7 @@ public:
 
 		uint32_t squareIndices[6] = { 0, 1, 2, 2, 3, 0 };
 		Vesper::Ref<Vesper::IndexBuffer> squareIB;
-		squareIB.reset(Vesper::IndexBuffer::Create(squareIndices, sizeof(squareIndices) / sizeof(uint32_t)));
+		squareIB = (Vesper::IndexBuffer::Create(squareIndices, sizeof(squareIndices) / sizeof(uint32_t)));
 		m_SquareVA->SetIndexBuffer(squareIB);
 
 		std::string vertexSrc = R"(

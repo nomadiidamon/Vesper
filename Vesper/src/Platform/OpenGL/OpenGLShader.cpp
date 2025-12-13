@@ -9,6 +9,7 @@
 
 		static GLenum ShaderTypeFromString(const std::string& type)
 		{
+			VZ_PROFILE_FUNCTION();
 			if (type == "vertex")
 				return GL_VERTEX_SHADER;
 			if (type == "fragment" || type == "pixel")
@@ -19,6 +20,7 @@
 
 		OpenGLShader::OpenGLShader(const std::string& filepath)
 		{
+			VZ_PROFILE_FUNCTION();
 			std::string shaderSrc = ReadFile(filepath);
 			auto shaderSources = PreProcess(shaderSrc);
 			Compile(shaderSources);
@@ -33,7 +35,8 @@
 
 		OpenGLShader::OpenGLShader(const std::string& name, const std::string& vertexSrc, const std::string& fragmentSrc)
 			: m_Name(name)
-		{	
+		{
+			VZ_PROFILE_FUNCTION();
 			std::unordered_map<GLenum, std::string> sources;
 			sources[GL_VERTEX_SHADER] = vertexSrc;
 			sources[GL_FRAGMENT_SHADER] = fragmentSrc;
@@ -42,11 +45,13 @@
 
 		OpenGLShader::~OpenGLShader()
 		{
+			VZ_PROFILE_FUNCTION();
 			glDeleteProgram(m_RendererID);
 		}
 
 		std::string OpenGLShader::ReadFile(const std::string& filepath)
 		{
+			VZ_PROFILE_FUNCTION();
 			std::string result;
 			std::ifstream in(filepath, std::ios::in | std::ios::binary);
 			if (in)
@@ -66,6 +71,7 @@
 
 		std::unordered_map<GLenum, std::string> OpenGLShader::PreProcess(const std::string& source)
 		{
+			VZ_PROFILE_FUNCTION();
 			std::unordered_map<GLenum, std::string> shaderSources;
 
 			const char* typeToken = "#type";
@@ -91,6 +97,7 @@
 
 		void OpenGLShader::Compile(std::unordered_map<GLenum, std::string>& shaderSources)
 		{
+			VZ_PROFILE_FUNCTION();
 			GLuint program = glCreateProgram();
 
 			std::array<GLenum, 2> shaderIDs;
@@ -167,37 +174,44 @@
 
 		void OpenGLShader::Bind() const
 		{
+			VZ_PROFILE_FUNCTION();
 			glUseProgram(m_RendererID);
 		}
 
 		void OpenGLShader::Unbind() const
 		{
+			VZ_PROFILE_FUNCTION();
 			glUseProgram(0);
 		}
 
 
 		void OpenGLShader::SetFloat4(const std::string& name, const glm::vec4& value)
 		{
+			VZ_PROFILE_FUNCTION();
 			UploadUniformFloat4(name, value);
 		}
 
 		void OpenGLShader::SetFloat3(const std::string& name, const glm::vec3& value)
 		{
+			VZ_PROFILE_FUNCTION();
 			UploadUniformFloat3(name, value);
 		}
 
 		void OpenGLShader::SetFloat(const std::string& name, float value)
 		{
+			VZ_PROFILE_FUNCTION();
 			UploadUniformFloat(name, value);
 		}
 
 		void OpenGLShader::SetInt(const std::string& name, int value)
 		{
+			VZ_PROFILE_FUNCTION();
 			UploadUniformInt(name, value);
 		}
 
 		void OpenGLShader::SetMat4(const std::string& name, const glm::mat4& value)
 		{
+			VZ_PROFILE_FUNCTION();
 			UploadUniformMat4(name, value);
 		}
 

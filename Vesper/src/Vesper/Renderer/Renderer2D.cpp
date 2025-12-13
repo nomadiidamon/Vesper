@@ -19,6 +19,8 @@ namespace Vesper {
 
 	void Renderer2D::Init()
 	{
+		VZ_PROFILE_FUNCTION();
+
 		s_Data = new Renderer2DStorage();
 		s_Data->QuadVertexArray = (VertexArray::Create());
 
@@ -31,7 +33,7 @@ namespace Vesper {
 		};
 
 		Ref<VertexBuffer> squareVB;
-		squareVB.reset(VertexBuffer::Create(squareVertices, sizeof(squareVertices)));
+		squareVB = (VertexBuffer::Create(squareVertices, sizeof(squareVertices)));
 
 		squareVB->SetLayout({
 			{ ShaderDataType::Float3, "a_Position"  },
@@ -41,7 +43,7 @@ namespace Vesper {
 
 		uint32_t squareIndices[6] = { 0, 1, 2, 2, 3, 0 };
 		Ref<IndexBuffer> squareIB;
-		squareIB.reset(IndexBuffer::Create(squareIndices, sizeof(squareIndices) / sizeof(uint32_t)));
+		squareIB = (IndexBuffer::Create(squareIndices, sizeof(squareIndices) / sizeof(uint32_t)));
 		s_Data->QuadVertexArray->SetIndexBuffer(squareIB);
 
 		s_Data->WhiteTexture = Texture2D::Create(1, 1);
@@ -55,18 +57,20 @@ namespace Vesper {
 
 	void Renderer2D::Shutdown()
 	{
+		VZ_PROFILE_FUNCTION();
 		delete s_Data;
 	}
 
 	void Renderer2D::BeginScene(const OrthographicCamera& camera)
 	{
+		VZ_PROFILE_FUNCTION();
 		s_Data->TextureShader->Bind();
 		s_Data->TextureShader->SetMat4("u_ViewProjection", camera.GetViewProjectionMatrix());
 	}
 
 	void Renderer2D::EndScene()
 	{
-
+		VZ_PROFILE_FUNCTION();
 	}
 
 	void Renderer2D::DrawQuad(const glm::vec2& position, const glm::vec2& size, const glm::vec4& color)
@@ -76,6 +80,7 @@ namespace Vesper {
 
 	void Renderer2D::DrawQuad(const glm::vec3& position, const glm::vec2& size, const glm::vec4& color)
 	{
+		VZ_PROFILE_FUNCTION();
 		s_Data->TextureShader->SetFloat4("u_Color", color);
 		s_Data->WhiteTexture->Bind();
 
@@ -94,6 +99,7 @@ namespace Vesper {
 
 	void Renderer2D::DrawQuadTextured(const glm::vec3& position, const glm::vec2& size, const Ref<Texture2D>& texture)
 	{
+		VZ_PROFILE_FUNCTION();
 		s_Data->TextureShader->SetFloat4("u_Color", glm::vec4(1.0f));
 		texture->Bind();
 
@@ -111,8 +117,9 @@ namespace Vesper {
 
 	void Renderer2D::DrawQuadTextured(const glm::vec3& position, const glm::vec2& size, const Ref<Texture2D>& texture, float textureScale, const glm::vec4 tintColor)
 	{
+		VZ_PROFILE_FUNCTION();
 		s_Data->TextureShader->SetFloat4("u_Color", tintColor);
-		s_Data->TextureShader->SetFloat("u_TextureScale", textureScale);
+		s_Data->TextureShader->SetFloat("u_TilingFactor", textureScale);
 		texture->Bind();
 		glm::mat4 transform = glm::translate(glm::mat4(1.0f), position) * glm::scale(glm::mat4(1.0f), { size.x, size.y, 1.0f });
 		s_Data->TextureShader->SetMat4("u_Transform", transform);
@@ -120,6 +127,41 @@ namespace Vesper {
 		RenderCommand::DrawIndexed(s_Data->QuadVertexArray);
 	}
 
+	void Renderer2D::DrawQuadRotated(const glm::vec2& position, const glm::vec2& size, float rotation, const glm::vec4& color)
+	{
+		DrawQuadRotated({ position.x, position.y, 0.0f }, size, rotation, color);
+	}
 
+	void Renderer2D::DrawQuadRotated(const glm::vec3& position, const glm::vec2& size, float rotation, const glm::vec4& color)
+	{
+		VZ_PROFILE_FUNCTION();
+		s_Data->TextureShader->SetFloat4("u_Color", color);
+		s_Data->WhiteTexture->Bind();
+		glm::mat4 transform = glm::translate(glm::mat4(1.0f), position)
+			* glm::rotate(glm::mat4(1.0f), rotation, { 0.0f, 0.0f, 1.0f })
+			* glm::scale(glm::mat4(1.0f), { size.x, size.y, 1.0f });
+		s_Data->TextureShader->SetMat4("u_Transform", transform);
+		s_Data->QuadVertexArray->Bind();
+		RenderCommand::DrawIndexed(s_Data->QuadVertexArray);
+	}
+
+	void Renderer2D::DrawQuadTexturedRotated(const glm::vec2& position, const glm::vec2& size, float rotation, const Ref<Texture2D>& texture, float textureScale, const glm::vec4 tintColor)
+	{
+		DrawQuadTexturedRotated({ position.x, position.y, 0.0f }, size, rotation, texture, textureScale, tintColor);
+	}
+
+	void Renderer2D::DrawQuadTexturedRotated(const glm::vec3& position, const glm::vec2& size, float rotation, const Ref<Texture2D>& texture, float textureScale, const glm::vec4 tintColor)
+	{
+		VZ_PROFILE_FUNCTION();
+		s_Data->TextureShader->SetFloat4("u_Color", tintColor);
+		s_Data->TextureShader->SetFloat("u_TilingFactor", textureScale);
+		texture->Bind();
+		glm::mat4 transform = glm::translate(glm::mat4(1.0f), position)
+			* glm::rotate(glm::mat4(1.0f), rotation, { 0.0f, 0.0f, 1.0f })
+			* glm::scale(glm::mat4(1.0f), { size.x, size.y, 1.0f });
+		s_Data->TextureShader->SetMat4("u_Transform", transform);
+		s_Data->QuadVertexArray->Bind();
+		RenderCommand::DrawIndexed(s_Data->QuadVertexArray);
+	}
 
 }

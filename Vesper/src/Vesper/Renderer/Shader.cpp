@@ -11,7 +11,7 @@ namespace Vesper {
 		switch (Renderer::GetAPI())
 		{
 		case RendererAPI::API::None:	VZ_CORE_ASSERT(false, "RendererAPI::None is currently not supported!"); return nullptr;
-		case RendererAPI::API::OpenGL:	return std::make_shared<OpenGLShader>(filepath);
+		case RendererAPI::API::OpenGL:	return CreateRef<OpenGLShader>(filepath);
 		}
 		VZ_CORE_ASSERT(false, "Unknown RendererAPI!");
 		return nullptr;
@@ -22,7 +22,7 @@ namespace Vesper {
 		switch (Renderer::GetAPI())
 		{
 			case RendererAPI::API::None:	VZ_CORE_ASSERT(false, "RendererAPI::None is currently not supported!"); return nullptr;
-			case RendererAPI::API::OpenGL:	return std::make_shared<OpenGLShader>(name, vertexSrc, fragmentSrc);
+			case RendererAPI::API::OpenGL:	return CreateRef<OpenGLShader>(name, vertexSrc, fragmentSrc);
 		}
 		VZ_CORE_ASSERT(false, "Unknown RendererAPI!");
 		return nullptr;
@@ -30,18 +30,21 @@ namespace Vesper {
 
 	void ShaderLibrary::Add(const std::string& name, const Ref<Shader>& shader)
 	{
+		VZ_PROFILE_FUNCTION();
 		VZ_CORE_ASSERT(!Exists(name), "Shader already exists!");
 		m_Shaders[name] = shader;
 	}
 
 	void ShaderLibrary::Add(const Ref<Shader>& shader)
 	{
+		VZ_PROFILE_FUNCTION();
 		auto& name = shader->GetName();
 		Add(name, shader);
 	}
 
 	Vesper::Ref<Vesper::Shader> ShaderLibrary::Load(const std::string& filepath)
 	{
+		VZ_PROFILE_FUNCTION();
 		auto shader = Shader::Create(filepath);
 		Add(Ref<Shader>(shader));
 		return shader;
@@ -49,6 +52,7 @@ namespace Vesper {
 
 	Vesper::Ref<Vesper::Shader> ShaderLibrary::Load(const std::string& name, const std::string& filepath)
 	{
+		VZ_PROFILE_FUNCTION();
 		auto shader = Shader::Create(filepath);
 		Add(Ref<Vesper::Shader>(shader));
 		return shader;
@@ -62,6 +66,7 @@ namespace Vesper {
 
 	bool ShaderLibrary::Exists(const std::string& name) const
 	{
+		VZ_PROFILE_FUNCTION();
 		return m_Shaders.find(name) != m_Shaders.end();
 	}
 
