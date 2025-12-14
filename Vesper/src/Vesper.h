@@ -7,6 +7,7 @@
 #include "Vesper/Core/Log.h"
 
 #include "Vesper/Debug/Instrumentor.h"
+#include "Vesper/Core/Random.h"
 
 #include "Vesper/Core/Timestep.h"
 #include "Vesper/Time/Timer.h"

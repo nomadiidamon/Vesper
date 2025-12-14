@@ -14,16 +14,22 @@ namespace Vesper {
 
 	void OpenGLRendererAPI::SetViewport(uint32_t x, uint32_t y, uint32_t width, uint32_t height)
 	{
+		VZ_PROFILE_FUNCTION();
+
 		glViewport(x, y, width, height);
 	}
 
 	void Vesper::OpenGLRendererAPI::SetClearColor(const glm::vec4& color)
 	{
+		VZ_PROFILE_FUNCTION();
+
 		glClearColor(color.r, color.g, color.b, color.a);
 	}
 
 	void OpenGLRendererAPI::Clear()
 	{
+		VZ_PROFILE_FUNCTION();
+
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	}
 

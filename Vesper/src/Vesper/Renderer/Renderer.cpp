@@ -31,6 +31,7 @@ namespace Vesper {
 
 	void Renderer::EndScene()
 	{
+		VZ_PROFILE_FUNCTION();
 
 	}
 

@@ -4,6 +4,8 @@
 
 #include "Vesper/Core/Layer.h"
 
+struct RandomProperties;
+
 class Sandbox2D : public Vesper::Layer
 {
 public:
@@ -22,10 +24,15 @@ private:
 	Vesper::Ref<Vesper::Texture2D> m_CheckerboardTexture;
 
 	float m_textureScale = 1.0f;
-	float m_squareRotation = 0.0f;
+	float m_squareRotation = 25.0f;
+	float m_specialQuadRotation = 0.5f;
 
 	glm::vec4 m_SquareColor = { 0.2f, 0.3f, 0.8f, 1.0f };
-	glm::vec4 m_TextureTintColor = { 1.0f, 1.0f, 1.0f, 1.0f };
+	glm::vec4 m_TextureTintColor1 = { 1.0f, 1.0f, 1.0f, 1.0f };
+	glm::vec4 m_TextureTintColor2 = { 1.0f, 1.0f, 1.0f, 1.0f };
+	glm::vec4 m_BackgroundColor = { 0.1f, 0.1f, 0.1f, 1.0f };
+	glm::vec4 m_SpecialQuadColor = { 0.9f, 0.2f, 0.8f, 1.0f };
+	bool m_UseSpecialQuadColor = false;
 
 };
 
