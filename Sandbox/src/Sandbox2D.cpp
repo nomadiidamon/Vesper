@@ -27,6 +27,18 @@ void Sandbox2D::OnAttach()
 {
 	VZ_PROFILE_FUNCTION();
 	m_CheckerboardTexture = Vesper::Texture2D::Create("assets/textures/Checkerboard.png");
+
+	m_ParticleProps.Position = { 0.0f, 0.0f, 0.0f };
+	m_ParticleProps.Velocity = { 0.0f, 0.0f, 0.0f };
+	m_ParticleProps.VelocityVariation = { 1.0f, 1.0f, 0.0f };
+	m_ParticleProps.ColorBegin = { 1.0f, 0.5f, 0.2f, 1.0f };
+	m_ParticleProps.ColorEnd = { 0.2f, 0.3f, 0.8f, 1.0f };
+	m_ParticleProps.SizeBegin = 0.5f;
+	m_ParticleProps.SizeEnd = 0.0f;
+	m_ParticleProps.LifeTime = 3.0f;
+	m_ParticleProps.Rotation = 0.0f;
+	m_ParticleProps.RotationVariation = 27.0f;
+
 }
 
 void Sandbox2D::OnDetach()
@@ -97,6 +109,23 @@ void Sandbox2D::OnUpdate(Vesper::Timestep ts)
 					Vesper::Renderer2D::DrawQuad({ x, y }, { 0.45f, 0.45f }, color);
 				}
 			}
+
+			if (Vesper::Input::IsKeyPressed(VZ_KEY_SPACE))
+			{
+				auto [x, y] = Vesper::Input::GetMousePosition();
+				auto width = Vesper::Application::Get().GetWindow().GetWidth();
+				auto height = Vesper::Application::Get().GetWindow().GetHeight();
+
+				auto bounds = m_CameraController.GetBounds();
+				auto pos = m_CameraController.GetPosition();
+				m_ParticleProps.Position.x = (x / width) * bounds.GetWidth() - bounds.GetWidth() * 0.5f + pos.x;
+				m_ParticleProps.Position.y = bounds.GetHeight() * 0.5f - (y / height) * bounds.GetHeight() + pos.y;
+				for (int i = 0; i < 5; i++) {
+					m_ParticleSystem.Emit(m_ParticleProps);
+				}
+			}
+			m_ParticleSystem.OnUpdate(ts);
+			m_ParticleSystem.OnRender(m_CameraController.GetCamera());
 			Vesper::Renderer2D::EndScene();
 
 		}

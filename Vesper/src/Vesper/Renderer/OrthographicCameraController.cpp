@@ -12,7 +12,8 @@ namespace Vesper {
 
 	OrthographicCameraController::OrthographicCameraController(float aspectRatio, bool rotation)
 		: m_AspectRatio(aspectRatio), m_Rotation(rotation),
-		camera(-m_AspectRatio * m_ZoomLevel, m_AspectRatio* m_ZoomLevel, -m_ZoomLevel, m_ZoomLevel)
+		camera(-m_AspectRatio * m_ZoomLevel, m_AspectRatio* m_ZoomLevel, -m_ZoomLevel, m_ZoomLevel),
+		m_Bounds{ -m_AspectRatio * m_ZoomLevel, m_AspectRatio * m_ZoomLevel, -m_ZoomLevel, m_ZoomLevel }
 	{
 
 	}
@@ -56,7 +57,8 @@ namespace Vesper {
 		VZ_PROFILE_FUNCTION();
 		m_ZoomLevel -= e.GetYOffset() * 0.25f;
 		m_ZoomLevel = std::max(m_ZoomLevel, 0.25f);
-		camera.SetProjection(-m_AspectRatio * m_ZoomLevel, m_AspectRatio * m_ZoomLevel, -m_ZoomLevel, m_ZoomLevel);
+		UpdateCameraBounds();
+		camera.SetProjection(m_Bounds.Left, m_Bounds.Right, m_Bounds.Bottom, m_Bounds.Top);
 		return false;
 	}
 
@@ -64,8 +66,23 @@ namespace Vesper {
 	{
 		VZ_PROFILE_FUNCTION();
 		m_AspectRatio = (float)e.GetWidth() / (float)e.GetHeight();
-		camera.SetProjection(-m_AspectRatio * m_ZoomLevel, m_AspectRatio * m_ZoomLevel, -m_ZoomLevel, m_ZoomLevel);
+		UpdateCameraBounds();
+		camera.SetProjection(m_Bounds.Left, m_Bounds.Right, m_Bounds.Bottom, m_Bounds.Top);
 		return false;
+	}
+
+	void OrthographicCameraController::UpdateCameraBounds()
+	{
+		m_Bounds.Left = -m_AspectRatio * m_ZoomLevel;
+		m_Bounds.Right = m_AspectRatio * m_ZoomLevel;
+		m_Bounds.Bottom = -m_ZoomLevel;
+		m_Bounds.Top = m_ZoomLevel;
+		OnUpdateBounds();
+	}
+
+	void OrthographicCameraController::OnUpdateBounds()
+	{
+		// Nothing for now
 	}
 
 	void OrthographicCameraController::SetPosition(float x, float y)
@@ -98,7 +115,8 @@ namespace Vesper {
 	void OrthographicCameraController::SetAspectRatio(float aspectRatio)
 	{
 		m_AspectRatio = aspectRatio;
-		camera = OrthographicCamera(-m_AspectRatio * m_ZoomLevel, m_AspectRatio * m_ZoomLevel, -m_ZoomLevel, m_ZoomLevel);
+		UpdateCameraBounds();
+		camera.SetProjection(m_Bounds.Left, m_Bounds.Right, m_Bounds.Bottom, m_Bounds.Top);
 	}
 
 

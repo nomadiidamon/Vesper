@@ -10,6 +10,18 @@
 
 namespace Vesper {
 
+
+	struct OrthographicCameraBounds
+	{
+		float Left, Right;
+		float Bottom, Top;
+
+		float GetWidth() const { return Right - Left; }
+		float GetHeight() const { return Top - Bottom; }
+
+	};
+
+
 	class OrthographicCameraController
 	{
 	public: 
@@ -20,6 +32,7 @@ namespace Vesper {
 
 		OrthographicCamera& GetCamera() { return camera; }
 		const OrthographicCamera& GetCamera() const { return camera; }
+		OrthographicCameraBounds GetBounds() const { return m_Bounds; }
 
 		glm::vec3 GetPosition() const { return m_CameraPosition; }
 		void SetPosition(float x, float y);
@@ -46,11 +59,14 @@ namespace Vesper {
 	private:
 		bool OnMouseScrolled(MouseScrolledEvent& e);
 		bool OnWindowResized(WindowResizeEvent& e);
+		void UpdateCameraBounds();
+		void OnUpdateBounds();
 
 	private:
 		float m_AspectRatio;
 		float m_ZoomLevel = 1.0f;
 		OrthographicCamera camera;
+		OrthographicCameraBounds m_Bounds;
 		
 		bool m_Rotation = true;
 		glm::vec3 m_CameraPosition = { 0.0f, 0.0f, 0.0f };

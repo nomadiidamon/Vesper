@@ -375,6 +375,11 @@ namespace Vesper {
 		s_Data.Stats.QuadCount++;
 	}
 
+	Ref<Texture2D> Renderer2D::GetWhiteTexture()
+	{
+		return s_Data.WhiteTexture;
+	}
+
 	void Renderer2D::ResetStats()
 	{
 		memset(&s_Data.Stats, 0, sizeof(Statistics));

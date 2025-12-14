@@ -3,6 +3,7 @@
 #include <Vesper.h>
 
 #include "Vesper/Core/Layer.h"
+#include "ParticleSystem/ParticleSystem.h"
 
 struct RandomProperties;
 
@@ -33,6 +34,9 @@ private:
 	glm::vec4 m_BackgroundColor = { 0.1f, 0.1f, 0.1f, 1.0f };
 	glm::vec4 m_SpecialQuadColor = { 0.9f, 0.2f, 0.8f, 1.0f };
 	bool m_UseSpecialQuadColor = false;
+
+	ParticleSystem m_ParticleSystem;
+	ParticleProps m_ParticleProps;
 
 };
 

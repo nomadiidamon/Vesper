@@ -28,6 +28,8 @@ namespace Vesper {
 		static void DrawQuadRotatedWithTexture(const glm::vec2& position, const glm::vec2& size, const Ref<Texture2D>& texture, float rotationRads, float tilingFactor, const glm::vec4 tintColor);
 		static void DrawQuadRotatedWithTexture(const glm::vec3& position, const glm::vec2& size, const Ref<Texture2D>& texture, float rotationRads, float tilingFactor, const glm::vec4 tintColor);
 
+		static Ref<Texture2D> GetWhiteTexture();
+
 		struct Statistics {
 			uint32_t DrawCalls = 0;
 			uint32_t QuadCount = 0;

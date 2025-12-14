@@ -1425,6 +1425,7 @@
     <ClInclude Include="src\Vesper\Time\Timer.h" />
     <ClInclude Include="src\Vesper\Debug\Instrumentor.h" />
     <ClInclude Include="src\Vesper\Core\Random.h" />
+    <ClInclude Include="src\Vesper\ParticleSystem\ParticleSystem.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Platform\OpenGL\OpenGLBuffer.cpp">
