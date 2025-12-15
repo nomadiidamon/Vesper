@@ -183,6 +183,7 @@
     <ClInclude Include="src\Vesper\Renderer\Renderer.h" />
     <ClInclude Include="src\Vesper\Renderer\RendererAPI.h" />
     <ClInclude Include="src\Vesper\Renderer\Shader.h" />
+    <ClInclude Include="src\Vesper\Renderer\SubTexture2D.h" />
     <ClInclude Include="src\Vesper\Renderer\Texture.h" />
     <ClInclude Include="src\Vesper\Renderer\VertexArray.h" />
     <ClInclude Include="src\Vesper.h" />
@@ -632,6 +633,7 @@
     <ClCompile Include="src\Vesper\Renderer\Renderer.cpp" />
     <ClCompile Include="src\Vesper\Renderer\RendererAPI.cpp" />
     <ClCompile Include="src\Vesper\Renderer\Shader.cpp" />
+    <ClCompile Include="src\Vesper\Renderer\SubTexture2D.cpp" />
     <ClCompile Include="src\Vesper\Renderer\Texture.cpp" />
     <ClCompile Include="src\Vesper\Renderer\VertexArray.cpp" />
     <ClCompile Include="src\vzpch.cpp">

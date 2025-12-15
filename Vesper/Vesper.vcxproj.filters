@@ -1426,6 +1426,7 @@
     <ClInclude Include="src\Vesper\Debug\Instrumentor.h" />
     <ClInclude Include="src\Vesper\Core\Random.h" />
     <ClInclude Include="src\Vesper\ParticleSystem\ParticleSystem.h" />
+    <ClInclude Include="src\Vesper\Renderer\SubTexture2D.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Platform\OpenGL\OpenGLBuffer.cpp">
@@ -1504,5 +1505,6 @@
       <Filter>vendor\stb_image</Filter>
     </ClCompile>
     <ClCompile Include="src\Vesper\Renderer\Renderer2D.cpp" />
+    <ClCompile Include="src\Vesper\Renderer\SubTexture2D.cpp" />
   </ItemGroup>
 </Project>

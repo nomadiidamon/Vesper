@@ -27,6 +27,10 @@ void Sandbox2D::OnAttach()
 {
 	VZ_PROFILE_FUNCTION();
 	m_CheckerboardTexture = Vesper::Texture2D::Create("assets/textures/Checkerboard.png");
+	m_SpriteSheetFire = Vesper::Texture2D::Create("assets/textures/sheets/fire_01.png");
+	m_SpriteSheetTown = Vesper::Texture2D::Create("assets/textures/sheets/town_tilesheet.png");
+	m_SubTexture1 = Vesper::SubTexture2D::CreateFromCoords(m_SpriteSheetFire, { 1, 0 }, { 128, 127 });
+	m_SubTexture2 = Vesper::SubTexture2D::CreateFromCoords(m_SpriteSheetTown, { 4.25, 0.75 }, { 64, 64 }, { 1, 1 });
 
 	m_ParticleProps.Position = { 0.0f, 0.0f, 0.0f };
 	m_ParticleProps.Velocity = { 0.0f, 0.0f, 0.0f };
@@ -61,7 +65,7 @@ void Sandbox2D::OnUpdate(Vesper::Timestep ts)
 	{
 		VZ_PROFILE_SCOPE("Renderer Prep");
 		// Render
-		Vesper::RenderCommand::SetClearColor({ 0.1f, 0.1f, 0.1f, 1.0f });
+		Vesper::RenderCommand::SetClearColor({ 0.1f, 0.3f, 0.3f, 1.0f });
 		Vesper::RenderCommand::Clear();
 	}
 
@@ -70,68 +74,102 @@ void Sandbox2D::OnUpdate(Vesper::Timestep ts)
 		rotation += ts * 50.0f;
 		VZ_PROFILE_SCOPE("Renderer2D Draw");
 
+		//{
+		//	VZ_PROFILE_SCOPE("Scene 1");
+		//	Vesper::Renderer2D::BeginScene(m_CameraController.GetCamera());
+
+		//	// Checkerboard background
+		//	Vesper::Renderer2D::DrawQuadWithTexture({ 0.0f, 0.0f, -0.25f }, { 20.0f, 20.0f }, m_CheckerboardTexture, 10.0f, m_BackgroundColor);
+
+		//	// Squares
+		//	Vesper::Renderer2D::DrawQuadRotated({ 0.0f, 1.25f, -0.2f }, { 1.0f, 1.0f }, glm::radians(45.0f + m_squareRotation + rotation), m_SquareColor);
+
+		//	// Rotated Squares
+		//	if (m_UseSpecialQuadColor)
+		//		Vesper::Renderer2D::DrawQuadRotatedWithTexture({ 0.0f, 1.25f, -0.15f }, { 0.75f, 0.75f }, m_CheckerboardTexture, glm::radians(m_squareRotation * m_specialQuadRotation * rotation), m_textureScale, { 0.90f, 0.85f, 0.2f, 1.0f });
+		//	else
+		//		Vesper::Renderer2D::DrawQuadRotatedWithTexture({ 0.0f, 1.25f, -0.15f }, { 0.75f, 0.75f }, m_CheckerboardTexture, glm::radians(m_squareRotation * m_specialQuadRotation * rotation), m_textureScale, m_SpecialQuadColor);
+
+		//	Vesper::Renderer2D::DrawQuadRotatedWithTexture({ 2.0f, -0.25f, -0.15f }, { 1.0f, 1.0f }, m_CheckerboardTexture, glm::radians(m_squareRotation + rotation), m_textureScale, m_TextureTintColor1);
+		//	Vesper::Renderer2D::DrawQuadRotatedWithTexture({ -2.0f, -0.25f, -0.15f }, { 1.0f, 1.0f }, m_CheckerboardTexture, glm::radians(m_squareRotation + rotation), m_textureScale, m_TextureTintColor2);
+
+		//	for (int y = -5; y < 5; y++)
+		//	{
+		//		for (int x = -5; x < 5; x++)
+		//		{
+		//			glm::vec3 pos = glm::vec3(x * 0.15f, y * 0.15f, 0.0f);
+		//			Vesper::Renderer2D::DrawQuad(pos, { 2.5f, 2.5f }, { (x + 5) / 10.0f, 0.4f, (y + 5) / 10.0f, 0.55f });
+		//		}
+		//	}
+		//	Vesper::Renderer2D::EndScene();
+
+		//}
+
 		{
-			VZ_PROFILE_SCOPE("Scene 1");
+			VZ_PROFILE_SCOPE("Scene 2");
+
 			Vesper::Renderer2D::BeginScene(m_CameraController.GetCamera());
 
-			// Checkerboard background
-			Vesper::Renderer2D::DrawQuadWithTexture({ 0.0f, 0.0f, -0.25f }, { 20.0f, 20.0f }, m_CheckerboardTexture, 10.0f, m_BackgroundColor);
+			// Sprite sheet drawn as full texture
+			Vesper::Renderer2D::DrawQuadWithTexture({ -1.0f, 1.5f, 0.5f }, { 1, 1 }, m_SpriteSheetFire, 1.0f, { 1.0f, 1.0f, 1.0f, 1.0f });
+			Vesper::Renderer2D::DrawQuadRotatedWithTexture({ 1.5f, 0.0f, 0.0f }, { 1.78f, 1.0f }, m_SpriteSheetTown, 0, 1.0f, { 1.0f, 1.0f, 1.0f, 1.0f });
 
-			// Squares
-			Vesper::Renderer2D::DrawQuadRotated({ 0.0f, 1.25f, -0.2f }, { 1.0f, 1.0f }, glm::radians(45.0f + m_squareRotation + rotation), m_SquareColor);
+			
+			// Sprite sheet drawn as full texture rotated
+			Vesper::Renderer2D::DrawQuadRotatedWithTexture({ -1.5f, 0.0f, 0.0f }, { 1.78f, 1.0f }, m_SpriteSheetTown, glm::radians(-rotation), 1.0f, { 1.0f, 1.0f, 1.0f, 1.0f });
+			
+			// Sub texture from tilesheet
+			Vesper::Renderer2D::DrawQuadWithTexture({ 2.0f, -1.5f, 0.0f }, { 1.0f, 1.0f }, m_SubTexture2, 1.0f, { 1.0f, 1.0f, 1.0f, 1.0f });
 
-			// Rotated Squares
-			if (m_UseSpecialQuadColor)
-				Vesper::Renderer2D::DrawQuadRotatedWithTexture({ 0.0f, 1.25f, -0.15f }, { 0.75f, 0.75f }, m_CheckerboardTexture, glm::radians(m_squareRotation * m_specialQuadRotation * rotation), m_textureScale, { 0.90f, 0.85f, 0.2f, 1.0f });
-			else
-				Vesper::Renderer2D::DrawQuadRotatedWithTexture({ 0.0f, 1.25f, -0.15f }, { 0.75f, 0.75f }, m_CheckerboardTexture, glm::radians(m_squareRotation * m_specialQuadRotation * rotation), m_textureScale, m_SpecialQuadColor);
-
-			Vesper::Renderer2D::DrawQuadRotatedWithTexture({ 2.0f, -0.25f, -0.15f }, { 1.0f, 1.0f }, m_CheckerboardTexture, glm::radians(m_squareRotation + rotation), m_textureScale, m_TextureTintColor1);
-			Vesper::Renderer2D::DrawQuadRotatedWithTexture({ -2.0f, -0.25f, -0.15f }, { 1.0f, 1.0f }, m_CheckerboardTexture, glm::radians(m_squareRotation + rotation), m_textureScale, m_TextureTintColor2);
-
+			// Grid of sub textures from tilesheet
 			for (int y = -5; y < 5; y++)
 			{
 				for (int x = -5; x < 5; x++)
 				{
-					glm::vec3 pos = glm::vec3(x * 0.15f, y * 0.15f, 0.0f);
-					Vesper::Renderer2D::DrawQuad(pos, { 2.5f, 2.5f }, { (x + 5) / 10.0f, 0.4f, (y + 5) / 10.0f, 0.55f });
+					glm::vec3 pos = glm::vec3(x * 0.09f, y * 0.09f, -0.09f);
+					Vesper::Renderer2D::DrawQuadWithTexture(pos, { 0.1f, 0.1f }, m_SubTexture2, 1.0f, glm::vec4(1.0f));
 				}
 			}
-			Vesper::Renderer2D::EndScene();
 
+			/// TODO: get it to animate through texture sheet sub texture indices
+			Vesper::Renderer2D::DrawQuadRotatedWithTexture({ 0.0f, -1.5f, 0.0f }, { 1.0f, 1.0f }, m_SubTexture1, 0, 1.0f, { 1.0f, 1.0f, 1.0f, 1.0f });
+
+
+			Vesper::Renderer2D::EndScene();
 		}
 
-		{
-			VZ_PROFILE_SCOPE("Scene 2");
-			Vesper::Renderer2D::BeginScene(m_CameraController.GetCamera());
-			for (float y = -5.0f; y < 5.0f; y += 0.5f)
-			{
-				for (float x = -5.0f; x < 5.0f; x += 0.5f)
-				{
-					glm::vec4 color = { (x + 5.0f) / 10.0f, 0.4f,(y + 5.0f) / 10.0f, 0.35f };
-					Vesper::Renderer2D::DrawQuad({ x, y }, { 0.45f, 0.45f }, color);
-				}
-			}
 
-			if (Vesper::Input::IsMouseButtonPressed(VZ_MOUSE_BUTTON_LEFT))
-			{
-				auto [x, y] = Vesper::Input::GetMousePosition();
-				auto width = Vesper::Application::Get().GetWindow().GetWidth();
-				auto height = Vesper::Application::Get().GetWindow().GetHeight();
+		//{
+		//	VZ_PROFILE_SCOPE("Scene 3");
+		//	Vesper::Renderer2D::BeginScene(m_CameraController.GetCamera());
+		//	for (float y = -5.0f; y < 5.0f; y += 0.5f)
+		//	{
+		//		for (float x = -5.0f; x < 5.0f; x += 0.5f)
+		//		{
+		//			glm::vec4 color = { (x + 5.0f) / 10.0f, 0.4f,(y + 5.0f) / 10.0f, 0.35f };
+		//			Vesper::Renderer2D::DrawQuad({ x, y }, { 0.45f, 0.45f }, color);
+		//		}
+		//	}
 
-				auto bounds = m_CameraController.GetBounds();
-				auto pos = m_CameraController.GetPosition();
-				m_ParticleProps.Position.x = (x / width) * bounds.GetWidth() - bounds.GetWidth() * 0.5f + pos.x;
-				m_ParticleProps.Position.y = bounds.GetHeight() * 0.5f - (y / height) * bounds.GetHeight() + pos.y;
-				for (int i = 0; i < ParticleEmitCount; i++) {
-					m_ParticleSystem.Emit(m_ParticleProps);
-				}
-			}
-			m_ParticleSystem.OnUpdate(ts);
-			m_ParticleSystem.OnRender(m_CameraController.GetCamera());
-			Vesper::Renderer2D::EndScene();
+		//	if (Vesper::Input::IsMouseButtonPressed(VZ_MOUSE_BUTTON_LEFT))
+		//	{
+		//		auto [x, y] = Vesper::Input::GetMousePosition();
+		//		auto width = Vesper::Application::Get().GetWindow().GetWidth();
+		//		auto height = Vesper::Application::Get().GetWindow().GetHeight();
 
-		}
+		//		auto bounds = m_CameraController.GetBounds();
+		//		auto pos = m_CameraController.GetPosition();
+		//		m_ParticleProps.Position.x = (x / width) * bounds.GetWidth() - bounds.GetWidth() * 0.5f + pos.x;
+		//		m_ParticleProps.Position.y = bounds.GetHeight() * 0.5f - (y / height) * bounds.GetHeight() + pos.y;
+		//		for (int i = 0; i < ParticleEmitCount; i++) {
+		//			m_ParticleSystem.Emit(m_ParticleProps);
+		//		}
+		//	}
+		//	m_ParticleSystem.OnUpdate(ts);
+		//	m_ParticleSystem.OnRender(m_CameraController.GetCamera());
+		//	Vesper::Renderer2D::EndScene();
+
+		//}
 	}
 
 }

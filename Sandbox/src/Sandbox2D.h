@@ -23,6 +23,10 @@ private:
 	Vesper::Ref<Vesper::VertexArray> m_SquareVA;
 	Vesper::Ref<Vesper::Shader> m_FlatColorShader;
 	Vesper::Ref<Vesper::Texture2D> m_CheckerboardTexture;
+	Vesper::Ref<Vesper::Texture2D> m_SpriteSheetFire;
+	Vesper::Ref<Vesper::Texture2D> m_SpriteSheetTown;
+	Vesper::Ref<Vesper::SubTexture2D> m_SubTexture1;
+	Vesper::Ref<Vesper::SubTexture2D> m_SubTexture2;
 
 	float m_textureScale = 1.0f;
 	float m_squareRotation = 25.0f;
