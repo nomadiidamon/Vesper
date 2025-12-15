@@ -40,7 +40,6 @@ ParticleSystem::ParticleSystem(uint32_t maxParticles)
 
 	void ParticleSystem::OnRender(Vesper::OrthographicCamera& camera)
 	{
-		Vesper::Renderer2D::BeginScene(camera);
 		for (auto& particle : m_ParticlePool)
 		{
 			if (!particle.Active)
@@ -57,8 +56,6 @@ ParticleSystem::ParticleSystem(uint32_t maxParticles)
 				particle.Rotation, 1.0f, color);
 
 		}
-		Vesper::Renderer2D::EndScene();
-
 	}
 
 	void ParticleSystem::Emit(const ParticleProps& particleProps)
@@ -82,4 +79,3 @@ ParticleSystem::ParticleSystem(uint32_t maxParticles)
 		particle.LifeRemaining = particle.LifeTime;
 		m_PoolIndex = --m_PoolIndex % m_ParticlePool.size();
 	}
-

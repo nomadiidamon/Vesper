@@ -27,6 +27,7 @@ private:
 	float m_textureScale = 1.0f;
 	float m_squareRotation = 25.0f;
 	float m_specialQuadRotation = 0.5f;
+	int ParticleEmitCount = 100;
 
 	glm::vec4 m_SquareColor = { 0.2f, 0.3f, 0.8f, 1.0f };
 	glm::vec4 m_TextureTintColor1 = { 1.0f, 1.0f, 1.0f, 1.0f };

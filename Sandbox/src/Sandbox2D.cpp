@@ -39,6 +39,9 @@ void Sandbox2D::OnAttach()
 	m_ParticleProps.Rotation = 0.0f;
 	m_ParticleProps.RotationVariation = 27.0f;
 
+	m_ParticleSystem = ParticleSystem(10000);
+	m_ParticleSystem.SetParticleProps(m_ParticleProps);
+
 }
 
 void Sandbox2D::OnDetach()
@@ -110,7 +113,7 @@ void Sandbox2D::OnUpdate(Vesper::Timestep ts)
 				}
 			}
 
-			if (Vesper::Input::IsKeyPressed(VZ_KEY_SPACE))
+			if (Vesper::Input::IsMouseButtonPressed(VZ_MOUSE_BUTTON_LEFT))
 			{
 				auto [x, y] = Vesper::Input::GetMousePosition();
 				auto width = Vesper::Application::Get().GetWindow().GetWidth();
@@ -120,7 +123,7 @@ void Sandbox2D::OnUpdate(Vesper::Timestep ts)
 				auto pos = m_CameraController.GetPosition();
 				m_ParticleProps.Position.x = (x / width) * bounds.GetWidth() - bounds.GetWidth() * 0.5f + pos.x;
 				m_ParticleProps.Position.y = bounds.GetHeight() * 0.5f - (y / height) * bounds.GetHeight() + pos.y;
-				for (int i = 0; i < 5; i++) {
+				for (int i = 0; i < ParticleEmitCount; i++) {
 					m_ParticleSystem.Emit(m_ParticleProps);
 				}
 			}
@@ -147,41 +150,79 @@ void Sandbox2D::OnImGuiRender()
 	ImGui::Text("\tVertex Count: %d", stats.GetTotalVertexCount());
 	ImGui::Text("\tIndex Count: %d", stats.GetTotalIndexCount());
 
+	if (ImGui::TreeNode("Particle System Properties")) {
+		if (ImGui::DragInt("Particle Emit Count", &ParticleEmitCount)) {
 
-	if (ImGui::ColorEdit4("Background Color", glm::value_ptr(m_BackgroundColor)))
-	{
+		}
+		if (ImGui::DragFloat3("Velocity", glm::value_ptr(m_ParticleProps.Velocity), 0.1f)) {
+
+		}
+		if (ImGui::DragFloat3("Velocity Variation", glm::value_ptr(m_ParticleProps.VelocityVariation), 0.1f)) {
+
+		}
+		if (ImGui::ColorEdit4("Color Begin", glm::value_ptr(m_ParticleProps.ColorBegin))) {
+
+		}
+		if (ImGui::ColorEdit4("Color End", glm::value_ptr(m_ParticleProps.ColorEnd))) {
+
+		}
+		if (ImGui::DragFloat("Size Begin", &m_ParticleProps.SizeBegin, 0.1f)) {
+
+		}
+		if (ImGui::DragFloat("Size End", &m_ParticleProps.SizeEnd, 0.1f)) {
+
+		}
+		if (ImGui::DragFloat("Life Time", &m_ParticleProps.LifeTime, 0.1f)) {
+
+		}
+		if (ImGui::DragFloat("Rotation", &m_ParticleProps.Rotation, 0.1f)) {
+
+		}
+		if (ImGui::DragFloat("Rotation Variation", &m_ParticleProps.RotationVariation, 0.1f)) {
+
+		}
+		ImGui::TreePop();
 	}
 
-	if (ImGui::ColorEdit4("Square Color", glm::value_ptr(m_SquareColor)))
+	if (ImGui::TreeNode("Basic Scene Properties"))
 	{
+		if (ImGui::ColorEdit4("Background Color", glm::value_ptr(m_BackgroundColor)))
+		{
+		}
 
+		if (ImGui::ColorEdit4("Square Color", glm::value_ptr(m_SquareColor)))
+		{
+
+		}
+
+		if (ImGui::Checkbox("Use Special Quad Color", &m_UseSpecialQuadColor))
+		{
+		}
+
+		if (ImGui::ColorEdit4("Special Quad Color", glm::value_ptr(m_SpecialQuadColor)))
+		{
+		}
+
+		if (ImGui::ColorEdit4("Texture Tint Color 1", glm::value_ptr(m_TextureTintColor1)))
+		{
+		}
+		if (ImGui::ColorEdit4("Texture Tint Color 2", glm::value_ptr(m_TextureTintColor2)))
+		{
+		}
+
+		if (ImGui::SliderFloat("Texture Scale", &m_textureScale, 0.1f, 10.0f))
+		{
+		}
+
+		if (ImGui::SliderFloat("Square Rotation", &m_squareRotation, 0.0f, 360.0f))
+		{
+		}
+		if (ImGui::SliderFloat("Special Quad Rotation", &m_specialQuadRotation, 0.1f, 5.0f))
+		{
+		}
+		ImGui::TreePop();
 	}
 
-	if (ImGui::Checkbox("Use Special Quad Color", &m_UseSpecialQuadColor))
-	{
-	}
-
-	if (ImGui::ColorEdit4("Special Quad Color", glm::value_ptr(m_SpecialQuadColor)))
-	{
-	}
-
-	if (ImGui::ColorEdit4("Texture Tint Color 1", glm::value_ptr(m_TextureTintColor1)))
-	{
-	}
-	if (ImGui::ColorEdit4("Texture Tint Color 2", glm::value_ptr(m_TextureTintColor2)))
-	{
-	}
-
-	if (ImGui::SliderFloat("Texture Scale", &m_textureScale, 0.1f, 10.0f))
-	{
-	}
-
-	if (ImGui::SliderFloat("Square Rotation", &m_squareRotation, 0.0f, 360.0f))
-	{
-	}
-	if (ImGui::SliderFloat("Special Quad Rotation", &m_specialQuadRotation, 0.1f, 5.0f))
-	{
-	}
 	Vesper::DisplayVesperInfo_ImGui();
 	ImGui::End();
 }
