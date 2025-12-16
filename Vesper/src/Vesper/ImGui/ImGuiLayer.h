@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Vesper/Core/Core.h"
+#include "Vesper/Core/Base.h"
 #include "Vesper/Events/Event.h"
 #include "Vesper/Events/ApplicationEvent.h"
 #include "Vesper/Events/KeyEvent.h"

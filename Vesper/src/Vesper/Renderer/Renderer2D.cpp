@@ -109,6 +109,8 @@ namespace Vesper {
 	void Renderer2D::Shutdown()
 	{
 		VZ_PROFILE_FUNCTION();
+
+		delete[] s_Data.QuadVertexBufferBase;
 	}
 
 	void Renderer2D::BeginScene(const OrthographicCamera& camera)
@@ -127,6 +129,7 @@ namespace Vesper {
 	{
 		VZ_PROFILE_FUNCTION();
 		uint32_t dataSize = (uint32_t)((uint8_t*)s_Data.QuadVertexBufferPtr - (uint8_t*)s_Data.QuadVertexBufferBase);
+
 		s_Data.QuadVertexBuffer->SetData(s_Data.QuadVertexBufferBase, dataSize);
 		Flush();
 	}
@@ -214,6 +217,9 @@ namespace Vesper {
 	
 		if (textureIndex == 0.0f)
 		{
+			if (s_Data.TextureSlotIndex >= s_Data.MaxTextureSlots)
+				FlushAndReset();
+
 			textureIndex = (float)s_Data.TextureSlotIndex;
 			s_Data.TextureSlots[s_Data.TextureSlotIndex] = texture;
 			s_Data.TextureSlotIndex++;
@@ -266,6 +272,9 @@ namespace Vesper {
 
 		if (textureIndex == 0.0f)
 		{
+			if (s_Data.TextureSlotIndex >= s_Data.MaxTextureSlots)
+				FlushAndReset();
+
 			textureIndex = (float)s_Data.TextureSlotIndex;
 			s_Data.TextureSlots[s_Data.TextureSlotIndex] = texture;
 			s_Data.TextureSlotIndex++;
@@ -364,6 +373,9 @@ namespace Vesper {
 
 		if (textureIndex == 0.0f)
 		{
+			if (s_Data.TextureSlotIndex >= s_Data.MaxTextureSlots)
+				FlushAndReset();
+
 			textureIndex = (float)s_Data.TextureSlotIndex;
 			s_Data.TextureSlots[s_Data.TextureSlotIndex] = texture;
 			s_Data.TextureSlotIndex++;
@@ -416,6 +428,9 @@ namespace Vesper {
 
 		if (textureIndex == 0.0f)
 		{
+			if (s_Data.TextureSlotIndex >= s_Data.MaxTextureSlots)
+				FlushAndReset();
+
 			textureIndex = (float)s_Data.TextureSlotIndex;
 			s_Data.TextureSlots[s_Data.TextureSlotIndex] = texture;
 			s_Data.TextureSlotIndex++;

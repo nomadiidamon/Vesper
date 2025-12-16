@@ -52,7 +52,7 @@ namespace Vesper {
 		bool CanRotate() const { return m_Rotation; }
 		void SetCanRotate(bool canRotate) { m_Rotation = canRotate; }
 
-		void SetZoomLevel(float level) { m_ZoomLevel = level; }
+		void SetZoomLevel(float level) { m_ZoomLevel = level; CalculateView(); }
 		float GetZoomLevel() const { return m_ZoomLevel; }
 
 		void OnImGuiRender();
@@ -61,6 +61,7 @@ namespace Vesper {
 		bool OnWindowResized(WindowResizeEvent& e);
 		void UpdateCameraBounds();
 		void OnUpdateBounds();
+		void CalculateView();
 
 	private:
 		float m_AspectRatio;

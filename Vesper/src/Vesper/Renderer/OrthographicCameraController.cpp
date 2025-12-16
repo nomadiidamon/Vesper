@@ -57,8 +57,7 @@ namespace Vesper {
 		VZ_PROFILE_FUNCTION();
 		m_ZoomLevel -= e.GetYOffset() * 0.25f;
 		m_ZoomLevel = std::max(m_ZoomLevel, 0.25f);
-		UpdateCameraBounds();
-		camera.SetProjection(m_Bounds.Left, m_Bounds.Right, m_Bounds.Bottom, m_Bounds.Top);
+		CalculateView();
 		return false;
 	}
 
@@ -66,8 +65,7 @@ namespace Vesper {
 	{
 		VZ_PROFILE_FUNCTION();
 		m_AspectRatio = (float)e.GetWidth() / (float)e.GetHeight();
-		UpdateCameraBounds();
-		camera.SetProjection(m_Bounds.Left, m_Bounds.Right, m_Bounds.Bottom, m_Bounds.Top);
+		CalculateView();
 		return false;
 	}
 
@@ -83,6 +81,12 @@ namespace Vesper {
 	void OrthographicCameraController::OnUpdateBounds()
 	{
 		// Nothing for now
+	}
+
+	void OrthographicCameraController::CalculateView() 
+	{
+		UpdateCameraBounds();
+		camera.SetProjection(m_Bounds.Left, m_Bounds.Right, m_Bounds.Bottom, m_Bounds.Top);
 	}
 
 	void OrthographicCameraController::SetPosition(float x, float y)
@@ -115,8 +119,7 @@ namespace Vesper {
 	void OrthographicCameraController::SetAspectRatio(float aspectRatio)
 	{
 		m_AspectRatio = aspectRatio;
-		UpdateCameraBounds();
-		camera.SetProjection(m_Bounds.Left, m_Bounds.Right, m_Bounds.Bottom, m_Bounds.Top);
+		CalculateView();
 	}
 
 

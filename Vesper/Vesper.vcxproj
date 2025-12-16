@@ -160,7 +160,7 @@
     <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\Vesper\Core\Application.h" />
-    <ClInclude Include="src\Vesper\Core\Core.h" />
+    <ClInclude Include="src\Vesper\Core\Base.h" />
     <ClInclude Include="src\Vesper\Core\EntryPoint.h" />
     <ClInclude Include="src\Vesper\Core\Input.h" />
     <ClInclude Include="src\Vesper\Core\KeyCodes.h" />

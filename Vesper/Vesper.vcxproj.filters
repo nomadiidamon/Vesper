@@ -81,7 +81,7 @@
     <ClInclude Include="src\Vesper\Core\Application.h">
       <Filter>src\Vesper\Core</Filter>
     </ClInclude>
-    <ClInclude Include="src\Vesper\Core\Core.h">
+    <ClInclude Include="src\Vesper\Core\Base.h">
       <Filter>src\Vesper\Core</Filter>
     </ClInclude>
     <ClInclude Include="src\Vesper\Core\EntryPoint.h">

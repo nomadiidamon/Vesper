@@ -4,6 +4,26 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 
+static const uint32_t s_MapWidth = 20;
+static const uint32_t s_MapHeight = 10;
+static const char* s_MapTiles =
+"GGGGGGGGGGGGGGGGGGGG"
+"GGGCCCCCCCCCCCCCCGGG"
+"GGGCGGGGGGGGGGGGCGGG"
+"GGGCGGRGGGGGGRGGCGGG"
+"GGGCGGGGGGGGGGGGCGGG"
+"GGGCGGGGGGGGGGGGCGGG"
+"GGGCGGPGGGGGGPGGCGGG"
+"GGGCGGGGGGGGGGGGCGGG"
+"GGGCCCCCCCCCCCCCCGGG"
+"GGGGGGGGGGGGGGGGGGGG";
+
+// G - Grass - SpriteSheetTown -> subTexture(4.25, 0.75) (64, 64) (1, 1)
+// C - Crystal - SpriteSheetCrystals
+// R - Rock - SpriteSheetRock
+// P - Plant - SpriteSheetCursedLands
+
+
 
 struct RandomProperties {
 	glm::vec3 pos;
@@ -29,8 +49,21 @@ void Sandbox2D::OnAttach()
 	m_CheckerboardTexture = Vesper::Texture2D::Create("assets/textures/Checkerboard.png");
 	m_SpriteSheetFire = Vesper::Texture2D::Create("assets/textures/sheets/fire_01.png");
 	m_SpriteSheetTown = Vesper::Texture2D::Create("assets/textures/sheets/town_tilesheet.png");
-	m_SubTexture1 = Vesper::SubTexture2D::CreateFromCoords(m_SpriteSheetFire, { 1, 0 }, { 128, 127 });
-	m_SubTexture2 = Vesper::SubTexture2D::CreateFromCoords(m_SpriteSheetTown, { 4.25, 0.75 }, { 64, 64 }, { 1, 1 });
+	m_SpriteSheetCrystals = Vesper::Texture2D::Create("assets/textures/sheets/craftpix/Crystals/Crystals.png");
+	m_SpriteSheetRocks = Vesper::Texture2D::Create("assets/textures/sheets/craftpix/Rocks/Rocks_source.png");
+	m_SpriteSheetCursedLands = Vesper::Texture2D::Create("assets/textures/sheets/craftpix/CursedLand/Tiled_files/Objects.png");
+
+	m_SubTextureFire = Vesper::SubTexture2D::CreateFromCoords(m_SpriteSheetFire, { 1, 0 }, { 128, 127 });
+	m_SubTextureTown = Vesper::SubTexture2D::CreateFromCoords(m_SpriteSheetTown, { 4.25, 0.75 }, { 64, 64 }, { 1, 1 });
+	//m_SubTextureCrystal = Vesper::SubTexture2D::CreateFromCoords(m_SpriteSheetCrystals, { 0, 0 }, { 64, 64 }, { 1, 1});
+	//m_SubTextureRock = Vesper::SubTexture2D::CreateFromCoords(m_SpriteSheetRocks, { 0, 0 }, { 64, 64 }, { 1, 1 });
+	//m_SubTexturePlant = Vesper::SubTexture2D::CreateFromCoords(m_SpriteSheetCursedLands, { 2, 0 }, { 64, 64 }, { 1, 1 });
+
+	s_TextureMap['F'] = Vesper::SubTexture2D::CreateFromCoords(m_SpriteSheetFire, { 1, 0 }, { 128, 127 });
+	s_TextureMap['G'] = Vesper::SubTexture2D::CreateFromCoords(m_SpriteSheetTown, { 4.25, 0.75 }, { 64, 64 }, { 1, 1 });
+	s_TextureMap['C'] = Vesper::SubTexture2D::CreateFromCoords(m_SpriteSheetCrystals, { 0, 1.25 }, { 64, 64 }, { 1, 1 });
+	s_TextureMap['R'] = Vesper::SubTexture2D::CreateFromCoords(m_SpriteSheetRocks, { 0, 3.75 }, { 64, 64 }, { 1, 1 });
+	s_TextureMap['P'] = Vesper::SubTexture2D::CreateFromCoords(m_SpriteSheetCursedLands, { 0, 1.875 }, { 128, 128 }, { 1, 1 });
 
 	m_ParticleProps.Position = { 0.0f, 0.0f, 0.0f };
 	m_ParticleProps.Velocity = { 0.0f, 0.0f, 0.0f };
@@ -45,6 +78,8 @@ void Sandbox2D::OnAttach()
 
 	m_ParticleSystem = ParticleSystem(10000);
 	m_ParticleSystem.SetParticleProps(m_ParticleProps);
+
+	m_CameraController.SetZoomLevel(3.5f);
 
 }
 
@@ -111,28 +146,47 @@ void Sandbox2D::OnUpdate(Vesper::Timestep ts)
 			Vesper::Renderer2D::BeginScene(m_CameraController.GetCamera());
 
 			// Sprite sheet drawn as full texture
-			Vesper::Renderer2D::DrawQuadWithTexture({ -1.0f, 1.5f, 0.5f }, { 1, 1 }, m_SpriteSheetFire, 1.0f, { 1.0f, 1.0f, 1.0f, 1.0f });
-			Vesper::Renderer2D::DrawQuadRotatedWithTexture({ 1.5f, 0.0f, 0.0f }, { 1.78f, 1.0f }, m_SpriteSheetTown, 0, 1.0f, { 1.0f, 1.0f, 1.0f, 1.0f });
+			//Vesper::Renderer2D::DrawQuadWithTexture({ -1.0f, 1.5f, 0.5f }, { 1, 1 }, m_SpriteSheetFire, 1.0f, { 1.0f, 1.0f, 1.0f, 1.0f });
+			//Vesper::Renderer2D::DrawQuadRotatedWithTexture({ 1.5f, 0.0f, 0.0f }, { 1.78f, 1.0f }, m_SpriteSheetTown, 0, 1.0f, { 1.0f, 1.0f, 1.0f, 1.0f });
 
-			
+
 			// Sprite sheet drawn as full texture rotated
-			Vesper::Renderer2D::DrawQuadRotatedWithTexture({ -1.5f, 0.0f, 0.0f }, { 1.78f, 1.0f }, m_SpriteSheetTown, glm::radians(-rotation), 1.0f, { 1.0f, 1.0f, 1.0f, 1.0f });
-			
-			// Sub texture from tilesheet
-			Vesper::Renderer2D::DrawQuadWithTexture({ 2.0f, -1.5f, 0.0f }, { 1.0f, 1.0f }, m_SubTexture2, 1.0f, { 1.0f, 1.0f, 1.0f, 1.0f });
+			//Vesper::Renderer2D::DrawQuadRotatedWithTexture({ -1.5f, 0.0f, 0.0f }, { 1.78f, 1.0f }, m_SpriteSheetTown, glm::radians(-rotation), 1.0f, { 1.0f, 1.0f, 1.0f, 1.0f });
 
-			// Grid of sub textures from tilesheet
-			for (int y = -5; y < 5; y++)
+			// Sub texture from tilesheet
+			//Vesper::Renderer2D::DrawQuadWithTexture({ 2.0f, -1.5f, 0.0f }, { 1.0f, 1.0f }, m_SubTextureTown, 1.0f, { 1.0f, 1.0f, 1.0f, 1.0f });
+
+			//// Grid of sub textures from tilesheet
+			//for (int y = -5; y < 5; y++)
+			//{
+			//	for (int x = -5; x < 5; x++)
+			//	{
+			//		glm::vec3 pos = glm::vec3(x * 0.09f, y * 0.09f, -0.09f);
+			//		Vesper::Renderer2D::DrawQuadWithTexture(pos, { 0.1f, 0.1f }, m_SubTextureTown, 1.0f, glm::vec4(1.0f));
+			//	}
+			//}
+
+
+			for (uint32_t y = 0; y < s_MapHeight; y++)
 			{
-				for (int x = -5; x < 5; x++)
+				for (uint32_t x = 0; x < s_MapWidth; x++)
 				{
-					glm::vec3 pos = glm::vec3(x * 0.09f, y * 0.09f, -0.09f);
-					Vesper::Renderer2D::DrawQuadWithTexture(pos, { 0.1f, 0.1f }, m_SubTexture2, 1.0f, glm::vec4(1.0f));
+					char tileChar = s_MapTiles[x + y * s_MapWidth];
+					Vesper::Ref<Vesper::SubTexture2D> texture;
+					if (s_TextureMap.find(tileChar) != s_TextureMap.end())
+						texture = s_TextureMap[tileChar];
+					else
+						texture = s_TextureMap['G']; // Default to grass
+
+					Vesper::Renderer2D::DrawQuadWithTexture({ x - s_MapWidth / 2.0f, s_MapHeight - y - s_MapHeight / 2.0f, 0.1f }, { 1.0f, 1.0f }, texture, 1.0f, glm::vec4(1.0f));
+
 				}
 			}
 
+
+
 			/// TODO: get it to animate through texture sheet sub texture indices
-			Vesper::Renderer2D::DrawQuadRotatedWithTexture({ 0.0f, -1.5f, 0.0f }, { 1.0f, 1.0f }, m_SubTexture1, 0, 1.0f, { 1.0f, 1.0f, 1.0f, 1.0f });
+			//Vesper::Renderer2D::DrawQuadRotatedWithTexture({ 0.0f, -1.5f, 0.0f }, { 1.0f, 1.0f }, m_SubTextureFire, 0, 1.0f, { 1.0f, 1.0f, 1.0f, 1.0f });
 
 
 			Vesper::Renderer2D::EndScene();
