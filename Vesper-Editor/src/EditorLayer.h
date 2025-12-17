@@ -20,7 +20,7 @@ namespace Vesper {
 		virtual void OnEvent(Event& e) override;
 	private:
 		OrthographicCameraController m_CameraController;
-
+		bool m_ViewportFocused = false, m_ViewportHovered = false;
 		glm::vec2 m_ViewportSize = {0,0};
 		// Temp
 		Ref<VertexArray> m_SquareVA;
@@ -50,7 +50,7 @@ namespace Vesper {
 		ParticleProps m_ParticleProps;
 
 
-		bool scene1 = false, scene2 = false, scene3 = false, scene4 = true;
+		bool scene1 = true, scene2 = false, scene3 = false, scene4 = false;
 
 		glm::vec4 m_SquareColor = { 0.2f, 0.3f, 0.8f, 1.0f };
 		glm::vec4 m_TextureTintColor1 = { 1.0f, 1.0f, 1.0f, 1.0f };

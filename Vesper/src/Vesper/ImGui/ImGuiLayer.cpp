@@ -71,9 +71,9 @@ namespace  Vesper {
 	void ImGuiLayer::OnDetach()
 	{
 		VZ_PROFILE_FUNCTION();
-			ImGui_ImplOpenGL3_Shutdown();
-			ImGui_ImplGlfw_Shutdown();
-			ImGui::DestroyContext();
+		ImGui_ImplOpenGL3_Shutdown();
+		ImGui_ImplGlfw_Shutdown();
+		ImGui::DestroyContext();
 	}
 
 	void ImGuiLayer::OnImGuiRender()
@@ -83,9 +83,11 @@ namespace  Vesper {
 
 	void ImGuiLayer::OnEvent(Event& e)
 	{
-		//ImGuiIO& io = ImGui::GetIO();
-		//e.Handled |= e.IsInCategory(EventCategoryMouse) & io.WantCaptureMouse;
-		//e.Handled |= e.IsInCategory(EventCategoryKeyboard) & io.WantCaptureKeyboard;
+		if (m_BlockEvents) {
+			ImGuiIO& io = ImGui::GetIO();
+			e.Handled |= e.IsInCategory(EventCategoryMouse) & io.WantCaptureMouse;
+			e.Handled |= e.IsInCategory(EventCategoryKeyboard) & io.WantCaptureKeyboard;
+		}
 	}
 
 

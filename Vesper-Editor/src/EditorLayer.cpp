@@ -90,7 +90,8 @@ namespace Vesper {
 		VZ_PROFILE_FUNCTION();
 
 		// Update
-		m_CameraController.OnUpdate(ts);
+		if (m_ViewportFocused)
+			m_CameraController.OnUpdate(ts);
 
 		// Render
 		Vesper::Renderer2D::ResetStats();
@@ -253,10 +254,10 @@ namespace Vesper {
 			window_flags |= ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoCollapse | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove;
 			window_flags |= ImGuiWindowFlags_NoBringToFrontOnFocus | ImGuiWindowFlags_NoNavFocus;
 		}
-		else
-		{
-			dockspace_flags &= ~ImGuiDockNodeFlags_PassthruCentralNode;
-		}
+		//else
+		//{
+		//	dockspace_flags &= ~ImGuiDockNodeFlags_PassthruCentralNode;
+		//}
 
 		// When using ImGuiDockNodeFlags_PassthruCentralNode, DockSpace() will render our background
 		// and handle the pass-thru hole, so we ask Begin() to not render a background.
@@ -358,6 +359,10 @@ namespace Vesper {
 		{
 			ImGui::PushStyleVar(ImGuiStyleVar_WindowPadding, ImVec2{ 0,0 });
 			ImGui::Begin("Viewport");
+			m_ViewportFocused = ImGui::IsWindowFocused();
+			m_ViewportHovered = ImGui::IsWindowHovered();
+			Application::Get().GetImGuiLayer()->SetBlockEvents(!m_ViewportFocused || !m_ViewportHovered);
+
 			ImVec2 viewportPanelSize = ImGui::GetContentRegionAvail();
 			if (m_ViewportSize != *((glm::vec2*)&viewportPanelSize))
 			{
