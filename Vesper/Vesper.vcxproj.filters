@@ -1427,6 +1427,9 @@
     <ClInclude Include="src\Vesper\Core\Random.h" />
     <ClInclude Include="src\Vesper\ParticleSystem\ParticleSystem.h" />
     <ClInclude Include="src\Vesper\Renderer\SubTexture2D.h" />
+    <ClInclude Include="src\Vesper\Core\Config.h" />
+    <ClInclude Include="src\Vesper\Renderer\Framebuffer.h" />
+    <ClInclude Include="src\Platform\OpenGL\OpenGLFramebuffer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Platform\OpenGL\OpenGLBuffer.cpp">
@@ -1506,5 +1509,7 @@
     </ClCompile>
     <ClCompile Include="src\Vesper\Renderer\Renderer2D.cpp" />
     <ClCompile Include="src\Vesper\Renderer\SubTexture2D.cpp" />
+    <ClCompile Include="src\Vesper\Renderer\Framebuffer.cpp" />
+    <ClCompile Include="src\Platform\OpenGL\OpenGLFramebuffer.cpp" />
   </ItemGroup>
 </Project>

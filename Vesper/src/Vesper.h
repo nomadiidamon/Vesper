@@ -26,6 +26,7 @@
 
 
 #include "Vesper/Renderer/Buffer.h"
+#include "Vesper/Renderer/Framebuffer.h"
 #include "Vesper/Renderer/Shader.h"
 #include "Vesper/Renderer/Texture.h"
 #include "Vesper/Renderer/SubTexture2D.h"

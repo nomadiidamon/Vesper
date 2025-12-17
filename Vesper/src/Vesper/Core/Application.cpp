@@ -53,6 +53,11 @@ namespace Vesper {
 		overlay->OnAttach();
 	}
 
+	void Application::Close()
+	{
+		m_Running = false;
+	}
+
 	void Application::OnEvent(Event& e)
 	{
 		VZ_PROFILE_FUNCTION();
