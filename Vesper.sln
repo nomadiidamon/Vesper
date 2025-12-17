@@ -13,6 +13,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ImGui", "Vesper\vendor\imgu
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Vesper", "Vesper\Vesper.vcxproj", "{3A4FDFD7-26F1-09AE-0FAC-1D02FBEC90FE}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Vesper-Editor", "Vesper-Editor\Vesper-Editor.vcxproj", "{AE6DD86E-1A2E-54A5-E368-9D224FE89881}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -50,6 +52,12 @@ Global
 		{3A4FDFD7-26F1-09AE-0FAC-1D02FBEC90FE}.Dist|x64.Build.0 = Dist|x64
 		{3A4FDFD7-26F1-09AE-0FAC-1D02FBEC90FE}.Release|x64.ActiveCfg = Release|x64
 		{3A4FDFD7-26F1-09AE-0FAC-1D02FBEC90FE}.Release|x64.Build.0 = Release|x64
+		{AE6DD86E-1A2E-54A5-E368-9D224FE89881}.Debug|x64.ActiveCfg = Debug|x64
+		{AE6DD86E-1A2E-54A5-E368-9D224FE89881}.Debug|x64.Build.0 = Debug|x64
+		{AE6DD86E-1A2E-54A5-E368-9D224FE89881}.Dist|x64.ActiveCfg = Dist|x64
+		{AE6DD86E-1A2E-54A5-E368-9D224FE89881}.Dist|x64.Build.0 = Dist|x64
+		{AE6DD86E-1A2E-54A5-E368-9D224FE89881}.Release|x64.ActiveCfg = Release|x64
+		{AE6DD86E-1A2E-54A5-E368-9D224FE89881}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -157,3 +157,60 @@ project "Sandbox"
 			defines "VZ_DIST"
 			runtime "Release"
 			optimize "on"
+
+
+project "Vesper-Editor"
+	location "Vesper-Editor"
+	kind "ConsoleApp"
+	language "C++"
+	cppdialect "C++17"
+	staticruntime "off"
+
+	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
+	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
+
+	files 
+	{
+		"%{prj.name}/src/**.h",
+		"%{prj.name}/src/**.cpp"
+	}
+
+	includedirs
+	{
+		"Vesper/vendor/spdlog/include",
+		"Vesper/src",
+		"Vesper/src/Vesper",
+		"Vesper/vendor",
+		"%{IncludeDir.glm}"
+	}
+
+	links
+	{
+		"Vesper"
+	}
+
+	filter "system:windows"
+		systemversion "latest"
+
+	buildoptions { "/utf-8" }
+
+
+		defines
+		{
+			"VZ_PLATFORM_WINDOWS"
+		}
+
+		filter "configurations:Debug"
+			defines "VZ_DEBUG"
+			runtime "Debug"
+			symbols "on"
+
+		filter "configurations:Release"
+			defines "VZ_RELEASE"
+			runtime "Release"
+			optimize "on"
+
+		filter "configurations:Dist"
+			defines "VZ_DIST"
+			runtime "Release"
+			optimize "on"

@@ -146,24 +146,18 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="src\Vesper\Renderer\Framebuffer.h" />
-    <ClInclude Include="src\Platform\OpenGL\OpenGLFramebuffer.h" />
-    <ClInclude Include="src\Vesper\Core\Random.h" />
-    <ClInclude Include="src\Vesper\Core\Config.h" />
-    <ClInclude Include="src\Vesper\Debug\Instrumentor.h" />
-    <ClInclude Include="src\Vesper\ImGui\VesperImGui.h" />
-    <ClInclude Include="src\Vesper\ParticleSystem\ParticleSystem.h" />
-    <ClInclude Include="src\Vesper\Renderer\Renderer2D.h" />
     <ClInclude Include="src\Platform\OpenGL\OpenGLBuffer.h" />
     <ClInclude Include="src\Platform\OpenGL\OpenGLContext.h" />
+    <ClInclude Include="src\Platform\OpenGL\OpenGLFramebuffer.h" />
     <ClInclude Include="src\Platform\OpenGL\OpenGLRendererAPI.h" />
     <ClInclude Include="src\Platform\OpenGL\OpenGLShader.h" />
     <ClInclude Include="src\Platform\OpenGL\OpenGLTexture.h" />
     <ClInclude Include="src\Platform\OpenGL\OpenGLVertexArray.h" />
-    <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
+    <ClInclude Include="src\Vesper.h" />
     <ClInclude Include="src\Vesper\Core\Application.h" />
     <ClInclude Include="src\Vesper\Core\Base.h" />
+    <ClInclude Include="src\Vesper\Core\Config.h" />
     <ClInclude Include="src\Vesper\Core\EntryPoint.h" />
     <ClInclude Include="src\Vesper\Core\Input.h" />
     <ClInclude Include="src\Vesper\Core\KeyCodes.h" />
@@ -171,25 +165,30 @@
     <ClInclude Include="src\Vesper\Core\LayerStack.h" />
     <ClInclude Include="src\Vesper\Core\Log.h" />
     <ClInclude Include="src\Vesper\Core\MouseButtonCodes.h" />
+    <ClInclude Include="src\Vesper\Core\Random.h" />
     <ClInclude Include="src\Vesper\Core\Timestep.h" />
     <ClInclude Include="src\Vesper\Core\Window.h" />
+    <ClInclude Include="src\Vesper\Debug\Instrumentor.h" />
     <ClInclude Include="src\Vesper\Events\ApplicationEvent.h" />
     <ClInclude Include="src\Vesper\Events\Event.h" />
     <ClInclude Include="src\Vesper\Events\KeyEvent.h" />
     <ClInclude Include="src\Vesper\Events\MouseEvent.h" />
     <ClInclude Include="src\Vesper\ImGui\ImGuiLayer.h" />
+    <ClInclude Include="src\Vesper\ImGui\VesperImGui.h" />
+    <ClInclude Include="src\Vesper\ParticleSystem\ParticleSystem.h" />
     <ClInclude Include="src\Vesper\Renderer\Buffer.h" />
+    <ClInclude Include="src\Vesper\Renderer\Framebuffer.h" />
     <ClInclude Include="src\Vesper\Renderer\GraphicsContext.h" />
     <ClInclude Include="src\Vesper\Renderer\OrthographicCamera.h" />
     <ClInclude Include="src\Vesper\Renderer\OrthographicCameraController.h" />
     <ClInclude Include="src\Vesper\Renderer\RenderCommand.h" />
     <ClInclude Include="src\Vesper\Renderer\Renderer.h" />
+    <ClInclude Include="src\Vesper\Renderer\Renderer2D.h" />
     <ClInclude Include="src\Vesper\Renderer\RendererAPI.h" />
     <ClInclude Include="src\Vesper\Renderer\Shader.h" />
     <ClInclude Include="src\Vesper\Renderer\SubTexture2D.h" />
     <ClInclude Include="src\Vesper\Renderer\Texture.h" />
     <ClInclude Include="src\Vesper\Renderer\VertexArray.h" />
-    <ClInclude Include="src\Vesper.h" />
     <ClInclude Include="src\Vesper\Time\Timer.h" />
     <ClInclude Include="src\vzpch.h" />
     <ClInclude Include="vendor\glm\glm\common.hpp" />
@@ -614,11 +613,9 @@
     <ClInclude Include="vendor\stb_image\stb_image.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Vesper\Renderer\Framebuffer.cpp" />
-    <ClCompile Include="src\Platform\OpenGL\OpenGLFramebuffer.cpp" />
-    <ClCompile Include="src\Vesper\Renderer\Renderer2D.cpp" />
     <ClCompile Include="src\Platform\OpenGL\OpenGLBuffer.cpp" />
     <ClCompile Include="src\Platform\OpenGL\OpenGLContext.cpp" />
+    <ClCompile Include="src\Platform\OpenGL\OpenGLFramebuffer.cpp" />
     <ClCompile Include="src\Platform\OpenGL\OpenGLRendererAPI.cpp" />
     <ClCompile Include="src\Platform\OpenGL\OpenGLShader.cpp" />
     <ClCompile Include="src\Platform\OpenGL\OpenGLTexture.cpp" />
@@ -631,11 +628,14 @@
     <ClCompile Include="src\Vesper\Core\Log.cpp" />
     <ClCompile Include="src\Vesper\ImGui\ImGuiBuild.cpp" />
     <ClCompile Include="src\Vesper\ImGui\ImGuiLayer.cpp" />
+    <ClCompile Include="src\Vesper\ParticleSystem\ParticleSystem.cpp" />
     <ClCompile Include="src\Vesper\Renderer\Buffer.cpp" />
+    <ClCompile Include="src\Vesper\Renderer\Framebuffer.cpp" />
     <ClCompile Include="src\Vesper\Renderer\OrthographicCamera.cpp" />
     <ClCompile Include="src\Vesper\Renderer\OrthographicCameraController.cpp" />
     <ClCompile Include="src\Vesper\Renderer\RenderCommand.cpp" />
     <ClCompile Include="src\Vesper\Renderer\Renderer.cpp" />
+    <ClCompile Include="src\Vesper\Renderer\Renderer2D.cpp" />
     <ClCompile Include="src\Vesper\Renderer\RendererAPI.cpp" />
     <ClCompile Include="src\Vesper\Renderer\Shader.cpp" />
     <ClCompile Include="src\Vesper\Renderer\SubTexture2D.cpp" />

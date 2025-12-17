@@ -33,3 +33,5 @@
 #include "Vesper/Renderer/VertexArray.h"
 
 #include "Vesper/Renderer/OrthographicCamera.h"
+
+#include "Vesper/ParticleSystem/ParticleSystem.h"

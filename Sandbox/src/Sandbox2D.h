@@ -3,7 +3,7 @@
 #include <Vesper.h>
 
 #include "Vesper/Core/Layer.h"
-#include "ParticleSystem/ParticleSystem.h"
+#include "Vesper/ParticleSystem/ParticleSystem.h"
 
 struct RandomProperties;
 
@@ -36,7 +36,7 @@ private:
 	//Vesper::Ref<Vesper::SubTexture2D> m_SubTextureRock;
 	//Vesper::Ref<Vesper::SubTexture2D> m_SubTexturePlant;
 
-	Vesper::Ref<Vesper::Framebuffer> m_Framebuffer;
+	//Vesper::Ref<Vesper::Framebuffer> m_Framebuffer;
 
 	float m_textureScale = 1.0f;
 	float m_squareRotation = 25.0f;
@@ -53,8 +53,8 @@ private:
 	glm::vec4 m_SpecialQuadColor = { 0.9f, 0.2f, 0.8f, 1.0f };
 	bool m_UseSpecialQuadColor = false;
 
-	ParticleSystem m_ParticleSystem;
-	ParticleProps m_ParticleProps;
+	Vesper::ParticleSystem m_ParticleSystem;
+	Vesper::ParticleProps m_ParticleProps;
 
 	std::unordered_map<char, Vesper::Ref<Vesper::SubTexture2D>>s_TextureMap;
 

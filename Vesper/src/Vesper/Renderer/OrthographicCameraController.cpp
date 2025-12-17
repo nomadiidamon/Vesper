@@ -52,6 +52,15 @@ namespace Vesper {
 		dispatcher.Dispatch<WindowResizeEvent>(VZ_BIND_EVENT_FN(OrthographicCameraController::OnWindowResized));
 	}
 
+	void OrthographicCameraController::OnResize(float width, float height) 
+	{
+		VZ_PROFILE_FUNCTION();
+		m_AspectRatio = width / height;
+		CalculateView();
+
+	}
+
+
 	bool OrthographicCameraController::OnMouseScrolled(MouseScrolledEvent& e)
 	{
 		VZ_PROFILE_FUNCTION();
@@ -64,8 +73,7 @@ namespace Vesper {
 	bool OrthographicCameraController::OnWindowResized(WindowResizeEvent& e)
 	{
 		VZ_PROFILE_FUNCTION();
-		m_AspectRatio = (float)e.GetWidth() / (float)e.GetHeight();
-		CalculateView();
+		OnResize((float)e.GetWidth(), (float)e.GetHeight());
 		return false;
 	}
 
