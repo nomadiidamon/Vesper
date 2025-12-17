@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Vesper.h"
+#include "Vesper/Renderer/OrthographicCamera.h"
 
 namespace Vesper {
 
@@ -26,8 +27,8 @@ namespace Vesper {
 		ParticleSystem();
 		ParticleSystem(uint32_t maxParticles);
 
-		void OnUpdate(Vesper::Timestep ts);
-		void OnRender(Vesper::OrthographicCamera& camera);
+		void OnUpdate(Timestep ts);
+		void OnRender(OrthographicCamera& camera);
 		void Emit(const ParticleProps& particleProps);
 		void SetParticleProps(const ParticleProps& particleProps) { m_Props = particleProps; }
 

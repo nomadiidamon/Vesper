@@ -4,6 +4,7 @@
 
 #include "Vesper/Core/Layer.h"
 #include "Vesper/ParticleSystem/ParticleSystem.h"
+#include "Vesper/Scene/Scene.h"
 
 namespace Vesper {
 
@@ -19,10 +20,15 @@ namespace Vesper {
 		virtual void OnImGuiRender() override;
 		virtual void OnEvent(Event& e) override;
 	private:
-		OrthographicCameraController m_CameraController;
+		Ref<Scene> m_ActiveScene;
 		bool m_ViewportFocused = false, m_ViewportHovered = false;
 		glm::vec2 m_ViewportSize = {0,0};
 		glm::vec2 m_ViewportBounds[2] = { {0,0}, {0,0} };
+
+		
+		
+		OrthographicCameraController m_CameraController;
+
 
 		// Temp
 		Ref<VertexArray> m_SquareVA;

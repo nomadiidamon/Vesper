@@ -18,6 +18,7 @@ IncludeDir["Glad"] = "Vesper/vendor/Glad/include"
 IncludeDir["ImGui"] = "Vesper/vendor/imgui"
 IncludeDir["glm"] = "Vesper/vendor/glm"
 IncludeDir["stb_image"] = "Vesper/vendor/stb_image"
+IncludeDir["entt"] = "Vesper/vendor/entt/include"
 
 group "Dependencies"
 	include "Vesper/vendor/GLFW"
@@ -61,7 +62,8 @@ project "Vesper"
 		"%{IncludeDir.Glad}",
 		"%{IncludeDir.ImGui}",
 		"%{IncludeDir.glm}",
-		"%{IncludeDir.stb_image}"
+		"%{IncludeDir.stb_image}",
+		"%{IncludeDir.entt}"
 	}
 
 	links
@@ -124,7 +126,8 @@ project "Sandbox"
 		"Vesper/src",
 		"Vesper/src/Vesper",
 		"Vesper/vendor",
-		"%{IncludeDir.glm}"
+		"%{IncludeDir.glm}",
+		"%{IncludeDir.entt}"
 	}
 
 	links
@@ -181,7 +184,8 @@ project "Vesper-Editor"
 		"Vesper/src",
 		"Vesper/src/Vesper",
 		"Vesper/vendor",
-		"%{IncludeDir.glm}"
+		"%{IncludeDir.glm}",
+		"%{IncludeDir.entt}"
 	}
 
 	links
