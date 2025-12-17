@@ -207,16 +207,25 @@ namespace Vesper {
 					}
 				}
 
-				if (Vesper::Input::IsMouseButtonPressed(VZ_MOUSE_BUTTON_LEFT))
+				if (Vesper::Input::IsMouseButtonPressed(VZ_MOUSE_BUTTON_LEFT) && m_ViewportHovered)
 				{
-					glm::vec2 pos = Vesper::Input::GetMousePosition();
-					auto width = Vesper::Application::Get().GetWindow().GetWidth();
-					auto height = Vesper::Application::Get().GetWindow().GetHeight();
+					ImVec2 mousePos = ImGui::GetMousePos();
+
+					mousePos.x -= m_ViewportBounds[0].x;
+					mousePos.y -= m_ViewportBounds[0].y;
+
+					if (mousePos.x < 0 || mousePos.y < 0 || mousePos.x > m_ViewportSize.x || mousePos.y > m_ViewportSize.y)
+						return;
 
 					auto bounds = m_CameraController.GetBounds();
-					auto position = m_CameraController.GetPosition();
-					m_ParticleProps.Position.x = (pos.x / width) * bounds.GetWidth() - bounds.GetWidth() * 0.5f + position.x;
-					m_ParticleProps.Position.y = bounds.GetHeight() * 0.5f - (pos.y / height) * bounds.GetHeight() + position.y;
+					auto camPos = m_CameraController.GetPosition();
+
+					float width = m_ViewportSize.x;
+					float height = m_ViewportSize.y;
+
+					m_ParticleProps.Position.x = (mousePos.x / width) * bounds.GetWidth() - bounds.GetWidth() * 0.5f + camPos.x;
+					m_ParticleProps.Position.y = bounds.GetHeight() * 0.5f - (mousePos.y / height) * bounds.GetHeight() + camPos.y;
+					
 					for (int i = 0; i < ParticleEmitCount; i++) {
 						m_ParticleSystem.Emit(m_ParticleProps);
 					}
@@ -254,10 +263,6 @@ namespace Vesper {
 			window_flags |= ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoCollapse | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove;
 			window_flags |= ImGuiWindowFlags_NoBringToFrontOnFocus | ImGuiWindowFlags_NoNavFocus;
 		}
-		//else
-		//{
-		//	dockspace_flags &= ~ImGuiDockNodeFlags_PassthruCentralNode;
-		//}
 
 		// When using ImGuiDockNodeFlags_PassthruCentralNode, DockSpace() will render our background
 		// and handle the pass-thru hole, so we ask Begin() to not render a background.
@@ -364,13 +369,19 @@ namespace Vesper {
 			Application::Get().GetImGuiLayer()->SetBlockEvents(!m_ViewportFocused || !m_ViewportHovered);
 
 			ImVec2 viewportPanelSize = ImGui::GetContentRegionAvail();
-			if (m_ViewportSize != *((glm::vec2*)&viewportPanelSize))
+			if (m_ViewportSize != *((glm::vec2*)&viewportPanelSize) && viewportPanelSize.x > 0.0f && viewportPanelSize.y > 0)
 			{
 				m_Framebuffer->Resize((uint32_t)viewportPanelSize.x, (uint32_t)viewportPanelSize.y);
 				m_ViewportSize = { viewportPanelSize.x, viewportPanelSize.y };
 
 				m_CameraController.OnResize(viewportPanelSize.x, viewportPanelSize.y);
 			}
+
+			ImVec2 viewportBoundsMin = ImGui::GetCursorScreenPos();
+			ImVec2 viewportBoundsMax = { viewportBoundsMin.x + m_ViewportSize.x, viewportBoundsMin.y + m_ViewportSize.y };
+			m_ViewportBounds[0] = { viewportBoundsMin.x, viewportBoundsMin.y };
+			m_ViewportBounds[1] = { viewportBoundsMax.x, viewportBoundsMax.y };
+
 			uint32_t textureID = m_Framebuffer->GetColorAttachmentRendererID();
 			ImGui::Image(textureID, ImVec2(m_ViewportSize.x, m_ViewportSize.y), ImVec2(0, 1), ImVec2(1, 0));
 			ImGui::End();
@@ -382,6 +393,7 @@ namespace Vesper {
 	void EditorLayer::OnEvent(Vesper::Event& e)
 	{
 		m_CameraController.OnEvent(e);
+
 	}
 
 }

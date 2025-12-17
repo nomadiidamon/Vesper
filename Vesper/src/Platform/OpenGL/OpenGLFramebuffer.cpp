@@ -5,6 +5,9 @@
 
 namespace Vesper {
 
+	/// TODO: Get the actual maximum size from the GPU!
+	static const uint32_t s_MaxFramebufferSize = 8192;
+
 	OpenGLFramebuffer::OpenGLFramebuffer(const FramebufferSpecification& spec)
 		: m_Specification(spec)
 	{
@@ -63,6 +66,11 @@ namespace Vesper {
 
 	void OpenGLFramebuffer::Resize(uint32_t width, uint32_t height)
 	{
+		if (width == 0 || height == 0 || width > 8192 || height > 8192)
+		{
+			VZ_CORE_WARN("Attempted to resize framebuffer to {0}, {1}", width, height);
+			return;
+		}
 		m_Specification.Width = width;
 		m_Specification.Height = height;
 		Invalidate();

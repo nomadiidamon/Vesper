@@ -34,10 +34,7 @@ namespace  Vesper {
 		//io.ConfigFlags |= ImGuiConfigFlags_ViewportsNoTaskBarIcons; // Disable Platform Windows task bar icons
 		//io.ConfigFlags |= ImGuiConfigFlags_ViewportsNoMerge;      // Disable Platform Windows merging into host window
 
-
-		// Setup Dear ImGui style
 		ImGui::StyleColorsDark();
-		//ImGui::StyleColorsClassic();
 
 		// When viewports are enabled we tweak WindowRounding/WindowBg so platform windows can look identical to regular ones.
 		ImGuiStyle& style = ImGui::GetStyle();
@@ -47,19 +44,6 @@ namespace  Vesper {
 			style.Colors[ImGuiCol_WindowBg].w = 1.0f;
 		}
 
-		//io.BackendFlags |= ImGuiBackendFlags_HasMouseCursors;         // We can honor GetMouseCursor() values (optional)
-		//io.BackendFlags |= ImGuiBackendFlags_HasSetMousePos;          // We can honor io.WantSetMousePos requests (optional, rarely used)
-
-		//// Guard against initializing the renderer backend more than once.
-		//// ImGui_ImplOpenGL3_Init asserts if io.BackendRendererUserData != nullptr.
-		//if (io.BackendRendererUserData == nullptr)
-		//{
-		//	ImGui_ImplOpenGL3_Init("#version 410");
-		//}
-		//else
-		//{
-		//	VZ_CORE_WARN("ImGui renderer backend already initialized — skipping ImGui_ImplOpenGL3_Init()");
-		//}
 
 		Application& app = Application::Get();
 		GLFWwindow* window = static_cast<GLFWwindow*>(app.GetWindow().GetNativeWindow());
@@ -89,7 +73,6 @@ namespace  Vesper {
 			e.Handled |= e.IsInCategory(EventCategoryKeyboard) & io.WantCaptureKeyboard;
 		}
 	}
-
 
 	void ImGuiLayer::Begin()
 	{
