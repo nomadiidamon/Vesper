@@ -193,6 +193,8 @@
     <ClInclude Include="src\Vesper\Renderer\VertexArray.h" />
     <ClInclude Include="src\Vesper\Scene\Components.h" />
     <ClInclude Include="src\Vesper\Scene\Scene.h" />
+    <ClInclude Include="src\Vesper\Renderer\Camera.h" />
+    <ClInclude Include="src\Vesper\Scene\SceneCamera.h" />
     <ClInclude Include="src\Vesper\Time\Timer.h" />
     <ClInclude Include="src\vzpch.h" />
     <ClInclude Include="vendor\glm\glm\common.hpp" />
@@ -647,6 +649,7 @@
     <ClCompile Include="src\Vesper\Renderer\Texture.cpp" />
     <ClCompile Include="src\Vesper\Renderer\VertexArray.cpp" />
     <ClCompile Include="src\Vesper\Scene\Scene.cpp" />
+    <ClCompile Include="src\Vesper\Scene\SceneCamera.cpp" />
     <ClCompile Include="src\vzpch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>

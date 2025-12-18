@@ -88,11 +88,21 @@ namespace Vesper {
 		{
 			m_CameraController.SetZoomLevel(5.5f);
 			m_ActiveScene = CreateRef<Scene>();
+			m_CameraEntity = m_ActiveScene->CreateEntity("Primary Camera Entity");
+			auto& pCam = m_CameraEntity.AddComponent<CameraComponent>();
+
+			m_SecondaryCameraEntity = m_ActiveScene->CreateEntity("Secondary Scene Camera");
+			auto& cc = m_SecondaryCameraEntity.AddComponent<CameraComponent>().Primary = false;
+			m_SecondaryCameraEntity.GetComponent<TransformComponent>();
+
+			auto fbSpec = m_Framebuffer->GetSpecification();
+			m_ActiveScene->OnViewportResize(fbSpec.Width, fbSpec.Height);
+
 			// Animation 1
 			{
 				auto square = m_ActiveScene->CreateEntity("Square");
 				auto& transform = square.GetComponent<TransformComponent>();
-				transform.Translate(glm::vec3(-1.0f, 2.0f, 0.1f));
+				transform.Translate(glm::vec3(-0.5f, 0.0f, 0.1f));
 
 				square.AddComponent<SpriteRendererComponent>(glm::vec4{ 0.8f, 0.8f, 0.2f, 1.0f });
 				std::vector<Ref<SubTexture2D>> fireFrames;
@@ -113,7 +123,7 @@ namespace Vesper {
 				auto square = m_ActiveScene->CreateEntity("Square2");
 				auto& transform = square.GetComponent<TransformComponent>();
 				// adjust the position of the square entity
-				transform.Translate(glm::vec3(0.5f, 2.0f, 0.1f));
+				transform.Translate(glm::vec3(0.5f, 0.0f, 0.1f));
 
 				square.AddComponent<SpriteRendererComponent>(glm::vec4{ 0.8f, 0.8f, 0.2f, 1.0f });
 				std::vector<Ref<SubTexture2D>> smokeFrames;
@@ -140,6 +150,17 @@ namespace Vesper {
 	void EditorLayer::OnUpdate(Timestep ts)
 	{
 		VZ_PROFILE_FUNCTION();
+
+		// Resize
+		if (Vesper::FramebufferSpecification spec = m_Framebuffer->GetSpecification();
+			m_ViewportSize.x > 0.0f && m_ViewportSize.y > 0.0f &&
+			(spec.Width != (uint32_t)m_ViewportSize.x || spec.Height != (uint32_t)m_ViewportSize.y))
+		{
+			m_Framebuffer->Resize((uint32_t)m_ViewportSize.x, (uint32_t)m_ViewportSize.y);
+			m_CameraController.OnResize(m_ViewportSize.x, m_ViewportSize.y);
+
+			m_ActiveScene->OnViewportResize((uint32_t)m_ViewportSize.x, (uint32_t)m_ViewportSize.y);
+		}
 
 		// Update
 		if (m_ViewportFocused)
@@ -296,10 +317,8 @@ namespace Vesper {
 			if (useEntityScene)
 			{
 				VZ_PROFILE_SCOPE("Entity Scene Update");
-				Renderer2D::BeginScene(m_CameraController.GetCamera());
 				// Update scene
 				m_ActiveScene->OnUpdate(ts);
-				Renderer2D::EndScene();
 			}
 
 		}
@@ -426,6 +445,34 @@ namespace Vesper {
 			ImGui::Text("\tQuad Count: %d", stats.QuadCount);
 			ImGui::Text("\tVertex Count: %d", stats.GetTotalVertexCount());
 			ImGui::Text("\tIndex Count: %d", stats.GetTotalIndexCount());
+			ImGui::Separator();
+			
+			std::string camName = m_CameraEntity.GetComponent<CameraComponent>().Primary ? "Primary Camera" : "Secondary Camera";
+
+			std::string camData = "Active Camera: " + camName;
+			ImGui::Text(camData.c_str());
+			ImGui::Separator();
+
+			if (ImGui::Checkbox("Primary Camera?", &m_PrimaryCamera))
+			{
+				m_CameraEntity.GetComponent<CameraComponent>().Primary = m_PrimaryCamera;
+				m_SecondaryCameraEntity.GetComponent<CameraComponent>().Primary = !m_PrimaryCamera;
+			}
+
+			if (ImGui::DragFloat3("Primary Camera transform", glm::value_ptr(m_CameraEntity.GetComponent<TransformComponent>().Transform[3])))
+			{
+			}
+
+			if (ImGui::DragFloat3("Secondary Camera transform", glm::value_ptr(m_SecondaryCameraEntity.GetComponent<TransformComponent>().Transform[3]), 0.1f))
+			{
+			}
+
+			auto& secondCam = m_SecondaryCameraEntity.GetComponent<CameraComponent>().Camera;
+			float orthoSize = secondCam.GetOrthographicSize();
+			if (ImGui::DragFloat("Second Camera Ortho Size", &orthoSize))
+			{
+				secondCam.SetOrthographicSize(orthoSize);
+			}
 
 			if (ImGui::ColorEdit4("Background Color", glm::value_ptr(m_ClearColor)))
 			{

@@ -5,6 +5,7 @@
 #include "Vesper/Renderer/Texture.h"
 #include "Vesper/Renderer/SubTexture2D.h"
 
+#include "Vesper/Renderer/Camera.h"
 
 namespace Vesper {
 
@@ -14,7 +15,8 @@ namespace Vesper {
 		static void Init();
 		static void Shutdown();
 
-		static void BeginScene(const OrthographicCamera& camera);
+		static void BeginScene(const Camera& camera, const glm::mat4& transform); 
+		static void BeginScene(const OrthographicCamera& camera); // TODO: Remove once we have a proper scene system
 		static void EndScene();
 		static void Flush();
 

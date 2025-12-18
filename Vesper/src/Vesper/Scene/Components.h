@@ -3,8 +3,9 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include "Vesper/Renderer/Texture.h"
 #include "Vesper/Renderer/SubTexture2D.h"
+#include "SceneCamera.h"
 
-namespace Vesper 
+namespace Vesper
 {
 	struct NameComponent
 	{
@@ -39,7 +40,7 @@ namespace Vesper
 		glm::vec3 Translation() const {
 			return glm::vec3(Transform[3]);
 		}
-		
+
 		void Rotate(float angle, const glm::vec3& axis) {
 			Transform = glm::rotate(Transform, angle, axis);
 		}
@@ -144,6 +145,17 @@ namespace Vesper
 			}
 		}
 
+
+	};
+
+	struct CameraComponent
+	{
+		SceneCamera Camera;
+		bool Primary = true;
+		bool FixedAspectRatio = false;
+
+		CameraComponent() = default;
+		CameraComponent(const CameraComponent&) = default;
 
 	};
 

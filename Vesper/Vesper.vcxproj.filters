@@ -1469,6 +1469,8 @@
     </ClInclude>
     <ClInclude Include="src\Vesper\Scene\Entity.h" />
     <ClInclude Include="src\Vesper\Core\Color.h" />
+    <ClInclude Include="src\Vesper\Renderer\Camera.h" />
+    <ClInclude Include="src\Vesper\Scene\SceneCamera.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Platform\OpenGL\OpenGLBuffer.cpp">
@@ -1565,5 +1567,6 @@
       <Filter>vendor\stb_image</Filter>
     </ClCompile>
     <ClCompile Include="src\Vesper\Scene\Entity.cpp" />
+    <ClCompile Include="src\Vesper\Scene\SceneCamera.cpp" />
   </ItemGroup>
 </Project>
