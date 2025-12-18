@@ -5,6 +5,8 @@
 
 namespace Vesper {
 
+	class Entity;
+
 	class Scene
 	{
 	public:
@@ -12,15 +14,13 @@ namespace Vesper {
 		~Scene();
 
 		// Temp-> add entity wrapper later
-		entt::entity CreateEntity();
-
-		// Temp-> add registry access wrapper later
-		entt::registry& Reg() { return m_Registry; }
+		Entity CreateEntity(const std::string& name = std::string());
 		
 		void OnUpdate(Timestep ts);
 
 	private:
 		entt::registry m_Registry;
+		friend class Entity;
 	};
 
 

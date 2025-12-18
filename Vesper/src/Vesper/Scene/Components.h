@@ -6,17 +6,17 @@
 
 namespace Vesper 
 {
-	struct TagComponent
+	struct NameComponent
 	{
-		std::string Tag;
-		TagComponent() = default;
-		TagComponent(const TagComponent&) = default;
-		TagComponent(const std::string& tag)
-			: Tag(tag) {
+		std::string Name;
+		NameComponent() = default;
+		NameComponent(const NameComponent&) = default;
+		NameComponent(const std::string& name)
+			: Name(name) {
 		}
-		operator std::string& () { return Tag; }
-		operator const std::string& () const { return Tag; }
-		std::string& GetTag() { return Tag; }
+		operator std::string& () { return Name; }
+		operator const std::string& () const { return Name; }
+		std::string& GetName() { return Name; }
 	};
 
 	struct TransformComponent

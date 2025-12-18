@@ -18,6 +18,56 @@ namespace Vesper {
 			GetRNG().seed(seed);
 		}
 		
+		inline uint32_t UInt1(uint32_t max) {
+			VZ_PROFILE_FUNCTION();
+			std::uniform_int_distribution<uint32_t> dist(0, max - 1);
+			return dist(GetRNG());
+		}
+
+		inline bool Bool1(float trueChance) {
+			VZ_PROFILE_FUNCTION();
+			std::uniform_real_distribution<float> dist(0.0f, 1.0f);
+			return dist(GetRNG()) < trueChance;
+		}
+
+		inline unsigned char Char() {
+			VZ_PROFILE_FUNCTION();
+			std::uniform_int_distribution<int> dist(0, 255);
+			return static_cast<unsigned char>(dist(GetRNG()));
+		}
+
+		inline std::string String(size_t length) {
+			VZ_PROFILE_FUNCTION();
+			const char charset[] =
+				"0123456789"
+				"ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+				"abcdefghijklmnopqrstuvwxyz";
+			const size_t max_index = (sizeof(charset) - 1);
+			std::string str(length, 0);
+			for (size_t i = 0; i < length; ++i) {
+				str[i] = charset[UInt1(static_cast<uint32_t>(max_index))];
+			}
+			return str;
+		}
+
+		inline std::string HexString(size_t length) {
+			VZ_PROFILE_FUNCTION();
+			const char charset[] =
+				"0123456789"
+				"ABCDEF";
+			const size_t max_index = (sizeof(charset) - 1);
+			std::string str(length, 0);
+			for (size_t i = 0; i < length; ++i) {
+				str[i] = charset[UInt1(static_cast<uint32_t>(max_index))];
+			}
+			return str;
+		}
+
+		inline std::string UUID() {
+			VZ_PROFILE_FUNCTION();
+			return HexString(8) + "-" + HexString(4) + "-" + HexString(4) + "-" + HexString(4) + "-" + HexString(12);
+		}
+
 		// Returns a float in the range [0.0, 1.0] = [inclusive, exclusive]
 		inline float Float1() {
 			VZ_PROFILE_FUNCTION();
@@ -26,7 +76,7 @@ namespace Vesper {
 		}
 
 		// Returns a float in the range [min, max]
-		// If you need max to be possible, use the "_Inclusive" variant below which advances the upper bound
+		// If you need max to be possible, use the "_Inclusive" variant which advances the upper bound
 		inline float RangeF1(float min, float max) {
 			VZ_PROFILE_FUNCTION();
 			if (min > max) std::swap(min, max);

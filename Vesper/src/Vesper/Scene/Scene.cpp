@@ -2,7 +2,7 @@
 #include "Scene.h"
 #include "Vesper/Core/Log.h"
 #include "Vesper/Renderer/Renderer2D.h"
-
+#include "Vesper/Scene/Entity.h"
 
 namespace Vesper {
 
@@ -22,9 +22,14 @@ namespace Vesper {
 	{
 	}
 
-	entt::entity Scene::CreateEntity()
+	Entity Scene::CreateEntity(const std::string& name)
 	{
-		return m_Registry.create();
+		Entity entity = { m_Registry.create(), this };
+		entity.AddComponent<TransformComponent>();
+		auto& nameTag = entity.AddComponent<NameComponent>();
+		nameTag.Name = name.empty() ? "Entity" + std::to_string(static_cast<std::uint32_t>(entity) ) : name;
+
+		return entity;
 	}
 
 	void Scene::OnUpdate(Timestep ts)

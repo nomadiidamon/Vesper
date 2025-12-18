@@ -90,11 +90,11 @@ namespace Vesper {
 			m_ActiveScene = CreateRef<Scene>();
 			// Animation 1
 			{
-				auto square = m_ActiveScene->CreateEntity();
-				auto& transform = m_ActiveScene->Reg().emplace<TransformComponent>(square);
+				auto square = m_ActiveScene->CreateEntity("Square");
+				auto& transform = square.GetComponent<TransformComponent>();
 				transform.Translate(glm::vec3(-1.0f, 2.0f, 0.1f));
 
-				m_ActiveScene->Reg().emplace<SpriteRendererComponent>(square, glm::vec4{ 0.8f, 0.8f, 0.2f, 1.0f });
+				square.AddComponent<SpriteRendererComponent>(glm::vec4{ 0.8f, 0.8f, 0.2f, 1.0f });
 				std::vector<Ref<SubTexture2D>> fireFrames;
 				for (int x = 0; x < 63; x++)
 				{
@@ -104,17 +104,18 @@ namespace Vesper {
 					}
 				}
 				TextureAnimationComponent texAnim(fireFrames, 0.05f);
-				m_ActiveScene->Reg().emplace<TextureAnimationComponent>(square, texAnim);
+				square.AddComponent<TextureAnimationComponent>(texAnim);
+				m_FireEntity = square;
 			}
 			
 			// Animation 2
 			{
-				auto square = m_ActiveScene->CreateEntity();
-				auto& transform = m_ActiveScene->Reg().emplace<TransformComponent>(square);
+				auto square = m_ActiveScene->CreateEntity("Square2");
+				auto& transform = square.GetComponent<TransformComponent>();
 				// adjust the position of the square entity
 				transform.Translate(glm::vec3(0.5f, 2.0f, 0.1f));
 
-				m_ActiveScene->Reg().emplace<SpriteRendererComponent>(square, glm::vec4{ 0.8f, 0.8f, 0.2f, 1.0f });
+				square.AddComponent<SpriteRendererComponent>(glm::vec4{ 0.8f, 0.8f, 0.2f, 1.0f });
 				std::vector<Ref<SubTexture2D>> smokeFrames;
 				for (int x = 0; x < 63; x++)
 				{
@@ -125,7 +126,8 @@ namespace Vesper {
 
 				}
 				TextureAnimationComponent texAnim(smokeFrames, 0.05f);
-				m_ActiveScene->Reg().emplace<TextureAnimationComponent>(square, texAnim);
+				square.AddComponent<TextureAnimationComponent>(texAnim);
+				m_SmokeEntity = square;
 			}
 		}
 	}
@@ -428,6 +430,12 @@ namespace Vesper {
 			if (ImGui::ColorEdit4("Background Color", glm::value_ptr(m_ClearColor)))
 			{
 				RenderCommand::SetClearColor(m_ClearColor);
+			}
+			
+			auto& fireColor = m_FireEntity.GetComponent<SpriteRendererComponent>().Color;
+			if (ImGui::ColorEdit4("Fire Color", glm::value_ptr(fireColor)))
+			{
+				
 			}
 			ImGui::End();
 		}

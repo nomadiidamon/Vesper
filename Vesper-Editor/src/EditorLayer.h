@@ -24,7 +24,7 @@ namespace Vesper {
 		bool m_ViewportFocused = false, m_ViewportHovered = false;
 		glm::vec2 m_ViewportSize = {0,0};
 		glm::vec2 m_ViewportBounds[2] = { {0,0}, {0,0} };
-
+		Entity m_FireEntity, m_SmokeEntity;
 		
 		
 		OrthographicCameraController m_CameraController;

@@ -7,6 +7,7 @@
 #include "Vesper/Core/Layer.h"
 #include "Vesper/Core/Log.h"
 #include "Vesper/Core/Random.h"
+#include "Vesper/Core/Color.h"
 #include "Vesper/Core/Timestep.h"
 
 #include "Vesper/Core/Input.h"
@@ -22,6 +23,7 @@
 #include "Vesper/ParticleSystem/ParticleSystem.h" /// Temporary starter particle system
 
 #include "Vesper/Scene/Scene.h"
+#include "Vesper/Scene/Entity.h"
 #include "Vesper/Scene/Components.h"
 
 
