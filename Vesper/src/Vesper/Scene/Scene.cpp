@@ -31,12 +31,12 @@ namespace Vesper {
 	{
 		VZ_PROFILE_FUNCTION();
 
-		auto group = m_Registry.group<TransformComponent, SpriteRendererComponent>();
+		auto group = m_Registry.group<TransformComponent, SpriteRendererComponent, TextureAnimationComponent>();
 		for (auto entity : group)
 		{
-			auto& [transform, sprite] = group.get<TransformComponent, SpriteRendererComponent>(entity);
-
-			Renderer2D::DrawQuad(transform.Transform, sprite.Color);
+			auto& [transform, sprite, texAnim] = group.get<TransformComponent, SpriteRendererComponent, TextureAnimationComponent>(entity);
+			texAnim.Update(ts.GetSeconds());
+			Renderer2D::DrawQuadWithTexture(transform, texAnim.SubTextures[texAnim.CurrentFrame], 1.0f, sprite.Color);
 		}
 
 	}

@@ -34,6 +34,9 @@
     <Filter Include="src\Vesper\Renderer">
       <UniqueIdentifier>{377BE0E0-A3DC-BDEE-2C4A-04A198AAF4AD}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Vesper\Scene">
+      <UniqueIdentifier>{4E666933-3A5F-8885-6391-6D0A4FE96791}</UniqueIdentifier>
+    </Filter>
     <Filter Include="src\Vesper\Time">
       <UniqueIdentifier>{AF737085-1BFF-DD49-2410-613E901A3A4A}</UniqueIdentifier>
     </Filter>
@@ -191,6 +194,12 @@
     </ClInclude>
     <ClInclude Include="src\Vesper\Renderer\VertexArray.h">
       <Filter>src\Vesper\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vesper\Scene\Components.h">
+      <Filter>src\Vesper\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vesper\Scene\Scene.h">
+      <Filter>src\Vesper\Scene</Filter>
     </ClInclude>
     <ClInclude Include="src\Vesper\Time\Timer.h">
       <Filter>src\Vesper\Time</Filter>
@@ -1543,6 +1552,9 @@
     </ClCompile>
     <ClCompile Include="src\Vesper\Renderer\VertexArray.cpp">
       <Filter>src\Vesper\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Vesper\Scene\Scene.cpp">
+      <Filter>src\Vesper\Scene</Filter>
     </ClCompile>
     <ClCompile Include="src\vzpch.cpp">
       <Filter>src</Filter>

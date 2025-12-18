@@ -36,12 +36,14 @@ namespace Vesper {
 		Ref<Texture2D> m_CheckerboardTexture;
 
 		Ref<Texture2D> m_SpriteSheetFire;
+		Ref<Texture2D> m_SpriteSheetSmoke;
 		Ref<Texture2D> m_SpriteSheetTown;
 		Ref<Texture2D> m_SpriteSheetCrystals;
 		Ref<Texture2D> m_SpriteSheetRocks;
 		Ref<Texture2D> m_SpriteSheetCursedLands;
 
 		Ref<SubTexture2D> m_SubTextureFire;
+		Ref<SubTexture2D> m_SubTextureSmoke;
 		Ref<SubTexture2D> m_SubTextureTown;
 		//Ref<SubTexture2D> m_SubTextureCrystal;
 		//Ref<SubTexture2D> m_SubTextureRock;
@@ -58,7 +60,8 @@ namespace Vesper {
 		ParticleProps m_ParticleProps;
 
 
-		bool scene1 = true, scene2 = false, scene3 = false, scene4 = false;
+		bool scene1 = false, scene2 = false, scene3 = false, scene4 = false;
+		bool useEntityScene = true;
 
 		glm::vec4 m_SquareColor = { 0.2f, 0.3f, 0.8f, 1.0f };
 		glm::vec4 m_TextureTintColor1 = { 1.0f, 1.0f, 1.0f, 1.0f };

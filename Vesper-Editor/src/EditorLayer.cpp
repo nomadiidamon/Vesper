@@ -43,12 +43,14 @@ namespace Vesper {
 		{
 			m_CheckerboardTexture = Texture2D::Create("assets/textures/Checkerboard.png");
 			m_SpriteSheetFire = Texture2D::Create("assets/textures/sheets/fire_01.png");
+			m_SpriteSheetSmoke = Texture2D::Create("assets/textures/sheets/fire_02.png");
 			m_SpriteSheetTown = Texture2D::Create("assets/textures/sheets/town_tilesheet.png");
 			m_SpriteSheetCrystals = Texture2D::Create("assets/textures/sheets/craftpix/Crystals/Crystals.png");
 			m_SpriteSheetRocks = Texture2D::Create("assets/textures/sheets/craftpix/Rocks/Rocks_source.png");
 			m_SpriteSheetCursedLands = Texture2D::Create("assets/textures/sheets/craftpix/CursedLand/Tiled_files/Objects.png");
 
 			m_SubTextureFire = SubTexture2D::CreateFromCoords(m_SpriteSheetFire, { 1, 0 }, { 128, 127 });
+			m_SubTextureSmoke = SubTexture2D::CreateFromCoords(m_SpriteSheetSmoke, { 1, 0 }, { 128, 127 });
 			m_SubTextureTown = SubTexture2D::CreateFromCoords(m_SpriteSheetTown, { 4.25, 0.75 }, { 64, 64 }, { 1, 1 });
 			s_TextureMap['F'] = SubTexture2D::CreateFromCoords(m_SpriteSheetFire, { 1, 0 }, { 128, 127 });
 			s_TextureMap['G'] = SubTexture2D::CreateFromCoords(m_SpriteSheetTown, { 4.25, 0.75 }, { 64, 64 }, { 1, 1 });
@@ -84,12 +86,47 @@ namespace Vesper {
 
 		// Scene setup
 		{
-			m_CameraController.SetZoomLevel(3.5f);
+			m_CameraController.SetZoomLevel(5.5f);
 			m_ActiveScene = CreateRef<Scene>();
+			// Animation 1
+			{
+				auto square = m_ActiveScene->CreateEntity();
+				auto& transform = m_ActiveScene->Reg().emplace<TransformComponent>(square);
+				transform.Translate(glm::vec3(-1.0f, 2.0f, 0.1f));
 
-			auto square = m_ActiveScene->CreateEntity();
-			m_ActiveScene->Reg().emplace<TransformComponent>(square);
-			m_ActiveScene->Reg().emplace<SpriteRendererComponent>(square, glm::vec4{ 0.8f, 0.8f, 0.2f, 1.0f });
+				m_ActiveScene->Reg().emplace<SpriteRendererComponent>(square, glm::vec4{ 0.8f, 0.8f, 0.2f, 1.0f });
+				std::vector<Ref<SubTexture2D>> fireFrames;
+				for (int x = 0; x < 63; x++)
+				{
+					for (int y = 0; y < 2; y++)
+					{
+						fireFrames.push_back(SubTexture2D::CreateFromCoords(m_SpriteSheetFire, { (float)y, (float)x }, { 128, 128 }));
+					}
+				}
+				TextureAnimationComponent texAnim(fireFrames, 0.05f);
+				m_ActiveScene->Reg().emplace<TextureAnimationComponent>(square, texAnim);
+			}
+			
+			// Animation 2
+			{
+				auto square = m_ActiveScene->CreateEntity();
+				auto& transform = m_ActiveScene->Reg().emplace<TransformComponent>(square);
+				// adjust the position of the square entity
+				transform.Translate(glm::vec3(0.5f, 2.0f, 0.1f));
+
+				m_ActiveScene->Reg().emplace<SpriteRendererComponent>(square, glm::vec4{ 0.8f, 0.8f, 0.2f, 1.0f });
+				std::vector<Ref<SubTexture2D>> smokeFrames;
+				for (int x = 0; x < 63; x++)
+				{
+					for (int y = 0; y < 2; y++)
+					{
+						smokeFrames.push_back(SubTexture2D::CreateFromCoords(m_SpriteSheetSmoke, { (float)y, (float)x }, { 128, 128 }));
+					}
+
+				}
+				TextureAnimationComponent texAnim(smokeFrames, 0.05f);
+				m_ActiveScene->Reg().emplace<TextureAnimationComponent>(square, texAnim);
+			}
 		}
 	}
 
@@ -127,28 +164,32 @@ namespace Vesper {
 				Renderer2D::BeginScene(m_CameraController.GetCamera());
 
 				// Checkerboard background
-				Renderer2D::DrawQuadWithTexture({ 0.0f, 0.0f, -0.25f }, { 20.0f, 20.0f }, m_CheckerboardTexture, 10.0f, m_BackgroundColor);
+				Renderer2D::DrawQuadWithTexture({ 0.0f, 0.0f, -0.25f }, { 25.0f, 25.0f }, m_CheckerboardTexture, 10.0f, m_BackgroundColor);
 
 				// Squares
-				Renderer2D::DrawQuadRotated({ 0.0f, 1.25f, -0.2f }, { 1.0f, 1.0f }, glm::radians(45.0f + m_squareRotation + rotation), m_SquareColor);
+				Renderer2D::DrawQuadRotated({ 0.0f, 1.25f, -0.165f }, { 1.0f, 1.0f }, glm::radians(45.0f + m_squareRotation + rotation), m_SquareColor);
 
 				// Rotated Squares
-				if (m_UseSpecialQuadColor)
-					Renderer2D::DrawQuadRotatedWithTexture({ 0.0f, 1.25f, -0.15f }, { 0.75f, 0.75f }, m_CheckerboardTexture, glm::radians(m_squareRotation * m_specialQuadRotation * rotation), m_textureScale, { 0.90f, 0.85f, 0.2f, 1.0f });
-				else
-					Renderer2D::DrawQuadRotatedWithTexture({ 0.0f, 1.25f, -0.15f }, { 0.75f, 0.75f }, m_CheckerboardTexture, glm::radians(m_squareRotation * m_specialQuadRotation * rotation), m_textureScale, m_SpecialQuadColor);
+				Renderer2D::DrawQuadRotatedWithTexture({ 0.0f, 1.25f, -0.15f }, { 0.75f, 0.75f }, m_CheckerboardTexture, glm::radians(m_squareRotation * m_specialQuadRotation * rotation), m_textureScale, m_SpecialQuadColor);
 
 				Renderer2D::DrawQuadRotatedWithTexture({ 2.0f, -0.25f, -0.15f }, { 1.0f, 1.0f }, m_CheckerboardTexture, glm::radians(m_squareRotation + rotation), m_textureScale, m_TextureTintColor1);
 				Renderer2D::DrawQuadRotatedWithTexture({ -2.0f, -0.25f, -0.15f }, { 1.0f, 1.0f }, m_CheckerboardTexture, glm::radians(m_squareRotation + rotation), m_textureScale, m_TextureTintColor2);
 
-				for (int y = -5; y < 5; y++)
+				glm::vec3 startPos = { 0.0f, 0.0f, -0.175f };
+				//Renderer2D::DrawQuad(pos, { 0.8f, 0.8f }, { 0.8f, 0.2f, 0.3f, 1.0f });
+				glm::vec3 finalPos = startPos;
+				float offset = 0.9f;
+				for (int y = -10; y <= 10; y++)
 				{
-					for (int x = -5; x < 5; x++)
+					for (int x = -10; x <= 10; x++)
 					{
-						glm::vec3 pos = glm::vec3(x * 0.15f, y * 0.15f, 0.0f);
-						Renderer2D::DrawQuad(pos, { 2.5f, 2.5f }, { (x + 5) / 10.0f, 0.4f, (y + 5) / 10.0f, 0.55f });
+						glm::vec3 newPos = { startPos.x - x * offset, startPos.y - y * offset, startPos.z };
+						Renderer2D::DrawQuad(newPos, { 0.8f, 0.8f }, { (x + 5) / 10.0f, 0.4f, (y + 5) / 10.0f, 1.0f });
+						finalPos = newPos;
 					}
 				}
+				Renderer2D::DrawQuad(finalPos, { 0.8f, 0.8f }, { 0.8f, 0.2f, 0.3f, 1.0f });
+
 				Renderer2D::EndScene();
 
 			}
@@ -250,15 +291,15 @@ namespace Vesper {
 
 			}
 
-			// Real Scene Update
+			if (useEntityScene)
 			{
+				VZ_PROFILE_SCOPE("Entity Scene Update");
 				Renderer2D::BeginScene(m_CameraController.GetCamera());
-
 				// Update scene
 				m_ActiveScene->OnUpdate(ts);
-
 				Renderer2D::EndScene();
 			}
+
 		}
 
 		m_Framebuffer->Unbind();
@@ -335,6 +376,14 @@ namespace Vesper {
 		{
 			if (ImGui::Begin("Scenes"))
 			{
+				if (ImGui::Checkbox("Entity Scene", &useEntityScene)) {
+					if (useEntityScene) {
+						scene1 = false;
+						scene2 = false;
+						scene3 = false;
+						scene4 = false;
+					}
+				}
 				if (ImGui::Checkbox("Scene 1 - Basic Shapes", &scene1)) {
 					if (scene1) {
 						scene2 = false;
