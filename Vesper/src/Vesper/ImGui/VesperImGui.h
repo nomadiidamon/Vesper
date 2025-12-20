@@ -6,7 +6,7 @@ namespace Vesper {
 
 	static void DisplayVesperInfo_ImGui()
 	{
-		ImGui::Begin("Vesper Engine");
+		ImGui::Begin("Vesper Info");
 
 		if (ImGui::TreeNode("About Vesper"))
 		{

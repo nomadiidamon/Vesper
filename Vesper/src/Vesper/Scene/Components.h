@@ -1,9 +1,12 @@
 #pragma once
-#include <glm/glm.hpp>
-#include <glm/gtc/matrix_transform.hpp>
 #include "Vesper/Renderer/Texture.h"
 #include "Vesper/Renderer/SubTexture2D.h"
 #include "SceneCamera.h"
+
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+#define GLM_ENABLE_EXPERIMENTAL
+#include <glm/gtx/quaternion.hpp>
 
 namespace Vesper
 {
@@ -22,51 +25,23 @@ namespace Vesper
 
 	struct TransformComponent
 	{
-		glm::mat4 Transform = glm::mat4(1.0f);
+		glm::vec3 Translation = { 0.0f, 0.0f, 0.0f };
+		glm::vec3 Rotation = { 0.0f, 0.0f, 0.0f };
+		glm::vec3 Scale = { 1.0f, 1.0f, 1.0f };
 
 		TransformComponent() = default;
 		TransformComponent(const TransformComponent&) = default;
-		TransformComponent(const glm::mat4& transform)
-			: Transform(transform) {
+		TransformComponent(const glm::vec3& translation)
+			: Translation(translation) {
 		}
 
-		operator glm::mat4& () { return Transform; }
-		operator const glm::mat4& () const { return Transform; }
+		glm::mat4 GetTransform() const
+		{
+			glm::mat4 rotation = glm::toMat4(glm::quat(Rotation));
 
-		void Translate(const glm::vec3& translation) {
-			Transform = glm::translate(Transform, translation);
-		}
-
-		glm::vec3 Translation() const {
-			return glm::vec3(Transform[3]);
-		}
-
-		void Rotate(float angle, const glm::vec3& axis) {
-			Transform = glm::rotate(Transform, angle, axis);
-		}
-
-		float Rotation(const glm::vec3& axis) const {
-			if (axis.x == 1.0f)
-				return atan2(Transform[2][1], Transform[2][2]);
-			else if (axis.y == 1.0f)
-				return atan2(-Transform[2][0], sqrt(Transform[2][1] * Transform[2][1] + Transform[2][2] * Transform[2][2]));
-			else if (axis.z == 1.0f)
-				return atan2(Transform[1][0], Transform[0][0]);
-			VZ_CORE_ASSERT(false, "Rotation axis must be a unit vector along x, y, or z.");
-			return 0.0f;
-		}
-
-		void Scale(const glm::vec3& scale) {
-			Transform = glm::scale(Transform, scale);
-		}
-
-		glm::vec3 Scale() const {
-			return glm::vec3(
-				glm::length(glm::vec3(Transform[0])),
-				glm::length(glm::vec3(Transform[1])),
-				glm::length(glm::vec3(Transform[2]))
-
-			);
+			return glm::translate(glm::mat4(1.0f), Translation)
+				* rotation
+				* glm::scale(glm::mat4(1.0f), Scale);
 		}
 	};
 

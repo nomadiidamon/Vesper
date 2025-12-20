@@ -91,7 +91,7 @@ namespace Vesper {
 			m_CameraEntity = m_ActiveScene->CreateEntity("Primary Camera Entity");
 			auto& pCam = m_CameraEntity.AddComponent<CameraComponent>();
 
-			m_SecondaryCameraEntity = m_ActiveScene->CreateEntity("Secondary Scene Camera");
+			m_SecondaryCameraEntity = m_ActiveScene->CreateEntity("Secondary Camera Entity");
 			auto& cc = m_SecondaryCameraEntity.AddComponent<CameraComponent>().Primary = false;
 			m_SecondaryCameraEntity.GetComponent<TransformComponent>();
 
@@ -100,9 +100,9 @@ namespace Vesper {
 
 			// Animation 1
 			{
-				auto square = m_ActiveScene->CreateEntity("Square");
+				auto square = m_ActiveScene->CreateEntity("Fire Animation");
 				auto& transform = square.GetComponent<TransformComponent>();
-				transform.Translate(glm::vec3(-0.5f, 0.0f, 0.1f));
+				transform.Translation = (glm::vec3(-0.5f, 0.0f, 0.1f));
 
 				square.AddComponent<SpriteRendererComponent>(glm::vec4{ 0.8f, 0.8f, 0.2f, 1.0f });
 				std::vector<Ref<SubTexture2D>> fireFrames;
@@ -120,10 +120,10 @@ namespace Vesper {
 			
 			// Animation 2
 			{
-				auto square = m_ActiveScene->CreateEntity("Square2");
+				auto square = m_ActiveScene->CreateEntity("Smoke Animation");
 				auto& transform = square.GetComponent<TransformComponent>();
 				// adjust the position of the square entity
-				transform.Translate(glm::vec3(0.5f, 0.0f, 0.1f));
+				transform.Translation = (glm::vec3(0.5f, 0.0f, 0.1f));
 
 				square.AddComponent<SpriteRendererComponent>(glm::vec4{ 0.8f, 0.8f, 0.2f, 1.0f });
 				std::vector<Ref<SubTexture2D>> smokeFrames;
@@ -145,7 +145,7 @@ namespace Vesper {
 			public:
 				void OnCreate() 
 				{
-					GetComponent<TransformComponent>().Translate(glm::vec3(Random::RangeF1(-3.0f, 3.0f), Random::RangeF1(-3.0f, 3.0f), 0.0f));
+					GetComponent<TransformComponent>().Translation = (glm::vec3(Random::RangeF1(-3.0f, 3.0f), Random::RangeF1(-3.0f, 3.0f), 0.0f));
 
 				}
 
@@ -156,7 +156,7 @@ namespace Vesper {
 
 				void OnUpdate(Timestep ts)
 				{
-					auto& transform = GetComponent<TransformComponent>().Transform;
+					auto& transform = GetComponent<TransformComponent>().GetTransform();
 					float speed = 5.0f;
 
 
@@ -179,6 +179,7 @@ namespace Vesper {
 			m_SecondaryCameraEntity.AddComponent<NativeScriptComponent>().Bind<CameraController>();
 
 
+			m_SceneHierarchyPanel.SetContext(m_ActiveScene);
 		}
 
 
@@ -479,6 +480,8 @@ namespace Vesper {
 			ImGui::End();
 		}
 
+		m_SceneHierarchyPanel.OnImGuiRender();
+
 		{
 			ImGui::Begin("Settings");
 			ImGui::Text("Renderer2D Stats:");
@@ -494,27 +497,6 @@ namespace Vesper {
 			std::string camData = "Active Camera: " + camName;
 			ImGui::Text(camData.c_str());
 			ImGui::Separator();
-
-			if (ImGui::Checkbox("Primary Camera?", &m_PrimaryCamera))
-			{
-				m_CameraEntity.GetComponent<CameraComponent>().Primary = m_PrimaryCamera;
-				m_SecondaryCameraEntity.GetComponent<CameraComponent>().Primary = !m_PrimaryCamera;
-			}
-
-			if (ImGui::DragFloat3("Primary Camera transform", glm::value_ptr(m_CameraEntity.GetComponent<TransformComponent>().Transform[3])))
-			{
-			}
-
-			if (ImGui::DragFloat3("Secondary Camera transform", glm::value_ptr(m_SecondaryCameraEntity.GetComponent<TransformComponent>().Transform[3]), 0.1f))
-			{
-			}
-
-			auto& secondCam = m_SecondaryCameraEntity.GetComponent<CameraComponent>().Camera;
-			float orthoSize = secondCam.GetOrthographicSize();
-			if (ImGui::DragFloat("Second Camera Ortho Size", &orthoSize))
-			{
-				secondCam.SetOrthographicSize(orthoSize);
-			}
 
 			if (ImGui::ColorEdit4("Background Color", glm::value_ptr(m_ClearColor)))
 			{

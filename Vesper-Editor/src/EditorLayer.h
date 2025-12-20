@@ -5,6 +5,7 @@
 #include "Vesper/Core/Layer.h"
 #include "Vesper/ParticleSystem/ParticleSystem.h"
 #include "Vesper/Scene/Scene.h"
+#include "Panels/SceneHierarchyPanel.h"
 
 namespace Vesper {
 
@@ -20,6 +21,7 @@ namespace Vesper {
 		virtual void OnImGuiRender() override;
 		virtual void OnEvent(Event& e) override;
 	private:
+		SceneHierarchyPanel m_SceneHierarchyPanel;
 		Ref<Scene> m_ActiveScene;
 		bool m_ViewportFocused = false, m_ViewportHovered = false;
 		glm::vec2 m_ViewportSize = {0,0};

@@ -60,7 +60,7 @@ namespace Vesper {
 
 				if (camera.Primary) {
 					mainCamera = &camera.Camera;
-					camTransform = &transform.Transform;
+					camTransform = &transform.GetTransform();
 					break;
 				}
 
@@ -77,7 +77,7 @@ namespace Vesper {
 		{
 			auto [transform, sprite, texAnim] = group.get<TransformComponent, SpriteRendererComponent, TextureAnimationComponent>(entity);
 			texAnim.Update(ts.GetSeconds());
-			Renderer2D::DrawQuadWithTexture(transform, texAnim.SubTextures[texAnim.CurrentFrame], 1.0f, sprite.Color);
+			Renderer2D::DrawQuadWithTexture(transform.GetTransform(), texAnim.SubTextures[texAnim.CurrentFrame], 1.0f, sprite.Color);
 		}
 
 		Renderer2D::EndScene();
