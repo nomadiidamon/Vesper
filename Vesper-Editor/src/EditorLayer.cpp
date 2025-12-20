@@ -139,7 +139,49 @@ namespace Vesper {
 				square.AddComponent<TextureAnimationComponent>(texAnim);
 				m_SmokeEntity = square;
 			}
+
+
+			class CameraController : public ScriptableEntity {
+			public:
+				void OnCreate() 
+				{
+					GetComponent<TransformComponent>().Translate(glm::vec3(Random::RangeF1(-3.0f, 3.0f), Random::RangeF1(-3.0f, 3.0f), 0.0f));
+
+				}
+
+				void OnDestroy()
+				{
+				
+				}
+
+				void OnUpdate(Timestep ts)
+				{
+					auto& transform = GetComponent<TransformComponent>().Transform;
+					float speed = 5.0f;
+
+
+					if (Input::IsKeyPressed(VZ_KEY_A))
+						transform[3][0] -= speed * ts;
+
+					if (Input::IsKeyPressed(VZ_KEY_D))
+						transform[3][0] += speed * ts;
+
+					if (Input::IsKeyPressed(VZ_KEY_W))
+						transform[3][1] += speed * ts;
+
+					if (Input::IsKeyPressed(VZ_KEY_S))
+						transform[3][1] -= speed * ts;
+				}
+
+			};
+
+			m_CameraEntity.AddComponent<NativeScriptComponent>().Bind<CameraController>();
+			m_SecondaryCameraEntity.AddComponent<NativeScriptComponent>().Bind<CameraController>();
+
+
 		}
+
+
 	}
 
 	void EditorLayer::OnDetach()

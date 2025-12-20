@@ -24,6 +24,7 @@
 
 #include "Vesper/Scene/Scene.h"
 #include "Vesper/Scene/Entity.h"
+#include "Vesper/Scene/ScriptableEntity.h"
 #include "Vesper/Scene/Components.h"
 
 

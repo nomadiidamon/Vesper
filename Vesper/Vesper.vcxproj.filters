@@ -1471,6 +1471,7 @@
     <ClInclude Include="src\Vesper\Core\Color.h" />
     <ClInclude Include="src\Vesper\Renderer\Camera.h" />
     <ClInclude Include="src\Vesper\Scene\SceneCamera.h" />
+    <ClInclude Include="src\Vesper\Scene\ScriptableEntity.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Platform\OpenGL\OpenGLBuffer.cpp">

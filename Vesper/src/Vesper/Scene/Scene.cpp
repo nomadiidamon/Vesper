@@ -3,6 +3,7 @@
 #include "Vesper/Core/Log.h"
 #include "Vesper/Renderer/Renderer2D.h"
 #include "Vesper/Scene/Entity.h"
+#include "Vesper/Scene/ScriptableEntity.h"
 
 namespace Vesper {
 
@@ -10,12 +11,7 @@ namespace Vesper {
 	{
 		VZ_PROFILE_FUNCTION();
 
-		entt::entity entity = m_Registry.create();
-		m_Registry.emplace<TransformComponent>(entity, glm::mat4(1.0f));
 
-		if (m_Registry.try_get<TransformComponent>(entity)) {
-			auto& transform = m_Registry.get<TransformComponent>(entity);
-		}
 	}
 
 	Scene::~Scene()
@@ -35,13 +31,32 @@ namespace Vesper {
 	void Scene::OnUpdate(Timestep ts)
 	{
 		VZ_PROFILE_FUNCTION();
+
+		// Update scripts
+		{
+			m_Registry.view<NativeScriptComponent>().each([=](auto entity, NativeScriptComponent& nsc)
+			{
+				/// TODO: Move to Scene::OnScenePlay()
+				if (!nsc.Instance) 
+				{
+					nsc.Instance = nsc.InstantiateScript();
+					nsc.Instance->m_Entity = Entity{ entity, this };
+					nsc.Instance->OnCreate();
+				}
+
+				nsc.Instance->OnUpdate(ts);
+
+			});
+
+		}
+
 		Camera* mainCamera = nullptr;
 		glm::mat4* camTransform = nullptr;
 		{
 			auto view = m_Registry.view<TransformComponent, CameraComponent>();
-			for (auto entity : view) 
+			for (auto entity : view)
 			{
-				auto& [transform, camera] = view.get<TransformComponent, CameraComponent>(entity);
+				auto [transform, camera] = view.get<TransformComponent, CameraComponent>(entity);
 
 				if (camera.Primary) {
 					mainCamera = &camera.Camera;
@@ -60,7 +75,7 @@ namespace Vesper {
 		auto group = m_Registry.group<TransformComponent, SpriteRendererComponent, TextureAnimationComponent>();
 		for (auto entity : group)
 		{
-			auto& [transform, sprite, texAnim] = group.get<TransformComponent, SpriteRendererComponent, TextureAnimationComponent>(entity);
+			auto [transform, sprite, texAnim] = group.get<TransformComponent, SpriteRendererComponent, TextureAnimationComponent>(entity);
 			texAnim.Update(ts.GetSeconds());
 			Renderer2D::DrawQuadWithTexture(transform, texAnim.SubTextures[texAnim.CurrentFrame], 1.0f, sprite.Color);
 		}

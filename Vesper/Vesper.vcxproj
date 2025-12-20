@@ -195,6 +195,7 @@
     <ClInclude Include="src\Vesper\Scene\Scene.h" />
     <ClInclude Include="src\Vesper\Renderer\Camera.h" />
     <ClInclude Include="src\Vesper\Scene\SceneCamera.h" />
+    <ClInclude Include="src\Vesper\Scene\ScriptableEntity.h" />
     <ClInclude Include="src\Vesper\Time\Timer.h" />
     <ClInclude Include="src\vzpch.h" />
     <ClInclude Include="vendor\glm\glm\common.hpp" />
