@@ -90,6 +90,11 @@ namespace Vesper {
 			m_ActiveScene = CreateRef<Scene>();
 			m_CameraEntity = m_ActiveScene->CreateEntity("Primary Camera Entity");
 			auto& pCam = m_CameraEntity.AddComponent<CameraComponent>();
+			pCam.Primary = true;
+			pCam.Camera.SetPerspective(glm::radians(45.0f), 0.1f, 100.0f);
+			auto& pos = m_CameraEntity.GetComponent<TransformComponent>().Translation;
+			pos.x += 1.25f;
+			pos.z += 5.0f;
 
 			m_SecondaryCameraEntity = m_ActiveScene->CreateEntity("Secondary Camera Entity");
 			auto& cc = m_SecondaryCameraEntity.AddComponent<CameraComponent>().Primary = false;
@@ -102,7 +107,7 @@ namespace Vesper {
 			{
 				auto square = m_ActiveScene->CreateEntity("Fire Animation");
 				auto& transform = square.GetComponent<TransformComponent>();
-				transform.Translation = (glm::vec3(-0.5f, 0.0f, 0.1f));
+				transform.Translation = (glm::vec3(-0.5f, 0.0f, -1.5f));
 
 				square.AddComponent<SpriteRendererComponent>(glm::vec4{ 0.8f, 0.8f, 0.2f, 1.0f });
 				std::vector<Ref<SubTexture2D>> fireFrames;
@@ -123,7 +128,7 @@ namespace Vesper {
 				auto square = m_ActiveScene->CreateEntity("Smoke Animation");
 				auto& transform = square.GetComponent<TransformComponent>();
 				// adjust the position of the square entity
-				transform.Translation = (glm::vec3(0.5f, 0.0f, 0.1f));
+				transform.Translation = (glm::vec3(0.5f, 0.0f, 1.5f));
 
 				square.AddComponent<SpriteRendererComponent>(glm::vec4{ 0.8f, 0.8f, 0.2f, 1.0f });
 				std::vector<Ref<SubTexture2D>> smokeFrames;
@@ -140,6 +145,11 @@ namespace Vesper {
 				m_SmokeEntity = square;
 			}
 
+			auto quadEntity = m_ActiveScene->CreateEntity("Quad Entity");
+			quadEntity.AddComponent<SpriteRendererComponent>(glm::vec4{ 0.2f, 0.3f, 0.8f, 1.0f });
+			quadEntity.GetComponent<TransformComponent>().Scale = { 0.5f, 0.5f, 1.0f };
+			quadEntity.GetComponent<TransformComponent>().Translation = { 1.5f, 0.0f, 0.0f };
+		
 
 			class CameraController : public ScriptableEntity {
 			public:

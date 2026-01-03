@@ -1,6 +1,14 @@
 #include "SceneHierarchyPanel.h"
-#include <ImGui/imgui.h>
 #include "Vesper/Scene/Components.h"
+
+#include <ImGui/imgui.h>
+#include <imgui/imgui_internal.h>
+#include <imgui/misc/cpp/imgui_stdlib.h>
+
+#include <glm/gtc/type_ptr.hpp>
+
+#include <cstring>
+
 
 namespace Vesper {
 
@@ -34,7 +42,7 @@ namespace Vesper {
 			if (ImGui::BeginPopupContextWindow(0))
 			{
 				if (ImGui::MenuItem("Create Empty Entity"))
-					m_Context->CreateEntity("Empty Entity");
+					m_SelectionContext = m_Context->CreateEntity("Empty Entity");
 
 				ImGui::EndPopup();
 			}
@@ -85,12 +93,12 @@ namespace Vesper {
 			ImGui::TreePop();
 		}
 
-		//if (entityDeleted)
-		//{
-		//	m_Context->DestroyEntity(entity);
-		//	if (m_SelectionContext == entity)
-		//		m_SelectionContext = {};
-		//}
+		if (entityDeleted)
+		{
+			m_Context->DestroyEntity(entity);
+			if (m_SelectionContext == entity)
+				m_SelectionContext = {};
+		}
 	}
 
 	static void DrawVec3Control(const std::string& label, glm::vec3& values, float resetValue = 0.0f, float columnWidth = 100.0f)
@@ -237,7 +245,7 @@ namespace Vesper {
 		{
 			DisplayAddComponentEntry<CameraComponent>("Camera");
 			//DisplayAddComponentEntry<ScriptComponent>("Script");
-			//DisplayAddComponentEntry<SpriteRendererComponent>("Sprite Renderer");
+			DisplayAddComponentEntry<SpriteRendererComponent>("Sprite Renderer");
 
 			ImGui::EndPopup();
 		}
@@ -312,28 +320,31 @@ namespace Vesper {
 				}
 			});
 
-		//DrawComponent<SpriteRendererComponent>("Sprite Renderer", entity, [](auto& component)
-		//	{
-		//		ImGui::ColorEdit4("Color", glm::value_ptr(component.Color));
+		DrawComponent<SpriteRendererComponent>("Sprite Renderer", entity, [](auto& component)
+			{
+				//ImGui::ColorEdit4("Color", glm::value_ptr(component.Color));
+				ImGui::ColorEdit4("Color", glm::value_ptr(component.Color));
+				
 
-		//		ImGui::Button("Texture", ImVec2(100.0f, 0.0f));
-		//		if (ImGui::BeginDragDropTarget())
-		//		{
-		//			if (const ImGuiPayload* payload = ImGui::AcceptDragDropPayload("CONTENT_BROWSER_ITEM"))
-		//			{
-		//				const wchar_t* path = (const wchar_t*)payload->Data;
-		//				std::filesystem::path texturePath(path);
-		//				Ref<Texture2D> texture = Texture2D::Create(texturePath.string());
-		//				if (texture->IsLoaded())
-		//					component.Texture = texture;
-		//				else
-		//					HZ_WARN("Could not load texture {0}", texturePath.filename().string());
-		//			}
-		//			ImGui::EndDragDropTarget();
-		//		}
 
-		//		ImGui::DragFloat("Tiling Factor", &component.TilingFactor, 0.1f, 0.0f, 100.0f);
-		//	});
+				//ImGui::Button("Texture", ImVec2(100.0f, 0.0f));
+				//if (ImGui::BeginDragDropTarget())
+				//{
+				//	if (const ImGuiPayload* payload = ImGui::AcceptDragDropPayload("CONTENT_BROWSER_ITEM"))
+				//	{
+				//		const wchar_t* path = (const wchar_t*)payload->Data;
+				//		std::filesystem::path texturePath(path);
+				//		Ref<Texture2D> texture = Texture2D::Create(texturePath.string());
+				//		if (texture->IsLoaded())
+				//			component.Texture = texture;
+				//		else
+				//			HZ_WARN("Could not load texture {0}", texturePath.filename().string());
+				//	}
+				//	ImGui::EndDragDropTarget();
+				//}
+
+				//ImGui::DragFloat("Tiling Factor", &component.TilingFactor, 0.1f, 0.0f, 100.0f);
+			});
 
 	}
 

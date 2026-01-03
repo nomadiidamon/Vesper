@@ -28,6 +28,11 @@ namespace Vesper {
 		return entity;
 	}
 
+	void Scene::DestroyEntity(Entity entity)
+	{
+		m_Registry.destroy(entity);
+	}
+
 	void Scene::OnUpdate(Timestep ts)
 	{
 		VZ_PROFILE_FUNCTION();
@@ -72,12 +77,23 @@ namespace Vesper {
 
 		Renderer2D::BeginScene(mainCamera->GetProjection(), *camTransform);
 
-		auto group = m_Registry.group<TransformComponent, SpriteRendererComponent, TextureAnimationComponent>();
-		for (auto entity : group)
+		auto group1 = m_Registry.group<TextureAnimationComponent>();
+		for (auto entity : group1)
 		{
-			auto [transform, sprite, texAnim] = group.get<TransformComponent, SpriteRendererComponent, TextureAnimationComponent>(entity);
+			auto& transform = m_Registry.get<TransformComponent>(entity);
+			auto& texAnim = m_Registry.get<TextureAnimationComponent>(entity);
 			texAnim.Update(ts.GetSeconds());
-			Renderer2D::DrawQuadWithTexture(transform.GetTransform(), texAnim.SubTextures[texAnim.CurrentFrame], 1.0f, sprite.Color);
+			Renderer2D::DrawQuadWithTexture(transform.GetTransform(), texAnim.SubTextures[texAnim.CurrentFrame], 1.0f, glm::vec4(1.0f));
+		}
+
+		auto view = m_Registry.group<SpriteRendererComponent>();
+		for (auto entity : view)
+		{
+			auto& transform = m_Registry.get<TransformComponent>(entity);
+			auto& sprite = m_Registry.get<SpriteRendererComponent>(entity);
+			Renderer2D::DrawQuad(transform.GetTransform(), sprite.Color);
+
+			
 		}
 
 		Renderer2D::EndScene();
