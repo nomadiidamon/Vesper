@@ -21,8 +21,11 @@ namespace Vesper {
 		void OnViewportResize(uint32_t width, uint32_t height);
 
 	private:
+		template<typename T>
+		void OnComponentAdded(Entity entity, T& component);
+	private:
 		entt::registry m_Registry;
-		uint32_t m_ViewportWidth = 0, m_ViewportHeight = 0;
+		uint32_t m_ViewportWidth = 160, m_ViewportHeight = 90;
 		friend class Entity;
 		friend class SceneHierarchyPanel;
 	};

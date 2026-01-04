@@ -91,7 +91,7 @@ namespace Vesper {
 			m_CameraEntity = m_ActiveScene->CreateEntity("Primary Camera Entity");
 			auto& pCam = m_CameraEntity.AddComponent<CameraComponent>();
 			pCam.Primary = true;
-			pCam.Camera.SetPerspective(glm::radians(45.0f), 0.1f, 100.0f);
+			pCam.Camera.SetPerspective(glm::radians(45.0f), 0.1f, 1000.0f);
 			auto& pos = m_CameraEntity.GetComponent<TransformComponent>().Translation;
 			pos.x += 1.25f;
 			pos.z += 5.0f;
@@ -122,7 +122,7 @@ namespace Vesper {
 				square.AddComponent<TextureAnimationComponent>(texAnim);
 				m_FireEntity = square;
 			}
-			
+
 			// Animation 2
 			{
 				auto square = m_ActiveScene->CreateEntity("Smoke Animation");
@@ -149,11 +149,11 @@ namespace Vesper {
 			quadEntity.AddComponent<SpriteRendererComponent>(glm::vec4{ 0.2f, 0.3f, 0.8f, 1.0f });
 			quadEntity.GetComponent<TransformComponent>().Scale = { 0.5f, 0.5f, 1.0f };
 			quadEntity.GetComponent<TransformComponent>().Translation = { 1.5f, 0.0f, 0.0f };
-		
+
 
 			class CameraController : public ScriptableEntity {
 			public:
-				void OnCreate() 
+				void OnCreate()
 				{
 					GetComponent<TransformComponent>().Translation = (glm::vec3(Random::RangeF1(-3.0f, 3.0f), Random::RangeF1(-3.0f, 3.0f), 0.0f));
 
@@ -161,7 +161,7 @@ namespace Vesper {
 
 				void OnDestroy()
 				{
-				
+
 				}
 
 				void OnUpdate(Timestep ts)
@@ -500,23 +500,11 @@ namespace Vesper {
 			ImGui::Text("\tQuad Count: %d", stats.QuadCount);
 			ImGui::Text("\tVertex Count: %d", stats.GetTotalVertexCount());
 			ImGui::Text("\tIndex Count: %d", stats.GetTotalIndexCount());
-			ImGui::Separator();
-			
-			std::string camName = m_CameraEntity.GetComponent<CameraComponent>().Primary ? "Primary Camera" : "Secondary Camera";
-
-			std::string camData = "Active Camera: " + camName;
-			ImGui::Text(camData.c_str());
-			ImGui::Separator();
-
+			ImGui::Text("Application Settings:");
+			ImGui::Text("\tFPS: %.1f", ImGui::GetIO().Framerate);
 			if (ImGui::ColorEdit4("Background Color", glm::value_ptr(m_ClearColor)))
 			{
 				RenderCommand::SetClearColor(m_ClearColor);
-			}
-			
-			auto& fireColor = m_FireEntity.GetComponent<SpriteRendererComponent>().Color;
-			if (ImGui::ColorEdit4("Fire Color", glm::value_ptr(fireColor)))
-			{
-				
 			}
 			ImGui::End();
 		}

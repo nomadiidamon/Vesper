@@ -39,7 +39,7 @@ namespace Vesper {
 				m_SelectionContext = {};
 
 			// Right-click on blank space
-			if (ImGui::BeginPopupContextWindow(0))
+			if (ImGui::BeginPopupContextWindow(0, ImGuiPopupFlags_NoOpenOverItems | ImGuiPopupFlags_MouseButtonRight))
 			{
 				if (ImGui::MenuItem("Create Empty Entity"))
 					m_SelectionContext = m_Context->CreateEntity("Empty Entity");
@@ -66,10 +66,11 @@ namespace Vesper {
 	void SceneHierarchyPanel::DrawEntityNode(Entity entity)
 	{
 		auto& name = entity.GetComponent<NameComponent>().Name;
+		void* nodeID = (void*)(uint64_t)(uint32_t)entity;
 
 		ImGuiTreeNodeFlags flags = ((m_SelectionContext == entity) ? ImGuiTreeNodeFlags_Selected : 0) | ImGuiTreeNodeFlags_OpenOnArrow;
 		flags |= ImGuiTreeNodeFlags_SpanAvailWidth;
-		bool opened = ImGui::TreeNodeEx((void*)(uint64_t)(uint32_t)entity, flags, name.c_str());
+		bool opened = ImGui::TreeNodeEx(nodeID, flags, name.c_str());
 		if (ImGui::IsItemClicked())
 		{
 			m_SelectionContext = entity;
@@ -80,6 +81,52 @@ namespace Vesper {
 		{
 			if (ImGui::MenuItem("Delete Entity"))
 				entityDeleted = true;
+
+			if (ImGui::MenuItem("Duplicate Entity"))
+			{
+				Entity newEntity = m_Context->CreateEntity(name);
+				// Copy components
+				if (entity.HasComponent<NameComponent>()) {
+					auto& src = entity.GetComponent<NameComponent>();
+					auto& newEntName = newEntity.GetComponent<NameComponent>();
+					///TODO: Improve name duplication logic
+					if (src.Name.capacity() > 0 && isdigit(src.Name.back()))
+					{
+						// Increment trailing number
+						size_t i = src.Name.size() - 1;
+						while (i > 0 && isdigit(src.Name[i - 1]))
+							--i;
+						std::string baseName = src.Name.substr(0, i);
+						std::string numberStr = src.Name.substr(i);
+						int number = std::stoi(numberStr);
+						newEntName.Name = baseName + std::to_string(number + 1);
+					}
+					else
+						newEntName.Name = src.Name + "1";
+				}
+				if (entity.HasComponent<SpriteRendererComponent>())
+				{
+					auto& src = entity.GetComponent<SpriteRendererComponent>();
+					newEntity.AddComponent<SpriteRendererComponent>(src);
+				}
+				if (entity.HasComponent<CameraComponent>())
+				{
+					auto& cc = entity.GetComponent<CameraComponent>();
+					newEntity.AddComponent<CameraComponent>(cc);
+				}
+				if (entity.HasComponent<NativeScriptComponent>())
+				{
+					auto& nsc = entity.GetComponent<NativeScriptComponent>();
+					newEntity.AddComponent<NativeScriptComponent>(nsc);
+				}
+				if (entity.HasComponent<TextureAnimationComponent>())
+				{
+					auto& tac = entity.GetComponent<TextureAnimationComponent>();
+					newEntity.AddComponent<TextureAnimationComponent>(tac);
+				}
+				// Add more components as needed
+				m_SelectionContext = newEntity;
+			}
 
 			ImGui::EndPopup();
 		}
@@ -322,9 +369,8 @@ namespace Vesper {
 
 		DrawComponent<SpriteRendererComponent>("Sprite Renderer", entity, [](auto& component)
 			{
-				//ImGui::ColorEdit4("Color", glm::value_ptr(component.Color));
 				ImGui::ColorEdit4("Color", glm::value_ptr(component.Color));
-				
+
 
 
 				//ImGui::Button("Texture", ImVec2(100.0f, 0.0f));

@@ -82,8 +82,9 @@ namespace Vesper {
 		{
 			auto& transform = m_Registry.get<TransformComponent>(entity);
 			auto& texAnim = m_Registry.get<TextureAnimationComponent>(entity);
+			auto& sprite = m_Registry.get<SpriteRendererComponent>(entity);
 			texAnim.Update(ts.GetSeconds());
-			Renderer2D::DrawQuadWithTexture(transform.GetTransform(), texAnim.SubTextures[texAnim.CurrentFrame], 1.0f, glm::vec4(1.0f));
+			Renderer2D::DrawQuadWithTexture(transform.GetTransform(), texAnim.SubTextures[texAnim.CurrentFrame], 1.0f, sprite.Color);
 		}
 
 		auto view = m_Registry.group<SpriteRendererComponent>();
@@ -113,6 +114,37 @@ namespace Vesper {
 			if (!cameraComponent.FixedAspectRatio)
 				cameraComponent.Camera.SetViewportSize(width, height);
 		}
+	}
+
+	template<typename T>
+	void Scene::OnComponentAdded(Entity entity, T& component) {
+		static_assert(false);
+	}
+
+	template<>
+	void Scene::OnComponentAdded<NameComponent>(Entity entity, NameComponent& component) {
+	}
+
+	template<>
+	void Scene::OnComponentAdded<TransformComponent>(Entity entity, TransformComponent& component) {
+	}
+
+	template<>
+	void Scene::OnComponentAdded<CameraComponent>(Entity entity, CameraComponent& component) {
+		component.Camera.SetViewportSize(m_ViewportWidth, m_ViewportHeight);
+	}
+
+	template<>
+	void Scene::OnComponentAdded<SpriteRendererComponent>(Entity entity, SpriteRendererComponent& component) {
+	}
+
+	template<>
+	void Scene::OnComponentAdded<TextureAnimationComponent>(Entity entity, TextureAnimationComponent& component) {
+
+	}
+
+	template<>
+	void Scene::OnComponentAdded<NativeScriptComponent>(Entity entity, NativeScriptComponent& component) {
 	}
 
 }

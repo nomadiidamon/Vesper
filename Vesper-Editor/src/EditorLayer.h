@@ -21,6 +21,7 @@ namespace Vesper {
 		virtual void OnImGuiRender() override;
 		virtual void OnEvent(Event& e) override;
 	private:
+		float lastFrameTime = 0.0f;
 		SceneHierarchyPanel m_SceneHierarchyPanel;
 		Ref<Scene> m_ActiveScene;
 		bool m_ViewportFocused = false, m_ViewportHovered = false;
