@@ -1,3 +1,12 @@
+//Copyright © TheCherno
+//Modifications Copyright © 2025 Damon S.Green II(nomad_ii_damon)
+//
+//Licensed under the Apache License, Version 2.0 (the "License");
+//you may not use this file except in compliance with the License.
+//You may obtain a copy of the License at
+//
+//[Apache](http://www.apache.org/licenses/LICENSE-2.0)
+
 #pragma once
 
 #include "Vesper/Core/Log.h"

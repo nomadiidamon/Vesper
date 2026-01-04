@@ -1,0 +1,14 @@
+Vesper Engine
+License: Proprietary (subject to change)
+
+Vesper itself is not currently released under an open-source license
+and is provided as-is.
+Copyright © 2025 Damon S. Green II (nomad_ii_damon)
+All rights reserved unless otherwise stated.
+
+This project contains code derived from the Hazel Engine
+by TheCherno, licensed under the Apache License 2.0,
+obtained through public tutorialization and source code access.
+
+Original Hazel code and derivative works thereof
+are licensed under the Apache License 2.0.
