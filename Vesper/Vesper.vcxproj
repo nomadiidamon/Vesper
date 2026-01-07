@@ -76,8 +76,8 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>vzpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>VZ_PLATFORM_WINDOWS;GLFW_INCLUDE_NONE;VZ_BUILD_DLL;_CRT_SECURE_NO_WARNINGS;VZ_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;vendor\imgui;vendor\glm;vendor\stb_image;vendor\entt\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>VZ_PLATFORM_WINDOWS;GLFW_INCLUDE_NONE;VZ_BUILD_DLL;_CRT_SECURE_NO_WARNINGS;YAML_CPP_STATIC_DEFINE;VZ_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;vendor\imgui;vendor\glm;vendor\stb_image;vendor\entt\include;vendor\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -98,8 +98,8 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>vzpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>VZ_PLATFORM_WINDOWS;GLFW_INCLUDE_NONE;VZ_BUILD_DLL;_CRT_SECURE_NO_WARNINGS;VZ_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;vendor\imgui;vendor\glm;vendor\stb_image;vendor\entt\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>VZ_PLATFORM_WINDOWS;GLFW_INCLUDE_NONE;VZ_BUILD_DLL;_CRT_SECURE_NO_WARNINGS;YAML_CPP_STATIC_DEFINE;VZ_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;vendor\imgui;vendor\glm;vendor\stb_image;vendor\entt\include;vendor\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -124,8 +124,8 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>vzpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>VZ_PLATFORM_WINDOWS;GLFW_INCLUDE_NONE;VZ_BUILD_DLL;_CRT_SECURE_NO_WARNINGS;VZ_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;vendor\imgui;vendor\glm;vendor\stb_image;vendor\entt\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>VZ_PLATFORM_WINDOWS;GLFW_INCLUDE_NONE;VZ_BUILD_DLL;_CRT_SECURE_NO_WARNINGS;YAML_CPP_STATIC_DEFINE;VZ_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;vendor\imgui;vendor\glm;vendor\stb_image;vendor\entt\include;vendor\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -146,8 +146,6 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="src\Vesper\Core\Color.h" />
-    <ClInclude Include="src\Vesper\Scene\Entity.h" />
     <ClInclude Include="src\Platform\OpenGL\OpenGLBuffer.h" />
     <ClInclude Include="src\Platform\OpenGL\OpenGLContext.h" />
     <ClInclude Include="src\Platform\OpenGL\OpenGLFramebuffer.h" />
@@ -159,6 +157,7 @@
     <ClInclude Include="src\Vesper.h" />
     <ClInclude Include="src\Vesper\Core\Application.h" />
     <ClInclude Include="src\Vesper\Core\Base.h" />
+    <ClInclude Include="src\Vesper\Core\Color.h" />
     <ClInclude Include="src\Vesper\Core\Config.h" />
     <ClInclude Include="src\Vesper\Core\EntryPoint.h" />
     <ClInclude Include="src\Vesper\Core\Input.h" />
@@ -179,6 +178,7 @@
     <ClInclude Include="src\Vesper\ImGui\VesperImGui.h" />
     <ClInclude Include="src\Vesper\ParticleSystem\ParticleSystem.h" />
     <ClInclude Include="src\Vesper\Renderer\Buffer.h" />
+    <ClInclude Include="src\Vesper\Renderer\Camera.h" />
     <ClInclude Include="src\Vesper\Renderer\Framebuffer.h" />
     <ClInclude Include="src\Vesper\Renderer\GraphicsContext.h" />
     <ClInclude Include="src\Vesper\Renderer\OrthographicCamera.h" />
@@ -192,11 +192,13 @@
     <ClInclude Include="src\Vesper\Renderer\Texture.h" />
     <ClInclude Include="src\Vesper\Renderer\VertexArray.h" />
     <ClInclude Include="src\Vesper\Scene\Components.h" />
+    <ClInclude Include="src\Vesper\Scene\Entity.h" />
     <ClInclude Include="src\Vesper\Scene\Scene.h" />
-    <ClInclude Include="src\Vesper\Renderer\Camera.h" />
     <ClInclude Include="src\Vesper\Scene\SceneCamera.h" />
+    <ClInclude Include="src\Vesper\Scene\SceneSerializer.h" />
     <ClInclude Include="src\Vesper\Scene\ScriptableEntity.h" />
     <ClInclude Include="src\Vesper\Time\Timer.h" />
+    <ClInclude Include="src\Vesper\Utils\PlatformUtils.h" />
     <ClInclude Include="src\vzpch.h" />
     <ClInclude Include="vendor\glm\glm\common.hpp" />
     <ClInclude Include="vendor\glm\glm\detail\_fixes.hpp" />
@@ -620,7 +622,6 @@
     <ClInclude Include="vendor\stb_image\stb_image.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Vesper\Scene\Entity.cpp" />
     <ClCompile Include="src\Platform\OpenGL\OpenGLBuffer.cpp" />
     <ClCompile Include="src\Platform\OpenGL\OpenGLContext.cpp" />
     <ClCompile Include="src\Platform\OpenGL\OpenGLFramebuffer.cpp" />
@@ -629,6 +630,7 @@
     <ClCompile Include="src\Platform\OpenGL\OpenGLTexture.cpp" />
     <ClCompile Include="src\Platform\OpenGL\OpenGLVertexArray.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
+    <ClCompile Include="src\Platform\Windows\WindowsPlatformUtils.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\Vesper\Core\Application.cpp" />
     <ClCompile Include="src\Vesper\Core\Layer.cpp" />
@@ -649,8 +651,10 @@
     <ClCompile Include="src\Vesper\Renderer\SubTexture2D.cpp" />
     <ClCompile Include="src\Vesper\Renderer\Texture.cpp" />
     <ClCompile Include="src\Vesper\Renderer\VertexArray.cpp" />
+    <ClCompile Include="src\Vesper\Scene\Entity.cpp" />
     <ClCompile Include="src\Vesper\Scene\Scene.cpp" />
     <ClCompile Include="src\Vesper\Scene\SceneCamera.cpp" />
+    <ClCompile Include="src\Vesper\Scene\SceneSerializer.cpp" />
     <ClCompile Include="src\vzpch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
@@ -665,6 +669,9 @@
     </ProjectReference>
     <ProjectReference Include="vendor\imgui\ImGui.vcxproj">
       <Project>{C0FF640D-2C14-8DBE-F595-301E616989EF}</Project>
+    </ProjectReference>
+    <ProjectReference Include="vendor\yaml-cpp\yaml-cpp.vcxproj">
+      <Project>{88F1A057-74BE-FB62-9DD7-E90A890331F1}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -1,7 +1,7 @@
 workspace "Vesper"
 	architecture "x64"
 
-	startproject "Sandbox"
+	startproject "Vesper-Editor"
 
 	configurations 
 	{ 
@@ -19,11 +19,13 @@ IncludeDir["ImGui"] = "Vesper/vendor/imgui"
 IncludeDir["glm"] = "Vesper/vendor/glm"
 IncludeDir["stb_image"] = "Vesper/vendor/stb_image"
 IncludeDir["entt"] = "Vesper/vendor/entt/include"
+IncludeDir["yaml_cpp"] = "Vesper/vendor/yaml-cpp/include"
 
 group "Dependencies"
 	include "Vesper/vendor/GLFW"
 	include "Vesper/vendor/Glad"
 	include "Vesper/vendor/imgui"
+	include "Vesper/vendor/yaml-cpp"
 
 group ""
 
@@ -63,7 +65,8 @@ project "Vesper"
 		"%{IncludeDir.ImGui}",
 		"%{IncludeDir.glm}",
 		"%{IncludeDir.stb_image}",
-		"%{IncludeDir.entt}"
+		"%{IncludeDir.entt}",
+		"%{IncludeDir.yaml_cpp}"
 	}
 
 	links
@@ -71,7 +74,8 @@ project "Vesper"
 		"GLFW",
 		"Glad",
 		"ImGui",
-		"opengl32.lib"
+		"opengl32.lib",
+		"yaml-cpp"
 	}
 
 	filter "system:windows"
@@ -85,7 +89,8 @@ project "Vesper"
 		"VZ_PLATFORM_WINDOWS", 
 		"GLFW_INCLUDE_NONE",
 		"VZ_BUILD_DLL",
-		"_CRT_SECURE_NO_WARNINGS"
+		"_CRT_SECURE_NO_WARNINGS",
+		"YAML_CPP_STATIC_DEFINE"
 	}
 
 	filter "configurations:Debug"
@@ -132,7 +137,7 @@ project "Sandbox"
 
 	links
 	{
-		"Vesper"
+		"Vesper",
 	}
 
 	filter "system:windows"
@@ -185,7 +190,7 @@ project "Vesper-Editor"
 		"Vesper/src/Vesper",
 		"Vesper/vendor",
 		"%{IncludeDir.glm}",
-		"%{IncludeDir.entt}"
+		"%{IncludeDir.entt}",
 	}
 
 	links

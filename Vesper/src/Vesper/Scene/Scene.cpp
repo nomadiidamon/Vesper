@@ -8,10 +8,15 @@
 namespace Vesper {
 
 	Scene::Scene()
+		: m_Name("Untitled Scene")
 	{
 		VZ_PROFILE_FUNCTION();
 
+	}
 
+	Scene::Scene(const std::string& name)
+		: m_Name(name)
+	{
 	}
 
 	Scene::~Scene()
@@ -24,8 +29,20 @@ namespace Vesper {
 		entity.AddComponent<TransformComponent>();
 		auto& nameTag = entity.AddComponent<NameComponent>();
 		nameTag.Name = name.empty() ? "Entity" + std::to_string(static_cast<std::uint32_t>(entity)) : name;
+		entity.AddComponent<UUIDComponent>();
 
 		return entity;
+	}
+
+	Entity Scene::CreateEntity(const std::string& name, const std::string& uuid)
+	{
+		Entity entity = { m_Registry.create(), this };
+		entity.AddComponent<TransformComponent>();
+		auto& nameTag = entity.AddComponent<NameComponent>();
+		nameTag.Name = name.empty() ? "Entity" + std::to_string(static_cast<std::uint32_t>(entity)) : name;
+		entity.AddComponent<UUIDComponent>(uuid);
+		return entity;
+
 	}
 
 	void Scene::DestroyEntity(Entity entity)
@@ -119,6 +136,11 @@ namespace Vesper {
 	template<typename T>
 	void Scene::OnComponentAdded(Entity entity, T& component) {
 		static_assert(false);
+	}
+
+	template<>
+	void Scene::OnComponentAdded<UUIDComponent>(Entity entity, UUIDComponent& component) {
+		// TODO: search registry to ensure unique UUID
 	}
 
 	template<>

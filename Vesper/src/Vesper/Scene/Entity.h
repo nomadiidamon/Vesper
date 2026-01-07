@@ -58,6 +58,18 @@ namespace Vesper {
 			m_Scene->m_Registry.remove<T>(m_EntityID);
 		}
 
+
+		const UUID& GetID() 
+		{
+			return GetComponent<UUIDComponent>().ID;
+		}
+
+		const std::string& GetName() 
+		{
+			return GetComponent<NameComponent>().Name;
+		}
+
+
 		operator bool() const { return m_EntityID != entt::null; }
 		operator entt::entity() const { return m_EntityID; }
 		operator uint32_t() const { return (uint32_t)m_EntityID; }

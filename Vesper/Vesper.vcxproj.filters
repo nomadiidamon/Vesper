@@ -99,6 +99,9 @@
     <ClInclude Include="src\Vesper\Core\Base.h">
       <Filter>src\Vesper\Core</Filter>
     </ClInclude>
+    <ClInclude Include="src\Vesper\Core\Color.h">
+      <Filter>src\Vesper\Core</Filter>
+    </ClInclude>
     <ClInclude Include="src\Vesper\Core\Config.h">
       <Filter>src\Vesper\Core</Filter>
     </ClInclude>
@@ -159,6 +162,9 @@
     <ClInclude Include="src\Vesper\Renderer\Buffer.h">
       <Filter>src\Vesper\Renderer</Filter>
     </ClInclude>
+    <ClInclude Include="src\Vesper\Renderer\Camera.h">
+      <Filter>src\Vesper\Renderer</Filter>
+    </ClInclude>
     <ClInclude Include="src\Vesper\Renderer\Framebuffer.h">
       <Filter>src\Vesper\Renderer</Filter>
     </ClInclude>
@@ -198,7 +204,19 @@
     <ClInclude Include="src\Vesper\Scene\Components.h">
       <Filter>src\Vesper\Scene</Filter>
     </ClInclude>
+    <ClInclude Include="src\Vesper\Scene\Entity.h">
+      <Filter>src\Vesper\Scene</Filter>
+    </ClInclude>
     <ClInclude Include="src\Vesper\Scene\Scene.h">
+      <Filter>src\Vesper\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vesper\Scene\SceneCamera.h">
+      <Filter>src\Vesper\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vesper\Scene\SceneSerializer.h">
+      <Filter>src\Vesper\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vesper\Scene\ScriptableEntity.h">
       <Filter>src\Vesper\Scene</Filter>
     </ClInclude>
     <ClInclude Include="src\Vesper\Time\Timer.h">
@@ -1467,11 +1485,6 @@
     <ClInclude Include="vendor\stb_image\stb_image.h">
       <Filter>vendor\stb_image</Filter>
     </ClInclude>
-    <ClInclude Include="src\Vesper\Scene\Entity.h" />
-    <ClInclude Include="src\Vesper\Core\Color.h" />
-    <ClInclude Include="src\Vesper\Renderer\Camera.h" />
-    <ClInclude Include="src\Vesper\Scene\SceneCamera.h" />
-    <ClInclude Include="src\Vesper\Scene\ScriptableEntity.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Platform\OpenGL\OpenGLBuffer.cpp">
@@ -1558,7 +1571,16 @@
     <ClCompile Include="src\Vesper\Renderer\VertexArray.cpp">
       <Filter>src\Vesper\Renderer</Filter>
     </ClCompile>
+    <ClCompile Include="src\Vesper\Scene\Entity.cpp">
+      <Filter>src\Vesper\Scene</Filter>
+    </ClCompile>
     <ClCompile Include="src\Vesper\Scene\Scene.cpp">
+      <Filter>src\Vesper\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Vesper\Scene\SceneCamera.cpp">
+      <Filter>src\Vesper\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Vesper\Scene\SceneSerializer.cpp">
       <Filter>src\Vesper\Scene</Filter>
     </ClCompile>
     <ClCompile Include="src\vzpch.cpp">
@@ -1567,7 +1589,5 @@
     <ClCompile Include="vendor\stb_image\stb_image.cpp">
       <Filter>vendor\stb_image</Filter>
     </ClCompile>
-    <ClCompile Include="src\Vesper\Scene\Entity.cpp" />
-    <ClCompile Include="src\Vesper\Scene\SceneCamera.cpp" />
   </ItemGroup>
 </Project>

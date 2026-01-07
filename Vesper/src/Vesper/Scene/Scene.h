@@ -11,10 +11,12 @@ namespace Vesper {
 	{
 	public:
 		Scene();
+		Scene(const std::string& name);
 		~Scene();
 
 		// Temp-> add entity wrapper later
 		Entity CreateEntity(const std::string& name = std::string());
+		Entity CreateEntity(const std::string& name, const std::string& uuid);
 		void DestroyEntity(Entity entity);
 
 		void OnUpdate(Timestep ts);
@@ -24,10 +26,15 @@ namespace Vesper {
 		template<typename T>
 		void OnComponentAdded(Entity entity, T& component);
 	private:
+		std::string m_Name;
 		entt::registry m_Registry;
 		uint32_t m_ViewportWidth = 160, m_ViewportHeight = 90;
 		friend class Entity;
+		friend class SceneSerializer;
 		friend class SceneHierarchyPanel;
+
+		void SetName(const std::string& name) { m_Name = name; }
+		const std::string& GetName() const { return m_Name; }
 	};
 
 

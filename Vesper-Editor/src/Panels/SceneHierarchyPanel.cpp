@@ -136,7 +136,10 @@ namespace Vesper {
 			ImGuiTreeNodeFlags flags = ImGuiTreeNodeFlags_OpenOnArrow | ImGuiTreeNodeFlags_SpanAvailWidth;
 			bool opened = ImGui::TreeNodeEx((void*)9817239, flags, name.c_str());
 			if (opened)
+			{
+				/// TODO: Draw child entities here in the future
 				ImGui::TreePop();
+			}
 			ImGui::TreePop();
 		}
 

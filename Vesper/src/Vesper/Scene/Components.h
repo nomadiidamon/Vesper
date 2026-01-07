@@ -2,6 +2,7 @@
 #include "Vesper/Renderer/Texture.h"
 #include "Vesper/Renderer/SubTexture2D.h"
 #include "SceneCamera.h"
+#include "Vesper/Core/Random.h"
 
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
@@ -10,6 +11,28 @@
 
 namespace Vesper
 {
+	struct UUID {
+		std::string ID;
+		UUID() { ID = Random::UUID(); }
+		UUID(const std::string& id)
+			: ID{ id } {
+		}
+		operator std::string& () { return ID; }
+		operator const std::string& () const { return ID; }
+	};
+
+	struct UUIDComponent {
+		UUID ID;
+		UUIDComponent()
+			: ID() {
+		}
+		UUIDComponent(const UUIDComponent&) = default;
+		UUIDComponent(const std::string& id)
+			: ID{ id } {
+		}
+
+	};
+
 	struct NameComponent
 	{
 		std::string Name;

@@ -20,6 +20,14 @@ namespace Vesper {
 		virtual void OnUpdate(Timestep ts) override;
 		virtual void OnImGuiRender() override;
 		virtual void OnEvent(Event& e) override;
+
+	private:
+		bool OnKeyPressed(KeyPressedEvent& e);
+
+		void NewScene();
+		void OpenScene();
+		void SaveSceneAs();
+		void ResetScene();
 	private:
 		float lastFrameTime = 0.0f;
 		SceneHierarchyPanel m_SceneHierarchyPanel;

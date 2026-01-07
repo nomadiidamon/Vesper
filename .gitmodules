@@ -10,3 +10,6 @@
 [submodule "Vesper/vendor/glm"]
 	path = Vesper/vendor/glm
 	url = https://github.com/g-truc/glm
+[submodule "Vesper/vendor/yaml-cpp"]
+	path = Vesper/vendor/yaml-cpp
+	url = https://github.com/thecherno/yaml-cpp

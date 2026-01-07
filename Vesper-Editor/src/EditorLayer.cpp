@@ -1,8 +1,11 @@
 #include <Vesper/ImGui/VesperImGui.h>
+#include <Vesper/Utils/PlatformUtils.h>
 
 #include "EditorLayer.h"
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
+
+#include "Vesper/Scene/SceneSerializer.h"
 
 static const uint32_t s_MapWidth = 20;
 static const uint32_t s_MapHeight = 10;
@@ -88,6 +91,9 @@ namespace Vesper {
 		{
 			m_CameraController.SetZoomLevel(5.5f);
 			m_ActiveScene = CreateRef<Scene>();
+
+#if 0
+
 			m_CameraEntity = m_ActiveScene->CreateEntity("Primary Camera Entity");
 			auto& pCam = m_CameraEntity.AddComponent<CameraComponent>();
 			pCam.Primary = true;
@@ -188,8 +194,13 @@ namespace Vesper {
 			m_CameraEntity.AddComponent<NativeScriptComponent>().Bind<CameraController>();
 			m_SecondaryCameraEntity.AddComponent<NativeScriptComponent>().Bind<CameraController>();
 
+#endif
 
 			m_SceneHierarchyPanel.SetContext(m_ActiveScene);
+
+			SceneSerializer serializer(m_ActiveScene);
+			serializer.Deserialize("assets/scenes/Example.vesper");
+			VZ_CORE_INFO("Scene serialized to assets/scenes/Example.vesper");
 		}
 
 
@@ -424,19 +435,39 @@ namespace Vesper {
 
 		// Submit the DockSpace
 		ImGuiIO& io = ImGui::GetIO();
+		ImGuiStyle& style = ImGui::GetStyle();
+		float minWinSize = style.WindowMinSize.x = 370.0f;
+
 		if (io.ConfigFlags & ImGuiConfigFlags_DockingEnable)
 		{
 			ImGuiID dockspace_id = ImGui::GetID("MyDockSpace");
 			ImGui::DockSpace(dockspace_id, ImVec2(0.0f, 0.0f), dockspace_flags);
 		}
 
+		style.WindowMinSize.x = minWinSize;
+
 		if (ImGui::BeginMenuBar())
 		{
-			if (ImGui::BeginMenu("Options"))
+			if (ImGui::BeginMenu("File"))
 			{
 				// Disabling fullscreen would allow the window to be moved to the front of other windows,
 				// which we can't undo at the moment without finer window depth/z control.
 
+				if (ImGui::MenuItem("New", "Ctrl+N"))
+					NewScene();
+				
+
+				if (ImGui::MenuItem("Open..", "Ctrl+O"))
+					OpenScene();
+				
+
+				if (ImGui::MenuItem("Save As..", "Ctrl+Shift+S"))
+					SaveSceneAs();
+				
+
+				if (ImGui::MenuItem("Reset Scene"))
+					ResetScene();
+				
 
 				if (ImGui::MenuItem("Exit"))
 					Vesper::Application::Get().Close();
@@ -543,7 +574,86 @@ namespace Vesper {
 	void EditorLayer::OnEvent(Event& e)
 	{
 		m_CameraController.OnEvent(e);
+		
+		EventDispatcher dispatcher(e);
+		dispatcher.Dispatch<KeyPressedEvent>(VZ_BIND_EVENT_FN(EditorLayer::OnKeyPressed));
 
+	}
+
+	bool EditorLayer::OnKeyPressed(KeyPressedEvent& e)
+	{
+		// Shortcuts
+		if (e.GetRepeatCount() > 0)
+			return false;
+
+		bool control = Input::IsKeyPressed(VZ_KEY_LEFT_CONTROL) || Input::IsKeyPressed(VZ_KEY_RIGHT_CONTROL);
+		bool shift = Input::IsKeyPressed(VZ_KEY_LEFT_SHIFT) || Input::IsKeyPressed(VZ_KEY_RIGHT_SHIFT);
+		switch (e.GetKeyCode())
+		{
+
+		case VZ_KEY_N:
+		
+			if (control)
+			{
+				NewScene();
+			}
+			break;
+		
+		case VZ_KEY_O:
+			if (control)
+			{
+				OpenScene();
+			}
+			break;
+
+		case VZ_KEY_S:
+			if (control && shift)
+			{
+				SaveSceneAs();
+			}
+			break;
+		}
+		return false;
+
+	}
+
+	void EditorLayer::NewScene()
+	{
+		m_ActiveScene = CreateRef<Scene>();
+		m_ActiveScene->OnViewportResize((uint32_t)m_ViewportSize.x, (uint32_t)m_ViewportSize.y);
+		m_SceneHierarchyPanel.SetContext(m_ActiveScene);
+	}
+
+	void EditorLayer::OpenScene()
+	{
+		std::string filePath = FileDialogs::OpenFile("Vesper Scene (*.vesper)\0*.vesper\0");
+
+		if (!filePath.empty())
+		{
+			m_ActiveScene = CreateRef<Scene>();
+			m_ActiveScene->OnViewportResize((uint32_t)m_ViewportSize.x, (uint32_t)m_ViewportSize.y);
+			m_SceneHierarchyPanel.SetContext(m_ActiveScene);
+
+			SceneSerializer serializer(m_ActiveScene);
+			serializer.Deserialize(filePath);
+			VZ_CORE_INFO("Scene deserialized from: " + filePath);
+		}
+	}
+
+	void EditorLayer::SaveSceneAs()
+	{
+		std::string filePath = FileDialogs::SaveFile("Vesper Scene (*.vesper)\0*.vesper\0");
+		if (!filePath.empty())
+		{
+			SceneSerializer serializer(m_ActiveScene);
+			serializer.Serialize(filePath);
+			VZ_CORE_INFO("Scene serialized to: " + filePath);
+		}
+	}
+
+	void EditorLayer::ResetScene()
+	{
+		VZ_CORE_ASSERT(false, "Not implemented yet!");
 	}
 
 }
