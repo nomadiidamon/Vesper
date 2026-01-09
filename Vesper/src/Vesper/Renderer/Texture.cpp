@@ -28,4 +28,47 @@ namespace Vesper {
 		VZ_CORE_ASSERT(false, "Unknown RendererAPI!");
 		return nullptr;
 	}
+
+	void TextureLibrary::Add(const std::string& name, const Ref<Texture2D>& texture)
+	{
+		VZ_PROFILE_FUNCTION();
+		VZ_CORE_ASSERT(!Exists(name), "Texture already exists!");
+		m_Textures[name] = texture;
+	}
+
+	void TextureLibrary::Add(const Ref<Texture2D>& texture)
+	{
+		VZ_PROFILE_FUNCTION();
+		auto& name = texture->GetName();
+		Add(name, texture);
+	}
+
+	Ref<Texture2D> TextureLibrary::Load(const std::string& filepath)
+	{
+		VZ_PROFILE_FUNCTION();
+		auto texture = Texture2D::Create(filepath);
+		Add(texture);
+		return texture;
+	}
+
+	Ref<Texture2D> TextureLibrary::Load(const std::string& name, const std::string& filepath)
+	{
+		VZ_PROFILE_FUNCTION();
+		auto texture = Texture2D::Create(filepath);
+		Add(texture);
+		return texture;
+	}
+
+	Ref<Texture2D> TextureLibrary::Get(const std::string& name) const
+	{
+		VZ_PROFILE_FUNCTION();
+		VZ_CORE_ASSERT(Exists(name), "Texture not found!");
+		return m_Textures.at(name);
+	}
+
+	bool TextureLibrary::Exists(const std::string& name) const
+	{
+		VZ_PROFILE_FUNCTION();
+		return m_Textures.find(name) != m_Textures.end();
+	}
 }

@@ -2,7 +2,7 @@
 
 #include <Vesper.h>
 
-#include "Vesper/Core/Layer.h"
+#include "Vesper/App/Layer.h"
 #include "Vesper/ParticleSystem/ParticleSystem.h"
 
 struct RandomProperties;

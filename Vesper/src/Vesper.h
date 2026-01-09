@@ -3,29 +3,36 @@
 
 #include "Vesper/Core/Base.h"
 
-#include "Vesper/Core/Application.h"
-#include "Vesper/Core/Layer.h"
+#include "Vesper/App/Application.h"
+#include "Vesper/App/Layer.h"
+
+#include "Vesper/Debug/Instrumentor.h"
+
 #include "Vesper/Core/Log.h"
 #include "Vesper/Core/Random.h"
 #include "Vesper/Core/Color.h"
 #include "Vesper/Core/Timestep.h"
+#include "Vesper/Core/Timer.h"		
 
-#include "Vesper/Core/Input.h"
-#include "Vesper/Core/KeyCodes.h"
-#include "Vesper/Core/MouseButtonCodes.h"
+#include "Vesper/Input/Input.h"							
+//#include "Vesper/Input/InputContext.h"				/// TODO: Input Context class
+//#include "Vesper/Input/InputAction.h"					/// TODO: Input Action class
+#include "Vesper/Input/KeyCodes.h"
+#include "Vesper/Input/MouseButtonCodes.h"
 
-#include "Vesper/ImGui/ImGuiLayer.h"
+/// GUI
+#include "Vesper/ImGui/ImGuiLayer.h"					/// TODO: Abstract this to OpenGL/DirectX/Vulkan etc ImGui layers
 
-#include "Vesper/Debug/Instrumentor.h"
-//#include "Vesper/Time/Timer.h"		/// TODO: Finish timer class
+// -- Particle System (Temporary) -------------------	/// Simple particle system for stress testing renderer
+#include "Vesper/ParticleSystem/ParticleSystem.h"		/// Temporary starter particle system
 
-
-#include "Vesper/ParticleSystem/ParticleSystem.h" /// Temporary starter particle system
-
-#include "Vesper/Scene/Scene.h"
+// -- Scene - Entity - Component - System -------------------
 #include "Vesper/Scene/Entity.h"
 #include "Vesper/Scene/ScriptableEntity.h"
 #include "Vesper/Scene/Components.h"
+#include "Vesper/Scene/Scene.h"							/// TODO: Give scene a System variable
+// #include "Vesper/Scene/Systems.h"					/// TODO: Systems class
+// #include "Vesper/Scene/SystemsManager.h"				/// TODO: Static SystemsManager class
 
 
 // -- Renderer-------------------

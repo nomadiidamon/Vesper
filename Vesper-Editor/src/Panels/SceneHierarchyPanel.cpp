@@ -1,3 +1,4 @@
+#include <Vesper/Utils/PlatformUtils.h>
 #include "SceneHierarchyPanel.h"
 #include "Vesper/Scene/Components.h"
 
@@ -229,6 +230,104 @@ namespace Vesper {
 		ImGui::PopID();
 	}
 
+	static void DrawVec2Control(const std::string& label, glm::vec2& values, float resetValue = 0.0f, float columnWidth = 100.0f)
+	{
+		ImGuiIO& io = ImGui::GetIO();
+		auto boldFont = io.Fonts->Fonts[0];
+
+		ImGui::PushID(label.c_str());
+
+		ImGui::Columns(2);
+		ImGui::SetColumnWidth(0, columnWidth);
+		ImGui::Text(label.c_str());
+		ImGui::NextColumn();
+
+		ImGui::PushStyleVar(ImGuiStyleVar_ItemSpacing, ImVec2{ 0, 0 });
+
+		float lineHeight = ImGui::GetFontSize() + ImGui::GetStyle().FramePadding.y * 2.0f;
+		ImVec2 buttonSize = { lineHeight + 3.0f, lineHeight };
+
+		// Compute available width for the three float controls in the right column
+		float availableWidth = ImGui::GetContentRegionAvail().x;
+		float itemSpacing = ImGui::GetStyle().ItemSpacing.x;
+		float totalButtonWidth = buttonSize.x * 2.0f;
+		// Account for SameLine() spacings between button+control pairs (conservative estimate)
+		float totalSpacing = itemSpacing * 4.0f;
+		float itemWidth = (availableWidth - totalButtonWidth - totalSpacing) / 2.0f;
+		if (itemWidth <= 0.0f)
+			itemWidth = ImGui::CalcItemWidth();
+
+		ImGui::PushStyleColor(ImGuiCol_Button, ImVec4{ 0.8f, 0.1f, 0.15f, 1.0f });
+		ImGui::PushStyleColor(ImGuiCol_ButtonHovered, ImVec4{ 0.9f, 0.2f, 0.2f, 1.0f });
+		ImGui::PushStyleColor(ImGuiCol_ButtonActive, ImVec4{ 0.8f, 0.1f, 0.15f, 1.0f });
+		ImGui::PushFont(boldFont);
+		if (ImGui::Button("X", buttonSize))
+			values.x = resetValue;
+		ImGui::PopFont();
+		ImGui::PopStyleColor(3);
+
+		ImGui::SameLine();
+		ImGui::PushItemWidth(itemWidth);
+		ImGui::DragFloat("##X", &values.x, 0.1f, 0.0f, 0.0f, "%.2f");
+		ImGui::PopItemWidth();
+		ImGui::SameLine();
+
+		ImGui::PushStyleColor(ImGuiCol_Button, ImVec4{ 0.2f, 0.7f, 0.2f, 1.0f });
+		ImGui::PushStyleColor(ImGuiCol_ButtonHovered, ImVec4{ 0.3f, 0.8f, 0.3f, 1.0f });
+		ImGui::PushStyleColor(ImGuiCol_ButtonActive, ImVec4{ 0.2f, 0.7f, 0.2f, 1.0f });
+		ImGui::PushFont(boldFont);
+		if (ImGui::Button("Y", buttonSize))
+			values.y = resetValue;
+		ImGui::PopFont();
+		ImGui::PopStyleColor(3);
+
+		ImGui::SameLine();
+		ImGui::PushItemWidth(itemWidth);
+		ImGui::DragFloat("##Y", &values.y, 0.1f, 0.0f, 0.0f, "%.2f");
+		ImGui::PopItemWidth();
+		ImGui::SameLine();
+
+		ImGui::PopStyleVar();
+
+		ImGui::Columns(1);
+
+		ImGui::PopID();
+	}
+
+	static void SubTextureEdit(const std::string& label, SubTextureComponent& subTexture)
+	{
+		ImGui::Text(label.c_str());
+
+		auto& subTexRef = subTexture.GetSubTexture();
+		if (subTexRef && subTexRef->GetTexture()) {
+			glm::vec2 oldOffset = subTexture.Offset;
+			glm::vec2 oldTiling = subTexture.TilingFactor;
+
+			DrawVec2Control("Offset", subTexture.Offset);
+			DrawVec2Control("Scale", subTexture.TilingFactor, 1.0f);
+
+			if (subTexRef->GetTexture())
+			{
+				//if (oldOffset != subTexture.Offset || oldTiling != subTexture.TilingFactor) {
+				//	subTexture.SetOffset(subTexture.Offset);
+				//	subTexture.SetTilingFactor(subTexture.TilingFactor);
+
+					auto tex = subTexRef->GetTexture();
+					if (tex) {
+						subTexture.SubTexture = SubTexture2D::CreateFromCoords(
+							tex, subTexture.Offset,
+							glm::vec2(static_cast<float>(tex->GetWidth()) * subTexture.TilingFactor.x,
+								static_cast<float>(tex->GetHeight()) * subTexture.TilingFactor.y));
+					}
+				//}
+			}
+		}
+		else {
+			ImGui::Text("No texture assigned.");
+		}
+
+	}
+
 	template<typename T, typename UIFunction>
 	static void DrawComponent(const std::string& name, Entity entity, UIFunction uiFunction)
 	{
@@ -296,6 +395,7 @@ namespace Vesper {
 			DisplayAddComponentEntry<CameraComponent>("Camera");
 			//DisplayAddComponentEntry<ScriptComponent>("Script");
 			DisplayAddComponentEntry<SpriteRendererComponent>("Sprite Renderer");
+			DisplayAddComponentEntry<SubTextureComponent>("SubTexture");
 
 			ImGui::EndPopup();
 		}
@@ -374,27 +474,70 @@ namespace Vesper {
 			{
 				ImGui::ColorEdit4("Color", glm::value_ptr(component.Color));
 
+				// Separate checkbox for enabling/disabling texture usage
+				ImGui::Checkbox("Texture Enabled", &component.TextureEnabled);
+				ImGui::SameLine();
 
+				// Display current texture name (if any) and buttons to Set / Change / Clear the texture
+				if (component.Texture)
+				{
+					ImGui::TextUnformatted(component.Texture->GetName().c_str());
+					ImGui::SameLine();
+					if (ImGui::Button("Change Texture"))
+					{
+						std::string filePath = FileDialogs::OpenFile("Image Files (*.png;*.jpg;*.jpeg;*.bmp;*.tga)\0*.png;*.jpg;*.jpeg;*.bmp;*.tga\0All Files (*.*)\0*.*\0");
+						if (!filePath.empty())
+						{
+							auto tex = Texture2D::Create(filePath);
+							if (tex)
+							{
+								component.Texture = tex;
+								component.TextureEnabled = true;
+							}
+							else
+							{
+								VZ_WARN("Could not load texture {0}", filePath);
+							}
+						}
+					}
+					ImGui::SameLine();
+					if (ImGui::Button("Clear Texture"))
+					{
+						component.Texture = nullptr;
+						component.TextureEnabled = false;
+					}
+				}
+				else
+				{
+					ImGui::SameLine();
+					if (ImGui::Button("Set Texture"))
+					{
+						std::string filePath = FileDialogs::OpenFile("Image Files (*.png;*.jpg;*.jpeg;*.bmp;*.tga)\0*.png;*.jpg;*.jpeg;*.bmp;*.tga\0All Files (*.*)\0*.*\0");
+						if (!filePath.empty())
+						{
+							auto tex = Texture2D::Create(filePath);
+							if (tex)
+							{
+								component.Texture = tex;
+								component.TextureEnabled = true;
+							}
+							else
+							{
+								VZ_WARN("Could not load texture {0}", filePath);
+							}
+						}
+					}
+				}
 
-				//ImGui::Button("Texture", ImVec2(100.0f, 0.0f));
-				//if (ImGui::BeginDragDropTarget())
-				//{
-				//	if (const ImGuiPayload* payload = ImGui::AcceptDragDropPayload("CONTENT_BROWSER_ITEM"))
-				//	{
-				//		const wchar_t* path = (const wchar_t*)payload->Data;
-				//		std::filesystem::path texturePath(path);
-				//		Ref<Texture2D> texture = Texture2D::Create(texturePath.string());
-				//		if (texture->IsLoaded())
-				//			component.Texture = texture;
-				//		else
-				//			HZ_WARN("Could not load texture {0}", texturePath.filename().string());
-				//	}
-				//	ImGui::EndDragDropTarget();
-				//}
+				ImGui::DragFloat("Tiling Factor", &component.TilingFactor, 0.1f, 0.0f, 100.0f);
 
-				//ImGui::DragFloat("Tiling Factor", &component.TilingFactor, 0.1f, 0.0f, 100.0f);
 			});
 
+		DrawComponent<SubTextureComponent>("SubTexture", entity, [](auto& component)
+			{
+				SubTextureEdit(component.SubTexture->GetTexture()->GetName(), component);
+
+			});
 	}
 
 

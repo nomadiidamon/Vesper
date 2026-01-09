@@ -3,7 +3,7 @@
 
 #include "Vesper/Renderer/Renderer.h"
 
-#include "Input.h"
+#include "Vesper/Input/Input.h"
 
 /// TEMPORARY
 #include <GLFW/glfw3.h>

@@ -85,29 +85,32 @@ namespace Vesper
 
 		glm::vec4& GetColor() { return Color; }
 
-	};
-
-	struct TextureComponent
-	{
-		Ref<Texture2D> Texture;
-		TextureComponent() = default;
-		TextureComponent(const TextureComponent&) = default;
-		TextureComponent(const Ref<Texture2D>& texture)
-			: Texture(texture) {
-		}
-
-		operator Ref<Texture2D>& () { return Texture; }
-		operator const Ref<Texture2D>& () const { return Texture; }
-		Ref<Texture2D>& GetTexture() { return Texture; }
+		bool TextureEnabled = false;
 	};
 
 	struct SubTextureComponent
 	{
 		Ref<SubTexture2D> SubTexture;
+		glm::vec2 TilingFactor = { 1.0f, 1.0f };
+		glm::vec2 Offset = { 0.0f, 0.0f };
 		SubTextureComponent() = default;
-		SubTextureComponent(const SubTextureComponent&) = default;
+		SubTextureComponent(const Ref<Texture2D>& texture)
+			: SubTexture(SubTexture2D::CreateFromCoords(texture, { 0, 0 }, { texture->GetWidth(), texture->GetHeight() })) {
+		}
 		SubTextureComponent(const Ref<SubTexture2D>& subTexture)
 			: SubTexture(subTexture) {
+		}
+
+		void SetTexture(const Ref<Texture2D>& texture) {
+			SubTexture = SubTexture2D::CreateFromCoords(texture, { 0, 0 }, { texture->GetWidth(), texture->GetHeight() });
+		}
+
+		void SetTilingFactor(const glm::vec2& tiling) {
+			TilingFactor = tiling;
+		}
+
+		void SetOffset(const glm::vec2& offset) {
+			Offset = offset;
 		}
 
 		operator Ref<SubTexture2D>& () { return SubTexture; }

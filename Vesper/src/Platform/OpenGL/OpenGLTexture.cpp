@@ -91,4 +91,15 @@ namespace Vesper {
 		glTextureSubImage2D(m_RendererID, 0, 0, 0, m_Width, m_Height, m_DataFormat, GL_UNSIGNED_BYTE, data);
 	}
 
+	std::string OpenGLTexture2D::GetName() const
+	{
+		// Extract filename from path
+		size_t lastSlash = m_Path.find_last_of("/\\");
+		if (lastSlash == std::string::npos)
+			return m_Path; // No directory part
+		else
+			return m_Path.substr(lastSlash + 1);
+
+	}
+
 }

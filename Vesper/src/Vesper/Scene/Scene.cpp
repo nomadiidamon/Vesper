@@ -57,18 +57,18 @@ namespace Vesper {
 		// Update scripts
 		{
 			m_Registry.view<NativeScriptComponent>().each([=](auto entity, NativeScriptComponent& nsc)
-			{
-				/// TODO: Move to Scene::OnScenePlay()
-				if (!nsc.Instance) 
 				{
-					nsc.Instance = nsc.InstantiateScript();
-					nsc.Instance->m_Entity = Entity{ entity, this };
-					nsc.Instance->OnCreate();
-				}
+					/// TODO: Move to Scene::OnScenePlay()
+					if (!nsc.Instance)
+					{
+						nsc.Instance = nsc.InstantiateScript();
+						nsc.Instance->m_Entity = Entity{ entity, this };
+						nsc.Instance->OnCreate();
+					}
 
-				nsc.Instance->OnUpdate(ts);
+					nsc.Instance->OnUpdate(ts);
 
-			});
+				});
 
 		}
 
@@ -94,25 +94,58 @@ namespace Vesper {
 
 		Renderer2D::BeginScene(mainCamera->GetProjection(), *camTransform);
 
-		auto group1 = m_Registry.group<TextureAnimationComponent>();
-		for (auto entity : group1)
-		{
-			auto& transform = m_Registry.get<TransformComponent>(entity);
-			auto& texAnim = m_Registry.get<TextureAnimationComponent>(entity);
-			auto& sprite = m_Registry.get<SpriteRendererComponent>(entity);
-			texAnim.Update(ts.GetSeconds());
-			Renderer2D::DrawQuadWithTexture(transform.GetTransform(), texAnim.SubTextures[texAnim.CurrentFrame], 1.0f, sprite.Color);
-		}
 
 		auto view = m_Registry.group<SpriteRendererComponent>();
 		for (auto entity : view)
 		{
 			auto& transform = m_Registry.get<TransformComponent>(entity);
 			auto& sprite = m_Registry.get<SpriteRendererComponent>(entity);
-			Renderer2D::DrawQuad(transform.GetTransform(), sprite.Color);
 
-			
+			// Do not render subtextures here
+			auto stc = m_Registry.try_get<SubTextureComponent>(entity);
+			if (stc) {
+				continue;
+			}
+
+			if (sprite.TextureEnabled && !sprite.Texture)
+				Renderer2D::DrawQuadWithTexture(transform.GetTransform(), VZ_DEFAULT_TEXTURE, sprite.TilingFactor, sprite.Color);
+			else if (sprite.TextureEnabled && sprite.Texture)
+				Renderer2D::DrawQuadWithTexture(transform.GetTransform(), sprite.Texture, sprite.TilingFactor, sprite.Color);
+			else
+				Renderer2D::DrawQuad(transform.GetTransform(), sprite.Color);
 		}
+
+		auto subTextureView = m_Registry.group<SubTextureComponent>();
+		for (auto entity : subTextureView) {
+			auto& transform = m_Registry.get<TransformComponent>(entity);
+			auto& sprite = m_Registry.get<SpriteRendererComponent>(entity);
+			auto& subTexture = m_Registry.get<SubTextureComponent>(entity);
+			
+
+			if (!sprite.TextureEnabled) sprite.TextureEnabled = true;
+			if (subTexture.SubTexture == nullptr)
+			{
+				subTexture.SetTexture(VZ_DEFAULT_TEXTURE);
+			}
+			else {
+				// Ensure the subtexture's texture matches the sprite's texture
+				if (sprite.Texture && subTexture.SubTexture->GetTexture() != sprite.Texture) {
+					subTexture.SetTexture(sprite.Texture);
+				}
+			}
+
+			Renderer2D::DrawQuadWithTexture(transform.GetTransform(), subTexture.GetSubTexture(), sprite.TilingFactor, sprite.Color);
+		}
+
+		//auto group1 = m_Registry.group<TextureAnimationComponent>();
+		//for (auto entity : group1)
+		//{
+		//	auto& transform = m_Registry.get<TransformComponent>(entity);
+		//	auto& texAnim = m_Registry.get<TextureAnimationComponent>(entity);
+		//	auto& sprite = m_Registry.get<SpriteRendererComponent>(entity);
+		//	texAnim.Update(ts.GetSeconds());
+		//	Renderer2D::DrawQuadWithTexture(transform.GetTransform(), texAnim.SubTextures[texAnim.CurrentFrame], 1.0f, sprite.Color);
+		//}
 
 		Renderer2D::EndScene();
 
@@ -158,6 +191,13 @@ namespace Vesper {
 
 	template<>
 	void Scene::OnComponentAdded<SpriteRendererComponent>(Entity entity, SpriteRendererComponent& component) {
+	}
+
+	template<>
+	void Scene::OnComponentAdded<SubTextureComponent>(Entity entity, SubTextureComponent& component) {
+		auto& src = entity.GetOrAddComponent<SpriteRendererComponent>();
+		if (!src.TextureEnabled) src.TextureEnabled = true;
+		component.SetTexture(src.Texture ? src.Texture : VZ_DEFAULT_TEXTURE);
 	}
 
 	template<>

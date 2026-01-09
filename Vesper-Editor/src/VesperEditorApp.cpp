@@ -1,5 +1,5 @@
 #include <Vesper.h>
-#include <Vesper/Core/EntryPoint.h>
+#include <Vesper/App/EntryPoint.h>
 
 
 #include "imgui/imgui.h"

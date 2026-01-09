@@ -1,10 +1,10 @@
 #include "vzpch.h"
 #include "Vesper/Utils/PlatformUtils.h"
-#include "Vesper/Core/Application.h"
+#include "Vesper/App/Application.h"
 
 #include <commdlg.h>
 #include <GLFW/glfw3.h>
-#define GLFW_EXPOSE_NATIVE_WIN32
+#define GLFW_EXPOSE_NATIVE_WIN32 /// TODO: Move to platform detection
 #include <GLFW/glfw3native.h>
 
 namespace Vesper {

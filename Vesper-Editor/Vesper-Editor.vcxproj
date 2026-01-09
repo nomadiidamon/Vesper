@@ -78,7 +78,7 @@
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>VZ_PLATFORM_WINDOWS;VZ_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>VZ_PLATFORM_WINDOWS;VZ_EDITOR_USE_DEFAULT_SCENE;VZ_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>..\Vesper\vendor\spdlog\include;..\Vesper\src;..\Vesper\src\Vesper;..\Vesper\vendor;..\Vesper\vendor\glm;..\Vesper\vendor\entt\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
@@ -96,7 +96,7 @@
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>VZ_PLATFORM_WINDOWS;VZ_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>VZ_PLATFORM_WINDOWS;VZ_EDITOR_USE_DEFAULT_SCENE;VZ_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>..\Vesper\vendor\spdlog\include;..\Vesper\src;..\Vesper\src\Vesper;..\Vesper\vendor;..\Vesper\vendor\glm;..\Vesper\vendor\entt\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
@@ -118,7 +118,7 @@
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>VZ_PLATFORM_WINDOWS;VZ_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>VZ_PLATFORM_WINDOWS;VZ_EDITOR_USE_DEFAULT_SCENE;VZ_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>..\Vesper\vendor\spdlog\include;..\Vesper\src;..\Vesper\src\Vesper;..\Vesper\vendor;..\Vesper\vendor\glm;..\Vesper\vendor\entt\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>

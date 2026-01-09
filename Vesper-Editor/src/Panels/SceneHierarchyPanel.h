@@ -4,6 +4,8 @@
 #include "Vesper/Scene/Scene.h"
 #include "Vesper/Scene/Entity.h"
 
+#include "Vesper/Renderer/Framebuffer.h"
+
 namespace Vesper {
 
 	class SceneHierarchyPanel
@@ -27,6 +29,8 @@ namespace Vesper {
 	private:
 		Ref<Scene> m_Context;
 		Entity m_SelectionContext;
+		Ref<Framebuffer> m_Framebuffer;
+
 	};
 
 }

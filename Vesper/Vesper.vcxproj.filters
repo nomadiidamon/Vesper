@@ -16,6 +16,9 @@
     <Filter Include="src\Vesper">
       <UniqueIdentifier>{71283E35-5DE0-7F82-C6E7-58DEB2BE1A73}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Vesper\App">
+      <UniqueIdentifier>{21E22980-0DB0-1D86-F643-8EACE2B0F9EA}</UniqueIdentifier>
+    </Filter>
     <Filter Include="src\Vesper\Core">
       <UniqueIdentifier>{693B6785-D5C6-D449-DED7-573E4AE2304A}</UniqueIdentifier>
     </Filter>
@@ -28,6 +31,9 @@
     <Filter Include="src\Vesper\ImGui">
       <UniqueIdentifier>{5B6EB932-4767-D884-7099-BD095CF1B790}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Vesper\Input">
+      <UniqueIdentifier>{30A9BA32-1CA2-D984-45D4-BE09312CB990}</UniqueIdentifier>
+    </Filter>
     <Filter Include="src\Vesper\ParticleSystem">
       <UniqueIdentifier>{3926D2C7-A5E8-0552-EE98-94DE5A9ADE2F}</UniqueIdentifier>
     </Filter>
@@ -37,8 +43,8 @@
     <Filter Include="src\Vesper\Scene">
       <UniqueIdentifier>{4E666933-3A5F-8885-6391-6D0A4FE96791}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\Vesper\Time">
-      <UniqueIdentifier>{AF737085-1BFF-DD49-2410-613E901A3A4A}</UniqueIdentifier>
+    <Filter Include="src\Vesper\Utils">
+      <UniqueIdentifier>{91FA9633-7DF3-B585-A625-9B0A927D9591}</UniqueIdentifier>
     </Filter>
     <Filter Include="vendor">
       <UniqueIdentifier>{B3738122-9F15-ACF8-88D0-BF4C74113349}</UniqueIdentifier>
@@ -93,7 +99,22 @@
     <ClInclude Include="src\Vesper.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="src\Vesper\Core\Application.h">
+    <ClInclude Include="src\Vesper\App\Application.h">
+      <Filter>src\Vesper\App</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vesper\App\EntryPoint.h">
+      <Filter>src\Vesper\App</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vesper\App\Layer.h">
+      <Filter>src\Vesper\App</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vesper\App\LayerStack.h">
+      <Filter>src\Vesper\App</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vesper\App\Window.h">
+      <Filter>src\Vesper\App</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vesper\Core\Asserts.h">
       <Filter>src\Vesper\Core</Filter>
     </ClInclude>
     <ClInclude Include="src\Vesper\Core\Base.h">
@@ -105,34 +126,22 @@
     <ClInclude Include="src\Vesper\Core\Config.h">
       <Filter>src\Vesper\Core</Filter>
     </ClInclude>
-    <ClInclude Include="src\Vesper\Core\EntryPoint.h">
-      <Filter>src\Vesper\Core</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Vesper\Core\Input.h">
-      <Filter>src\Vesper\Core</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Vesper\Core\KeyCodes.h">
-      <Filter>src\Vesper\Core</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Vesper\Core\Layer.h">
-      <Filter>src\Vesper\Core</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Vesper\Core\LayerStack.h">
+    <ClInclude Include="src\Vesper\Core\Defines_Macros.h">
       <Filter>src\Vesper\Core</Filter>
     </ClInclude>
     <ClInclude Include="src\Vesper\Core\Log.h">
       <Filter>src\Vesper\Core</Filter>
     </ClInclude>
-    <ClInclude Include="src\Vesper\Core\MouseButtonCodes.h">
+    <ClInclude Include="src\Vesper\Core\PlatformDetection.h">
       <Filter>src\Vesper\Core</Filter>
     </ClInclude>
     <ClInclude Include="src\Vesper\Core\Random.h">
       <Filter>src\Vesper\Core</Filter>
     </ClInclude>
-    <ClInclude Include="src\Vesper\Core\Timestep.h">
+    <ClInclude Include="src\Vesper\Core\Timer.h">
       <Filter>src\Vesper\Core</Filter>
     </ClInclude>
-    <ClInclude Include="src\Vesper\Core\Window.h">
+    <ClInclude Include="src\Vesper\Core\Timestep.h">
       <Filter>src\Vesper\Core</Filter>
     </ClInclude>
     <ClInclude Include="src\Vesper\Debug\Instrumentor.h">
@@ -155,6 +164,15 @@
     </ClInclude>
     <ClInclude Include="src\Vesper\ImGui\VesperImGui.h">
       <Filter>src\Vesper\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vesper\Input\Input.h">
+      <Filter>src\Vesper\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vesper\Input\KeyCodes.h">
+      <Filter>src\Vesper\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vesper\Input\MouseButtonCodes.h">
+      <Filter>src\Vesper\Input</Filter>
     </ClInclude>
     <ClInclude Include="src\Vesper\ParticleSystem\ParticleSystem.h">
       <Filter>src\Vesper\ParticleSystem</Filter>
@@ -219,8 +237,8 @@
     <ClInclude Include="src\Vesper\Scene\ScriptableEntity.h">
       <Filter>src\Vesper\Scene</Filter>
     </ClInclude>
-    <ClInclude Include="src\Vesper\Time\Timer.h">
-      <Filter>src\Vesper\Time</Filter>
+    <ClInclude Include="src\Vesper\Utils\PlatformUtils.h">
+      <Filter>src\Vesper\Utils</Filter>
     </ClInclude>
     <ClInclude Include="src\vzpch.h">
       <Filter>src</Filter>
@@ -1511,17 +1529,20 @@
     <ClCompile Include="src\Platform\Windows\WindowsInput.cpp">
       <Filter>src\Platform\Windows</Filter>
     </ClCompile>
+    <ClCompile Include="src\Platform\Windows\WindowsPlatformUtils.cpp">
+      <Filter>src\Platform\Windows</Filter>
+    </ClCompile>
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
       <Filter>src\Platform\Windows</Filter>
     </ClCompile>
-    <ClCompile Include="src\Vesper\Core\Application.cpp">
-      <Filter>src\Vesper\Core</Filter>
+    <ClCompile Include="src\Vesper\App\Application.cpp">
+      <Filter>src\Vesper\App</Filter>
     </ClCompile>
-    <ClCompile Include="src\Vesper\Core\Layer.cpp">
-      <Filter>src\Vesper\Core</Filter>
+    <ClCompile Include="src\Vesper\App\Layer.cpp">
+      <Filter>src\Vesper\App</Filter>
     </ClCompile>
-    <ClCompile Include="src\Vesper\Core\LayerStack.cpp">
-      <Filter>src\Vesper\Core</Filter>
+    <ClCompile Include="src\Vesper\App\LayerStack.cpp">
+      <Filter>src\Vesper\App</Filter>
     </ClCompile>
     <ClCompile Include="src\Vesper\Core\Log.cpp">
       <Filter>src\Vesper\Core</Filter>

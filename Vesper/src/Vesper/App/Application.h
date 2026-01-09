@@ -1,7 +1,7 @@
 #pragma once
-#include "Base.h"
+#include "../Core/Base.h"
 #include "Window.h"
-#include "Vesper/Core/LayerStack.h"
+#include "Vesper/App/LayerStack.h"
 #include "Vesper/Events/Event.h"
 #include "Vesper/Events/ApplicationEvent.h"
 #include "Vesper/Core/Timestep.h"

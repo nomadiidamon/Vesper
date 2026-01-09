@@ -206,7 +206,8 @@ project "Vesper-Editor"
 
 		defines
 		{
-			"VZ_PLATFORM_WINDOWS"
+			"VZ_PLATFORM_WINDOWS",
+			"VZ_EDITOR_USE_DEFAULT_SCENE"
 		}
 
 		filter "configurations:Debug"

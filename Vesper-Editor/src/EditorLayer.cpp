@@ -27,6 +27,8 @@ static const char* s_MapTiles =
 // P - Plant - SpriteSheetCursedLands -> subTexture { 0, 1.875 }, { 128, 128 }, { 1, 1 }
 
 
+
+
 namespace Vesper {
 
 
@@ -101,10 +103,6 @@ namespace Vesper {
 			auto& pos = m_CameraEntity.GetComponent<TransformComponent>().Translation;
 			pos.x += 1.25f;
 			pos.z += 5.0f;
-
-			m_SecondaryCameraEntity = m_ActiveScene->CreateEntity("Secondary Camera Entity");
-			auto& cc = m_SecondaryCameraEntity.AddComponent<CameraComponent>().Primary = false;
-			m_SecondaryCameraEntity.GetComponent<TransformComponent>();
 
 			auto fbSpec = m_Framebuffer->GetSpecification();
 			m_ActiveScene->OnViewportResize(fbSpec.Width, fbSpec.Height);
@@ -199,8 +197,15 @@ namespace Vesper {
 			m_SceneHierarchyPanel.SetContext(m_ActiveScene);
 
 			SceneSerializer serializer(m_ActiveScene);
-			serializer.Deserialize("assets/scenes/Example.vesper");
-			VZ_CORE_INFO("Scene serialized to assets/scenes/Example.vesper");
+
+			if (VZ_EDITOR_USE_DEFAULT_SCENE) {
+
+				bool valid = serializer.Deserialize(VZ_EDITOR_DEFAULT_SCENE);
+				if (!valid) {
+					VZ_CORE_ERROR("Failed to deserialize the scene!");
+					VZ_CORE_ERROR(VZ_EDITOR_DEFAULT_SCENE);
+				}
+			}
 		}
 
 
@@ -240,11 +245,13 @@ namespace Vesper {
 		}
 
 
+		// Draw
 		{
 			static float rotation = 0.0f;
 			rotation += ts * 50.0f;
 			VZ_PROFILE_SCOPE("Renderer2D Draw");
 
+			// Basic scene
 			if (scene1)
 			{
 				VZ_PROFILE_SCOPE("Scene 1");
@@ -281,6 +288,7 @@ namespace Vesper {
 
 			}
 
+			// Sprite sheet scene
 			if (scene2)
 			{
 				VZ_PROFILE_SCOPE("Scene 2");
@@ -314,6 +322,7 @@ namespace Vesper {
 				Renderer2D::EndScene();
 			}
 
+			// Tile map scene
 			if (scene3)
 			{
 				VZ_PROFILE_SCOPE("Scene 3");
@@ -336,6 +345,7 @@ namespace Vesper {
 				Renderer2D::EndScene();
 			}
 
+			// Particle scene
 			if (scene4)
 			{
 				VZ_PROFILE_SCOPE("Scene 4");
