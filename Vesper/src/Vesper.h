@@ -12,7 +12,8 @@
 #include "Vesper/Core/Random.h"
 #include "Vesper/Core/Color.h"
 #include "Vesper/Core/Timestep.h"
-#include "Vesper/Core/Timer.h"		
+#include "Vesper/Core/Timer.h"	
+#include "Vesper/Core/Math.h"
 
 #include "Vesper/Input/Input.h"							
 //#include "Vesper/Input/InputContext.h"				/// TODO: Input Context class

@@ -6,6 +6,7 @@
 #include "Vesper/ParticleSystem/ParticleSystem.h"
 #include "Vesper/Scene/Scene.h"
 #include "Panels/SceneHierarchyPanel.h"
+#include "Renderer/EditorCamera.h"
 
 namespace Vesper {
 
@@ -29,20 +30,31 @@ namespace Vesper {
 		void SaveSceneAs();
 		void ResetScene();
 	private:
-		float lastFrameTime = 0.0f;
 		SceneHierarchyPanel m_SceneHierarchyPanel;
+		
 		Ref<Scene> m_ActiveScene;
+		Ref<Scene> m_EditorScene;
+
+		enum class SceneState
+		{
+			Edit = 0, Play = 1, Simulate = 2
+		};
+		SceneState m_SceneState = SceneState::Edit;
+
 		bool m_ViewportFocused = false, m_ViewportHovered = false;
 		glm::vec2 m_ViewportSize = {0,0};
 		glm::vec2 m_ViewportBounds[2] = { {0,0}, {0,0} };
 		bool m_PrimaryCamera = true;
 		Entity m_CameraEntity;
-		Entity m_SecondaryCameraEntity;
+		//Entity m_SecondaryCameraEntity;
+		int m_GizmoType = -1;
+		float m_TranslationSnap = 0.5f, m_RotationSnap = 45.0f, m_ScaleSnap = 0.5f;
 		
 		OrthographicCameraController m_CameraController;
 
-
+		float lastFrameTime = 0.0f;
 		Entity m_FireEntity, m_SmokeEntity;
+
 		// Temp
 		Ref<VertexArray> m_SquareVA;
 		Ref<Shader> m_FlatColorShader;
@@ -63,6 +75,8 @@ namespace Vesper {
 		//Ref<SubTexture2D> m_SubTexturePlant;
 
 		Ref<Framebuffer> m_Framebuffer;
+
+		EditorCamera m_EditorCamera;
 
 		float m_textureScale = 1.0f;
 		float m_squareRotation = 25.0f;

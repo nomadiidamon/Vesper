@@ -4,6 +4,7 @@
 #include "Vesper/Renderer/Renderer2D.h"
 #include "Vesper/Scene/Entity.h"
 #include "Vesper/Scene/ScriptableEntity.h"
+#include "Vesper/Renderer/EditorCamera.h"
 
 namespace Vesper {
 
@@ -164,6 +165,39 @@ namespace Vesper {
 			if (!cameraComponent.FixedAspectRatio)
 				cameraComponent.Camera.SetViewportSize(width, height);
 		}
+	}
+
+	Entity Scene::GetPrimaryCameraEntity()
+	{
+		auto view = m_Registry.view<CameraComponent>();
+		for (auto entity : view) {
+
+			const auto& camera = view.get<CameraComponent>(entity);
+			if (camera.Primary)
+				return Entity{ entity, this };
+		}
+		return {};
+	}
+
+
+	void Scene::RenderScene(EditorCamera& camera)
+	{
+		Renderer2D::BeginScene(camera);
+
+		// Draw sprites
+		{
+			auto group = m_Registry.group<TransformComponent>(entt::get<SpriteRendererComponent>);
+			for (auto entity : group)
+			{
+				auto [transform, sprite] = group.get<TransformComponent, SpriteRendererComponent>(entity);
+
+				//Renderer2D::DrawSprite(transform.GetTransform(), sprite, (int)entity);
+			}
+		}
+
+
+
+		Renderer2D::EndScene();
 	}
 
 	template<typename T>

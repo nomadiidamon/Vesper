@@ -13,3 +13,6 @@
 [submodule "Vesper/vendor/yaml-cpp"]
 	path = Vesper/vendor/yaml-cpp
 	url = https://github.com/thecherno/yaml-cpp
+[submodule "Vesper/vendor/ImGuizmo"]
+	path = Vesper/vendor/ImGuizmo
+	url = https://github.com/nomadiidamon/ImGuizmo

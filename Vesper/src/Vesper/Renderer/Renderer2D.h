@@ -6,8 +6,11 @@
 #include "Vesper/Renderer/SubTexture2D.h"
 
 #include "Vesper/Renderer/Camera.h"
+#include "Vesper/Renderer/EditorCamera.h"
+#include "Vesper/Scene/Components.h"
 
 namespace Vesper {
+
 
 	class Renderer2D
 	{
@@ -16,6 +19,7 @@ namespace Vesper {
 		static void Shutdown();
 
 		static void BeginScene(const Camera& camera, const glm::mat4& transform); 
+		static void BeginScene(const EditorCamera& camera);
 		static void BeginScene(const OrthographicCamera& camera); // TODO: Remove once we have a proper scene system
 		static void EndScene();
 		static void Flush();
@@ -45,6 +49,9 @@ namespace Vesper {
 		static void DrawQuadRotatedWithTexture(const glm::vec2& position, const glm::vec2& size, const Ref<SubTexture2D>& subtexture, float rotationRads, float tilingFactor, const glm::vec4 tintColor);
 		static void DrawQuadRotatedWithTexture(const glm::vec3& position, const glm::vec2& size, const Ref<SubTexture2D>& subtexture, float rotationRads, float tilingFactor, const glm::vec4 tintColor);
 
+		//static void DrawSprite(const glm::mat4& transform, const SpriteRendererComponent& src, int entityID);
+		//static void DrawSprite(const glm::mat4& transform, const SubTextureComponent& stc, int entityID);
+
 		static Ref<Texture2D> GetWhiteTexture();
 
 		struct Statistics {
@@ -58,6 +65,7 @@ namespace Vesper {
 
 	private:
 		static void FlushAndReset();
+		static void StartBatch();
 	};
 
 }

@@ -1,6 +1,7 @@
 #include "vzpch.h"
 #include "Renderer2D.h"
 
+#include "UniformBuffer.h"
 #include "VertexArray.h"
 #include "Shader.h"
 #include "RenderCommand.h"
@@ -39,6 +40,12 @@ namespace Vesper {
 		glm::vec4 QuadVertexPositions[4];
 		Renderer2D::Statistics Stats;
 
+		struct CameraData
+		{
+			glm::mat4 ViewProjection;
+		};
+		CameraData CameraBuffer;
+		Ref<UniformBuffer> CameraUniformBuffer;
 
 	};
 
@@ -128,6 +135,16 @@ namespace Vesper {
 		s_Data.TextureSlotIndex = 1;
 	}
 
+	void Renderer2D::BeginScene(const EditorCamera& camera)
+	{
+		VZ_PROFILE_FUNCTION();
+
+		s_Data.CameraBuffer.ViewProjection = camera.GetViewProjection();
+		s_Data.CameraUniformBuffer->SetData(&s_Data.CameraBuffer, sizeof(Renderer2DData::CameraData));
+
+		StartBatch();
+	}
+
 	void Renderer2D::BeginScene(const OrthographicCamera& camera)
 	{
 		VZ_PROFILE_FUNCTION();
@@ -160,7 +177,7 @@ namespace Vesper {
 		s_Data.Stats.DrawCalls++;
 	}
 
-	void Renderer2D::DrawQuad(const glm::mat4& transform, const glm::vec4& color) 
+	void Renderer2D::DrawQuad(const glm::mat4& transform, const glm::vec4& color)
 	{
 		VZ_PROFILE_FUNCTION();
 		constexpr size_t quadVertexCount = 4;
@@ -254,7 +271,7 @@ namespace Vesper {
 		DrawQuadWithTexture(transform, texture, tilingFactor, tintColor);
 	}
 
-	void Renderer2D::DrawQuadWithTexture(const glm::mat4& transform, const Ref<SubTexture2D>& subtexture, float tilingFactor, const glm::vec4 tintColor) 
+	void Renderer2D::DrawQuadWithTexture(const glm::mat4& transform, const Ref<SubTexture2D>& subtexture, float tilingFactor, const glm::vec4 tintColor)
 	{
 		VZ_PROFILE_FUNCTION();
 
@@ -455,6 +472,23 @@ namespace Vesper {
 		DrawQuadRotatedWithTexture(transform, subtexture, tilingFactor, tintColor);
 	}
 
+	//void Renderer2D::DrawSprite(const glm::mat4& transform, const SpriteRendererComponent& src, int entityID)
+	//{
+	//	if (src.TextureEnabled && src.Texture)
+	//	{
+	//		DrawQuadWithTexture(transform, src.Texture, src.TilingFactor, src.Color);
+	//	}
+	//	else
+	//	{
+	//		DrawQuad(transform, src.Color);
+	//	}
+	//}
+
+	//void Renderer2D::DrawSprite(const glm::mat4& transform, const SubTextureComponent& stc, int entityID)
+	//{
+	//	DrawQuadWithTexture(transform, stc.SubTexture, stc.TilingFactor.x, glm::vec4(1.0f));
+	//}
+
 	Ref<Texture2D> Renderer2D::GetWhiteTexture()
 	{
 		return s_Data.WhiteTexture;
@@ -476,6 +510,25 @@ namespace Vesper {
 		s_Data.QuadIndexCount = 0;
 		s_Data.QuadVertexBufferPtr = s_Data.QuadVertexBufferBase;
 		s_Data.TextureSlotIndex = 1;
+	}
+
+	void Renderer2D::StartBatch()
+	{
+
+		s_Data.QuadIndexCount = 0;
+		s_Data.QuadVertexBufferPtr = s_Data.QuadVertexBufferBase;
+
+		//s_Data.CircleIndexCount = 0;
+		//s_Data.CircleVertexBufferPtr = s_Data.CircleVertexBufferBase;
+
+		//s_Data.LineVertexCount = 0;
+		//s_Data.LineVertexBufferPtr = s_Data.LineVertexBufferBase;
+
+		//s_Data.TextIndexCount = 0;
+		//s_Data.TextVertexBufferPtr = s_Data.TextVertexBufferBase;
+
+		s_Data.TextureSlotIndex = 1;
+
 	}
 
 

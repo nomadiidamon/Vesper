@@ -1,6 +1,8 @@
 #include <Vesper/ImGui/VesperImGui.h>
+#include <ImGuizmo.h>
 #include <Vesper/Utils/PlatformUtils.h>
 
+#include "Vesper/Core/Math.h"
 #include "EditorLayer.h"
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
@@ -91,12 +93,12 @@ namespace Vesper {
 
 		// Scene setup
 		{
-			m_CameraController.SetZoomLevel(5.5f);
+			//m_CameraController.SetZoomLevel(5.5f);
 			m_ActiveScene = CreateRef<Scene>();
 
 #if 0
-
 			m_CameraEntity = m_ActiveScene->CreateEntity("Primary Camera Entity");
+
 			auto& pCam = m_CameraEntity.AddComponent<CameraComponent>();
 			pCam.Primary = true;
 			pCam.Camera.SetPerspective(glm::radians(45.0f), 0.1f, 1000.0f);
@@ -206,6 +208,7 @@ namespace Vesper {
 					VZ_CORE_ERROR(VZ_EDITOR_DEFAULT_SCENE);
 				}
 			}
+			//m_EditorCamera = EditorCamera(30.0f, 1.778f, 0.1f, 1000.0f);
 		}
 
 
@@ -234,6 +237,8 @@ namespace Vesper {
 		// Update
 		if (m_ViewportFocused)
 			m_CameraController.OnUpdate(ts);
+
+		m_EditorCamera.OnUpdate(ts);
 
 		// Render
 		Renderer2D::ResetStats();
@@ -557,7 +562,7 @@ namespace Vesper {
 			ImGui::Begin("Viewport");
 			m_ViewportFocused = ImGui::IsWindowFocused();
 			m_ViewportHovered = ImGui::IsWindowHovered();
-			Application::Get().GetImGuiLayer()->SetBlockEvents(!m_ViewportFocused || !m_ViewportHovered);
+			Application::Get().GetImGuiLayer()->SetBlockEvents(!m_ViewportFocused && !m_ViewportHovered);
 
 			ImVec2 viewportPanelSize = ImGui::GetContentRegionAvail();
 			if (m_ViewportSize != *((glm::vec2*)&viewportPanelSize) && viewportPanelSize.x > 0.0f && viewportPanelSize.y > 0)
@@ -575,6 +580,52 @@ namespace Vesper {
 
 			uint32_t textureID = m_Framebuffer->GetColorAttachmentRendererID();
 			ImGui::Image(textureID, ImVec2(m_ViewportSize.x, m_ViewportSize.y), ImVec2(0, 1), ImVec2(1, 0));
+
+			// Gizmos
+			Entity selectedEntity = m_SceneHierarchyPanel.GetSelectedEntity();
+			if (selectedEntity && m_GizmoType != -1)
+			{
+				ImGuizmo::SetOrthographic(false);
+				ImGuizmo::SetDrawlist();
+				float windowWidth = (float)ImGui::GetWindowWidth();
+				float windowHeight = (float)ImGui::GetWindowHeight();
+				ImGuizmo::SetRect(ImGui::GetWindowPos().x, ImGui::GetWindowPos().y, windowWidth, windowHeight);
+				
+				// Camera
+				auto cameraEntity = m_ActiveScene->GetPrimaryCameraEntity();
+				const auto& camera = cameraEntity.GetComponent<CameraComponent>().Camera;
+				const glm::mat4& cameraProjection = camera.GetProjection();
+				glm::mat4 cameraView = glm::inverse(cameraEntity.GetComponent<TransformComponent>().GetTransform());
+
+				// Entity Transform
+				auto& tc = selectedEntity.GetComponent<TransformComponent>();
+				glm::mat4 transform = tc.GetTransform();
+
+				// Snapping
+				bool snap = Input::IsKeyPressed(VZ_KEY_LEFT_CONTROL);
+				// use the editor layer snap values
+				float snapValue = m_TranslationSnap;
+				if (m_GizmoType == ImGuizmo::OPERATION::ROTATE)
+					snapValue = m_RotationSnap;
+				else if (m_GizmoType == ImGuizmo::OPERATION::SCALE)
+					snapValue = m_ScaleSnap;
+
+				float snapValues[3] = { snapValue, snapValue, snapValue };
+
+				ImGuizmo::Manipulate(glm::value_ptr(cameraView), glm::value_ptr(cameraProjection),
+					(ImGuizmo::OPERATION)m_GizmoType, ImGuizmo::LOCAL, glm::value_ptr(transform),
+					nullptr, snap ? snapValues : nullptr);
+
+				if (ImGuizmo::IsUsing())
+				{
+					glm::vec3 translation, rotation, scale;
+					Vesper::Math::DecomposeTransform(transform, translation, rotation, scale);
+					tc.Translation = translation;
+					tc.Rotation = rotation;
+					tc.Scale = scale;
+				}
+			}
+
 			ImGui::End();
 			ImGui::PopStyleVar();
 		}
@@ -584,6 +635,9 @@ namespace Vesper {
 	void EditorLayer::OnEvent(Event& e)
 	{
 		m_CameraController.OnEvent(e);
+		//if (m_SceneState == SceneState::Edit) {
+			m_EditorCamera.OnEvent(e);
+		//}
 		
 		EventDispatcher dispatcher(e);
 		dispatcher.Dispatch<KeyPressedEvent>(VZ_BIND_EVENT_FN(EditorLayer::OnKeyPressed));
@@ -600,7 +654,7 @@ namespace Vesper {
 		bool shift = Input::IsKeyPressed(VZ_KEY_LEFT_SHIFT) || Input::IsKeyPressed(VZ_KEY_RIGHT_SHIFT);
 		switch (e.GetKeyCode())
 		{
-
+			// Scene Shortcuts
 		case VZ_KEY_N:
 		
 			if (control)
@@ -621,6 +675,21 @@ namespace Vesper {
 			{
 				SaveSceneAs();
 			}
+			break;
+
+
+			// Gizmo Shortcuts
+		case VZ_KEY_Q:
+			m_GizmoType = -1;
+			break;
+		case VZ_KEY_W:
+			m_GizmoType = ImGuizmo::OPERATION::TRANSLATE;
+			break;
+		case VZ_KEY_E:
+			m_GizmoType = ImGuizmo::OPERATION::ROTATE;
+			break;
+		case VZ_KEY_R:
+			m_GizmoType = ImGuizmo::OPERATION::SCALE;
 			break;
 		}
 		return false;

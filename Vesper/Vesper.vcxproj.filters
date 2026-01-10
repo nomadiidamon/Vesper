@@ -31,6 +31,9 @@
     <Filter Include="src\Vesper\ImGui">
       <UniqueIdentifier>{5B6EB932-4767-D884-7099-BD095CF1B790}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Vesper\ImGuizmo">
+      <UniqueIdentifier>{F1A99EA0-5D0B-7CAE-E678-C26052D9B26D}</UniqueIdentifier>
+    </Filter>
     <Filter Include="src\Vesper\Input">
       <UniqueIdentifier>{30A9BA32-1CA2-D984-45D4-BE09312CB990}</UniqueIdentifier>
     </Filter>
@@ -48,6 +51,9 @@
     </Filter>
     <Filter Include="vendor">
       <UniqueIdentifier>{B3738122-9F15-ACF8-88D0-BF4C74113349}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\ImGuizmo">
+      <UniqueIdentifier>{73BF7F4C-DF4A-ED10-E85B-700554664911}</UniqueIdentifier>
     </Filter>
     <Filter Include="vendor\glm">
       <UniqueIdentifier>{829FC5A8-6E57-07F6-D75E-E051C335A2E6}</UniqueIdentifier>
@@ -242,6 +248,9 @@
     </ClInclude>
     <ClInclude Include="src\vzpch.h">
       <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\ImGuizmo\ImGuizmo.h">
+      <Filter>vendor\ImGuizmo</Filter>
     </ClInclude>
     <ClInclude Include="vendor\glm\glm\common.hpp">
       <Filter>vendor\glm\glm</Filter>
@@ -1553,6 +1562,9 @@
     <ClCompile Include="src\Vesper\ImGui\ImGuiLayer.cpp">
       <Filter>src\Vesper\ImGui</Filter>
     </ClCompile>
+    <ClCompile Include="src\Vesper\ImGuizmo\ImGuizmoBuild.cpp">
+      <Filter>src\Vesper\ImGuizmo</Filter>
+    </ClCompile>
     <ClCompile Include="src\Vesper\ParticleSystem\ParticleSystem.cpp">
       <Filter>src\Vesper\ParticleSystem</Filter>
     </ClCompile>
@@ -1606,6 +1618,9 @@
     </ClCompile>
     <ClCompile Include="src\vzpch.cpp">
       <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\ImGuizmo\ImGuizmo.cpp">
+      <Filter>vendor\ImGuizmo</Filter>
     </ClCompile>
     <ClCompile Include="vendor\stb_image\stb_image.cpp">
       <Filter>vendor\stb_image</Filter>

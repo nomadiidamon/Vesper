@@ -20,6 +20,7 @@ IncludeDir["glm"] = "Vesper/vendor/glm"
 IncludeDir["stb_image"] = "Vesper/vendor/stb_image"
 IncludeDir["entt"] = "Vesper/vendor/entt/include"
 IncludeDir["yaml_cpp"] = "Vesper/vendor/yaml-cpp/include"
+IncludeDir["ImGuizmo"] = "Vesper/vendor/ImGuizmo"
 
 group "Dependencies"
 	include "Vesper/vendor/GLFW"
@@ -49,10 +50,15 @@ project "Vesper"
 		"%{prj.name}/vendor/stb_image/**.h",
 		"%{prj.name}/vendor/stb_image/**.cpp",
 		"Vesper/vendor/glm/glm/**.hpp",
-		"Vesper/vendor/glm/glm/**.inl"
+		"Vesper/vendor/glm/glm/**.inl",
+
+		"Vesper/vendor/ImGuizmo/ImGuizmo.h",
+		"Vesper/vendor/ImGuizmo/ImGuizmo.cpp"
 	}
 
 	filter "files:Vesper/vendor/imgui/backends/**.cpp"
+		flags { "NoPCH" }
+	filter "files:Vesper/vendor/ImGuizmo/ImGuizmo.cpp"
 		flags { "NoPCH" }
 	filter {}
 
@@ -66,7 +72,8 @@ project "Vesper"
 		"%{IncludeDir.glm}",
 		"%{IncludeDir.stb_image}",
 		"%{IncludeDir.entt}",
-		"%{IncludeDir.yaml_cpp}"
+		"%{IncludeDir.yaml_cpp}",
+		"%{IncludeDir.ImGuizmo}"
 	}
 
 	links
@@ -180,8 +187,13 @@ project "Vesper-Editor"
 	files 
 	{
 		"%{prj.name}/src/**.h",
-		"%{prj.name}/src/**.cpp"
+		"%{prj.name}/src/**.cpp",
+		"Vesper/vendor/ImGuizmo/ImGuizmo.h",
 	}
+
+	filter "files:Vesper/vendor/ImGuizmo/ImGuizmo.cpp"
+	flags { "NoPCH" }
+	filter {}
 
 	includedirs
 	{
@@ -191,6 +203,7 @@ project "Vesper-Editor"
 		"Vesper/vendor",
 		"%{IncludeDir.glm}",
 		"%{IncludeDir.entt}",
+		"%{IncludeDir.ImGuizmo}"
 	}
 
 	links

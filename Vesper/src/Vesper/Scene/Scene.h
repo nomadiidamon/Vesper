@@ -3,9 +3,11 @@
 #include "Components.h"
 #include "Vesper/Core/Timestep.h"
 
+
 namespace Vesper {
 
 	class Entity;
+	class EditorCamera;
 
 	class Scene
 	{
@@ -21,10 +23,12 @@ namespace Vesper {
 
 		void OnUpdate(Timestep ts);
 		void OnViewportResize(uint32_t width, uint32_t height);
-
+		Entity GetPrimaryCameraEntity();
 	private:
 		template<typename T>
 		void OnComponentAdded(Entity entity, T& component);
+
+		void RenderScene(EditorCamera& camera);
 	private:
 		std::string m_Name;
 		entt::registry m_Registry;
