@@ -6,28 +6,27 @@
 #include "Vesper/Events/KeyEvent.h"
 #include "Vesper/Events/MouseEvent.h"
 #include "Vesper/App/Layer.h"
+#include "Vesper/ImGui/ImGuiLayer.h"
 
 namespace Vesper {
 
-	class VESPER_API ImGuiLayer : public Layer
+	class VESPER_API OpenGLImGuiLayer : public ImGuiLayer
 	{
 	public:
-		ImGuiLayer();
-		~ImGuiLayer();
+		OpenGLImGuiLayer();
+		~OpenGLImGuiLayer();
 
 		virtual void OnAttach() override;
 		virtual void OnDetach() override;
 		virtual void OnImGuiRender() override;
 		virtual void OnEvent(Event& e) override;
 
-		virtual void Begin();
-		virtual void End();
+		virtual void Begin() override;
+		virtual void End() override;
 
 		virtual void SetBlockEvents(bool block) { m_BlockEvents = block; }
-		virtual void SetDarkThemeColors();
-	protected:
-		bool m_BlockEvents = true;
-		float m_Time = 0.0f;
+		virtual void SetDarkThemeColors() override;
+
 	};
 
 }

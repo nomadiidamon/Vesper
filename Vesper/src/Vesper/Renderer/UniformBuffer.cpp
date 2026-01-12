@@ -2,7 +2,7 @@
 #include "UniformBuffer.h"
 
 #include "Vesper/Renderer/Renderer.h"
-#include "Platform/OpenGL/OpenGLUniformBuffer.h"
+#include "RenderAPI/OpenGL/OpenGLUniformBuffer.h"
 
 namespace Vesper {
 

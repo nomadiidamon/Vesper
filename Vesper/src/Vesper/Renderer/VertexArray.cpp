@@ -1,7 +1,7 @@
 #include "vzpch.h"
 #include "VertexArray.h"
 #include "Renderer.h"
-#include "Platform/OpenGL/OpenGLVertexArray.h"
+#include "RenderAPI/OpenGL/OpenGLVertexArray.h"
 
 namespace Vesper {
 	Ref<VertexArray> VertexArray::Create()

@@ -5,7 +5,7 @@
 #include "Vesper/Events/MouseEvent.h"
 #include "Vesper/Events/KeyEvent.h"
 
-#include "Platform/OpenGL/OpenGLContext.h"
+#include "RenderAPI/OpenGL/OpenGLContext.h"
 
 
 namespace Vesper {

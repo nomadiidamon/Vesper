@@ -1,13 +1,6 @@
 #include <Vesper.h>
 #include <Vesper/App/EntryPoint.h>
 
-
-#include "imgui/imgui.h"
-
-#include <glm/gtc/matrix_transform.hpp>
-#include <glm/gtc/type_ptr.hpp>
-#include "Platform/OpenGL/OpenGLShader.h"
-
 #include "EditorLayer.h"
 
 namespace Vesper {

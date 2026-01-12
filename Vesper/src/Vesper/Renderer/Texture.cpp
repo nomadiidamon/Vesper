@@ -3,7 +3,7 @@
 
 #include "Renderer.h"
 #include <string>
-#include "Platform/OpenGL/OpenGLTexture.h"
+#include "RenderAPI/OpenGL/OpenGLTexture.h"
 
 namespace Vesper {
 

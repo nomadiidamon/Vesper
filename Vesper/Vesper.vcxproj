@@ -146,16 +146,17 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="src\Platform\OpenGL\OpenGLUniformBuffer.h" />
+    <ClInclude Include="src\RenderAPI\OpenGL\OpenGLImGuiLayer.h" />
+    <ClInclude Include="src\RenderAPI\OpenGL\OpenGLUniformBuffer.h" />
     <ClInclude Include="src\Vesper\Core\Math.h" />
     <ClInclude Include="src\Vesper\Renderer\EditorCamera.h" />
-    <ClInclude Include="src\Platform\OpenGL\OpenGLBuffer.h" />
-    <ClInclude Include="src\Platform\OpenGL\OpenGLContext.h" />
-    <ClInclude Include="src\Platform\OpenGL\OpenGLFramebuffer.h" />
-    <ClInclude Include="src\Platform\OpenGL\OpenGLRendererAPI.h" />
-    <ClInclude Include="src\Platform\OpenGL\OpenGLShader.h" />
-    <ClInclude Include="src\Platform\OpenGL\OpenGLTexture.h" />
-    <ClInclude Include="src\Platform\OpenGL\OpenGLVertexArray.h" />
+    <ClInclude Include="src\RenderAPI\OpenGL\OpenGLBuffer.h" />
+    <ClInclude Include="src\RenderAPI\OpenGL\OpenGLContext.h" />
+    <ClInclude Include="src\RenderAPI\OpenGL\OpenGLFramebuffer.h" />
+    <ClInclude Include="src\RenderAPI\OpenGL\OpenGLRendererAPI.h" />
+    <ClInclude Include="src\RenderAPI\OpenGL\OpenGLShader.h" />
+    <ClInclude Include="src\RenderAPI\OpenGL\OpenGLTexture.h" />
+    <ClInclude Include="src\RenderAPI\OpenGL\OpenGLVertexArray.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\Vesper.h" />
     <ClInclude Include="src\Vesper\App\Application.h" />
@@ -630,14 +631,15 @@
     <ClInclude Include="vendor\stb_image\stb_image.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Platform\OpenGL\OpenGLBuffer.cpp" />
-    <ClCompile Include="src\Platform\OpenGL\OpenGLContext.cpp" />
-    <ClCompile Include="src\Platform\OpenGL\OpenGLFramebuffer.cpp" />
-    <ClCompile Include="src\Platform\OpenGL\OpenGLRendererAPI.cpp" />
-    <ClCompile Include="src\Platform\OpenGL\OpenGLShader.cpp" />
-    <ClCompile Include="src\Platform\OpenGL\OpenGLTexture.cpp" />
-    <ClCompile Include="src\Platform\OpenGL\OpenGLUniformBuffer.cpp" />
-    <ClCompile Include="src\Platform\OpenGL\OpenGLVertexArray.cpp" />
+    <ClCompile Include="src\RenderAPI\OpenGL\OpenGLBuffer.cpp" />
+    <ClCompile Include="src\RenderAPI\OpenGL\OpenGLContext.cpp" />
+    <ClCompile Include="src\RenderAPI\OpenGL\OpenGLFramebuffer.cpp" />
+    <ClCompile Include="src\RenderAPI\OpenGL\OpenGLImGuiLayer.cpp" />
+    <ClCompile Include="src\RenderAPI\OpenGL\OpenGLRendererAPI.cpp" />
+    <ClCompile Include="src\RenderAPI\OpenGL\OpenGLShader.cpp" />
+    <ClCompile Include="src\RenderAPI\OpenGL\OpenGLTexture.cpp" />
+    <ClCompile Include="src\RenderAPI\OpenGL\OpenGLUniformBuffer.cpp" />
+    <ClCompile Include="src\RenderAPI\OpenGL\OpenGLVertexArray.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsPlatformUtils.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />

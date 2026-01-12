@@ -2,7 +2,7 @@
 
 #include "Renderer.h"
 #include "RenderCommand.h"
-#include "Platform/OpenGL/OpenGLShader.h"
+#include "RenderAPI/OpenGL/OpenGLShader.h"
 #include "Renderer2D.h"
 
 namespace Vesper {

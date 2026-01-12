@@ -86,6 +86,7 @@ namespace Vesper
 		glm::vec4& GetColor() { return Color; }
 
 		bool TextureEnabled = false;
+		bool Billboard = false;
 	};
 
 	struct SubTextureComponent
