@@ -208,7 +208,7 @@ namespace Vesper {
 					VZ_CORE_ERROR(VZ_EDITOR_DEFAULT_SCENE);
 				}
 			}
-			//m_EditorCamera = EditorCamera(30.0f, 1.778f, 0.1f, 1000.0f);
+			m_EditorCamera = EditorCamera(30.0f, 1.778f, 0.1f, 1000.0f);
 		}
 
 
@@ -230,15 +230,17 @@ namespace Vesper {
 		{
 			m_Framebuffer->Resize((uint32_t)m_ViewportSize.x, (uint32_t)m_ViewportSize.y);
 			m_CameraController.OnResize(m_ViewportSize.x, m_ViewportSize.y);
-
+			m_EditorCamera.SetViewportSize(m_ViewportSize.x, m_ViewportSize.y);
 			m_ActiveScene->OnViewportResize((uint32_t)m_ViewportSize.x, (uint32_t)m_ViewportSize.y);
 		}
 
 		// Update
 		if (m_ViewportFocused)
+		{
 			m_CameraController.OnUpdate(ts);
+		}
+			m_EditorCamera.OnUpdate(ts);
 
-		m_EditorCamera.OnUpdate(ts);
 
 		// Render
 		Renderer2D::ResetStats();
@@ -256,150 +258,153 @@ namespace Vesper {
 			rotation += ts * 50.0f;
 			VZ_PROFILE_SCOPE("Renderer2D Draw");
 
-			// Basic scene
-			if (scene1)
+			/// C++ test code scenes
 			{
-				VZ_PROFILE_SCOPE("Scene 1");
-				Renderer2D::BeginScene(m_CameraController.GetCamera());
-
-				// Checkerboard background
-				Renderer2D::DrawQuadWithTexture({ 0.0f, 0.0f, -0.25f }, { 25.0f, 25.0f }, m_CheckerboardTexture, 10.0f, m_BackgroundColor);
-
-				// Squares
-				Renderer2D::DrawQuadRotated({ 0.0f, 1.25f, -0.165f }, { 1.0f, 1.0f }, glm::radians(45.0f + m_squareRotation + rotation), m_SquareColor);
-
-				// Rotated Squares
-				Renderer2D::DrawQuadRotatedWithTexture({ 0.0f, 1.25f, -0.15f }, { 0.75f, 0.75f }, m_CheckerboardTexture, glm::radians(m_squareRotation * m_specialQuadRotation * rotation), m_textureScale, m_SpecialQuadColor);
-
-				Renderer2D::DrawQuadRotatedWithTexture({ 2.0f, -0.25f, -0.15f }, { 1.0f, 1.0f }, m_CheckerboardTexture, glm::radians(m_squareRotation + rotation), m_textureScale, m_TextureTintColor1);
-				Renderer2D::DrawQuadRotatedWithTexture({ -2.0f, -0.25f, -0.15f }, { 1.0f, 1.0f }, m_CheckerboardTexture, glm::radians(m_squareRotation + rotation), m_textureScale, m_TextureTintColor2);
-
-				glm::vec3 startPos = { 0.0f, 0.0f, -0.175f };
-				//Renderer2D::DrawQuad(pos, { 0.8f, 0.8f }, { 0.8f, 0.2f, 0.3f, 1.0f });
-				glm::vec3 finalPos = startPos;
-				float offset = 0.9f;
-				for (int y = -10; y <= 10; y++)
+				// Basic scene
+				if (scene1)
 				{
-					for (int x = -10; x <= 10; x++)
+					VZ_PROFILE_SCOPE("Scene 1");
+					Renderer2D::BeginScene(m_CameraController.GetCamera());
+
+					// Checkerboard background
+					Renderer2D::DrawQuadWithTexture({ 0.0f, 0.0f, -0.25f }, { 25.0f, 25.0f }, m_CheckerboardTexture, 10.0f, m_BackgroundColor);
+
+					// Squares
+					Renderer2D::DrawQuadRotated({ 0.0f, 1.25f, -0.165f }, { 1.0f, 1.0f }, glm::radians(45.0f + m_squareRotation + rotation), m_SquareColor);
+
+					// Rotated Squares
+					Renderer2D::DrawQuadRotatedWithTexture({ 0.0f, 1.25f, -0.15f }, { 0.75f, 0.75f }, m_CheckerboardTexture, glm::radians(m_squareRotation * m_specialQuadRotation * rotation), m_textureScale, m_SpecialQuadColor);
+
+					Renderer2D::DrawQuadRotatedWithTexture({ 2.0f, -0.25f, -0.15f }, { 1.0f, 1.0f }, m_CheckerboardTexture, glm::radians(m_squareRotation + rotation), m_textureScale, m_TextureTintColor1);
+					Renderer2D::DrawQuadRotatedWithTexture({ -2.0f, -0.25f, -0.15f }, { 1.0f, 1.0f }, m_CheckerboardTexture, glm::radians(m_squareRotation + rotation), m_textureScale, m_TextureTintColor2);
+
+					glm::vec3 startPos = { 0.0f, 0.0f, -0.175f };
+					//Renderer2D::DrawQuad(pos, { 0.8f, 0.8f }, { 0.8f, 0.2f, 0.3f, 1.0f });
+					glm::vec3 finalPos = startPos;
+					float offset = 0.9f;
+					for (int y = -10; y <= 10; y++)
 					{
-						glm::vec3 newPos = { startPos.x - x * offset, startPos.y - y * offset, startPos.z };
-						Renderer2D::DrawQuad(newPos, { 0.8f, 0.8f }, { (x + 5) / 10.0f, 0.4f, (y + 5) / 10.0f, 1.0f });
-						finalPos = newPos;
+						for (int x = -10; x <= 10; x++)
+						{
+							glm::vec3 newPos = { startPos.x - x * offset, startPos.y - y * offset, startPos.z };
+							Renderer2D::DrawQuad(newPos, { 0.8f, 0.8f }, { (x + 5) / 10.0f, 0.4f, (y + 5) / 10.0f, 1.0f });
+							finalPos = newPos;
+						}
 					}
+					Renderer2D::DrawQuad(finalPos, { 0.8f, 0.8f }, { 0.8f, 0.2f, 0.3f, 1.0f });
+
+					Renderer2D::EndScene();
+
 				}
-				Renderer2D::DrawQuad(finalPos, { 0.8f, 0.8f }, { 0.8f, 0.2f, 0.3f, 1.0f });
 
-				Renderer2D::EndScene();
-
-			}
-
-			// Sprite sheet scene
-			if (scene2)
-			{
-				VZ_PROFILE_SCOPE("Scene 2");
-
-				Renderer2D::BeginScene(m_CameraController.GetCamera());
-
-				// Sprite sheet drawn as full texture
-				Renderer2D::DrawQuadWithTexture({ -1.0f, 1.5f, 0.5f }, { 1, 1 }, m_SpriteSheetFire, 1.0f, { 1.0f, 1.0f, 1.0f, 1.0f });
-				Renderer2D::DrawQuadRotatedWithTexture({ 1.5f, 0.0f, 0.0f }, { 1.78f, 1.0f }, m_SpriteSheetTown, 0, 1.0f, { 1.0f, 1.0f, 1.0f, 1.0f });
-
-
-				// Sprite sheet drawn as full texture rotated
-				Renderer2D::DrawQuadRotatedWithTexture({ -1.5f, 0.0f, 0.0f }, { 1.78f, 1.0f }, m_SpriteSheetTown, glm::radians(-rotation), 1.0f, { 1.0f, 1.0f, 1.0f, 1.0f });
-
-				// Sub texture from tilesheet
-				Renderer2D::DrawQuadWithTexture({ 2.0f, -1.5f, 0.0f }, { 1.0f, 1.0f }, m_SubTextureTown, 1.0f, { 1.0f, 1.0f, 1.0f, 1.0f });
-
-				// Grid of sub textures from tilesheet
-				for (int y = -5; y < 5; y++)
+				// Sprite sheet scene
+				if (scene2)
 				{
-					for (int x = -5; x < 5; x++)
+					VZ_PROFILE_SCOPE("Scene 2");
+
+					Renderer2D::BeginScene(m_CameraController.GetCamera());
+
+					// Sprite sheet drawn as full texture
+					Renderer2D::DrawQuadWithTexture({ -1.0f, 1.5f, 0.5f }, { 1, 1 }, m_SpriteSheetFire, 1.0f, { 1.0f, 1.0f, 1.0f, 1.0f });
+					Renderer2D::DrawQuadRotatedWithTexture({ 1.5f, 0.0f, 0.0f }, { 1.78f, 1.0f }, m_SpriteSheetTown, 0, 1.0f, { 1.0f, 1.0f, 1.0f, 1.0f });
+
+
+					// Sprite sheet drawn as full texture rotated
+					Renderer2D::DrawQuadRotatedWithTexture({ -1.5f, 0.0f, 0.0f }, { 1.78f, 1.0f }, m_SpriteSheetTown, glm::radians(-rotation), 1.0f, { 1.0f, 1.0f, 1.0f, 1.0f });
+
+					// Sub texture from tilesheet
+					Renderer2D::DrawQuadWithTexture({ 2.0f, -1.5f, 0.0f }, { 1.0f, 1.0f }, m_SubTextureTown, 1.0f, { 1.0f, 1.0f, 1.0f, 1.0f });
+
+					// Grid of sub textures from tilesheet
+					for (int y = -5; y < 5; y++)
 					{
-						glm::vec3 pos = glm::vec3(x * 0.09f, y * 0.09f, -0.09f);
-						Renderer2D::DrawQuadWithTexture(pos, { 0.1f, 0.1f }, m_SubTextureTown, 1.0f, glm::vec4(1.0f));
+						for (int x = -5; x < 5; x++)
+						{
+							glm::vec3 pos = glm::vec3(x * 0.09f, y * 0.09f, -0.09f);
+							Renderer2D::DrawQuadWithTexture(pos, { 0.1f, 0.1f }, m_SubTextureTown, 1.0f, glm::vec4(1.0f));
+						}
 					}
+
+					/// TODO: get it to animate through texture sheet sub texture indices
+					Renderer2D::DrawQuadRotatedWithTexture({ 0.0f, -1.5f, 0.0f }, { 1.0f, 1.0f }, m_SubTextureFire, 0, 1.0f, { 1.0f, 1.0f, 1.0f, 1.0f });
+
+					Renderer2D::EndScene();
 				}
 
-				/// TODO: get it to animate through texture sheet sub texture indices
-				Renderer2D::DrawQuadRotatedWithTexture({ 0.0f, -1.5f, 0.0f }, { 1.0f, 1.0f }, m_SubTextureFire, 0, 1.0f, { 1.0f, 1.0f, 1.0f, 1.0f });
-
-				Renderer2D::EndScene();
-			}
-
-			// Tile map scene
-			if (scene3)
-			{
-				VZ_PROFILE_SCOPE("Scene 3");
-				Renderer2D::BeginScene(m_CameraController.GetCamera());
-				for (uint32_t y = 0; y < s_MapHeight; y++)
+				// Tile map scene
+				if (scene3)
 				{
-					for (uint32_t x = 0; x < s_MapWidth; x++)
+					VZ_PROFILE_SCOPE("Scene 3");
+					Renderer2D::BeginScene(m_CameraController.GetCamera());
+					for (uint32_t y = 0; y < s_MapHeight; y++)
 					{
-						char tileChar = s_MapTiles[x + y * s_MapWidth];
-						Ref<SubTexture2D> texture;
-						if (s_TextureMap.find(tileChar) != s_TextureMap.end())
-							texture = s_TextureMap[tileChar];
-						else
-							texture = s_TextureMap['G']; // Default to grass
+						for (uint32_t x = 0; x < s_MapWidth; x++)
+						{
+							char tileChar = s_MapTiles[x + y * s_MapWidth];
+							Ref<SubTexture2D> texture;
+							if (s_TextureMap.find(tileChar) != s_TextureMap.end())
+								texture = s_TextureMap[tileChar];
+							else
+								texture = s_TextureMap['G']; // Default to grass
 
-						Renderer2D::DrawQuadWithTexture({ x - s_MapWidth / 2.0f, s_MapHeight - y - s_MapHeight / 2.0f, 0.1f }, { 1.0f, 1.0f }, texture, 1.0f, glm::vec4(1.0f));
+							Renderer2D::DrawQuadWithTexture({ x - s_MapWidth / 2.0f, s_MapHeight - y - s_MapHeight / 2.0f, 0.1f }, { 1.0f, 1.0f }, texture, 1.0f, glm::vec4(1.0f));
 
+						}
 					}
+					Renderer2D::EndScene();
 				}
-				Renderer2D::EndScene();
-			}
 
-			// Particle scene
-			if (scene4)
-			{
-				VZ_PROFILE_SCOPE("Scene 4");
-				Renderer2D::BeginScene(m_CameraController.GetCamera());
-				for (float y = -5.0f; y < 5.0f; y += 0.5f)
+				// Particle scene
+				if (scene4)
 				{
-					for (float x = -5.0f; x < 5.0f; x += 0.5f)
+					VZ_PROFILE_SCOPE("Scene 4");
+					Renderer2D::BeginScene(m_CameraController.GetCamera());
+					for (float y = -5.0f; y < 5.0f; y += 0.5f)
 					{
-						glm::vec4 color = { (x + 5.0f) / 10.0f, 0.4f,(y + 5.0f) / 10.0f, 0.35f };
-						Renderer2D::DrawQuad({ x, y }, { 0.45f, 0.45f }, color);
+						for (float x = -5.0f; x < 5.0f; x += 0.5f)
+						{
+							glm::vec4 color = { (x + 5.0f) / 10.0f, 0.4f,(y + 5.0f) / 10.0f, 0.35f };
+							Renderer2D::DrawQuad({ x, y }, { 0.45f, 0.45f }, color);
+						}
 					}
-				}
 
-				if (Input::IsMouseButtonPressed(VZ_MOUSE_BUTTON_LEFT) && m_ViewportHovered)
-				{
-					ImVec2 mousePos = ImGui::GetMousePos();
+					if (Input::IsMouseButtonPressed(VZ_MOUSE_BUTTON_LEFT) && m_ViewportHovered)
+					{
+						ImVec2 mousePos = ImGui::GetMousePos();
 
-					mousePos.x -= m_ViewportBounds[0].x;
-					mousePos.y -= m_ViewportBounds[0].y;
+						mousePos.x -= m_ViewportBounds[0].x;
+						mousePos.y -= m_ViewportBounds[0].y;
 
-					if (mousePos.x < 0 || mousePos.y < 0 || mousePos.x > m_ViewportSize.x || mousePos.y > m_ViewportSize.y)
-						return;
+						if (mousePos.x < 0 || mousePos.y < 0 || mousePos.x > m_ViewportSize.x || mousePos.y > m_ViewportSize.y)
+							return;
 
-					auto bounds = m_CameraController.GetBounds();
-					auto camPos = m_CameraController.GetPosition();
+						auto bounds = m_CameraController.GetBounds();
+						auto camPos = m_CameraController.GetPosition();
 
-					float width = m_ViewportSize.x;
-					float height = m_ViewportSize.y;
+						float width = m_ViewportSize.x;
+						float height = m_ViewportSize.y;
 
-					m_ParticleProps.Position.x = (mousePos.x / width) * bounds.GetWidth() - bounds.GetWidth() * 0.5f + camPos.x;
-					m_ParticleProps.Position.y = bounds.GetHeight() * 0.5f - (mousePos.y / height) * bounds.GetHeight() + camPos.y;
+						m_ParticleProps.Position.x = (mousePos.x / width) * bounds.GetWidth() - bounds.GetWidth() * 0.5f + camPos.x;
+						m_ParticleProps.Position.y = bounds.GetHeight() * 0.5f - (mousePos.y / height) * bounds.GetHeight() + camPos.y;
 
-					for (int i = 0; i < ParticleEmitCount; i++) {
-						m_ParticleSystem.Emit(m_ParticleProps);
+						for (int i = 0; i < ParticleEmitCount; i++) {
+							m_ParticleSystem.Emit(m_ParticleProps);
+						}
 					}
-				}
-				m_ParticleSystem.OnUpdate(ts);
-				m_ParticleSystem.OnRender(m_CameraController.GetCamera());
-				Renderer2D::EndScene();
+					m_ParticleSystem.OnUpdate(ts);
+					m_ParticleSystem.OnRender(m_CameraController.GetCamera());
+					Renderer2D::EndScene();
 
+				}
 			}
 
 			if (useEntityScene)
 			{
 				VZ_PROFILE_SCOPE("Entity Scene Update");
 				// Update scene
-				m_ActiveScene->OnUpdate(ts);
+					m_ActiveScene->OnUpdateRuntime(ts);
+					m_ActiveScene->OnUpdateEditor(ts, m_EditorCamera);
 			}
-
 		}
 
 		m_Framebuffer->Unbind();
@@ -470,19 +475,19 @@ namespace Vesper {
 
 				if (ImGui::MenuItem("New", "Ctrl+N"))
 					NewScene();
-				
+
 
 				if (ImGui::MenuItem("Open..", "Ctrl+O"))
 					OpenScene();
-				
+
 
 				if (ImGui::MenuItem("Save As..", "Ctrl+Shift+S"))
 					SaveSceneAs();
-				
+
 
 				if (ImGui::MenuItem("Reset Scene"))
 					ResetScene();
-				
+
 
 				if (ImGui::MenuItem("Exit"))
 					Vesper::Application::Get().Close();
@@ -590,12 +595,17 @@ namespace Vesper {
 				float windowWidth = (float)ImGui::GetWindowWidth();
 				float windowHeight = (float)ImGui::GetWindowHeight();
 				ImGuizmo::SetRect(ImGui::GetWindowPos().x, ImGui::GetWindowPos().y, windowWidth, windowHeight);
-				
+
 				// Camera
-				auto cameraEntity = m_ActiveScene->GetPrimaryCameraEntity();
-				const auto& camera = cameraEntity.GetComponent<CameraComponent>().Camera;
-				const glm::mat4& cameraProjection = camera.GetProjection();
-				glm::mat4 cameraView = glm::inverse(cameraEntity.GetComponent<TransformComponent>().GetTransform());
+				// Runtime camera from entity
+				//auto cameraEntity = m_ActiveScene->GetPrimaryCameraEntity();
+				//const auto& camera = cameraEntity.GetComponent<CameraComponent>().Camera;
+				//const glm::mat4& cameraProjection = camera.GetProjection();
+				//glm::mat4 cameraView = glm::inverse(cameraEntity.GetComponent<TransformComponent>().GetTransform());
+
+				// Editor camera
+				const glm::mat4& cameraProjection = m_EditorCamera.GetProjection();
+				glm::mat4 cameraView = m_EditorCamera.GetViewMatrix();
 
 				// Entity Transform
 				auto& tc = selectedEntity.GetComponent<TransformComponent>();
@@ -635,10 +645,10 @@ namespace Vesper {
 	void EditorLayer::OnEvent(Event& e)
 	{
 		m_CameraController.OnEvent(e);
-		//if (m_SceneState == SceneState::Edit) {
+		if (m_SceneState == SceneState::Edit) {
 			m_EditorCamera.OnEvent(e);
-		//}
-		
+		}
+
 		EventDispatcher dispatcher(e);
 		dispatcher.Dispatch<KeyPressedEvent>(VZ_BIND_EVENT_FN(EditorLayer::OnKeyPressed));
 
@@ -656,13 +666,13 @@ namespace Vesper {
 		{
 			// Scene Shortcuts
 		case VZ_KEY_N:
-		
+
 			if (control)
 			{
 				NewScene();
 			}
 			break;
-		
+
 		case VZ_KEY_O:
 			if (control)
 			{

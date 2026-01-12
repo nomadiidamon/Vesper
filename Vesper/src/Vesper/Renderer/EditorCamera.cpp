@@ -56,7 +56,7 @@ namespace Vesper {
 			else if (Input::IsMouseButtonPressed(VZ_MOUSE_BUTTON_LEFT))
 				MouseRotate(delta);
 			else if (Input::IsMouseButtonPressed(VZ_MOUSE_BUTTON_RIGHT))
-				MouseZoom(delta.y);
+				MouseZoom(-delta.y);
 		}
 
 		UpdateView();
@@ -76,7 +76,7 @@ namespace Vesper {
 
 	void EditorCamera::UpdateView()
 	{
-		// m_Yaw = m_Pitch = 0.0f; // Lock the camera's rotation
+		//m_Yaw = m_Pitch = 0.0f; // Lock the camera's rotation
 		m_Position = CalculatePosition();
 
 		glm::quat orientation = GetOrientation();

@@ -21,14 +21,14 @@ namespace Vesper {
 		Entity CreateEntity(const std::string& name, const std::string& uuid);
 		void DestroyEntity(Entity entity);
 
-		void OnUpdate(Timestep ts);
+		void OnUpdateRuntime(Timestep ts);
+		void OnUpdateEditor(Timestep ts, EditorCamera& camera);
 		void OnViewportResize(uint32_t width, uint32_t height);
 		Entity GetPrimaryCameraEntity();
 	private:
 		template<typename T>
 		void OnComponentAdded(Entity entity, T& component);
 
-		void RenderScene(EditorCamera& camera);
 	private:
 		std::string m_Name;
 		entt::registry m_Registry;
@@ -36,6 +36,8 @@ namespace Vesper {
 		friend class Entity;
 		friend class SceneSerializer;
 		friend class SceneHierarchyPanel;
+		/// TODO: friend class SceneCamera;
+		/// TODO: friend class SceneRenderer;
 
 		void SetName(const std::string& name) { m_Name = name; }
 		const std::string& GetName() const { return m_Name; }
