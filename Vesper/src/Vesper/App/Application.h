@@ -5,10 +5,30 @@
 #include "Vesper/Events/Event.h"
 #include "Vesper/Events/ApplicationEvent.h"
 #include "Vesper/Core/Timestep.h"
-
 #include "Vesper/ImGui/ImGuiLayer.h"
 
+#include "Vesper/Renderer/RendererAPI.h"
+
 namespace Vesper {
+
+	enum class WindowMode
+	{
+		Windowed = 0,
+		Fullscreen = 1,
+		Borderless = 2
+	};
+
+	struct ApplicationSettings {
+		std::string ApplicationName = "Vesper Application";
+		std::string WorkingDirectory;
+		RendererAPI::API RendererAPI = RendererAPI::API::OpenGL;
+		uint32_t Width = 1280;
+		uint32_t Height = 720;
+		WindowMode Mode = WindowMode::Windowed;
+		bool EnableImGui = true;
+		bool EnableVSync = false;
+	};
+
 
 	class Application
 	{
@@ -32,7 +52,7 @@ namespace Vesper {
 		bool OnWindowClose(WindowCloseEvent& e);
 		bool OnWindowResize(WindowResizeEvent& e);
 
-		std::unique_ptr<Window> m_Window;
+		Scope<Window> m_Window;
 		ImGuiLayer* m_ImGuiLayer;
 		bool m_Running = true;
 		bool m_Minimized = false;
