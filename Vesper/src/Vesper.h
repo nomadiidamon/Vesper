@@ -35,7 +35,6 @@
 // #include "Vesper/Scene/Systems.h"					/// TODO: Systems class
 // #include "Vesper/Scene/SystemsManager.h"				/// TODO: Static SystemsManager class
 
-
 // -- Renderer-------------------
 #include "Vesper/Renderer/Renderer.h"
 #include "Vesper/Renderer/Renderer2D.h"
@@ -48,6 +47,13 @@
 #include "Vesper/Renderer/SubTexture2D.h"
 #include "Vesper/Renderer/VertexArray.h"
 
+#include "Vesper/Renderer/Camera.h"
+#include "Vesper/Renderer/EditorCamera.h"
 #include "Vesper/Renderer/OrthographicCamera.h"
 #include "Vesper/Renderer/OrthographicCameraController.h"
+
+
+// -- Renderer API----------------
+
+
 

@@ -20,11 +20,10 @@
 
 
 
-
 /// Editor Configurations
 #ifdef VZ_EDITOR_USE_DEFAULT_SCENE 
-#define VZ_EDITOR_DEFAULT_SCENE "../Vesper/src/Vesper/Resources/Scenes/TriColored3DCubeAndSpriteAnims.vesper"
+#define VZ_EDITOR_DEFAULT_SCENE "Resources/Scenes/TriColored3DCubeAndSpriteAnims.vesper"
 #endif
 
-#define VZ_DEFAULT_TEXTURE Texture2D::Create("../Vesper/src/Vesper/Resources/Textures/Checkerboard.png")
+#define VZ_DEFAULT_TEXTURE Texture2D::Create("Resources/Textures/Checkerboard.png")
 

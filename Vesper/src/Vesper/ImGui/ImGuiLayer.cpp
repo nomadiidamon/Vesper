@@ -39,8 +39,8 @@ namespace  Vesper {
 		//io.ConfigFlags |= ImGuiConfigFlags_ViewportsNoTaskBarIcons; // Disable Platform Windows task bar icons
 		//io.ConfigFlags |= ImGuiConfigFlags_ViewportsNoMerge;      // Disable Platform Windows merging into host window
 
-		io.Fonts->AddFontFromFileTTF("assets/fonts/RedHatMono/static/RedHatMono-Bold.ttf", 18.0f);
-		io.FontDefault = io.Fonts->AddFontFromFileTTF("assets/fonts/RedHatMono/static/RedHatMono-Light.ttf", 18.0f);
+		io.Fonts->AddFontFromFileTTF("../../Vesper-Editor/assets/fonts/RedHatMono/static/RedHatMono-Bold.ttf", 18.0f);
+		io.FontDefault = io.Fonts->AddFontFromFileTTF("../../Vesper-Editor/assets/fonts/RedHatMono/static/RedHatMono-Light.ttf", 18.0f);
 
 
 		ImGui::StyleColorsDark();

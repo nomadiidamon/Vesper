@@ -48,13 +48,15 @@ namespace Vesper {
 
 		// Texture / SubTexture setup
 		{
-			m_CheckerboardTexture = Texture2D::Create("assets/textures/Checkerboard.png");
-			m_SpriteSheetFire = Texture2D::Create("assets/textures/sheets/fire_01.png");
-			m_SpriteSheetSmoke = Texture2D::Create("assets/textures/sheets/fire_02.png");
-			m_SpriteSheetTown = Texture2D::Create("assets/textures/sheets/town_tilesheet.png");
-			m_SpriteSheetCrystals = Texture2D::Create("assets/textures/sheets/craftpix/Crystals/Crystals.png");
-			m_SpriteSheetRocks = Texture2D::Create("assets/textures/sheets/craftpix/Rocks/Rocks_source.png");
-			m_SpriteSheetCursedLands = Texture2D::Create("assets/textures/sheets/craftpix/CursedLand/Tiled_files/Objects.png");
+			/// TODO: move to resource manager
+			/// TODO: fix pathing
+			m_CheckerboardTexture = Texture2D::Create("../../Vesper-Editor/assets/textures/Checkerboard.png");
+			m_SpriteSheetFire = Texture2D::Create("../../Vesper-Editor/assets/textures/sheets/fire_01.png");
+			m_SpriteSheetSmoke = Texture2D::Create("../../Vesper-Editor/assets/textures/sheets/fire_02.png");
+			m_SpriteSheetTown = Texture2D::Create("../../Vesper-Editor/assets/textures/sheets/town_tilesheet.png");
+			m_SpriteSheetCrystals = Texture2D::Create("../../Vesper-Editor/assets/textures/sheets/craftpix/Crystals/Crystals.png");
+			m_SpriteSheetRocks = Texture2D::Create("../../Vesper-Editor/assets/textures/sheets/craftpix/Rocks/Rocks_source.png");
+			m_SpriteSheetCursedLands = Texture2D::Create("../../Vesper-Editor/assets/textures/sheets/craftpix/CursedLand/Tiled_files/Objects.png");
 
 			m_SubTextureFire = SubTexture2D::CreateFromCoords(m_SpriteSheetFire, { 1, 0 }, { 128, 127 });
 			m_SubTextureSmoke = SubTexture2D::CreateFromCoords(m_SpriteSheetSmoke, { 1, 0 }, { 128, 127 });
@@ -200,12 +202,22 @@ namespace Vesper {
 
 			SceneSerializer serializer(m_ActiveScene);
 
-			if (VZ_EDITOR_USE_DEFAULT_SCENE) {
+			FileSystem::Initialize();
 
-				bool valid = serializer.Deserialize(VZ_EDITOR_DEFAULT_SCENE);
+			if (VZ_EDITOR_USE_DEFAULT_SCENE) {
+				/// TODO: Get an automatic path to resource that is NOT hardcoded
+				std::string loadedScene = FileSystem::GetAbsolutePath("../../" + std::string(VZ_EDITOR_DEFAULT_SCENE));
+
+				bool valid = serializer.Deserialize(loadedScene);
 				if (!valid) {
-					VZ_CORE_ERROR("Failed to deserialize the scene!");
-					VZ_CORE_ERROR(VZ_EDITOR_DEFAULT_SCENE);
+					VZ_CORE_ERROR("Failed to load default scene: " + loadedScene);
+					VZ_CORE_ERROR("Attempted Scene: " + std::string(VZ_EDITOR_DEFAULT_SCENE));
+					VZ_CORE_ERROR("Current Working Directory: " + FileSystem::GetCurrentWorkingDirectory());
+					VZ_CORE_ERROR("Absolute Path Attempted: " + FileSystem::GetAbsolutePath(loadedScene));
+					VZ_CORE_ERROR("Error loading the scene, please check the paths and file availability.");
+				}
+				else {
+					VZ_CORE_INFO("Successfully loaded the default scene: " + loadedScene);
 				}
 			}
 			m_EditorCamera = EditorCamera(30.0f, 1.778f, 0.1f, 1000.0f);

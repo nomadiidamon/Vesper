@@ -100,7 +100,7 @@ namespace Vesper {
 			samplers[i] = i;
 
 
-		s_Data.TextureShader = Shader::Create("assets/shaders/Texture.glsl");
+		s_Data.TextureShader = Shader::Create("../../Vesper-Editor/assets/shaders/Texture.glsl");
 		s_Data.TextureShader->Bind();
 		s_Data.TextureShader->SetIntArray("u_Textures", samplers, s_Data.MaxTextureSlots);
 

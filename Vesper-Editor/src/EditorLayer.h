@@ -6,7 +6,7 @@
 #include "Vesper/ParticleSystem/ParticleSystem.h"
 #include "Vesper/Scene/Scene.h"
 #include "Panels/SceneHierarchyPanel.h"
-#include "Renderer/EditorCamera.h"
+#include "Vesper/Renderer/EditorCamera.h"
 
 namespace Vesper {
 

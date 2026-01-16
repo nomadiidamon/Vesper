@@ -34,7 +34,7 @@ namespace Vesper {
 			VZ_PROFILE_SCOPE("stbi_load - OpenGLTexture2D::OpenGLTexture2D(const std::string&)");
 			data = stbi_load(path.c_str(), (int*)&width, (int*)&height, &channels, 0);
 		}
-		VZ_CORE_ASSERT(data, "Failed to load image!");
+		VZ_CORE_ASSERT(data, "Failed to load image from: " + path);
 
 		m_Width = width;
 		m_Height = height;

@@ -11,6 +11,8 @@
 
 namespace Vesper {
 
+
+	/// WIP
 	enum class WindowMode
 	{
 		Windowed = 0,
@@ -18,6 +20,7 @@ namespace Vesper {
 		Borderless = 2
 	};
 
+	/// WIP
 	struct ApplicationSettings {
 		std::string ApplicationName = "Vesper Application";
 		std::string WorkingDirectory;
