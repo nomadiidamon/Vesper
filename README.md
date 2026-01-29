@@ -35,17 +35,17 @@ It is generally usable as an easily modifiable base line for creating graphics a
 
 ## Repository layout (high level)
 
-- `Vesper/` — Engine source (core, renderer, scene, editor integration)
-  - `src/Vesper` — engine code
-  - `vendor/` — third-party libs (GLFW, Glad, ImGui)
-- `Vesper-Editor/` — Editor build that hosts engine in an editor UI
-- `Sandbox/` — Example application(s) that use the engine
-- `README.md`, `LICENSE-Hazel_Apache2.txt` — repo metadata and licensing
+- `Vesper/` ï¿½ Engine source (core, renderer, scene, editor integration)
+  - `src/Vesper` ï¿½ engine code
+  - `vendor/` ï¿½ third-party libs (GLFW, Glad, ImGui)
+- `Vesper-Editor/` ï¿½ Editor build that hosts engine in an editor UI
+- `Sandbox/` ï¿½ Example application(s) that use the engine
+- `README.md`, `LICENSE-Hazel_Apache2.txt` ï¿½ repo metadata and licensing
 
 Notable engine files:
-- `Vesper/src/Vesper.h` — single include for engine public API
-- `Vesper/src/Vesper/Scene/*` — Scene, Entity, Components, Camera
-- `Vesper-Editor/src/EditorLayer.*` — Editor integration layer and UI panels
+- `Vesper/src/Vesper.h` ï¿½ single include for engine public API
+- `Vesper/src/Vesper/Scene/*` ï¿½ Scene, Entity, Components, Camera
+- `Vesper-Editor/src/EditorLayer.*` ï¿½ Editor integration layer and UI panels
 
 ## Getting started (clone + third-party libs)
 
@@ -127,6 +127,18 @@ Vesper::Application* Vesper::CreateApplication() {
 }
 ```
 
+## Continuous Integration
+
+This repository includes a GitHub Actions CI workflow that automatically builds the project on Windows using Visual Studio. The workflow:
+
+- Triggers on pushes to `master`, `develop`, and `copilot/**` branches
+- Triggers on pull requests to `master` and `develop` branches
+- Can be manually triggered via GitHub Actions UI
+- Builds in both Debug and Release configurations
+- Uploads Release build artifacts for download
+
+The workflow uses Premake5 to generate Visual Studio solutions and MSBuild to compile the project.
+
 ## Contributing
 
 Please open issues or pull requests. 
@@ -139,7 +151,7 @@ Please open issues or pull requests.
 > **License status:** Proprietary (subject to change)
 
 Vesper itself is not **currently** released under any specific license and is provided as-is.
-Copyright © 2025 by Damon S. Green II (nomad_ii_damon).
+Copyright ï¿½ 2025 by Damon S. Green II (nomad_ii_damon).
 All rights reserved unless otherwise stated.
 
 This project contains code derived from the Hazel Engine
@@ -148,14 +160,14 @@ obtained through public tutorialization and source code access.
 
 Original Hazel code and derivative works thereof are licensed
 under the Apache License 2.0. Other original code in this repository
-is Copyright © 2025 Damon S. Green II (nomad_ii_damon).
+is Copyright ï¿½ 2025 Damon S. Green II (nomad_ii_damon).
 
 See the LICENSE file for details.
 
 
 #### Fully-Modified File Header for Licensing
-Copyright © TheCherno
-Modifications Copyright © 2025 Damon S. Green II (nomad_ii_damon)
+Copyright ï¿½ TheCherno
+Modifications Copyright ï¿½ 2025 Damon S. Green II (nomad_ii_damon)
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
