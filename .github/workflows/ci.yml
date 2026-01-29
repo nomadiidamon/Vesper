@@ -38,21 +38,10 @@ jobs:
       if: matrix.configuration == 'Release'
       uses: actions/upload-artifact@v4
       with:
-        name: Vesper-${{ matrix.configuration }}-${{ github.sha }}
+        name: Vesper-Release-${{ github.ref_name }}-${{ github.run_number }}
         path: |
           bin/${{ matrix.configuration }}-windows-x64/**
           !bin/${{ matrix.configuration }}-windows-x64/**/*.pdb
           !bin/${{ matrix.configuration }}-windows-x64/**/*.exp
           !bin/${{ matrix.configuration }}-windows-x64/**/*.lib
         retention-days: 30
-
-  build-info:
-    runs-on: ubuntu-latest
-    needs: build-windows
-    
-    steps:
-    - name: Build Status
-      run: |
-        echo "✅ Build completed successfully!"
-        echo "Configuration: ${{ matrix.configuration }}"
-        echo "Commit: ${{ github.sha }}"
