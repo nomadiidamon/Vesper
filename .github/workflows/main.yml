@@ -3,6 +3,7 @@ name: Deploy Doxygen Docs
 on:
   push:
     branches: [ docs ]
+  workflow_dispatch:
 
 permissions:
   contents: read
