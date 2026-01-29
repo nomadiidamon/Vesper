@@ -1,0 +1,474 @@
+\doxysection{Vesper::\+Scene\+Hierarchy\+Panel Class Reference}
+\hypertarget{class_vesper_1_1_scene_hierarchy_panel}{}\label{class_vesper_1_1_scene_hierarchy_panel}\index{Vesper::SceneHierarchyPanel@{Vesper::SceneHierarchyPanel}}
+
+
+{\ttfamily \+\#include $<$Scene\+Hierarchy\+Panel.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_vesper_1_1_scene_hierarchy_panel_afbfe3f2e85ff1f9de65a286e0bbf9273}{Scene\+Hierarchy\+Panel}} ()=default
+\item 
+\doxymbox{\hyperlink{class_vesper_1_1_scene_hierarchy_panel_a7f0ff87c6f8e80298addcb2cf3e696b1}{Scene\+Hierarchy\+Panel}} (const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_scene}{Scene}} $>$ \&context)
+\item 
+void \doxymbox{\hyperlink{class_vesper_1_1_scene_hierarchy_panel_a9699e92002979e48ab4c06577db6ade1}{Set\+Context}} (const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_scene}{Scene}} $>$ \&context)
+\item 
+void \doxymbox{\hyperlink{class_vesper_1_1_scene_hierarchy_panel_a2dbaa287d7c7f26e1b102715fb0dcb16}{On\+Im\+Gui\+Render}} ()
+\item 
+\doxymbox{\hyperlink{class_vesper_1_1_entity}{Entity}} \doxymbox{\hyperlink{class_vesper_1_1_scene_hierarchy_panel_a7f5ea9f933d8fc6ac406a81445011756}{Get\+Selected\+Entity}} () const
+\item 
+void \doxymbox{\hyperlink{class_vesper_1_1_scene_hierarchy_panel_ab3c64dd67f732e7fb886f77992f74265}{Set\+Selected\+Entity}} (\doxymbox{\hyperlink{class_vesper_1_1_entity}{Entity}} entity)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T$>$ }\\void \doxymbox{\hyperlink{class_vesper_1_1_scene_hierarchy_panel_aa18bb1193e99ccaa8ccb6e5a9a9f4a41}{Display\+Add\+Component\+Entry}} (const std::\+string \&entry\+Name)
+\item 
+void \doxymbox{\hyperlink{class_vesper_1_1_scene_hierarchy_panel_a89061955a8ae4d60921e9b988569cd40}{Draw\+Entity\+Node}} (\doxymbox{\hyperlink{class_vesper_1_1_entity}{Entity}} entity)
+\item 
+void \doxymbox{\hyperlink{class_vesper_1_1_scene_hierarchy_panel_a79aa2b9e0c9149c142810be68968f71c}{Draw\+Components}} (\doxymbox{\hyperlink{class_vesper_1_1_entity}{Entity}} entity)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_scene}{Scene}} $>$ \doxymbox{\hyperlink{class_vesper_1_1_scene_hierarchy_panel_a701238096e6134c98c0c9484f4f2293a}{m\+\_\+\+Context}}
+\item 
+\doxymbox{\hyperlink{class_vesper_1_1_entity}{Entity}} \doxymbox{\hyperlink{class_vesper_1_1_scene_hierarchy_panel_aff091d32b2875ec3a339ba83526353a3}{m\+\_\+\+Selection\+Context}}
+\item 
+\doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_framebuffer}{Framebuffer}} $>$ \doxymbox{\hyperlink{class_vesper_1_1_scene_hierarchy_panel_a4ed710304d021c155543b2d3246d8cb3}{m\+\_\+\+Framebuffer}}
+\end{DoxyCompactItemize}
+
+
+\label{doc-constructors}
+\Hypertarget{class_vesper_1_1_scene_hierarchy_panel_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_vesper_1_1_scene_hierarchy_panel_afbfe3f2e85ff1f9de65a286e0bbf9273}\index{Vesper::SceneHierarchyPanel@{Vesper::SceneHierarchyPanel}!SceneHierarchyPanel@{SceneHierarchyPanel}}
+\index{SceneHierarchyPanel@{SceneHierarchyPanel}!Vesper::SceneHierarchyPanel@{Vesper::SceneHierarchyPanel}}
+\doxysubsubsection{\texorpdfstring{SceneHierarchyPanel()}{SceneHierarchyPanel()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_scene_hierarchy_panel_afbfe3f2e85ff1f9de65a286e0bbf9273} 
+Vesper::\+\+Scene\+Hierarchy\+Panel::\+\+Scene\+Hierarchy\+Panel (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\Hypertarget{class_vesper_1_1_scene_hierarchy_panel_a7f0ff87c6f8e80298addcb2cf3e696b1}\index{Vesper::SceneHierarchyPanel@{Vesper::SceneHierarchyPanel}!SceneHierarchyPanel@{SceneHierarchyPanel}}
+\index{SceneHierarchyPanel@{SceneHierarchyPanel}!Vesper::SceneHierarchyPanel@{Vesper::SceneHierarchyPanel}}
+\doxysubsubsection{\texorpdfstring{SceneHierarchyPanel()}{SceneHierarchyPanel()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_scene_hierarchy_panel_a7f0ff87c6f8e80298addcb2cf3e696b1} 
+Vesper::\+\+Scene\+Hierarchy\+Panel::\+\+Scene\+Hierarchy\+Panel (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_scene}{Scene}} $>$ \&}]{context}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00017\ \ \ \ \ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_scene_hierarchy_panel_a9699e92002979e48ab4c06577db6ade1}{SetContext}}(context);}
+\DoxyCodeLine{00019\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\label{doc-func-members}
+\Hypertarget{class_vesper_1_1_scene_hierarchy_panel_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_vesper_1_1_scene_hierarchy_panel_aa18bb1193e99ccaa8ccb6e5a9a9f4a41}\index{Vesper::SceneHierarchyPanel@{Vesper::SceneHierarchyPanel}!DisplayAddComponentEntry@{DisplayAddComponentEntry}}
+\index{DisplayAddComponentEntry@{DisplayAddComponentEntry}!Vesper::SceneHierarchyPanel@{Vesper::SceneHierarchyPanel}}
+\doxysubsubsection{\texorpdfstring{DisplayAddComponentEntry()}{DisplayAddComponentEntry()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_scene_hierarchy_panel_aa18bb1193e99ccaa8ccb6e5a9a9f4a41} 
+template$<$typename T$>$ \\
+void Vesper::\+\+Scene\+Hierarchy\+Panel::\+\+Display\+Add\+Component\+Entry (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{entry\+Name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00545\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00546\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\doxymbox{\hyperlink{class_vesper_1_1_scene_hierarchy_panel_aff091d32b2875ec3a339ba83526353a3}{m\_SelectionContext}}.HasComponent<T>())}
+\DoxyCodeLine{00547\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00548\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ImGui::MenuItem(entryName.c\_str()))}
+\DoxyCodeLine{00549\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00550\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_scene_hierarchy_panel_aff091d32b2875ec3a339ba83526353a3}{m\_SelectionContext}}.AddComponent<T>();}
+\DoxyCodeLine{00551\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ImGui::CloseCurrentPopup();}
+\DoxyCodeLine{00552\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00553\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00554\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_vesper_1_1_scene_hierarchy_panel_a79aa2b9e0c9149c142810be68968f71c}\index{Vesper::SceneHierarchyPanel@{Vesper::SceneHierarchyPanel}!DrawComponents@{DrawComponents}}
+\index{DrawComponents@{DrawComponents}!Vesper::SceneHierarchyPanel@{Vesper::SceneHierarchyPanel}}
+\doxysubsubsection{\texorpdfstring{DrawComponents()}{DrawComponents()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_scene_hierarchy_panel_a79aa2b9e0c9149c142810be68968f71c} 
+void Vesper::\+\+Scene\+Hierarchy\+Panel::\+\+Draw\+Components (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_vesper_1_1_entity}{Entity}}}]{entity}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00373\ \ \ \ \ \{}
+\DoxyCodeLine{00374\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (entity.HasComponent<NameComponent>())}
+\DoxyCodeLine{00375\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00376\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\&\ name\ =\ entity.GetComponent<NameComponent>().Name;}
+\DoxyCodeLine{00377\ }
+\DoxyCodeLine{00378\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ buffer[256];}
+\DoxyCodeLine{00379\ \ \ \ \ \ \ \ \ \ \ \ \ memset(buffer,\ 0,\ \textcolor{keyword}{sizeof}(buffer));}
+\DoxyCodeLine{00380\ \ \ \ \ \ \ \ \ \ \ \ \ strncpy\_s(buffer,\ \textcolor{keyword}{sizeof}(buffer),\ name.c\_str(),\ \textcolor{keyword}{sizeof}(buffer));}
+\DoxyCodeLine{00381\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ImGui::InputText(\textcolor{stringliteral}{"{}\#\#Name"{}},\ buffer,\ \textcolor{keyword}{sizeof}(buffer)))}
+\DoxyCodeLine{00382\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00383\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ name\ =\ std::string(buffer);}
+\DoxyCodeLine{00384\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00385\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00386\ }
+\DoxyCodeLine{00387\ \ \ \ \ \ \ \ \ ImGui::SameLine();}
+\DoxyCodeLine{00388\ \ \ \ \ \ \ \ \ ImGui::PushItemWidth(-\/1);}
+\DoxyCodeLine{00389\ }
+\DoxyCodeLine{00390\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ImGui::Button(\textcolor{stringliteral}{"{}Add\ Component"{}}))}
+\DoxyCodeLine{00391\ \ \ \ \ \ \ \ \ \ \ \ \ ImGui::OpenPopup(\textcolor{stringliteral}{"{}AddComponent"{}});}
+\DoxyCodeLine{00392\ }
+\DoxyCodeLine{00393\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ImGui::BeginPopup(\textcolor{stringliteral}{"{}AddComponent"{}}))}
+\DoxyCodeLine{00394\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00395\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_scene_hierarchy_panel_aa18bb1193e99ccaa8ccb6e5a9a9f4a41}{DisplayAddComponentEntry<CameraComponent>}}(\textcolor{stringliteral}{"{}Camera"{}});}
+\DoxyCodeLine{00396\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//DisplayAddComponentEntry<ScriptComponent>("{}Script"{});}}
+\DoxyCodeLine{00397\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_scene_hierarchy_panel_aa18bb1193e99ccaa8ccb6e5a9a9f4a41}{DisplayAddComponentEntry<SpriteRendererComponent>}}(\textcolor{stringliteral}{"{}Sprite\ Renderer"{}});}
+\DoxyCodeLine{00398\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_scene_hierarchy_panel_aa18bb1193e99ccaa8ccb6e5a9a9f4a41}{DisplayAddComponentEntry<SubTextureComponent>}}(\textcolor{stringliteral}{"{}SubTexture"{}});}
+\DoxyCodeLine{00399\ }
+\DoxyCodeLine{00400\ \ \ \ \ \ \ \ \ \ \ \ \ ImGui::EndPopup();}
+\DoxyCodeLine{00401\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00402\ }
+\DoxyCodeLine{00403\ \ \ \ \ \ \ \ \ ImGui::PopItemWidth();}
+\DoxyCodeLine{00404\ }
+\DoxyCodeLine{00405\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_abd5876954c1f53f2a12d42767b09d3f6}{DrawComponent<TransformComponent>}}(\textcolor{stringliteral}{"{}Transform"{}},\ entity,\ [](\textcolor{keyword}{auto}\&\ component)}
+\DoxyCodeLine{00406\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00407\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_a9fb0a01ecf4619518011fe10b35006c2}{DrawVec3Control}}(\textcolor{stringliteral}{"{}Translation"{}},\ component.Translation);}
+\DoxyCodeLine{00408\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ glm::vec3\ rotation\ =\ glm::degrees(component.Rotation);}
+\DoxyCodeLine{00409\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_a9fb0a01ecf4619518011fe10b35006c2}{DrawVec3Control}}(\textcolor{stringliteral}{"{}Rotation"{}},\ rotation);}
+\DoxyCodeLine{00410\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ component.Rotation\ =\ glm::radians(rotation);}
+\DoxyCodeLine{00411\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_a9fb0a01ecf4619518011fe10b35006c2}{DrawVec3Control}}(\textcolor{stringliteral}{"{}Scale"{}},\ component.Scale,\ 1.0f);}
+\DoxyCodeLine{00412\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00413\ }
+\DoxyCodeLine{00414\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_abd5876954c1f53f2a12d42767b09d3f6}{DrawComponent<CameraComponent>}}(\textcolor{stringliteral}{"{}Camera"{}},\ entity,\ [](\textcolor{keyword}{auto}\&\ component)}
+\DoxyCodeLine{00415\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00416\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\&\ camera\ =\ component.Camera;}
+\DoxyCodeLine{00417\ }
+\DoxyCodeLine{00418\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ImGui::Checkbox(\textcolor{stringliteral}{"{}Primary"{}},\ \&component.Primary);}
+\DoxyCodeLine{00419\ }
+\DoxyCodeLine{00420\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ projectionTypeStrings[]\ =\ \{\ \textcolor{stringliteral}{"{}Perspective"{}},\ \textcolor{stringliteral}{"{}Orthographic"{}}\ \};}
+\DoxyCodeLine{00421\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ currentProjectionTypeString\ =\ projectionTypeStrings[(int)camera.GetProjectionType()];}
+\DoxyCodeLine{00422\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ImGui::BeginCombo(\textcolor{stringliteral}{"{}Projection"{}},\ currentProjectionTypeString))}
+\DoxyCodeLine{00423\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00424\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 2;\ i++)}
+\DoxyCodeLine{00425\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00426\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ isSelected\ =\ currentProjectionTypeString\ ==\ projectionTypeStrings[i];}
+\DoxyCodeLine{00427\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ImGui::Selectable(projectionTypeStrings[i],\ isSelected))}
+\DoxyCodeLine{00428\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00429\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ currentProjectionTypeString\ =\ projectionTypeStrings[i];}
+\DoxyCodeLine{00430\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ camera.SetProjectionType((\doxymbox{\hyperlink{class_vesper_1_1_scene_camera_aa913c988aa3de5b85e37c495d2360f6d}{SceneCamera::ProjectionType}})i);}
+\DoxyCodeLine{00431\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00432\ }
+\DoxyCodeLine{00433\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (isSelected)}
+\DoxyCodeLine{00434\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ImGui::SetItemDefaultFocus();}
+\DoxyCodeLine{00435\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00436\ }
+\DoxyCodeLine{00437\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ImGui::EndCombo();}
+\DoxyCodeLine{00438\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00439\ }
+\DoxyCodeLine{00440\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (camera.GetProjectionType()\ ==\ \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_aa913c988aa3de5b85e37c495d2360f6daa80420eef88d11f77532f1b9cb467fa3}{SceneCamera::ProjectionType::Perspective}})}
+\DoxyCodeLine{00441\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00442\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ perspectiveVerticalFov\ =\ glm::degrees(camera.GetPerspectiveVerticalFOV());}
+\DoxyCodeLine{00443\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ImGui::DragFloat(\textcolor{stringliteral}{"{}Vertical\ FOV"{}},\ \&perspectiveVerticalFov))}
+\DoxyCodeLine{00444\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ camera.SetPerspectiveVerticalFOV(glm::radians(perspectiveVerticalFov));}
+\DoxyCodeLine{00445\ }
+\DoxyCodeLine{00446\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ perspectiveNear\ =\ camera.GetPerspectiveNearClip();}
+\DoxyCodeLine{00447\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ImGui::DragFloat(\textcolor{stringliteral}{"{}Near"{}},\ \&perspectiveNear))}
+\DoxyCodeLine{00448\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ camera.SetPerspectiveNearClip(perspectiveNear);}
+\DoxyCodeLine{00449\ }
+\DoxyCodeLine{00450\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ perspectiveFar\ =\ camera.GetPerspectiveFarClip();}
+\DoxyCodeLine{00451\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ImGui::DragFloat(\textcolor{stringliteral}{"{}Far"{}},\ \&perspectiveFar))}
+\DoxyCodeLine{00452\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ camera.SetPerspectiveFarClip(perspectiveFar);}
+\DoxyCodeLine{00453\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00454\ }
+\DoxyCodeLine{00455\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (camera.GetProjectionType()\ ==\ \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_aa913c988aa3de5b85e37c495d2360f6da03424250432f2aa71de95579d2c0eaeb}{SceneCamera::ProjectionType::Orthographic}})}
+\DoxyCodeLine{00456\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00457\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ orthoSize\ =\ camera.GetOrthographicSize();}
+\DoxyCodeLine{00458\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ImGui::DragFloat(\textcolor{stringliteral}{"{}Size"{}},\ \&orthoSize))}
+\DoxyCodeLine{00459\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ camera.SetOrthographicSize(orthoSize);}
+\DoxyCodeLine{00460\ }
+\DoxyCodeLine{00461\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ orthoNear\ =\ camera.GetOrthographicNearClip();}
+\DoxyCodeLine{00462\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ImGui::DragFloat(\textcolor{stringliteral}{"{}Near"{}},\ \&orthoNear))}
+\DoxyCodeLine{00463\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ camera.SetOrthographicNearClip(orthoNear);}
+\DoxyCodeLine{00464\ }
+\DoxyCodeLine{00465\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ orthoFar\ =\ camera.GetOrthographicFarClip();}
+\DoxyCodeLine{00466\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ImGui::DragFloat(\textcolor{stringliteral}{"{}Far"{}},\ \&orthoFar))}
+\DoxyCodeLine{00467\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ camera.SetOrthographicFarClip(orthoFar);}
+\DoxyCodeLine{00468\ }
+\DoxyCodeLine{00469\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ImGui::Checkbox(\textcolor{stringliteral}{"{}Fixed\ Aspect\ Ratio"{}},\ \&component.FixedAspectRatio);}
+\DoxyCodeLine{00470\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00471\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00472\ }
+\DoxyCodeLine{00473\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_abd5876954c1f53f2a12d42767b09d3f6}{DrawComponent<SpriteRendererComponent>}}(\textcolor{stringliteral}{"{}Sprite\ Renderer"{}},\ entity,\ [](\textcolor{keyword}{auto}\&\ component)}
+\DoxyCodeLine{00474\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00475\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ImGui::ColorEdit4(\textcolor{stringliteral}{"{}Color"{}},\ glm::value\_ptr(component.Color));}
+\DoxyCodeLine{00476\ }
+\DoxyCodeLine{00477\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Separate\ checkbox\ for\ enabling/disabling\ texture\ usage}}
+\DoxyCodeLine{00478\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ImGui::Checkbox(\textcolor{stringliteral}{"{}Texture\ Enabled"{}},\ \&component.TextureEnabled);}
+\DoxyCodeLine{00479\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ImGui::SameLine();}
+\DoxyCodeLine{00480\ }
+\DoxyCodeLine{00481\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Display\ current\ texture\ name\ (if\ any)\ and\ buttons\ to\ Set\ /\ Change\ /\ Clear\ the\ texture}}
+\DoxyCodeLine{00482\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (component.Texture)}
+\DoxyCodeLine{00483\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00484\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ImGui::TextUnformatted(component.Texture-\/>GetName().c\_str());}
+\DoxyCodeLine{00485\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ImGui::SameLine();}
+\DoxyCodeLine{00486\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ImGui::Button(\textcolor{stringliteral}{"{}Change\ Texture"{}}))}
+\DoxyCodeLine{00487\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00488\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ filePath\ =\ \doxymbox{\hyperlink{class_vesper_1_1_file_dialogs_a30ef477107af39176c77dd554ca88f6a}{FileDialogs::OpenFile}}(\textcolor{stringliteral}{"{}Image\ Files\ (*.png;*.jpg;*.jpeg;*.bmp;*.tga)\(\backslash\)0*.png;*.jpg;*.jpeg;*.bmp;*.tga\(\backslash\)0All\ Files\ (*.*)\(\backslash\)0*.*\(\backslash\)0"{}});}
+\DoxyCodeLine{00489\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!filePath.empty())}
+\DoxyCodeLine{00490\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00491\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ tex\ =\ \doxymbox{\hyperlink{class_vesper_1_1_texture2_d_ac7a064af2d05049e13f237ae2a508f22}{Texture2D::Create}}(filePath);}
+\DoxyCodeLine{00492\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (tex)}
+\DoxyCodeLine{00493\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00494\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ component.Texture\ =\ tex;}
+\DoxyCodeLine{00495\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ component.TextureEnabled\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00496\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00497\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00498\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00499\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_log_8h_a326421f6e3655b1bc966ca40b2cd3275}{VZ\_WARN}}(\textcolor{stringliteral}{"{}Could\ not\ load\ texture\ \{0\}"{}},\ filePath);}
+\DoxyCodeLine{00500\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00501\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00502\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00503\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ImGui::SameLine();}
+\DoxyCodeLine{00504\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ImGui::Button(\textcolor{stringliteral}{"{}Clear\ Texture"{}}))}
+\DoxyCodeLine{00505\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00506\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ component.Texture\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00507\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ component.TextureEnabled\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00508\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00509\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00510\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00511\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00512\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ImGui::SameLine();}
+\DoxyCodeLine{00513\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ImGui::Button(\textcolor{stringliteral}{"{}Set\ Texture"{}}))}
+\DoxyCodeLine{00514\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00515\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ filePath\ =\ \doxymbox{\hyperlink{class_vesper_1_1_file_dialogs_a30ef477107af39176c77dd554ca88f6a}{FileDialogs::OpenFile}}(\textcolor{stringliteral}{"{}Image\ Files\ (*.png;*.jpg;*.jpeg;*.bmp;*.tga)\(\backslash\)0*.png;*.jpg;*.jpeg;*.bmp;*.tga\(\backslash\)0All\ Files\ (*.*)\(\backslash\)0*.*\(\backslash\)0"{}});}
+\DoxyCodeLine{00516\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!filePath.empty())}
+\DoxyCodeLine{00517\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00518\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ tex\ =\ \doxymbox{\hyperlink{class_vesper_1_1_texture2_d_ac7a064af2d05049e13f237ae2a508f22}{Texture2D::Create}}(filePath);}
+\DoxyCodeLine{00519\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (tex)}
+\DoxyCodeLine{00520\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00521\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ component.Texture\ =\ tex;}
+\DoxyCodeLine{00522\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ component.TextureEnabled\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00523\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00524\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00525\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00526\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_log_8h_a326421f6e3655b1bc966ca40b2cd3275}{VZ\_WARN}}(\textcolor{stringliteral}{"{}Could\ not\ load\ texture\ \{0\}"{}},\ filePath);}
+\DoxyCodeLine{00527\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00528\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00529\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00530\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00531\ }
+\DoxyCodeLine{00532\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ImGui::DragFloat(\textcolor{stringliteral}{"{}Tiling\ Factor"{}},\ \&component.TilingFactor,\ 0.1f,\ 0.0f,\ 100.0f);}
+\DoxyCodeLine{00533\ }
+\DoxyCodeLine{00534\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00535\ }
+\DoxyCodeLine{00536\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_abd5876954c1f53f2a12d42767b09d3f6}{DrawComponent<SubTextureComponent>}}(\textcolor{stringliteral}{"{}SubTexture"{}},\ entity,\ [](\textcolor{keyword}{auto}\&\ component)}
+\DoxyCodeLine{00537\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00538\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_a5b378fa4a38ee15aeea839d74c1c979e}{SubTextureEdit}}(component.SubTexture-\/>GetTexture()-\/>GetName(),\ component);}
+\DoxyCodeLine{00539\ }
+\DoxyCodeLine{00540\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00541\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_vesper_1_1_scene_hierarchy_panel_a89061955a8ae4d60921e9b988569cd40}\index{Vesper::SceneHierarchyPanel@{Vesper::SceneHierarchyPanel}!DrawEntityNode@{DrawEntityNode}}
+\index{DrawEntityNode@{DrawEntityNode}!Vesper::SceneHierarchyPanel@{Vesper::SceneHierarchyPanel}}
+\doxysubsubsection{\texorpdfstring{DrawEntityNode()}{DrawEntityNode()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_scene_hierarchy_panel_a89061955a8ae4d60921e9b988569cd40} 
+void Vesper::\+\+Scene\+Hierarchy\+Panel::\+\+Draw\+Entity\+Node (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_vesper_1_1_entity}{Entity}}}]{entity}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+TODO:\+ Improve name duplication logic
+
+TODO:\+ Draw child entities here in the future
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00068\ \ \ \ \ \{}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\&\ name\ =\ entity.GetComponent<NameComponent>().Name;}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}*\ nodeID\ =\ (\textcolor{keywordtype}{void}*)(uint64\_t)(uint32\_t)entity;}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ ImGuiTreeNodeFlags\ flags\ =\ ((\doxymbox{\hyperlink{class_vesper_1_1_scene_hierarchy_panel_aff091d32b2875ec3a339ba83526353a3}{m\_SelectionContext}}\ ==\ entity)\ ?\ ImGuiTreeNodeFlags\_Selected\ :\ 0)\ |\ ImGuiTreeNodeFlags\_OpenOnArrow;}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ flags\ |=\ ImGuiTreeNodeFlags\_SpanAvailWidth;}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ opened\ =\ ImGui::TreeNodeEx(nodeID,\ flags,\ name.c\_str());}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ImGui::IsItemClicked())}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_scene_hierarchy_panel_aff091d32b2875ec3a339ba83526353a3}{m\_SelectionContext}}\ =\ entity;}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ entityDeleted\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ImGui::BeginPopupContextItem())}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ImGui::MenuItem(\textcolor{stringliteral}{"{}Delete\ Entity"{}}))}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ entityDeleted\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ImGui::MenuItem(\textcolor{stringliteral}{"{}Duplicate\ Entity"{}}))}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Entity\ newEntity\ =\ \doxymbox{\hyperlink{class_vesper_1_1_scene_hierarchy_panel_a701238096e6134c98c0c9484f4f2293a}{m\_Context}}-\/>CreateEntity(name);}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Copy\ components}}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (entity.HasComponent<NameComponent>())\ \{}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\&\ src\ =\ entity.GetComponent<NameComponent>();}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\&\ newEntName\ =\ newEntity.GetComponent<NameComponent>();}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (src.Name.capacity()\ >\ 0\ \&\&\ isdigit(src.Name.back()))}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Increment\ trailing\ number}}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ i\ =\ src.Name.size()\ -\/\ 1;}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (i\ >\ 0\ \&\&\ isdigit(src.Name[i\ -\/\ 1]))}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ -\/-\/i;}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ baseName\ =\ src.Name.substr(0,\ i);}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ numberStr\ =\ src.Name.substr(i);}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ number\ =\ std::stoi(numberStr);}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ newEntName.Name\ =\ baseName\ +\ std::to\_string(number\ +\ 1);}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ newEntName.Name\ =\ src.Name\ +\ \textcolor{stringliteral}{"{}1"{}};}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (entity.HasComponent<SpriteRendererComponent>())}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\&\ src\ =\ entity.GetComponent<SpriteRendererComponent>();}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ newEntity.AddComponent<SpriteRendererComponent>(src);}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (entity.HasComponent<CameraComponent>())}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\&\ cc\ =\ entity.GetComponent<CameraComponent>();}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ newEntity.AddComponent<CameraComponent>(cc);}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (entity.HasComponent<NativeScriptComponent>())}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\&\ nsc\ =\ entity.GetComponent<NativeScriptComponent>();}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ newEntity.AddComponent<NativeScriptComponent>(nsc);}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (entity.HasComponent<TextureAnimationComponent>())}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\&\ tac\ =\ entity.GetComponent<TextureAnimationComponent>();}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ newEntity.AddComponent<TextureAnimationComponent>(tac);}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Add\ more\ components\ as\ needed}}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_scene_hierarchy_panel_aff091d32b2875ec3a339ba83526353a3}{m\_SelectionContext}}\ =\ newEntity;}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ ImGui::EndPopup();}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (opened)}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ ImGuiTreeNodeFlags\ flags\ =\ ImGuiTreeNodeFlags\_OpenOnArrow\ |\ ImGuiTreeNodeFlags\_SpanAvailWidth;}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ opened\ =\ ImGui::TreeNodeEx((\textcolor{keywordtype}{void}*)9817239,\ flags,\ name.c\_str());}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (opened)}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ImGui::TreePop();}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ ImGui::TreePop();}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (entityDeleted)}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_scene_hierarchy_panel_a701238096e6134c98c0c9484f4f2293a}{m\_Context}}-\/>DestroyEntity(entity);}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_vesper_1_1_scene_hierarchy_panel_aff091d32b2875ec3a339ba83526353a3}{m\_SelectionContext}}\ ==\ entity)}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_scene_hierarchy_panel_aff091d32b2875ec3a339ba83526353a3}{m\_SelectionContext}}\ =\ \{\};}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00153\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_vesper_1_1_scene_hierarchy_panel_a7f5ea9f933d8fc6ac406a81445011756}\index{Vesper::SceneHierarchyPanel@{Vesper::SceneHierarchyPanel}!GetSelectedEntity@{GetSelectedEntity}}
+\index{GetSelectedEntity@{GetSelectedEntity}!Vesper::SceneHierarchyPanel@{Vesper::SceneHierarchyPanel}}
+\doxysubsubsection{\texorpdfstring{GetSelectedEntity()}{GetSelectedEntity()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_scene_hierarchy_panel_a7f5ea9f933d8fc6ac406a81445011756} 
+\doxymbox{\hyperlink{class_vesper_1_1_entity}{Entity}} Vesper::\+\+Scene\+Hierarchy\+Panel::\+\+Get\+Selected\+Entity (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00021\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_scene_hierarchy_panel_aff091d32b2875ec3a339ba83526353a3}{m\_SelectionContext}};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_vesper_1_1_scene_hierarchy_panel_a2dbaa287d7c7f26e1b102715fb0dcb16}\index{Vesper::SceneHierarchyPanel@{Vesper::SceneHierarchyPanel}!OnImGuiRender@{OnImGuiRender}}
+\index{OnImGuiRender@{OnImGuiRender}!Vesper::SceneHierarchyPanel@{Vesper::SceneHierarchyPanel}}
+\doxysubsubsection{\texorpdfstring{OnImGuiRender()}{OnImGuiRender()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_scene_hierarchy_panel_a2dbaa287d7c7f26e1b102715fb0dcb16} 
+void Vesper::\+\+Scene\+Hierarchy\+Panel::\+\+On\+Im\+Gui\+Render (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00028\ \ \ \ \ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ ImGui::Begin(\textcolor{stringliteral}{"{}Scene\ Hierarchy"{}});}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_vesper_1_1_scene_hierarchy_panel_a701238096e6134c98c0c9484f4f2293a}{m\_Context}})\ \{}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ view\ =\ \doxymbox{\hyperlink{class_vesper_1_1_scene_hierarchy_panel_a701238096e6134c98c0c9484f4f2293a}{m\_Context}}-\/>m\_Registry.view<NameComponent>();}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ entity\ :\ view)\ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Entity\ e\{\ entity,\ \doxymbox{\hyperlink{class_vesper_1_1_scene_hierarchy_panel_a701238096e6134c98c0c9484f4f2293a}{m\_Context}}.get()\ \};}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_scene_hierarchy_panel_a89061955a8ae4d60921e9b988569cd40}{DrawEntityNode}}(e);}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ImGui::IsMouseDown(0)\ \&\&\ ImGui::IsWindowHovered())}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_scene_hierarchy_panel_aff091d32b2875ec3a339ba83526353a3}{m\_SelectionContext}}\ =\ \{\};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Right-\/click\ on\ blank\ space}}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ImGui::BeginPopupContextWindow(0,\ ImGuiPopupFlags\_NoOpenOverItems\ |\ ImGuiPopupFlags\_MouseButtonRight))}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ImGui::MenuItem(\textcolor{stringliteral}{"{}Create\ Empty\ Entity"{}}))}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_scene_hierarchy_panel_aff091d32b2875ec3a339ba83526353a3}{m\_SelectionContext}}\ =\ \doxymbox{\hyperlink{class_vesper_1_1_scene_hierarchy_panel_a701238096e6134c98c0c9484f4f2293a}{m\_Context}}-\/>CreateEntity(\textcolor{stringliteral}{"{}Empty\ Entity"{}});}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ImGui::EndPopup();}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ ImGui::End();}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ ImGui::Begin(\textcolor{stringliteral}{"{}Properties"{}});}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_vesper_1_1_scene_hierarchy_panel_aff091d32b2875ec3a339ba83526353a3}{m\_SelectionContext}})}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_scene_hierarchy_panel_a79aa2b9e0c9149c142810be68968f71c}{DrawComponents}}(\doxymbox{\hyperlink{class_vesper_1_1_scene_hierarchy_panel_aff091d32b2875ec3a339ba83526353a3}{m\_SelectionContext}});}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ ImGui::End();}
+\DoxyCodeLine{00060\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_vesper_1_1_scene_hierarchy_panel_a9699e92002979e48ab4c06577db6ade1}\index{Vesper::SceneHierarchyPanel@{Vesper::SceneHierarchyPanel}!SetContext@{SetContext}}
+\index{SetContext@{SetContext}!Vesper::SceneHierarchyPanel@{Vesper::SceneHierarchyPanel}}
+\doxysubsubsection{\texorpdfstring{SetContext()}{SetContext()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_scene_hierarchy_panel_a9699e92002979e48ab4c06577db6ade1} 
+void Vesper::\+\+Scene\+Hierarchy\+Panel::\+\+Set\+Context (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_scene}{Scene}} $>$ \&}]{context}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00022\ \ \ \ \ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_scene_hierarchy_panel_a701238096e6134c98c0c9484f4f2293a}{m\_Context}}\ =\ context;}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_scene_hierarchy_panel_aff091d32b2875ec3a339ba83526353a3}{m\_SelectionContext}}\ =\ \{\};}
+\DoxyCodeLine{00025\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_vesper_1_1_scene_hierarchy_panel_ab3c64dd67f732e7fb886f77992f74265}\index{Vesper::SceneHierarchyPanel@{Vesper::SceneHierarchyPanel}!SetSelectedEntity@{SetSelectedEntity}}
+\index{SetSelectedEntity@{SetSelectedEntity}!Vesper::SceneHierarchyPanel@{Vesper::SceneHierarchyPanel}}
+\doxysubsubsection{\texorpdfstring{SetSelectedEntity()}{SetSelectedEntity()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_scene_hierarchy_panel_ab3c64dd67f732e7fb886f77992f74265} 
+void Vesper::\+\+Scene\+Hierarchy\+Panel::\+\+Set\+Selected\+Entity (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_vesper_1_1_entity}{Entity}}}]{entity}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00063\ \ \ \ \ \{}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_scene_hierarchy_panel_aff091d32b2875ec3a339ba83526353a3}{m\_SelectionContext}}\ =\ entity;}
+\DoxyCodeLine{00065\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_vesper_1_1_scene_hierarchy_panel_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_vesper_1_1_scene_hierarchy_panel_a701238096e6134c98c0c9484f4f2293a}\index{Vesper::SceneHierarchyPanel@{Vesper::SceneHierarchyPanel}!m\_Context@{m\_Context}}
+\index{m\_Context@{m\_Context}!Vesper::SceneHierarchyPanel@{Vesper::SceneHierarchyPanel}}
+\doxysubsubsection{\texorpdfstring{m\_Context}{m\_Context}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_scene_hierarchy_panel_a701238096e6134c98c0c9484f4f2293a} 
+\doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$\doxymbox{\hyperlink{class_vesper_1_1_scene}{Scene}}$>$ Vesper::\+\+Scene\+Hierarchy\+Panel::\+m\+\_\+\+Context\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_vesper_1_1_scene_hierarchy_panel_a4ed710304d021c155543b2d3246d8cb3}\index{Vesper::SceneHierarchyPanel@{Vesper::SceneHierarchyPanel}!m\_Framebuffer@{m\_Framebuffer}}
+\index{m\_Framebuffer@{m\_Framebuffer}!Vesper::SceneHierarchyPanel@{Vesper::SceneHierarchyPanel}}
+\doxysubsubsection{\texorpdfstring{m\_Framebuffer}{m\_Framebuffer}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_scene_hierarchy_panel_a4ed710304d021c155543b2d3246d8cb3} 
+\doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$\doxymbox{\hyperlink{class_vesper_1_1_framebuffer}{Framebuffer}}$>$ Vesper::\+\+Scene\+Hierarchy\+Panel::\+m\+\_\+\+Framebuffer\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_vesper_1_1_scene_hierarchy_panel_aff091d32b2875ec3a339ba83526353a3}\index{Vesper::SceneHierarchyPanel@{Vesper::SceneHierarchyPanel}!m\_SelectionContext@{m\_SelectionContext}}
+\index{m\_SelectionContext@{m\_SelectionContext}!Vesper::SceneHierarchyPanel@{Vesper::SceneHierarchyPanel}}
+\doxysubsubsection{\texorpdfstring{m\_SelectionContext}{m\_SelectionContext}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_scene_hierarchy_panel_aff091d32b2875ec3a339ba83526353a3} 
+\doxymbox{\hyperlink{class_vesper_1_1_entity}{Entity}} Vesper::\+\+Scene\+Hierarchy\+Panel::\+m\+\_\+\+Selection\+Context\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+Vesper-\/\+Editor/\+src/\+\+Panels/\+\doxymbox{\hyperlink{_scene_hierarchy_panel_8h}{Scene\+Hierarchy\+Panel.\+h}}\item 
+Vesper-\/\+Editor/\+src/\+\+Panels/\+\doxymbox{\hyperlink{_scene_hierarchy_panel_8cpp}{Scene\+Hierarchy\+Panel.\+cpp}}\end{DoxyCompactItemize}

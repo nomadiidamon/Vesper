@@ -1,0 +1,120 @@
+\doxysection{Vesper::\+Vesper\+Editor Class Reference}
+\hypertarget{class_vesper_1_1_vesper_editor}{}\label{class_vesper_1_1_vesper_editor}\index{Vesper::VesperEditor@{Vesper::VesperEditor}}
+Inheritance diagram for Vesper::\+Vesper\+Editor:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_vesper_1_1_vesper_editor}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_vesper_1_1_vesper_editor_a1a4a2b911669866b7123e1d1536870fb}{Vesper\+Editor}} ()
+\item 
+\doxymbox{\hyperlink{class_vesper_1_1_vesper_editor_a9492f993a69630a3abb1d301da614787}{\texorpdfstring{$\sim$}{\string~}\+Vesper\+Editor}} ()
+\item 
+\doxymbox{\hyperlink{class_vesper_1_1_vesper_editor_a1a4a2b911669866b7123e1d1536870fb}{Vesper\+Editor}} ()
+\item 
+\doxymbox{\hyperlink{class_vesper_1_1_vesper_editor_a9492f993a69630a3abb1d301da614787}{\texorpdfstring{$\sim$}{\string~}\+Vesper\+Editor}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_vesper_1_1_application}{Vesper::\+\+Application}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_vesper_1_1_application_adb6d84492e607574848e77d5206c5567}{Application}} (const std::\+string \&name="{}"{})
+\item 
+virtual \doxymbox{\hyperlink{class_vesper_1_1_application_ae112679f4b4502e15b4071eadbbbc865}{\texorpdfstring{$\sim$}{\string~}\+Application}} ()
+\item 
+void \doxymbox{\hyperlink{class_vesper_1_1_application_ab3676dbe9a0e9394759ecca29c0ded04}{Run}} ()
+\item 
+void \doxymbox{\hyperlink{class_vesper_1_1_application_a6b671a553ef9f81ec0394c7de71bff16}{On\+Event}} (\doxymbox{\hyperlink{class_vesper_1_1_event}{Event}} \&e)
+\item 
+void \doxymbox{\hyperlink{class_vesper_1_1_application_ab714953686aac886f76beb76378a18d9}{Push\+Layer}} (\doxymbox{\hyperlink{class_vesper_1_1_layer}{Layer}} \texorpdfstring{$\ast$}{*}layer)
+\item 
+void \doxymbox{\hyperlink{class_vesper_1_1_application_ae10c674888e1ed9864c1f9b080b8af7f}{Push\+Overlay}} (\doxymbox{\hyperlink{class_vesper_1_1_layer}{Layer}} \texorpdfstring{$\ast$}{*}overlay)
+\item 
+void \doxymbox{\hyperlink{class_vesper_1_1_application_af36d1558fe1fef29468f3d58380a013b}{Close}} ()
+\item 
+\doxymbox{\hyperlink{class_vesper_1_1_im_gui_layer}{Im\+Gui\+Layer}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_vesper_1_1_application_a9b49ca5273462312ee8439ed9897bb73}{Get\+Im\+Gui\+Layer}} ()
+\item 
+\doxymbox{\hyperlink{class_vesper_1_1_window}{Window}} \& \doxymbox{\hyperlink{class_vesper_1_1_application_af90f220d05b740b6b1596d915b3efab3}{Get\+Window}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Public Member Functions inherited from \doxymbox{\hyperlink{class_vesper_1_1_application}{Vesper::\+\+Application}}}
+\begin{DoxyCompactItemize}
+\item 
+static \doxymbox{\hyperlink{class_vesper_1_1_application_adb6d84492e607574848e77d5206c5567}{Application}} \& \doxymbox{\hyperlink{class_vesper_1_1_application_a7edbd0f4804f897c09ad869239a97ffa}{Get}} ()
+\end{DoxyCompactItemize}
+
+
+\label{doc-constructors}
+\Hypertarget{class_vesper_1_1_vesper_editor_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_vesper_1_1_vesper_editor_a1a4a2b911669866b7123e1d1536870fb}\index{Vesper::VesperEditor@{Vesper::VesperEditor}!VesperEditor@{VesperEditor}}
+\index{VesperEditor@{VesperEditor}!Vesper::VesperEditor@{Vesper::VesperEditor}}
+\doxysubsubsection{\texorpdfstring{VesperEditor()}{VesperEditor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_vesper_editor_a1a4a2b911669866b7123e1d1536870fb} 
+Vesper::\+\+Vesper\+Editor::\+\+Vesper\+Editor (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_vesper_1_1_application_adb6d84492e607574848e77d5206c5567}{Application}}(\textcolor{stringliteral}{"{}Vesper\ Editor"{}}) }
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_application_ab714953686aac886f76beb76378a18d9}{PushLayer}}(\textcolor{keyword}{new}\ EditorLayer());}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_editor_layer_a49ed151c3e1d1ad844aa8e23a4e89db4}{Vesper::\+\+Editor\+Layer::\+\+Editor\+Layer()}}, and \doxymbox{\hyperlink{class_vesper_1_1_application_ab714953686aac886f76beb76378a18d9}{Vesper::\+\+Application::\+\+Push\+Layer()}}.
+
+
+
+Referenced by \doxymbox{\hyperlink{namespace_vesper_a43e1ca989eabb42f3b23b79517ff1a65}{Vesper::\+\+Create\+Application()}}.
+
+\Hypertarget{class_vesper_1_1_vesper_editor_a9492f993a69630a3abb1d301da614787}\index{Vesper::VesperEditor@{Vesper::VesperEditor}!````~VesperEditor@{\texorpdfstring{$\sim$}{\string~}VesperEditor}}
+\index{````~VesperEditor@{\texorpdfstring{$\sim$}{\string~}VesperEditor}!Vesper::VesperEditor@{Vesper::VesperEditor}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}VesperEditor()}{\string~VesperEditor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_vesper_editor_a9492f993a69630a3abb1d301da614787} 
+Vesper::\+\+Vesper\+Editor::\+\texorpdfstring{$\sim$}{\string~}\+Vesper\+Editor (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_vesper_1_1_vesper_editor_a1a4a2b911669866b7123e1d1536870fb}\index{Vesper::VesperEditor@{Vesper::VesperEditor}!VesperEditor@{VesperEditor}}
+\index{VesperEditor@{VesperEditor}!Vesper::VesperEditor@{Vesper::VesperEditor}}
+\doxysubsubsection{\texorpdfstring{VesperEditor()}{VesperEditor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_vesper_editor_a1a4a2b911669866b7123e1d1536870fb} 
+Vesper::\+\+Vesper\+Editor::\+\+Vesper\+Editor (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_vesper_1_1_application_adb6d84492e607574848e77d5206c5567}{Application}}(\textcolor{stringliteral}{"{}Vesper\ Editor"{}}) }
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_application_ab714953686aac886f76beb76378a18d9}{PushLayer}}(\textcolor{keyword}{new}\ EditorLayer());}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_vesper_1_1_vesper_editor_a9492f993a69630a3abb1d301da614787}\index{Vesper::VesperEditor@{Vesper::VesperEditor}!````~VesperEditor@{\texorpdfstring{$\sim$}{\string~}VesperEditor}}
+\index{````~VesperEditor@{\texorpdfstring{$\sim$}{\string~}VesperEditor}!Vesper::VesperEditor@{Vesper::VesperEditor}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}VesperEditor()}{\string~VesperEditor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_vesper_editor_a9492f993a69630a3abb1d301da614787} 
+Vesper::\+\+Vesper\+Editor::\+\texorpdfstring{$\sim$}{\string~}\+Vesper\+Editor (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+Vesper-\/\+Editor/\+src/\+\doxymbox{\hyperlink{_vesper_editor_app_8cpp}{Vesper\+Editor\+App.\+cpp}}\end{DoxyCompactItemize}

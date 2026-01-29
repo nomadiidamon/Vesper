@@ -1,0 +1,74 @@
+\doxysection{Vesper-\/\+Editor/\+src/\+\+Editor\+Layer.cpp File Reference}
+\hypertarget{_editor_layer_8cpp}{}\label{_editor_layer_8cpp}\index{Vesper-\/Editor/src/EditorLayer.cpp@{Vesper-\/Editor/src/EditorLayer.cpp}}
+{\ttfamily \+\#include $<$Vesper/\+\+Im\+Gui/\+\+Vesper\+Im\+Gui.\+h$>$}\newline
+{\ttfamily \+\#include $<$Im\+Guizmo.\+h$>$}\newline
+{\ttfamily \+\#include $<$Vesper/\+\+Utils/\+\+Platform\+Utils.\+h$>$}\newline
+{\ttfamily \+\#include "{}Vesper/\+\+Core/\+\+Math.\+h"{}}\newline
+{\ttfamily \+\#include "{}Editor\+Layer.\+h"{}}\newline
+{\ttfamily \+\#include $<$glm/\+gtc/\+matrix\+\_\+transform.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$glm/\+gtc/\+type\+\_\+ptr.\+hpp$>$}\newline
+{\ttfamily \+\#include "{}Vesper/\+\+Scene/\+\+Scene\+Serializer.\+h"{}}\newline
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \doxymbox{\hyperlink{namespace_vesper}{Vesper}}
+\begin{DoxyCompactList}\small\item\em TEMPORARY. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static const uint32\+\_\+t \doxymbox{\hyperlink{_editor_layer_8cpp_abb45b0db764b0d420e6bd9c9739837f1}{s\+\_\+\+Map\+Width}} = 20
+\item 
+static const uint32\+\_\+t \doxymbox{\hyperlink{_editor_layer_8cpp_a0b1b41864ae4ba6e2a661cbbc6e923e8}{s\+\_\+\+Map\+Height}} = 10
+\item 
+static const char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{_editor_layer_8cpp_a3de840fdcd8a5403adfd078e6a9b9fe8}{s\+\_\+\+Map\+Tiles}}
+\end{DoxyCompactItemize}
+
+
+\label{doc-var-members}
+\Hypertarget{_editor_layer_8cpp_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{_editor_layer_8cpp_a0b1b41864ae4ba6e2a661cbbc6e923e8}\index{EditorLayer.cpp@{EditorLayer.cpp}!s\_MapHeight@{s\_MapHeight}}
+\index{s\_MapHeight@{s\_MapHeight}!EditorLayer.cpp@{EditorLayer.cpp}}
+\doxysubsubsection{\texorpdfstring{s\_MapHeight}{s\_MapHeight}}
+{\footnotesize\ttfamily \label{_editor_layer_8cpp_a0b1b41864ae4ba6e2a661cbbc6e923e8} 
+const uint32\+\_\+t s\+\_\+\+Map\+Height = 10\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Referenced by \doxymbox{\hyperlink{class_vesper_1_1_editor_layer_a984242ed582e7e06bcfd16bfe5de0a68}{Vesper::\+\+Editor\+Layer::\+\+On\+Update()}}.
+
+\Hypertarget{_editor_layer_8cpp_a3de840fdcd8a5403adfd078e6a9b9fe8}\index{EditorLayer.cpp@{EditorLayer.cpp}!s\_MapTiles@{s\_MapTiles}}
+\index{s\_MapTiles@{s\_MapTiles}!EditorLayer.cpp@{EditorLayer.cpp}}
+\doxysubsubsection{\texorpdfstring{s\_MapTiles}{s\_MapTiles}}
+{\footnotesize\ttfamily \label{_editor_layer_8cpp_a3de840fdcd8a5403adfd078e6a9b9fe8} 
+const char \texorpdfstring{$\ast$}{*} s\+\_\+\+Map\+Tiles\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =}
+\DoxyCodeLine{\textcolor{stringliteral}{"{}GGGGGGGGGGGGGGGGGGGG"{}}}
+\DoxyCodeLine{\textcolor{stringliteral}{"{}GGGCCCCCCCCCCCCCCGGG"{}}}
+\DoxyCodeLine{\textcolor{stringliteral}{"{}GGGCGGGGGGGGGGGGCGGG"{}}}
+\DoxyCodeLine{\textcolor{stringliteral}{"{}GGGCGGRGGGGGGRGGCGGG"{}}}
+\DoxyCodeLine{\textcolor{stringliteral}{"{}GGGCGGGGGGGGGGGGCGGG"{}}}
+\DoxyCodeLine{\textcolor{stringliteral}{"{}GGGCGGGGGGGGGGGGCGGG"{}}}
+\DoxyCodeLine{\textcolor{stringliteral}{"{}GGGCGGPGGGGGGPGGCGGG"{}}}
+\DoxyCodeLine{\textcolor{stringliteral}{"{}GGGCGGGGGGGGGGGGCGGG"{}}}
+\DoxyCodeLine{\textcolor{stringliteral}{"{}GGGCCCCCCCCCCCCCCGGG"{}}}
+\DoxyCodeLine{\textcolor{stringliteral}{"{}GGGGGGGGGGGGGGGGGGGG"{}}}
+
+\end{DoxyCode}
+
+
+Referenced by \doxymbox{\hyperlink{class_vesper_1_1_editor_layer_a984242ed582e7e06bcfd16bfe5de0a68}{Vesper::\+\+Editor\+Layer::\+\+On\+Update()}}.
+
+\Hypertarget{_editor_layer_8cpp_abb45b0db764b0d420e6bd9c9739837f1}\index{EditorLayer.cpp@{EditorLayer.cpp}!s\_MapWidth@{s\_MapWidth}}
+\index{s\_MapWidth@{s\_MapWidth}!EditorLayer.cpp@{EditorLayer.cpp}}
+\doxysubsubsection{\texorpdfstring{s\_MapWidth}{s\_MapWidth}}
+{\footnotesize\ttfamily \label{_editor_layer_8cpp_abb45b0db764b0d420e6bd9c9739837f1} 
+const uint32\+\_\+t s\+\_\+\+Map\+Width = 20\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Referenced by \doxymbox{\hyperlink{class_vesper_1_1_editor_layer_a984242ed582e7e06bcfd16bfe5de0a68}{Vesper::\+\+Editor\+Layer::\+\+On\+Update()}}.
+

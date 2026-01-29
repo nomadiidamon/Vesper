@@ -1,0 +1,156 @@
+\doxysection{Random.\+h}
+\hypertarget{_random_8h_source}{}\label{_random_8h_source}\index{Vesper/src/Vesper/Core/Random.h@{Vesper/src/Vesper/Core/Random.h}}
+\doxymbox{\hyperlink{_random_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{pragma}\ \textcolor{preprocessor}{once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\ \textcolor{preprocessor}{<}\textcolor{preprocessor}{random}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\ \textcolor{preprocessor}{<}\textcolor{preprocessor}{algorithm}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\ \textcolor{preprocessor}{<}\textcolor{preprocessor}{cstdint}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\ \textcolor{preprocessor}{<}\textcolor{preprocessor}{glm}\textcolor{preprocessor}{/}\textcolor{preprocessor}{glm}\textcolor{preprocessor}{.}\textcolor{preprocessor}{hpp}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\ \textcolor{preprocessor}{"{}Vesper/Debug/Instrumentor.h"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{namespace}\ \doxymbox{\hyperlink{namespace_vesper}{Vesper}}\ \{}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{namespace}\ \doxymbox{\hyperlink{namespace_vesper_1_1_random}{Random}}\ \{}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a3215313b0e25d05a5df852f3a08df77b}{std}}::\doxymbox{\hyperlink{namespace_vesper_1_1_random_a3215313b0e25d05a5df852f3a08df77b}{mt19937}}\&\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a3215313b0e25d05a5df852f3a08df77b}{GetRNG}}()\ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{thread\_local}\ std::mt19937\ rng\{\ std::random\_device\{\}()\ \};}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ rng;}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a626ebaec4b72e4991c9e7f3f04aaae9d}{Seed}}(uint32\_t\ seed)\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a3215313b0e25d05a5df852f3a08df77b}{GetRNG}}\doxymbox{\hyperlink{namespace_vesper_1_1_random_a3215313b0e25d05a5df852f3a08df77b}{(}}\doxymbox{\hyperlink{namespace_vesper_1_1_random_a3215313b0e25d05a5df852f3a08df77b}{)}}.seed(seed);}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ uint32\_t\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_afe248f1e01c6a1cbc078179b7ae40468}{UInt1}}(uint32\_t\ max)\ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ std::uniform\_int\_distribution<uint32\_t>\ dist(0,\ max\ -\/\ 1);}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ dist(GetRNG());}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a366a62c6d808219539c79dd08d551469}{Bool1}}(\textcolor{keywordtype}{float}\ trueChance)\ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ std::uniform\_real\_distribution<\textcolor{keywordtype}{float}>\ dist(0.0f,\ 1.0f);}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ dist(GetRNG())\ <\ trueChance;}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_ab701c34568e44f4b8ebaa0b5d3ef5977}{Char}}()\ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ std::uniform\_int\_distribution<\textcolor{keywordtype}{int}>\ dist(0,\ 255);}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast}<\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}>(dist(GetRNG()));}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ std::string\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_afaa6ca62b88d5a4a4563b3c5d618b098}{String}}(size\_t\ length)\ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ charset[]\ =}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}0123456789"{}}}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}ABCDEFGHIJKLMNOPQRSTUVWXYZ"{}}}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}abcdefghijklmnopqrstuvwxyz"{}};}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ size\_t\ max\_index\ =\ (\textcolor{keyword}{sizeof}(charset)\ -\/\ 1);}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ str(length,\ 0);}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (size\_t\ i\ =\ 0;\ i\ <\ length;\ ++i)\ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ str[i]\ =\ charset[\doxymbox{\hyperlink{namespace_vesper_1_1_random_afe248f1e01c6a1cbc078179b7ae40468}{UInt1}}\doxymbox{\hyperlink{namespace_vesper_1_1_random_afe248f1e01c6a1cbc078179b7ae40468}{(}}\textcolor{keyword}{static\_cast}<uint32\_t>(max\_index)\doxymbox{\hyperlink{namespace_vesper_1_1_random_afe248f1e01c6a1cbc078179b7ae40468}{)}}];}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ str;}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ std::string\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a1251e868c3fff89a6a862c6e930c7619}{HexString}}(size\_t\ length)\ \{}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ charset[]\ =}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}0123456789"{}}}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}ABCDEF"{}};}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ size\_t\ max\_index\ =\ (\textcolor{keyword}{sizeof}(charset)\ -\/\ 1);}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ str(length,\ 0);}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (size\_t\ i\ =\ 0;\ i\ <\ length;\ ++i)\ \{}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ str[i]\ =\ charset[\doxymbox{\hyperlink{namespace_vesper_1_1_random_afe248f1e01c6a1cbc078179b7ae40468}{UInt1}}\doxymbox{\hyperlink{namespace_vesper_1_1_random_afe248f1e01c6a1cbc078179b7ae40468}{(}}\textcolor{keyword}{static\_cast}<uint32\_t>(max\_index)\doxymbox{\hyperlink{namespace_vesper_1_1_random_afe248f1e01c6a1cbc078179b7ae40468}{)}}];}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ str;}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ std::string\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a9a3d18994aa7df05cf15657677456aab}{UUID}}()\ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ HexString(8)\ +\ \textcolor{stringliteral}{"{}-\/"{}}\ +\ HexString(4)\ +\ \textcolor{stringliteral}{"{}-\/"{}}\ +\ HexString(4)\ +\ \textcolor{stringliteral}{"{}-\/"{}}\ +\ HexString(4)\ +\ \textcolor{stringliteral}{"{}-\/"{}}\ +\ HexString(12);}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Returns\ a\ float\ in\ the\ range\ [0.0,\ 1.0]\ =\ [inclusive,\ exclusive]}}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a5fd29fe179c63f4e158098a921cc000f}{Float1}}()\ \{}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{thread\_local}\ std::uniform\_real\_distribution<\textcolor{keywordtype}{float}>\ dist(0.0f,\ 1.0f);}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ dist(GetRNG());}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Returns\ a\ float\ in\ the\ range\ [min,\ max]}}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ If\ you\ need\ max\ to\ be\ possible,\ use\ the\ "{}\_Inclusive"{}\ variant\ which\ advances\ the\ upper\ bound}}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a6d25f85e1a2bb3637497925f7cdb737e}{RangeF1}}(\textcolor{keywordtype}{float}\ min,\ \textcolor{keywordtype}{float}\ max)\ \{}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (min\ >\ max)\ std::swap(min,\ max);}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ std::uniform\_real\_distribution<\textcolor{keywordtype}{float}>\ dist(min,\ max);}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ dist(GetRNG());}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Inclusive-\/upper\ variant:\ returns\ value\ in\ [min,\ max]\ (max\ possible)}}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a29cafc6f8171e6f423f3aa36a37b71d3}{RangeF1\_Inclusive}}(\textcolor{keywordtype}{float}\ min,\ \textcolor{keywordtype}{float}\ max)\ \{}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (min\ >\ max)\ std::swap(min,\ max);}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ upper\ =\ std::nextafter(max,\ std::numeric\_limits<\textcolor{keywordtype}{float}>::infinity());}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ std::uniform\_real\_distribution<\textcolor{keywordtype}{float}>\ dist(min,\ upper);}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ dist(GetRNG());}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Returns\ a\ 2D\ float\ vector\ with\ each\ component\ in\ the\ range\ [0.0,\ 1.0]\ =\ [inclusive,\ exclusive]}}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_aee37aeb23527ea784366d19d4d122e93}{glm}}::\doxymbox{\hyperlink{namespace_vesper_1_1_random_aee37aeb23527ea784366d19d4d122e93}{vec2}}\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_aee37aeb23527ea784366d19d4d122e93}{Float2}}()\ \{}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ glm::vec2\{\ Float1(),\ Float1()\ \};}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Returns\ a\ 2D\ float\ vector\ with\ each\ component\ in\ the\ range\ [min,\ max]}}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a5e3ab93e4cf859b888b755aa88f4eb1f}{glm}}::\doxymbox{\hyperlink{namespace_vesper_1_1_random_a5e3ab93e4cf859b888b755aa88f4eb1f}{vec2}}\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a5e3ab93e4cf859b888b755aa88f4eb1f}{RangeF2}}(\textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a5e3ab93e4cf859b888b755aa88f4eb1f}{min}},\ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a5e3ab93e4cf859b888b755aa88f4eb1f}{max}})\ \{}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ glm::vec2\{\ RangeF1(min,\ max),\ RangeF1(min,\ max)\ \};}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Returns\ a\ 2D\ float\ vector\ with\ each\ component\ in\ the\ range\ defined\ by\ the\ components\ of\ the\ given\ vector}}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a9ff6943e251e329ef53c0918215968e3}{glm}}::\doxymbox{\hyperlink{namespace_vesper_1_1_random_a9ff6943e251e329ef53c0918215968e3}{vec2}}\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a9ff6943e251e329ef53c0918215968e3}{RangeF2}}(\textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a9ff6943e251e329ef53c0918215968e3}{min1}},\ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a9ff6943e251e329ef53c0918215968e3}{max1}},\ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a9ff6943e251e329ef53c0918215968e3}{min2}},\ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a9ff6943e251e329ef53c0918215968e3}{max2}})\ \{}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ glm::vec2\{\ RangeF1(min1,\ max1),\ RangeF1(min2,\ max2)\ \};}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Returns\ a\ 2D\ float\ vector\ with\ each\ component\ in\ the\ specified\ ranges}}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a2e243888eb4a33282251e45c57e3f5ad}{glm}}::\doxymbox{\hyperlink{namespace_vesper_1_1_random_a2e243888eb4a33282251e45c57e3f5ad}{vec2}}\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a2e243888eb4a33282251e45c57e3f5ad}{RangeF2}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a2e243888eb4a33282251e45c57e3f5ad}{glm}}::\doxymbox{\hyperlink{namespace_vesper_1_1_random_a2e243888eb4a33282251e45c57e3f5ad}{vec2}}\&\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a2e243888eb4a33282251e45c57e3f5ad}{minRange}},\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a2e243888eb4a33282251e45c57e3f5ad}{glm}}::\doxymbox{\hyperlink{namespace_vesper_1_1_random_a2e243888eb4a33282251e45c57e3f5ad}{vec2}}\&\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a2e243888eb4a33282251e45c57e3f5ad}{maxRange}})\ \{}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ glm::vec2\{\ RangeF1(minRange.x,\ maxRange.x),\ RangeF1(minRange.y,\ maxRange.y)\ \};}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Returns\ a\ 3D\ float\ vector\ with\ each\ component\ in\ the\ range\ [0.0,\ 1.0]\ =\ [inclusive,\ exclusive]}}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a03b6467e00b4461a9c5800c855ae8805}{glm}}::\doxymbox{\hyperlink{namespace_vesper_1_1_random_a03b6467e00b4461a9c5800c855ae8805}{vec3}}\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a03b6467e00b4461a9c5800c855ae8805}{Float3}}()\ \{}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ glm::vec3\{\ Float1(),\ Float1(),\ Float1()\ \};}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Returns\ a\ 3D\ float\ vector\ with\ each\ component\ in\ the\ range\ [min,\ max]}}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_ac64283a80dd70518d2ae8b8ef3686780}{glm}}::\doxymbox{\hyperlink{namespace_vesper_1_1_random_ac64283a80dd70518d2ae8b8ef3686780}{vec3}}\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_ac64283a80dd70518d2ae8b8ef3686780}{RangeF3}}(\textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_ac64283a80dd70518d2ae8b8ef3686780}{min}},\ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_ac64283a80dd70518d2ae8b8ef3686780}{max}})\ \{}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ glm::vec3\{\ RangeF1(min,\ max),\ RangeF1(min,\ max),\ RangeF1(min,\ max)\ \};}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Returns\ a\ 3D\ float\ vector\ with\ each\ component\ in\ the\ specified\ ranges}}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_af1d17e22d9048f071476dd5106912162}{glm}}::\doxymbox{\hyperlink{namespace_vesper_1_1_random_af1d17e22d9048f071476dd5106912162}{vec3}}\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_af1d17e22d9048f071476dd5106912162}{RangeF3}}(\textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_af1d17e22d9048f071476dd5106912162}{min1}},\ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_af1d17e22d9048f071476dd5106912162}{max1}},\ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_af1d17e22d9048f071476dd5106912162}{min2}},\ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_af1d17e22d9048f071476dd5106912162}{max2}},\ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_af1d17e22d9048f071476dd5106912162}{min3}},\ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_af1d17e22d9048f071476dd5106912162}{max3}})\ \{}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ glm::vec3\{\ RangeF1(min1,\ max1),\ RangeF1(min2,\ max2),\ RangeF1(min3,\ max3)\ \};}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Returns\ a\ 3D\ float\ vector\ with\ each\ component\ in\ the\ specified\ ranges}}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a12d4349955ab21516cef5621a99c7c70}{glm}}::\doxymbox{\hyperlink{namespace_vesper_1_1_random_a12d4349955ab21516cef5621a99c7c70}{vec3}}\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a12d4349955ab21516cef5621a99c7c70}{RangeF3}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a12d4349955ab21516cef5621a99c7c70}{glm}}::\doxymbox{\hyperlink{namespace_vesper_1_1_random_a12d4349955ab21516cef5621a99c7c70}{vec2}}\&\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a12d4349955ab21516cef5621a99c7c70}{range1}},\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a12d4349955ab21516cef5621a99c7c70}{glm}}::\doxymbox{\hyperlink{namespace_vesper_1_1_random_a12d4349955ab21516cef5621a99c7c70}{vec2}}\&\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a12d4349955ab21516cef5621a99c7c70}{range2}},\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a12d4349955ab21516cef5621a99c7c70}{glm}}::\doxymbox{\hyperlink{namespace_vesper_1_1_random_a12d4349955ab21516cef5621a99c7c70}{vec2}}\&\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a12d4349955ab21516cef5621a99c7c70}{range3}})\ \{}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ glm::vec3\{\ RangeF1(range1.x,\ range1.y),\ RangeF1(range2.x,\ range2.y),\ RangeF1(range3.x,\ range3.y)\ \};}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Returns\ a\ 4D\ float\ vector\ with\ each\ component\ in\ the\ range\ [0.0,\ 1.0]\ =\ [inclusive,\ exclusive]}}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a5481415221e1c3522bae7da1281c27c1}{glm}}::\doxymbox{\hyperlink{namespace_vesper_1_1_random_a5481415221e1c3522bae7da1281c27c1}{vec4}}\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a5481415221e1c3522bae7da1281c27c1}{Float4}}()\ \{}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ glm::vec4\{\ Float1(),\ Float1(),\ Float1(),\ Float1()\ \};}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Returns\ a\ 4D\ float\ vector\ with\ each\ component\ in\ the\ range\ [min,\ max]}}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a8e7e84ab1ddb1b1a380b0ec41c6caaa2}{glm}}::\doxymbox{\hyperlink{namespace_vesper_1_1_random_a8e7e84ab1ddb1b1a380b0ec41c6caaa2}{vec4}}\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a8e7e84ab1ddb1b1a380b0ec41c6caaa2}{RangeF4}}(\textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a8e7e84ab1ddb1b1a380b0ec41c6caaa2}{min}},\ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a8e7e84ab1ddb1b1a380b0ec41c6caaa2}{max}})\ \{}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ glm::vec4\{\ RangeF1(min,\ max),\ RangeF1(min,\ max),\ RangeF1(min,\ max),\ RangeF1(min,\ max)\ \};}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00149\ \ \ \ \ \}}
+\DoxyCodeLine{00150\ \}}
+
+\end{DoxyCode}

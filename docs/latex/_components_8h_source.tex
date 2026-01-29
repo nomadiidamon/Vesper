@@ -1,0 +1,190 @@
+\doxysection{Components.\+h}
+\hypertarget{_components_8h_source}{}\label{_components_8h_source}\index{Vesper/src/Vesper/Scene/Components.h@{Vesper/src/Vesper/Scene/Components.h}}
+\doxymbox{\hyperlink{_components_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{pragma}\ \textcolor{preprocessor}{once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\ \textcolor{preprocessor}{"{}Vesper/Renderer/Texture.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\ \textcolor{preprocessor}{"{}Vesper/Renderer/SubTexture2D.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\ \doxymbox{\hyperlink{_scene_camera_8h}{"{}SceneCamera.h"{}}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\ \textcolor{preprocessor}{"{}Vesper/Core/Random.h"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\ \textcolor{preprocessor}{<}\textcolor{preprocessor}{glm}\textcolor{preprocessor}{/}\textcolor{preprocessor}{glm}\textcolor{preprocessor}{.}\textcolor{preprocessor}{hpp}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\ \textcolor{preprocessor}{<}\textcolor{preprocessor}{glm}\textcolor{preprocessor}{/}\textcolor{preprocessor}{gtc}\textcolor{preprocessor}{/}\textcolor{preprocessor}{matrix\_transform}\textcolor{preprocessor}{.}\textcolor{preprocessor}{hpp}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{GLM\_ENABLE\_EXPERIMENTAL}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\ \textcolor{preprocessor}{<}\textcolor{preprocessor}{glm}\textcolor{preprocessor}{/}\textcolor{preprocessor}{gtx}\textcolor{preprocessor}{/}\textcolor{preprocessor}{quaternion}\textcolor{preprocessor}{.}\textcolor{preprocessor}{hpp}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{namespace}\ \doxymbox{\hyperlink{namespace_vesper}{Vesper}}}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{struct}\ UUID\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ std::string\ ID;}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ UUID()\ \{\ ID\ =\ Random::UUID();\ \}}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ UUID(\textcolor{keyword}{const}\ std::string\&\ id)}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ :\ ID\{\ id\ \}\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ operator\ std::string\&\ ()\ \{\ \textcolor{keywordflow}{return}\ ID;\ \}}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ operator\ \textcolor{keyword}{const}\ std::string\&\ ()\ \textcolor{keyword}{const}\ \{\ \textcolor{keywordflow}{return}\ ID;\ \}}
+\DoxyCodeLine{00022\ \ \ \ \ \};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{struct}\ UUIDComponent\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ UUID\ ID;}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ UUIDComponent()}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ :\ ID()\ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ UUIDComponent(\textcolor{keyword}{const}\ UUIDComponent\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ UUIDComponent(\textcolor{keyword}{const}\ std::string\&\ id)}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ :\ ID\{\ id\ \}\ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{struct}\ NameComponent}
+\DoxyCodeLine{00037\ \ \ \ \ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ std::string\ Name;}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ NameComponent()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ NameComponent(\textcolor{keyword}{const}\ NameComponent\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ NameComponent(\textcolor{keyword}{const}\ std::string\&\ name)}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ :\ Name(name)\ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ operator\ std::string\&\ ()\ \{\ \textcolor{keywordflow}{return}\ Name;\ \}}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ operator\ \textcolor{keyword}{const}\ std::string\&\ ()\ \textcolor{keyword}{const}\ \{\ \textcolor{keywordflow}{return}\ Name;\ \}}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ std::string\&\ GetName()\ \{\ \textcolor{keywordflow}{return}\ Name;\ \}}
+\DoxyCodeLine{00047\ \ \ \ \ \};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keyword}{struct}\ TransformComponent}
+\DoxyCodeLine{00050\ \ \ \ \ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ glm::vec3\ Translation\ =\ \{\ 0.0f,\ 0.0f,\ 0.0f\ \};}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ glm::vec3\ Rotation\ =\ \{\ 0.0f,\ 0.0f,\ 0.0f\ \};}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ glm::vec3\ Scale\ =\ \{\ 1.0f,\ 1.0f,\ 1.0f\ \};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ TransformComponent()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ TransformComponent(\textcolor{keyword}{const}\ TransformComponent\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ TransformComponent(\textcolor{keyword}{const}\ glm::vec3\&\ translation)}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ :\ Translation(translation)\ \{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ glm::mat4\ GetTransform()\ \textcolor{keyword}{const}}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ glm::mat4\ rotation\ =\ glm::toMat4(glm::quat(Rotation));}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ glm::translate(glm::mat4(1.0f),\ Translation)}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *\ rotation}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *\ glm::scale(glm::mat4(1.0f),\ Scale);}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00069\ \ \ \ \ \};}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keyword}{struct}\ SpriteRendererComponent}
+\DoxyCodeLine{00072\ \ \ \ \ \{}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ glm::vec4\ Color\{\ 1.0f,\ 1.0f,\ 1.0f,\ 1.0f\ \};}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ Ref<Texture2D>\ Texture\ =\ \textcolor{keywordtype}{nullptr};}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ TilingFactor\ =\ 1.0f;}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ SpriteRendererComponent()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ SpriteRendererComponent(\textcolor{keyword}{const}\ SpriteRendererComponent\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ SpriteRendererComponent(\textcolor{keyword}{const}\ glm::vec4\&\ color)}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ :\ Color(color)\ \{}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ operator\ glm::vec4\&\ ()\ \{\ \textcolor{keywordflow}{return}\ Color;\ \}}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ operator\ \textcolor{keyword}{const}\ glm::vec4\&\ ()\ \textcolor{keyword}{const}\ \{\ \textcolor{keywordflow}{return}\ Color;\ \}}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ glm::vec4\&\ GetColor()\ \{\ \textcolor{keywordflow}{return}\ Color;\ \}}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ TextureEnabled\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ Billboard\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00090\ \ \ \ \ \};}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keyword}{struct}\ SubTextureComponent}
+\DoxyCodeLine{00093\ \ \ \ \ \{}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ Ref<SubTexture2D>\ SubTexture;}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ glm::vec2\ TilingFactor\ =\ \{\ 1.0f,\ 1.0f\ \};}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ glm::vec2\ Offset\ =\ \{\ 0.0f,\ 0.0f\ \};}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ SubTextureComponent()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ SubTextureComponent(\textcolor{keyword}{const}\ Ref<Texture2D>\&\ texture)}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ :\ SubTexture(SubTexture2D::CreateFromCoords(texture,\ \{\ 0,\ 0\ \},\ \{\ texture-\/>GetWidth(),\ texture-\/>GetHeight()\ \}))\ \{}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ SubTextureComponent(\textcolor{keyword}{const}\ Ref<SubTexture2D>\&\ subTexture)}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ :\ SubTexture(subTexture)\ \{}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ SetTexture(\textcolor{keyword}{const}\ Ref<Texture2D>\&\ texture)\ \{}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ SubTexture\ =\ SubTexture2D::CreateFromCoords(texture,\ \{\ 0,\ 0\ \},\ \{\ texture-\/>GetWidth(),\ texture-\/>GetHeight()\ \});}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ SetTilingFactor(\textcolor{keyword}{const}\ glm::vec2\&\ tiling)\ \{}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ TilingFactor\ =\ tiling;}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ SetOffset(\textcolor{keyword}{const}\ glm::vec2\&\ offset)\ \{}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ Offset\ =\ offset;}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ operator\ Ref<SubTexture2D>\&\ ()\ \{\ \textcolor{keywordflow}{return}\ SubTexture;\ \}}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ operator\ \textcolor{keyword}{const}\ Ref<SubTexture2D>\&\ ()\ \textcolor{keyword}{const}\ \{\ \textcolor{keywordflow}{return}\ SubTexture;\ \}}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ Ref<SubTexture2D>\&\ GetSubTexture()\ \{\ \textcolor{keywordflow}{return}\ SubTexture;\ \}}
+\DoxyCodeLine{00120\ \ \ \ \ \};}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{comment}{//\ Animates\ through\ a\ series\ of\ sub\ textures\ (can\ be\ used\ with\ full\ textures)}}
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keyword}{struct}\ TextureAnimationComponent}
+\DoxyCodeLine{00124\ \ \ \ \ \{}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ std::vector<Ref<SubTexture2D>>\ SubTextures;}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ uint32\_t\ CurrentFrame\ =\ 0;}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ FrameTime\ =\ 0.6f;\ \textcolor{comment}{//\ Time\ per\ frame\ in\ seconds}}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ TimeAccumulator\ =\ 0.0f;\ \textcolor{comment}{//\ per-\/instance\ accumulator}}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ TextureAnimationComponent()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ TextureAnimationComponent(\textcolor{keyword}{const}\ TextureAnimationComponent\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ TextureAnimationComponent(\textcolor{keyword}{const}\ std::vector<Ref<SubTexture2D>>\&\ subTextures,\ \textcolor{keywordtype}{float}\ frameTime)}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ :\ SubTextures(subTextures),\ FrameTime(frameTime)\ \{}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ operator\ std::vector<Ref<SubTexture2D>>\&\ ()\ \{\ \textcolor{keywordflow}{return}\ SubTextures;\ \}}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ operator\ \textcolor{keyword}{const}\ std::vector<Ref<SubTexture2D>>\&\ ()\ \textcolor{keyword}{const}\ \{\ \textcolor{keywordflow}{return}\ SubTextures;\ \}}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ std::vector<Ref<SubTexture2D>>\&\ GetSubTextures()\ \{\ \textcolor{keywordflow}{return}\ SubTextures;\ \}}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ uint32\_t\ GetCurrentFrame()\ \textcolor{keyword}{const}\ \{\ \textcolor{keywordflow}{return}\ CurrentFrame;\ \}}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ Update(\textcolor{keywordtype}{float}\ deltaTime)\ \{}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (SubTextures.empty()\ ||\ FrameTime\ <=\ 0.0f)}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ TimeAccumulator\ +=\ deltaTime;}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (TimeAccumulator\ >=\ FrameTime)\ \{}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CurrentFrame\ =\ (CurrentFrame\ +\ 1)\ \%\ \textcolor{keyword}{static\_cast}<uint32\_t>(SubTextures.size());}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ TimeAccumulator\ -\/=\ FrameTime;}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00153\ \ \ \ \ \};}
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{keyword}{struct}\ CameraComponent}
+\DoxyCodeLine{00156\ \ \ \ \ \{}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_scene_camera}{SceneCamera}}\ Camera;}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ Primary\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ FixedAspectRatio\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00160\ }
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ CameraComponent()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ CameraComponent(\textcolor{keyword}{const}\ CameraComponent\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00164\ \ \ \ \ \};}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00166\ \ \ \ \ \textcolor{keyword}{class}\ \doxymbox{\hyperlink{class_vesper_1_1_scriptable_entity}{ScriptableEntity}};}
+\DoxyCodeLine{00167\ \ \ \ \ \textcolor{keyword}{class}\ \doxymbox{\hyperlink{class_vesper_1_1_timestep}{Timestep}};}
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00169\ \ \ \ \ \textcolor{keyword}{struct}\ NativeScriptComponent}
+\DoxyCodeLine{00170\ \ \ \ \ \{}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_scriptable_entity}{ScriptableEntity}}*\ Instance\ =\ \textcolor{keywordtype}{nullptr};}
+\DoxyCodeLine{00172\ }
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_scriptable_entity}{ScriptableEntity}}*\ (*InstantiateScript)();}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ (*DestroyScript)(NativeScriptComponent*);}
+\DoxyCodeLine{00175\ }
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ Bind()}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \ \ \ \ InstantiateScript\ =\ []()\ \{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast}<ScriptableEntity*>\ (\textcolor{keyword}{new}\ T());\ \};}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \ \ \ \ DestroyScript\ =\ [](NativeScriptComponent*\ nsc)\ \{\ \textcolor{keyword}{delete}\ nsc-\/>Instance;\ nsc-\/>Instance\ =\ \textcolor{keywordtype}{nullptr};\ \};}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00182\ \ \ \ \ \};}
+\DoxyCodeLine{00183\ }
+\DoxyCodeLine{00184\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,85 @@
+\doxysection{Vesper::\+Renderer2D::\+Statistics Struct Reference}
+\hypertarget{struct_vesper_1_1_renderer2_d_1_1_statistics}{}\label{struct_vesper_1_1_renderer2_d_1_1_statistics}\index{Vesper::Renderer2D::Statistics@{Vesper::Renderer2D::Statistics}}
+
+
+{\ttfamily \+\#include $<$Renderer2\+D.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_1_1_statistics_a95453daa25d3333001a9a3f161b71818}{Get\+Total\+Vertex\+Count}} ()
+\item 
+uint32\+\_\+t \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_1_1_statistics_ad6cec520adab3c60ab10d07bb513f642}{Get\+Total\+Index\+Count}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_1_1_statistics_a20255a808e6f6b8fcab59fbfc11bf673}{Draw\+Calls}} = 0
+\item 
+uint32\+\_\+t \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_1_1_statistics_af20c33069cfb4a0cccd5550dc977d9ba}{Quad\+Count}} = 0
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{struct_vesper_1_1_renderer2_d_1_1_statistics_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_vesper_1_1_renderer2_d_1_1_statistics_ad6cec520adab3c60ab10d07bb513f642}\index{Vesper::Renderer2D::Statistics@{Vesper::Renderer2D::Statistics}!GetTotalIndexCount@{GetTotalIndexCount}}
+\index{GetTotalIndexCount@{GetTotalIndexCount}!Vesper::Renderer2D::Statistics@{Vesper::Renderer2D::Statistics}}
+\doxysubsubsection{\texorpdfstring{GetTotalIndexCount()}{GetTotalIndexCount()}}
+{\footnotesize\ttfamily \label{struct_vesper_1_1_renderer2_d_1_1_statistics_ad6cec520adab3c60ab10d07bb513f642} 
+uint32\+\_\+t Vesper::\+\+Renderer2\+D::\+\+Statistics::\+\+Get\+Total\+Index\+Count (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00061\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_1_1_statistics_af20c33069cfb4a0cccd5550dc977d9ba}{QuadCount}}\ *\ 6;\ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_1_1_statistics_af20c33069cfb4a0cccd5550dc977d9ba}{Quad\+Count}}.
+
+\Hypertarget{struct_vesper_1_1_renderer2_d_1_1_statistics_a95453daa25d3333001a9a3f161b71818}\index{Vesper::Renderer2D::Statistics@{Vesper::Renderer2D::Statistics}!GetTotalVertexCount@{GetTotalVertexCount}}
+\index{GetTotalVertexCount@{GetTotalVertexCount}!Vesper::Renderer2D::Statistics@{Vesper::Renderer2D::Statistics}}
+\doxysubsubsection{\texorpdfstring{GetTotalVertexCount()}{GetTotalVertexCount()}}
+{\footnotesize\ttfamily \label{struct_vesper_1_1_renderer2_d_1_1_statistics_a95453daa25d3333001a9a3f161b71818} 
+uint32\+\_\+t Vesper::\+\+Renderer2\+D::\+\+Statistics::\+\+Get\+Total\+Vertex\+Count (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00060\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_1_1_statistics_af20c33069cfb4a0cccd5550dc977d9ba}{QuadCount}}\ *\ 4;\ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_1_1_statistics_af20c33069cfb4a0cccd5550dc977d9ba}{Quad\+Count}}.
+
+
+
+\label{doc-variable-members}
+\Hypertarget{struct_vesper_1_1_renderer2_d_1_1_statistics_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_vesper_1_1_renderer2_d_1_1_statistics_a20255a808e6f6b8fcab59fbfc11bf673}\index{Vesper::Renderer2D::Statistics@{Vesper::Renderer2D::Statistics}!DrawCalls@{DrawCalls}}
+\index{DrawCalls@{DrawCalls}!Vesper::Renderer2D::Statistics@{Vesper::Renderer2D::Statistics}}
+\doxysubsubsection{\texorpdfstring{DrawCalls}{DrawCalls}}
+{\footnotesize\ttfamily \label{struct_vesper_1_1_renderer2_d_1_1_statistics_a20255a808e6f6b8fcab59fbfc11bf673} 
+uint32\+\_\+t Vesper::\+\+Renderer2\+D::\+\+Statistics::\+\+Draw\+Calls = 0}
+
+
+
+Referenced by \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_ac79b4f772e92e9cc5489b7ed0bb9b659}{Vesper::\+\+Renderer2\+D::\+\+Flush()}}.
+
+\Hypertarget{struct_vesper_1_1_renderer2_d_1_1_statistics_af20c33069cfb4a0cccd5550dc977d9ba}\index{Vesper::Renderer2D::Statistics@{Vesper::Renderer2D::Statistics}!QuadCount@{QuadCount}}
+\index{QuadCount@{QuadCount}!Vesper::Renderer2D::Statistics@{Vesper::Renderer2D::Statistics}}
+\doxysubsubsection{\texorpdfstring{QuadCount}{QuadCount}}
+{\footnotesize\ttfamily \label{struct_vesper_1_1_renderer2_d_1_1_statistics_af20c33069cfb4a0cccd5550dc977d9ba} 
+uint32\+\_\+t Vesper::\+\+Renderer2\+D::\+\+Statistics::\+\+Quad\+Count = 0}
+
+
+
+Referenced by \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_aba269c4ba2ba99b13b47c9e71bf1f8e3}{Vesper::\+\+Renderer2\+D::\+\+Draw\+Quad()}}, \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_ac61593eac73ea6fabba060b34c987302}{Vesper::\+\+Renderer2\+D::\+\+Draw\+Quad\+Rotated()}}, \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_ac4b8d7d28d6384f102cb0f7690ccc391}{Vesper::\+\+Renderer2\+D::\+\+Draw\+Quad\+Rotated\+With\+Texture()}}, \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a41c4aa9d715e2ea03825360305989f00}{Vesper::\+\+Renderer2\+D::\+\+Draw\+Quad\+Rotated\+With\+Texture()}}, \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a273c91ba7abef4d2a99640bf98a4a7d4}{Vesper::\+\+Renderer2\+D::\+\+Draw\+Quad\+With\+Texture()}}, \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_afd78da6a4f0aa5af3c7f8d533bd22b49}{Vesper::\+\+Renderer2\+D::\+\+Draw\+Quad\+With\+Texture()}}, \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_1_1_statistics_ad6cec520adab3c60ab10d07bb513f642}{Get\+Total\+Index\+Count()}}, and \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_1_1_statistics_a95453daa25d3333001a9a3f161b71818}{Get\+Total\+Vertex\+Count()}}.
+
+
+
+The documentation for this struct was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+Vesper/\+src/\+\+Vesper/\+\+Renderer/\+\doxymbox{\hyperlink{_renderer2_d_8h}{Renderer2\+D.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,53 @@
+\doxysection{Scene.\+h}
+\hypertarget{_scene_8h_source}{}\label{_scene_8h_source}\index{Vesper/src/Vesper/Scene/Scene.h@{Vesper/src/Vesper/Scene/Scene.h}}
+\doxymbox{\hyperlink{_scene_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{pragma}\ \textcolor{preprocessor}{once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\ \textcolor{preprocessor}{<}\textcolor{preprocessor}{entt}\textcolor{preprocessor}{.}\textcolor{preprocessor}{hpp}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\ \doxymbox{\hyperlink{_components_8h}{"{}Components.h"{}}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\ \textcolor{preprocessor}{"{}Vesper/Core/Timestep.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{namespace}\ \doxymbox{\hyperlink{namespace_vesper}{Vesper}}\ \{}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{class}\ \doxymbox{\hyperlink{class_vesper_1_1_entity}{Entity}};}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{class}\ \doxymbox{\hyperlink{class_vesper_1_1_editor_camera}{EditorCamera}};}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{class}\ \doxymbox{\hyperlink{class_vesper_1_1_scene}{Scene}}}
+\DoxyCodeLine{00013\ \ \ \ \ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_scene_ad087c792fa7d16895873f6ed2b8c40be}{Scene}}();}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ Scene(\textcolor{keyword}{const}\ std::string\&\ name);}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \string~\doxymbox{\hyperlink{class_vesper_1_1_scene_a867d1e6beaac09cbb4cf958934904db2}{Scene}}();}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Temp-\/>\ add\ entity\ wrapper\ later}}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_entity}{Entity}}\ CreateEntity(\textcolor{keyword}{const}\ std::string\&\ name\ =\ std::string());}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_entity}{Entity}}\ CreateEntity(\textcolor{keyword}{const}\ std::string\&\ name,\ \textcolor{keyword}{const}\ std::string\&\ uuid);}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_scene_a0c83fb03f3c19075dc59cc4f1665ad35}{DestroyEntity}}(\doxymbox{\hyperlink{class_vesper_1_1_entity}{Entity}}\ entity);}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_scene_a7a44a8fc07bf9c8ec2b08229a51441c6}{OnUpdateRuntime}}(\doxymbox{\hyperlink{class_vesper_1_1_timestep}{Timestep}}\ ts);}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_scene_acb757303df319af60095ae9a4354e440}{OnUpdateEditor}}(\doxymbox{\hyperlink{class_vesper_1_1_timestep}{Timestep}}\ ts,\ \doxymbox{\hyperlink{class_vesper_1_1_editor_camera}{EditorCamera}}\&\ camera);}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_scene_aebd545621d7559b4a77b9964174bccf4}{OnViewportResize}}(uint32\_t\ width,\ uint32\_t\ height);}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_entity}{Entity}}\ \doxymbox{\hyperlink{class_vesper_1_1_scene_a4345d037e5b93aee42b0e1154617f3ad}{GetPrimaryCameraEntity}}();}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_scene_adcc6ad5697a7967c85b568a069144eb8}{OnComponentAdded}}(\doxymbox{\hyperlink{class_vesper_1_1_entity}{Entity}}\ entity,\ T\&\ component);}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_vesper_1_1_scene_a7c28a6e5152d82196ea19733b7adb1cd}{m\_Name}};}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_scene_a2d9ca6b043dc56038104e7285dc12d2d}{entt}}::\doxymbox{\hyperlink{class_vesper_1_1_scene_a2d9ca6b043dc56038104e7285dc12d2d}{registry}}\ \doxymbox{\hyperlink{class_vesper_1_1_scene_a2d9ca6b043dc56038104e7285dc12d2d}{m\_Registry}};}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ uint32\_t\ \doxymbox{\hyperlink{class_vesper_1_1_scene_a2a6f19a5c6d773365be5bc6380bdaa9b}{m\_ViewportWidth}}\ =\ 160,\ \doxymbox{\hyperlink{class_vesper_1_1_scene_a26a14bd8fe65b5d14dbe7e1b6c649414}{m\_ViewportHeight}}\ =\ 90;}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class}\ \doxymbox{\hyperlink{class_vesper_1_1_entity}{Entity}};}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class}\ \doxymbox{\hyperlink{class_vesper_1_1_scene_serializer}{SceneSerializer}};}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class}\ SceneHierarchyPanel;}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ TODO:\ friend\ class\ SceneCamera;}}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ TODO:\ friend\ class\ SceneRenderer;}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ SetName(\textcolor{keyword}{const}\ std::string\&\ name)\ \{\ m\_Name\ =\ name;\ \}}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ \doxymbox{\hyperlink{class_vesper_1_1_scene_a06c36c9d0cbbd1e4e232080594bf256f}{GetName}}()\ \textcolor{keyword}{const}\ \{\ \textcolor{keywordflow}{return}\ m\_Name;\ \}}
+\DoxyCodeLine{00044\ \ \ \ \ \};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \}}
+
+\end{DoxyCode}

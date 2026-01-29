@@ -1,0 +1,96 @@
+\doxysection{Vesper::\+Texture2D Class Reference}
+\hypertarget{class_vesper_1_1_texture2_d}{}\label{class_vesper_1_1_texture2_d}\index{Vesper::Texture2D@{Vesper::Texture2D}}
+
+
+{\ttfamily \+\#include $<$Texture.\+h$>$}
+
+Inheritance diagram for Vesper::\+Texture2D:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_vesper_1_1_texture2_d}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_texture2_d}{Texture2D}} $>$ \doxymbox{\hyperlink{class_vesper_1_1_texture2_d_ac7a064af2d05049e13f237ae2a508f22}{Create}} (uint32\+\_\+t width, uint32\+\_\+t height)
+\item 
+static \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_texture2_d}{Texture2D}} $>$ \doxymbox{\hyperlink{class_vesper_1_1_texture2_d_a8a1697b19fa2ebcd26fb387b2adaa0f7}{Create}} (const std::\+string \&path)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_vesper_1_1_texture}{Vesper::\+\+Texture}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \doxymbox{\hyperlink{class_vesper_1_1_texture_abaee8793ab274eb12e797affb8bb5406}{\texorpdfstring{$\sim$}{\string~}\+Texture}} ()=default
+\item 
+virtual uint32\+\_\+t \doxymbox{\hyperlink{class_vesper_1_1_texture_a7e31e9571857dded8570e2c102235d4c}{Get\+Width}} () const =0
+\item 
+virtual uint32\+\_\+t \doxymbox{\hyperlink{class_vesper_1_1_texture_a9b506f28915ef764c52b23897606628b}{Get\+Height}} () const =0
+\item 
+virtual uint32\+\_\+t \doxymbox{\hyperlink{class_vesper_1_1_texture_aac3791b93ab26cf8c8df7ae02c6cc8d3}{Get\+Renderer\+ID}} () const =0
+\item 
+virtual void \doxymbox{\hyperlink{class_vesper_1_1_texture_aecdaafa875ff2ce3e3972f4c42b23194}{Bind}} (uint32\+\_\+t slot=0) const =0
+\item 
+virtual void \doxymbox{\hyperlink{class_vesper_1_1_texture_aae25563a473b10ba3cea4d82310d734a}{Set\+Data}} (void \texorpdfstring{$\ast$}{*}data, uint32\+\_\+t size)=0
+\item 
+virtual bool \doxymbox{\hyperlink{class_vesper_1_1_texture_a82a2ccb871e737e685589ab0dbd35a34}{operator==}} (const \doxymbox{\hyperlink{class_vesper_1_1_texture2_d}{Texture2D}} \&other) const =0
+\item 
+virtual std::\+string \doxymbox{\hyperlink{class_vesper_1_1_texture_a8b5e8ba4dc3e4cec52810b22dab26dd7}{Get\+Name}} () const =0
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{class_vesper_1_1_texture2_d_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_vesper_1_1_texture2_d_a8a1697b19fa2ebcd26fb387b2adaa0f7}\index{Vesper::Texture2D@{Vesper::Texture2D}!Create@{Create}}
+\index{Create@{Create}!Vesper::Texture2D@{Vesper::Texture2D}}
+\doxysubsubsection{\texorpdfstring{Create()}{Create()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_texture2_d_a8a1697b19fa2ebcd26fb387b2adaa0f7} 
+\doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_texture2_d}{Texture2D}} $>$ Vesper::\+\+Texture2\+D::\+\+Create (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{path}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00022\ \ \ \ \ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (\doxymbox{\hyperlink{class_vesper_1_1_renderer_af8221f49491f130b6de7feb1b5093227}{Renderer::GetAPI}}())}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{class_vesper_1_1_renderer_a_p_i_acbef8f1a2c9546387b6513640c5c7995a6adf97f83acf6453d4a6a4b1070f3754}{RendererAPI::API::None}}:\ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_asserts_8h_a3b51b77f75997760894138afc89403c9}{VZ\_CORE\_ASSERT}}(\textcolor{keyword}{false},\ \textcolor{stringliteral}{"{}RendererAPI::None\ is\ currently\ not\ supported!"{}});\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{class_vesper_1_1_renderer_a_p_i_acbef8f1a2c9546387b6513640c5c7995a760716b590ee7c0adc25f434f577d8be}{RendererAPI::API::OpenGL}}:\ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{namespace_vesper_a313930b55375b2f4dd36375b56f11047}{CreateRef<OpenGLTexture2D>}}(path);}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_asserts_8h_a3b51b77f75997760894138afc89403c9}{VZ\_CORE\_ASSERT}}(\textcolor{keyword}{false},\ \textcolor{stringliteral}{"{}Unknown\ RendererAPI!"{}});}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00030\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_renderer_af8221f49491f130b6de7feb1b5093227}{Vesper::\+\+Renderer::\+\+Get\+API()}}, \doxymbox{\hyperlink{class_vesper_1_1_renderer_a_p_i_acbef8f1a2c9546387b6513640c5c7995a6adf97f83acf6453d4a6a4b1070f3754}{Vesper::\+\+Renderer\+API::\+\+None}}, and \doxymbox{\hyperlink{class_vesper_1_1_renderer_a_p_i_acbef8f1a2c9546387b6513640c5c7995a760716b590ee7c0adc25f434f577d8be}{Vesper::\+\+Renderer\+API::\+\+Open\+GL}}.
+
+\Hypertarget{class_vesper_1_1_texture2_d_ac7a064af2d05049e13f237ae2a508f22}\index{Vesper::Texture2D@{Vesper::Texture2D}!Create@{Create}}
+\index{Create@{Create}!Vesper::Texture2D@{Vesper::Texture2D}}
+\doxysubsubsection{\texorpdfstring{Create()}{Create()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_texture2_d_ac7a064af2d05049e13f237ae2a508f22} 
+\doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_texture2_d}{Texture2D}} $>$ Vesper::\+\+Texture2\+D::\+\+Create (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{width}{, }\item[{uint32\+\_\+t}]{height}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00011\ \ \ \ \ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (\doxymbox{\hyperlink{class_vesper_1_1_renderer_af8221f49491f130b6de7feb1b5093227}{Renderer::GetAPI}}())}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{class_vesper_1_1_renderer_a_p_i_acbef8f1a2c9546387b6513640c5c7995a6adf97f83acf6453d4a6a4b1070f3754}{RendererAPI::API::None}}:\ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_asserts_8h_a3b51b77f75997760894138afc89403c9}{VZ\_CORE\_ASSERT}}(\textcolor{keyword}{false},\ \textcolor{stringliteral}{"{}RendererAPI::None\ is\ currently\ not\ supported!"{}});\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{class_vesper_1_1_renderer_a_p_i_acbef8f1a2c9546387b6513640c5c7995a760716b590ee7c0adc25f434f577d8be}{RendererAPI::API::OpenGL}}:\ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{namespace_vesper_a313930b55375b2f4dd36375b56f11047}{CreateRef<OpenGLTexture2D>}}(width,\ height);}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_asserts_8h_a3b51b77f75997760894138afc89403c9}{VZ\_CORE\_ASSERT}}(\textcolor{keyword}{false},\ \textcolor{stringliteral}{"{}Unknown\ RendererAPI!"{}});}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00019\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_renderer_af8221f49491f130b6de7feb1b5093227}{Vesper::\+\+Renderer::\+\+Get\+API()}}, \doxymbox{\hyperlink{class_vesper_1_1_renderer_a_p_i_acbef8f1a2c9546387b6513640c5c7995a6adf97f83acf6453d4a6a4b1070f3754}{Vesper::\+\+Renderer\+API::\+\+None}}, and \doxymbox{\hyperlink{class_vesper_1_1_renderer_a_p_i_acbef8f1a2c9546387b6513640c5c7995a760716b590ee7c0adc25f434f577d8be}{Vesper::\+\+Renderer\+API::\+\+Open\+GL}}.
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+Vesper/\+src/\+\+Vesper/\+\+Renderer/\+\doxymbox{\hyperlink{_texture_8h}{Texture.\+h}}\item 
+Vesper/\+src/\+\+Vesper/\+\+Renderer/\+\doxymbox{\hyperlink{_texture_8cpp}{Texture.\+cpp}}\end{DoxyCompactItemize}

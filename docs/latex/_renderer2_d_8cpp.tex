@@ -1,0 +1,79 @@
+\doxysection{Vesper/\+src/\+\+Vesper/\+\+Renderer/\+\+Renderer2D.cpp File Reference}
+\hypertarget{_renderer2_d_8cpp}{}\label{_renderer2_d_8cpp}\index{Vesper/src/Vesper/Renderer/Renderer2D.cpp@{Vesper/src/Vesper/Renderer/Renderer2D.cpp}}
+{\ttfamily \+\#include "{}vzpch.\+h"{}}\newline
+{\ttfamily \+\#include "{}Renderer2\+D.\+h"{}}\newline
+{\ttfamily \+\#include "{}Uniform\+Buffer.\+h"{}}\newline
+{\ttfamily \+\#include "{}Vertex\+Array.\+h"{}}\newline
+{\ttfamily \+\#include "{}Shader.\+h"{}}\newline
+{\ttfamily \+\#include "{}Render\+Command.\+h"{}}\newline
+{\ttfamily \+\#include $<$glm/\+gtc/\+matrix\+\_\+transform.\+hpp$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{namespace_vesper_struct_vesper_1_1_quad_vertex}{Vesper::\+\+Quad\+Vertex}}
+\item 
+struct \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data}{Vesper::\+\+Renderer2\+DData}}
+\item 
+struct \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_struct_vesper_1_1_renderer2_d_data_1_1_camera_data}{Vesper::\+\+Renderer2\+DData::\+\+Camera\+Data}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \doxymbox{\hyperlink{namespace_vesper}{Vesper}}
+\begin{DoxyCompactList}\small\item\em TEMPORARY. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data}{Renderer2\+DData}} \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{Vesper::\+s\+\_\+\+Data}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Class Documentation}
+\index{Vesper::QuadVertex@{Vesper::QuadVertex}}
+\label{struct_vesper_1_1_quad_vertex}
+\Hypertarget{namespace_vesper_struct_vesper_1_1_quad_vertex}
+\doxysubsubsection{struct Vesper::\+Quad\+Vertex}
+\begin{DoxyFields}{Class Members}
+\doxymbox{\Hypertarget{namespace_vesper_a0c6777f7a060892320669ac605c7e590}\label{namespace_vesper_a0c6777f7a060892320669ac605c7e590}} 
+vec4&
+Color&
+\\
+\hline
+
+\doxymbox{\Hypertarget{namespace_vesper_a4ea11ea49e0e5da6aec7dde16d09bca6}\label{namespace_vesper_a4ea11ea49e0e5da6aec7dde16d09bca6}} 
+vec3&
+Position&
+\\
+\hline
+
+\doxymbox{\Hypertarget{namespace_vesper_a31080e277722519e196c7446a056cabb}\label{namespace_vesper_a31080e277722519e196c7446a056cabb}} 
+vec2&
+TexCoord&
+\\
+\hline
+
+\doxymbox{\Hypertarget{namespace_vesper_a8f813cf5df6c8f6fff941e2e4761e2de}\label{namespace_vesper_a8f813cf5df6c8f6fff941e2e4761e2de}} 
+float&
+TexIndex&
+\\
+\hline
+
+\doxymbox{\Hypertarget{namespace_vesper_a666486ba9101ef7d901d8c3991c13d53}\label{namespace_vesper_a666486ba9101ef7d901d8c3991c13d53}} 
+float&
+TilingFactor&
+\\
+\hline
+
+\end{DoxyFields}
+\index{Vesper::Renderer2DData::CameraData@{Vesper::Renderer2DData::CameraData}}
+\label{struct_vesper_1_1_renderer2_d_data_1_1_camera_data}
+\Hypertarget{struct_vesper_1_1_renderer2_d_data_struct_vesper_1_1_renderer2_d_data_1_1_camera_data}
+\doxysubsubsection{struct Vesper::\+Renderer2\+DData::\+Camera\+Data}
+\begin{DoxyFields}{Class Members}
+\doxymbox{\Hypertarget{struct_vesper_1_1_renderer2_d_data_a9bab016c9bb498e62082c50f42abfae0}\label{struct_vesper_1_1_renderer2_d_data_a9bab016c9bb498e62082c50f42abfae0}} 
+mat4&
+ViewProjection&
+\\
+\hline
+
+\end{DoxyFields}

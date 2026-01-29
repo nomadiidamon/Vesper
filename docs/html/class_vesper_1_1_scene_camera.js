@@ -1,0 +1,35 @@
+var class_vesper_1_1_scene_camera =
+[
+    [ "ProjectionType", "class_vesper_1_1_scene_camera.html#aa913c988aa3de5b85e37c495d2360f6d", [
+      [ "Perspective", "class_vesper_1_1_scene_camera.html#aa913c988aa3de5b85e37c495d2360f6daa80420eef88d11f77532f1b9cb467fa3", null ],
+      [ "Orthographic", "class_vesper_1_1_scene_camera.html#aa913c988aa3de5b85e37c495d2360f6da03424250432f2aa71de95579d2c0eaeb", null ]
+    ] ],
+    [ "SceneCamera", "class_vesper_1_1_scene_camera.html#a3794093bb3e6bbe653bb6b4c40925a2d", null ],
+    [ "~SceneCamera", "class_vesper_1_1_scene_camera.html#a16ae0b759e6b314c61252255f278dc57", null ],
+    [ "GetOrthographicFarClip", "class_vesper_1_1_scene_camera.html#a843e25fbcf112c511b726c5f17ce8f37", null ],
+    [ "GetOrthographicNearClip", "class_vesper_1_1_scene_camera.html#a2de6ccddf6966bbd191c490e9ca89411", null ],
+    [ "GetOrthographicSize", "class_vesper_1_1_scene_camera.html#a77dc1acc17f6d8f0f4d43421f9cb075f", null ],
+    [ "GetPerspectiveFarClip", "class_vesper_1_1_scene_camera.html#a3f5c5a0674b2b902b740770679005b37", null ],
+    [ "GetPerspectiveNearClip", "class_vesper_1_1_scene_camera.html#a111fd965614811fadb2dadf9da1d143b", null ],
+    [ "GetPerspectiveVerticalFOV", "class_vesper_1_1_scene_camera.html#ac35a06d6e9582da215f2b4c3497905fb", null ],
+    [ "GetProjectionType", "class_vesper_1_1_scene_camera.html#a8f4ade36abb6f3763e7393b802155396", null ],
+    [ "RecalculateProjection", "class_vesper_1_1_scene_camera.html#a4d425e3cf6661dd790b3f6316cb9b44b", null ],
+    [ "SetOrthographic", "class_vesper_1_1_scene_camera.html#ace14365cd8c39efde9fce1a2ee11f043", null ],
+    [ "SetOrthographicFarClip", "class_vesper_1_1_scene_camera.html#ae6dc33bc42861cae43bdbe355cba2d71", null ],
+    [ "SetOrthographicNearClip", "class_vesper_1_1_scene_camera.html#acb2a687c8cd1b0d52f0cd1ac5ce9bfee", null ],
+    [ "SetOrthographicSize", "class_vesper_1_1_scene_camera.html#a784a857e6730667ed1ccecec6d4c2a26", null ],
+    [ "SetPerspective", "class_vesper_1_1_scene_camera.html#a308f2004c4d567cace10cd48f5b28667", null ],
+    [ "SetPerspectiveFarClip", "class_vesper_1_1_scene_camera.html#a2620095ec2902cad5d61f82cd10af65d", null ],
+    [ "SetPerspectiveNearClip", "class_vesper_1_1_scene_camera.html#a96b323c003de94721a2417b54d083aaa", null ],
+    [ "SetPerspectiveVerticalFOV", "class_vesper_1_1_scene_camera.html#ab9d2e500a54d75de816f9ae64a507c2f", null ],
+    [ "SetProjectionType", "class_vesper_1_1_scene_camera.html#a8e400e3d9abb5b8b46f0c369bf8e890a", null ],
+    [ "SetViewportSize", "class_vesper_1_1_scene_camera.html#a452fbd0a633f0c023e7866ef0ee79540", null ],
+    [ "m_AspectRatio", "class_vesper_1_1_scene_camera.html#a1355569425a6508a75c8a7089f98e104", null ],
+    [ "m_OrthographicFar", "class_vesper_1_1_scene_camera.html#a1bfc5fbeb5bae343fd3b073f67ba4b8d", null ],
+    [ "m_OrthographicNear", "class_vesper_1_1_scene_camera.html#ab41a6102906cca54d2ced298c0bdba62", null ],
+    [ "m_OrthographicSize", "class_vesper_1_1_scene_camera.html#ac7a0aeab7760a0420ed052e861304b12", null ],
+    [ "m_PerspectiveFar", "class_vesper_1_1_scene_camera.html#ac62bda89b2a4b3da5518bacd3d1b47b9", null ],
+    [ "m_PerspectiveFOV", "class_vesper_1_1_scene_camera.html#ac0100f3249b85755343cb55ec5b53130", null ],
+    [ "m_PerspectiveNear", "class_vesper_1_1_scene_camera.html#a9474f52838a948718953dada05eac9a4", null ],
+    [ "m_ProjectionType", "class_vesper_1_1_scene_camera.html#a41c793093cbe5d3f6afebf90cc9ad42d", null ]
+];

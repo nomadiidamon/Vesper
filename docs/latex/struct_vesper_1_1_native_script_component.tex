@@ -1,0 +1,68 @@
+\doxysection{Vesper::\+Native\+Script\+Component Struct Reference}
+\hypertarget{struct_vesper_1_1_native_script_component}{}\label{struct_vesper_1_1_native_script_component}\index{Vesper::NativeScriptComponent@{Vesper::NativeScriptComponent}}
+
+
+{\ttfamily \+\#include $<$Components.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T$>$ }\\void \doxymbox{\hyperlink{struct_vesper_1_1_native_script_component_a238c55d28fd5b4b7e11762fe8664be9e}{Bind}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_vesper_1_1_scriptable_entity}{Scriptable\+Entity}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{struct_vesper_1_1_native_script_component_a745bfcacb93afb4ff3e5f4ae7f0c3668}{Instance}} = nullptr
+\item 
+\doxymbox{\hyperlink{class_vesper_1_1_scriptable_entity}{Scriptable\+Entity}} \texorpdfstring{$\ast$}{*}(\texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{struct_vesper_1_1_native_script_component_ab73d2c29ae882197345ba020a267c284}{Instantiate\+Script}} )()
+\item 
+void(\texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{struct_vesper_1_1_native_script_component_a894ee963a7341f6d432435e96d57f73f}{Destroy\+Script}} )(\doxymbox{\hyperlink{struct_vesper_1_1_native_script_component}{Native\+Script\+Component}} \texorpdfstring{$\ast$}{*})
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{struct_vesper_1_1_native_script_component_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_vesper_1_1_native_script_component_a238c55d28fd5b4b7e11762fe8664be9e}\index{Vesper::NativeScriptComponent@{Vesper::NativeScriptComponent}!Bind@{Bind}}
+\index{Bind@{Bind}!Vesper::NativeScriptComponent@{Vesper::NativeScriptComponent}}
+\doxysubsubsection{\texorpdfstring{Bind()}{Bind()}}
+{\footnotesize\ttfamily \label{struct_vesper_1_1_native_script_component_a238c55d28fd5b4b7e11762fe8664be9e} 
+template$<$typename T$>$ \\
+void Vesper::\+\+Native\+Script\+Component::\+\+Bind (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_vesper_1_1_native_script_component_ab73d2c29ae882197345ba020a267c284}{InstantiateScript}}\ =\ []()\ \{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}ScriptableEntity*\textcolor{keyword}{>}\ (\textcolor{keyword}{new}\ T());\ \};}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_vesper_1_1_native_script_component_a894ee963a7341f6d432435e96d57f73f}{DestroyScript}}\ =\ [](NativeScriptComponent*\ nsc)\ \{\ \textcolor{keyword}{delete}\ nsc-\/>Instance;\ nsc-\/>Instance\ =\ \textcolor{keyword}{nullptr};\ \};}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\label{doc-variable-members}
+\Hypertarget{struct_vesper_1_1_native_script_component_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_vesper_1_1_native_script_component_a894ee963a7341f6d432435e96d57f73f}\index{Vesper::NativeScriptComponent@{Vesper::NativeScriptComponent}!DestroyScript@{DestroyScript}}
+\index{DestroyScript@{DestroyScript}!Vesper::NativeScriptComponent@{Vesper::NativeScriptComponent}}
+\doxysubsubsection{\texorpdfstring{DestroyScript}{DestroyScript}}
+{\footnotesize\ttfamily \label{struct_vesper_1_1_native_script_component_a894ee963a7341f6d432435e96d57f73f} 
+void(\texorpdfstring{$\ast$}{*} Vesper::\+\+Native\+Script\+Component::\+\+Destroy\+Script) (\doxymbox{\hyperlink{struct_vesper_1_1_native_script_component}{Native\+Script\+Component}} \texorpdfstring{$\ast$}{*})}
+
+\Hypertarget{struct_vesper_1_1_native_script_component_a745bfcacb93afb4ff3e5f4ae7f0c3668}\index{Vesper::NativeScriptComponent@{Vesper::NativeScriptComponent}!Instance@{Instance}}
+\index{Instance@{Instance}!Vesper::NativeScriptComponent@{Vesper::NativeScriptComponent}}
+\doxysubsubsection{\texorpdfstring{Instance}{Instance}}
+{\footnotesize\ttfamily \label{struct_vesper_1_1_native_script_component_a745bfcacb93afb4ff3e5f4ae7f0c3668} 
+\doxymbox{\hyperlink{class_vesper_1_1_scriptable_entity}{Scriptable\+Entity}}\texorpdfstring{$\ast$}{*} Vesper::\+\+Native\+Script\+Component::\+\+Instance = nullptr}
+
+\Hypertarget{struct_vesper_1_1_native_script_component_ab73d2c29ae882197345ba020a267c284}\index{Vesper::NativeScriptComponent@{Vesper::NativeScriptComponent}!InstantiateScript@{InstantiateScript}}
+\index{InstantiateScript@{InstantiateScript}!Vesper::NativeScriptComponent@{Vesper::NativeScriptComponent}}
+\doxysubsubsection{\texorpdfstring{InstantiateScript}{InstantiateScript}}
+{\footnotesize\ttfamily \label{struct_vesper_1_1_native_script_component_ab73d2c29ae882197345ba020a267c284} 
+\doxymbox{\hyperlink{class_vesper_1_1_scriptable_entity}{Scriptable\+Entity}} \texorpdfstring{$\ast$}{*}(\texorpdfstring{$\ast$}{*} Vesper::\+\+Native\+Script\+Component::\+\+Instantiate\+Script) ()}
+
+
+
+The documentation for this struct was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+Vesper/\+src/\+\+Vesper/\+\+Scene/\+\doxymbox{\hyperlink{_components_8h}{Components.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,114 @@
+\doxysection{Vesper::\+Timestep Class Reference}
+\hypertarget{class_vesper_1_1_timestep}{}\label{class_vesper_1_1_timestep}\index{Vesper::Timestep@{Vesper::Timestep}}
+
+
+{\ttfamily \+\#include $<$Timestep.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_vesper_1_1_timestep_afbfdbce6130b3424fa1e9ca9380f5deb}{Timestep}} (float time=0.\+0f)
+\item 
+\doxymbox{\hyperlink{class_vesper_1_1_timestep_acc683cc85fe71c046d960338246e6230}{operator float}} () const
+\item 
+float \doxymbox{\hyperlink{class_vesper_1_1_timestep_a1b5404f799b4cea11f9eff1edf896ca8}{Get\+Seconds}} () const
+\item 
+float \doxymbox{\hyperlink{class_vesper_1_1_timestep_a94a22799ee7fa19be376af7c2891f3e1}{Get\+Milliseconds}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \doxymbox{\hyperlink{class_vesper_1_1_timestep_a8f4c2ca8332134c5c303d67be9bf1d2f}{m\+\_\+\+Time}}
+\end{DoxyCompactItemize}
+
+
+\label{doc-constructors}
+\Hypertarget{class_vesper_1_1_timestep_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_vesper_1_1_timestep_afbfdbce6130b3424fa1e9ca9380f5deb}\index{Vesper::Timestep@{Vesper::Timestep}!Timestep@{Timestep}}
+\index{Timestep@{Timestep}!Vesper::Timestep@{Vesper::Timestep}}
+\doxysubsubsection{\texorpdfstring{Timestep()}{Timestep()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_timestep_afbfdbce6130b3424fa1e9ca9380f5deb} 
+Vesper::\+\+Timestep::\+\+Timestep (\begin{DoxyParamCaption}\item[{float}]{time}{ = {\ttfamily 0.0f}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_vesper_1_1_timestep_a8f4c2ca8332134c5c303d67be9bf1d2f}{m\_Time}}(time)\  }
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_timestep_a8f4c2ca8332134c5c303d67be9bf1d2f}{m\+\_\+\+Time}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_vesper_1_1_timestep_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_vesper_1_1_timestep_a94a22799ee7fa19be376af7c2891f3e1}\index{Vesper::Timestep@{Vesper::Timestep}!GetMilliseconds@{GetMilliseconds}}
+\index{GetMilliseconds@{GetMilliseconds}!Vesper::Timestep@{Vesper::Timestep}}
+\doxysubsubsection{\texorpdfstring{GetMilliseconds()}{GetMilliseconds()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_timestep_a94a22799ee7fa19be376af7c2891f3e1} 
+float Vesper::\+\+Timestep::\+\+Get\+Milliseconds (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00015\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_timestep_a8f4c2ca8332134c5c303d67be9bf1d2f}{m\_Time}}\ *\ 1000.0f;\ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_timestep_a8f4c2ca8332134c5c303d67be9bf1d2f}{m\+\_\+\+Time}}.
+
+\Hypertarget{class_vesper_1_1_timestep_a1b5404f799b4cea11f9eff1edf896ca8}\index{Vesper::Timestep@{Vesper::Timestep}!GetSeconds@{GetSeconds}}
+\index{GetSeconds@{GetSeconds}!Vesper::Timestep@{Vesper::Timestep}}
+\doxysubsubsection{\texorpdfstring{GetSeconds()}{GetSeconds()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_timestep_a1b5404f799b4cea11f9eff1edf896ca8} 
+float Vesper::\+\+Timestep::\+\+Get\+Seconds (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00014\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_timestep_a8f4c2ca8332134c5c303d67be9bf1d2f}{m\_Time}};\ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_timestep_a8f4c2ca8332134c5c303d67be9bf1d2f}{m\+\_\+\+Time}}.
+
+\Hypertarget{class_vesper_1_1_timestep_acc683cc85fe71c046d960338246e6230}\index{Vesper::Timestep@{Vesper::Timestep}!operator float@{operator float}}
+\index{operator float@{operator float}!Vesper::Timestep@{Vesper::Timestep}}
+\doxysubsubsection{\texorpdfstring{operator float()}{operator float()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_timestep_acc683cc85fe71c046d960338246e6230} 
+Vesper::\+\+Timestep::\+operator float (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00013\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_timestep_a8f4c2ca8332134c5c303d67be9bf1d2f}{m\_Time}};\ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_timestep_a8f4c2ca8332134c5c303d67be9bf1d2f}{m\+\_\+\+Time}}.
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_vesper_1_1_timestep_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_vesper_1_1_timestep_a8f4c2ca8332134c5c303d67be9bf1d2f}\index{Vesper::Timestep@{Vesper::Timestep}!m\_Time@{m\_Time}}
+\index{m\_Time@{m\_Time}!Vesper::Timestep@{Vesper::Timestep}}
+\doxysubsubsection{\texorpdfstring{m\_Time}{m\_Time}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_timestep_a8f4c2ca8332134c5c303d67be9bf1d2f} 
+float Vesper::\+\+Timestep::\+m\+\_\+\+Time\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by \doxymbox{\hyperlink{class_vesper_1_1_timestep_a94a22799ee7fa19be376af7c2891f3e1}{Get\+Milliseconds()}}, \doxymbox{\hyperlink{class_vesper_1_1_timestep_a1b5404f799b4cea11f9eff1edf896ca8}{Get\+Seconds()}}, \doxymbox{\hyperlink{class_vesper_1_1_timestep_acc683cc85fe71c046d960338246e6230}{operator float()}}, and \doxymbox{\hyperlink{class_vesper_1_1_timestep_afbfdbce6130b3424fa1e9ca9380f5deb}{Timestep()}}.
+
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+Vesper/\+src/\+\+Vesper/\+\+Core/\+\doxymbox{\hyperlink{_timestep_8h}{Timestep.\+h}}\end{DoxyCompactItemize}

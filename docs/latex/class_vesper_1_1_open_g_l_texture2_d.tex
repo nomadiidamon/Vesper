@@ -1,0 +1,386 @@
+\doxysection{Vesper::\+Open\+GLTexture2D Class Reference}
+\hypertarget{class_vesper_1_1_open_g_l_texture2_d}{}\label{class_vesper_1_1_open_g_l_texture2_d}\index{Vesper::OpenGLTexture2D@{Vesper::OpenGLTexture2D}}
+
+
+{\ttfamily \+\#include $<$Open\+GLTexture.\+h$>$}
+
+Inheritance diagram for Vesper::\+Open\+GLTexture2D:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_vesper_1_1_open_g_l_texture2_d}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_aa8b40d4b245e1afdc40e999981603969}{Open\+GLTexture2D}} (uint32\+\_\+t width, uint32\+\_\+t height)
+\item 
+\doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_a8300a76d3282b99c5a0ab3a675033a08}{Open\+GLTexture2D}} (const std::\+string \&path)
+\item 
+virtual \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_a2b50bb0dd855af770c8c553d67fac950}{\texorpdfstring{$\sim$}{\string~}\+Open\+GLTexture2D}} ()
+\item 
+virtual uint32\+\_\+t \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_a14ae2c519883d7bc717012747bb680b4}{Get\+Width}} () const override
+\item 
+virtual uint32\+\_\+t \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_a7627f84deef1848edc0497593306b2a0}{Get\+Height}} () const override
+\item 
+virtual uint32\+\_\+t \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_ac5ddebcc387031e1de00e93e798b36f5}{Get\+Renderer\+ID}} () const override
+\item 
+virtual void \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_aaec316e5c4cdf11660404a63cf4321bc}{Bind}} (uint32\+\_\+t slot) const override
+\item 
+virtual void \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_a476e425bff252714dcdb9bb5f47f473a}{Set\+Data}} (void \texorpdfstring{$\ast$}{*}data, uint32\+\_\+t size) override
+\item 
+virtual bool \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_ab8c23762c0545ac54e21e29c54144069}{operator==}} (const \doxymbox{\hyperlink{class_vesper_1_1_texture2_d}{Texture2D}} \&other) const override
+\item 
+virtual std::\+string \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_ac47bf8ec9b0cb47dabad48730ece2a7a}{Get\+Name}} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_vesper_1_1_texture}{Vesper::\+\+Texture}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \doxymbox{\hyperlink{class_vesper_1_1_texture_abaee8793ab274eb12e797affb8bb5406}{\texorpdfstring{$\sim$}{\string~}\+Texture}} ()=default
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std::\+string \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_aee199f77d7073384f25fa7e2656f3a04}{m\+\_\+\+Path}}
+\item 
+uint32\+\_\+t \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_af0f35dcb3cf2ccd0ca0b8d404638653f}{m\+\_\+\+Width}}
+\item 
+uint32\+\_\+t \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_a6bc35238f3a782ec278ab1571287bf0a}{m\+\_\+\+Height}}
+\item 
+uint32\+\_\+t \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_a8703bf29c3c70b051eadf52be351697e}{m\+\_\+\+Renderer\+ID}}
+\item 
+\doxymbox{\hyperlink{_open_g_l_shader_8h_a7efd7809e1632cdae75603fd1fee61c0}{GLenum}} \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_af755162c5dc9501fd48c49a2d2a0da27}{m\+\_\+\+Internal\+Format}}
+\item 
+\doxymbox{\hyperlink{_open_g_l_shader_8h_a7efd7809e1632cdae75603fd1fee61c0}{GLenum}} \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_a6612ac4a12209118cb2fe50a27b87b19}{m\+\_\+\+Data\+Format}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Public Member Functions inherited from \doxymbox{\hyperlink{class_vesper_1_1_texture2_d}{Vesper::\+\+Texture2D}}}
+\begin{DoxyCompactItemize}
+\item 
+static \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_texture2_d}{Texture2D}} $>$ \doxymbox{\hyperlink{class_vesper_1_1_texture2_d_ac7a064af2d05049e13f237ae2a508f22}{Create}} (uint32\+\_\+t width, uint32\+\_\+t height)
+\item 
+static \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_texture2_d}{Texture2D}} $>$ \doxymbox{\hyperlink{class_vesper_1_1_texture2_d_a8a1697b19fa2ebcd26fb387b2adaa0f7}{Create}} (const std::\+string \&path)
+\end{DoxyCompactItemize}
+
+
+\label{doc-constructors}
+\Hypertarget{class_vesper_1_1_open_g_l_texture2_d_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_vesper_1_1_open_g_l_texture2_d_aa8b40d4b245e1afdc40e999981603969}\index{Vesper::OpenGLTexture2D@{Vesper::OpenGLTexture2D}!OpenGLTexture2D@{OpenGLTexture2D}}
+\index{OpenGLTexture2D@{OpenGLTexture2D}!Vesper::OpenGLTexture2D@{Vesper::OpenGLTexture2D}}
+\doxysubsubsection{\texorpdfstring{OpenGLTexture2D()}{OpenGLTexture2D()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_open_g_l_texture2_d_aa8b40d4b245e1afdc40e999981603969} 
+Vesper::\+\+Open\+GLTexture2\+D::\+\+Open\+GLTexture2D (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{width}{, }\item[{uint32\+\_\+t}]{height}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_af0f35dcb3cf2ccd0ca0b8d404638653f}{m\_Width}}(width),\ \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_a6bc35238f3a782ec278ab1571287bf0a}{m\_Height}}(height) }
+\DoxyCodeLine{00011\ \ \ \ \ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_af755162c5dc9501fd48c49a2d2a0da27}{m\_InternalFormat}}\ =\ GL\_RGBA8;}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_a6612ac4a12209118cb2fe50a27b87b19}{m\_DataFormat}}\ =\ GL\_RGBA;}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ glCreateTextures(GL\_TEXTURE\_2D,\ 1,\ \&\doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_a8703bf29c3c70b051eadf52be351697e}{m\_RendererID}});}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ glTextureStorage2D(\doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_a8703bf29c3c70b051eadf52be351697e}{m\_RendererID}},\ 1,\ \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_af755162c5dc9501fd48c49a2d2a0da27}{m\_InternalFormat}},\ \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_af0f35dcb3cf2ccd0ca0b8d404638653f}{m\_Width}},\ \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_a6bc35238f3a782ec278ab1571287bf0a}{m\_Height}});}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ glTextureParameteri(\doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_a8703bf29c3c70b051eadf52be351697e}{m\_RendererID}},\ GL\_TEXTURE\_MIN\_FILTER,\ GL\_LINEAR);}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ glTextureParameteri(\doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_a8703bf29c3c70b051eadf52be351697e}{m\_RendererID}},\ GL\_TEXTURE\_MAG\_FILTER,\ GL\_NEAREST);}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ glTextureParameteri(\doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_a8703bf29c3c70b051eadf52be351697e}{m\_RendererID}},\ GL\_TEXTURE\_WRAP\_S,\ GL\_REPEAT);}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ glTextureParameteri(\doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_a8703bf29c3c70b051eadf52be351697e}{m\_RendererID}},\ GL\_TEXTURE\_WRAP\_T,\ GL\_REPEAT);}
+\DoxyCodeLine{00024\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_a6bc35238f3a782ec278ab1571287bf0a}{m\+\_\+\+Height}}, and \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_af0f35dcb3cf2ccd0ca0b8d404638653f}{m\+\_\+\+Width}}.
+
+\Hypertarget{class_vesper_1_1_open_g_l_texture2_d_a8300a76d3282b99c5a0ab3a675033a08}\index{Vesper::OpenGLTexture2D@{Vesper::OpenGLTexture2D}!OpenGLTexture2D@{OpenGLTexture2D}}
+\index{OpenGLTexture2D@{OpenGLTexture2D}!Vesper::OpenGLTexture2D@{Vesper::OpenGLTexture2D}}
+\doxysubsubsection{\texorpdfstring{OpenGLTexture2D()}{OpenGLTexture2D()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_open_g_l_texture2_d_a8300a76d3282b99c5a0ab3a675033a08} 
+Vesper::\+\+Open\+GLTexture2\+D::\+\+Open\+GLTexture2D (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{path}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_aee199f77d7073384f25fa7e2656f3a04}{m\_Path}}(path) }
+\DoxyCodeLine{00028\ \ \ \ \ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ width,\ height,\ channels;}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ stbi\_set\_flip\_vertically\_on\_load(1);}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ stbi\_uc*\ data\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_ae2376bed374f838d0047cf753f914f31}{VZ\_PROFILE\_SCOPE}}(\textcolor{stringliteral}{"{}stbi\_load\ -\/\ OpenGLTexture2D::OpenGLTexture2D(const\ std::string\&)"{}});}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ data\ =\ stbi\_load(path.c\_str(),\ (\textcolor{keywordtype}{int}*)\&width,\ (\textcolor{keywordtype}{int}*)\&height,\ \&channels,\ 0);}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_asserts_8h_a3b51b77f75997760894138afc89403c9}{VZ\_CORE\_ASSERT}}(data,\ \textcolor{stringliteral}{"{}Failed\ to\ load\ image\ from:\ "{}}\ +\ path);}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_af0f35dcb3cf2ccd0ca0b8d404638653f}{m\_Width}}\ =\ width;}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_a6bc35238f3a782ec278ab1571287bf0a}{m\_Height}}\ =\ height;}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_open_g_l_shader_8h_a7efd7809e1632cdae75603fd1fee61c0}{GLenum}}\ internalFormat\ =\ 0,\ dataFormat\ =\ 0;}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (channels\ ==\ 4)}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ internalFormat\ =\ GL\_RGBA8;}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ dataFormat\ =\ GL\_RGBA;}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (channels\ ==\ 3)}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ internalFormat\ =\ GL\_RGB8;}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ dataFormat\ =\ GL\_RGB;}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_af755162c5dc9501fd48c49a2d2a0da27}{m\_InternalFormat}}\ =\ internalFormat;}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_a6612ac4a12209118cb2fe50a27b87b19}{m\_DataFormat}}\ =\ dataFormat;}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_asserts_8h_a3b51b77f75997760894138afc89403c9}{VZ\_CORE\_ASSERT}}(internalFormat\ \&\ dataFormat,\ \textcolor{stringliteral}{"{}Format\ not\ supported!"{}});}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ glCreateTextures(GL\_TEXTURE\_2D,\ 1,\ \&\doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_a8703bf29c3c70b051eadf52be351697e}{m\_RendererID}});}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ glTextureStorage2D(\doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_a8703bf29c3c70b051eadf52be351697e}{m\_RendererID}},\ 1,\ internalFormat,\ \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_af0f35dcb3cf2ccd0ca0b8d404638653f}{m\_Width}},\ \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_a6bc35238f3a782ec278ab1571287bf0a}{m\_Height}});}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ glTextureParameteri(\doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_a8703bf29c3c70b051eadf52be351697e}{m\_RendererID}},\ GL\_TEXTURE\_MIN\_FILTER,\ GL\_LINEAR);}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ glTextureParameteri(\doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_a8703bf29c3c70b051eadf52be351697e}{m\_RendererID}},\ GL\_TEXTURE\_MAG\_FILTER,\ GL\_NEAREST);}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ glTextureParameteri(\doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_a8703bf29c3c70b051eadf52be351697e}{m\_RendererID}},\ GL\_TEXTURE\_WRAP\_S,\ GL\_REPEAT);}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ glTextureParameteri(\doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_a8703bf29c3c70b051eadf52be351697e}{m\_RendererID}},\ GL\_TEXTURE\_WRAP\_T,\ GL\_REPEAT);}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ glTextureSubImage2D(\doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_a8703bf29c3c70b051eadf52be351697e}{m\_RendererID}},\ 0,\ 0,\ 0,\ \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_af0f35dcb3cf2ccd0ca0b8d404638653f}{m\_Width}},\ \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_a6bc35238f3a782ec278ab1571287bf0a}{m\_Height}},\ dataFormat,\ GL\_UNSIGNED\_BYTE,\ data);}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ stbi\_image\_free(data);}
+\DoxyCodeLine{00072\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_a6bc35238f3a782ec278ab1571287bf0a}{m\+\_\+\+Height}}, \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_a8703bf29c3c70b051eadf52be351697e}{m\+\_\+\+Renderer\+ID}}, \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_af0f35dcb3cf2ccd0ca0b8d404638653f}{m\+\_\+\+Width}}, and \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_a8300a76d3282b99c5a0ab3a675033a08}{Open\+GLTexture2\+D()}}.
+
+
+
+Referenced by \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_a8300a76d3282b99c5a0ab3a675033a08}{Open\+GLTexture2\+D()}}.
+
+\Hypertarget{class_vesper_1_1_open_g_l_texture2_d_a2b50bb0dd855af770c8c553d67fac950}\index{Vesper::OpenGLTexture2D@{Vesper::OpenGLTexture2D}!````~OpenGLTexture2D@{\texorpdfstring{$\sim$}{\string~}OpenGLTexture2D}}
+\index{````~OpenGLTexture2D@{\texorpdfstring{$\sim$}{\string~}OpenGLTexture2D}!Vesper::OpenGLTexture2D@{Vesper::OpenGLTexture2D}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}OpenGLTexture2D()}{\string~OpenGLTexture2D()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_open_g_l_texture2_d_a2b50bb0dd855af770c8c553d67fac950} 
+Vesper::\+\+Open\+GLTexture2\+D::\+\texorpdfstring{$\sim$}{\string~}\+Open\+GLTexture2D (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00075\ \ \ \ \ \{}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ glDeleteTextures(1,\ \&\doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_a8703bf29c3c70b051eadf52be351697e}{m\_RendererID}});}
+\DoxyCodeLine{00078\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_a8703bf29c3c70b051eadf52be351697e}{m\+\_\+\+Renderer\+ID}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_vesper_1_1_open_g_l_texture2_d_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_vesper_1_1_open_g_l_texture2_d_aaec316e5c4cdf11660404a63cf4321bc}\index{Vesper::OpenGLTexture2D@{Vesper::OpenGLTexture2D}!Bind@{Bind}}
+\index{Bind@{Bind}!Vesper::OpenGLTexture2D@{Vesper::OpenGLTexture2D}}
+\doxysubsubsection{\texorpdfstring{Bind()}{Bind()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_open_g_l_texture2_d_aaec316e5c4cdf11660404a63cf4321bc} 
+void Vesper::\+\+Open\+GLTexture2\+D::\+\+Bind (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{slot}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \doxymbox{\hyperlink{class_vesper_1_1_texture_aecdaafa875ff2ce3e3972f4c42b23194}{Vesper::\+\+Texture}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00081\ \ \ \ \ \{}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ glBindTextureUnit(slot,\ \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_a8703bf29c3c70b051eadf52be351697e}{m\_RendererID}});}
+\DoxyCodeLine{00084\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_a8703bf29c3c70b051eadf52be351697e}{m\+\_\+\+Renderer\+ID}}.
+
+\Hypertarget{class_vesper_1_1_open_g_l_texture2_d_a7627f84deef1848edc0497593306b2a0}\index{Vesper::OpenGLTexture2D@{Vesper::OpenGLTexture2D}!GetHeight@{GetHeight}}
+\index{GetHeight@{GetHeight}!Vesper::OpenGLTexture2D@{Vesper::OpenGLTexture2D}}
+\doxysubsubsection{\texorpdfstring{GetHeight()}{GetHeight()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_open_g_l_texture2_d_a7627f84deef1848edc0497593306b2a0} 
+virtual uint32\+\_\+t Vesper::\+\+Open\+GLTexture2\+D::\+\+Get\+Height (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \doxymbox{\hyperlink{class_vesper_1_1_texture_a9b506f28915ef764c52b23897606628b}{Vesper::\+\+Texture}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00016\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_a6bc35238f3a782ec278ab1571287bf0a}{m\_Height}};\ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_a6bc35238f3a782ec278ab1571287bf0a}{m\+\_\+\+Height}}.
+
+\Hypertarget{class_vesper_1_1_open_g_l_texture2_d_ac47bf8ec9b0cb47dabad48730ece2a7a}\index{Vesper::OpenGLTexture2D@{Vesper::OpenGLTexture2D}!GetName@{GetName}}
+\index{GetName@{GetName}!Vesper::OpenGLTexture2D@{Vesper::OpenGLTexture2D}}
+\doxysubsubsection{\texorpdfstring{GetName()}{GetName()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_open_g_l_texture2_d_ac47bf8ec9b0cb47dabad48730ece2a7a} 
+std::\+string Vesper::\+\+Open\+GLTexture2\+D::\+\+Get\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \doxymbox{\hyperlink{class_vesper_1_1_texture_a8b5e8ba4dc3e4cec52810b22dab26dd7}{Vesper::\+\+Texture}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00095\ \ \ \ \ \{}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Extract\ filename\ from\ path}}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ lastSlash\ =\ \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_aee199f77d7073384f25fa7e2656f3a04}{m\_Path}}.find\_last\_of(\textcolor{stringliteral}{"{}/\(\backslash\)\(\backslash\)"{}});}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (lastSlash\ ==\ std::string::npos)}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_aee199f77d7073384f25fa7e2656f3a04}{m\_Path}};\ \textcolor{comment}{//\ No\ directory\ part}}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_aee199f77d7073384f25fa7e2656f3a04}{m\_Path}}.substr(lastSlash\ +\ 1);}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_vesper_1_1_open_g_l_texture2_d_ac5ddebcc387031e1de00e93e798b36f5}\index{Vesper::OpenGLTexture2D@{Vesper::OpenGLTexture2D}!GetRendererID@{GetRendererID}}
+\index{GetRendererID@{GetRendererID}!Vesper::OpenGLTexture2D@{Vesper::OpenGLTexture2D}}
+\doxysubsubsection{\texorpdfstring{GetRendererID()}{GetRendererID()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_open_g_l_texture2_d_ac5ddebcc387031e1de00e93e798b36f5} 
+virtual uint32\+\_\+t Vesper::\+\+Open\+GLTexture2\+D::\+\+Get\+Renderer\+ID (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \doxymbox{\hyperlink{class_vesper_1_1_texture_aac3791b93ab26cf8c8df7ae02c6cc8d3}{Vesper::\+\+Texture}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00017\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_a8703bf29c3c70b051eadf52be351697e}{m\_RendererID}};\ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_a8703bf29c3c70b051eadf52be351697e}{m\+\_\+\+Renderer\+ID}}.
+
+\Hypertarget{class_vesper_1_1_open_g_l_texture2_d_a14ae2c519883d7bc717012747bb680b4}\index{Vesper::OpenGLTexture2D@{Vesper::OpenGLTexture2D}!GetWidth@{GetWidth}}
+\index{GetWidth@{GetWidth}!Vesper::OpenGLTexture2D@{Vesper::OpenGLTexture2D}}
+\doxysubsubsection{\texorpdfstring{GetWidth()}{GetWidth()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_open_g_l_texture2_d_a14ae2c519883d7bc717012747bb680b4} 
+virtual uint32\+\_\+t Vesper::\+\+Open\+GLTexture2\+D::\+\+Get\+Width (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \doxymbox{\hyperlink{class_vesper_1_1_texture_a7e31e9571857dded8570e2c102235d4c}{Vesper::\+\+Texture}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00015\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_af0f35dcb3cf2ccd0ca0b8d404638653f}{m\_Width}};\ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_af0f35dcb3cf2ccd0ca0b8d404638653f}{m\+\_\+\+Width}}.
+
+\Hypertarget{class_vesper_1_1_open_g_l_texture2_d_ab8c23762c0545ac54e21e29c54144069}\index{Vesper::OpenGLTexture2D@{Vesper::OpenGLTexture2D}!operator==@{operator==}}
+\index{operator==@{operator==}!Vesper::OpenGLTexture2D@{Vesper::OpenGLTexture2D}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_open_g_l_texture2_d_ab8c23762c0545ac54e21e29c54144069} 
+virtual bool Vesper::\+\+Open\+GLTexture2\+D::\+operator== (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_vesper_1_1_texture2_d}{Texture2D}} \&}]{other}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \doxymbox{\hyperlink{class_vesper_1_1_texture_a82a2ccb871e737e685589ab0dbd35a34}{Vesper::\+\+Texture}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_a8703bf29c3c70b051eadf52be351697e}{m\_RendererID}}\ ==\ ((\doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_aa8b40d4b245e1afdc40e999981603969}{OpenGLTexture2D}}\&)other).\doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_a8703bf29c3c70b051eadf52be351697e}{m\_RendererID}};}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_a8703bf29c3c70b051eadf52be351697e}{m\+\_\+\+Renderer\+ID}}.
+
+\Hypertarget{class_vesper_1_1_open_g_l_texture2_d_a476e425bff252714dcdb9bb5f47f473a}\index{Vesper::OpenGLTexture2D@{Vesper::OpenGLTexture2D}!SetData@{SetData}}
+\index{SetData@{SetData}!Vesper::OpenGLTexture2D@{Vesper::OpenGLTexture2D}}
+\doxysubsubsection{\texorpdfstring{SetData()}{SetData()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_open_g_l_texture2_d_a476e425bff252714dcdb9bb5f47f473a} 
+void Vesper::\+\+Open\+GLTexture2\+D::\+\+Set\+Data (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{data}{, }\item[{uint32\+\_\+t}]{size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \doxymbox{\hyperlink{class_vesper_1_1_texture_aae25563a473b10ba3cea4d82310d734a}{Vesper::\+\+Texture}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00087\ \ \ \ \ \{}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ uint32\_t\ bpp\ =\ (\doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_a6612ac4a12209118cb2fe50a27b87b19}{m\_DataFormat}}\ ==\ GL\_RGBA\ ?\ 4\ :\ 3);}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_asserts_8h_a3b51b77f75997760894138afc89403c9}{VZ\_CORE\_ASSERT}}(size\ ==\ \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_af0f35dcb3cf2ccd0ca0b8d404638653f}{m\_Width}}\ *\ \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_a6bc35238f3a782ec278ab1571287bf0a}{m\_Height}}\ *\ bpp,\ \textcolor{stringliteral}{"{}Data\ must\ be\ entire\ texture!"{}});}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ glTextureSubImage2D(\doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_a8703bf29c3c70b051eadf52be351697e}{m\_RendererID}},\ 0,\ 0,\ 0,\ \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_af0f35dcb3cf2ccd0ca0b8d404638653f}{m\_Width}},\ \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_a6bc35238f3a782ec278ab1571287bf0a}{m\_Height}},\ \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_a6612ac4a12209118cb2fe50a27b87b19}{m\_DataFormat}},\ GL\_UNSIGNED\_BYTE,\ data);}
+\DoxyCodeLine{00092\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_vesper_1_1_open_g_l_texture2_d_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_vesper_1_1_open_g_l_texture2_d_a6612ac4a12209118cb2fe50a27b87b19}\index{Vesper::OpenGLTexture2D@{Vesper::OpenGLTexture2D}!m\_DataFormat@{m\_DataFormat}}
+\index{m\_DataFormat@{m\_DataFormat}!Vesper::OpenGLTexture2D@{Vesper::OpenGLTexture2D}}
+\doxysubsubsection{\texorpdfstring{m\_DataFormat}{m\_DataFormat}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_open_g_l_texture2_d_a6612ac4a12209118cb2fe50a27b87b19} 
+\doxymbox{\hyperlink{_open_g_l_shader_8h_a7efd7809e1632cdae75603fd1fee61c0}{GLenum}} Vesper::\+\+Open\+GLTexture2\+D::\+m\+\_\+\+Data\+Format\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_vesper_1_1_open_g_l_texture2_d_a6bc35238f3a782ec278ab1571287bf0a}\index{Vesper::OpenGLTexture2D@{Vesper::OpenGLTexture2D}!m\_Height@{m\_Height}}
+\index{m\_Height@{m\_Height}!Vesper::OpenGLTexture2D@{Vesper::OpenGLTexture2D}}
+\doxysubsubsection{\texorpdfstring{m\_Height}{m\_Height}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_open_g_l_texture2_d_a6bc35238f3a782ec278ab1571287bf0a} 
+uint32\+\_\+t Vesper::\+\+Open\+GLTexture2\+D::\+m\+\_\+\+Height\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_a7627f84deef1848edc0497593306b2a0}{Get\+Height()}}, \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_a8300a76d3282b99c5a0ab3a675033a08}{Open\+GLTexture2\+D()}}, and \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_aa8b40d4b245e1afdc40e999981603969}{Open\+GLTexture2\+D()}}.
+
+\Hypertarget{class_vesper_1_1_open_g_l_texture2_d_af755162c5dc9501fd48c49a2d2a0da27}\index{Vesper::OpenGLTexture2D@{Vesper::OpenGLTexture2D}!m\_InternalFormat@{m\_InternalFormat}}
+\index{m\_InternalFormat@{m\_InternalFormat}!Vesper::OpenGLTexture2D@{Vesper::OpenGLTexture2D}}
+\doxysubsubsection{\texorpdfstring{m\_InternalFormat}{m\_InternalFormat}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_open_g_l_texture2_d_af755162c5dc9501fd48c49a2d2a0da27} 
+\doxymbox{\hyperlink{_open_g_l_shader_8h_a7efd7809e1632cdae75603fd1fee61c0}{GLenum}} Vesper::\+\+Open\+GLTexture2\+D::\+m\+\_\+\+Internal\+Format\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_vesper_1_1_open_g_l_texture2_d_aee199f77d7073384f25fa7e2656f3a04}\index{Vesper::OpenGLTexture2D@{Vesper::OpenGLTexture2D}!m\_Path@{m\_Path}}
+\index{m\_Path@{m\_Path}!Vesper::OpenGLTexture2D@{Vesper::OpenGLTexture2D}}
+\doxysubsubsection{\texorpdfstring{m\_Path}{m\_Path}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_open_g_l_texture2_d_aee199f77d7073384f25fa7e2656f3a04} 
+std::\+string Vesper::\+\+Open\+GLTexture2\+D::\+m\+\_\+\+Path\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_vesper_1_1_open_g_l_texture2_d_a8703bf29c3c70b051eadf52be351697e}\index{Vesper::OpenGLTexture2D@{Vesper::OpenGLTexture2D}!m\_RendererID@{m\_RendererID}}
+\index{m\_RendererID@{m\_RendererID}!Vesper::OpenGLTexture2D@{Vesper::OpenGLTexture2D}}
+\doxysubsubsection{\texorpdfstring{m\_RendererID}{m\_RendererID}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_open_g_l_texture2_d_a8703bf29c3c70b051eadf52be351697e} 
+uint32\+\_\+t Vesper::\+\+Open\+GLTexture2\+D::\+m\+\_\+\+Renderer\+ID\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_aaec316e5c4cdf11660404a63cf4321bc}{Bind()}}, \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_ac5ddebcc387031e1de00e93e798b36f5}{Get\+Renderer\+ID()}}, \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_a8300a76d3282b99c5a0ab3a675033a08}{Open\+GLTexture2\+D()}}, \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_ab8c23762c0545ac54e21e29c54144069}{operator==()}}, and \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_a2b50bb0dd855af770c8c553d67fac950}{\texorpdfstring{$\sim$}{\string~}\+Open\+GLTexture2\+D()}}.
+
+\Hypertarget{class_vesper_1_1_open_g_l_texture2_d_af0f35dcb3cf2ccd0ca0b8d404638653f}\index{Vesper::OpenGLTexture2D@{Vesper::OpenGLTexture2D}!m\_Width@{m\_Width}}
+\index{m\_Width@{m\_Width}!Vesper::OpenGLTexture2D@{Vesper::OpenGLTexture2D}}
+\doxysubsubsection{\texorpdfstring{m\_Width}{m\_Width}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_open_g_l_texture2_d_af0f35dcb3cf2ccd0ca0b8d404638653f} 
+uint32\+\_\+t Vesper::\+\+Open\+GLTexture2\+D::\+m\+\_\+\+Width\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_a14ae2c519883d7bc717012747bb680b4}{Get\+Width()}}, \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_a8300a76d3282b99c5a0ab3a675033a08}{Open\+GLTexture2\+D()}}, and \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_aa8b40d4b245e1afdc40e999981603969}{Open\+GLTexture2\+D()}}.
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+Vesper/\+src/\+\+Render\+API/\+\+Open\+GL/\+\doxymbox{\hyperlink{_open_g_l_texture_8h}{Open\+GLTexture.\+h}}\item 
+Vesper/\+src/\+\+Render\+API/\+\+Open\+GL/\+\doxymbox{\hyperlink{_open_g_l_texture_8cpp}{Open\+GLTexture.\+cpp}}\end{DoxyCompactItemize}

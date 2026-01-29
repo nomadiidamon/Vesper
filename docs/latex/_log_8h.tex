@@ -1,0 +1,153 @@
+\doxysection{Vesper/\+src/\+\+Vesper/\+\+Core/\+\+Log.h File Reference}
+\hypertarget{_log_8h}{}\label{_log_8h}\index{Vesper/src/Vesper/Core/Log.h@{Vesper/src/Vesper/Core/Log.h}}
+{\ttfamily \+\#include "{}Base.\+h"{}}\newline
+{\ttfamily \+\#include "{}spdlog/\+spdlog.\+h"{}}\newline
+{\ttfamily \+\#include "{}spdlog/\+fmt/\+ostr.\+h"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \doxymbox{\hyperlink{class_vesper_1_1_log}{Vesper::\+\+Log}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \doxymbox{\hyperlink{namespace_vesper}{Vesper}}
+\begin{DoxyCompactList}\small\item\em TEMPORARY. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{_log_8h_a745dd924b08fe6cfa0156a813491ee25}{VZ\+\_\+\+CORE\+\_\+\+TRACE}}(...)
+\item 
+\+\#define \doxymbox{\hyperlink{_log_8h_adb5d169d80c40496a160a4fd90ebca37}{VZ\+\_\+\+CORE\+\_\+\+INFO}}(...)
+\item 
+\+\#define \doxymbox{\hyperlink{_log_8h_a8d94a9db5af5b980be1ae8e66f679d55}{VZ\+\_\+\+CORE\+\_\+\+WARN}}(...)
+\item 
+\+\#define \doxymbox{\hyperlink{_log_8h_af9f85085b8d9825fe5d84ca485b7ee89}{VZ\+\_\+\+CORE\+\_\+\+ERROR}}(...)
+\item 
+\+\#define \doxymbox{\hyperlink{_log_8h_a21537f5b8b309c9e94001fdb9c36f47f}{VZ\+\_\+\+CORE\+\_\+\+FATAL}}(...)
+\item 
+\+\#define \doxymbox{\hyperlink{_log_8h_ae46c5576d38f88e75b2b46fb88bab7fd}{VZ\+\_\+\+TRACE}}(...)
+\item 
+\+\#define \doxymbox{\hyperlink{_log_8h_abea15d1ee09e7905392b7f136b1d3f65}{VZ\+\_\+\+INFO}}(...)
+\item 
+\+\#define \doxymbox{\hyperlink{_log_8h_a326421f6e3655b1bc966ca40b2cd3275}{VZ\+\_\+\+WARN}}(...)
+\item 
+\+\#define \doxymbox{\hyperlink{_log_8h_aba13729345ff739ce84f7cacb21e6501}{VZ\+\_\+\+ERROR}}(...)
+\item 
+\+\#define \doxymbox{\hyperlink{_log_8h_afdf3b2fd9a9ae161c6037e81fe0c6b3f}{VZ\+\_\+\+FATAL}}(...)
+\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{_log_8h_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{_log_8h_af9f85085b8d9825fe5d84ca485b7ee89}\index{Log.h@{Log.h}!VZ\_CORE\_ERROR@{VZ\_CORE\_ERROR}}
+\index{VZ\_CORE\_ERROR@{VZ\_CORE\_ERROR}!Log.h@{Log.h}}
+\doxysubsubsection{\texorpdfstring{VZ\_CORE\_ERROR}{VZ\_CORE\_ERROR}}
+{\footnotesize\ttfamily \label{_log_8h_af9f85085b8d9825fe5d84ca485b7ee89} 
+\+\#define VZ\+\_\+\+CORE\+\_\+\+ERROR(\begin{DoxyParamCaption}\item[{}]{}...{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\doxymbox{\hyperlink{class_vesper_1_1_log_a308072f59ab7bf4c27321ec9cc26bdf6}{::Vesper::Log::GetCoreLogger}}()-\/>error(\_\_VA\_ARGS\_\_)}
+
+\end{DoxyCode}
+\Hypertarget{_log_8h_a21537f5b8b309c9e94001fdb9c36f47f}\index{Log.h@{Log.h}!VZ\_CORE\_FATAL@{VZ\_CORE\_FATAL}}
+\index{VZ\_CORE\_FATAL@{VZ\_CORE\_FATAL}!Log.h@{Log.h}}
+\doxysubsubsection{\texorpdfstring{VZ\_CORE\_FATAL}{VZ\_CORE\_FATAL}}
+{\footnotesize\ttfamily \label{_log_8h_a21537f5b8b309c9e94001fdb9c36f47f} 
+\+\#define VZ\+\_\+\+CORE\+\_\+\+FATAL(\begin{DoxyParamCaption}\item[{}]{}...{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\doxymbox{\hyperlink{class_vesper_1_1_log_a308072f59ab7bf4c27321ec9cc26bdf6}{::Vesper::Log::GetCoreLogger}}()-\/>critical(\_\_VA\_ARGS\_\_)}
+
+\end{DoxyCode}
+\Hypertarget{_log_8h_adb5d169d80c40496a160a4fd90ebca37}\index{Log.h@{Log.h}!VZ\_CORE\_INFO@{VZ\_CORE\_INFO}}
+\index{VZ\_CORE\_INFO@{VZ\_CORE\_INFO}!Log.h@{Log.h}}
+\doxysubsubsection{\texorpdfstring{VZ\_CORE\_INFO}{VZ\_CORE\_INFO}}
+{\footnotesize\ttfamily \label{_log_8h_adb5d169d80c40496a160a4fd90ebca37} 
+\+\#define VZ\+\_\+\+CORE\+\_\+\+INFO(\begin{DoxyParamCaption}\item[{}]{}...{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\doxymbox{\hyperlink{class_vesper_1_1_log_a308072f59ab7bf4c27321ec9cc26bdf6}{::Vesper::Log::GetCoreLogger}}()-\/>info(\_\_VA\_ARGS\_\_)}
+
+\end{DoxyCode}
+\Hypertarget{_log_8h_a745dd924b08fe6cfa0156a813491ee25}\index{Log.h@{Log.h}!VZ\_CORE\_TRACE@{VZ\_CORE\_TRACE}}
+\index{VZ\_CORE\_TRACE@{VZ\_CORE\_TRACE}!Log.h@{Log.h}}
+\doxysubsubsection{\texorpdfstring{VZ\_CORE\_TRACE}{VZ\_CORE\_TRACE}}
+{\footnotesize\ttfamily \label{_log_8h_a745dd924b08fe6cfa0156a813491ee25} 
+\+\#define VZ\+\_\+\+CORE\+\_\+\+TRACE(\begin{DoxyParamCaption}\item[{}]{}...{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\doxymbox{\hyperlink{class_vesper_1_1_log_a308072f59ab7bf4c27321ec9cc26bdf6}{::Vesper::Log::GetCoreLogger}}()-\/>trace(\_\_VA\_ARGS\_\_)}
+
+\end{DoxyCode}
+\Hypertarget{_log_8h_a8d94a9db5af5b980be1ae8e66f679d55}\index{Log.h@{Log.h}!VZ\_CORE\_WARN@{VZ\_CORE\_WARN}}
+\index{VZ\_CORE\_WARN@{VZ\_CORE\_WARN}!Log.h@{Log.h}}
+\doxysubsubsection{\texorpdfstring{VZ\_CORE\_WARN}{VZ\_CORE\_WARN}}
+{\footnotesize\ttfamily \label{_log_8h_a8d94a9db5af5b980be1ae8e66f679d55} 
+\+\#define VZ\+\_\+\+CORE\+\_\+\+WARN(\begin{DoxyParamCaption}\item[{}]{}...{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\doxymbox{\hyperlink{class_vesper_1_1_log_a308072f59ab7bf4c27321ec9cc26bdf6}{::Vesper::Log::GetCoreLogger}}()-\/>warn(\_\_VA\_ARGS\_\_)}
+
+\end{DoxyCode}
+\Hypertarget{_log_8h_aba13729345ff739ce84f7cacb21e6501}\index{Log.h@{Log.h}!VZ\_ERROR@{VZ\_ERROR}}
+\index{VZ\_ERROR@{VZ\_ERROR}!Log.h@{Log.h}}
+\doxysubsubsection{\texorpdfstring{VZ\_ERROR}{VZ\_ERROR}}
+{\footnotesize\ttfamily \label{_log_8h_aba13729345ff739ce84f7cacb21e6501} 
+\+\#define VZ\+\_\+\+ERROR(\begin{DoxyParamCaption}\item[{}]{}...{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\doxymbox{\hyperlink{class_vesper_1_1_log_a34127f1a92073183577fd3b86eaec092}{::Vesper::Log::GetClientLogger}}()-\/>error(\_\_VA\_ARGS\_\_)}
+
+\end{DoxyCode}
+\Hypertarget{_log_8h_afdf3b2fd9a9ae161c6037e81fe0c6b3f}\index{Log.h@{Log.h}!VZ\_FATAL@{VZ\_FATAL}}
+\index{VZ\_FATAL@{VZ\_FATAL}!Log.h@{Log.h}}
+\doxysubsubsection{\texorpdfstring{VZ\_FATAL}{VZ\_FATAL}}
+{\footnotesize\ttfamily \label{_log_8h_afdf3b2fd9a9ae161c6037e81fe0c6b3f} 
+\+\#define VZ\+\_\+\+FATAL(\begin{DoxyParamCaption}\item[{}]{}...{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\doxymbox{\hyperlink{class_vesper_1_1_log_a34127f1a92073183577fd3b86eaec092}{::Vesper::Log::GetClientLogger}}()-\/>critical(\_\_VA\_ARGS\_\_)}
+
+\end{DoxyCode}
+\Hypertarget{_log_8h_abea15d1ee09e7905392b7f136b1d3f65}\index{Log.h@{Log.h}!VZ\_INFO@{VZ\_INFO}}
+\index{VZ\_INFO@{VZ\_INFO}!Log.h@{Log.h}}
+\doxysubsubsection{\texorpdfstring{VZ\_INFO}{VZ\_INFO}}
+{\footnotesize\ttfamily \label{_log_8h_abea15d1ee09e7905392b7f136b1d3f65} 
+\+\#define VZ\+\_\+\+INFO(\begin{DoxyParamCaption}\item[{}]{}...{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\doxymbox{\hyperlink{class_vesper_1_1_log_a34127f1a92073183577fd3b86eaec092}{::Vesper::Log::GetClientLogger}}()-\/>info(\_\_VA\_ARGS\_\_)}
+
+\end{DoxyCode}
+\Hypertarget{_log_8h_ae46c5576d38f88e75b2b46fb88bab7fd}\index{Log.h@{Log.h}!VZ\_TRACE@{VZ\_TRACE}}
+\index{VZ\_TRACE@{VZ\_TRACE}!Log.h@{Log.h}}
+\doxysubsubsection{\texorpdfstring{VZ\_TRACE}{VZ\_TRACE}}
+{\footnotesize\ttfamily \label{_log_8h_ae46c5576d38f88e75b2b46fb88bab7fd} 
+\+\#define VZ\+\_\+\+TRACE(\begin{DoxyParamCaption}\item[{}]{}...{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\doxymbox{\hyperlink{class_vesper_1_1_log_a34127f1a92073183577fd3b86eaec092}{::Vesper::Log::GetClientLogger}}()-\/>trace(\_\_VA\_ARGS\_\_)}
+
+\end{DoxyCode}
+\Hypertarget{_log_8h_a326421f6e3655b1bc966ca40b2cd3275}\index{Log.h@{Log.h}!VZ\_WARN@{VZ\_WARN}}
+\index{VZ\_WARN@{VZ\_WARN}!Log.h@{Log.h}}
+\doxysubsubsection{\texorpdfstring{VZ\_WARN}{VZ\_WARN}}
+{\footnotesize\ttfamily \label{_log_8h_a326421f6e3655b1bc966ca40b2cd3275} 
+\+\#define VZ\+\_\+\+WARN(\begin{DoxyParamCaption}\item[{}]{}...{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\doxymbox{\hyperlink{class_vesper_1_1_log_a34127f1a92073183577fd3b86eaec092}{::Vesper::Log::GetClientLogger}}()-\/>warn(\_\_VA\_ARGS\_\_)}
+
+\end{DoxyCode}

@@ -1,0 +1,59 @@
+\doxysection{Particle\+System.\+h}
+\hypertarget{_particle_system_8h_source}{}\label{_particle_system_8h_source}\index{Vesper/src/Vesper/ParticleSystem/ParticleSystem.h@{Vesper/src/Vesper/ParticleSystem/ParticleSystem.h}}
+\doxymbox{\hyperlink{_particle_system_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{pragma}\ \textcolor{preprocessor}{once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\ \doxymbox{\hyperlink{_vesper_8h}{"{}Vesper.h"{}}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\ \textcolor{preprocessor}{"{}Vesper/Renderer/OrthographicCamera.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{namespace}\ \doxymbox{\hyperlink{namespace_vesper}{Vesper}}\ \{}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keyword}{struct}\ \doxymbox{\hyperlink{namespace_vesper_struct_vesper_1_1_particle_props}{ParticleProps}}}
+\DoxyCodeLine{00009\ \ \ \ \ \{}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ac566ca481b8b2edd80936622e29c8994}{glm}}::\doxymbox{\hyperlink{namespace_vesper_ac566ca481b8b2edd80936622e29c8994}{vec3}}\ \doxymbox{\hyperlink{namespace_vesper_ac566ca481b8b2edd80936622e29c8994}{Position}}\ =\ \{\ 0.0f,\ 0.0f,\ 0.0f\ \};}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_aef99f354543cb171f9abac0f1838deb0}{glm}}::\doxymbox{\hyperlink{namespace_vesper_aef99f354543cb171f9abac0f1838deb0}{vec3}}\ \doxymbox{\hyperlink{namespace_vesper_aef99f354543cb171f9abac0f1838deb0}{Velocity}}\ =\ \{\ 0.0f,\ 0.0f,\ 0.0f\ \};}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ade8cab10857f10ca5be3096660945662}{glm}}::\doxymbox{\hyperlink{namespace_vesper_ade8cab10857f10ca5be3096660945662}{vec3}}\ \doxymbox{\hyperlink{namespace_vesper_ade8cab10857f10ca5be3096660945662}{VelocityVariation}}\ =\ \{\ 0.0f,\ 0.0f,\ 0.0f\ \};}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_abd855a0552fa453544b720b76bf3a17d}{glm}}::\doxymbox{\hyperlink{namespace_vesper_abd855a0552fa453544b720b76bf3a17d}{vec4}}\ \doxymbox{\hyperlink{namespace_vesper_abd855a0552fa453544b720b76bf3a17d}{ColorBegin}}\ =\ \{\ 1.0f,\ 1.0f,\ 1.0f,\ 1.0f\ \};}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_a4919a875df30efa40189237933b1a691}{glm}}::\doxymbox{\hyperlink{namespace_vesper_a4919a875df30efa40189237933b1a691}{vec4}}\ \doxymbox{\hyperlink{namespace_vesper_a4919a875df30efa40189237933b1a691}{ColorEnd}}\ =\ \{\ 1.0f,\ 1.0f,\ 1.0f,\ 1.0f\ \};}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{namespace_vesper_a72b9b818d5605e2aacd4ba4f0b863214}{SizeBegin}}\ =\ 1.0f;}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{namespace_vesper_a90662c053ea9e19f7e985a41df3843b9}{SizeEnd}}\ =\ 0.0f;}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{namespace_vesper_a67809d260f3d07a0b972ce767e286462}{SizeVariation}}\ =\ 0.0f;}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{namespace_vesper_afe324d4034536e14e8b110fbbd65fb9e}{Rotation}}\ =\ 0.0f;}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{namespace_vesper_a67c9eaaa461bd1149c587c0f4e3c02c3}{RotationVariation}}\ =\ 0.0f;}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{namespace_vesper_a3eecf8559895b68d5678b63010100851}{LifeTime}}\ =\ 1.0f;}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{namespace_vesper_a0fa1203452470316871c53cef755a8eb}{LifetimeVariation}}\ =\ 0.0f;}
+\DoxyCodeLine{00022\ \ \ \ \ \};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{class}\ \doxymbox{\hyperlink{class_vesper_1_1_particle_system}{ParticleSystem}}}
+\DoxyCodeLine{00025\ \ \ \ \ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_particle_system_a22a477e8361045bed4a2f3a6fe2e117c}{ParticleSystem}}();}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_particle_system_a571acb2630cf39c4be73aefe7bc7e765}{ParticleSystem}}(uint32\_t\ maxParticles);}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_particle_system_af5dae651edaf6978930507724f80ee2b}{OnUpdate}}(\doxymbox{\hyperlink{class_vesper_1_1_timestep}{Timestep}}\ ts);}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_particle_system_a9b83cfdb93feefc0480c940c4048ea57}{OnRender}}(\doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera}{OrthographicCamera}}\&\ camera);}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_particle_system_ac5d9958ce74679d4115e9b2df4ce1412}{Emit}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{namespace_vesper_struct_vesper_1_1_particle_props}{ParticleProps}}\&\ particleProps);}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_particle_system_a3f455d771986c0a89edebf05bcedd5a4}{SetParticleProps}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{namespace_vesper_struct_vesper_1_1_particle_props}{ParticleProps}}\&\ particleProps)\ \{\ m\_Props\ =\ particleProps;\ \}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct}\ \doxymbox{\hyperlink{class_vesper_1_1_particle_system_struct_vesper_1_1_particle_system_1_1_particle}{Particle}}}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_particle_system_a6d98e5e1a0382d730332c387660b88a3}{glm}}::\doxymbox{\hyperlink{class_vesper_1_1_particle_system_a6d98e5e1a0382d730332c387660b88a3}{vec3}}\ \doxymbox{\hyperlink{class_vesper_1_1_particle_system_a6d98e5e1a0382d730332c387660b88a3}{Position}};}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_particle_system_a80c557236267c713721a792bcec04879}{glm}}::\doxymbox{\hyperlink{class_vesper_1_1_particle_system_a80c557236267c713721a792bcec04879}{vec3}}\ \doxymbox{\hyperlink{class_vesper_1_1_particle_system_a80c557236267c713721a792bcec04879}{Velocity}};}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_particle_system_a63cffc4c6f780048c87b85ba0d183de1}{glm}}::\doxymbox{\hyperlink{class_vesper_1_1_particle_system_a63cffc4c6f780048c87b85ba0d183de1}{vec4}}\ \doxymbox{\hyperlink{class_vesper_1_1_particle_system_a63cffc4c6f780048c87b85ba0d183de1}{ColorBegin}},\ \doxymbox{\hyperlink{class_vesper_1_1_particle_system_a743590a121c8aafbea2a06187bb6a002}{ColorEnd}};}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_vesper_1_1_particle_system_a7e9ca15955728241f96a30f927e4a53b}{SizeBegin}},\ \doxymbox{\hyperlink{class_vesper_1_1_particle_system_a75808aa75ff1e5dcca47c7da65168bba}{SizeEnd}};}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_vesper_1_1_particle_system_a6b0587ee56c0b51d5ec2b11d1d0a0a3f}{Rotation}};}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_vesper_1_1_particle_system_a8d6fa78352e0d93c929a923729070f64}{LifeTime}}\ =\ 0.0f;}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_vesper_1_1_particle_system_a18e97550ec4b793aba6a914ba16ee9ef}{LifeRemaining}}\ =\ 0.0f;}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_vesper_1_1_particle_system_af84711eb47c08c412c2afad0dd89bc38}{Active}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_particle_system_acf53e1bfaaf2232a67331a7e61cb5443}{std}}::\doxymbox{\hyperlink{class_vesper_1_1_particle_system_acf53e1bfaaf2232a67331a7e61cb5443}{vector}}<\doxymbox{\hyperlink{class_vesper_1_1_particle_system_acf53e1bfaaf2232a67331a7e61cb5443}{Particle}}>\ \doxymbox{\hyperlink{class_vesper_1_1_particle_system_acf53e1bfaaf2232a67331a7e61cb5443}{m\_ParticlePool}};}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ uint32\_t\ \doxymbox{\hyperlink{class_vesper_1_1_particle_system_a60b05bf22c735e070684cf82d19b98f7}{m\_PoolIndex}}\ =\ 999;}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_struct_vesper_1_1_particle_props}{ParticleProps}}\ \doxymbox{\hyperlink{class_vesper_1_1_particle_system_af730c1029248d1e90076e753718969c2}{m\_Props}};}
+\DoxyCodeLine{00050\ \ \ \ \ \};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \}}
+
+\end{DoxyCode}

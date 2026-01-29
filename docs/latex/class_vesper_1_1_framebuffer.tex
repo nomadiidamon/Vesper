@@ -1,0 +1,128 @@
+\doxysection{Vesper::\+Framebuffer Class Reference}
+\hypertarget{class_vesper_1_1_framebuffer}{}\label{class_vesper_1_1_framebuffer}\index{Vesper::Framebuffer@{Vesper::Framebuffer}}
+
+
+{\ttfamily \+\#include $<$Framebuffer.\+h$>$}
+
+Inheritance diagram for Vesper::\+Framebuffer:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_vesper_1_1_framebuffer}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_vesper_1_1_framebuffer_a842eded46aaac94c8403e923fdaa2dda}{\texorpdfstring{$\sim$}{\string~}\+Framebuffer}} ()=default
+\item 
+virtual void \doxymbox{\hyperlink{class_vesper_1_1_framebuffer_a9c97f1a6047676e9c7090bfe019ffdbf}{Bind}} ()=0
+\item 
+virtual void \doxymbox{\hyperlink{class_vesper_1_1_framebuffer_a31f13eab445119f16f84ab27beb4129f}{Unbind}} ()=0
+\item 
+virtual void \doxymbox{\hyperlink{class_vesper_1_1_framebuffer_ac044c05641dd4bef0dd2396ef871fd6b}{Resize}} (uint32\+\_\+t width, uint32\+\_\+t height)=0
+\item 
+virtual uint32\+\_\+t \doxymbox{\hyperlink{class_vesper_1_1_framebuffer_aead3b53b3984d4924e06407afb39ee5a}{Get\+Color\+Attachment\+Renderer\+ID}} () const =0
+\item 
+virtual const \doxymbox{\hyperlink{namespace_vesper_struct_vesper_1_1_framebuffer_specification}{Framebuffer\+Specification}} \& \doxymbox{\hyperlink{class_vesper_1_1_framebuffer_af502dfc1bdbd1e350dba372f09916b85}{Get\+Specification}} () const =0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_framebuffer}{Framebuffer}} $>$ \doxymbox{\hyperlink{class_vesper_1_1_framebuffer_a3069ed2e67841720922623fe18d14fcb}{Create}} (const \doxymbox{\hyperlink{namespace_vesper_struct_vesper_1_1_framebuffer_specification}{Framebuffer\+Specification}} \&spec)
+\end{DoxyCompactItemize}
+
+
+\label{doc-constructors}
+\Hypertarget{class_vesper_1_1_framebuffer_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_vesper_1_1_framebuffer_a842eded46aaac94c8403e923fdaa2dda}\index{Vesper::Framebuffer@{Vesper::Framebuffer}!````~Framebuffer@{\texorpdfstring{$\sim$}{\string~}Framebuffer}}
+\index{````~Framebuffer@{\texorpdfstring{$\sim$}{\string~}Framebuffer}!Vesper::Framebuffer@{Vesper::Framebuffer}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Framebuffer()}{\string~Framebuffer()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_framebuffer_a842eded46aaac94c8403e923fdaa2dda} 
+Vesper::\+\+Framebuffer::\+\texorpdfstring{$\sim$}{\string~}\+Framebuffer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_vesper_1_1_framebuffer_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_vesper_1_1_framebuffer_a9c97f1a6047676e9c7090bfe019ffdbf}\index{Vesper::Framebuffer@{Vesper::Framebuffer}!Bind@{Bind}}
+\index{Bind@{Bind}!Vesper::Framebuffer@{Vesper::Framebuffer}}
+\doxysubsubsection{\texorpdfstring{Bind()}{Bind()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_framebuffer_a9c97f1a6047676e9c7090bfe019ffdbf} 
+virtual void Vesper::\+\+Framebuffer::\+\+Bind (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_framebuffer_adcc64e0c0f43d16a25f976350f8158f9}{Vesper::\+\+Open\+GLFramebuffer}}.
+
+\Hypertarget{class_vesper_1_1_framebuffer_a3069ed2e67841720922623fe18d14fcb}\index{Vesper::Framebuffer@{Vesper::Framebuffer}!Create@{Create}}
+\index{Create@{Create}!Vesper::Framebuffer@{Vesper::Framebuffer}}
+\doxysubsubsection{\texorpdfstring{Create()}{Create()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_framebuffer_a3069ed2e67841720922623fe18d14fcb} 
+\doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_framebuffer}{Framebuffer}} $>$ Vesper::\+\+Framebuffer::\+\+Create (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{namespace_vesper_struct_vesper_1_1_framebuffer_specification}{Framebuffer\+Specification}} \&}]{spec}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00010\ \ \ \ \ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (\doxymbox{\hyperlink{class_vesper_1_1_renderer_af8221f49491f130b6de7feb1b5093227}{Renderer::GetAPI}}())}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{class_vesper_1_1_renderer_a_p_i_acbef8f1a2c9546387b6513640c5c7995a6adf97f83acf6453d4a6a4b1070f3754}{RendererAPI::API::None}}:\ \ \ \ \doxymbox{\hyperlink{_asserts_8h_a3b51b77f75997760894138afc89403c9}{VZ\_CORE\_ASSERT}}(\textcolor{keyword}{false},\ \textcolor{stringliteral}{"{}RendererAPI::None\ is\ currently\ not\ supported!"{}});\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{class_vesper_1_1_renderer_a_p_i_acbef8f1a2c9546387b6513640c5c7995a760716b590ee7c0adc25f434f577d8be}{RendererAPI::API::OpenGL}}:\ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{namespace_vesper_a313930b55375b2f4dd36375b56f11047}{CreateRef<OpenGLFramebuffer>}}(spec);}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_asserts_8h_a3b51b77f75997760894138afc89403c9}{VZ\_CORE\_ASSERT}}(\textcolor{keyword}{false},\ \textcolor{stringliteral}{"{}Unknown\ RendererAPI!"{}});}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00019\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_renderer_af8221f49491f130b6de7feb1b5093227}{Vesper::\+\+Renderer::\+\+Get\+API()}}, \doxymbox{\hyperlink{class_vesper_1_1_renderer_a_p_i_acbef8f1a2c9546387b6513640c5c7995a6adf97f83acf6453d4a6a4b1070f3754}{Vesper::\+\+Renderer\+API::\+\+None}}, and \doxymbox{\hyperlink{class_vesper_1_1_renderer_a_p_i_acbef8f1a2c9546387b6513640c5c7995a760716b590ee7c0adc25f434f577d8be}{Vesper::\+\+Renderer\+API::\+\+Open\+GL}}.
+
+\Hypertarget{class_vesper_1_1_framebuffer_aead3b53b3984d4924e06407afb39ee5a}\index{Vesper::Framebuffer@{Vesper::Framebuffer}!GetColorAttachmentRendererID@{GetColorAttachmentRendererID}}
+\index{GetColorAttachmentRendererID@{GetColorAttachmentRendererID}!Vesper::Framebuffer@{Vesper::Framebuffer}}
+\doxysubsubsection{\texorpdfstring{GetColorAttachmentRendererID()}{GetColorAttachmentRendererID()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_framebuffer_aead3b53b3984d4924e06407afb39ee5a} 
+virtual uint32\+\_\+t Vesper::\+\+Framebuffer::\+\+Get\+Color\+Attachment\+Renderer\+ID (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_framebuffer_aa44f56c058cf1066862a18836b4d96a9}{Vesper::\+\+Open\+GLFramebuffer}}.
+
+\Hypertarget{class_vesper_1_1_framebuffer_af502dfc1bdbd1e350dba372f09916b85}\index{Vesper::Framebuffer@{Vesper::Framebuffer}!GetSpecification@{GetSpecification}}
+\index{GetSpecification@{GetSpecification}!Vesper::Framebuffer@{Vesper::Framebuffer}}
+\doxysubsubsection{\texorpdfstring{GetSpecification()}{GetSpecification()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_framebuffer_af502dfc1bdbd1e350dba372f09916b85} 
+virtual const \doxymbox{\hyperlink{namespace_vesper_struct_vesper_1_1_framebuffer_specification}{Framebuffer\+Specification}} \& Vesper::\+\+Framebuffer::\+\+Get\+Specification (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_framebuffer_a947bc2bd16638f5d2fc44b4ef4801ebd}{Vesper::\+\+Open\+GLFramebuffer}}.
+
+\Hypertarget{class_vesper_1_1_framebuffer_ac044c05641dd4bef0dd2396ef871fd6b}\index{Vesper::Framebuffer@{Vesper::Framebuffer}!Resize@{Resize}}
+\index{Resize@{Resize}!Vesper::Framebuffer@{Vesper::Framebuffer}}
+\doxysubsubsection{\texorpdfstring{Resize()}{Resize()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_framebuffer_ac044c05641dd4bef0dd2396ef871fd6b} 
+virtual void Vesper::\+\+Framebuffer::\+\+Resize (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{width}{, }\item[{uint32\+\_\+t}]{height}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_framebuffer_a39204ebd459e2cd7ba8a0363f4f03d6f}{Vesper::\+\+Open\+GLFramebuffer}}.
+
+\Hypertarget{class_vesper_1_1_framebuffer_a31f13eab445119f16f84ab27beb4129f}\index{Vesper::Framebuffer@{Vesper::Framebuffer}!Unbind@{Unbind}}
+\index{Unbind@{Unbind}!Vesper::Framebuffer@{Vesper::Framebuffer}}
+\doxysubsubsection{\texorpdfstring{Unbind()}{Unbind()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_framebuffer_a31f13eab445119f16f84ab27beb4129f} 
+virtual void Vesper::\+\+Framebuffer::\+\+Unbind (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_framebuffer_aa7bc47d487e23a8437dd6395d720c703}{Vesper::\+\+Open\+GLFramebuffer}}.
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+Vesper/\+src/\+\+Vesper/\+\+Renderer/\+\doxymbox{\hyperlink{_framebuffer_8h}{Framebuffer.\+h}}\item 
+Vesper/\+src/\+\+Vesper/\+\+Renderer/\+\doxymbox{\hyperlink{_framebuffer_8cpp}{Framebuffer.\+cpp}}\end{DoxyCompactItemize}

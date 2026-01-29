@@ -1,0 +1,200 @@
+\doxysection{Vesper::\+Shader Class Reference}
+\hypertarget{class_vesper_1_1_shader}{}\label{class_vesper_1_1_shader}\index{Vesper::Shader@{Vesper::Shader}}
+
+
+{\ttfamily \+\#include $<$Shader.\+h$>$}
+
+Inheritance diagram for Vesper::\+Shader:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_vesper_1_1_shader}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \doxymbox{\hyperlink{class_vesper_1_1_shader_ab2fa132232211fe520090098a78da95a}{\texorpdfstring{$\sim$}{\string~}\+Shader}} ()=default
+\item 
+virtual void \doxymbox{\hyperlink{class_vesper_1_1_shader_a644e5d528225ce469094da31fb96ed2c}{Bind}} () const =0
+\item 
+virtual void \doxymbox{\hyperlink{class_vesper_1_1_shader_ac167dc4c337325d8c399f4f5bb448c87}{Unbind}} () const =0
+\item 
+virtual void \doxymbox{\hyperlink{class_vesper_1_1_shader_ae054ea57db97bfd3920c513067f50f18}{Set\+Mat4}} (const std::\+string \&name, const glm::\+mat4 \&value)=0
+\item 
+virtual void \doxymbox{\hyperlink{class_vesper_1_1_shader_a840ec2776c63c940b77f55f14a946e45}{Set\+Float4}} (const std::\+string \&name, const glm::\+vec4 \&value)=0
+\item 
+virtual void \doxymbox{\hyperlink{class_vesper_1_1_shader_ad1b423de1b03aa2f8e37af728d2b29bf}{Set\+Float3}} (const std::\+string \&name, const glm::\+vec3 \&value)=0
+\item 
+virtual void \doxymbox{\hyperlink{class_vesper_1_1_shader_aef451106250c23d4ab31f5c364aa28f8}{Set\+Float}} (const std::\+string \&name, float value)=0
+\item 
+virtual void \doxymbox{\hyperlink{class_vesper_1_1_shader_a049a3caeb306f4877fa78065e67a3142}{Set\+Int}} (const std::\+string \&name, int value)=0
+\item 
+virtual void \doxymbox{\hyperlink{class_vesper_1_1_shader_a623f5f15253e3143161cb071122e9c48}{Set\+Int\+Array}} (const std::\+string \&name, int \texorpdfstring{$\ast$}{*}values, uint32\+\_\+t count)=0
+\item 
+virtual const std::\+string \& \doxymbox{\hyperlink{class_vesper_1_1_shader_ac2195bc2090dace8c8a875ae8b402b24}{Get\+Name}} () const =0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_shader}{Shader}} $>$ \doxymbox{\hyperlink{class_vesper_1_1_shader_a84e4327fa98e045cc3368f476ea712d6}{Create}} (const std::\+string \&name, const std::\+string \&vertex\+Src, const std::\+string \&fragment\+Src)
+\item 
+static \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_shader}{Shader}} $>$ \doxymbox{\hyperlink{class_vesper_1_1_shader_a8774af48abe3b014ef6f81fba33ad1a4}{Create}} (const std::\+string \&filepath)
+\end{DoxyCompactItemize}
+
+
+\label{doc-constructors}
+\Hypertarget{class_vesper_1_1_shader_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_vesper_1_1_shader_ab2fa132232211fe520090098a78da95a}\index{Vesper::Shader@{Vesper::Shader}!````~Shader@{\texorpdfstring{$\sim$}{\string~}Shader}}
+\index{````~Shader@{\texorpdfstring{$\sim$}{\string~}Shader}!Vesper::Shader@{Vesper::Shader}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Shader()}{\string~Shader()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_shader_ab2fa132232211fe520090098a78da95a} 
+virtual Vesper::\+\+Shader::\+\texorpdfstring{$\sim$}{\string~}\+Shader (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_vesper_1_1_shader_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_vesper_1_1_shader_a644e5d528225ce469094da31fb96ed2c}\index{Vesper::Shader@{Vesper::Shader}!Bind@{Bind}}
+\index{Bind@{Bind}!Vesper::Shader@{Vesper::Shader}}
+\doxysubsubsection{\texorpdfstring{Bind()}{Bind()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_shader_a644e5d528225ce469094da31fb96ed2c} 
+virtual void Vesper::\+\+Shader::\+\+Bind (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_shader_a3b693b2c8af2234d2030661f5a3fe35e}{Vesper::\+\+Open\+GLShader}}.
+
+\Hypertarget{class_vesper_1_1_shader_a8774af48abe3b014ef6f81fba33ad1a4}\index{Vesper::Shader@{Vesper::Shader}!Create@{Create}}
+\index{Create@{Create}!Vesper::Shader@{Vesper::Shader}}
+\doxysubsubsection{\texorpdfstring{Create()}{Create()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_shader_a8774af48abe3b014ef6f81fba33ad1a4} 
+\doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_shader}{Shader}} $>$ Vesper::\+\+Shader::\+\+Create (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{filepath}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00010\ \ \ \ \ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (\doxymbox{\hyperlink{class_vesper_1_1_renderer_af8221f49491f130b6de7feb1b5093227}{Renderer::GetAPI}}())}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{class_vesper_1_1_renderer_a_p_i_acbef8f1a2c9546387b6513640c5c7995a6adf97f83acf6453d4a6a4b1070f3754}{RendererAPI::API::None}}:\ \ \ \ \doxymbox{\hyperlink{_asserts_8h_a3b51b77f75997760894138afc89403c9}{VZ\_CORE\_ASSERT}}(\textcolor{keyword}{false},\ \textcolor{stringliteral}{"{}RendererAPI::None\ is\ currently\ not\ supported!"{}});\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{class_vesper_1_1_renderer_a_p_i_acbef8f1a2c9546387b6513640c5c7995a760716b590ee7c0adc25f434f577d8be}{RendererAPI::API::OpenGL}}:\ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{namespace_vesper_a313930b55375b2f4dd36375b56f11047}{CreateRef<OpenGLShader>}}(filepath);}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_asserts_8h_a3b51b77f75997760894138afc89403c9}{VZ\_CORE\_ASSERT}}(\textcolor{keyword}{false},\ \textcolor{stringliteral}{"{}Unknown\ RendererAPI!"{}});}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00018\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_renderer_af8221f49491f130b6de7feb1b5093227}{Vesper::\+\+Renderer::\+\+Get\+API()}}, \doxymbox{\hyperlink{class_vesper_1_1_renderer_a_p_i_acbef8f1a2c9546387b6513640c5c7995a6adf97f83acf6453d4a6a4b1070f3754}{Vesper::\+\+Renderer\+API::\+\+None}}, and \doxymbox{\hyperlink{class_vesper_1_1_renderer_a_p_i_acbef8f1a2c9546387b6513640c5c7995a760716b590ee7c0adc25f434f577d8be}{Vesper::\+\+Renderer\+API::\+\+Open\+GL}}.
+
+\Hypertarget{class_vesper_1_1_shader_a84e4327fa98e045cc3368f476ea712d6}\index{Vesper::Shader@{Vesper::Shader}!Create@{Create}}
+\index{Create@{Create}!Vesper::Shader@{Vesper::Shader}}
+\doxysubsubsection{\texorpdfstring{Create()}{Create()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_shader_a84e4327fa98e045cc3368f476ea712d6} 
+\doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_shader}{Shader}} $>$ Vesper::\+\+Shader::\+\+Create (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{name}{, }\item[{const std::\+string \&}]{vertex\+Src}{, }\item[{const std::\+string \&}]{fragment\+Src}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00021\ \ \ \ \ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (\doxymbox{\hyperlink{class_vesper_1_1_renderer_af8221f49491f130b6de7feb1b5093227}{Renderer::GetAPI}}())}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{class_vesper_1_1_renderer_a_p_i_acbef8f1a2c9546387b6513640c5c7995a6adf97f83acf6453d4a6a4b1070f3754}{RendererAPI::API::None}}:\ \ \ \ \doxymbox{\hyperlink{_asserts_8h_a3b51b77f75997760894138afc89403c9}{VZ\_CORE\_ASSERT}}(\textcolor{keyword}{false},\ \textcolor{stringliteral}{"{}RendererAPI::None\ is\ currently\ not\ supported!"{}});\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{class_vesper_1_1_renderer_a_p_i_acbef8f1a2c9546387b6513640c5c7995a760716b590ee7c0adc25f434f577d8be}{RendererAPI::API::OpenGL}}:\ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{namespace_vesper_a313930b55375b2f4dd36375b56f11047}{CreateRef<OpenGLShader>}}(name,\ vertexSrc,\ fragmentSrc);}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_asserts_8h_a3b51b77f75997760894138afc89403c9}{VZ\_CORE\_ASSERT}}(\textcolor{keyword}{false},\ \textcolor{stringliteral}{"{}Unknown\ RendererAPI!"{}});}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00029\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_renderer_af8221f49491f130b6de7feb1b5093227}{Vesper::\+\+Renderer::\+\+Get\+API()}}, \doxymbox{\hyperlink{class_vesper_1_1_renderer_a_p_i_acbef8f1a2c9546387b6513640c5c7995a6adf97f83acf6453d4a6a4b1070f3754}{Vesper::\+\+Renderer\+API::\+\+None}}, and \doxymbox{\hyperlink{class_vesper_1_1_renderer_a_p_i_acbef8f1a2c9546387b6513640c5c7995a760716b590ee7c0adc25f434f577d8be}{Vesper::\+\+Renderer\+API::\+\+Open\+GL}}.
+
+\Hypertarget{class_vesper_1_1_shader_ac2195bc2090dace8c8a875ae8b402b24}\index{Vesper::Shader@{Vesper::Shader}!GetName@{GetName}}
+\index{GetName@{GetName}!Vesper::Shader@{Vesper::Shader}}
+\doxysubsubsection{\texorpdfstring{GetName()}{GetName()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_shader_ac2195bc2090dace8c8a875ae8b402b24} 
+virtual const std::\+string \& Vesper::\+\+Shader::\+\+Get\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_shader_a085d5321d4d6e432b5c642217a38f3d7}{Vesper::\+\+Open\+GLShader}}.
+
+\Hypertarget{class_vesper_1_1_shader_aef451106250c23d4ab31f5c364aa28f8}\index{Vesper::Shader@{Vesper::Shader}!SetFloat@{SetFloat}}
+\index{SetFloat@{SetFloat}!Vesper::Shader@{Vesper::Shader}}
+\doxysubsubsection{\texorpdfstring{SetFloat()}{SetFloat()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_shader_aef451106250c23d4ab31f5c364aa28f8} 
+virtual void Vesper::\+\+Shader::\+\+Set\+Float (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{name}{, }\item[{float}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_shader_a710f6642c1ceed564b7eebae9ba9243f}{Vesper::\+\+Open\+GLShader}}.
+
+\Hypertarget{class_vesper_1_1_shader_ad1b423de1b03aa2f8e37af728d2b29bf}\index{Vesper::Shader@{Vesper::Shader}!SetFloat3@{SetFloat3}}
+\index{SetFloat3@{SetFloat3}!Vesper::Shader@{Vesper::Shader}}
+\doxysubsubsection{\texorpdfstring{SetFloat3()}{SetFloat3()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_shader_ad1b423de1b03aa2f8e37af728d2b29bf} 
+virtual void Vesper::\+\+Shader::\+\+Set\+Float3 (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{name}{, }\item[{const glm::\+vec3 \&}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_shader_a7950189b78a1c775dd779bf059c19f20}{Vesper::\+\+Open\+GLShader}}.
+
+\Hypertarget{class_vesper_1_1_shader_a840ec2776c63c940b77f55f14a946e45}\index{Vesper::Shader@{Vesper::Shader}!SetFloat4@{SetFloat4}}
+\index{SetFloat4@{SetFloat4}!Vesper::Shader@{Vesper::Shader}}
+\doxysubsubsection{\texorpdfstring{SetFloat4()}{SetFloat4()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_shader_a840ec2776c63c940b77f55f14a946e45} 
+virtual void Vesper::\+\+Shader::\+\+Set\+Float4 (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{name}{, }\item[{const glm::\+vec4 \&}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_shader_a9e55fe4fba2183704f88ba90cfc98f0b}{Vesper::\+\+Open\+GLShader}}.
+
+\Hypertarget{class_vesper_1_1_shader_a049a3caeb306f4877fa78065e67a3142}\index{Vesper::Shader@{Vesper::Shader}!SetInt@{SetInt}}
+\index{SetInt@{SetInt}!Vesper::Shader@{Vesper::Shader}}
+\doxysubsubsection{\texorpdfstring{SetInt()}{SetInt()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_shader_a049a3caeb306f4877fa78065e67a3142} 
+virtual void Vesper::\+\+Shader::\+\+Set\+Int (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{name}{, }\item[{int}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_shader_a4436d79885690690a133ac26c0ac2a7b}{Vesper::\+\+Open\+GLShader}}.
+
+\Hypertarget{class_vesper_1_1_shader_a623f5f15253e3143161cb071122e9c48}\index{Vesper::Shader@{Vesper::Shader}!SetIntArray@{SetIntArray}}
+\index{SetIntArray@{SetIntArray}!Vesper::Shader@{Vesper::Shader}}
+\doxysubsubsection{\texorpdfstring{SetIntArray()}{SetIntArray()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_shader_a623f5f15253e3143161cb071122e9c48} 
+virtual void Vesper::\+\+Shader::\+\+Set\+Int\+Array (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{name}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{values}{, }\item[{uint32\+\_\+t}]{count}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_shader_a1107df8d1f090ab467bbf6dc09a1e97d}{Vesper::\+\+Open\+GLShader}}.
+
+\Hypertarget{class_vesper_1_1_shader_ae054ea57db97bfd3920c513067f50f18}\index{Vesper::Shader@{Vesper::Shader}!SetMat4@{SetMat4}}
+\index{SetMat4@{SetMat4}!Vesper::Shader@{Vesper::Shader}}
+\doxysubsubsection{\texorpdfstring{SetMat4()}{SetMat4()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_shader_ae054ea57db97bfd3920c513067f50f18} 
+virtual void Vesper::\+\+Shader::\+\+Set\+Mat4 (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{name}{, }\item[{const glm::\+mat4 \&}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_shader_a494316a0902f35db7a34a1e3d2641756}{Vesper::\+\+Open\+GLShader}}.
+
+\Hypertarget{class_vesper_1_1_shader_ac167dc4c337325d8c399f4f5bb448c87}\index{Vesper::Shader@{Vesper::Shader}!Unbind@{Unbind}}
+\index{Unbind@{Unbind}!Vesper::Shader@{Vesper::Shader}}
+\doxysubsubsection{\texorpdfstring{Unbind()}{Unbind()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_shader_ac167dc4c337325d8c399f4f5bb448c87} 
+virtual void Vesper::\+\+Shader::\+\+Unbind (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_shader_aa25276d9979c2cba91d152196996dba5}{Vesper::\+\+Open\+GLShader}}.
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+Vesper/\+src/\+\+Vesper/\+\+Renderer/\+\doxymbox{\hyperlink{_shader_8h}{Shader.\+h}}\item 
+Vesper/\+src/\+\+Vesper/\+\+Renderer/\+\doxymbox{\hyperlink{_shader_8cpp}{Shader.\+cpp}}\end{DoxyCompactItemize}

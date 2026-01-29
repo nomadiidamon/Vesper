@@ -1,0 +1,384 @@
+\doxysection{Vesper::\+Random Namespace Reference}
+\hypertarget{namespace_vesper_1_1_random}{}\label{namespace_vesper_1_1_random}\index{Vesper::Random@{Vesper::Random}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std::\+mt19937 \& \doxymbox{\hyperlink{namespace_vesper_1_1_random_a3215313b0e25d05a5df852f3a08df77b}{Get\+RNG}} ()
+\item 
+void \doxymbox{\hyperlink{namespace_vesper_1_1_random_a626ebaec4b72e4991c9e7f3f04aaae9d}{Seed}} (uint32\+\_\+t seed)
+\item 
+uint32\+\_\+t \doxymbox{\hyperlink{namespace_vesper_1_1_random_afe248f1e01c6a1cbc078179b7ae40468}{UInt1}} (uint32\+\_\+t max)
+\item 
+bool \doxymbox{\hyperlink{namespace_vesper_1_1_random_a366a62c6d808219539c79dd08d551469}{Bool1}} (float true\+Chance)
+\item 
+unsigned char \doxymbox{\hyperlink{namespace_vesper_1_1_random_ab701c34568e44f4b8ebaa0b5d3ef5977}{Char}} ()
+\item 
+std::\+string \doxymbox{\hyperlink{namespace_vesper_1_1_random_afaa6ca62b88d5a4a4563b3c5d618b098}{String}} (size\+\_\+t length)
+\item 
+std::\+string \doxymbox{\hyperlink{namespace_vesper_1_1_random_a1251e868c3fff89a6a862c6e930c7619}{Hex\+String}} (size\+\_\+t length)
+\item 
+std::\+string \doxymbox{\hyperlink{namespace_vesper_1_1_random_a9a3d18994aa7df05cf15657677456aab}{UUID}} ()
+\item 
+float \doxymbox{\hyperlink{namespace_vesper_1_1_random_a5fd29fe179c63f4e158098a921cc000f}{Float1}} ()
+\item 
+float \doxymbox{\hyperlink{namespace_vesper_1_1_random_a6d25f85e1a2bb3637497925f7cdb737e}{Range\+F1}} (float min, float max)
+\item 
+float \doxymbox{\hyperlink{namespace_vesper_1_1_random_a29cafc6f8171e6f423f3aa36a37b71d3}{Range\+F1\+\_\+\+Inclusive}} (float min, float max)
+\item 
+glm::\+vec2 \doxymbox{\hyperlink{namespace_vesper_1_1_random_aee37aeb23527ea784366d19d4d122e93}{Float2}} ()
+\item 
+glm::\+vec2 \doxymbox{\hyperlink{namespace_vesper_1_1_random_a5e3ab93e4cf859b888b755aa88f4eb1f}{Range\+F2}} (float min, float max)
+\item 
+glm::\+vec2 \doxymbox{\hyperlink{namespace_vesper_1_1_random_a9ff6943e251e329ef53c0918215968e3}{Range\+F2}} (float min1, float max1, float min2, float max2)
+\item 
+glm::\+vec2 \doxymbox{\hyperlink{namespace_vesper_1_1_random_a2e243888eb4a33282251e45c57e3f5ad}{Range\+F2}} (const glm::\+vec2 \&min\+Range, const glm::\+vec2 \&max\+Range)
+\item 
+glm::\+vec3 \doxymbox{\hyperlink{namespace_vesper_1_1_random_a03b6467e00b4461a9c5800c855ae8805}{Float3}} ()
+\item 
+glm::\+vec3 \doxymbox{\hyperlink{namespace_vesper_1_1_random_ac64283a80dd70518d2ae8b8ef3686780}{Range\+F3}} (float min, float max)
+\item 
+glm::\+vec3 \doxymbox{\hyperlink{namespace_vesper_1_1_random_af1d17e22d9048f071476dd5106912162}{Range\+F3}} (float min1, float max1, float min2, float max2, float min3, float max3)
+\item 
+glm::\+vec3 \doxymbox{\hyperlink{namespace_vesper_1_1_random_a12d4349955ab21516cef5621a99c7c70}{Range\+F3}} (const glm::\+vec2 \&range1, const glm::\+vec2 \&range2, const glm::\+vec2 \&range3)
+\item 
+glm::\+vec4 \doxymbox{\hyperlink{namespace_vesper_1_1_random_a5481415221e1c3522bae7da1281c27c1}{Float4}} ()
+\item 
+glm::\+vec4 \doxymbox{\hyperlink{namespace_vesper_1_1_random_a8e7e84ab1ddb1b1a380b0ec41c6caaa2}{Range\+F4}} (float min, float max)
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{namespace_vesper_1_1_random_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{namespace_vesper_1_1_random_a366a62c6d808219539c79dd08d551469}\index{Vesper::Random@{Vesper::Random}!Bool1@{Bool1}}
+\index{Bool1@{Bool1}!Vesper::Random@{Vesper::Random}}
+\doxysubsubsection{\texorpdfstring{Bool1()}{Bool1()}}
+{\footnotesize\ttfamily \label{namespace_vesper_1_1_random_a366a62c6d808219539c79dd08d551469} 
+bool Vesper::\+\+Random::\+\+Bool1 (\begin{DoxyParamCaption}\item[{float}]{true\+Chance}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ std::uniform\_real\_distribution<float>\ dist(0.0f,\ 1.0f);}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ dist(\doxymbox{\hyperlink{namespace_vesper_1_1_random_a3215313b0e25d05a5df852f3a08df77b}{GetRNG}}())\ <\ trueChance;}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{namespace_vesper_1_1_random_ab701c34568e44f4b8ebaa0b5d3ef5977}\index{Vesper::Random@{Vesper::Random}!Char@{Char}}
+\index{Char@{Char}!Vesper::Random@{Vesper::Random}}
+\doxysubsubsection{\texorpdfstring{Char()}{Char()}}
+{\footnotesize\ttfamily \label{namespace_vesper_1_1_random_ab701c34568e44f4b8ebaa0b5d3ef5977} 
+unsigned char Vesper::\+\+Random::\+\+Char (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ std::uniform\_int\_distribution<int>\ dist(0,\ 255);}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\textcolor{keyword}{>}(dist(\doxymbox{\hyperlink{namespace_vesper_1_1_random_a3215313b0e25d05a5df852f3a08df77b}{GetRNG}}()));}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{namespace_vesper_1_1_random_a5fd29fe179c63f4e158098a921cc000f}\index{Vesper::Random@{Vesper::Random}!Float1@{Float1}}
+\index{Float1@{Float1}!Vesper::Random@{Vesper::Random}}
+\doxysubsubsection{\texorpdfstring{Float1()}{Float1()}}
+{\footnotesize\ttfamily \label{namespace_vesper_1_1_random_a5fd29fe179c63f4e158098a921cc000f} 
+float Vesper::\+\+Random::\+\+Float1 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{thread\_local}\ std::uniform\_real\_distribution<float>\ dist(0.0f,\ 1.0f);}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ dist(\doxymbox{\hyperlink{namespace_vesper_1_1_random_a3215313b0e25d05a5df852f3a08df77b}{GetRNG}}());}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referenced by \doxymbox{\hyperlink{class_vesper_1_1_particle_system_ac5d9958ce74679d4115e9b2df4ce1412}{Vesper::\+\+Particle\+System::\+\+Emit()}}.
+
+\Hypertarget{namespace_vesper_1_1_random_aee37aeb23527ea784366d19d4d122e93}\index{Vesper::Random@{Vesper::Random}!Float2@{Float2}}
+\index{Float2@{Float2}!Vesper::Random@{Vesper::Random}}
+\doxysubsubsection{\texorpdfstring{Float2()}{Float2()}}
+{\footnotesize\ttfamily \label{namespace_vesper_1_1_random_aee37aeb23527ea784366d19d4d122e93} 
+glm::\+vec2 Vesper::\+\+Random::\+\+Float2 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ glm::vec2\{\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a5fd29fe179c63f4e158098a921cc000f}{Float1}}(),\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a5fd29fe179c63f4e158098a921cc000f}{Float1}}()\ \};}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{namespace_vesper_1_1_random_a03b6467e00b4461a9c5800c855ae8805}\index{Vesper::Random@{Vesper::Random}!Float3@{Float3}}
+\index{Float3@{Float3}!Vesper::Random@{Vesper::Random}}
+\doxysubsubsection{\texorpdfstring{Float3()}{Float3()}}
+{\footnotesize\ttfamily \label{namespace_vesper_1_1_random_a03b6467e00b4461a9c5800c855ae8805} 
+glm::\+vec3 Vesper::\+\+Random::\+\+Float3 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ glm::vec3\{\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a5fd29fe179c63f4e158098a921cc000f}{Float1}}(),\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a5fd29fe179c63f4e158098a921cc000f}{Float1}}(),\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a5fd29fe179c63f4e158098a921cc000f}{Float1}}()\ \};}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{namespace_vesper_1_1_random_a5481415221e1c3522bae7da1281c27c1}\index{Vesper::Random@{Vesper::Random}!Float4@{Float4}}
+\index{Float4@{Float4}!Vesper::Random@{Vesper::Random}}
+\doxysubsubsection{\texorpdfstring{Float4()}{Float4()}}
+{\footnotesize\ttfamily \label{namespace_vesper_1_1_random_a5481415221e1c3522bae7da1281c27c1} 
+glm::\+vec4 Vesper::\+\+Random::\+\+Float4 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ glm::vec4\{\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a5fd29fe179c63f4e158098a921cc000f}{Float1}}(),\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a5fd29fe179c63f4e158098a921cc000f}{Float1}}(),\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a5fd29fe179c63f4e158098a921cc000f}{Float1}}(),\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a5fd29fe179c63f4e158098a921cc000f}{Float1}}()\ \};}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{namespace_vesper_1_1_random_a3215313b0e25d05a5df852f3a08df77b}\index{Vesper::Random@{Vesper::Random}!GetRNG@{GetRNG}}
+\index{GetRNG@{GetRNG}!Vesper::Random@{Vesper::Random}}
+\doxysubsubsection{\texorpdfstring{GetRNG()}{GetRNG()}}
+{\footnotesize\ttfamily \label{namespace_vesper_1_1_random_a3215313b0e25d05a5df852f3a08df77b} 
+std::\+mt19937 \& Vesper::\+\+Random::\+\+Get\+RNG (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{thread\_local}\ std::mt19937\ rng\{\ std::random\_device\{\}()\ \};}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ rng;}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referenced by \doxymbox{\hyperlink{namespace_vesper_1_1_random_a626ebaec4b72e4991c9e7f3f04aaae9d}{Seed()}}.
+
+\Hypertarget{namespace_vesper_1_1_random_a1251e868c3fff89a6a862c6e930c7619}\index{Vesper::Random@{Vesper::Random}!HexString@{HexString}}
+\index{HexString@{HexString}!Vesper::Random@{Vesper::Random}}
+\doxysubsubsection{\texorpdfstring{HexString()}{HexString()}}
+{\footnotesize\ttfamily \label{namespace_vesper_1_1_random_a1251e868c3fff89a6a862c6e930c7619} 
+std::\+string Vesper::\+\+Random::\+\+Hex\+String (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{length}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ charset[]\ =}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}0123456789"{}}}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}ABCDEF"{}};}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ max\_index\ =\ (\textcolor{keyword}{sizeof}(charset)\ -\/\ 1);}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ str(length,\ 0);}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ length;\ ++i)\ \{}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ str[i]\ =\ charset[\doxymbox{\hyperlink{namespace_vesper_1_1_random_afe248f1e01c6a1cbc078179b7ae40468}{UInt1}}(\textcolor{keyword}{static\_cast<}uint32\_t\textcolor{keyword}{>}(max\_index))];}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ str;}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{namespace_vesper_1_1_random_afe248f1e01c6a1cbc078179b7ae40468}{UInt1()}}.
+
+\Hypertarget{namespace_vesper_1_1_random_a6d25f85e1a2bb3637497925f7cdb737e}\index{Vesper::Random@{Vesper::Random}!RangeF1@{RangeF1}}
+\index{RangeF1@{RangeF1}!Vesper::Random@{Vesper::Random}}
+\doxysubsubsection{\texorpdfstring{RangeF1()}{RangeF1()}}
+{\footnotesize\ttfamily \label{namespace_vesper_1_1_random_a6d25f85e1a2bb3637497925f7cdb737e} 
+float Vesper::\+\+Random::\+\+Range\+F1 (\begin{DoxyParamCaption}\item[{float}]{min}{, }\item[{float}]{max}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (min\ >\ max)\ std::swap(min,\ max);}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ std::uniform\_real\_distribution<float>\ dist(min,\ max);}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ dist(\doxymbox{\hyperlink{namespace_vesper_1_1_random_a3215313b0e25d05a5df852f3a08df77b}{GetRNG}}());}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{namespace_vesper_1_1_random_a29cafc6f8171e6f423f3aa36a37b71d3}\index{Vesper::Random@{Vesper::Random}!RangeF1\_Inclusive@{RangeF1\_Inclusive}}
+\index{RangeF1\_Inclusive@{RangeF1\_Inclusive}!Vesper::Random@{Vesper::Random}}
+\doxysubsubsection{\texorpdfstring{RangeF1\_Inclusive()}{RangeF1\_Inclusive()}}
+{\footnotesize\ttfamily \label{namespace_vesper_1_1_random_a29cafc6f8171e6f423f3aa36a37b71d3} 
+float Vesper::\+\+Random::\+\+Range\+F1\+\_\+\+Inclusive (\begin{DoxyParamCaption}\item[{float}]{min}{, }\item[{float}]{max}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (min\ >\ max)\ std::swap(min,\ max);}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ upper\ =\ std::nextafter(max,\ std::numeric\_limits<float>::infinity());}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ std::uniform\_real\_distribution<float>\ dist(min,\ upper);}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ dist(\doxymbox{\hyperlink{namespace_vesper_1_1_random_a3215313b0e25d05a5df852f3a08df77b}{GetRNG}}());}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{namespace_vesper_1_1_random_a2e243888eb4a33282251e45c57e3f5ad}\index{Vesper::Random@{Vesper::Random}!RangeF2@{RangeF2}}
+\index{RangeF2@{RangeF2}!Vesper::Random@{Vesper::Random}}
+\doxysubsubsection{\texorpdfstring{RangeF2()}{RangeF2()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{namespace_vesper_1_1_random_a2e243888eb4a33282251e45c57e3f5ad} 
+glm::\+vec2 Vesper::\+\+Random::\+\+Range\+F2 (\begin{DoxyParamCaption}\item[{const glm::\+vec2 \&}]{min\+Range}{, }\item[{const glm::\+vec2 \&}]{max\+Range}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ glm::vec2\{\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a6d25f85e1a2bb3637497925f7cdb737e}{RangeF1}}(minRange.x,\ maxRange.x),\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a6d25f85e1a2bb3637497925f7cdb737e}{RangeF1}}(minRange.y,\ maxRange.y)\ \};}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{namespace_vesper_1_1_random_a5e3ab93e4cf859b888b755aa88f4eb1f}\index{Vesper::Random@{Vesper::Random}!RangeF2@{RangeF2}}
+\index{RangeF2@{RangeF2}!Vesper::Random@{Vesper::Random}}
+\doxysubsubsection{\texorpdfstring{RangeF2()}{RangeF2()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{namespace_vesper_1_1_random_a5e3ab93e4cf859b888b755aa88f4eb1f} 
+glm::\+vec2 Vesper::\+\+Random::\+\+Range\+F2 (\begin{DoxyParamCaption}\item[{float}]{min}{, }\item[{float}]{max}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ glm::vec2\{\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a6d25f85e1a2bb3637497925f7cdb737e}{RangeF1}}(min,\ max),\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a6d25f85e1a2bb3637497925f7cdb737e}{RangeF1}}(min,\ max)\ \};}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{namespace_vesper_1_1_random_a9ff6943e251e329ef53c0918215968e3}\index{Vesper::Random@{Vesper::Random}!RangeF2@{RangeF2}}
+\index{RangeF2@{RangeF2}!Vesper::Random@{Vesper::Random}}
+\doxysubsubsection{\texorpdfstring{RangeF2()}{RangeF2()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{namespace_vesper_1_1_random_a9ff6943e251e329ef53c0918215968e3} 
+glm::\+vec2 Vesper::\+\+Random::\+\+Range\+F2 (\begin{DoxyParamCaption}\item[{float}]{min1}{, }\item[{float}]{max1}{, }\item[{float}]{min2}{, }\item[{float}]{max2}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ glm::vec2\{\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a6d25f85e1a2bb3637497925f7cdb737e}{RangeF1}}(min1,\ max1),\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a6d25f85e1a2bb3637497925f7cdb737e}{RangeF1}}(min2,\ max2)\ \};}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{namespace_vesper_1_1_random_a12d4349955ab21516cef5621a99c7c70}\index{Vesper::Random@{Vesper::Random}!RangeF3@{RangeF3}}
+\index{RangeF3@{RangeF3}!Vesper::Random@{Vesper::Random}}
+\doxysubsubsection{\texorpdfstring{RangeF3()}{RangeF3()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{namespace_vesper_1_1_random_a12d4349955ab21516cef5621a99c7c70} 
+glm::\+vec3 Vesper::\+\+Random::\+\+Range\+F3 (\begin{DoxyParamCaption}\item[{const glm::\+vec2 \&}]{range1}{, }\item[{const glm::\+vec2 \&}]{range2}{, }\item[{const glm::\+vec2 \&}]{range3}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ glm::vec3\{\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a6d25f85e1a2bb3637497925f7cdb737e}{RangeF1}}(range1.x,\ range1.y),\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a6d25f85e1a2bb3637497925f7cdb737e}{RangeF1}}(range2.x,\ range2.y),\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a6d25f85e1a2bb3637497925f7cdb737e}{RangeF1}}(range3.x,\ range3.y)\ \};}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{namespace_vesper_1_1_random_ac64283a80dd70518d2ae8b8ef3686780}\index{Vesper::Random@{Vesper::Random}!RangeF3@{RangeF3}}
+\index{RangeF3@{RangeF3}!Vesper::Random@{Vesper::Random}}
+\doxysubsubsection{\texorpdfstring{RangeF3()}{RangeF3()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{namespace_vesper_1_1_random_ac64283a80dd70518d2ae8b8ef3686780} 
+glm::\+vec3 Vesper::\+\+Random::\+\+Range\+F3 (\begin{DoxyParamCaption}\item[{float}]{min}{, }\item[{float}]{max}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ glm::vec3\{\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a6d25f85e1a2bb3637497925f7cdb737e}{RangeF1}}(min,\ max),\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a6d25f85e1a2bb3637497925f7cdb737e}{RangeF1}}(min,\ max),\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a6d25f85e1a2bb3637497925f7cdb737e}{RangeF1}}(min,\ max)\ \};}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{namespace_vesper_1_1_random_af1d17e22d9048f071476dd5106912162}\index{Vesper::Random@{Vesper::Random}!RangeF3@{RangeF3}}
+\index{RangeF3@{RangeF3}!Vesper::Random@{Vesper::Random}}
+\doxysubsubsection{\texorpdfstring{RangeF3()}{RangeF3()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{namespace_vesper_1_1_random_af1d17e22d9048f071476dd5106912162} 
+glm::\+vec3 Vesper::\+\+Random::\+\+Range\+F3 (\begin{DoxyParamCaption}\item[{float}]{min1}{, }\item[{float}]{max1}{, }\item[{float}]{min2}{, }\item[{float}]{max2}{, }\item[{float}]{min3}{, }\item[{float}]{max3}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ glm::vec3\{\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a6d25f85e1a2bb3637497925f7cdb737e}{RangeF1}}(min1,\ max1),\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a6d25f85e1a2bb3637497925f7cdb737e}{RangeF1}}(min2,\ max2),\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a6d25f85e1a2bb3637497925f7cdb737e}{RangeF1}}(min3,\ max3)\ \};}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{namespace_vesper_1_1_random_a8e7e84ab1ddb1b1a380b0ec41c6caaa2}\index{Vesper::Random@{Vesper::Random}!RangeF4@{RangeF4}}
+\index{RangeF4@{RangeF4}!Vesper::Random@{Vesper::Random}}
+\doxysubsubsection{\texorpdfstring{RangeF4()}{RangeF4()}}
+{\footnotesize\ttfamily \label{namespace_vesper_1_1_random_a8e7e84ab1ddb1b1a380b0ec41c6caaa2} 
+glm::\+vec4 Vesper::\+\+Random::\+\+Range\+F4 (\begin{DoxyParamCaption}\item[{float}]{min}{, }\item[{float}]{max}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ glm::vec4\{\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a6d25f85e1a2bb3637497925f7cdb737e}{RangeF1}}(min,\ max),\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a6d25f85e1a2bb3637497925f7cdb737e}{RangeF1}}(min,\ max),\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a6d25f85e1a2bb3637497925f7cdb737e}{RangeF1}}(min,\ max),\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a6d25f85e1a2bb3637497925f7cdb737e}{RangeF1}}(min,\ max)\ \};}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{namespace_vesper_1_1_random_a626ebaec4b72e4991c9e7f3f04aaae9d}\index{Vesper::Random@{Vesper::Random}!Seed@{Seed}}
+\index{Seed@{Seed}!Vesper::Random@{Vesper::Random}}
+\doxysubsubsection{\texorpdfstring{Seed()}{Seed()}}
+{\footnotesize\ttfamily \label{namespace_vesper_1_1_random_a626ebaec4b72e4991c9e7f3f04aaae9d} 
+void Vesper::\+\+Random::\+\+Seed (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{seed}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a3215313b0e25d05a5df852f3a08df77b}{GetRNG}}().seed(seed);}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{namespace_vesper_1_1_random_a3215313b0e25d05a5df852f3a08df77b}{Get\+RNG()}}.
+
+\Hypertarget{namespace_vesper_1_1_random_afaa6ca62b88d5a4a4563b3c5d618b098}\index{Vesper::Random@{Vesper::Random}!String@{String}}
+\index{String@{String}!Vesper::Random@{Vesper::Random}}
+\doxysubsubsection{\texorpdfstring{String()}{String()}}
+{\footnotesize\ttfamily \label{namespace_vesper_1_1_random_afaa6ca62b88d5a4a4563b3c5d618b098} 
+std::\+string Vesper::\+\+Random::\+\+String (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{length}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ charset[]\ =}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}0123456789"{}}}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}ABCDEFGHIJKLMNOPQRSTUVWXYZ"{}}}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}abcdefghijklmnopqrstuvwxyz"{}};}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ max\_index\ =\ (\textcolor{keyword}{sizeof}(charset)\ -\/\ 1);}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ str(length,\ 0);}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ length;\ ++i)\ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ str[i]\ =\ charset[\doxymbox{\hyperlink{namespace_vesper_1_1_random_afe248f1e01c6a1cbc078179b7ae40468}{UInt1}}(\textcolor{keyword}{static\_cast<}uint32\_t\textcolor{keyword}{>}(max\_index))];}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ str;}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{namespace_vesper_1_1_random_afe248f1e01c6a1cbc078179b7ae40468}{UInt1()}}.
+
+\Hypertarget{namespace_vesper_1_1_random_afe248f1e01c6a1cbc078179b7ae40468}\index{Vesper::Random@{Vesper::Random}!UInt1@{UInt1}}
+\index{UInt1@{UInt1}!Vesper::Random@{Vesper::Random}}
+\doxysubsubsection{\texorpdfstring{UInt1()}{UInt1()}}
+{\footnotesize\ttfamily \label{namespace_vesper_1_1_random_afe248f1e01c6a1cbc078179b7ae40468} 
+uint32\+\_\+t Vesper::\+\+Random::\+\+UInt1 (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{max}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ std::uniform\_int\_distribution<uint32\_t>\ dist(0,\ max\ -\/\ 1);}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ dist(\doxymbox{\hyperlink{namespace_vesper_1_1_random_a3215313b0e25d05a5df852f3a08df77b}{GetRNG}}());}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referenced by \doxymbox{\hyperlink{namespace_vesper_1_1_random_a1251e868c3fff89a6a862c6e930c7619}{Hex\+String()}}, and \doxymbox{\hyperlink{namespace_vesper_1_1_random_afaa6ca62b88d5a4a4563b3c5d618b098}{String()}}.
+
+\Hypertarget{namespace_vesper_1_1_random_a9a3d18994aa7df05cf15657677456aab}\index{Vesper::Random@{Vesper::Random}!UUID@{UUID}}
+\index{UUID@{UUID}!Vesper::Random@{Vesper::Random}}
+\doxysubsubsection{\texorpdfstring{UUID()}{UUID()}}
+{\footnotesize\ttfamily \label{namespace_vesper_1_1_random_a9a3d18994aa7df05cf15657677456aab} 
+std::\+string Vesper::\+\+Random::\+\+UUID (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a1251e868c3fff89a6a862c6e930c7619}{HexString}}(8)\ +\ \textcolor{stringliteral}{"{}-\/"{}}\ +\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a1251e868c3fff89a6a862c6e930c7619}{HexString}}(4)\ +\ \textcolor{stringliteral}{"{}-\/"{}}\ +\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a1251e868c3fff89a6a862c6e930c7619}{HexString}}(4)\ +\ \textcolor{stringliteral}{"{}-\/"{}}\ +\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a1251e868c3fff89a6a862c6e930c7619}{HexString}}(4)\ +\ \textcolor{stringliteral}{"{}-\/"{}}\ +\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a1251e868c3fff89a6a862c6e930c7619}{HexString}}(12);}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}

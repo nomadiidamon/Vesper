@@ -1,0 +1,253 @@
+\doxysection{Vesper::\+Orthographic\+Camera Class Reference}
+\hypertarget{class_vesper_1_1_orthographic_camera}{}\label{class_vesper_1_1_orthographic_camera}\index{Vesper::OrthographicCamera@{Vesper::OrthographicCamera}}
+
+
+{\ttfamily \+\#include $<$Orthographic\+Camera.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_adeebc9b7ff1d0a8f63432ccd2181c450}{Orthographic\+Camera}} (float left, float right, float bottom, float top)
+\item 
+void \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_a4c3183cbd4a1038bc546dedf7fd6d4e1}{Set\+Projection}} (float left, float right, float bottom, float top)
+\item 
+void \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_a62dbb43f26a576d8acb518a7444201da}{Set\+Position}} (const glm::\+vec3 \&position)
+\item 
+const glm::\+vec3 \& \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_ab95656a6445766fd0c34f58007b4c67e}{Get\+Position}} () const
+\item 
+void \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_ac4c65d06e7ffd655ecb005dc56bbcf64}{Set\+Rotation}} (float rotation)
+\item 
+const float \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_aa914afe4de2c561e477f129ece7c23f4}{Get\+Rotation}} () const
+\item 
+const glm::\+mat4 \& \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_abe78b3422eaababefd37305dbbe86578}{Get\+Projection\+Matrix}} () const
+\item 
+const glm::\+mat4 \& \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_a81810b62e2203958d8f3df98aac46c7e}{Get\+View\+Matrix}} () const
+\item 
+const glm::\+mat4 \& \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_a8f930e2058ee4a3bc83d1bbb25b2f8ea}{Get\+View\+Projection\+Matrix}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_a6f7543cf270bf33ff0728ca43fd70e0a}{Recalculate\+View\+Matrix}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+glm::\+mat4 \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_aa1e5d2578f5f3f0df0be5a7780875b3d}{m\+\_\+\+Projection\+Matrix}}
+\item 
+glm::\+mat4 \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_a75cc345a0a2f9ee84951ec98bcd9fd6d}{m\+\_\+\+View\+Matrix}}
+\item 
+glm::\+mat4 \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_a162103028870592a97ae96d87b1b7649}{m\+\_\+\+View\+Projection\+Matrix}}
+\item 
+glm::\+vec3 \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_af5f58ee114c485ec4749908b1a57306e}{m\+\_\+\+Position}} = \{ 0.\+0f, 0.\+0f, 0.\+0f \}
+\item 
+float \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_ab044df719b1acbe67ad51f5318bcf883}{m\+\_\+\+Rotation}} = 0.\+0f
+\end{DoxyCompactItemize}
+
+
+\label{doc-constructors}
+\Hypertarget{class_vesper_1_1_orthographic_camera_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_vesper_1_1_orthographic_camera_adeebc9b7ff1d0a8f63432ccd2181c450}\index{Vesper::OrthographicCamera@{Vesper::OrthographicCamera}!OrthographicCamera@{OrthographicCamera}}
+\index{OrthographicCamera@{OrthographicCamera}!Vesper::OrthographicCamera@{Vesper::OrthographicCamera}}
+\doxysubsubsection{\texorpdfstring{OrthographicCamera()}{OrthographicCamera()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_orthographic_camera_adeebc9b7ff1d0a8f63432ccd2181c450} 
+Vesper::\+\+Orthographic\+Camera::\+\+Orthographic\+Camera (\begin{DoxyParamCaption}\item[{float}]{left}{, }\item[{float}]{right}{, }\item[{float}]{bottom}{, }\item[{float}]{top}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_aa1e5d2578f5f3f0df0be5a7780875b3d}{m\_ProjectionMatrix}}(glm::ortho(left,\ right,\ bottom,\ top,\ -\/1.0f,\ 1.0f)),\ \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_a75cc345a0a2f9ee84951ec98bcd9fd6d}{m\_ViewMatrix}}(1.0f) }
+\DoxyCodeLine{00010\ \ \ \ \ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_a162103028870592a97ae96d87b1b7649}{m\_ViewProjectionMatrix}}\ =\ \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_aa1e5d2578f5f3f0df0be5a7780875b3d}{m\_ProjectionMatrix}}\ *\ \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_a75cc345a0a2f9ee84951ec98bcd9fd6d}{m\_ViewMatrix}};}
+\DoxyCodeLine{00013\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_adeebc9b7ff1d0a8f63432ccd2181c450}{Orthographic\+Camera()}}.
+
+
+
+Referenced by \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_adeebc9b7ff1d0a8f63432ccd2181c450}{Orthographic\+Camera()}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_vesper_1_1_orthographic_camera_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_vesper_1_1_orthographic_camera_ab95656a6445766fd0c34f58007b4c67e}\index{Vesper::OrthographicCamera@{Vesper::OrthographicCamera}!GetPosition@{GetPosition}}
+\index{GetPosition@{GetPosition}!Vesper::OrthographicCamera@{Vesper::OrthographicCamera}}
+\doxysubsubsection{\texorpdfstring{GetPosition()}{GetPosition()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_orthographic_camera_ab95656a6445766fd0c34f58007b4c67e} 
+const glm::\+vec3 \& Vesper::\+\+Orthographic\+Camera::\+\+Get\+Position (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00014\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_af5f58ee114c485ec4749908b1a57306e}{m\_Position}};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_vesper_1_1_orthographic_camera_abe78b3422eaababefd37305dbbe86578}\index{Vesper::OrthographicCamera@{Vesper::OrthographicCamera}!GetProjectionMatrix@{GetProjectionMatrix}}
+\index{GetProjectionMatrix@{GetProjectionMatrix}!Vesper::OrthographicCamera@{Vesper::OrthographicCamera}}
+\doxysubsubsection{\texorpdfstring{GetProjectionMatrix()}{GetProjectionMatrix()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_orthographic_camera_abe78b3422eaababefd37305dbbe86578} 
+const glm::\+mat4 \& Vesper::\+\+Orthographic\+Camera::\+\+Get\+Projection\+Matrix (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00020\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_aa1e5d2578f5f3f0df0be5a7780875b3d}{m\_ProjectionMatrix}};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_vesper_1_1_orthographic_camera_aa914afe4de2c561e477f129ece7c23f4}\index{Vesper::OrthographicCamera@{Vesper::OrthographicCamera}!GetRotation@{GetRotation}}
+\index{GetRotation@{GetRotation}!Vesper::OrthographicCamera@{Vesper::OrthographicCamera}}
+\doxysubsubsection{\texorpdfstring{GetRotation()}{GetRotation()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_orthographic_camera_aa914afe4de2c561e477f129ece7c23f4} 
+const float Vesper::\+\+Orthographic\+Camera::\+\+Get\+Rotation (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00017\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_ab044df719b1acbe67ad51f5318bcf883}{m\_Rotation}};\ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_ab044df719b1acbe67ad51f5318bcf883}{m\+\_\+\+Rotation}}.
+
+\Hypertarget{class_vesper_1_1_orthographic_camera_a81810b62e2203958d8f3df98aac46c7e}\index{Vesper::OrthographicCamera@{Vesper::OrthographicCamera}!GetViewMatrix@{GetViewMatrix}}
+\index{GetViewMatrix@{GetViewMatrix}!Vesper::OrthographicCamera@{Vesper::OrthographicCamera}}
+\doxysubsubsection{\texorpdfstring{GetViewMatrix()}{GetViewMatrix()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_orthographic_camera_a81810b62e2203958d8f3df98aac46c7e} 
+const glm::\+mat4 \& Vesper::\+\+Orthographic\+Camera::\+\+Get\+View\+Matrix (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00021\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_a75cc345a0a2f9ee84951ec98bcd9fd6d}{m\_ViewMatrix}};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_vesper_1_1_orthographic_camera_a8f930e2058ee4a3bc83d1bbb25b2f8ea}\index{Vesper::OrthographicCamera@{Vesper::OrthographicCamera}!GetViewProjectionMatrix@{GetViewProjectionMatrix}}
+\index{GetViewProjectionMatrix@{GetViewProjectionMatrix}!Vesper::OrthographicCamera@{Vesper::OrthographicCamera}}
+\doxysubsubsection{\texorpdfstring{GetViewProjectionMatrix()}{GetViewProjectionMatrix()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_orthographic_camera_a8f930e2058ee4a3bc83d1bbb25b2f8ea} 
+const glm::\+mat4 \& Vesper::\+\+Orthographic\+Camera::\+\+Get\+View\+Projection\+Matrix (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00022\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_a162103028870592a97ae96d87b1b7649}{m\_ViewProjectionMatrix}};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_vesper_1_1_orthographic_camera_a6f7543cf270bf33ff0728ca43fd70e0a}\index{Vesper::OrthographicCamera@{Vesper::OrthographicCamera}!RecalculateViewMatrix@{RecalculateViewMatrix}}
+\index{RecalculateViewMatrix@{RecalculateViewMatrix}!Vesper::OrthographicCamera@{Vesper::OrthographicCamera}}
+\doxysubsubsection{\texorpdfstring{RecalculateViewMatrix()}{RecalculateViewMatrix()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_orthographic_camera_a6f7543cf270bf33ff0728ca43fd70e0a} 
+void Vesper::\+\+Orthographic\+Camera::\+\+Recalculate\+View\+Matrix (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00023\ \ \ \ \ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ glm::mat4\ transform\ =\ glm::translate(glm::mat4(1.0f),\ \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_af5f58ee114c485ec4749908b1a57306e}{m\_Position}})\ *}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ glm::rotate(glm::mat4(1.0f),\ glm::radians(\doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_ab044df719b1acbe67ad51f5318bcf883}{m\_Rotation}}),\ glm::vec3(0,\ 0,\ 1));}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_a75cc345a0a2f9ee84951ec98bcd9fd6d}{m\_ViewMatrix}}\ =\ glm::inverse(transform);}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_a162103028870592a97ae96d87b1b7649}{m\_ViewProjectionMatrix}}\ =\ \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_aa1e5d2578f5f3f0df0be5a7780875b3d}{m\_ProjectionMatrix}}\ *\ \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_a75cc345a0a2f9ee84951ec98bcd9fd6d}{m\_ViewMatrix}};}
+\DoxyCodeLine{00029\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referenced by \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_a62dbb43f26a576d8acb518a7444201da}{Set\+Position()}}, and \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_ac4c65d06e7ffd655ecb005dc56bbcf64}{Set\+Rotation()}}.
+
+\Hypertarget{class_vesper_1_1_orthographic_camera_a62dbb43f26a576d8acb518a7444201da}\index{Vesper::OrthographicCamera@{Vesper::OrthographicCamera}!SetPosition@{SetPosition}}
+\index{SetPosition@{SetPosition}!Vesper::OrthographicCamera@{Vesper::OrthographicCamera}}
+\doxysubsubsection{\texorpdfstring{SetPosition()}{SetPosition()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_orthographic_camera_a62dbb43f26a576d8acb518a7444201da} 
+void Vesper::\+\+Orthographic\+Camera::\+\+Set\+Position (\begin{DoxyParamCaption}\item[{const glm::\+vec3 \&}]{position}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00013\ \{\ \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_af5f58ee114c485ec4749908b1a57306e}{m\_Position}}\ =\ position;\ \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_a6f7543cf270bf33ff0728ca43fd70e0a}{RecalculateViewMatrix}}();\ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_a6f7543cf270bf33ff0728ca43fd70e0a}{Recalculate\+View\+Matrix()}}.
+
+\Hypertarget{class_vesper_1_1_orthographic_camera_a4c3183cbd4a1038bc546dedf7fd6d4e1}\index{Vesper::OrthographicCamera@{Vesper::OrthographicCamera}!SetProjection@{SetProjection}}
+\index{SetProjection@{SetProjection}!Vesper::OrthographicCamera@{Vesper::OrthographicCamera}}
+\doxysubsubsection{\texorpdfstring{SetProjection()}{SetProjection()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_orthographic_camera_a4c3183cbd4a1038bc546dedf7fd6d4e1} 
+void Vesper::\+\+Orthographic\+Camera::\+\+Set\+Projection (\begin{DoxyParamCaption}\item[{float}]{left}{, }\item[{float}]{right}{, }\item[{float}]{bottom}{, }\item[{float}]{top}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00016\ \ \ \ \ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_aa1e5d2578f5f3f0df0be5a7780875b3d}{m\_ProjectionMatrix}}\ =\ glm::ortho(left,\ right,\ bottom,\ top,\ -\/1.0f,\ 1.0f);}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_a162103028870592a97ae96d87b1b7649}{m\_ViewProjectionMatrix}}\ =\ \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_aa1e5d2578f5f3f0df0be5a7780875b3d}{m\_ProjectionMatrix}}\ *\ \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_a75cc345a0a2f9ee84951ec98bcd9fd6d}{m\_ViewMatrix}};}
+\DoxyCodeLine{00020\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_vesper_1_1_orthographic_camera_ac4c65d06e7ffd655ecb005dc56bbcf64}\index{Vesper::OrthographicCamera@{Vesper::OrthographicCamera}!SetRotation@{SetRotation}}
+\index{SetRotation@{SetRotation}!Vesper::OrthographicCamera@{Vesper::OrthographicCamera}}
+\doxysubsubsection{\texorpdfstring{SetRotation()}{SetRotation()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_orthographic_camera_ac4c65d06e7ffd655ecb005dc56bbcf64} 
+void Vesper::\+\+Orthographic\+Camera::\+\+Set\+Rotation (\begin{DoxyParamCaption}\item[{float}]{rotation}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00016\ \{\ \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_ab044df719b1acbe67ad51f5318bcf883}{m\_Rotation}}\ =\ rotation;\ \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_a6f7543cf270bf33ff0728ca43fd70e0a}{RecalculateViewMatrix}}();\ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_ab044df719b1acbe67ad51f5318bcf883}{m\+\_\+\+Rotation}}, and \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_a6f7543cf270bf33ff0728ca43fd70e0a}{Recalculate\+View\+Matrix()}}.
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_vesper_1_1_orthographic_camera_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_vesper_1_1_orthographic_camera_af5f58ee114c485ec4749908b1a57306e}\index{Vesper::OrthographicCamera@{Vesper::OrthographicCamera}!m\_Position@{m\_Position}}
+\index{m\_Position@{m\_Position}!Vesper::OrthographicCamera@{Vesper::OrthographicCamera}}
+\doxysubsubsection{\texorpdfstring{m\_Position}{m\_Position}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_orthographic_camera_af5f58ee114c485ec4749908b1a57306e} 
+glm::\+vec3 Vesper::\+\+Orthographic\+Camera::\+m\+\_\+\+Position = \{ 0.\+0f, 0.\+0f, 0.\+0f \}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00030\ \{\ 0.0f,\ 0.0f,\ 0.0f\ \};}
+
+\end{DoxyCode}
+\Hypertarget{class_vesper_1_1_orthographic_camera_aa1e5d2578f5f3f0df0be5a7780875b3d}\index{Vesper::OrthographicCamera@{Vesper::OrthographicCamera}!m\_ProjectionMatrix@{m\_ProjectionMatrix}}
+\index{m\_ProjectionMatrix@{m\_ProjectionMatrix}!Vesper::OrthographicCamera@{Vesper::OrthographicCamera}}
+\doxysubsubsection{\texorpdfstring{m\_ProjectionMatrix}{m\_ProjectionMatrix}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_orthographic_camera_aa1e5d2578f5f3f0df0be5a7780875b3d} 
+glm::\+mat4 Vesper::\+\+Orthographic\+Camera::\+m\+\_\+\+Projection\+Matrix\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_vesper_1_1_orthographic_camera_ab044df719b1acbe67ad51f5318bcf883}\index{Vesper::OrthographicCamera@{Vesper::OrthographicCamera}!m\_Rotation@{m\_Rotation}}
+\index{m\_Rotation@{m\_Rotation}!Vesper::OrthographicCamera@{Vesper::OrthographicCamera}}
+\doxysubsubsection{\texorpdfstring{m\_Rotation}{m\_Rotation}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_orthographic_camera_ab044df719b1acbe67ad51f5318bcf883} 
+float Vesper::\+\+Orthographic\+Camera::\+m\+\_\+\+Rotation = 0.\+0f\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_aa914afe4de2c561e477f129ece7c23f4}{Get\+Rotation()}}, and \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_ac4c65d06e7ffd655ecb005dc56bbcf64}{Set\+Rotation()}}.
+
+\Hypertarget{class_vesper_1_1_orthographic_camera_a75cc345a0a2f9ee84951ec98bcd9fd6d}\index{Vesper::OrthographicCamera@{Vesper::OrthographicCamera}!m\_ViewMatrix@{m\_ViewMatrix}}
+\index{m\_ViewMatrix@{m\_ViewMatrix}!Vesper::OrthographicCamera@{Vesper::OrthographicCamera}}
+\doxysubsubsection{\texorpdfstring{m\_ViewMatrix}{m\_ViewMatrix}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_orthographic_camera_a75cc345a0a2f9ee84951ec98bcd9fd6d} 
+glm::\+mat4 Vesper::\+\+Orthographic\+Camera::\+m\+\_\+\+View\+Matrix\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_vesper_1_1_orthographic_camera_a162103028870592a97ae96d87b1b7649}\index{Vesper::OrthographicCamera@{Vesper::OrthographicCamera}!m\_ViewProjectionMatrix@{m\_ViewProjectionMatrix}}
+\index{m\_ViewProjectionMatrix@{m\_ViewProjectionMatrix}!Vesper::OrthographicCamera@{Vesper::OrthographicCamera}}
+\doxysubsubsection{\texorpdfstring{m\_ViewProjectionMatrix}{m\_ViewProjectionMatrix}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_orthographic_camera_a162103028870592a97ae96d87b1b7649} 
+glm::\+mat4 Vesper::\+\+Orthographic\+Camera::\+m\+\_\+\+View\+Projection\+Matrix\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+Vesper/\+src/\+\+Vesper/\+\+Renderer/\+\doxymbox{\hyperlink{_orthographic_camera_8h}{Orthographic\+Camera.\+h}}\item 
+Vesper/\+src/\+\+Vesper/\+\+Renderer/\+\doxymbox{\hyperlink{_orthographic_camera_8cpp}{Orthographic\+Camera.\+cpp}}\end{DoxyCompactItemize}

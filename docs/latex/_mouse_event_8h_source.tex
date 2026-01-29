@@ -1,0 +1,110 @@
+\doxysection{Mouse\+Event.\+h}
+\hypertarget{_mouse_event_8h_source}{}\label{_mouse_event_8h_source}\index{Vesper/src/Vesper/Events/MouseEvent.h@{Vesper/src/Vesper/Events/MouseEvent.h}}
+\doxymbox{\hyperlink{_mouse_event_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{pragma}\ \textcolor{preprocessor}{once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\ \doxymbox{\hyperlink{vzpch_8h}{"{}vzpch.h"{}}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\ \textcolor{preprocessor}{"{}Vesper/Core/Base.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\ \textcolor{preprocessor}{"{}Vesper/Events/Event.h"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{namespace}\ \doxymbox{\hyperlink{namespace_vesper}{Vesper}}\ \{}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{class}\ VESPER\_API\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_moved_event}{MouseMovedEvent}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_vesper_1_1_event}{Event}}}
+\DoxyCodeLine{00010\ \ \ \ \ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_mouse_moved_event_ad5a836372f9ac72a226b510e5cf92b14}{MouseMovedEvent}}(\textcolor{keywordtype}{float}\ x,\ \textcolor{keywordtype}{float}\ y)}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_moved_event_a54b8481a65e4fbe5f4053d137ab724a8}{m\_MouseX}}(x),\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_moved_event_a7638e12f67f1aa78a3beb084e3642dd8}{m\_MouseY}}(y)\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_moved_event_aa68e8151dd543c43d1917a7b21484671}{GetX}}()\ \textcolor{keyword}{const}\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_moved_event_a54b8481a65e4fbe5f4053d137ab724a8}{m\_MouseX}};\ \}}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_moved_event_af598ce2634633a7432d900a7ad3ab3fa}{GetY}}()\ \textcolor{keyword}{const}\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_moved_event_a7638e12f67f1aa78a3beb084e3642dd8}{m\_MouseY}};\ \}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_moved_event_a2ccfeb59c21f70a757921b76f21f5bee}{ToString}}()\ \textcolor{keyword}{const}\ \textcolor{keyword}{override}}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ std::stringstream\ ss;}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ ss\ <<\ \textcolor{stringliteral}{"{}MouseMovedEvent:\ "{}}\ <<\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_moved_event_a54b8481a65e4fbe5f4053d137ab724a8}{m\_MouseX}}\ <<\ \textcolor{stringliteral}{"{},\ "{}}\ <<\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_moved_event_a7638e12f67f1aa78a3beb084e3642dd8}{m\_MouseY}};}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ss.str();}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_event_8h_a80d534fc4d69a68eefd1573fd0ac2f44}{EVENT\_CLASS\_TYPE}}(\doxymbox{\hyperlink{namespace_vesper_ada4bc37927ce22c44ea0083a224d3bb5ac2770ad109c8063ce69a3608a9a16c08}{MouseMoved}})}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_event_8h_abd52deea587a36ef619e596a0c691839}{EVENT\_CLASS\_CATEGORY}}(\doxymbox{\hyperlink{namespace_vesper_ad79da63be4419c3a218acaa990decabea3c4a955f5c8263670268bd87fefc1f16}{EventCategoryMouse}}\ |\ \doxymbox{\hyperlink{namespace_vesper_ad79da63be4419c3a218acaa990decabea6c60ac482ece62549192596ebe2bd544}{EventCategoryInput}})}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_moved_event_a54b8481a65e4fbe5f4053d137ab724a8}{m\_MouseX}},\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_moved_event_a7638e12f67f1aa78a3beb084e3642dd8}{m\_MouseY}};}
+\DoxyCodeLine{00031\ \ \ \ \ \};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{class}\ VESPER\_API\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_scrolled_event}{MouseScrolledEvent}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_vesper_1_1_event}{Event}}}
+\DoxyCodeLine{00034\ \ \ \ \ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_mouse_scrolled_event_aa1e490679c0cb92aafce31e74c0309ff}{MouseScrolledEvent}}(\textcolor{keywordtype}{float}\ xOffset,\ \textcolor{keywordtype}{float}\ yOffset)}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_scrolled_event_a2820cd39c299ee44f177c201d4a5bb4e}{m\_XOffset}}(xOffset),\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_scrolled_event_afab5212abe2b5d20b186e28f1e75903c}{m\_YOffset}}(yOffset)\ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_scrolled_event_a91fe11538a6e415a235f2f64922dd141}{GetXOffset}}()\ \textcolor{keyword}{const}\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_scrolled_event_a2820cd39c299ee44f177c201d4a5bb4e}{m\_XOffset}};\ \}}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_scrolled_event_aabc8368c57fa904be7140c907313ca15}{GetYOffset}}()\ \textcolor{keyword}{const}\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_scrolled_event_afab5212abe2b5d20b186e28f1e75903c}{m\_YOffset}};\ \}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_scrolled_event_ad1042edae967b19753014021b941f051}{ToString}}()\ \textcolor{keyword}{const}\ \textcolor{keyword}{override}}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ std::stringstream\ ss;}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ ss\ <<\ \textcolor{stringliteral}{"{}MouseScrolledEvent:\ "{}}\ <<\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_scrolled_event_a91fe11538a6e415a235f2f64922dd141}{GetXOffset}}\doxymbox{\hyperlink{class_vesper_1_1_mouse_scrolled_event_a91fe11538a6e415a235f2f64922dd141}{(}}\doxymbox{\hyperlink{class_vesper_1_1_mouse_scrolled_event_a91fe11538a6e415a235f2f64922dd141}{)}}\ <<\ \textcolor{stringliteral}{"{},\ "{}}\ <<\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_scrolled_event_aabc8368c57fa904be7140c907313ca15}{GetYOffset}}\doxymbox{\hyperlink{class_vesper_1_1_mouse_scrolled_event_aabc8368c57fa904be7140c907313ca15}{(}}\doxymbox{\hyperlink{class_vesper_1_1_mouse_scrolled_event_aabc8368c57fa904be7140c907313ca15}{)}};}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ss.str();}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_event_8h_a80d534fc4d69a68eefd1573fd0ac2f44}{EVENT\_CLASS\_TYPE}}(\doxymbox{\hyperlink{namespace_vesper_ada4bc37927ce22c44ea0083a224d3bb5a50edb169910041bb3c06f6e8322d74c1}{MouseScrolled}})}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_event_8h_abd52deea587a36ef619e596a0c691839}{EVENT\_CLASS\_CATEGORY}}(\doxymbox{\hyperlink{namespace_vesper_ad79da63be4419c3a218acaa990decabea3c4a955f5c8263670268bd87fefc1f16}{EventCategoryMouse}}\ |\ \doxymbox{\hyperlink{namespace_vesper_ad79da63be4419c3a218acaa990decabea6c60ac482ece62549192596ebe2bd544}{EventCategoryInput}})}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_scrolled_event_a2820cd39c299ee44f177c201d4a5bb4e}{m\_XOffset}},\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_scrolled_event_afab5212abe2b5d20b186e28f1e75903c}{m\_YOffset}};}
+\DoxyCodeLine{00054\ \ \ \ \ \};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keyword}{class}\ VESPER\_API\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event}{MouseButtonEvent}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_vesper_1_1_event}{Event}}}
+\DoxyCodeLine{00057\ \ \ \ \ \{}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event_ace3614a44a91aeb7c90e14fa087d5d43}{GetMouseButton}}()\ \textcolor{keyword}{const}\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event_ac7a0d970c0a29aac9ee2643224a8daa5}{m\_Button}};\ \}}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_event_8h_abd52deea587a36ef619e596a0c691839}{EVENT\_CLASS\_CATEGORY}}(\doxymbox{\hyperlink{namespace_vesper_ad79da63be4419c3a218acaa990decabea3c4a955f5c8263670268bd87fefc1f16}{EventCategoryMouse}}\ |\ \doxymbox{\hyperlink{namespace_vesper_ad79da63be4419c3a218acaa990decabea6c60ac482ece62549192596ebe2bd544}{EventCategoryInput}})}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event_ada06b672494998951a14cd7888f45b50}{MouseButtonEvent}}(\textcolor{keywordtype}{int}\ button)}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event_ac7a0d970c0a29aac9ee2643224a8daa5}{m\_Button}}(button)\ \{}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event_ac7a0d970c0a29aac9ee2643224a8daa5}{m\_Button}};}
+\DoxyCodeLine{00067\ \ \ \ \ \};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keyword}{class}\ VESPER\_API\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_pressed_event}{MouseButtonPressedEvent}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event}{MouseButtonEvent}}}
+\DoxyCodeLine{00070\ \ \ \ \ \{}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_pressed_event_a3924c42eeceae9390a16a2d750b4a832}{MouseButtonPressedEvent}}(\textcolor{keywordtype}{int}\ button)}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event}{MouseButtonEvent}}\doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event_ada06b672494998951a14cd7888f45b50}{(}}button\doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event_ada06b672494998951a14cd7888f45b50}{)}}\ \{}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_pressed_event_a9cc088a6bc2d238bb6e4df9107cbea72}{ToString}}()\ \textcolor{keyword}{const}\ \textcolor{keyword}{override}}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ std::stringstream\ ss;}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ ss\ <<\ \textcolor{stringliteral}{"{}MouseButtonPressedEvent:\ "{}}\ <<\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event_ace3614a44a91aeb7c90e14fa087d5d43}{GetMouseButton}}\doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event_ace3614a44a91aeb7c90e14fa087d5d43}{(}}\doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event_ace3614a44a91aeb7c90e14fa087d5d43}{)}};}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ss.str();}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_event_8h_a80d534fc4d69a68eefd1573fd0ac2f44}{EVENT\_CLASS\_TYPE}}(\doxymbox{\hyperlink{namespace_vesper_ada4bc37927ce22c44ea0083a224d3bb5a7349f643d689997b7c54bf93e4095f5c}{MouseButtonPressed}})}
+\DoxyCodeLine{00084\ \ \ \ \ \};}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keyword}{class}\ VESPER\_API\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_released_event}{MouseButtonReleasedEvent}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event}{MouseButtonEvent}}}
+\DoxyCodeLine{00087\ \ \ \ \ \{}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_released_event_a500223a0b6aaedcaa8b881b01dabfff1}{MouseButtonReleasedEvent}}(\textcolor{keywordtype}{int}\ button)}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event}{MouseButtonEvent}}\doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event_ada06b672494998951a14cd7888f45b50}{(}}button\doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event_ada06b672494998951a14cd7888f45b50}{)}}\ \{}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_released_event_a65f37698ff0f126ce6a1c063a312de13}{ToString}}()\ \textcolor{keyword}{const}\ \textcolor{keyword}{override}}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ std::stringstream\ ss;}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ ss\ <<\ \textcolor{stringliteral}{"{}MouseButtonReleasedEvent:\ "{}}\ <<\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event_ace3614a44a91aeb7c90e14fa087d5d43}{GetMouseButton}}\doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event_ace3614a44a91aeb7c90e14fa087d5d43}{(}}\doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event_ace3614a44a91aeb7c90e14fa087d5d43}{)}};}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ss.str();}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_event_8h_a80d534fc4d69a68eefd1573fd0ac2f44}{EVENT\_CLASS\_TYPE}}(\doxymbox{\hyperlink{namespace_vesper_ada4bc37927ce22c44ea0083a224d3bb5a7584c169de594c27f00084b93186fd7c}{MouseButtonReleased}})}
+\DoxyCodeLine{00102\ \ \ \ \ \};}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \}}
+
+\end{DoxyCode}

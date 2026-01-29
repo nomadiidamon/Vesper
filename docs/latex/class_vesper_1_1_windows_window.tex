@@ -1,0 +1,462 @@
+\doxysection{Vesper::\+Windows\+Window Class Reference}
+\hypertarget{class_vesper_1_1_windows_window}{}\label{class_vesper_1_1_windows_window}\index{Vesper::WindowsWindow@{Vesper::WindowsWindow}}
+
+
+{\ttfamily \+\#include $<$Windows\+Window.\+h$>$}
+
+Inheritance diagram for Vesper::\+Windows\+Window:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_vesper_1_1_windows_window}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{class_vesper_1_1_windows_window_struct_vesper_1_1_windows_window_1_1_window_data}{Window\+Data}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_vesper_1_1_windows_window_a41fff320887d40f8c415f80b52ff5416}{Windows\+Window}} (const \doxymbox{\hyperlink{struct_vesper_1_1_window_props}{Window\+Props}} \&props)
+\item 
+virtual \doxymbox{\hyperlink{class_vesper_1_1_windows_window_a3ed6536ec09a8ffe2fa6190df334566f}{\texorpdfstring{$\sim$}{\string~}\+Windows\+Window}} ()
+\item 
+void \doxymbox{\hyperlink{class_vesper_1_1_windows_window_a6658a3ef114f2f3fc5c775c65e37b958}{On\+Update}} () override
+\item 
+unsigned int \doxymbox{\hyperlink{class_vesper_1_1_windows_window_ad3cef4871d3a311155dfe997985e5a2a}{Get\+Width}} () const override
+\item 
+unsigned int \doxymbox{\hyperlink{class_vesper_1_1_windows_window_ab89ca1907dc2a493821fe9bf141ecd07}{Get\+Height}} () const override
+\item 
+void \doxymbox{\hyperlink{class_vesper_1_1_windows_window_a3481fa772c2853a5cec99498e095401d}{Set\+Event\+Callback}} (const \doxymbox{\hyperlink{class_vesper_1_1_window_ac908c4b9b5d83ccb8bf159a443833403}{Event\+Callback\+Fn}} \&callback) override
+\item 
+void \doxymbox{\hyperlink{class_vesper_1_1_windows_window_ac24a0402e8393ae2ab558a6574302217}{Set\+VSync}} (bool enabled) override
+\item 
+bool \doxymbox{\hyperlink{class_vesper_1_1_windows_window_a111250e0545c201981741db703eb0b5d}{Is\+VSync}} () const override
+\item 
+virtual void \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_vesper_1_1_windows_window_a3de8b964724d127bbe13ac88cb2dd903}{Get\+Native\+Window}} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_vesper_1_1_window}{Vesper::\+\+Window}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \doxymbox{\hyperlink{class_vesper_1_1_window_a4125c4f4f15a045803fcdda0f9e3e0ca}{\texorpdfstring{$\sim$}{\string~}\+Window}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \doxymbox{\hyperlink{class_vesper_1_1_windows_window_a5e5586fe5c6d7068f9e40950c5b17dfe}{Init}} (const \doxymbox{\hyperlink{struct_vesper_1_1_window_props}{Window\+Props}} \&props)
+\item 
+virtual void \doxymbox{\hyperlink{class_vesper_1_1_windows_window_a30d5d2e8b9b0a6a20b676dbeb16fd875}{Shutdown}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+GLFWwindow \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_vesper_1_1_windows_window_a7ea9e9cff8eae7150841ca71ee6be079}{m\+\_\+\+Window}}
+\item 
+\doxymbox{\hyperlink{class_vesper_1_1_graphics_context}{Graphics\+Context}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_vesper_1_1_windows_window_a216342905d7c59dc562f9747fe1a097c}{m\+\_\+\+Context}}
+\item 
+\doxymbox{\hyperlink{class_vesper_1_1_windows_window_struct_vesper_1_1_windows_window_1_1_window_data}{Window\+Data}} \doxymbox{\hyperlink{class_vesper_1_1_windows_window_a0bee44286a1747f022adc10f519eea35}{m\+\_\+\+Data}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Types inherited from \doxymbox{\hyperlink{class_vesper_1_1_window}{Vesper::\+\+Window}}}
+\begin{DoxyCompactItemize}
+\item 
+using \doxymbox{\hyperlink{class_vesper_1_1_window_ac908c4b9b5d83ccb8bf159a443833403}{Event\+Callback\+Fn}} = std::\+function$<$void(\doxymbox{\hyperlink{class_vesper_1_1_event}{Event}}\&)$>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions inherited from \doxymbox{\hyperlink{class_vesper_1_1_window}{Vesper::\+\+Window}}}
+\begin{DoxyCompactItemize}
+\item 
+static \doxymbox{\hyperlink{namespace_vesper_a5425f9aaa2ee4d3761c8ce6b385e0b70}{Scope}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_window}{Window}} $>$ \doxymbox{\hyperlink{class_vesper_1_1_window_a54fb0dcbcf16390cd9f8f2ebda165523}{Create}} (const \doxymbox{\hyperlink{struct_vesper_1_1_window_props}{Window\+Props}} \&props=\doxymbox{\hyperlink{struct_vesper_1_1_window_props}{Window\+Props}}())
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Class Documentation}
+\index{Vesper::WindowsWindow::WindowData@{Vesper::WindowsWindow::WindowData}}
+\label{struct_vesper_1_1_windows_window_1_1_window_data}
+\Hypertarget{class_vesper_1_1_windows_window_struct_vesper_1_1_windows_window_1_1_window_data}
+\doxysubsubsection{struct Vesper::\+Windows\+Window::\+Window\+Data}
+\begin{DoxyFields}{Class Members}
+\doxymbox{\Hypertarget{class_vesper_1_1_windows_window_aa8f7420cfc5b5936dd1810de7878767f}\label{class_vesper_1_1_windows_window_aa8f7420cfc5b5936dd1810de7878767f}} 
+\doxymbox{\hyperlink{class_vesper_1_1_window_ac908c4b9b5d83ccb8bf159a443833403}{EventCallbackFn}}&
+EventCallback&
+\\
+\hline
+
+\doxymbox{\Hypertarget{class_vesper_1_1_windows_window_aa8a0bb4a38e17bc1faa47b21d7a4e133}\label{class_vesper_1_1_windows_window_aa8a0bb4a38e17bc1faa47b21d7a4e133}} 
+unsigned int&
+Height&
+\\
+\hline
+
+\doxymbox{\Hypertarget{class_vesper_1_1_windows_window_a4102fb44d314caedea32032326331971}\label{class_vesper_1_1_windows_window_a4102fb44d314caedea32032326331971}} 
+string&
+Title&
+\\
+\hline
+
+\doxymbox{\Hypertarget{class_vesper_1_1_windows_window_aadb4da6a2081499c11d79e70c5627aee}\label{class_vesper_1_1_windows_window_aadb4da6a2081499c11d79e70c5627aee}} 
+bool&
+VSync&
+\\
+\hline
+
+\doxymbox{\Hypertarget{class_vesper_1_1_windows_window_ac79337a2dfac2e3aef4df0e1672d1046}\label{class_vesper_1_1_windows_window_ac79337a2dfac2e3aef4df0e1672d1046}} 
+unsigned int&
+Width&
+\\
+\hline
+
+\end{DoxyFields}
+
+
+\label{doc-constructors}
+\Hypertarget{class_vesper_1_1_windows_window_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_vesper_1_1_windows_window_a41fff320887d40f8c415f80b52ff5416}\index{Vesper::WindowsWindow@{Vesper::WindowsWindow}!WindowsWindow@{WindowsWindow}}
+\index{WindowsWindow@{WindowsWindow}!Vesper::WindowsWindow@{Vesper::WindowsWindow}}
+\doxysubsubsection{\texorpdfstring{WindowsWindow()}{WindowsWindow()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_windows_window_a41fff320887d40f8c415f80b52ff5416} 
+Vesper::\+\+Windows\+Window::\+\+Windows\+Window (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{struct_vesper_1_1_window_props}{Window\+Props}} \&}]{props}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00026\ \ \ \ \ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_windows_window_a5e5586fe5c6d7068f9e40950c5b17dfe}{Init}}(props);}
+\DoxyCodeLine{00029\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_windows_window_a5e5586fe5c6d7068f9e40950c5b17dfe}{Init()}}.
+
+\Hypertarget{class_vesper_1_1_windows_window_a3ed6536ec09a8ffe2fa6190df334566f}\index{Vesper::WindowsWindow@{Vesper::WindowsWindow}!````~WindowsWindow@{\texorpdfstring{$\sim$}{\string~}WindowsWindow}}
+\index{````~WindowsWindow@{\texorpdfstring{$\sim$}{\string~}WindowsWindow}!Vesper::WindowsWindow@{Vesper::WindowsWindow}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}WindowsWindow()}{\string~WindowsWindow()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_windows_window_a3ed6536ec09a8ffe2fa6190df334566f} 
+Vesper::\+\+Windows\+Window::\+\texorpdfstring{$\sim$}{\string~}\+Windows\+Window (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00032\ \ \ \ \ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_windows_window_a30d5d2e8b9b0a6a20b676dbeb16fd875}{Shutdown}}();}
+\DoxyCodeLine{00034\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_windows_window_a30d5d2e8b9b0a6a20b676dbeb16fd875}{Shutdown()}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_vesper_1_1_windows_window_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_vesper_1_1_windows_window_ab89ca1907dc2a493821fe9bf141ecd07}\index{Vesper::WindowsWindow@{Vesper::WindowsWindow}!GetHeight@{GetHeight}}
+\index{GetHeight@{GetHeight}!Vesper::WindowsWindow@{Vesper::WindowsWindow}}
+\doxysubsubsection{\texorpdfstring{GetHeight()}{GetHeight()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_windows_window_ab89ca1907dc2a493821fe9bf141ecd07} 
+unsigned int Vesper::\+\+Windows\+Window::\+\+Get\+Height (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \doxymbox{\hyperlink{class_vesper_1_1_window_ad675d99e843b9c11cd2b8feb61c62265}{Vesper::\+\+Window}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00019\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_windows_window_a0bee44286a1747f022adc10f519eea35}{m\_Data}}.Height;\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_vesper_1_1_windows_window_a3de8b964724d127bbe13ac88cb2dd903}\index{Vesper::WindowsWindow@{Vesper::WindowsWindow}!GetNativeWindow@{GetNativeWindow}}
+\index{GetNativeWindow@{GetNativeWindow}!Vesper::WindowsWindow@{Vesper::WindowsWindow}}
+\doxysubsubsection{\texorpdfstring{GetNativeWindow()}{GetNativeWindow()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_windows_window_a3de8b964724d127bbe13ac88cb2dd903} 
+virtual void \texorpdfstring{$\ast$}{*} Vesper::\+\+Windows\+Window::\+\+Get\+Native\+Window (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \doxymbox{\hyperlink{class_vesper_1_1_window_a4b4b607a2bd868df1672ab69d4f09881}{Vesper::\+\+Window}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00025\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_windows_window_a7ea9e9cff8eae7150841ca71ee6be079}{m\_Window}};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_vesper_1_1_windows_window_ad3cef4871d3a311155dfe997985e5a2a}\index{Vesper::WindowsWindow@{Vesper::WindowsWindow}!GetWidth@{GetWidth}}
+\index{GetWidth@{GetWidth}!Vesper::WindowsWindow@{Vesper::WindowsWindow}}
+\doxysubsubsection{\texorpdfstring{GetWidth()}{GetWidth()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_windows_window_ad3cef4871d3a311155dfe997985e5a2a} 
+unsigned int Vesper::\+\+Windows\+Window::\+\+Get\+Width (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \doxymbox{\hyperlink{class_vesper_1_1_window_a38ba98632ee63ebacb860ca4de56772b}{Vesper::\+\+Window}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00018\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_windows_window_a0bee44286a1747f022adc10f519eea35}{m\_Data}}.Width;\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_vesper_1_1_windows_window_a5e5586fe5c6d7068f9e40950c5b17dfe}\index{Vesper::WindowsWindow@{Vesper::WindowsWindow}!Init@{Init}}
+\index{Init@{Init}!Vesper::WindowsWindow@{Vesper::WindowsWindow}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_windows_window_a5e5586fe5c6d7068f9e40950c5b17dfe} 
+void Vesper::\+\+Windows\+Window::\+\+Init (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{struct_vesper_1_1_window_props}{Window\+Props}} \&}]{props}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00037\ \ \ \ \ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_windows_window_a0bee44286a1747f022adc10f519eea35}{m\_Data}}.Title\ =\ props.Title;}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_windows_window_a0bee44286a1747f022adc10f519eea35}{m\_Data}}.Width\ =\ props.Width;}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_windows_window_a0bee44286a1747f022adc10f519eea35}{m\_Data}}.Height\ =\ props.Height;}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_log_8h_adb5d169d80c40496a160a4fd90ebca37}{VZ\_CORE\_INFO}}(\textcolor{stringliteral}{"{}Creating\ window\ \{0\}\ (\{1\},\ \{2\})"{}},\ props.Title,\ props.Width,\ props.Height);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\doxymbox{\hyperlink{namespace_vesper_a21fbc2a2465c428125f50e7d7d2b63e3}{s\_GLFWInitialized}})}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ success\ =\ glfwInit();}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_asserts_8h_a3b51b77f75997760894138afc89403c9}{VZ\_CORE\_ASSERT}}(success,\ \textcolor{stringliteral}{"{}Could\ not\ initialize\ GLFW!"{}});}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ glfwSetErrorCallback(\doxymbox{\hyperlink{namespace_vesper_a9cb9185654b38a202d68550a4882ae20}{GLFWErrorCallback}});}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_a21fbc2a2465c428125f50e7d7d2b63e3}{s\_GLFWInitialized}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_windows_window_a7ea9e9cff8eae7150841ca71ee6be079}{m\_Window}}\ =\ glfwCreateWindow((\textcolor{keywordtype}{int})props.Width,\ (\textcolor{keywordtype}{int})props.Height,\ \doxymbox{\hyperlink{class_vesper_1_1_windows_window_a0bee44286a1747f022adc10f519eea35}{m\_Data}}.Title.c\_str(),\ \textcolor{keyword}{nullptr},\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_windows_window_a216342905d7c59dc562f9747fe1a097c}{m\_Context}}\ =\ \textcolor{keyword}{new}\ OpenGLContext(\doxymbox{\hyperlink{class_vesper_1_1_windows_window_a7ea9e9cff8eae7150841ca71ee6be079}{m\_Window}});}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_windows_window_a216342905d7c59dc562f9747fe1a097c}{m\_Context}}-\/>Init();}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ glfwSetWindowUserPointer(\doxymbox{\hyperlink{class_vesper_1_1_windows_window_a7ea9e9cff8eae7150841ca71ee6be079}{m\_Window}},\ \&\doxymbox{\hyperlink{class_vesper_1_1_windows_window_a0bee44286a1747f022adc10f519eea35}{m\_Data}});}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_windows_window_ac24a0402e8393ae2ab558a6574302217}{SetVSync}}(\textcolor{keyword}{true});}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Set\ GLFW\ callbacks}}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ glfwSetWindowSizeCallback(\doxymbox{\hyperlink{class_vesper_1_1_windows_window_a7ea9e9cff8eae7150841ca71ee6be079}{m\_Window}},\ [](GLFWwindow*\ window,\ \textcolor{keywordtype}{int}\ width,\ \textcolor{keywordtype}{int}\ height)}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_windows_window_struct_vesper_1_1_windows_window_1_1_window_data}{WindowData}}\&\ data\ =\ *(\doxymbox{\hyperlink{class_vesper_1_1_windows_window_struct_vesper_1_1_windows_window_1_1_window_data}{WindowData}}*)glfwGetWindowUserPointer(window);}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ data.\doxymbox{\hyperlink{class_vesper_1_1_windows_window_aa8a0bb4a38e17bc1faa47b21d7a4e133}{Height}}\ =\ height;}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ data.Width\ =\ width;}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ WindowResizeEvent\ event(width,\ height);}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_log_8h_a8d94a9db5af5b980be1ae8e66f679d55}{VZ\_CORE\_WARN}}(\textcolor{stringliteral}{"{}Window\ resized\ to\ \{0\},\ \{1\}"{}},\ width,\ height);}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ data.EventCallback(event);}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ glfwSetWindowCloseCallback(\doxymbox{\hyperlink{class_vesper_1_1_windows_window_a7ea9e9cff8eae7150841ca71ee6be079}{m\_Window}},\ [](GLFWwindow*\ window)}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_windows_window_struct_vesper_1_1_windows_window_1_1_window_data}{WindowData}}\&\ data\ =\ *(\doxymbox{\hyperlink{class_vesper_1_1_windows_window_struct_vesper_1_1_windows_window_1_1_window_data}{WindowData}}*)glfwGetWindowUserPointer(window);}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ WindowCloseEvent\ event;}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ data.\doxymbox{\hyperlink{class_vesper_1_1_windows_window_aa8f7420cfc5b5936dd1810de7878767f}{EventCallback}}(event);}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ glfwSetKeyCallback(\doxymbox{\hyperlink{class_vesper_1_1_windows_window_a7ea9e9cff8eae7150841ca71ee6be079}{m\_Window}},\ [](GLFWwindow*\ window,\ \textcolor{keywordtype}{int}\ key,\ \textcolor{keywordtype}{int}\ scancode,\ \textcolor{keywordtype}{int}\ action,\ \textcolor{keywordtype}{int}\ mods)}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_windows_window_struct_vesper_1_1_windows_window_1_1_window_data}{WindowData}}\&\ data\ =\ *(\doxymbox{\hyperlink{class_vesper_1_1_windows_window_struct_vesper_1_1_windows_window_1_1_window_data}{WindowData}}*)glfwGetWindowUserPointer(window);}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (action)}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ GLFW\_PRESS:}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ KeyPressedEvent\ event(key,\ 0);}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ data.EventCallback(event);}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ GLFW\_RELEASE:}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ KeyReleasedEvent\ event(key);}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ data.EventCallback(event);}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ GLFW\_REPEAT:}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ KeyPressedEvent\ event(key,\ 1);}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ data.EventCallback(event);}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ glfwSetCharCallback(\doxymbox{\hyperlink{class_vesper_1_1_windows_window_a7ea9e9cff8eae7150841ca71ee6be079}{m\_Window}},\ [](GLFWwindow*\ window,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ keycode)}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_windows_window_struct_vesper_1_1_windows_window_1_1_window_data}{WindowData}}\&\ data\ =\ *(\doxymbox{\hyperlink{class_vesper_1_1_windows_window_struct_vesper_1_1_windows_window_1_1_window_data}{WindowData}}*)glfwGetWindowUserPointer(window);}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ KeyTypedEvent\ event(keycode);}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ data.EventCallback(event);}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ glfwSetMouseButtonCallback(\doxymbox{\hyperlink{class_vesper_1_1_windows_window_a7ea9e9cff8eae7150841ca71ee6be079}{m\_Window}},\ [](GLFWwindow*\ window,\ \textcolor{keywordtype}{int}\ button,\ \textcolor{keywordtype}{int}\ action,\ \textcolor{keywordtype}{int}\ mods)}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_windows_window_struct_vesper_1_1_windows_window_1_1_window_data}{WindowData}}\&\ data\ =\ *(\doxymbox{\hyperlink{class_vesper_1_1_windows_window_struct_vesper_1_1_windows_window_1_1_window_data}{WindowData}}*)glfwGetWindowUserPointer(window);}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (action)}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ GLFW\_PRESS:}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MouseButtonPressedEvent\ event(button);}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ data.EventCallback(event);}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ GLFW\_RELEASE:}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MouseButtonReleasedEvent\ event(button);}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ data.EventCallback(event);}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ glfwSetScrollCallback(\doxymbox{\hyperlink{class_vesper_1_1_windows_window_a7ea9e9cff8eae7150841ca71ee6be079}{m\_Window}},\ [](GLFWwindow*\ window,\ \textcolor{keywordtype}{double}\ xOffset,\ \textcolor{keywordtype}{double}\ yOffset)}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_windows_window_struct_vesper_1_1_windows_window_1_1_window_data}{WindowData}}\&\ data\ =\ *(\doxymbox{\hyperlink{class_vesper_1_1_windows_window_struct_vesper_1_1_windows_window_1_1_window_data}{WindowData}}*)glfwGetWindowUserPointer(window);}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MouseScrolledEvent\ event((\textcolor{keywordtype}{float})xOffset,\ (\textcolor{keywordtype}{float})yOffset);}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ data.EventCallback(event);}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ glfwSetCursorPosCallback(\doxymbox{\hyperlink{class_vesper_1_1_windows_window_a7ea9e9cff8eae7150841ca71ee6be079}{m\_Window}},\ [](GLFWwindow*\ window,\ \textcolor{keywordtype}{double}\ xPos,\ \textcolor{keywordtype}{double}\ yPos)}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_windows_window_struct_vesper_1_1_windows_window_1_1_window_data}{WindowData}}\&\ data\ =\ *(\doxymbox{\hyperlink{class_vesper_1_1_windows_window_struct_vesper_1_1_windows_window_1_1_window_data}{WindowData}}*)glfwGetWindowUserPointer(window);}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MouseMovedEvent\ event((\textcolor{keywordtype}{float})xPos,\ (\textcolor{keywordtype}{float})yPos);}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ data.EventCallback(event);}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00148\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{namespace_vesper_a9cb9185654b38a202d68550a4882ae20}{Vesper::\+\+GLFWError\+Callback()}}, \doxymbox{\hyperlink{struct_vesper_1_1_window_props_a025a36e522347d4d2adef58665d1bd6d}{Vesper::\+\+Window\+Props::\+\+Height}}, \doxymbox{\hyperlink{class_vesper_1_1_graphics_context_a69ff1719f52df244b9980617755f57e6}{Vesper::\+\+Graphics\+Context::\+\+Init()}}, \doxymbox{\hyperlink{class_vesper_1_1_windows_window_a216342905d7c59dc562f9747fe1a097c}{m\+\_\+\+Context}}, \doxymbox{\hyperlink{namespace_vesper_a21fbc2a2465c428125f50e7d7d2b63e3}{Vesper::\+s\+\_\+\+GLFWInitialized}}, \doxymbox{\hyperlink{class_vesper_1_1_windows_window_ac24a0402e8393ae2ab558a6574302217}{Set\+VSync()}}, and \doxymbox{\hyperlink{struct_vesper_1_1_window_props_ad441a3ba7b5ae2b4a9844887978b2f06}{Vesper::\+\+Window\+Props::\+\+Width}}.
+
+
+
+Referenced by \doxymbox{\hyperlink{class_vesper_1_1_windows_window_a41fff320887d40f8c415f80b52ff5416}{Windows\+Window()}}.
+
+\Hypertarget{class_vesper_1_1_windows_window_a111250e0545c201981741db703eb0b5d}\index{Vesper::WindowsWindow@{Vesper::WindowsWindow}!IsVSync@{IsVSync}}
+\index{IsVSync@{IsVSync}!Vesper::WindowsWindow@{Vesper::WindowsWindow}}
+\doxysubsubsection{\texorpdfstring{IsVSync()}{IsVSync()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_windows_window_a111250e0545c201981741db703eb0b5d} 
+bool Vesper::\+\+Windows\+Window::\+\+Is\+VSync (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \doxymbox{\hyperlink{class_vesper_1_1_window_a9dd654cf7a07088d24667d6b8257df39}{Vesper::\+\+Window}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00175\ \ \ \ \ \{}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_windows_window_a0bee44286a1747f022adc10f519eea35}{m\_Data}}.VSync;}
+\DoxyCodeLine{00177\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_vesper_1_1_windows_window_a6658a3ef114f2f3fc5c775c65e37b958}\index{Vesper::WindowsWindow@{Vesper::WindowsWindow}!OnUpdate@{OnUpdate}}
+\index{OnUpdate@{OnUpdate}!Vesper::WindowsWindow@{Vesper::WindowsWindow}}
+\doxysubsubsection{\texorpdfstring{OnUpdate()}{OnUpdate()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_windows_window_a6658a3ef114f2f3fc5c775c65e37b958} 
+void Vesper::\+\+Windows\+Window::\+\+On\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \doxymbox{\hyperlink{class_vesper_1_1_window_a77bc221adcd63fd89e0a122dbd606ea5}{Vesper::\+\+Window}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00157\ \ \ \ \ \{}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ glfwPollEvents();}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_windows_window_a216342905d7c59dc562f9747fe1a097c}{m\_Context}}-\/>SwapBuffers();}
+\DoxyCodeLine{00161\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_windows_window_a216342905d7c59dc562f9747fe1a097c}{m\+\_\+\+Context}}, and \doxymbox{\hyperlink{class_vesper_1_1_graphics_context_a91344163e3085d00661d03884cfad28a}{Vesper::\+\+Graphics\+Context::\+\+Swap\+Buffers()}}.
+
+\Hypertarget{class_vesper_1_1_windows_window_a3481fa772c2853a5cec99498e095401d}\index{Vesper::WindowsWindow@{Vesper::WindowsWindow}!SetEventCallback@{SetEventCallback}}
+\index{SetEventCallback@{SetEventCallback}!Vesper::WindowsWindow@{Vesper::WindowsWindow}}
+\doxysubsubsection{\texorpdfstring{SetEventCallback()}{SetEventCallback()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_windows_window_a3481fa772c2853a5cec99498e095401d} 
+void Vesper::\+\+Windows\+Window::\+\+Set\+Event\+Callback (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_vesper_1_1_window_ac908c4b9b5d83ccb8bf159a443833403}{Event\+Callback\+Fn}} \&}]{callback}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \doxymbox{\hyperlink{class_vesper_1_1_window_a60d3a064d370c2957b81cc5e440bb901}{Vesper::\+\+Window}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00022\ \{\ \doxymbox{\hyperlink{class_vesper_1_1_windows_window_a0bee44286a1747f022adc10f519eea35}{m\_Data}}.EventCallback\ =\ callback;\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_vesper_1_1_windows_window_ac24a0402e8393ae2ab558a6574302217}\index{Vesper::WindowsWindow@{Vesper::WindowsWindow}!SetVSync@{SetVSync}}
+\index{SetVSync@{SetVSync}!Vesper::WindowsWindow@{Vesper::WindowsWindow}}
+\doxysubsubsection{\texorpdfstring{SetVSync()}{SetVSync()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_windows_window_ac24a0402e8393ae2ab558a6574302217} 
+void Vesper::\+\+Windows\+Window::\+\+Set\+VSync (\begin{DoxyParamCaption}\item[{bool}]{enabled}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \doxymbox{\hyperlink{class_vesper_1_1_window_aa04e6bda67df742c536f34c5fac5b290}{Vesper::\+\+Window}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00164\ \ \ \ \ \{}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{00166\ }
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (enabled)}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \ \ \ \ glfwSwapInterval(1);}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \ \ \ \ glfwSwapInterval(0);}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_windows_window_a0bee44286a1747f022adc10f519eea35}{m\_Data}}.VSync\ =\ enabled;}
+\DoxyCodeLine{00172\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referenced by \doxymbox{\hyperlink{class_vesper_1_1_windows_window_a5e5586fe5c6d7068f9e40950c5b17dfe}{Init()}}.
+
+\Hypertarget{class_vesper_1_1_windows_window_a30d5d2e8b9b0a6a20b676dbeb16fd875}\index{Vesper::WindowsWindow@{Vesper::WindowsWindow}!Shutdown@{Shutdown}}
+\index{Shutdown@{Shutdown}!Vesper::WindowsWindow@{Vesper::WindowsWindow}}
+\doxysubsubsection{\texorpdfstring{Shutdown()}{Shutdown()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_windows_window_a30d5d2e8b9b0a6a20b676dbeb16fd875} 
+void Vesper::\+\+Windows\+Window::\+\+Shutdown (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00151\ \ \ \ \ \{}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ glfwDestroyWindow(\doxymbox{\hyperlink{class_vesper_1_1_windows_window_a7ea9e9cff8eae7150841ca71ee6be079}{m\_Window}});}
+\DoxyCodeLine{00154\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referenced by \doxymbox{\hyperlink{class_vesper_1_1_windows_window_a3ed6536ec09a8ffe2fa6190df334566f}{\texorpdfstring{$\sim$}{\string~}\+Windows\+Window()}}.
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_vesper_1_1_windows_window_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_vesper_1_1_windows_window_a216342905d7c59dc562f9747fe1a097c}\index{Vesper::WindowsWindow@{Vesper::WindowsWindow}!m\_Context@{m\_Context}}
+\index{m\_Context@{m\_Context}!Vesper::WindowsWindow@{Vesper::WindowsWindow}}
+\doxysubsubsection{\texorpdfstring{m\_Context}{m\_Context}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_windows_window_a216342905d7c59dc562f9747fe1a097c} 
+\doxymbox{\hyperlink{class_vesper_1_1_graphics_context}{Graphics\+Context}}\texorpdfstring{$\ast$}{*} Vesper::\+\+Windows\+Window::\+m\+\_\+\+Context\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by \doxymbox{\hyperlink{class_vesper_1_1_windows_window_a5e5586fe5c6d7068f9e40950c5b17dfe}{Init()}}, and \doxymbox{\hyperlink{class_vesper_1_1_windows_window_a6658a3ef114f2f3fc5c775c65e37b958}{On\+Update()}}.
+
+\Hypertarget{class_vesper_1_1_windows_window_a0bee44286a1747f022adc10f519eea35}\index{Vesper::WindowsWindow@{Vesper::WindowsWindow}!m\_Data@{m\_Data}}
+\index{m\_Data@{m\_Data}!Vesper::WindowsWindow@{Vesper::WindowsWindow}}
+\doxysubsubsection{\texorpdfstring{m\_Data}{m\_Data}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_windows_window_a0bee44286a1747f022adc10f519eea35} 
+\doxymbox{\hyperlink{class_vesper_1_1_windows_window_struct_vesper_1_1_windows_window_1_1_window_data}{Window\+Data}} Vesper::\+\+Windows\+Window::\+m\+\_\+\+Data\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_vesper_1_1_windows_window_a7ea9e9cff8eae7150841ca71ee6be079}\index{Vesper::WindowsWindow@{Vesper::WindowsWindow}!m\_Window@{m\_Window}}
+\index{m\_Window@{m\_Window}!Vesper::WindowsWindow@{Vesper::WindowsWindow}}
+\doxysubsubsection{\texorpdfstring{m\_Window}{m\_Window}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_windows_window_a7ea9e9cff8eae7150841ca71ee6be079} 
+GLFWwindow\texorpdfstring{$\ast$}{*} Vesper::\+\+Windows\+Window::\+m\+\_\+\+Window\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+Vesper/\+src/\+\+Platform/\+\+Windows/\+\doxymbox{\hyperlink{_windows_window_8h}{Windows\+Window.\+h}}\item 
+Vesper/\+src/\+\+Platform/\+\+Windows/\+\doxymbox{\hyperlink{_windows_window_8cpp}{Windows\+Window.\+cpp}}\end{DoxyCompactItemize}

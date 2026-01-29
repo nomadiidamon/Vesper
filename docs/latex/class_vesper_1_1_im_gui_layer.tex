@@ -1,0 +1,415 @@
+\doxysection{Vesper::\+Im\+Gui\+Layer Class Reference}
+\hypertarget{class_vesper_1_1_im_gui_layer}{}\label{class_vesper_1_1_im_gui_layer}\index{Vesper::ImGuiLayer@{Vesper::ImGuiLayer}}
+
+
+{\ttfamily \+\#include $<$Im\+Gui\+Layer.\+h$>$}
+
+Inheritance diagram for Vesper::\+Im\+Gui\+Layer:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_vesper_1_1_im_gui_layer}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_vesper_1_1_im_gui_layer_a30146f3b83ef1a2fb4eeb3e80f633111}{Im\+Gui\+Layer}} ()
+\item 
+\doxymbox{\hyperlink{class_vesper_1_1_im_gui_layer_a1b9744b500d8e3c74c9336c9f35b019f}{\texorpdfstring{$\sim$}{\string~}\+Im\+Gui\+Layer}} ()
+\item 
+virtual void \doxymbox{\hyperlink{class_vesper_1_1_im_gui_layer_aeb2e5a03cd424c37478476f6c63d025b}{On\+Attach}} () override
+\item 
+virtual void \doxymbox{\hyperlink{class_vesper_1_1_im_gui_layer_a656bc171954d83d0c8c3b273cac6ca7b}{On\+Detach}} () override
+\item 
+virtual void \doxymbox{\hyperlink{class_vesper_1_1_im_gui_layer_a70973f0316b1a8bc9a6052c894170a1f}{On\+Im\+Gui\+Render}} () override
+\item 
+virtual void \doxymbox{\hyperlink{class_vesper_1_1_im_gui_layer_a224b66c3c8a7515b401f5b1db00978ea}{On\+Event}} (\doxymbox{\hyperlink{class_vesper_1_1_event}{Event}} \&e) override
+\item 
+virtual void \doxymbox{\hyperlink{class_vesper_1_1_im_gui_layer_a3c11977ad97bff04a2f8cd92eab14032}{Begin}} ()
+\item 
+virtual void \doxymbox{\hyperlink{class_vesper_1_1_im_gui_layer_ad32cb49bc5bffd27630085d5b273c5ad}{End}} ()
+\item 
+virtual void \doxymbox{\hyperlink{class_vesper_1_1_im_gui_layer_af29b651e5d35526634399ee981bccdbc}{Set\+Block\+Events}} (bool block)
+\item 
+virtual void \doxymbox{\hyperlink{class_vesper_1_1_im_gui_layer_a948a10fd1ec20dfffd1449d66ccdf8e4}{Set\+Dark\+Theme\+Colors}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_vesper_1_1_layer}{Vesper::\+\+Layer}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_vesper_1_1_layer_aa2fadd42504c70ef28da27b724d276c7}{Layer}} (const std::\+string \&name="{}Layer"{})
+\item 
+virtual \doxymbox{\hyperlink{class_vesper_1_1_layer_abebb6b76f4d726745c9ce3f2ccce4c0e}{\texorpdfstring{$\sim$}{\string~}\+Layer}} ()
+\item 
+virtual void \doxymbox{\hyperlink{class_vesper_1_1_layer_a5403125ae4cb201a6d9cbbacef0480ec}{On\+Update}} (\doxymbox{\hyperlink{class_vesper_1_1_timestep}{Timestep}} ts)
+\item 
+virtual void \doxymbox{\hyperlink{class_vesper_1_1_layer_adf08d2acd6e08c78993139afc439ae9c}{On\+Render}} ()
+\item 
+const std::\+string \& \doxymbox{\hyperlink{class_vesper_1_1_layer_a2989c7f8093597b4920c06a3aad407e2}{Get\+Name}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \doxymbox{\hyperlink{class_vesper_1_1_im_gui_layer_ab4c5eaf4009d5119548dedb121dba2a4}{m\+\_\+\+Block\+Events}} = true
+\item 
+float \doxymbox{\hyperlink{class_vesper_1_1_im_gui_layer_aa4b07490348a4daf7af213d49e7684f4}{m\+\_\+\+Time}} = 0.\+0f
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{class_vesper_1_1_layer}{Vesper::\+\+Layer}}}
+\begin{DoxyCompactItemize}
+\item 
+std::\+string \doxymbox{\hyperlink{class_vesper_1_1_layer_ad623a46178f0cd2eff4079ee323402c3}{m\+\_\+\+Debug\+Name}}
+\end{DoxyCompactItemize}
+
+
+\label{doc-constructors}
+\Hypertarget{class_vesper_1_1_im_gui_layer_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_vesper_1_1_im_gui_layer_a30146f3b83ef1a2fb4eeb3e80f633111}\index{Vesper::ImGuiLayer@{Vesper::ImGuiLayer}!ImGuiLayer@{ImGuiLayer}}
+\index{ImGuiLayer@{ImGuiLayer}!Vesper::ImGuiLayer@{Vesper::ImGuiLayer}}
+\doxysubsubsection{\texorpdfstring{ImGuiLayer()}{ImGuiLayer()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_im_gui_layer_a30146f3b83ef1a2fb4eeb3e80f633111} 
+Vesper::\+\+Im\+Gui\+Layer::\+\+Im\+Gui\+Layer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_vesper_1_1_layer_aa2fadd42504c70ef28da27b724d276c7}{Layer}}(\textcolor{stringliteral}{"{}ImGuiLayer"{}}) }
+\DoxyCodeLine{00022\ \ \ \ \ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referenced by \doxymbox{\hyperlink{class_vesper_1_1_application_adb6d84492e607574848e77d5206c5567}{Vesper::\+\+Application::\+\+Application()}}, and \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_im_gui_layer_a5df0e20d283a9d1824cb333c7d8603b3}{Vesper::\+\+Open\+GLIm\+Gui\+Layer::\+\+Open\+GLIm\+Gui\+Layer()}}.
+
+\Hypertarget{class_vesper_1_1_im_gui_layer_a1b9744b500d8e3c74c9336c9f35b019f}\index{Vesper::ImGuiLayer@{Vesper::ImGuiLayer}!````~ImGuiLayer@{\texorpdfstring{$\sim$}{\string~}ImGuiLayer}}
+\index{````~ImGuiLayer@{\texorpdfstring{$\sim$}{\string~}ImGuiLayer}!Vesper::ImGuiLayer@{Vesper::ImGuiLayer}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ImGuiLayer()}{\string~ImGuiLayer()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_im_gui_layer_a1b9744b500d8e3c74c9336c9f35b019f} 
+Vesper::\+\+Im\+Gui\+Layer::\+\texorpdfstring{$\sim$}{\string~}\+Im\+Gui\+Layer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00026\ \ \ \ \ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\label{doc-func-members}
+\Hypertarget{class_vesper_1_1_im_gui_layer_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_vesper_1_1_im_gui_layer_a3c11977ad97bff04a2f8cd92eab14032}\index{Vesper::ImGuiLayer@{Vesper::ImGuiLayer}!Begin@{Begin}}
+\index{Begin@{Begin}!Vesper::ImGuiLayer@{Vesper::ImGuiLayer}}
+\doxysubsubsection{\texorpdfstring{Begin()}{Begin()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_im_gui_layer_a3c11977ad97bff04a2f8cd92eab14032} 
+void Vesper::\+\+Im\+Gui\+Layer::\+\+Begin (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_im_gui_layer_a86fba38bc72554d6a49608467f42032e}{Vesper::\+\+Open\+GLIm\+Gui\+Layer}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00096\ \ \ \ \ \{}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ ImGui\_ImplOpenGL3\_NewFrame();}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ ImGui\_ImplGlfw\_NewFrame();}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ ImGui::NewFrame();}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ ImGuizmo::BeginFrame();}
+\DoxyCodeLine{00102\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referenced by \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_im_gui_layer_a86fba38bc72554d6a49608467f42032e}{Vesper::\+\+Open\+GLIm\+Gui\+Layer::\+\+Begin()}}, and \doxymbox{\hyperlink{class_vesper_1_1_application_ab3676dbe9a0e9394759ecca29c0ded04}{Vesper::\+\+Application::\+\+Run()}}.
+
+\Hypertarget{class_vesper_1_1_im_gui_layer_ad32cb49bc5bffd27630085d5b273c5ad}\index{Vesper::ImGuiLayer@{Vesper::ImGuiLayer}!End@{End}}
+\index{End@{End}!Vesper::ImGuiLayer@{Vesper::ImGuiLayer}}
+\doxysubsubsection{\texorpdfstring{End()}{End()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_im_gui_layer_ad32cb49bc5bffd27630085d5b273c5ad} 
+void Vesper::\+\+Im\+Gui\+Layer::\+\+End (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_im_gui_layer_a92b5302941639739203c79bfe9aa1eb1}{Vesper::\+\+Open\+GLIm\+Gui\+Layer}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00105\ \ \ \ \ \{}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ ImGuiIO\&\ io\ =\ ImGui::GetIO();}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ Application\&\ app\ =\ \doxymbox{\hyperlink{class_vesper_1_1_application_a7edbd0f4804f897c09ad869239a97ffa}{Application::Get}}();}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ io.DisplaySize\ =\ ImVec2((\textcolor{keywordtype}{float})app.GetWindow().GetWidth(),\ (\textcolor{keywordtype}{float})app.GetWindow().GetHeight());}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ ImGui::Render();}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ ImGui\_ImplOpenGL3\_RenderDrawData(ImGui::GetDrawData());}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (io.ConfigFlags\ \&\ ImGuiConfigFlags\_ViewportsEnable)}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ GLFWwindow*\ backup\_current\_context\ =\ glfwGetCurrentContext();}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ ImGui::UpdatePlatformWindows();}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ ImGui::RenderPlatformWindowsDefault();}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ glfwMakeContextCurrent(backup\_current\_context);}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00119\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_application_a7edbd0f4804f897c09ad869239a97ffa}{Vesper::\+\+Application::\+\+Get()}}, \doxymbox{\hyperlink{class_vesper_1_1_window_ad675d99e843b9c11cd2b8feb61c62265}{Vesper::\+\+Window::\+\+Get\+Height()}}, \doxymbox{\hyperlink{class_vesper_1_1_window_a38ba98632ee63ebacb860ca4de56772b}{Vesper::\+\+Window::\+\+Get\+Width()}}, and \doxymbox{\hyperlink{class_vesper_1_1_application_af90f220d05b740b6b1596d915b3efab3}{Vesper::\+\+Application::\+\+Get\+Window()}}.
+
+
+
+Referenced by \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_im_gui_layer_a92b5302941639739203c79bfe9aa1eb1}{Vesper::\+\+Open\+GLIm\+Gui\+Layer::\+\+End()}}, and \doxymbox{\hyperlink{class_vesper_1_1_application_ab3676dbe9a0e9394759ecca29c0ded04}{Vesper::\+\+Application::\+\+Run()}}.
+
+\Hypertarget{class_vesper_1_1_im_gui_layer_aeb2e5a03cd424c37478476f6c63d025b}\index{Vesper::ImGuiLayer@{Vesper::ImGuiLayer}!OnAttach@{OnAttach}}
+\index{OnAttach@{OnAttach}!Vesper::ImGuiLayer@{Vesper::ImGuiLayer}}
+\doxysubsubsection{\texorpdfstring{OnAttach()}{OnAttach()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_im_gui_layer_aeb2e5a03cd424c37478476f6c63d025b} 
+void Vesper::\+\+Im\+Gui\+Layer::\+\+On\+Attach (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+TODO:\+ Remove to open\+GL specific
+
+Reimplemented from \doxymbox{\hyperlink{class_vesper_1_1_layer_ad7b65613ac259383e8ba08f693146cfb}{Vesper::\+\+Layer}}.
+
+
+
+Reimplemented in \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_im_gui_layer_aec233ad0c31eac8ed225da6eb3cff5a7}{Vesper::\+\+Open\+GLIm\+Gui\+Layer}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00030\ \ \ \ \ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ IMGUI\_CHECKVERSION();}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ ImGui::CreateContext();}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ ImGuiIO\&\ io\ =\ ImGui::GetIO();\ (void)io;}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{comment}{//io.ConfigFlags\ |=\ ImGuiConfigFlags\_NavEnableKeyboard;\ \ \ \ \ //\ Enable\ Keyboard\ Controls}}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{comment}{//io.ConfigFlags\ |=\ ImGuiConfigFlags\_NavEnableGamepad;\ \ \ \ \ \ //\ Enable\ Gamepad\ Controls}}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ io.ConfigFlags\ |=\ ImGuiConfigFlags\_DockingEnable;\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Enable\ Docking}}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ io.ConfigFlags\ |=\ ImGuiConfigFlags\_ViewportsEnable;\ \ \ \ \ \ \ \textcolor{comment}{//\ Enable\ Multi-\/Viewport\ /\ Platform\ Windows}}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{comment}{//io.ConfigFlags\ |=\ ImGuiConfigFlags\_ViewportsNoTaskBarIcons;\ //\ Disable\ Platform\ Windows\ task\ bar\ icons}}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{comment}{//io.ConfigFlags\ |=\ ImGuiConfigFlags\_ViewportsNoMerge;\ \ \ \ \ \ //\ Disable\ Platform\ Windows\ merging\ into\ host\ window}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ io.Fonts-\/>AddFontFromFileTTF(\textcolor{stringliteral}{"{}../../Vesper-\/Editor/assets/fonts/RedHatMono/static/RedHatMono-\/Bold.ttf"{}},\ 18.0f);}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ io.FontDefault\ =\ io.Fonts-\/>AddFontFromFileTTF(\textcolor{stringliteral}{"{}../../Vesper-\/Editor/assets/fonts/RedHatMono/static/RedHatMono-\/Light.ttf"{}},\ 18.0f);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ ImGui::StyleColorsDark();}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ When\ viewports\ are\ enabled\ we\ tweak\ WindowRounding/WindowBg\ so\ platform\ windows\ can\ look\ identical\ to\ regular\ ones.}}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ ImGuiStyle\&\ style\ =\ ImGui::GetStyle();}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (io.ConfigFlags\ \&\ ImGuiConfigFlags\_ViewportsEnable)}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ style.WindowRounding\ =\ 0.0f;}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ style.Colors[ImGuiCol\_WindowBg].w\ =\ 1.0f;}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_im_gui_layer_a948a10fd1ec20dfffd1449d66ccdf8e4}{SetDarkThemeColors}}();}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ Application\&\ app\ =\ \doxymbox{\hyperlink{class_vesper_1_1_application_a7edbd0f4804f897c09ad869239a97ffa}{Application::Get}}();}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ GLFWwindow*\ window\ =\ \textcolor{keyword}{static\_cast<}GLFWwindow*\textcolor{keyword}{>}(app.GetWindow().GetNativeWindow());}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ ImGui\_ImplGlfw\_InitForOpenGL(window,\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ ImGui\_ImplOpenGL3\_Init(\textcolor{stringliteral}{"{}\#version\ 410"{}});}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_application_a7edbd0f4804f897c09ad869239a97ffa}{Vesper::\+\+Application::\+\+Get()}}, and \doxymbox{\hyperlink{class_vesper_1_1_im_gui_layer_a948a10fd1ec20dfffd1449d66ccdf8e4}{Set\+Dark\+Theme\+Colors()}}.
+
+
+
+Referenced by \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_im_gui_layer_aec233ad0c31eac8ed225da6eb3cff5a7}{Vesper::\+\+Open\+GLIm\+Gui\+Layer::\+\+On\+Attach()}}.
+
+\Hypertarget{class_vesper_1_1_im_gui_layer_a656bc171954d83d0c8c3b273cac6ca7b}\index{Vesper::ImGuiLayer@{Vesper::ImGuiLayer}!OnDetach@{OnDetach}}
+\index{OnDetach@{OnDetach}!Vesper::ImGuiLayer@{Vesper::ImGuiLayer}}
+\doxysubsubsection{\texorpdfstring{OnDetach()}{OnDetach()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_im_gui_layer_a656bc171954d83d0c8c3b273cac6ca7b} 
+void Vesper::\+\+Im\+Gui\+Layer::\+\+On\+Detach (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+TODO:\+ Remove to open\+GL specific
+
+Reimplemented from \doxymbox{\hyperlink{class_vesper_1_1_layer_a2da0563f0eeab4fc610c1e10206bc6cb}{Vesper::\+\+Layer}}.
+
+
+
+Reimplemented in \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_im_gui_layer_a87f6d03be6b07a523c9ecb7a31845e07}{Vesper::\+\+Open\+GLIm\+Gui\+Layer}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00070\ \ \ \ \ \{}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ ImGui\_ImplOpenGL3\_Shutdown();}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ ImGui\_ImplGlfw\_Shutdown();}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ ImGui::DestroyContext();}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00079\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referenced by \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_im_gui_layer_a87f6d03be6b07a523c9ecb7a31845e07}{Vesper::\+\+Open\+GLIm\+Gui\+Layer::\+\+On\+Detach()}}.
+
+\Hypertarget{class_vesper_1_1_im_gui_layer_a224b66c3c8a7515b401f5b1db00978ea}\index{Vesper::ImGuiLayer@{Vesper::ImGuiLayer}!OnEvent@{OnEvent}}
+\index{OnEvent@{OnEvent}!Vesper::ImGuiLayer@{Vesper::ImGuiLayer}}
+\doxysubsubsection{\texorpdfstring{OnEvent()}{OnEvent()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_im_gui_layer_a224b66c3c8a7515b401f5b1db00978ea} 
+void Vesper::\+\+Im\+Gui\+Layer::\+\+On\+Event (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_vesper_1_1_event}{Event}} \&}]{e}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \doxymbox{\hyperlink{class_vesper_1_1_layer_a158ddf9f38a429b2f9713e8741e8be07}{Vesper::\+\+Layer}}.
+
+
+
+Reimplemented in \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_im_gui_layer_a94034e176531bb844aadb4d300507106}{Vesper::\+\+Open\+GLIm\+Gui\+Layer}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00087\ \ \ \ \ \{}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_vesper_1_1_im_gui_layer_ab4c5eaf4009d5119548dedb121dba2a4}{m\_BlockEvents}})\ \{}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ ImGuiIO\&\ io\ =\ ImGui::GetIO();}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ e.Handled\ |=\ e.IsInCategory(\doxymbox{\hyperlink{namespace_vesper_ad79da63be4419c3a218acaa990decabea3c4a955f5c8263670268bd87fefc1f16}{EventCategoryMouse}})\ \&\ io.WantCaptureMouse;}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ e.Handled\ |=\ e.IsInCategory(\doxymbox{\hyperlink{namespace_vesper_ad79da63be4419c3a218acaa990decabeaba0edbd952a5de7d6182c0f379dd86e5}{EventCategoryKeyboard}})\ \&\ io.WantCaptureKeyboard;}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00093\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{namespace_vesper_ad79da63be4419c3a218acaa990decabeaba0edbd952a5de7d6182c0f379dd86e5}{Vesper::\+\+Event\+Category\+Keyboard}}, \doxymbox{\hyperlink{namespace_vesper_ad79da63be4419c3a218acaa990decabea3c4a955f5c8263670268bd87fefc1f16}{Vesper::\+\+Event\+Category\+Mouse}}, \doxymbox{\hyperlink{class_vesper_1_1_event_ab6bc1a2214e615b994cff03df207a0f1}{Vesper::\+\+Event::\+\+Handled}}, \doxymbox{\hyperlink{class_vesper_1_1_event_a02448606191e9e1cc7869bffd2cb20f7}{Vesper::\+\+Event::\+\+Is\+In\+Category()}}, and \doxymbox{\hyperlink{class_vesper_1_1_im_gui_layer_ab4c5eaf4009d5119548dedb121dba2a4}{m\+\_\+\+Block\+Events}}.
+
+
+
+Referenced by \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_im_gui_layer_a94034e176531bb844aadb4d300507106}{Vesper::\+\+Open\+GLIm\+Gui\+Layer::\+\+On\+Event()}}.
+
+\Hypertarget{class_vesper_1_1_im_gui_layer_a70973f0316b1a8bc9a6052c894170a1f}\index{Vesper::ImGuiLayer@{Vesper::ImGuiLayer}!OnImGuiRender@{OnImGuiRender}}
+\index{OnImGuiRender@{OnImGuiRender}!Vesper::ImGuiLayer@{Vesper::ImGuiLayer}}
+\doxysubsubsection{\texorpdfstring{OnImGuiRender()}{OnImGuiRender()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_im_gui_layer_a70973f0316b1a8bc9a6052c894170a1f} 
+void Vesper::\+\+Im\+Gui\+Layer::\+\+On\+Im\+Gui\+Render (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \doxymbox{\hyperlink{class_vesper_1_1_layer_a64c4c255062db2abaf9ca79a84d417fd}{Vesper::\+\+Layer}}.
+
+
+
+Reimplemented in \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_im_gui_layer_a3a60ac5d57e0e009b776b073718e61bd}{Vesper::\+\+Open\+GLIm\+Gui\+Layer}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00082\ \ \ \ \ \{}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referenced by \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_im_gui_layer_a3a60ac5d57e0e009b776b073718e61bd}{Vesper::\+\+Open\+GLIm\+Gui\+Layer::\+\+On\+Im\+Gui\+Render()}}.
+
+\Hypertarget{class_vesper_1_1_im_gui_layer_af29b651e5d35526634399ee981bccdbc}\index{Vesper::ImGuiLayer@{Vesper::ImGuiLayer}!SetBlockEvents@{SetBlockEvents}}
+\index{SetBlockEvents@{SetBlockEvents}!Vesper::ImGuiLayer@{Vesper::ImGuiLayer}}
+\doxysubsubsection{\texorpdfstring{SetBlockEvents()}{SetBlockEvents()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_im_gui_layer_af29b651e5d35526634399ee981bccdbc} 
+virtual void Vesper::\+\+Im\+Gui\+Layer::\+\+Set\+Block\+Events (\begin{DoxyParamCaption}\item[{bool}]{block}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_im_gui_layer_a42d937d1cdb39a3cc80288bb9d3dd2bd}{Vesper::\+\+Open\+GLIm\+Gui\+Layer}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00026\ \{\ \doxymbox{\hyperlink{class_vesper_1_1_im_gui_layer_ab4c5eaf4009d5119548dedb121dba2a4}{m\_BlockEvents}}\ =\ block;\ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_im_gui_layer_ab4c5eaf4009d5119548dedb121dba2a4}{m\+\_\+\+Block\+Events}}.
+
+
+
+Referenced by \doxymbox{\hyperlink{class_vesper_1_1_editor_layer_af5e79508040b18e9fa455830692f6ed0}{Vesper::\+\+Editor\+Layer::\+\+On\+Im\+Gui\+Render()}}.
+
+\Hypertarget{class_vesper_1_1_im_gui_layer_a948a10fd1ec20dfffd1449d66ccdf8e4}\index{Vesper::ImGuiLayer@{Vesper::ImGuiLayer}!SetDarkThemeColors@{SetDarkThemeColors}}
+\index{SetDarkThemeColors@{SetDarkThemeColors}!Vesper::ImGuiLayer@{Vesper::ImGuiLayer}}
+\doxysubsubsection{\texorpdfstring{SetDarkThemeColors()}{SetDarkThemeColors()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_im_gui_layer_a948a10fd1ec20dfffd1449d66ccdf8e4} 
+void Vesper::\+\+Im\+Gui\+Layer::\+\+Set\+Dark\+Theme\+Colors (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_im_gui_layer_ac3f24226f0925c8aa7145500abb7ec1d}{Vesper::\+\+Open\+GLIm\+Gui\+Layer}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00121\ \ \ \ \ \{}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\&\ colors\ =\ ImGui::GetStyle().Colors;}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ colors[ImGuiCol\_WindowBg]\ =\ ImVec4\{\ 0.1f,\ 0.105f,\ 0.11f,\ 1.0f\ \};}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Header\ }}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ colors[ImGuiCol\_Header]\ =\ ImVec4\{\ 0.2f,\ 0.205f,\ 0.21f,\ 1.0f\ \};}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ colors[ImGuiCol\_HeaderHovered]\ =\ ImVec4\{\ 0.3f,\ 0.305f,\ 0.31f,\ 1.0f\ \};}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ colors[ImGuiCol\_HeaderActive]\ =\ ImVec4\{\ 0.15f,\ 0.1505f,\ 0.151f,\ 1.0f\ \};}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Buttons}}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ colors[ImGuiCol\_Button]\ =\ ImVec4\{\ 0.2f,\ 0.205f,\ 0.21f,\ 1.0f\ \};}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ colors[ImGuiCol\_ButtonHovered]\ =\ ImVec4\{\ 0.3f,\ 0.305f,\ 0.31f,\ 1.0f\ \};}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ colors[ImGuiCol\_ButtonActive]\ =\ ImVec4\{\ 0.15f,\ 0.1505f,\ 0.151f,\ 1.0f\ \};}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Frame\ BG}}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ colors[ImGuiCol\_FrameBg]\ =\ ImVec4\{\ 0.2f,\ 0.205f,\ 0.21f,\ 1.0f\ \};}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ colors[ImGuiCol\_FrameBgHovered]\ =\ ImVec4\{\ 0.3f,\ 0.305f,\ 0.31f,\ 1.0f\ \};}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ colors[ImGuiCol\_FrameBgActive]\ =\ ImVec4\{\ 0.15f,\ 0.1505f,\ 0.151f,\ 1.0f\ \};}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Tabs}}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ colors[ImGuiCol\_Tab]\ =\ ImVec4\{\ 0.15f,\ 0.1505f,\ 0.151f,\ 1.0f\ \};}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ colors[ImGuiCol\_TabHovered]\ =\ ImVec4\{\ 0.38f,\ 0.3805f,\ 0.381f,\ 1.0f\ \};}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ colors[ImGuiCol\_TabActive]\ =\ ImVec4\{\ 0.28f,\ 0.2805f,\ 0.281f,\ 1.0f\ \};}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ colors[ImGuiCol\_TabUnfocused]\ =\ ImVec4\{\ 0.15f,\ 0.1505f,\ 0.151f,\ 1.0f\ \};}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ colors[ImGuiCol\_TabUnfocusedActive]\ =\ ImVec4\{\ 0.2f,\ 0.205f,\ 0.21f,\ 1.0f\ \};}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Title}}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ colors[ImGuiCol\_TitleBg]\ =\ ImVec4\{\ 0.1f,\ 0.105f,\ 0.11f,\ 1.0f\ \};}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ colors[ImGuiCol\_TitleBgActive]\ =\ ImVec4\{\ 0.1f,\ 0.105f,\ 0.11f,\ 1.0f\ \};}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ colors[ImGuiCol\_TitleBgCollapsed]\ =\ ImVec4\{\ 0.1f,\ 0.105f,\ 0.11f,\ 1.0f\ \};}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00154\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referenced by \doxymbox{\hyperlink{class_vesper_1_1_im_gui_layer_aeb2e5a03cd424c37478476f6c63d025b}{On\+Attach()}}, and \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_im_gui_layer_ac3f24226f0925c8aa7145500abb7ec1d}{Vesper::\+\+Open\+GLIm\+Gui\+Layer::\+\+Set\+Dark\+Theme\+Colors()}}.
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_vesper_1_1_im_gui_layer_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_vesper_1_1_im_gui_layer_ab4c5eaf4009d5119548dedb121dba2a4}\index{Vesper::ImGuiLayer@{Vesper::ImGuiLayer}!m\_BlockEvents@{m\_BlockEvents}}
+\index{m\_BlockEvents@{m\_BlockEvents}!Vesper::ImGuiLayer@{Vesper::ImGuiLayer}}
+\doxysubsubsection{\texorpdfstring{m\_BlockEvents}{m\_BlockEvents}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_im_gui_layer_ab4c5eaf4009d5119548dedb121dba2a4} 
+bool Vesper::\+\+Im\+Gui\+Layer::\+m\+\_\+\+Block\+Events = true\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Referenced by \doxymbox{\hyperlink{class_vesper_1_1_im_gui_layer_a224b66c3c8a7515b401f5b1db00978ea}{On\+Event()}}, \doxymbox{\hyperlink{class_vesper_1_1_im_gui_layer_af29b651e5d35526634399ee981bccdbc}{Set\+Block\+Events()}}, and \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_im_gui_layer_a42d937d1cdb39a3cc80288bb9d3dd2bd}{Vesper::\+\+Open\+GLIm\+Gui\+Layer::\+\+Set\+Block\+Events()}}.
+
+\Hypertarget{class_vesper_1_1_im_gui_layer_aa4b07490348a4daf7af213d49e7684f4}\index{Vesper::ImGuiLayer@{Vesper::ImGuiLayer}!m\_Time@{m\_Time}}
+\index{m\_Time@{m\_Time}!Vesper::ImGuiLayer@{Vesper::ImGuiLayer}}
+\doxysubsubsection{\texorpdfstring{m\_Time}{m\_Time}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_im_gui_layer_aa4b07490348a4daf7af213d49e7684f4} 
+float Vesper::\+\+Im\+Gui\+Layer::\+m\+\_\+\+Time = 0.\+0f\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+Vesper/\+src/\+\+Vesper/\+\+Im\+Gui/\+\doxymbox{\hyperlink{_im_gui_layer_8h}{Im\+Gui\+Layer.\+h}}\item 
+Vesper/\+src/\+\+Vesper/\+\+Im\+Gui/\+\doxymbox{\hyperlink{_im_gui_layer_8cpp}{Im\+Gui\+Layer.\+cpp}}\end{DoxyCompactItemize}

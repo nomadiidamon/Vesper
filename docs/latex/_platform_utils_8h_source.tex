@@ -1,0 +1,40 @@
+\doxysection{Platform\+Utils.\+h}
+\hypertarget{_platform_utils_8h_source}{}\label{_platform_utils_8h_source}\index{Vesper/src/Vesper/Utils/PlatformUtils.h@{Vesper/src/Vesper/Utils/PlatformUtils.h}}
+\doxymbox{\hyperlink{_platform_utils_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{pragma}\ \textcolor{preprocessor}{once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\ \textcolor{preprocessor}{<}\textcolor{preprocessor}{string}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{namespace}\ \doxymbox{\hyperlink{namespace_vesper}{Vesper}}\ \{}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keyword}{class}\ \doxymbox{\hyperlink{class_vesper_1_1_file_dialogs}{FileDialogs}}}
+\DoxyCodeLine{00008\ \ \ \ \ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ These\ return\ empty\ string\ if\ cancelled}}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::string\ \doxymbox{\hyperlink{class_vesper_1_1_file_dialogs_a30ef477107af39176c77dd554ca88f6a}{OpenFile}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ filter);}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::string\ \doxymbox{\hyperlink{class_vesper_1_1_file_dialogs_a2929cc61038cd4dce65005ab83760607}{SaveFile}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ filter);}
+\DoxyCodeLine{00013\ \ \ \ \ \};}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{class}\ \doxymbox{\hyperlink{class_vesper_1_1_file_system}{FileSystem}}}
+\DoxyCodeLine{00016\ \ \ \ \ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_file_system_a0b7082f007ed6f6d20f368c6c7a40e77}{Initialize}}();}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::string\ \doxymbox{\hyperlink{class_vesper_1_1_file_system_a37e6a0b2435fe022ca5bfdf98ea06363}{GetCurrentWorkingDirectory}}();}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::string\ \doxymbox{\hyperlink{class_vesper_1_1_file_system_aed25a15bc7528425806ac8e297f4129d}{GetAbsolutePath}}(\textcolor{keyword}{const}\ std::string\&\ relativePath);}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::string\ \doxymbox{\hyperlink{class_vesper_1_1_file_system_a7136190c41a45d49ed5dfa8a19e9c00f}{GetTravelingUpPath}}(\textcolor{keyword}{const}\ std::string\&\ path);}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_vesper_1_1_file_system_af0a19c3177229dd8e49aeeeb5c14daed}{IsInitialized}}()\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_file_system_aee517b584d608cabe22b5cf855a149d6}{m\_Initialized}};\ \}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_vesper_1_1_file_system_aee517b584d608cabe22b5cf855a149d6}{m\_Initialized}};}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::string\ \doxymbox{\hyperlink{class_vesper_1_1_file_system_a7ea8de66c4e9609a160e62626dd81fcb}{m\_RootEngineDirectory}};}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::string\ \doxymbox{\hyperlink{class_vesper_1_1_file_system_a2267d09159c22a8537d36da0384c6acf}{m\_RootEditorDirectory}};}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::string\ \doxymbox{\hyperlink{class_vesper_1_1_file_system_a6667719a2c0445a6017f0880cbed4077}{m\_ResourcesDirectory}};}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::string\ \doxymbox{\hyperlink{class_vesper_1_1_file_system_a4aee80fefcb52f47601ecfcc1dd46b2f}{m\_AssetsDirectory}};}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::string\ \doxymbox{\hyperlink{class_vesper_1_1_file_system_a36e0c2a7eddfba9df844f0d655c02389}{m\_ProjectsDirectory}};}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::string\ \doxymbox{\hyperlink{class_vesper_1_1_file_system_ab8862f1fd78040b46ff6ccd100ea6721}{m\_CurrentProjectDirectory}};}
+\DoxyCodeLine{00031\ \ \ \ \ \};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \};}
+
+\end{DoxyCode}

@@ -1,0 +1,31 @@
+\doxysection{Entry\+Point.\+h}
+\hypertarget{_entry_point_8h_source}{}\label{_entry_point_8h_source}\index{Vesper/src/Vesper/App/EntryPoint.h@{Vesper/src/Vesper/App/EntryPoint.h}}
+\doxymbox{\hyperlink{_entry_point_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{pragma}\ \textcolor{preprocessor}{once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{ifdef}\ VZ\_PLATFORM\_WINDOWS}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{extern}\ \doxymbox{\hyperlink{namespace_vesper}{Vesper}}::\doxymbox{\hyperlink{class_vesper_1_1_application}{Application}}*\ \doxymbox{\hyperlink{namespace_vesper}{Vesper}}::\doxymbox{\hyperlink{namespace_vesper_a43e1ca989eabb42f3b23b79517ff1a65}{CreateApplication}}();}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keywordtype}{int}\ main(\textcolor{keywordtype}{int}\ argc,\ \textcolor{keywordtype}{char}**\ argv)}
+\DoxyCodeLine{00008\ \{}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \ \ \ \ Vesper::Log::Init();}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_a01b8429664a0510fa06e3a887cfbcf69}{VZ\_PROFILE\_BEGIN\_SESSION}}(\textcolor{stringliteral}{"{}Startup"{}},\ \textcolor{stringliteral}{"{}VesperProfile-\/Startup.json"{}});}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{auto}\ app\ =\ \doxymbox{\hyperlink{namespace_vesper}{Vesper}}\doxymbox{\hyperlink{namespace_vesper_a43e1ca989eabb42f3b23b79517ff1a65}{::}}\doxymbox{\hyperlink{namespace_vesper_a43e1ca989eabb42f3b23b79517ff1a65}{CreateApplication}}\doxymbox{\hyperlink{namespace_vesper_a43e1ca989eabb42f3b23b79517ff1a65}{(}}\doxymbox{\hyperlink{namespace_vesper_a43e1ca989eabb42f3b23b79517ff1a65}{)}};}
+\DoxyCodeLine{00014\ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_ae9ab05d740a576e8cc654ee9d51ac25a}{VZ\_PROFILE\_END\_SESSION}}();}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_a01b8429664a0510fa06e3a887cfbcf69}{VZ\_PROFILE\_BEGIN\_SESSION}}(\textcolor{stringliteral}{"{}Runtime"{}},\ \textcolor{stringliteral}{"{}VesperProfile-\/Runtime.json"{}});}
+\DoxyCodeLine{00017\ \ \ \ \ app\doxymbox{\hyperlink{class_vesper_1_1_application_ab3676dbe9a0e9394759ecca29c0ded04}{-\/>}}\doxymbox{\hyperlink{class_vesper_1_1_application_ab3676dbe9a0e9394759ecca29c0ded04}{Run}}\doxymbox{\hyperlink{class_vesper_1_1_application_ab3676dbe9a0e9394759ecca29c0ded04}{(}}\doxymbox{\hyperlink{class_vesper_1_1_application_ab3676dbe9a0e9394759ecca29c0ded04}{)}};}
+\DoxyCodeLine{00018\ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_ae9ab05d740a576e8cc654ee9d51ac25a}{VZ\_PROFILE\_END\_SESSION}}();}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_a01b8429664a0510fa06e3a887cfbcf69}{VZ\_PROFILE\_BEGIN\_SESSION}}(\textcolor{stringliteral}{"{}Shutdown"{}},\ \textcolor{stringliteral}{"{}VesperProfile-\/Shutdown.json"{}});}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{delete}\ app;}
+\DoxyCodeLine{00022\ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_ae9ab05d740a576e8cc654ee9d51ac25a}{VZ\_PROFILE\_END\_SESSION}}();}
+\DoxyCodeLine{00023\ \}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{endif}}
+
+\end{DoxyCode}

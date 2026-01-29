@@ -1,0 +1,204 @@
+\doxysection{Vesper::\+Scene\+Serializer Class Reference}
+\hypertarget{class_vesper_1_1_scene_serializer}{}\label{class_vesper_1_1_scene_serializer}\index{Vesper::SceneSerializer@{Vesper::SceneSerializer}}
+
+
+{\ttfamily \+\#include $<$Scene\+Serializer.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_vesper_1_1_scene_serializer_aaa30419d5c7da1093bc5ca5f647084fb}{Scene\+Serializer}} (const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_scene}{Scene}} $>$ \&scene)
+\item 
+void \doxymbox{\hyperlink{class_vesper_1_1_scene_serializer_a57a8ec77960774b4d8dd1c664e9a0d4b}{Serialize}} (const std::\+string \&filepath)
+\item 
+void \doxymbox{\hyperlink{class_vesper_1_1_scene_serializer_ae860a28af3f3651978ccf4aa1f6dc3fe}{Serialize\+Runtime}} (const std::\+string \&filepath)
+\item 
+bool \doxymbox{\hyperlink{class_vesper_1_1_scene_serializer_a564644cba64e2a320b70a6fe6459deb3}{Deserialize}} (const std::\+string \&filepath)
+\item 
+bool \doxymbox{\hyperlink{class_vesper_1_1_scene_serializer_aee40d5be94ed3e3b31bd728b7de07c9d}{Deserialize\+Runtime}} (const std::\+string \&filepath)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_scene}{Scene}} $>$ \doxymbox{\hyperlink{class_vesper_1_1_scene_serializer_aedb6dc6e96b394e40a3a508585a12720}{m\+\_\+\+Scene}}
+\end{DoxyCompactItemize}
+
+
+\label{doc-constructors}
+\Hypertarget{class_vesper_1_1_scene_serializer_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_vesper_1_1_scene_serializer_aaa30419d5c7da1093bc5ca5f647084fb}\index{Vesper::SceneSerializer@{Vesper::SceneSerializer}!SceneSerializer@{SceneSerializer}}
+\index{SceneSerializer@{SceneSerializer}!Vesper::SceneSerializer@{Vesper::SceneSerializer}}
+\doxysubsubsection{\texorpdfstring{SceneSerializer()}{SceneSerializer()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_scene_serializer_aaa30419d5c7da1093bc5ca5f647084fb} 
+Vesper::\+\+Scene\+Serializer::\+\+Scene\+Serializer (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_scene}{Scene}} $>$ \&}]{scene}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_vesper_1_1_scene_serializer_aedb6dc6e96b394e40a3a508585a12720}{m\_Scene}}(scene) }
+\DoxyCodeLine{00118\ \ \ \ \ \{}
+\DoxyCodeLine{00119\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_scene_serializer_aaa30419d5c7da1093bc5ca5f647084fb}{Scene\+Serializer()}}.
+
+
+
+Referenced by \doxymbox{\hyperlink{class_vesper_1_1_scene_serializer_aaa30419d5c7da1093bc5ca5f647084fb}{Scene\+Serializer()}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_vesper_1_1_scene_serializer_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_vesper_1_1_scene_serializer_a564644cba64e2a320b70a6fe6459deb3}\index{Vesper::SceneSerializer@{Vesper::SceneSerializer}!Deserialize@{Deserialize}}
+\index{Deserialize@{Deserialize}!Vesper::SceneSerializer@{Vesper::SceneSerializer}}
+\doxysubsubsection{\texorpdfstring{Deserialize()}{Deserialize()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_scene_serializer_a564644cba64e2a320b70a6fe6459deb3} 
+bool Vesper::\+\+Scene\+Serializer::\+\+Deserialize (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{filepath}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00207\ }
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ std::ifstream\ stream(filepath);}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ std::stringstream\ strStream;}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ strStream\ <<\ stream.rdbuf();}
+\DoxyCodeLine{00211\ }
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ YAML::Node\ data\ =\ YAML::Load(strStream.str());}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!data[\textcolor{stringliteral}{"{}Scene"{}}])}
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00215\ }
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ std::string\ sceneName\ =\ data[\textcolor{stringliteral}{"{}Scene"{}}].as<std::string>();}
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_log_8h_a745dd924b08fe6cfa0156a813491ee25}{VZ\_CORE\_TRACE}}(\textcolor{stringliteral}{"{}Deserializing\ scene:\ \{0\}"{}},\ sceneName);}
+\DoxyCodeLine{00218\ }
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ YAML::Node\ entities\ =\ data[\textcolor{stringliteral}{"{}Entities"{}}];}
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (entities)}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ entityNode\ :\ entities)}
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ uuid\ =\ entityNode[\textcolor{stringliteral}{"{}Entity"{}}].as<std::string>();}
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ name;}
+\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ YAML::Node\ nameNode\ =\ entityNode[\textcolor{stringliteral}{"{}NameComponent"{}}];}
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (nameNode)}
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ name\ =\ nameNode.as<std::string>();}
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_log_8h_a745dd924b08fe6cfa0156a813491ee25}{VZ\_CORE\_TRACE}}(\textcolor{stringliteral}{"{}Deserialized\ entity\ with\ ID:\ \{0\},\ name:\ \{1\}"{}},\ uuid,\ name);}
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Entity\ deserializedEntity\ =\ \doxymbox{\hyperlink{class_vesper_1_1_scene_serializer_aedb6dc6e96b394e40a3a508585a12720}{m\_Scene}}-\/>CreateEntity(name,\ uuid);}
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ YAML::Node\ transformNode\ =\ entityNode[\textcolor{stringliteral}{"{}TransformComponent"{}}];}
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (transformNode)}
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\&\ tc\ =\ deserializedEntity.GetComponent<TransformComponent>();}
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tc.Translation\ =\ transformNode[\textcolor{stringliteral}{"{}Translation"{}}].as<glm::vec3>();}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tc.Rotation\ =\ transformNode[\textcolor{stringliteral}{"{}Rotation"{}}].as<glm::vec3>();}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tc.Scale\ =\ transformNode[\textcolor{stringliteral}{"{}Scale"{}}].as<glm::vec3>();}
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ YAML::Node\ cameraNode\ =\ entityNode[\textcolor{stringliteral}{"{}CameraComponent"{}}];}
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (cameraNode)}
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\&\ cameraComp\ =\ deserializedEntity.AddComponent<CameraComponent>();}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\&\ camera\ =\ cameraComp.Camera;}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ YAML::Node\ camProps\ =\ cameraNode[\textcolor{stringliteral}{"{}Camera"{}}];}
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ camera.SetOrthographic(camProps[\textcolor{stringliteral}{"{}OrthographicSize"{}}].as<float>(),\ camProps[\textcolor{stringliteral}{"{}OrthographicNear"{}}].as<float>(),\ camProps[\textcolor{stringliteral}{"{}OrthographicFar"{}}].as<float>());}
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ camera.SetPerspective(camProps[\textcolor{stringliteral}{"{}PerspectiveFOV"{}}].as<float>(),\ camProps[\textcolor{stringliteral}{"{}PerspectiveNear"{}}].as<float>(),\ camProps[\textcolor{stringliteral}{"{}PerspectiveFar"{}}].as<float>());}
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cameraComp.Primary\ =\ cameraNode[\textcolor{stringliteral}{"{}Primary"{}}].as<\textcolor{keywordtype}{bool}>();}
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ camera.SetProjectionType((\doxymbox{\hyperlink{class_vesper_1_1_scene_camera_aa913c988aa3de5b85e37c495d2360f6d}{SceneCamera::ProjectionType}})cameraNode[\textcolor{stringliteral}{"{}ProjectionType"{}}].as<int>());}
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cameraComp.FixedAspectRatio\ =\ cameraNode[\textcolor{stringliteral}{"{}FixedAspectRatio"{}}].as<\textcolor{keywordtype}{bool}>();}
+\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00251\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ YAML::Node\ spriteNode\ =\ entityNode[\textcolor{stringliteral}{"{}SpriteRendererComponent"{}}];}
+\DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (spriteNode)}
+\DoxyCodeLine{00253\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\&\ src\ =\ deserializedEntity.AddComponent<SpriteRendererComponent>();}
+\DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ src.Color\ =\ spriteNode[\textcolor{stringliteral}{"{}Color"{}}].as<glm::vec4>();}
+\DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00257\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00258\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00260\ }
+\DoxyCodeLine{00261\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referenced by \doxymbox{\hyperlink{class_vesper_1_1_editor_layer_ab3c26e6d9cada8bd70054e582578c4ec}{Vesper::\+\+Editor\+Layer::\+\+On\+Attach()}}, and \doxymbox{\hyperlink{class_vesper_1_1_editor_layer_a1e12b5c24dde3a690465bf5b09c48789}{Vesper::\+\+Editor\+Layer::\+\+Open\+Scene()}}.
+
+\Hypertarget{class_vesper_1_1_scene_serializer_aee40d5be94ed3e3b31bd728b7de07c9d}\index{Vesper::SceneSerializer@{Vesper::SceneSerializer}!DeserializeRuntime@{DeserializeRuntime}}
+\index{DeserializeRuntime@{DeserializeRuntime}!Vesper::SceneSerializer@{Vesper::SceneSerializer}}
+\doxysubsubsection{\texorpdfstring{DeserializeRuntime()}{DeserializeRuntime()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_scene_serializer_aee40d5be94ed3e3b31bd728b7de07c9d} 
+bool Vesper::\+\+Scene\+Serializer::\+\+Deserialize\+Runtime (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{filepath}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00264\ \ \ \ \ \{}
+\DoxyCodeLine{00265\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_asserts_8h_a3b51b77f75997760894138afc89403c9}{VZ\_CORE\_ASSERT}}(\textcolor{keyword}{false},\ \textcolor{stringliteral}{"{}Not\ implemented"{}});}
+\DoxyCodeLine{00266\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00267\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_vesper_1_1_scene_serializer_a57a8ec77960774b4d8dd1c664e9a0d4b}\index{Vesper::SceneSerializer@{Vesper::SceneSerializer}!Serialize@{Serialize}}
+\index{Serialize@{Serialize}!Vesper::SceneSerializer@{Vesper::SceneSerializer}}
+\doxysubsubsection{\texorpdfstring{Serialize()}{Serialize()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_scene_serializer_a57a8ec77960774b4d8dd1c664e9a0d4b} 
+void Vesper::\+\+Scene\+Serializer::\+\+Serialize (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{filepath}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ YAML::Emitter\ out;}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ out\ <<\ YAML::BeginMap;\ \textcolor{comment}{//\ Scene}}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ out\ <<\ YAML::Key\ <<\ \textcolor{stringliteral}{"{}Scene"{}}\ <<\ YAML::Value\ <<\ \doxymbox{\hyperlink{class_vesper_1_1_scene_serializer_aedb6dc6e96b394e40a3a508585a12720}{m\_Scene}}-\/>GetName();}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ out\ <<\ YAML::Key\ <<\ \textcolor{stringliteral}{"{}Entities"{}}\ <<\ YAML::Value\ <<\ YAML::BeginSeq;\ \textcolor{comment}{//\ Entities}}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_scene_serializer_aedb6dc6e96b394e40a3a508585a12720}{m\_Scene}}-\/>m\_Registry.view<entt::entity>().each([\&](\textcolor{keyword}{auto}\ entityID)\ \{}
+\DoxyCodeLine{00185\ }
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \ \ \ \ Entity\ entity\ =\ \{\ entityID,\ \doxymbox{\hyperlink{class_vesper_1_1_scene_serializer_aedb6dc6e96b394e40a3a508585a12720}{m\_Scene}}.get()\ \};}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!entity)}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00189\ }
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_afd6defdd6d228a26a11631a007bb7a07}{SerializeEntity}}(out,\ entity);}
+\DoxyCodeLine{00191\ }
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00193\ }
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ out\ <<\ YAML::EndSeq;\ \textcolor{comment}{//\ Entities}}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ out\ <<\ YAML::EndMap;\ \textcolor{comment}{//\ Scene}}
+\DoxyCodeLine{00196\ }
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ std::ofstream\ fout(filepath);}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ fout\ <<\ out.c\_str();}
+\DoxyCodeLine{00199\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referenced by \doxymbox{\hyperlink{class_vesper_1_1_editor_layer_ac8618695e9d694723133cef7a86384ce}{Vesper::\+\+Editor\+Layer::\+\+Save\+Scene\+As()}}.
+
+\Hypertarget{class_vesper_1_1_scene_serializer_ae860a28af3f3651978ccf4aa1f6dc3fe}\index{Vesper::SceneSerializer@{Vesper::SceneSerializer}!SerializeRuntime@{SerializeRuntime}}
+\index{SerializeRuntime@{SerializeRuntime}!Vesper::SceneSerializer@{Vesper::SceneSerializer}}
+\doxysubsubsection{\texorpdfstring{SerializeRuntime()}{SerializeRuntime()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_scene_serializer_ae860a28af3f3651978ccf4aa1f6dc3fe} 
+void Vesper::\+\+Scene\+Serializer::\+\+Serialize\+Runtime (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{filepath}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00202\ \ \ \ \ \{}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_asserts_8h_a3b51b77f75997760894138afc89403c9}{VZ\_CORE\_ASSERT}}(\textcolor{keyword}{false},\ \textcolor{stringliteral}{"{}Not\ implemented"{}});}
+\DoxyCodeLine{00204\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_vesper_1_1_scene_serializer_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_vesper_1_1_scene_serializer_aedb6dc6e96b394e40a3a508585a12720}\index{Vesper::SceneSerializer@{Vesper::SceneSerializer}!m\_Scene@{m\_Scene}}
+\index{m\_Scene@{m\_Scene}!Vesper::SceneSerializer@{Vesper::SceneSerializer}}
+\doxysubsubsection{\texorpdfstring{m\_Scene}{m\_Scene}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_scene_serializer_aedb6dc6e96b394e40a3a508585a12720} 
+\doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$\doxymbox{\hyperlink{class_vesper_1_1_scene}{Scene}}$>$ Vesper::\+\+Scene\+Serializer::\+m\+\_\+\+Scene\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+Vesper/\+src/\+\+Vesper/\+\+Scene/\+\doxymbox{\hyperlink{_scene_serializer_8h}{Scene\+Serializer.\+h}}\item 
+Vesper/\+src/\+\+Vesper/\+\+Scene/\+\doxymbox{\hyperlink{_scene_serializer_8cpp}{Scene\+Serializer.\+cpp}}\end{DoxyCompactItemize}

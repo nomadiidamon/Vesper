@@ -1,0 +1,209 @@
+\doxysection{Vesper/\+src/\+\+Vesper/\+\+Debug/\+\+Instrumentor.h File Reference}
+\hypertarget{_instrumentor_8h}{}\label{_instrumentor_8h}\index{Vesper/src/Vesper/Debug/Instrumentor.h@{Vesper/src/Vesper/Debug/Instrumentor.h}}
+{\ttfamily \+\#include "{}Vesper/\+\+Core/\+\+Log.\+h"{}}\newline
+{\ttfamily \+\#include $<$algorithm$>$}\newline
+{\ttfamily \+\#include $<$chrono$>$}\newline
+{\ttfamily \+\#include $<$fstream$>$}\newline
+{\ttfamily \+\#include $<$iomanip$>$}\newline
+{\ttfamily \+\#include $<$string$>$}\newline
+{\ttfamily \+\#include $<$thread$>$}\newline
+{\ttfamily \+\#include $<$mutex$>$}\newline
+{\ttfamily \+\#include $<$sstream$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{namespace_vesper_struct_vesper_1_1_profile_result}{Vesper::\+\+Profile\+Result}}
+\item 
+struct \doxymbox{\hyperlink{namespace_vesper_struct_vesper_1_1_instrumentation_session}{Vesper::\+\+Instrumentation\+Session}}
+\item 
+class \doxymbox{\hyperlink{class_vesper_1_1_instrumentor}{Vesper::\+\+Instrumentor}}
+\item 
+class \doxymbox{\hyperlink{class_vesper_1_1_instrumentation_timer}{Vesper::\+\+Instrumentation\+Timer}}
+\item 
+struct \doxymbox{\hyperlink{namespace_instrumentor_utils_struct_instrumentor_utils_1_1_change_result}{Instrumentor\+Utils::\+\+Change\+Result$<$ N $>$}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \doxymbox{\hyperlink{namespace_vesper}{Vesper}}
+\begin{DoxyCompactList}\small\item\em TEMPORARY. \end{DoxyCompactList}\item 
+namespace \doxymbox{\hyperlink{namespace_instrumentor_utils}{Instrumentor\+Utils}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{_instrumentor_8h_a2fb2d3507ac3d4aec28070e3531852f1}{VZ\+\_\+\+PROFILE}}~1
+\item 
+\+\#define \doxymbox{\hyperlink{_instrumentor_8h_a45f407f34ca8ce12d32fb3c651593426}{VZ\+\_\+\+FUNC\+\_\+\+SIG}}~"{}VZ\+\_\+\+FUNC\+\_\+\+SIG unknown!"{}
+\item 
+\+\#define \doxymbox{\hyperlink{_instrumentor_8h_a01b8429664a0510fa06e3a887cfbcf69}{VZ\+\_\+\+PROFILE\+\_\+\+BEGIN\+\_\+\+SESSION}}(name,  filepath)
+\item 
+\+\#define \doxymbox{\hyperlink{_instrumentor_8h_ae9ab05d740a576e8cc654ee9d51ac25a}{VZ\+\_\+\+PROFILE\+\_\+\+END\+\_\+\+SESSION}}()
+\item 
+\+\#define \doxymbox{\hyperlink{_instrumentor_8h_a9fe34090b32832e899c27e83680fc084}{VZ\+\_\+\+PROFILE\+\_\+\+SCOPE\+\_\+\+LINE2}}(name,  line)
+\item 
+\+\#define \doxymbox{\hyperlink{_instrumentor_8h_af5ced1c824cf778e06ff0099f2652397}{VZ\+\_\+\+PROFILE\+\_\+\+SCOPE\+\_\+\+LINE}}(name,  line)
+\item 
+\+\#define \doxymbox{\hyperlink{_instrumentor_8h_ae2376bed374f838d0047cf753f914f31}{VZ\+\_\+\+PROFILE\+\_\+\+SCOPE}}(name)
+\item 
+\+\#define \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\+\_\+\+PROFILE\+\_\+\+FUNCTION}}()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \doxymbox{\hyperlink{namespace_vesper_a60bb5e07d142d5fcc3b5d0b0ce6db7bc}{Vesper::\+\+Floating\+Point\+Microseconds}} = std::\+chrono::\+duration$<$double, std::\+micro$>$
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$size\+\_\+t N, size\+\_\+t K$>$ }\\constexpr auto \doxymbox{\hyperlink{namespace_instrumentor_utils_ae15d8cc9cf5564f45a9731202fd5c2ff}{Instrumentor\+Utils::\+\+Cleanup\+Output\+String}} (const char(\&expr)\+[N]\+, const char(\&remove)\+[K]\+)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Class Documentation}
+\index{Vesper::ProfileResult@{Vesper::ProfileResult}}
+\label{struct_vesper_1_1_profile_result}
+\Hypertarget{namespace_vesper_struct_vesper_1_1_profile_result}
+\doxysubsubsection{struct Vesper::\+Profile\+Result}
+\begin{DoxyFields}{Class Members}
+\doxymbox{\Hypertarget{namespace_vesper_ae73da7a2e69c2ae90069c0f2063da162}\label{namespace_vesper_ae73da7a2e69c2ae90069c0f2063da162}} 
+long long&
+End&
+\\
+\hline
+
+\doxymbox{\Hypertarget{namespace_vesper_a53f86c360af0fb068e6de1778d732aa9}\label{namespace_vesper_a53f86c360af0fb068e6de1778d732aa9}} 
+string&
+Name&
+\\
+\hline
+
+\doxymbox{\Hypertarget{namespace_vesper_ab68fdb0acd48f29f27a306fb51a2a5e4}\label{namespace_vesper_ab68fdb0acd48f29f27a306fb51a2a5e4}} 
+long long&
+Start&
+\\
+\hline
+
+\doxymbox{\Hypertarget{namespace_vesper_aea0f113bfe4467c4ad661b1648b759c3}\label{namespace_vesper_aea0f113bfe4467c4ad661b1648b759c3}} 
+uint32\_t&
+ThreadID&
+\\
+\hline
+
+\end{DoxyFields}
+\index{Vesper::InstrumentationSession@{Vesper::InstrumentationSession}}
+\label{struct_vesper_1_1_instrumentation_session}
+\Hypertarget{namespace_vesper_struct_vesper_1_1_instrumentation_session}
+\doxysubsubsection{struct Vesper::\+Instrumentation\+Session}
+\begin{DoxyFields}{Class Members}
+\doxymbox{\Hypertarget{namespace_vesper_a9aea845bcb154f66f84398a10e599884}\label{namespace_vesper_a9aea845bcb154f66f84398a10e599884}} 
+string&
+Name&
+\\
+\hline
+
+\end{DoxyFields}
+\index{InstrumentorUtils::ChangeResult@{InstrumentorUtils::ChangeResult}}
+\label{struct_instrumentor_utils_1_1_change_result}
+\Hypertarget{namespace_instrumentor_utils_struct_instrumentor_utils_1_1_change_result}
+\doxysubsubsection{struct Instrumentor\+Utils::\+Change\+Result}
+\subsubsection*{template$<$size\+\_\+t N$>$\newline
+struct Instrumentor\+Utils::\+\+Change\+Result$<$ N $>$}
+\begin{DoxyFields}{Class Members}
+\doxymbox{\Hypertarget{namespace_instrumentor_utils_ac01edcf5dfb9a10440bf406a9fde573c}\label{namespace_instrumentor_utils_ac01edcf5dfb9a10440bf406a9fde573c}} 
+char&
+Data\+[N]\+&
+\\
+\hline
+
+\end{DoxyFields}
+
+
+\label{doc-define-members}
+\Hypertarget{_instrumentor_8h_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{_instrumentor_8h_a45f407f34ca8ce12d32fb3c651593426}\index{Instrumentor.h@{Instrumentor.h}!VZ\_FUNC\_SIG@{VZ\_FUNC\_SIG}}
+\index{VZ\_FUNC\_SIG@{VZ\_FUNC\_SIG}!Instrumentor.h@{Instrumentor.h}}
+\doxysubsubsection{\texorpdfstring{VZ\_FUNC\_SIG}{VZ\_FUNC\_SIG}}
+{\footnotesize\ttfamily \label{_instrumentor_8h_a45f407f34ca8ce12d32fb3c651593426} 
+\+\#define VZ\+\_\+\+FUNC\+\_\+\+SIG~"{}VZ\+\_\+\+FUNC\+\_\+\+SIG unknown!"{}}
+
+\Hypertarget{_instrumentor_8h_a2fb2d3507ac3d4aec28070e3531852f1}\index{Instrumentor.h@{Instrumentor.h}!VZ\_PROFILE@{VZ\_PROFILE}}
+\index{VZ\_PROFILE@{VZ\_PROFILE}!Instrumentor.h@{Instrumentor.h}}
+\doxysubsubsection{\texorpdfstring{VZ\_PROFILE}{VZ\_PROFILE}}
+{\footnotesize\ttfamily \label{_instrumentor_8h_a2fb2d3507ac3d4aec28070e3531852f1} 
+\+\#define VZ\+\_\+\+PROFILE~1}
+
+\Hypertarget{_instrumentor_8h_a01b8429664a0510fa06e3a887cfbcf69}\index{Instrumentor.h@{Instrumentor.h}!VZ\_PROFILE\_BEGIN\_SESSION@{VZ\_PROFILE\_BEGIN\_SESSION}}
+\index{VZ\_PROFILE\_BEGIN\_SESSION@{VZ\_PROFILE\_BEGIN\_SESSION}!Instrumentor.h@{Instrumentor.h}}
+\doxysubsubsection{\texorpdfstring{VZ\_PROFILE\_BEGIN\_SESSION}{VZ\_PROFILE\_BEGIN\_SESSION}}
+{\footnotesize\ttfamily \label{_instrumentor_8h_a01b8429664a0510fa06e3a887cfbcf69} 
+\+\#define VZ\+\_\+\+PROFILE\+\_\+\+BEGIN\+\_\+\+SESSION(\begin{DoxyParamCaption}\item[{}]{name}{, }\item[{}]{filepath}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\doxymbox{\hyperlink{class_vesper_1_1_instrumentor_a43ebba932df02103a849eb617ca80114}{::Vesper::Instrumentor::Get}}().\doxymbox{\hyperlink{class_vesper_1_1_instrumentor_acdc2004ddc288d58591a4f5e8bd7b5d9}{BeginSession}}(name,\ filepath)}
+
+\end{DoxyCode}
+\Hypertarget{_instrumentor_8h_ae9ab05d740a576e8cc654ee9d51ac25a}\index{Instrumentor.h@{Instrumentor.h}!VZ\_PROFILE\_END\_SESSION@{VZ\_PROFILE\_END\_SESSION}}
+\index{VZ\_PROFILE\_END\_SESSION@{VZ\_PROFILE\_END\_SESSION}!Instrumentor.h@{Instrumentor.h}}
+\doxysubsubsection{\texorpdfstring{VZ\_PROFILE\_END\_SESSION}{VZ\_PROFILE\_END\_SESSION}}
+{\footnotesize\ttfamily \label{_instrumentor_8h_ae9ab05d740a576e8cc654ee9d51ac25a} 
+\+\#define VZ\+\_\+\+PROFILE\+\_\+\+END\+\_\+\+SESSION(\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\doxymbox{\hyperlink{class_vesper_1_1_instrumentor_a43ebba932df02103a849eb617ca80114}{::Vesper::Instrumentor::Get}}().\doxymbox{\hyperlink{class_vesper_1_1_instrumentor_a396d186614575c7b0fbf84db474d807b}{EndSession}}()}
+
+\end{DoxyCode}
+\Hypertarget{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}\index{Instrumentor.h@{Instrumentor.h}!VZ\_PROFILE\_FUNCTION@{VZ\_PROFILE\_FUNCTION}}
+\index{VZ\_PROFILE\_FUNCTION@{VZ\_PROFILE\_FUNCTION}!Instrumentor.h@{Instrumentor.h}}
+\doxysubsubsection{\texorpdfstring{VZ\_PROFILE\_FUNCTION}{VZ\_PROFILE\_FUNCTION}}
+{\footnotesize\ttfamily \label{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b} 
+\+\#define VZ\+\_\+\+PROFILE\+\_\+\+FUNCTION(\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\doxymbox{\hyperlink{_instrumentor_8h_ae2376bed374f838d0047cf753f914f31}{VZ\_PROFILE\_SCOPE}}(\doxymbox{\hyperlink{_instrumentor_8h_a45f407f34ca8ce12d32fb3c651593426}{VZ\_FUNC\_SIG}})}
+
+\end{DoxyCode}
+\Hypertarget{_instrumentor_8h_ae2376bed374f838d0047cf753f914f31}\index{Instrumentor.h@{Instrumentor.h}!VZ\_PROFILE\_SCOPE@{VZ\_PROFILE\_SCOPE}}
+\index{VZ\_PROFILE\_SCOPE@{VZ\_PROFILE\_SCOPE}!Instrumentor.h@{Instrumentor.h}}
+\doxysubsubsection{\texorpdfstring{VZ\_PROFILE\_SCOPE}{VZ\_PROFILE\_SCOPE}}
+{\footnotesize\ttfamily \label{_instrumentor_8h_ae2376bed374f838d0047cf753f914f31} 
+\+\#define VZ\+\_\+\+PROFILE\+\_\+\+SCOPE(\begin{DoxyParamCaption}\item[{}]{name}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\doxymbox{\hyperlink{_instrumentor_8h_af5ced1c824cf778e06ff0099f2652397}{VZ\_PROFILE\_SCOPE\_LINE}}(name,\ \_\_LINE\_\_)}
+
+\end{DoxyCode}
+\Hypertarget{_instrumentor_8h_af5ced1c824cf778e06ff0099f2652397}\index{Instrumentor.h@{Instrumentor.h}!VZ\_PROFILE\_SCOPE\_LINE@{VZ\_PROFILE\_SCOPE\_LINE}}
+\index{VZ\_PROFILE\_SCOPE\_LINE@{VZ\_PROFILE\_SCOPE\_LINE}!Instrumentor.h@{Instrumentor.h}}
+\doxysubsubsection{\texorpdfstring{VZ\_PROFILE\_SCOPE\_LINE}{VZ\_PROFILE\_SCOPE\_LINE}}
+{\footnotesize\ttfamily \label{_instrumentor_8h_af5ced1c824cf778e06ff0099f2652397} 
+\+\#define VZ\+\_\+\+PROFILE\+\_\+\+SCOPE\+\_\+\+LINE(\begin{DoxyParamCaption}\item[{}]{name}{, }\item[{}]{line}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\doxymbox{\hyperlink{_instrumentor_8h_a9fe34090b32832e899c27e83680fc084}{VZ\_PROFILE\_SCOPE\_LINE2}}(name,\ line)}
+
+\end{DoxyCode}
+\Hypertarget{_instrumentor_8h_a9fe34090b32832e899c27e83680fc084}\index{Instrumentor.h@{Instrumentor.h}!VZ\_PROFILE\_SCOPE\_LINE2@{VZ\_PROFILE\_SCOPE\_LINE2}}
+\index{VZ\_PROFILE\_SCOPE\_LINE2@{VZ\_PROFILE\_SCOPE\_LINE2}!Instrumentor.h@{Instrumentor.h}}
+\doxysubsubsection{\texorpdfstring{VZ\_PROFILE\_SCOPE\_LINE2}{VZ\_PROFILE\_SCOPE\_LINE2}}
+{\footnotesize\ttfamily \label{_instrumentor_8h_a9fe34090b32832e899c27e83680fc084} 
+\+\#define VZ\+\_\+\+PROFILE\+\_\+\+SCOPE\+\_\+\+LINE2(\begin{DoxyParamCaption}\item[{}]{name}{, }\item[{}]{line}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ fixedName\#\#line\ =\ \doxymbox{\hyperlink{namespace_instrumentor_utils_ae15d8cc9cf5564f45a9731202fd5c2ff}{InstrumentorUtils::CleanupOutputString}}(name,\ \textcolor{stringliteral}{"{}\_\_cdecl\ "{}});\(\backslash\)}
+\DoxyCodeLine{\doxymbox{\hyperlink{class_vesper_1_1_instrumentation_timer}{::Vesper::InstrumentationTimer}}\ timer\#\#line(fixedName\#\#line.Data)}
+
+\end{DoxyCode}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00230\ \textcolor{preprocessor}{\ \ \ \ \#define\ VZ\_PROFILE\_SCOPE\_LINE2(name,\ line)\ constexpr\ auto\ fixedName\#\#line\ =\ InstrumentorUtils::CleanupOutputString(name,\ "{}\_\_cdecl\ "{});\(\backslash\) }}
+\DoxyCodeLine{00231\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ::Vesper::InstrumentationTimer\ timer\#\#line(fixedName\#\#line.Data) }}
+
+\end{DoxyCode}

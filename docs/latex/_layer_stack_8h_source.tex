@@ -1,0 +1,38 @@
+\doxysection{Layer\+Stack.\+h}
+\hypertarget{_layer_stack_8h_source}{}\label{_layer_stack_8h_source}\index{Vesper/src/Vesper/App/LayerStack.h@{Vesper/src/Vesper/App/LayerStack.h}}
+\doxymbox{\hyperlink{_layer_stack_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{pragma}\ \textcolor{preprocessor}{once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\ \textcolor{preprocessor}{"{}Vesper/Core/Base.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\ \doxymbox{\hyperlink{_layer_8h}{"{}Layer.h"{}}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{namespace}\ \doxymbox{\hyperlink{namespace_vesper}{Vesper}}\ \{}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{class}\ VESPER\_API\ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{LayerStack}}}
+\DoxyCodeLine{00010\ \ \ \ \ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_a01ab5d24098db960d7bac1225cbb542e}{LayerStack}}();}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \string~\doxymbox{\hyperlink{class_vesper_1_1_layer_stack_ad19fe2a97a277a4fb3827c4641317fd8}{LayerStack}}();}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_a56bdbb1eb43e4f1718c51f5c5752cdef}{PushLayer}}(\doxymbox{\hyperlink{class_vesper_1_1_layer}{Layer}}*\ layer);}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_abf19258f086ca897456a513038e52c04}{PushOverlay}}(\doxymbox{\hyperlink{class_vesper_1_1_layer}{Layer}}*\ overlay);}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_ad923292e88c1f2449bb82f28923234a4}{PopLayer}}(\doxymbox{\hyperlink{class_vesper_1_1_layer}{Layer}}*\ layer);}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_a18721a4d3abe075ecf5da87c819430b7}{PopOverlay}}(\doxymbox{\hyperlink{class_vesper_1_1_layer}{Layer}}*\ overlay);}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ std::vector<Layer*>::iterator\ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{begin}}()\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{m\_Layers}}.\doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{begin}}();\ \}}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{std}}::\doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{vector}}<\doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{Layer}}*>::\doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{iterator}}\ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{end}}()\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{m\_Layers}}.\doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{end}}();\ \}}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{std}}::\doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{vector}}<\doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{Layer}}*>::\doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{reverse\_iterator}}\ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{rbegin}}()\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{m\_Layers}}.\doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{rbegin}}();\ \}}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{std}}::\doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{vector}}<\doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{Layer}}*>::\doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{reverse\_iterator}}\ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{rend}}()\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{m\_Layers}}.\doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{rend}}();\ \}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{std}}::\doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{vector}}<\doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{Layer}}*>\ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{m\_Layers}};}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_a2722bad174bdd9e8c4bf4e8435a82df4}{m\_LayerInsertIndex}}\ =\ 0;}
+\DoxyCodeLine{00029\ \ \ \ \ \};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \}}
+
+\end{DoxyCode}

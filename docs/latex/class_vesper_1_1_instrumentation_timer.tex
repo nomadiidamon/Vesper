@@ -1,0 +1,111 @@
+\doxysection{Vesper::\+Instrumentation\+Timer Class Reference}
+\hypertarget{class_vesper_1_1_instrumentation_timer}{}\label{class_vesper_1_1_instrumentation_timer}\index{Vesper::InstrumentationTimer@{Vesper::InstrumentationTimer}}
+
+
+{\ttfamily \+\#include $<$Instrumentor.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_vesper_1_1_instrumentation_timer_a6c425b9da9dc0bb3dbedf0aa989cd4ac}{Instrumentation\+Timer}} (const char \texorpdfstring{$\ast$}{*}name)
+\item 
+\doxymbox{\hyperlink{class_vesper_1_1_instrumentation_timer_a4c099efe41e6177cc5287873afaa843a}{\texorpdfstring{$\sim$}{\string~}\+Instrumentation\+Timer}} ()
+\item 
+void \doxymbox{\hyperlink{class_vesper_1_1_instrumentation_timer_a82fbaa34e3295e6f78511f5846dd6828}{Stop}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_vesper_1_1_instrumentation_timer_aef10a87ac5dd8f2feb6c3849731f7749}{m\+\_\+\+Name}}
+\item 
+std::\+chrono::\+time\+\_\+point$<$ std::\+chrono::\+high\+\_\+resolution\+\_\+clock $>$ \doxymbox{\hyperlink{class_vesper_1_1_instrumentation_timer_ae1ea475c61e06c0f7a420c8c063382fa}{m\+\_\+\+Start\+Timepoint}}
+\item 
+bool \doxymbox{\hyperlink{class_vesper_1_1_instrumentation_timer_a9c3cf2f5ce67cba09ea80271648dbe02}{m\+\_\+\+Stopped}}
+\end{DoxyCompactItemize}
+
+
+\label{doc-constructors}
+\Hypertarget{class_vesper_1_1_instrumentation_timer_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_vesper_1_1_instrumentation_timer_a6c425b9da9dc0bb3dbedf0aa989cd4ac}\index{Vesper::InstrumentationTimer@{Vesper::InstrumentationTimer}!InstrumentationTimer@{InstrumentationTimer}}
+\index{InstrumentationTimer@{InstrumentationTimer}!Vesper::InstrumentationTimer@{Vesper::InstrumentationTimer}}
+\doxysubsubsection{\texorpdfstring{InstrumentationTimer()}{InstrumentationTimer()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_instrumentation_timer_a6c425b9da9dc0bb3dbedf0aa989cd4ac} 
+Vesper::\+\+Instrumentation\+Timer::\+\+Instrumentation\+Timer (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_vesper_1_1_instrumentation_timer_aef10a87ac5dd8f2feb6c3849731f7749}{m\_Name}}(name),\ \doxymbox{\hyperlink{class_vesper_1_1_instrumentation_timer_a9c3cf2f5ce67cba09ea80271648dbe02}{m\_Stopped}}(\textcolor{keyword}{false}) }
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_instrumentation_timer_ae1ea475c61e06c0f7a420c8c063382fa}{m\_StartTimepoint}}\ =\ std::chrono::high\_resolution\_clock::now();}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_vesper_1_1_instrumentation_timer_a4c099efe41e6177cc5287873afaa843a}\index{Vesper::InstrumentationTimer@{Vesper::InstrumentationTimer}!````~InstrumentationTimer@{\texorpdfstring{$\sim$}{\string~}InstrumentationTimer}}
+\index{````~InstrumentationTimer@{\texorpdfstring{$\sim$}{\string~}InstrumentationTimer}!Vesper::InstrumentationTimer@{Vesper::InstrumentationTimer}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}InstrumentationTimer()}{\string~InstrumentationTimer()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_instrumentation_timer_a4c099efe41e6177cc5287873afaa843a} 
+Vesper::\+\+Instrumentation\+Timer::\+\texorpdfstring{$\sim$}{\string~}\+Instrumentation\+Timer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\doxymbox{\hyperlink{class_vesper_1_1_instrumentation_timer_a9c3cf2f5ce67cba09ea80271648dbe02}{m\_Stopped}})}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_instrumentation_timer_a82fbaa34e3295e6f78511f5846dd6828}{Stop}}();}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\label{doc-func-members}
+\Hypertarget{class_vesper_1_1_instrumentation_timer_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_vesper_1_1_instrumentation_timer_a82fbaa34e3295e6f78511f5846dd6828}\index{Vesper::InstrumentationTimer@{Vesper::InstrumentationTimer}!Stop@{Stop}}
+\index{Stop@{Stop}!Vesper::InstrumentationTimer@{Vesper::InstrumentationTimer}}
+\doxysubsubsection{\texorpdfstring{Stop()}{Stop()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_instrumentation_timer_a82fbaa34e3295e6f78511f5846dd6828} 
+void Vesper::\+\+Instrumentation\+Timer::\+\+Stop (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ endTimepoint\ =\ std::chrono::high\_resolution\_clock::now();}
+\DoxyCodeLine{00157\ }
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ start\ =\ std::chrono::time\_point\_cast<std::chrono::microseconds>(\doxymbox{\hyperlink{class_vesper_1_1_instrumentation_timer_ae1ea475c61e06c0f7a420c8c063382fa}{m\_StartTimepoint}}).time\_since\_epoch().count();}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ end\ =\ std::chrono::time\_point\_cast<std::chrono::microseconds>(endTimepoint).time\_since\_epoch().count();}
+\DoxyCodeLine{00160\ }
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ threadID\ =\ std::hash<std::thread::id>\{\}(std::this\_thread::get\_id());}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_instrumentor_a43ebba932df02103a849eb617ca80114}{Instrumentor::Get}}().\doxymbox{\hyperlink{class_vesper_1_1_instrumentor_a868e96beb461ded3358a959a4aef5eda}{WriteProfile}}(\{\ \doxymbox{\hyperlink{class_vesper_1_1_instrumentation_timer_aef10a87ac5dd8f2feb6c3849731f7749}{m\_Name}},\ start,\ end,\ threadID\ \});}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_instrumentation_timer_a9c3cf2f5ce67cba09ea80271648dbe02}{m\_Stopped}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_vesper_1_1_instrumentation_timer_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_vesper_1_1_instrumentation_timer_aef10a87ac5dd8f2feb6c3849731f7749}\index{Vesper::InstrumentationTimer@{Vesper::InstrumentationTimer}!m\_Name@{m\_Name}}
+\index{m\_Name@{m\_Name}!Vesper::InstrumentationTimer@{Vesper::InstrumentationTimer}}
+\doxysubsubsection{\texorpdfstring{m\_Name}{m\_Name}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_instrumentation_timer_aef10a87ac5dd8f2feb6c3849731f7749} 
+const char\texorpdfstring{$\ast$}{*} Vesper::\+\+Instrumentation\+Timer::\+m\+\_\+\+Name\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_vesper_1_1_instrumentation_timer_ae1ea475c61e06c0f7a420c8c063382fa}\index{Vesper::InstrumentationTimer@{Vesper::InstrumentationTimer}!m\_StartTimepoint@{m\_StartTimepoint}}
+\index{m\_StartTimepoint@{m\_StartTimepoint}!Vesper::InstrumentationTimer@{Vesper::InstrumentationTimer}}
+\doxysubsubsection{\texorpdfstring{m\_StartTimepoint}{m\_StartTimepoint}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_instrumentation_timer_ae1ea475c61e06c0f7a420c8c063382fa} 
+std::\+chrono::\+time\+\_\+point$<$std::\+chrono::\+high\+\_\+resolution\+\_\+clock$>$ Vesper::\+\+Instrumentation\+Timer::\+m\+\_\+\+Start\+Timepoint\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_vesper_1_1_instrumentation_timer_a9c3cf2f5ce67cba09ea80271648dbe02}\index{Vesper::InstrumentationTimer@{Vesper::InstrumentationTimer}!m\_Stopped@{m\_Stopped}}
+\index{m\_Stopped@{m\_Stopped}!Vesper::InstrumentationTimer@{Vesper::InstrumentationTimer}}
+\doxysubsubsection{\texorpdfstring{m\_Stopped}{m\_Stopped}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_instrumentation_timer_a9c3cf2f5ce67cba09ea80271648dbe02} 
+bool Vesper::\+\+Instrumentation\+Timer::\+m\+\_\+\+Stopped\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+Vesper/\+src/\+\+Vesper/\+\+Debug/\+\doxymbox{\hyperlink{_instrumentor_8h}{Instrumentor.\+h}}\end{DoxyCompactItemize}

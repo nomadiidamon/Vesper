@@ -1,0 +1,182 @@
+\doxysection{Vesper::\+Open\+GLIndex\+Buffer Class Reference}
+\hypertarget{class_vesper_1_1_open_g_l_index_buffer}{}\label{class_vesper_1_1_open_g_l_index_buffer}\index{Vesper::OpenGLIndexBuffer@{Vesper::OpenGLIndexBuffer}}
+
+
+{\ttfamily \+\#include $<$Open\+GLBuffer.\+h$>$}
+
+Inheritance diagram for Vesper::\+Open\+GLIndex\+Buffer:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_vesper_1_1_open_g_l_index_buffer}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_vesper_1_1_open_g_l_index_buffer_a48d9d7362e667f300afac07a94e0c10a}{Open\+GLIndex\+Buffer}} (uint32\+\_\+t \texorpdfstring{$\ast$}{*}indices, uint32\+\_\+t count)
+\item 
+virtual \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_index_buffer_aa562d6fd0b83b6007d095dfb43f0473a}{\texorpdfstring{$\sim$}{\string~}\+Open\+GLIndex\+Buffer}} ()
+\item 
+virtual void \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_index_buffer_ac368e4da690303036018fdec8ad6ce00}{Bind}} () const override
+\item 
+virtual void \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_index_buffer_a78a99bcd46264f4bf7a840a50a227bbb}{Unbind}} () const override
+\item 
+virtual uint32\+\_\+t \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_index_buffer_a0eca4b84c9f6b4917124c0fe89cfc7a5}{Get\+Count}} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_vesper_1_1_index_buffer}{Vesper::\+\+Index\+Buffer}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \doxymbox{\hyperlink{class_vesper_1_1_index_buffer_a741294c54e462601f788dfb7215101b4}{\texorpdfstring{$\sim$}{\string~}\+Index\+Buffer}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_index_buffer_ac6b4d5339c47ee517aae93a2214672fa}{m\+\_\+\+Renderer\+ID}}
+\item 
+uint32\+\_\+t \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_index_buffer_a4bca6027e51a2d0a9c476be2b2ede661}{m\+\_\+\+Count}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Public Member Functions inherited from \doxymbox{\hyperlink{class_vesper_1_1_index_buffer}{Vesper::\+\+Index\+Buffer}}}
+\begin{DoxyCompactItemize}
+\item 
+static \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_index_buffer}{Index\+Buffer}} $>$ \doxymbox{\hyperlink{class_vesper_1_1_index_buffer_a77def1cbe3dd186ad6d31c5b53c14d88}{Create}} (uint32\+\_\+t \texorpdfstring{$\ast$}{*}indices, uint32\+\_\+t count)
+\end{DoxyCompactItemize}
+
+
+\label{doc-constructors}
+\Hypertarget{class_vesper_1_1_open_g_l_index_buffer_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_vesper_1_1_open_g_l_index_buffer_a48d9d7362e667f300afac07a94e0c10a}\index{Vesper::OpenGLIndexBuffer@{Vesper::OpenGLIndexBuffer}!OpenGLIndexBuffer@{OpenGLIndexBuffer}}
+\index{OpenGLIndexBuffer@{OpenGLIndexBuffer}!Vesper::OpenGLIndexBuffer@{Vesper::OpenGLIndexBuffer}}
+\doxysubsubsection{\texorpdfstring{OpenGLIndexBuffer()}{OpenGLIndexBuffer()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_open_g_l_index_buffer_a48d9d7362e667f300afac07a94e0c10a} 
+Vesper::\+\+Open\+GLIndex\+Buffer::\+\+Open\+GLIndex\+Buffer (\begin{DoxyParamCaption}\item[{uint32\+\_\+t \texorpdfstring{$\ast$}{*}}]{indices}{, }\item[{uint32\+\_\+t}]{count}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_index_buffer_a4bca6027e51a2d0a9c476be2b2ede661}{m\_Count}}(count) }
+\DoxyCodeLine{00064\ \ \ \ \ \{}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ glCreateBuffers(1,\ \&\doxymbox{\hyperlink{class_vesper_1_1_open_g_l_index_buffer_ac6b4d5339c47ee517aae93a2214672fa}{m\_RendererID}});}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ glBindBuffer(GL\_ELEMENT\_ARRAY\_BUFFER,\ \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_index_buffer_ac6b4d5339c47ee517aae93a2214672fa}{m\_RendererID}});}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ glBufferData(GL\_ELEMENT\_ARRAY\_BUFFER,\ count\ *\ \textcolor{keyword}{sizeof}(uint32\_t),\ indices,\ GL\_STATIC\_DRAW);}
+\DoxyCodeLine{00070\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_index_buffer_a4bca6027e51a2d0a9c476be2b2ede661}{m\+\_\+\+Count}}, and \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_index_buffer_ac6b4d5339c47ee517aae93a2214672fa}{m\+\_\+\+Renderer\+ID}}.
+
+\Hypertarget{class_vesper_1_1_open_g_l_index_buffer_aa562d6fd0b83b6007d095dfb43f0473a}\index{Vesper::OpenGLIndexBuffer@{Vesper::OpenGLIndexBuffer}!````~OpenGLIndexBuffer@{\texorpdfstring{$\sim$}{\string~}OpenGLIndexBuffer}}
+\index{````~OpenGLIndexBuffer@{\texorpdfstring{$\sim$}{\string~}OpenGLIndexBuffer}!Vesper::OpenGLIndexBuffer@{Vesper::OpenGLIndexBuffer}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}OpenGLIndexBuffer()}{\string~OpenGLIndexBuffer()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_open_g_l_index_buffer_aa562d6fd0b83b6007d095dfb43f0473a} 
+Vesper::\+\+Open\+GLIndex\+Buffer::\+\texorpdfstring{$\sim$}{\string~}\+Open\+GLIndex\+Buffer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00073\ \ \ \ \ \{}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ glDeleteBuffers(1,\ \&\doxymbox{\hyperlink{class_vesper_1_1_open_g_l_index_buffer_ac6b4d5339c47ee517aae93a2214672fa}{m\_RendererID}});}
+\DoxyCodeLine{00077\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_index_buffer_ac6b4d5339c47ee517aae93a2214672fa}{m\+\_\+\+Renderer\+ID}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_vesper_1_1_open_g_l_index_buffer_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_vesper_1_1_open_g_l_index_buffer_ac368e4da690303036018fdec8ad6ce00}\index{Vesper::OpenGLIndexBuffer@{Vesper::OpenGLIndexBuffer}!Bind@{Bind}}
+\index{Bind@{Bind}!Vesper::OpenGLIndexBuffer@{Vesper::OpenGLIndexBuffer}}
+\doxysubsubsection{\texorpdfstring{Bind()}{Bind()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_open_g_l_index_buffer_ac368e4da690303036018fdec8ad6ce00} 
+void Vesper::\+\+Open\+GLIndex\+Buffer::\+\+Bind (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \doxymbox{\hyperlink{class_vesper_1_1_index_buffer_a05b47f5a5a488af8ccb9f84481ea6b76}{Vesper::\+\+Index\+Buffer}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00080\ \ \ \ \ \{}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ glBindBuffer(GL\_ELEMENT\_ARRAY\_BUFFER,\ \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_index_buffer_ac6b4d5339c47ee517aae93a2214672fa}{m\_RendererID}});}
+\DoxyCodeLine{00084\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_vesper_1_1_open_g_l_index_buffer_a0eca4b84c9f6b4917124c0fe89cfc7a5}\index{Vesper::OpenGLIndexBuffer@{Vesper::OpenGLIndexBuffer}!GetCount@{GetCount}}
+\index{GetCount@{GetCount}!Vesper::OpenGLIndexBuffer@{Vesper::OpenGLIndexBuffer}}
+\doxysubsubsection{\texorpdfstring{GetCount()}{GetCount()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_open_g_l_index_buffer_a0eca4b84c9f6b4917124c0fe89cfc7a5} 
+virtual uint32\+\_\+t Vesper::\+\+Open\+GLIndex\+Buffer::\+\+Get\+Count (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \doxymbox{\hyperlink{class_vesper_1_1_index_buffer_a51973c1998db6244fea1cf72b7af68f0}{Vesper::\+\+Index\+Buffer}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00034\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_index_buffer_a4bca6027e51a2d0a9c476be2b2ede661}{m\_Count}};\ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_index_buffer_a4bca6027e51a2d0a9c476be2b2ede661}{m\+\_\+\+Count}}.
+
+\Hypertarget{class_vesper_1_1_open_g_l_index_buffer_a78a99bcd46264f4bf7a840a50a227bbb}\index{Vesper::OpenGLIndexBuffer@{Vesper::OpenGLIndexBuffer}!Unbind@{Unbind}}
+\index{Unbind@{Unbind}!Vesper::OpenGLIndexBuffer@{Vesper::OpenGLIndexBuffer}}
+\doxysubsubsection{\texorpdfstring{Unbind()}{Unbind()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_open_g_l_index_buffer_a78a99bcd46264f4bf7a840a50a227bbb} 
+void Vesper::\+\+Open\+GLIndex\+Buffer::\+\+Unbind (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \doxymbox{\hyperlink{class_vesper_1_1_index_buffer_a67648e91e4594d0abb25ca3901ba5254}{Vesper::\+\+Index\+Buffer}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00087\ \ \ \ \ \{}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ glBindBuffer(GL\_ELEMENT\_ARRAY\_BUFFER,\ 0);}
+\DoxyCodeLine{00091\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_vesper_1_1_open_g_l_index_buffer_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_vesper_1_1_open_g_l_index_buffer_a4bca6027e51a2d0a9c476be2b2ede661}\index{Vesper::OpenGLIndexBuffer@{Vesper::OpenGLIndexBuffer}!m\_Count@{m\_Count}}
+\index{m\_Count@{m\_Count}!Vesper::OpenGLIndexBuffer@{Vesper::OpenGLIndexBuffer}}
+\doxysubsubsection{\texorpdfstring{m\_Count}{m\_Count}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_open_g_l_index_buffer_a4bca6027e51a2d0a9c476be2b2ede661} 
+uint32\+\_\+t Vesper::\+\+Open\+GLIndex\+Buffer::\+m\+\_\+\+Count\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_index_buffer_a0eca4b84c9f6b4917124c0fe89cfc7a5}{Get\+Count()}}, and \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_index_buffer_a48d9d7362e667f300afac07a94e0c10a}{Open\+GLIndex\+Buffer()}}.
+
+\Hypertarget{class_vesper_1_1_open_g_l_index_buffer_ac6b4d5339c47ee517aae93a2214672fa}\index{Vesper::OpenGLIndexBuffer@{Vesper::OpenGLIndexBuffer}!m\_RendererID@{m\_RendererID}}
+\index{m\_RendererID@{m\_RendererID}!Vesper::OpenGLIndexBuffer@{Vesper::OpenGLIndexBuffer}}
+\doxysubsubsection{\texorpdfstring{m\_RendererID}{m\_RendererID}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_open_g_l_index_buffer_ac6b4d5339c47ee517aae93a2214672fa} 
+uint32\+\_\+t Vesper::\+\+Open\+GLIndex\+Buffer::\+m\+\_\+\+Renderer\+ID\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_index_buffer_a48d9d7362e667f300afac07a94e0c10a}{Open\+GLIndex\+Buffer()}}, and \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_index_buffer_aa562d6fd0b83b6007d095dfb43f0473a}{\texorpdfstring{$\sim$}{\string~}\+Open\+GLIndex\+Buffer()}}.
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+Vesper/\+src/\+\+Render\+API/\+\+Open\+GL/\+\doxymbox{\hyperlink{_open_g_l_buffer_8h}{Open\+GLBuffer.\+h}}\item 
+Vesper/\+src/\+\+Render\+API/\+\+Open\+GL/\+\doxymbox{\hyperlink{_open_g_l_buffer_8cpp}{Open\+GLBuffer.\+cpp}}\end{DoxyCompactItemize}

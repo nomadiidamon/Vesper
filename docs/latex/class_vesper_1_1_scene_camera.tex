@@ -1,0 +1,551 @@
+\doxysection{Vesper::\+Scene\+Camera Class Reference}
+\hypertarget{class_vesper_1_1_scene_camera}{}\label{class_vesper_1_1_scene_camera}\index{Vesper::SceneCamera@{Vesper::SceneCamera}}
+
+
+{\ttfamily \+\#include $<$Scene\+Camera.\+h$>$}
+
+Inheritance diagram for Vesper::\+Scene\+Camera:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_vesper_1_1_scene_camera}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum class \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_aa913c988aa3de5b85e37c495d2360f6d}{Projection\+Type}} \{ \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_aa913c988aa3de5b85e37c495d2360f6daa80420eef88d11f77532f1b9cb467fa3}{Perspective}} = 0
+, \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_aa913c988aa3de5b85e37c495d2360f6da03424250432f2aa71de95579d2c0eaeb}{Orthographic}} = 1
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a3794093bb3e6bbe653bb6b4c40925a2d}{Scene\+Camera}} ()
+\item 
+virtual \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a16ae0b759e6b314c61252255f278dc57}{\texorpdfstring{$\sim$}{\string~}\+Scene\+Camera}} ()=default
+\item 
+void \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_ace14365cd8c39efde9fce1a2ee11f043}{Set\+Orthographic}} (float size, float near\+Clip, float far\+Clip)
+\item 
+void \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a308f2004c4d567cace10cd48f5b28667}{Set\+Perspective}} (float vertical\+FOV, float near\+Clip, float far\+Clip)
+\item 
+void \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a452fbd0a633f0c023e7866ef0ee79540}{Set\+Viewport\+Size}} (uint32\+\_\+t width, uint32\+\_\+t height)
+\item 
+float \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_ac35a06d6e9582da215f2b4c3497905fb}{Get\+Perspective\+Vertical\+FOV}} () const
+\item 
+void \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_ab9d2e500a54d75de816f9ae64a507c2f}{Set\+Perspective\+Vertical\+FOV}} (float vertical\+Fov)
+\item 
+float \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a111fd965614811fadb2dadf9da1d143b}{Get\+Perspective\+Near\+Clip}} () const
+\item 
+void \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a96b323c003de94721a2417b54d083aaa}{Set\+Perspective\+Near\+Clip}} (float near\+Clip)
+\item 
+float \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a3f5c5a0674b2b902b740770679005b37}{Get\+Perspective\+Far\+Clip}} () const
+\item 
+void \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a2620095ec2902cad5d61f82cd10af65d}{Set\+Perspective\+Far\+Clip}} (float far\+Clip)
+\item 
+float \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a77dc1acc17f6d8f0f4d43421f9cb075f}{Get\+Orthographic\+Size}} () const
+\item 
+void \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a784a857e6730667ed1ccecec6d4c2a26}{Set\+Orthographic\+Size}} (float size)
+\item 
+float \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a2de6ccddf6966bbd191c490e9ca89411}{Get\+Orthographic\+Near\+Clip}} () const
+\item 
+void \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_acb2a687c8cd1b0d52f0cd1ac5ce9bfee}{Set\+Orthographic\+Near\+Clip}} (float near\+Clip)
+\item 
+float \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a843e25fbcf112c511b726c5f17ce8f37}{Get\+Orthographic\+Far\+Clip}} () const
+\item 
+void \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_ae6dc33bc42861cae43bdbe355cba2d71}{Set\+Orthographic\+Far\+Clip}} (float far\+Clip)
+\item 
+\doxymbox{\hyperlink{class_vesper_1_1_scene_camera_aa913c988aa3de5b85e37c495d2360f6d}{Projection\+Type}} \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a8f4ade36abb6f3763e7393b802155396}{Get\+Projection\+Type}} () const
+\item 
+void \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a8e400e3d9abb5b8b46f0c369bf8e890a}{Set\+Projection\+Type}} (\doxymbox{\hyperlink{class_vesper_1_1_scene_camera_aa913c988aa3de5b85e37c495d2360f6d}{Projection\+Type}} type)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_vesper_1_1_camera}{Vesper::\+\+Camera}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_vesper_1_1_camera_a328bf6c8f5a746a32458cea56eae1c38}{Camera}} ()=default
+\item 
+\doxymbox{\hyperlink{class_vesper_1_1_camera_adda68ac5d1e80852c315f86327a71653}{Camera}} (const glm::\+mat4 \&projection)
+\item 
+\doxymbox{\hyperlink{class_vesper_1_1_camera_a9d8eaf165d5aacf9686f5a5384ab9c34}{\texorpdfstring{$\sim$}{\string~}\+Camera}} ()=default
+\item 
+const glm::\+mat4 \& \doxymbox{\hyperlink{class_vesper_1_1_camera_a3b54da4192d893dd732a774802fbcc9c}{Get\+Projection}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a4d425e3cf6661dd790b3f6316cb9b44b}{Recalculate\+Projection}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_vesper_1_1_scene_camera_aa913c988aa3de5b85e37c495d2360f6d}{Projection\+Type}} \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a41c793093cbe5d3f6afebf90cc9ad42d}{m\+\_\+\+Projection\+Type}} = \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_aa913c988aa3de5b85e37c495d2360f6da03424250432f2aa71de95579d2c0eaeb}{Projection\+Type::\+\+Orthographic}}
+\item 
+float \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_ac0100f3249b85755343cb55ec5b53130}{m\+\_\+\+Perspective\+FOV}} = glm::\+radians(45.\+0f)
+\item 
+float \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a9474f52838a948718953dada05eac9a4}{m\+\_\+\+Perspective\+Near}} = 0.\+01f
+\item 
+float \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_ac62bda89b2a4b3da5518bacd3d1b47b9}{m\+\_\+\+Perspective\+Far}} = 1000.\+0f
+\item 
+float \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_ac7a0aeab7760a0420ed052e861304b12}{m\+\_\+\+Orthographic\+Size}} = 10.\+0f
+\item 
+float \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_ab41a6102906cca54d2ced298c0bdba62}{m\+\_\+\+Orthographic\+Near}} = -\/1.\+0f
+\item 
+float \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a1bfc5fbeb5bae343fd3b073f67ba4b8d}{m\+\_\+\+Orthographic\+Far}} = 1.\+0f
+\item 
+float \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a1355569425a6508a75c8a7089f98e104}{m\+\_\+\+Aspect\+Ratio}} = 0.\+0f
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{class_vesper_1_1_camera}{Vesper::\+\+Camera}}}
+\begin{DoxyCompactItemize}
+\item 
+glm::\+mat4 \doxymbox{\hyperlink{class_vesper_1_1_camera_ad2c5fa0158aeff7e067c9ee35ed78a2b}{m\+\_\+\+Projection}} = glm::\+mat4(1.\+0f)
+\end{DoxyCompactItemize}
+
+
+\label{doc-enum-members}
+\Hypertarget{class_vesper_1_1_scene_camera_doc-enum-members}
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{class_vesper_1_1_scene_camera_aa913c988aa3de5b85e37c495d2360f6d}\index{Vesper::SceneCamera@{Vesper::SceneCamera}!ProjectionType@{ProjectionType}}
+\index{ProjectionType@{ProjectionType}!Vesper::SceneCamera@{Vesper::SceneCamera}}
+\doxysubsubsection{\texorpdfstring{ProjectionType}{ProjectionType}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_scene_camera_aa913c988aa3de5b85e37c495d2360f6d} 
+enum class \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_aa913c988aa3de5b85e37c495d2360f6d}{Vesper::\+\+Scene\+Camera::\+\+Projection\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Perspective@{Perspective}!Vesper::SceneCamera@{Vesper::SceneCamera}}
+\index{Vesper::SceneCamera@{Vesper::SceneCamera}!Perspective@{Perspective}}
+}\Hypertarget{class_vesper_1_1_scene_camera_aa913c988aa3de5b85e37c495d2360f6daa80420eef88d11f77532f1b9cb467fa3}\label{class_vesper_1_1_scene_camera_aa913c988aa3de5b85e37c495d2360f6daa80420eef88d11f77532f1b9cb467fa3} 
+Perspective&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Orthographic@{Orthographic}!Vesper::SceneCamera@{Vesper::SceneCamera}}
+\index{Vesper::SceneCamera@{Vesper::SceneCamera}!Orthographic@{Orthographic}}
+}\Hypertarget{class_vesper_1_1_scene_camera_aa913c988aa3de5b85e37c495d2360f6da03424250432f2aa71de95579d2c0eaeb}\label{class_vesper_1_1_scene_camera_aa913c988aa3de5b85e37c495d2360f6da03424250432f2aa71de95579d2c0eaeb} 
+Orthographic&\\
+\hline
+
+\end{DoxyEnumFields}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00009\ \{\ Perspective\ =\ 0,\ Orthographic\ =\ 1\ \};}
+
+\end{DoxyCode}
+
+
+\label{doc-constructors}
+\Hypertarget{class_vesper_1_1_scene_camera_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_vesper_1_1_scene_camera_a3794093bb3e6bbe653bb6b4c40925a2d}\index{Vesper::SceneCamera@{Vesper::SceneCamera}!SceneCamera@{SceneCamera}}
+\index{SceneCamera@{SceneCamera}!Vesper::SceneCamera@{Vesper::SceneCamera}}
+\doxysubsubsection{\texorpdfstring{SceneCamera()}{SceneCamera()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_scene_camera_a3794093bb3e6bbe653bb6b4c40925a2d} 
+Vesper::\+\+Scene\+Camera::\+\+Scene\+Camera (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00010\ \ \ \ \ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a4d425e3cf6661dd790b3f6316cb9b44b}{RecalculateProjection}}();}
+\DoxyCodeLine{00012\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a4d425e3cf6661dd790b3f6316cb9b44b}{Recalculate\+Projection()}}.
+
+\Hypertarget{class_vesper_1_1_scene_camera_a16ae0b759e6b314c61252255f278dc57}\index{Vesper::SceneCamera@{Vesper::SceneCamera}!````~SceneCamera@{\texorpdfstring{$\sim$}{\string~}SceneCamera}}
+\index{````~SceneCamera@{\texorpdfstring{$\sim$}{\string~}SceneCamera}!Vesper::SceneCamera@{Vesper::SceneCamera}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}SceneCamera()}{\string~SceneCamera()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_scene_camera_a16ae0b759e6b314c61252255f278dc57} 
+virtual Vesper::\+\+Scene\+Camera::\+\texorpdfstring{$\sim$}{\string~}\+Scene\+Camera (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_vesper_1_1_scene_camera_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_vesper_1_1_scene_camera_a843e25fbcf112c511b726c5f17ce8f37}\index{Vesper::SceneCamera@{Vesper::SceneCamera}!GetOrthographicFarClip@{GetOrthographicFarClip}}
+\index{GetOrthographicFarClip@{GetOrthographicFarClip}!Vesper::SceneCamera@{Vesper::SceneCamera}}
+\doxysubsubsection{\texorpdfstring{GetOrthographicFarClip()}{GetOrthographicFarClip()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_scene_camera_a843e25fbcf112c511b726c5f17ce8f37} 
+float Vesper::\+\+Scene\+Camera::\+\+Get\+Orthographic\+Far\+Clip (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00030\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a1bfc5fbeb5bae343fd3b073f67ba4b8d}{m\_OrthographicFar}};\ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a1bfc5fbeb5bae343fd3b073f67ba4b8d}{m\+\_\+\+Orthographic\+Far}}.
+
+\Hypertarget{class_vesper_1_1_scene_camera_a2de6ccddf6966bbd191c490e9ca89411}\index{Vesper::SceneCamera@{Vesper::SceneCamera}!GetOrthographicNearClip@{GetOrthographicNearClip}}
+\index{GetOrthographicNearClip@{GetOrthographicNearClip}!Vesper::SceneCamera@{Vesper::SceneCamera}}
+\doxysubsubsection{\texorpdfstring{GetOrthographicNearClip()}{GetOrthographicNearClip()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_scene_camera_a2de6ccddf6966bbd191c490e9ca89411} 
+float Vesper::\+\+Scene\+Camera::\+\+Get\+Orthographic\+Near\+Clip (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00028\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_ab41a6102906cca54d2ced298c0bdba62}{m\_OrthographicNear}};\ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_ab41a6102906cca54d2ced298c0bdba62}{m\+\_\+\+Orthographic\+Near}}.
+
+\Hypertarget{class_vesper_1_1_scene_camera_a77dc1acc17f6d8f0f4d43421f9cb075f}\index{Vesper::SceneCamera@{Vesper::SceneCamera}!GetOrthographicSize@{GetOrthographicSize}}
+\index{GetOrthographicSize@{GetOrthographicSize}!Vesper::SceneCamera@{Vesper::SceneCamera}}
+\doxysubsubsection{\texorpdfstring{GetOrthographicSize()}{GetOrthographicSize()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_scene_camera_a77dc1acc17f6d8f0f4d43421f9cb075f} 
+float Vesper::\+\+Scene\+Camera::\+\+Get\+Orthographic\+Size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00026\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_ac7a0aeab7760a0420ed052e861304b12}{m\_OrthographicSize}};\ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_ac7a0aeab7760a0420ed052e861304b12}{m\+\_\+\+Orthographic\+Size}}.
+
+\Hypertarget{class_vesper_1_1_scene_camera_a3f5c5a0674b2b902b740770679005b37}\index{Vesper::SceneCamera@{Vesper::SceneCamera}!GetPerspectiveFarClip@{GetPerspectiveFarClip}}
+\index{GetPerspectiveFarClip@{GetPerspectiveFarClip}!Vesper::SceneCamera@{Vesper::SceneCamera}}
+\doxysubsubsection{\texorpdfstring{GetPerspectiveFarClip()}{GetPerspectiveFarClip()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_scene_camera_a3f5c5a0674b2b902b740770679005b37} 
+float Vesper::\+\+Scene\+Camera::\+\+Get\+Perspective\+Far\+Clip (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00023\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_ac62bda89b2a4b3da5518bacd3d1b47b9}{m\_PerspectiveFar}};\ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_ac62bda89b2a4b3da5518bacd3d1b47b9}{m\+\_\+\+Perspective\+Far}}.
+
+\Hypertarget{class_vesper_1_1_scene_camera_a111fd965614811fadb2dadf9da1d143b}\index{Vesper::SceneCamera@{Vesper::SceneCamera}!GetPerspectiveNearClip@{GetPerspectiveNearClip}}
+\index{GetPerspectiveNearClip@{GetPerspectiveNearClip}!Vesper::SceneCamera@{Vesper::SceneCamera}}
+\doxysubsubsection{\texorpdfstring{GetPerspectiveNearClip()}{GetPerspectiveNearClip()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_scene_camera_a111fd965614811fadb2dadf9da1d143b} 
+float Vesper::\+\+Scene\+Camera::\+\+Get\+Perspective\+Near\+Clip (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00021\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a9474f52838a948718953dada05eac9a4}{m\_PerspectiveNear}};\ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a9474f52838a948718953dada05eac9a4}{m\+\_\+\+Perspective\+Near}}.
+
+\Hypertarget{class_vesper_1_1_scene_camera_ac35a06d6e9582da215f2b4c3497905fb}\index{Vesper::SceneCamera@{Vesper::SceneCamera}!GetPerspectiveVerticalFOV@{GetPerspectiveVerticalFOV}}
+\index{GetPerspectiveVerticalFOV@{GetPerspectiveVerticalFOV}!Vesper::SceneCamera@{Vesper::SceneCamera}}
+\doxysubsubsection{\texorpdfstring{GetPerspectiveVerticalFOV()}{GetPerspectiveVerticalFOV()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_scene_camera_ac35a06d6e9582da215f2b4c3497905fb} 
+float Vesper::\+\+Scene\+Camera::\+\+Get\+Perspective\+Vertical\+FOV (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00019\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_ac0100f3249b85755343cb55ec5b53130}{m\_PerspectiveFOV}};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_vesper_1_1_scene_camera_a8f4ade36abb6f3763e7393b802155396}\index{Vesper::SceneCamera@{Vesper::SceneCamera}!GetProjectionType@{GetProjectionType}}
+\index{GetProjectionType@{GetProjectionType}!Vesper::SceneCamera@{Vesper::SceneCamera}}
+\doxysubsubsection{\texorpdfstring{GetProjectionType()}{GetProjectionType()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_scene_camera_a8f4ade36abb6f3763e7393b802155396} 
+\doxymbox{\hyperlink{class_vesper_1_1_scene_camera_aa913c988aa3de5b85e37c495d2360f6d}{Projection\+Type}} Vesper::\+\+Scene\+Camera::\+\+Get\+Projection\+Type (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00033\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a41c793093cbe5d3f6afebf90cc9ad42d}{m\_ProjectionType}};\ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a41c793093cbe5d3f6afebf90cc9ad42d}{m\+\_\+\+Projection\+Type}}.
+
+\Hypertarget{class_vesper_1_1_scene_camera_a4d425e3cf6661dd790b3f6316cb9b44b}\index{Vesper::SceneCamera@{Vesper::SceneCamera}!RecalculateProjection@{RecalculateProjection}}
+\index{RecalculateProjection@{RecalculateProjection}!Vesper::SceneCamera@{Vesper::SceneCamera}}
+\doxysubsubsection{\texorpdfstring{RecalculateProjection()}{RecalculateProjection()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_scene_camera_a4d425e3cf6661dd790b3f6316cb9b44b} 
+void Vesper::\+\+Scene\+Camera::\+\+Recalculate\+Projection (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00038\ \ \ \ \ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a41c793093cbe5d3f6afebf90cc9ad42d}{m\_ProjectionType}}\ ==\ \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_aa913c988aa3de5b85e37c495d2360f6daa80420eef88d11f77532f1b9cb467fa3}{ProjectionType::Perspective}})}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_camera_ad2c5fa0158aeff7e067c9ee35ed78a2b}{m\_Projection}}\ =\ glm::perspective(\doxymbox{\hyperlink{class_vesper_1_1_scene_camera_ac0100f3249b85755343cb55ec5b53130}{m\_PerspectiveFOV}},\ \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a1355569425a6508a75c8a7089f98e104}{m\_AspectRatio}},\ \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a9474f52838a948718953dada05eac9a4}{m\_PerspectiveNear}},\ \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_ac62bda89b2a4b3da5518bacd3d1b47b9}{m\_PerspectiveFar}});}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ orthoLeft\ =\ -\/\doxymbox{\hyperlink{class_vesper_1_1_scene_camera_ac7a0aeab7760a0420ed052e861304b12}{m\_OrthographicSize}}\ *\ \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a1355569425a6508a75c8a7089f98e104}{m\_AspectRatio}}\ *\ 0.5f;}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ orthoRight\ =\ \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_ac7a0aeab7760a0420ed052e861304b12}{m\_OrthographicSize}}\ *\ \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a1355569425a6508a75c8a7089f98e104}{m\_AspectRatio}}\ *\ 0.5f;}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ orthoBottom\ =\ -\/\doxymbox{\hyperlink{class_vesper_1_1_scene_camera_ac7a0aeab7760a0420ed052e861304b12}{m\_OrthographicSize}}\ *\ 0.5f;}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ orthoTop\ =\ \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_ac7a0aeab7760a0420ed052e861304b12}{m\_OrthographicSize}}\ *\ 0.5f;}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_camera_ad2c5fa0158aeff7e067c9ee35ed78a2b}{m\_Projection}}\ =\ glm::ortho(orthoLeft,\ orthoRight,}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ orthoBottom,\ orthoTop,\ \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_ab41a6102906cca54d2ced298c0bdba62}{m\_OrthographicNear}},\ \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a1bfc5fbeb5bae343fd3b073f67ba4b8d}{m\_OrthographicFar}});}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a1355569425a6508a75c8a7089f98e104}{m\+\_\+\+Aspect\+Ratio}}, \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_ac7a0aeab7760a0420ed052e861304b12}{m\+\_\+\+Orthographic\+Size}}, \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a41c793093cbe5d3f6afebf90cc9ad42d}{m\+\_\+\+Projection\+Type}}, and \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_aa913c988aa3de5b85e37c495d2360f6daa80420eef88d11f77532f1b9cb467fa3}{Perspective}}.
+
+
+
+Referenced by \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a3794093bb3e6bbe653bb6b4c40925a2d}{Scene\+Camera()}}, \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_ace14365cd8c39efde9fce1a2ee11f043}{Set\+Orthographic()}}, \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_ae6dc33bc42861cae43bdbe355cba2d71}{Set\+Orthographic\+Far\+Clip()}}, \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_acb2a687c8cd1b0d52f0cd1ac5ce9bfee}{Set\+Orthographic\+Near\+Clip()}}, \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a784a857e6730667ed1ccecec6d4c2a26}{Set\+Orthographic\+Size()}}, \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a308f2004c4d567cace10cd48f5b28667}{Set\+Perspective()}}, \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a2620095ec2902cad5d61f82cd10af65d}{Set\+Perspective\+Far\+Clip()}}, \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a96b323c003de94721a2417b54d083aaa}{Set\+Perspective\+Near\+Clip()}}, \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_ab9d2e500a54d75de816f9ae64a507c2f}{Set\+Perspective\+Vertical\+FOV()}}, \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a8e400e3d9abb5b8b46f0c369bf8e890a}{Set\+Projection\+Type()}}, and \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a452fbd0a633f0c023e7866ef0ee79540}{Set\+Viewport\+Size()}}.
+
+\Hypertarget{class_vesper_1_1_scene_camera_ace14365cd8c39efde9fce1a2ee11f043}\index{Vesper::SceneCamera@{Vesper::SceneCamera}!SetOrthographic@{SetOrthographic}}
+\index{SetOrthographic@{SetOrthographic}!Vesper::SceneCamera@{Vesper::SceneCamera}}
+\doxysubsubsection{\texorpdfstring{SetOrthographic()}{SetOrthographic()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_scene_camera_ace14365cd8c39efde9fce1a2ee11f043} 
+void Vesper::\+\+Scene\+Camera::\+\+Set\+Orthographic (\begin{DoxyParamCaption}\item[{float}]{size}{, }\item[{float}]{near\+Clip}{, }\item[{float}]{far\+Clip}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00024\ \ \ \ \ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_ac7a0aeab7760a0420ed052e861304b12}{m\_OrthographicSize}}\ =\ size;}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_ab41a6102906cca54d2ced298c0bdba62}{m\_OrthographicNear}}\ =\ nearClip;}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a1bfc5fbeb5bae343fd3b073f67ba4b8d}{m\_OrthographicFar}}\ =\ farClip;}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a4d425e3cf6661dd790b3f6316cb9b44b}{RecalculateProjection}}();}
+\DoxyCodeLine{00029\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a1bfc5fbeb5bae343fd3b073f67ba4b8d}{m\+\_\+\+Orthographic\+Far}}, \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_ab41a6102906cca54d2ced298c0bdba62}{m\+\_\+\+Orthographic\+Near}}, \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_ac7a0aeab7760a0420ed052e861304b12}{m\+\_\+\+Orthographic\+Size}}, and \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a4d425e3cf6661dd790b3f6316cb9b44b}{Recalculate\+Projection()}}.
+
+\Hypertarget{class_vesper_1_1_scene_camera_ae6dc33bc42861cae43bdbe355cba2d71}\index{Vesper::SceneCamera@{Vesper::SceneCamera}!SetOrthographicFarClip@{SetOrthographicFarClip}}
+\index{SetOrthographicFarClip@{SetOrthographicFarClip}!Vesper::SceneCamera@{Vesper::SceneCamera}}
+\doxysubsubsection{\texorpdfstring{SetOrthographicFarClip()}{SetOrthographicFarClip()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_scene_camera_ae6dc33bc42861cae43bdbe355cba2d71} 
+void Vesper::\+\+Scene\+Camera::\+\+Set\+Orthographic\+Far\+Clip (\begin{DoxyParamCaption}\item[{float}]{far\+Clip}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00031\ \{\ \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a1bfc5fbeb5bae343fd3b073f67ba4b8d}{m\_OrthographicFar}}\ =\ farClip;\ \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a4d425e3cf6661dd790b3f6316cb9b44b}{RecalculateProjection}}();\ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a1bfc5fbeb5bae343fd3b073f67ba4b8d}{m\+\_\+\+Orthographic\+Far}}, and \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a4d425e3cf6661dd790b3f6316cb9b44b}{Recalculate\+Projection()}}.
+
+\Hypertarget{class_vesper_1_1_scene_camera_acb2a687c8cd1b0d52f0cd1ac5ce9bfee}\index{Vesper::SceneCamera@{Vesper::SceneCamera}!SetOrthographicNearClip@{SetOrthographicNearClip}}
+\index{SetOrthographicNearClip@{SetOrthographicNearClip}!Vesper::SceneCamera@{Vesper::SceneCamera}}
+\doxysubsubsection{\texorpdfstring{SetOrthographicNearClip()}{SetOrthographicNearClip()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_scene_camera_acb2a687c8cd1b0d52f0cd1ac5ce9bfee} 
+void Vesper::\+\+Scene\+Camera::\+\+Set\+Orthographic\+Near\+Clip (\begin{DoxyParamCaption}\item[{float}]{near\+Clip}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00029\ \{\ \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_ab41a6102906cca54d2ced298c0bdba62}{m\_OrthographicNear}}\ =\ nearClip;\ \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a4d425e3cf6661dd790b3f6316cb9b44b}{RecalculateProjection}}();\ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_ab41a6102906cca54d2ced298c0bdba62}{m\+\_\+\+Orthographic\+Near}}, and \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a4d425e3cf6661dd790b3f6316cb9b44b}{Recalculate\+Projection()}}.
+
+\Hypertarget{class_vesper_1_1_scene_camera_a784a857e6730667ed1ccecec6d4c2a26}\index{Vesper::SceneCamera@{Vesper::SceneCamera}!SetOrthographicSize@{SetOrthographicSize}}
+\index{SetOrthographicSize@{SetOrthographicSize}!Vesper::SceneCamera@{Vesper::SceneCamera}}
+\doxysubsubsection{\texorpdfstring{SetOrthographicSize()}{SetOrthographicSize()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_scene_camera_a784a857e6730667ed1ccecec6d4c2a26} 
+void Vesper::\+\+Scene\+Camera::\+\+Set\+Orthographic\+Size (\begin{DoxyParamCaption}\item[{float}]{size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00027\ \{\ \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_ac7a0aeab7760a0420ed052e861304b12}{m\_OrthographicSize}}\ =\ size;\ \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a4d425e3cf6661dd790b3f6316cb9b44b}{RecalculateProjection}}();\ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_ac7a0aeab7760a0420ed052e861304b12}{m\+\_\+\+Orthographic\+Size}}, and \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a4d425e3cf6661dd790b3f6316cb9b44b}{Recalculate\+Projection()}}.
+
+\Hypertarget{class_vesper_1_1_scene_camera_a308f2004c4d567cace10cd48f5b28667}\index{Vesper::SceneCamera@{Vesper::SceneCamera}!SetPerspective@{SetPerspective}}
+\index{SetPerspective@{SetPerspective}!Vesper::SceneCamera@{Vesper::SceneCamera}}
+\doxysubsubsection{\texorpdfstring{SetPerspective()}{SetPerspective()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_scene_camera_a308f2004c4d567cace10cd48f5b28667} 
+void Vesper::\+\+Scene\+Camera::\+\+Set\+Perspective (\begin{DoxyParamCaption}\item[{float}]{vertical\+FOV}{, }\item[{float}]{near\+Clip}{, }\item[{float}]{far\+Clip}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00015\ \ \ \ \ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a41c793093cbe5d3f6afebf90cc9ad42d}{m\_ProjectionType}}\ =\ \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_aa913c988aa3de5b85e37c495d2360f6daa80420eef88d11f77532f1b9cb467fa3}{ProjectionType::Perspective}};}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_ac0100f3249b85755343cb55ec5b53130}{m\_PerspectiveFOV}}\ =\ verticalFOV;}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a9474f52838a948718953dada05eac9a4}{m\_PerspectiveNear}}\ =\ nearClip;}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_ac62bda89b2a4b3da5518bacd3d1b47b9}{m\_PerspectiveFar}}\ =\ farClip;}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a4d425e3cf6661dd790b3f6316cb9b44b}{RecalculateProjection}}();}
+\DoxyCodeLine{00021\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_ac62bda89b2a4b3da5518bacd3d1b47b9}{m\+\_\+\+Perspective\+Far}}, \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a9474f52838a948718953dada05eac9a4}{m\+\_\+\+Perspective\+Near}}, \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a41c793093cbe5d3f6afebf90cc9ad42d}{m\+\_\+\+Projection\+Type}}, \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_aa913c988aa3de5b85e37c495d2360f6daa80420eef88d11f77532f1b9cb467fa3}{Perspective}}, and \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a4d425e3cf6661dd790b3f6316cb9b44b}{Recalculate\+Projection()}}.
+
+\Hypertarget{class_vesper_1_1_scene_camera_a2620095ec2902cad5d61f82cd10af65d}\index{Vesper::SceneCamera@{Vesper::SceneCamera}!SetPerspectiveFarClip@{SetPerspectiveFarClip}}
+\index{SetPerspectiveFarClip@{SetPerspectiveFarClip}!Vesper::SceneCamera@{Vesper::SceneCamera}}
+\doxysubsubsection{\texorpdfstring{SetPerspectiveFarClip()}{SetPerspectiveFarClip()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_scene_camera_a2620095ec2902cad5d61f82cd10af65d} 
+void Vesper::\+\+Scene\+Camera::\+\+Set\+Perspective\+Far\+Clip (\begin{DoxyParamCaption}\item[{float}]{far\+Clip}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00024\ \{\ \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_ac62bda89b2a4b3da5518bacd3d1b47b9}{m\_PerspectiveFar}}\ =\ farClip;\ \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a4d425e3cf6661dd790b3f6316cb9b44b}{RecalculateProjection}}();\ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_ac62bda89b2a4b3da5518bacd3d1b47b9}{m\+\_\+\+Perspective\+Far}}, and \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a4d425e3cf6661dd790b3f6316cb9b44b}{Recalculate\+Projection()}}.
+
+\Hypertarget{class_vesper_1_1_scene_camera_a96b323c003de94721a2417b54d083aaa}\index{Vesper::SceneCamera@{Vesper::SceneCamera}!SetPerspectiveNearClip@{SetPerspectiveNearClip}}
+\index{SetPerspectiveNearClip@{SetPerspectiveNearClip}!Vesper::SceneCamera@{Vesper::SceneCamera}}
+\doxysubsubsection{\texorpdfstring{SetPerspectiveNearClip()}{SetPerspectiveNearClip()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_scene_camera_a96b323c003de94721a2417b54d083aaa} 
+void Vesper::\+\+Scene\+Camera::\+\+Set\+Perspective\+Near\+Clip (\begin{DoxyParamCaption}\item[{float}]{near\+Clip}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00022\ \{\ \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a9474f52838a948718953dada05eac9a4}{m\_PerspectiveNear}}\ =\ nearClip;\ \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a4d425e3cf6661dd790b3f6316cb9b44b}{RecalculateProjection}}();\ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a9474f52838a948718953dada05eac9a4}{m\+\_\+\+Perspective\+Near}}, and \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a4d425e3cf6661dd790b3f6316cb9b44b}{Recalculate\+Projection()}}.
+
+\Hypertarget{class_vesper_1_1_scene_camera_ab9d2e500a54d75de816f9ae64a507c2f}\index{Vesper::SceneCamera@{Vesper::SceneCamera}!SetPerspectiveVerticalFOV@{SetPerspectiveVerticalFOV}}
+\index{SetPerspectiveVerticalFOV@{SetPerspectiveVerticalFOV}!Vesper::SceneCamera@{Vesper::SceneCamera}}
+\doxysubsubsection{\texorpdfstring{SetPerspectiveVerticalFOV()}{SetPerspectiveVerticalFOV()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_scene_camera_ab9d2e500a54d75de816f9ae64a507c2f} 
+void Vesper::\+\+Scene\+Camera::\+\+Set\+Perspective\+Vertical\+FOV (\begin{DoxyParamCaption}\item[{float}]{vertical\+Fov}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00020\ \{\ \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_ac0100f3249b85755343cb55ec5b53130}{m\_PerspectiveFOV}}\ =\ verticalFov;\ \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a4d425e3cf6661dd790b3f6316cb9b44b}{RecalculateProjection}}();\ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a4d425e3cf6661dd790b3f6316cb9b44b}{Recalculate\+Projection()}}.
+
+\Hypertarget{class_vesper_1_1_scene_camera_a8e400e3d9abb5b8b46f0c369bf8e890a}\index{Vesper::SceneCamera@{Vesper::SceneCamera}!SetProjectionType@{SetProjectionType}}
+\index{SetProjectionType@{SetProjectionType}!Vesper::SceneCamera@{Vesper::SceneCamera}}
+\doxysubsubsection{\texorpdfstring{SetProjectionType()}{SetProjectionType()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_scene_camera_a8e400e3d9abb5b8b46f0c369bf8e890a} 
+void Vesper::\+\+Scene\+Camera::\+\+Set\+Projection\+Type (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_vesper_1_1_scene_camera_aa913c988aa3de5b85e37c495d2360f6d}{Projection\+Type}}}]{type}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00034\ \{\ \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a41c793093cbe5d3f6afebf90cc9ad42d}{m\_ProjectionType}}\ =\ type;\ \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a4d425e3cf6661dd790b3f6316cb9b44b}{RecalculateProjection}}();\ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a41c793093cbe5d3f6afebf90cc9ad42d}{m\+\_\+\+Projection\+Type}}, and \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a4d425e3cf6661dd790b3f6316cb9b44b}{Recalculate\+Projection()}}.
+
+\Hypertarget{class_vesper_1_1_scene_camera_a452fbd0a633f0c023e7866ef0ee79540}\index{Vesper::SceneCamera@{Vesper::SceneCamera}!SetViewportSize@{SetViewportSize}}
+\index{SetViewportSize@{SetViewportSize}!Vesper::SceneCamera@{Vesper::SceneCamera}}
+\doxysubsubsection{\texorpdfstring{SetViewportSize()}{SetViewportSize()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_scene_camera_a452fbd0a633f0c023e7866ef0ee79540} 
+void Vesper::\+\+Scene\+Camera::\+\+Set\+Viewport\+Size (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{width}{, }\item[{uint32\+\_\+t}]{height}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00032\ \ \ \ \ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a1355569425a6508a75c8a7089f98e104}{m\_AspectRatio}}\ =\ (float)width\ /\ (\textcolor{keywordtype}{float})height;}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a4d425e3cf6661dd790b3f6316cb9b44b}{RecalculateProjection}}();}
+\DoxyCodeLine{00035\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a1355569425a6508a75c8a7089f98e104}{m\+\_\+\+Aspect\+Ratio}}, and \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a4d425e3cf6661dd790b3f6316cb9b44b}{Recalculate\+Projection()}}.
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_vesper_1_1_scene_camera_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_vesper_1_1_scene_camera_a1355569425a6508a75c8a7089f98e104}\index{Vesper::SceneCamera@{Vesper::SceneCamera}!m\_AspectRatio@{m\_AspectRatio}}
+\index{m\_AspectRatio@{m\_AspectRatio}!Vesper::SceneCamera@{Vesper::SceneCamera}}
+\doxysubsubsection{\texorpdfstring{m\_AspectRatio}{m\_AspectRatio}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_scene_camera_a1355569425a6508a75c8a7089f98e104} 
+float Vesper::\+\+Scene\+Camera::\+m\+\_\+\+Aspect\+Ratio = 0.\+0f\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a4d425e3cf6661dd790b3f6316cb9b44b}{Recalculate\+Projection()}}, and \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a452fbd0a633f0c023e7866ef0ee79540}{Set\+Viewport\+Size()}}.
+
+\Hypertarget{class_vesper_1_1_scene_camera_a1bfc5fbeb5bae343fd3b073f67ba4b8d}\index{Vesper::SceneCamera@{Vesper::SceneCamera}!m\_OrthographicFar@{m\_OrthographicFar}}
+\index{m\_OrthographicFar@{m\_OrthographicFar}!Vesper::SceneCamera@{Vesper::SceneCamera}}
+\doxysubsubsection{\texorpdfstring{m\_OrthographicFar}{m\_OrthographicFar}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_scene_camera_a1bfc5fbeb5bae343fd3b073f67ba4b8d} 
+float Vesper::\+\+Scene\+Camera::\+m\+\_\+\+Orthographic\+Far = 1.\+0f\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a843e25fbcf112c511b726c5f17ce8f37}{Get\+Orthographic\+Far\+Clip()}}, \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_ace14365cd8c39efde9fce1a2ee11f043}{Set\+Orthographic()}}, and \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_ae6dc33bc42861cae43bdbe355cba2d71}{Set\+Orthographic\+Far\+Clip()}}.
+
+\Hypertarget{class_vesper_1_1_scene_camera_ab41a6102906cca54d2ced298c0bdba62}\index{Vesper::SceneCamera@{Vesper::SceneCamera}!m\_OrthographicNear@{m\_OrthographicNear}}
+\index{m\_OrthographicNear@{m\_OrthographicNear}!Vesper::SceneCamera@{Vesper::SceneCamera}}
+\doxysubsubsection{\texorpdfstring{m\_OrthographicNear}{m\_OrthographicNear}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_scene_camera_ab41a6102906cca54d2ced298c0bdba62} 
+float Vesper::\+\+Scene\+Camera::\+m\+\_\+\+Orthographic\+Near = -\/1.\+0f\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a2de6ccddf6966bbd191c490e9ca89411}{Get\+Orthographic\+Near\+Clip()}}, \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_ace14365cd8c39efde9fce1a2ee11f043}{Set\+Orthographic()}}, and \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_acb2a687c8cd1b0d52f0cd1ac5ce9bfee}{Set\+Orthographic\+Near\+Clip()}}.
+
+\Hypertarget{class_vesper_1_1_scene_camera_ac7a0aeab7760a0420ed052e861304b12}\index{Vesper::SceneCamera@{Vesper::SceneCamera}!m\_OrthographicSize@{m\_OrthographicSize}}
+\index{m\_OrthographicSize@{m\_OrthographicSize}!Vesper::SceneCamera@{Vesper::SceneCamera}}
+\doxysubsubsection{\texorpdfstring{m\_OrthographicSize}{m\_OrthographicSize}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_scene_camera_ac7a0aeab7760a0420ed052e861304b12} 
+float Vesper::\+\+Scene\+Camera::\+m\+\_\+\+Orthographic\+Size = 10.\+0f\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a77dc1acc17f6d8f0f4d43421f9cb075f}{Get\+Orthographic\+Size()}}, \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a4d425e3cf6661dd790b3f6316cb9b44b}{Recalculate\+Projection()}}, \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_ace14365cd8c39efde9fce1a2ee11f043}{Set\+Orthographic()}}, and \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a784a857e6730667ed1ccecec6d4c2a26}{Set\+Orthographic\+Size()}}.
+
+\Hypertarget{class_vesper_1_1_scene_camera_ac62bda89b2a4b3da5518bacd3d1b47b9}\index{Vesper::SceneCamera@{Vesper::SceneCamera}!m\_PerspectiveFar@{m\_PerspectiveFar}}
+\index{m\_PerspectiveFar@{m\_PerspectiveFar}!Vesper::SceneCamera@{Vesper::SceneCamera}}
+\doxysubsubsection{\texorpdfstring{m\_PerspectiveFar}{m\_PerspectiveFar}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_scene_camera_ac62bda89b2a4b3da5518bacd3d1b47b9} 
+float Vesper::\+\+Scene\+Camera::\+m\+\_\+\+Perspective\+Far = 1000.\+0f\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a3f5c5a0674b2b902b740770679005b37}{Get\+Perspective\+Far\+Clip()}}, \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a308f2004c4d567cace10cd48f5b28667}{Set\+Perspective()}}, and \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a2620095ec2902cad5d61f82cd10af65d}{Set\+Perspective\+Far\+Clip()}}.
+
+\Hypertarget{class_vesper_1_1_scene_camera_ac0100f3249b85755343cb55ec5b53130}\index{Vesper::SceneCamera@{Vesper::SceneCamera}!m\_PerspectiveFOV@{m\_PerspectiveFOV}}
+\index{m\_PerspectiveFOV@{m\_PerspectiveFOV}!Vesper::SceneCamera@{Vesper::SceneCamera}}
+\doxysubsubsection{\texorpdfstring{m\_PerspectiveFOV}{m\_PerspectiveFOV}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_scene_camera_ac0100f3249b85755343cb55ec5b53130} 
+float Vesper::\+\+Scene\+Camera::\+m\+\_\+\+Perspective\+FOV = glm::\+radians(45.\+0f)\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_vesper_1_1_scene_camera_a9474f52838a948718953dada05eac9a4}\index{Vesper::SceneCamera@{Vesper::SceneCamera}!m\_PerspectiveNear@{m\_PerspectiveNear}}
+\index{m\_PerspectiveNear@{m\_PerspectiveNear}!Vesper::SceneCamera@{Vesper::SceneCamera}}
+\doxysubsubsection{\texorpdfstring{m\_PerspectiveNear}{m\_PerspectiveNear}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_scene_camera_a9474f52838a948718953dada05eac9a4} 
+float Vesper::\+\+Scene\+Camera::\+m\+\_\+\+Perspective\+Near = 0.\+01f\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a111fd965614811fadb2dadf9da1d143b}{Get\+Perspective\+Near\+Clip()}}, \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a308f2004c4d567cace10cd48f5b28667}{Set\+Perspective()}}, and \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a96b323c003de94721a2417b54d083aaa}{Set\+Perspective\+Near\+Clip()}}.
+
+\Hypertarget{class_vesper_1_1_scene_camera_a41c793093cbe5d3f6afebf90cc9ad42d}\index{Vesper::SceneCamera@{Vesper::SceneCamera}!m\_ProjectionType@{m\_ProjectionType}}
+\index{m\_ProjectionType@{m\_ProjectionType}!Vesper::SceneCamera@{Vesper::SceneCamera}}
+\doxysubsubsection{\texorpdfstring{m\_ProjectionType}{m\_ProjectionType}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_scene_camera_a41c793093cbe5d3f6afebf90cc9ad42d} 
+\doxymbox{\hyperlink{class_vesper_1_1_scene_camera_aa913c988aa3de5b85e37c495d2360f6d}{Projection\+Type}} Vesper::\+\+Scene\+Camera::\+m\+\_\+\+Projection\+Type = \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_aa913c988aa3de5b85e37c495d2360f6da03424250432f2aa71de95579d2c0eaeb}{Projection\+Type::\+\+Orthographic}}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a8f4ade36abb6f3763e7393b802155396}{Get\+Projection\+Type()}}, \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a4d425e3cf6661dd790b3f6316cb9b44b}{Recalculate\+Projection()}}, \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a308f2004c4d567cace10cd48f5b28667}{Set\+Perspective()}}, and \doxymbox{\hyperlink{class_vesper_1_1_scene_camera_a8e400e3d9abb5b8b46f0c369bf8e890a}{Set\+Projection\+Type()}}.
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+Vesper/\+src/\+\+Vesper/\+\+Scene/\+\doxymbox{\hyperlink{_scene_camera_8h}{Scene\+Camera.\+h}}\item 
+Vesper/\+src/\+\+Vesper/\+\+Scene/\+\doxymbox{\hyperlink{_scene_camera_8cpp}{Scene\+Camera.\+cpp}}\end{DoxyCompactItemize}

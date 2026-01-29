@@ -1,0 +1,59 @@
+\doxysection{Vesper/\+src/\+\+Vesper/\+\+Core/\+\+Random.h File Reference}
+\hypertarget{_random_8h}{}\label{_random_8h}\index{Vesper/src/Vesper/Core/Random.h@{Vesper/src/Vesper/Core/Random.h}}
+{\ttfamily \+\#include $<$random$>$}\newline
+{\ttfamily \+\#include $<$algorithm$>$}\newline
+{\ttfamily \+\#include $<$cstdint$>$}\newline
+{\ttfamily \+\#include $<$glm/\+glm.\+hpp$>$}\newline
+{\ttfamily \+\#include "{}Vesper/\+\+Debug/\+\+Instrumentor.\+h"{}}\newline
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \doxymbox{\hyperlink{namespace_vesper}{Vesper}}
+\begin{DoxyCompactList}\small\item\em TEMPORARY. \end{DoxyCompactList}\item 
+namespace \doxymbox{\hyperlink{namespace_vesper_1_1_random}{Vesper::\+\+Random}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std::\+mt19937 \& \doxymbox{\hyperlink{namespace_vesper_1_1_random_a3215313b0e25d05a5df852f3a08df77b}{Vesper::\+\+Random::\+\+Get\+RNG}} ()
+\item 
+void \doxymbox{\hyperlink{namespace_vesper_1_1_random_a626ebaec4b72e4991c9e7f3f04aaae9d}{Vesper::\+\+Random::\+\+Seed}} (uint32\+\_\+t seed)
+\item 
+uint32\+\_\+t \doxymbox{\hyperlink{namespace_vesper_1_1_random_afe248f1e01c6a1cbc078179b7ae40468}{Vesper::\+\+Random::\+\+UInt1}} (uint32\+\_\+t max)
+\item 
+bool \doxymbox{\hyperlink{namespace_vesper_1_1_random_a366a62c6d808219539c79dd08d551469}{Vesper::\+\+Random::\+\+Bool1}} (float true\+Chance)
+\item 
+unsigned char \doxymbox{\hyperlink{namespace_vesper_1_1_random_ab701c34568e44f4b8ebaa0b5d3ef5977}{Vesper::\+\+Random::\+\+Char}} ()
+\item 
+std::\+string \doxymbox{\hyperlink{namespace_vesper_1_1_random_afaa6ca62b88d5a4a4563b3c5d618b098}{Vesper::\+\+Random::\+\+String}} (size\+\_\+t length)
+\item 
+std::\+string \doxymbox{\hyperlink{namespace_vesper_1_1_random_a1251e868c3fff89a6a862c6e930c7619}{Vesper::\+\+Random::\+\+Hex\+String}} (size\+\_\+t length)
+\item 
+std::\+string \doxymbox{\hyperlink{namespace_vesper_1_1_random_a9a3d18994aa7df05cf15657677456aab}{Vesper::\+\+Random::\+\+UUID}} ()
+\item 
+float \doxymbox{\hyperlink{namespace_vesper_1_1_random_a5fd29fe179c63f4e158098a921cc000f}{Vesper::\+\+Random::\+\+Float1}} ()
+\item 
+float \doxymbox{\hyperlink{namespace_vesper_1_1_random_a6d25f85e1a2bb3637497925f7cdb737e}{Vesper::\+\+Random::\+\+Range\+F1}} (float min, float max)
+\item 
+float \doxymbox{\hyperlink{namespace_vesper_1_1_random_a29cafc6f8171e6f423f3aa36a37b71d3}{Vesper::\+\+Random::\+\+Range\+F1\+\_\+\+Inclusive}} (float min, float max)
+\item 
+glm::\+vec2 \doxymbox{\hyperlink{namespace_vesper_1_1_random_aee37aeb23527ea784366d19d4d122e93}{Vesper::\+\+Random::\+\+Float2}} ()
+\item 
+glm::\+vec2 \doxymbox{\hyperlink{namespace_vesper_1_1_random_a5e3ab93e4cf859b888b755aa88f4eb1f}{Vesper::\+\+Random::\+\+Range\+F2}} (float min, float max)
+\item 
+glm::\+vec2 \doxymbox{\hyperlink{namespace_vesper_1_1_random_a9ff6943e251e329ef53c0918215968e3}{Vesper::\+\+Random::\+\+Range\+F2}} (float min1, float max1, float min2, float max2)
+\item 
+glm::\+vec2 \doxymbox{\hyperlink{namespace_vesper_1_1_random_a2e243888eb4a33282251e45c57e3f5ad}{Vesper::\+\+Random::\+\+Range\+F2}} (const glm::\+vec2 \&min\+Range, const glm::\+vec2 \&max\+Range)
+\item 
+glm::\+vec3 \doxymbox{\hyperlink{namespace_vesper_1_1_random_a03b6467e00b4461a9c5800c855ae8805}{Vesper::\+\+Random::\+\+Float3}} ()
+\item 
+glm::\+vec3 \doxymbox{\hyperlink{namespace_vesper_1_1_random_ac64283a80dd70518d2ae8b8ef3686780}{Vesper::\+\+Random::\+\+Range\+F3}} (float min, float max)
+\item 
+glm::\+vec3 \doxymbox{\hyperlink{namespace_vesper_1_1_random_af1d17e22d9048f071476dd5106912162}{Vesper::\+\+Random::\+\+Range\+F3}} (float min1, float max1, float min2, float max2, float min3, float max3)
+\item 
+glm::\+vec3 \doxymbox{\hyperlink{namespace_vesper_1_1_random_a12d4349955ab21516cef5621a99c7c70}{Vesper::\+\+Random::\+\+Range\+F3}} (const glm::\+vec2 \&range1, const glm::\+vec2 \&range2, const glm::\+vec2 \&range3)
+\item 
+glm::\+vec4 \doxymbox{\hyperlink{namespace_vesper_1_1_random_a5481415221e1c3522bae7da1281c27c1}{Vesper::\+\+Random::\+\+Float4}} ()
+\item 
+glm::\+vec4 \doxymbox{\hyperlink{namespace_vesper_1_1_random_a8e7e84ab1ddb1b1a380b0ec41c6caaa2}{Vesper::\+\+Random::\+\+Range\+F4}} (float min, float max)
+\end{DoxyCompactItemize}

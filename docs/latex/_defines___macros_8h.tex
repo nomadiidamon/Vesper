@@ -1,0 +1,72 @@
+\doxysection{Vesper/\+src/\+\+Vesper/\+\+Core/\+\+Defines\+\_\+\+Macros.h File Reference}
+\hypertarget{_defines___macros_8h}{}\label{_defines___macros_8h}\index{Vesper/src/Vesper/Core/Defines\_Macros.h@{Vesper/src/Vesper/Core/Defines\_Macros.h}}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \doxymbox{\hyperlink{namespace_vesper}{Vesper}}
+\begin{DoxyCompactList}\small\item\em TEMPORARY. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{_defines___macros_8h_ad27cc17b25bb93134368d5eb21126eae}{BIT}}(x)
+\begin{DoxyCompactList}\small\item\em DEFINES. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{_defines___macros_8h_a699202bb2b05ef9058c10a8fc9829294}{VZ\+\_\+\+BIND\+\_\+\+EVENT\+\_\+\+FN}}(fn)
+\item 
+\+\#define \doxymbox{\hyperlink{_defines___macros_8h_a2290aac021a7119e86af0aa6d962a226}{BIND\+\_\+\+EVENT\+\_\+\+FN}}(x)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T$>$ }\\using \doxymbox{\hyperlink{namespace_vesper_a5425f9aaa2ee4d3761c8ce6b385e0b70}{Vesper::\+\+Scope}} = std::\+unique\+\_\+ptr$<$T$>$
+\item 
+{\footnotesize template$<$typename T$>$ }\\using \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Vesper::\+\+Ref}} = std::\+shared\+\_\+ptr$<$T$>$
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T, typename... Args$>$ }\\constexpr \doxymbox{\hyperlink{namespace_vesper_a5425f9aaa2ee4d3761c8ce6b385e0b70}{Scope}}$<$ T $>$ \doxymbox{\hyperlink{namespace_vesper_a37fd1cd7d536a4b07dc0a734f8fde936}{Vesper::\+\+Create\+Scope}} (Args \&\&... args)
+\item 
+{\footnotesize template$<$typename T, typename... Args$>$ }\\constexpr \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ T $>$ \doxymbox{\hyperlink{namespace_vesper_a313930b55375b2f4dd36375b56f11047}{Vesper::\+\+Create\+Ref}} (Args \&\&... args)
+\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{_defines___macros_8h_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{_defines___macros_8h_a2290aac021a7119e86af0aa6d962a226}\index{Defines\_Macros.h@{Defines\_Macros.h}!BIND\_EVENT\_FN@{BIND\_EVENT\_FN}}
+\index{BIND\_EVENT\_FN@{BIND\_EVENT\_FN}!Defines\_Macros.h@{Defines\_Macros.h}}
+\doxysubsubsection{\texorpdfstring{BIND\_EVENT\_FN}{BIND\_EVENT\_FN}}
+{\footnotesize\ttfamily \label{_defines___macros_8h_a2290aac021a7119e86af0aa6d962a226} 
+\+\#define BIND\+\_\+\+EVENT\+\_\+\+FN(\begin{DoxyParamCaption}\item[{}]{x}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{std::bind(\&Application::x,\ \textcolor{keyword}{this},\ std::placeholders::\_1)}
+
+\end{DoxyCode}
+\Hypertarget{_defines___macros_8h_ad27cc17b25bb93134368d5eb21126eae}\index{Defines\_Macros.h@{Defines\_Macros.h}!BIT@{BIT}}
+\index{BIT@{BIT}!Defines\_Macros.h@{Defines\_Macros.h}}
+\doxysubsubsection{\texorpdfstring{BIT}{BIT}}
+{\footnotesize\ttfamily \label{_defines___macros_8h_ad27cc17b25bb93134368d5eb21126eae} 
+\+\#define BIT(\begin{DoxyParamCaption}\item[{}]{x}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(1\ <<\ x)}
+
+\end{DoxyCode}
+
+
+DEFINES. 
+
+\Hypertarget{_defines___macros_8h_a699202bb2b05ef9058c10a8fc9829294}\index{Defines\_Macros.h@{Defines\_Macros.h}!VZ\_BIND\_EVENT\_FN@{VZ\_BIND\_EVENT\_FN}}
+\index{VZ\_BIND\_EVENT\_FN@{VZ\_BIND\_EVENT\_FN}!Defines\_Macros.h@{Defines\_Macros.h}}
+\doxysubsubsection{\texorpdfstring{VZ\_BIND\_EVENT\_FN}{VZ\_BIND\_EVENT\_FN}}
+{\footnotesize\ttfamily \label{_defines___macros_8h_a699202bb2b05ef9058c10a8fc9829294} 
+\+\#define VZ\+\_\+\+BIND\+\_\+\+EVENT\+\_\+\+FN(\begin{DoxyParamCaption}\item[{}]{fn}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{[\textcolor{keyword}{this}](\textcolor{keyword}{auto}\&\&...\ args)\ -\/>\ \textcolor{keyword}{decltype}(\textcolor{keyword}{auto})\ \{\ \textcolor{keywordflow}{return}\ this-\/>fn(std::forward<\textcolor{keyword}{decltype}(args)>(args)...);\ \}}
+
+\end{DoxyCode}

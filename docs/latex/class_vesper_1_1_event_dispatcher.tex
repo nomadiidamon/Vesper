@@ -1,0 +1,105 @@
+\doxysection{Vesper::\+Event\+Dispatcher Class Reference}
+\hypertarget{class_vesper_1_1_event_dispatcher}{}\label{class_vesper_1_1_event_dispatcher}\index{Vesper::EventDispatcher@{Vesper::EventDispatcher}}
+
+
+{\ttfamily \+\#include $<$Event.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_vesper_1_1_event_dispatcher_a36333b75f87ed66846359cf13ca5c6d8}{Event\+Dispatcher}} (\doxymbox{\hyperlink{class_vesper_1_1_event}{Event}} \&event)
+\item 
+{\footnotesize template$<$typename T$>$ }\\bool \doxymbox{\hyperlink{class_vesper_1_1_event_dispatcher_a89ceb12a4db98613c7ee48d8cb6d1cc4}{Dispatch}} (\doxymbox{\hyperlink{class_vesper_1_1_event_dispatcher_a47e85a37448abd041c47ad9bd252b45e}{Event\+Fn}}$<$ T $>$ func)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T$>$ }\\using \doxymbox{\hyperlink{class_vesper_1_1_event_dispatcher_a47e85a37448abd041c47ad9bd252b45e}{Event\+Fn}} = std::\+function$<$bool(T\&)$>$
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_vesper_1_1_event}{Event}} \& \doxymbox{\hyperlink{class_vesper_1_1_event_dispatcher_a5dfa8fe5db172910af70a30ba28c3338}{m\+\_\+\+Event}}
+\end{DoxyCompactItemize}
+
+
+\label{doc-typedef-members}
+\Hypertarget{class_vesper_1_1_event_dispatcher_doc-typedef-members}
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{class_vesper_1_1_event_dispatcher_a47e85a37448abd041c47ad9bd252b45e}\index{Vesper::EventDispatcher@{Vesper::EventDispatcher}!EventFn@{EventFn}}
+\index{EventFn@{EventFn}!Vesper::EventDispatcher@{Vesper::EventDispatcher}}
+\doxysubsubsection{\texorpdfstring{EventFn}{EventFn}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_event_dispatcher_a47e85a37448abd041c47ad9bd252b45e} 
+template$<$typename T$>$ \\
+using \doxymbox{\hyperlink{class_vesper_1_1_event_dispatcher_a47e85a37448abd041c47ad9bd252b45e}{Vesper::\+\+Event\+Dispatcher::\+\+Event\+Fn}} = std::\+function$<$bool(T\&)$>$\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\label{doc-constructors}
+\Hypertarget{class_vesper_1_1_event_dispatcher_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_vesper_1_1_event_dispatcher_a36333b75f87ed66846359cf13ca5c6d8}\index{Vesper::EventDispatcher@{Vesper::EventDispatcher}!EventDispatcher@{EventDispatcher}}
+\index{EventDispatcher@{EventDispatcher}!Vesper::EventDispatcher@{Vesper::EventDispatcher}}
+\doxysubsubsection{\texorpdfstring{EventDispatcher()}{EventDispatcher()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_event_dispatcher_a36333b75f87ed66846359cf13ca5c6d8} 
+Vesper::\+\+Event\+Dispatcher::\+\+Event\+Dispatcher (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_vesper_1_1_event}{Event}} \&}]{event}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_vesper_1_1_event_dispatcher_a5dfa8fe5db172910af70a30ba28c3338}{m\_Event}}(event) }
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_event_dispatcher_a5dfa8fe5db172910af70a30ba28c3338}{m\+\_\+\+Event}}.
+
+
+
+Referenced by \doxymbox{\hyperlink{class_vesper_1_1_application_a6b671a553ef9f81ec0394c7de71bff16}{Vesper::\+\+Application::\+\+On\+Event()}}, \doxymbox{\hyperlink{class_vesper_1_1_editor_camera_ada0c6d0f203f2b68e9d1ae77e907dd8e}{Vesper::\+\+Editor\+Camera::\+\+On\+Event()}}, \doxymbox{\hyperlink{class_vesper_1_1_editor_layer_a897b3ba2fcaacf49ef89a9492986850f}{Vesper::\+\+Editor\+Layer::\+\+On\+Event()}}, and \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_controller_a41a30ec5ca83a958bedfa22d66385b72}{Vesper::\+\+Orthographic\+Camera\+Controller::\+\+On\+Event()}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_vesper_1_1_event_dispatcher_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_vesper_1_1_event_dispatcher_a89ceb12a4db98613c7ee48d8cb6d1cc4}\index{Vesper::EventDispatcher@{Vesper::EventDispatcher}!Dispatch@{Dispatch}}
+\index{Dispatch@{Dispatch}!Vesper::EventDispatcher@{Vesper::EventDispatcher}}
+\doxysubsubsection{\texorpdfstring{Dispatch()}{Dispatch()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_event_dispatcher_a89ceb12a4db98613c7ee48d8cb6d1cc4} 
+template$<$typename T$>$ \\
+bool Vesper::\+\+Event\+Dispatcher::\+\+Dispatch (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_vesper_1_1_event_dispatcher_a47e85a37448abd041c47ad9bd252b45e}{Event\+Fn}}$<$ T $>$}]{func}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_vesper_1_1_event_dispatcher_a5dfa8fe5db172910af70a30ba28c3338}{m\_Event}}.GetEventType()\ ==\ T::GetStaticType())}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_event_dispatcher_a5dfa8fe5db172910af70a30ba28c3338}{m\_Event}}.Handled\ =\ func(*(T*)\&\doxymbox{\hyperlink{class_vesper_1_1_event_dispatcher_a5dfa8fe5db172910af70a30ba28c3338}{m\_Event}});}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_vesper_1_1_event_dispatcher_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_vesper_1_1_event_dispatcher_a5dfa8fe5db172910af70a30ba28c3338}\index{Vesper::EventDispatcher@{Vesper::EventDispatcher}!m\_Event@{m\_Event}}
+\index{m\_Event@{m\_Event}!Vesper::EventDispatcher@{Vesper::EventDispatcher}}
+\doxysubsubsection{\texorpdfstring{m\_Event}{m\_Event}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_event_dispatcher_a5dfa8fe5db172910af70a30ba28c3338} 
+\doxymbox{\hyperlink{class_vesper_1_1_event}{Event}}\& Vesper::\+\+Event\+Dispatcher::\+m\+\_\+\+Event\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by \doxymbox{\hyperlink{class_vesper_1_1_event_dispatcher_a36333b75f87ed66846359cf13ca5c6d8}{Event\+Dispatcher()}}.
+
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+Vesper/\+src/\+\+Vesper/\+\+Events/\+\doxymbox{\hyperlink{_event_8h}{Event.\+h}}\end{DoxyCompactItemize}

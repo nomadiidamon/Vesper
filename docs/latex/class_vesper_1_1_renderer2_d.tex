@@ -1,0 +1,906 @@
+\doxysection{Vesper::\+Renderer2D Class Reference}
+\hypertarget{class_vesper_1_1_renderer2_d}{}\label{class_vesper_1_1_renderer2_d}\index{Vesper::Renderer2D@{Vesper::Renderer2D}}
+
+
+{\ttfamily \+\#include $<$Renderer2\+D.\+h$>$}
+
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_1_1_statistics}{Statistics}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a4fbfb5a17dac37385dfcf13a0f457ff5}{Init}} ()
+\item 
+static void \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a65dbf36aef449ad46517ae5d760b691d}{Shutdown}} ()
+\item 
+static void \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a4a98381667b8b785eb03cea1e07de574}{Begin\+Scene}} (const \doxymbox{\hyperlink{class_vesper_1_1_camera}{Camera}} \&camera, const glm::\+mat4 \&transform)
+\item 
+static void \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a479365533b0aeb53f190646381961d22}{Begin\+Scene}} (const \doxymbox{\hyperlink{class_vesper_1_1_editor_camera}{Editor\+Camera}} \&camera)
+\item 
+static void \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a3aebe8bf1533bb51aad7e67d62714886}{Begin\+Scene}} (const \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera}{Orthographic\+Camera}} \&camera)
+\item 
+static void \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a4a87e37fd90cb8c33c65412c141db983}{End\+Scene}} ()
+\item 
+static void \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_ac79b4f772e92e9cc5489b7ed0bb9b659}{Flush}} ()
+\item 
+static void \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_aba269c4ba2ba99b13b47c9e71bf1f8e3}{Draw\+Quad}} (const glm::\+mat4 \&transform, const glm::\+vec4 \&color)
+\item 
+static void \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a88290cf166d88ce46040b9ce87b1b5b3}{Draw\+Quad}} (const glm::\+vec2 \&position, const glm::\+vec2 \&size, const glm::\+vec4 \&color)
+\item 
+static void \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a62423c4f36192a9d71a3da2c1933de59}{Draw\+Quad}} (const glm::\+vec3 \&position, const glm::\+vec2 \&size, const glm::\+vec4 \&color)
+\item 
+static void \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_afd78da6a4f0aa5af3c7f8d533bd22b49}{Draw\+Quad\+With\+Texture}} (const glm::\+mat4 \&transform, const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_texture2_d}{Texture2D}} $>$ \&texture, float tiling\+Factor, const glm::\+vec4 tint\+Color)
+\item 
+static void \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a359b7c453c967b9c28117cea83e65281}{Draw\+Quad\+With\+Texture}} (const glm::\+vec2 \&position, const glm::\+vec2 \&size, const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_texture2_d}{Texture2D}} $>$ \&texture, float tiling\+Factor, const glm::\+vec4 tint\+Color)
+\item 
+static void \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_aa5eb19c474de115cb5d55857eb88d581}{Draw\+Quad\+With\+Texture}} (const glm::\+vec3 \&position, const glm::\+vec2 \&size, const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_texture2_d}{Texture2D}} $>$ \&texture, float tiling\+Factor, const glm::\+vec4 tint\+Color)
+\item 
+static void \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a273c91ba7abef4d2a99640bf98a4a7d4}{Draw\+Quad\+With\+Texture}} (const glm::\+mat4 \&transform, const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d}{Sub\+Texture2D}} $>$ \&subtexture, float tiling\+Factor, const glm::\+vec4 tint\+Color)
+\item 
+static void \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a794ce83b342f15f7ff59eaf285e92527}{Draw\+Quad\+With\+Texture}} (const glm::\+vec2 \&position, const glm::\+vec2 \&size, const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d}{Sub\+Texture2D}} $>$ \&subtexture, float tiling\+Factor, const glm::\+vec4 tint\+Color)
+\item 
+static void \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_af825e94b34dd71c4f4d43b1639941a83}{Draw\+Quad\+With\+Texture}} (const glm::\+vec3 \&position, const glm::\+vec2 \&size, const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d}{Sub\+Texture2D}} $>$ \&subtexture, float tiling\+Factor, const glm::\+vec4 tint\+Color)
+\item 
+static void \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_ac61593eac73ea6fabba060b34c987302}{Draw\+Quad\+Rotated}} (const glm::\+mat4 \&transform, const glm::\+vec4 \&color)
+\item 
+static void \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a5c7a044d0a34e1b20a2e9a727324ddf6}{Draw\+Quad\+Rotated}} (const glm::\+vec2 \&position, const glm::\+vec2 \&size, float rotation\+Rads, const glm::\+vec4 \&color)
+\item 
+static void \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a1f19d6d7bad01a20033c6815e988e0e4}{Draw\+Quad\+Rotated}} (const glm::\+vec3 \&position, const glm::\+vec2 \&size, float rotation\+Rads, const glm::\+vec4 \&color)
+\item 
+static void \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a41c4aa9d715e2ea03825360305989f00}{Draw\+Quad\+Rotated\+With\+Texture}} (const glm::\+mat4 \&transform, const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_texture2_d}{Texture2D}} $>$ \&texture, float tiling\+Factor, const glm::\+vec4 tint\+Color)
+\item 
+static void \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a5cfa9c13c16ae674f23ffe57a07459c9}{Draw\+Quad\+Rotated\+With\+Texture}} (const glm::\+vec2 \&position, const glm::\+vec2 \&size, const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_texture2_d}{Texture2D}} $>$ \&texture, float rotation\+Rads, float tiling\+Factor, const glm::\+vec4 tint\+Color)
+\item 
+static void \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a41010ec0dd6156a465b7af3c7d741f81}{Draw\+Quad\+Rotated\+With\+Texture}} (const glm::\+vec3 \&position, const glm::\+vec2 \&size, const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_texture2_d}{Texture2D}} $>$ \&texture, float rotation\+Rads, float tiling\+Factor, const glm::\+vec4 tint\+Color)
+\item 
+static void \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_ac4b8d7d28d6384f102cb0f7690ccc391}{Draw\+Quad\+Rotated\+With\+Texture}} (const glm::\+mat4 \&transform, const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d}{Sub\+Texture2D}} $>$ \&subtexture, float tiling\+Factor, const glm::\+vec4 tint\+Color)
+\item 
+static void \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a948c3bda38fc07f5d698813ece11deeb}{Draw\+Quad\+Rotated\+With\+Texture}} (const glm::\+vec2 \&position, const glm::\+vec2 \&size, const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d}{Sub\+Texture2D}} $>$ \&subtexture, float rotation\+Rads, float tiling\+Factor, const glm::\+vec4 tint\+Color)
+\item 
+static void \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_ae20126c4ac68e46f6a07d0bce2a953db}{Draw\+Quad\+Rotated\+With\+Texture}} (const glm::\+vec3 \&position, const glm::\+vec2 \&size, const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d}{Sub\+Texture2D}} $>$ \&subtexture, float rotation\+Rads, float tiling\+Factor, const glm::\+vec4 tint\+Color)
+\item 
+static \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_texture2_d}{Texture2D}} $>$ \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a1a66d8f166230f172c5f523d092d00f8}{Get\+White\+Texture}} ()
+\item 
+static void \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a2230d61d96994b384b6ef793d1ffb506}{Reset\+Stats}} ()
+\item 
+static \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_1_1_statistics}{Statistics}} \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_ac4635220719834831187e63de81046f4}{Get\+Stats}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a0199e67d6224f8abb4e2f31123a5ca9c}{Flush\+And\+Reset}} ()
+\item 
+static void \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_aa7d684bfdac8fe7ea5c5b4317d9a6874}{Start\+Batch}} ()
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{class_vesper_1_1_renderer2_d_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_vesper_1_1_renderer2_d_a4a98381667b8b785eb03cea1e07de574}\index{Vesper::Renderer2D@{Vesper::Renderer2D}!BeginScene@{BeginScene}}
+\index{BeginScene@{BeginScene}!Vesper::Renderer2D@{Vesper::Renderer2D}}
+\doxysubsubsection{\texorpdfstring{BeginScene()}{BeginScene()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_renderer2_d_a4a98381667b8b785eb03cea1e07de574} 
+void Vesper::\+\+Renderer2\+D::\+\+Begin\+Scene (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_vesper_1_1_camera}{Camera}} \&}]{camera}{, }\item[{const glm::\+mat4 \&}]{transform}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00124\ \ \ \ \ \{}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ glm::mat4\ viewProj\ =\ camera.GetProjection()\ *\ glm::inverse(transform);}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a1eac9ac0db96f9d4c4c4075ebe1341aa}{TextureShader}}-\/>Bind();}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a1eac9ac0db96f9d4c4c4075ebe1341aa}{TextureShader}}-\/>SetMat4(\textcolor{stringliteral}{"{}u\_ViewProjection"{}},\ viewProj);}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_ae97e7dd79a5a2250191f042fab689343}{QuadIndexCount}}\ =\ 0;}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a9009d2cc897dd8411e577b8ed8c662d2}{QuadVertexBufferPtr}}\ =\ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_ae10b87e5915f94cdf8133e2c7c309095}{QuadVertexBufferBase}};}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_af34f7bd465efbe72b736be474c0386ec}{TextureSlotIndex}}\ =\ 1;}
+\DoxyCodeLine{00136\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_ae97e7dd79a5a2250191f042fab689343}{Vesper::\+\+Renderer2\+DData::\+\+Quad\+Index\+Count}}, \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_ae10b87e5915f94cdf8133e2c7c309095}{Vesper::\+\+Renderer2\+DData::\+\+Quad\+Vertex\+Buffer\+Base}}, \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a9009d2cc897dd8411e577b8ed8c662d2}{Vesper::\+\+Renderer2\+DData::\+\+Quad\+Vertex\+Buffer\+Ptr}}, \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{Vesper::\+s\+\_\+\+Data}}, and \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_af34f7bd465efbe72b736be474c0386ec}{Vesper::\+\+Renderer2\+DData::\+\+Texture\+Slot\+Index}}.
+
+\Hypertarget{class_vesper_1_1_renderer2_d_a479365533b0aeb53f190646381961d22}\index{Vesper::Renderer2D@{Vesper::Renderer2D}!BeginScene@{BeginScene}}
+\index{BeginScene@{BeginScene}!Vesper::Renderer2D@{Vesper::Renderer2D}}
+\doxysubsubsection{\texorpdfstring{BeginScene()}{BeginScene()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_renderer2_d_a479365533b0aeb53f190646381961d22} 
+void Vesper::\+\+Renderer2\+D::\+\+Begin\+Scene (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_vesper_1_1_editor_camera}{Editor\+Camera}} \&}]{camera}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00139\ \ \ \ \ \{}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ glm::mat4\ viewProj\ =\ camera.GetViewProjection();}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a1eac9ac0db96f9d4c4c4075ebe1341aa}{TextureShader}}-\/>Bind();}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a1eac9ac0db96f9d4c4c4075ebe1341aa}{TextureShader}}-\/>SetMat4(\textcolor{stringliteral}{"{}u\_ViewProjection"{}},\ viewProj);}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_aa7d684bfdac8fe7ea5c5b4317d9a6874}{StartBatch}}();}
+\DoxyCodeLine{00146\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{Vesper::\+s\+\_\+\+Data}}, and \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_aa7d684bfdac8fe7ea5c5b4317d9a6874}{Start\+Batch()}}.
+
+
+
+Referenced by \doxymbox{\hyperlink{class_vesper_1_1_scene_acb757303df319af60095ae9a4354e440}{Vesper::\+\+Scene::\+\+On\+Update\+Editor()}}.
+
+\Hypertarget{class_vesper_1_1_renderer2_d_a3aebe8bf1533bb51aad7e67d62714886}\index{Vesper::Renderer2D@{Vesper::Renderer2D}!BeginScene@{BeginScene}}
+\index{BeginScene@{BeginScene}!Vesper::Renderer2D@{Vesper::Renderer2D}}
+\doxysubsubsection{\texorpdfstring{BeginScene()}{BeginScene()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_renderer2_d_a3aebe8bf1533bb51aad7e67d62714886} 
+void Vesper::\+\+Renderer2\+D::\+\+Begin\+Scene (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera}{Orthographic\+Camera}} \&}]{camera}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00149\ \ \ \ \ \{}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a1eac9ac0db96f9d4c4c4075ebe1341aa}{TextureShader}}-\/>Bind();}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a1eac9ac0db96f9d4c4c4075ebe1341aa}{TextureShader}}-\/>SetMat4(\textcolor{stringliteral}{"{}u\_ViewProjection"{}},\ camera.GetViewProjectionMatrix());}
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_ae97e7dd79a5a2250191f042fab689343}{QuadIndexCount}}\ =\ 0;}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a9009d2cc897dd8411e577b8ed8c662d2}{QuadVertexBufferPtr}}\ =\ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_ae10b87e5915f94cdf8133e2c7c309095}{QuadVertexBufferBase}};}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_af34f7bd465efbe72b736be474c0386ec}{TextureSlotIndex}}\ =\ 1;}
+\DoxyCodeLine{00158\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_ae97e7dd79a5a2250191f042fab689343}{Vesper::\+\+Renderer2\+DData::\+\+Quad\+Index\+Count}}, \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_ae10b87e5915f94cdf8133e2c7c309095}{Vesper::\+\+Renderer2\+DData::\+\+Quad\+Vertex\+Buffer\+Base}}, \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a9009d2cc897dd8411e577b8ed8c662d2}{Vesper::\+\+Renderer2\+DData::\+\+Quad\+Vertex\+Buffer\+Ptr}}, \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{Vesper::\+s\+\_\+\+Data}}, and \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_af34f7bd465efbe72b736be474c0386ec}{Vesper::\+\+Renderer2\+DData::\+\+Texture\+Slot\+Index}}.
+
+\Hypertarget{class_vesper_1_1_renderer2_d_aba269c4ba2ba99b13b47c9e71bf1f8e3}\index{Vesper::Renderer2D@{Vesper::Renderer2D}!DrawQuad@{DrawQuad}}
+\index{DrawQuad@{DrawQuad}!Vesper::Renderer2D@{Vesper::Renderer2D}}
+\doxysubsubsection{\texorpdfstring{DrawQuad()}{DrawQuad()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_renderer2_d_aba269c4ba2ba99b13b47c9e71bf1f8e3} 
+void Vesper::\+\+Renderer2\+D::\+\+Draw\+Quad (\begin{DoxyParamCaption}\item[{const glm::\+mat4 \&}]{transform}{, }\item[{const glm::\+vec4 \&}]{color}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00181\ \ \ \ \ \{}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{size\_t}\ quadVertexCount\ =\ 4;}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ glm::vec2\ texCoords[quadVertexCount]\ =\ \{}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ 0.0f,\ 0.0f\ \},}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ 1.0f,\ 0.0f\ \},}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ 1.0f,\ 1.0f\ \},}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ 0.0f,\ 1.0f\ \}}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_ae97e7dd79a5a2250191f042fab689343}{QuadIndexCount}}\ >=\ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a150558bfc80d43d8a1ffdb1a2e6868f0}{MaxIndices}})}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a0199e67d6224f8abb4e2f31123a5ca9c}{FlushAndReset}}();}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ texIndex\ =\ 0.0f;\ \textcolor{comment}{//\ White\ Texture}}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ tilingFactor\ =\ 1.0f;}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ quadVertexCount;\ i++)}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a9009d2cc897dd8411e577b8ed8c662d2}{QuadVertexBufferPtr}}-\/>\doxymbox{\hyperlink{namespace_vesper_a4ea11ea49e0e5da6aec7dde16d09bca6}{Position}}\ =\ transform\ *\ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_acd48255e4cfeaf82352818560f497b4c}{QuadVertexPositions}}[i];}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a9009d2cc897dd8411e577b8ed8c662d2}{QuadVertexBufferPtr}}-\/>\doxymbox{\hyperlink{namespace_vesper_a0c6777f7a060892320669ac605c7e590}{Color}}\ =\ color;}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a9009d2cc897dd8411e577b8ed8c662d2}{QuadVertexBufferPtr}}-\/>\doxymbox{\hyperlink{namespace_vesper_a31080e277722519e196c7446a056cabb}{TexCoord}}\ =\ texCoords[i];}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a9009d2cc897dd8411e577b8ed8c662d2}{QuadVertexBufferPtr}}-\/>\doxymbox{\hyperlink{namespace_vesper_a8f813cf5df6c8f6fff941e2e4761e2de}{TexIndex}}\ =\ texIndex;}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a9009d2cc897dd8411e577b8ed8c662d2}{QuadVertexBufferPtr}}-\/>\doxymbox{\hyperlink{namespace_vesper_a666486ba9101ef7d901d8c3991c13d53}{TilingFactor}}\ =\ tilingFactor;}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a9009d2cc897dd8411e577b8ed8c662d2}{QuadVertexBufferPtr}}++;}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_ae97e7dd79a5a2250191f042fab689343}{QuadIndexCount}}\ +=\ 6;}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a5a87f280fe2dbd18d48967e3097a2fb1}{Stats}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_1_1_statistics_af20c33069cfb4a0cccd5550dc977d9ba}{QuadCount}}++;}
+\DoxyCodeLine{00205\ }
+\DoxyCodeLine{00206\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a0199e67d6224f8abb4e2f31123a5ca9c}{Flush\+And\+Reset()}}, \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a150558bfc80d43d8a1ffdb1a2e6868f0}{Vesper::\+\+Renderer2\+DData::\+\+Max\+Indices}}, \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_1_1_statistics_af20c33069cfb4a0cccd5550dc977d9ba}{Vesper::\+\+Renderer2\+D::\+\+Statistics::\+\+Quad\+Count}}, \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_ae97e7dd79a5a2250191f042fab689343}{Vesper::\+\+Renderer2\+DData::\+\+Quad\+Index\+Count}}, \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a9009d2cc897dd8411e577b8ed8c662d2}{Vesper::\+\+Renderer2\+DData::\+\+Quad\+Vertex\+Buffer\+Ptr}}, \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{Vesper::\+s\+\_\+\+Data}}, \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a5a87f280fe2dbd18d48967e3097a2fb1}{Vesper::\+\+Renderer2\+DData::\+\+Stats}}, \doxymbox{\hyperlink{namespace_vesper_a8f813cf5df6c8f6fff941e2e4761e2de}{Vesper::\+\+Quad\+Vertex::\+\+Tex\+Index}}, and \doxymbox{\hyperlink{namespace_vesper_a666486ba9101ef7d901d8c3991c13d53}{Vesper::\+\+Quad\+Vertex::\+\+Tiling\+Factor}}.
+
+\Hypertarget{class_vesper_1_1_renderer2_d_a88290cf166d88ce46040b9ce87b1b5b3}\index{Vesper::Renderer2D@{Vesper::Renderer2D}!DrawQuad@{DrawQuad}}
+\index{DrawQuad@{DrawQuad}!Vesper::Renderer2D@{Vesper::Renderer2D}}
+\doxysubsubsection{\texorpdfstring{DrawQuad()}{DrawQuad()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_renderer2_d_a88290cf166d88ce46040b9ce87b1b5b3} 
+void Vesper::\+\+Renderer2\+D::\+\+Draw\+Quad (\begin{DoxyParamCaption}\item[{const glm::\+vec2 \&}]{position}{, }\item[{const glm::\+vec2 \&}]{size}{, }\item[{const glm::\+vec4 \&}]{color}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00208\ \ \ \ \ \{}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_aba269c4ba2ba99b13b47c9e71bf1f8e3}{DrawQuad}}(\{\ position.x,\ position.y,\ 0.0f\ \},\ size,\ color);}
+\DoxyCodeLine{00210\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_vesper_1_1_renderer2_d_a62423c4f36192a9d71a3da2c1933de59}\index{Vesper::Renderer2D@{Vesper::Renderer2D}!DrawQuad@{DrawQuad}}
+\index{DrawQuad@{DrawQuad}!Vesper::Renderer2D@{Vesper::Renderer2D}}
+\doxysubsubsection{\texorpdfstring{DrawQuad()}{DrawQuad()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_renderer2_d_a62423c4f36192a9d71a3da2c1933de59} 
+void Vesper::\+\+Renderer2\+D::\+\+Draw\+Quad (\begin{DoxyParamCaption}\item[{const glm::\+vec3 \&}]{position}{, }\item[{const glm::\+vec2 \&}]{size}{, }\item[{const glm::\+vec4 \&}]{color}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00212\ \ \ \ \ \{}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ glm::mat4\ transform\ =\ glm::translate(glm::mat4(1.0f),\ position)\ *\ glm::scale(glm::mat4(1.0f),\ \{\ size.x,\ size.y,\ 1.0f\ \});}
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_aba269c4ba2ba99b13b47c9e71bf1f8e3}{DrawQuad}}(transform,\ color);}
+\DoxyCodeLine{00215\ }
+\DoxyCodeLine{00216\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_vesper_1_1_renderer2_d_ac61593eac73ea6fabba060b34c987302}\index{Vesper::Renderer2D@{Vesper::Renderer2D}!DrawQuadRotated@{DrawQuadRotated}}
+\index{DrawQuadRotated@{DrawQuadRotated}!Vesper::Renderer2D@{Vesper::Renderer2D}}
+\doxysubsubsection{\texorpdfstring{DrawQuadRotated()}{DrawQuadRotated()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_renderer2_d_ac61593eac73ea6fabba060b34c987302} 
+void Vesper::\+\+Renderer2\+D::\+\+Draw\+Quad\+Rotated (\begin{DoxyParamCaption}\item[{const glm::\+mat4 \&}]{transform}{, }\item[{const glm::\+vec4 \&}]{color}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00331\ \ \ \ \ \{}
+\DoxyCodeLine{00332\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{00333\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{size\_t}\ quadVertexCount\ =\ 4;}
+\DoxyCodeLine{00334\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ glm::vec2\ texCoords[quadVertexCount]\ =\ \{}
+\DoxyCodeLine{00335\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ 0.0f,\ 0.0f\ \},}
+\DoxyCodeLine{00336\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ 1.0f,\ 0.0f\ \},}
+\DoxyCodeLine{00337\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ 1.0f,\ 1.0f\ \},}
+\DoxyCodeLine{00338\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ 0.0f,\ 1.0f\ \}}
+\DoxyCodeLine{00339\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00340\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_ae97e7dd79a5a2250191f042fab689343}{QuadIndexCount}}\ >=\ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a150558bfc80d43d8a1ffdb1a2e6868f0}{MaxIndices}})}
+\DoxyCodeLine{00341\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a0199e67d6224f8abb4e2f31123a5ca9c}{FlushAndReset}}();}
+\DoxyCodeLine{00342\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ texIndex\ =\ 0.0f;\ \textcolor{comment}{//\ White\ Texture}}
+\DoxyCodeLine{00343\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ tilingFactor\ =\ 1.0f;}
+\DoxyCodeLine{00344\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ quadVertexCount;\ i++)}
+\DoxyCodeLine{00345\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00346\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a9009d2cc897dd8411e577b8ed8c662d2}{QuadVertexBufferPtr}}-\/>\doxymbox{\hyperlink{namespace_vesper_a4ea11ea49e0e5da6aec7dde16d09bca6}{Position}}\ =\ transform\ *\ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_acd48255e4cfeaf82352818560f497b4c}{QuadVertexPositions}}[i];}
+\DoxyCodeLine{00347\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a9009d2cc897dd8411e577b8ed8c662d2}{QuadVertexBufferPtr}}-\/>\doxymbox{\hyperlink{namespace_vesper_a0c6777f7a060892320669ac605c7e590}{Color}}\ =\ color;}
+\DoxyCodeLine{00348\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a9009d2cc897dd8411e577b8ed8c662d2}{QuadVertexBufferPtr}}-\/>\doxymbox{\hyperlink{namespace_vesper_a31080e277722519e196c7446a056cabb}{TexCoord}}\ =\ texCoords[i];}
+\DoxyCodeLine{00349\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a9009d2cc897dd8411e577b8ed8c662d2}{QuadVertexBufferPtr}}-\/>\doxymbox{\hyperlink{namespace_vesper_a8f813cf5df6c8f6fff941e2e4761e2de}{TexIndex}}\ =\ texIndex;}
+\DoxyCodeLine{00350\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a9009d2cc897dd8411e577b8ed8c662d2}{QuadVertexBufferPtr}}-\/>\doxymbox{\hyperlink{namespace_vesper_a666486ba9101ef7d901d8c3991c13d53}{TilingFactor}}\ =\ tilingFactor;}
+\DoxyCodeLine{00351\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a9009d2cc897dd8411e577b8ed8c662d2}{QuadVertexBufferPtr}}++;}
+\DoxyCodeLine{00352\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00353\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_ae97e7dd79a5a2250191f042fab689343}{QuadIndexCount}}\ +=\ 6;}
+\DoxyCodeLine{00354\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a5a87f280fe2dbd18d48967e3097a2fb1}{Stats}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_1_1_statistics_af20c33069cfb4a0cccd5550dc977d9ba}{QuadCount}}++;}
+\DoxyCodeLine{00355\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a0199e67d6224f8abb4e2f31123a5ca9c}{Flush\+And\+Reset()}}, \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a150558bfc80d43d8a1ffdb1a2e6868f0}{Vesper::\+\+Renderer2\+DData::\+\+Max\+Indices}}, \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_1_1_statistics_af20c33069cfb4a0cccd5550dc977d9ba}{Vesper::\+\+Renderer2\+D::\+\+Statistics::\+\+Quad\+Count}}, \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_ae97e7dd79a5a2250191f042fab689343}{Vesper::\+\+Renderer2\+DData::\+\+Quad\+Index\+Count}}, \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a9009d2cc897dd8411e577b8ed8c662d2}{Vesper::\+\+Renderer2\+DData::\+\+Quad\+Vertex\+Buffer\+Ptr}}, \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{Vesper::\+s\+\_\+\+Data}}, \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a5a87f280fe2dbd18d48967e3097a2fb1}{Vesper::\+\+Renderer2\+DData::\+\+Stats}}, \doxymbox{\hyperlink{namespace_vesper_a8f813cf5df6c8f6fff941e2e4761e2de}{Vesper::\+\+Quad\+Vertex::\+\+Tex\+Index}}, and \doxymbox{\hyperlink{namespace_vesper_a666486ba9101ef7d901d8c3991c13d53}{Vesper::\+\+Quad\+Vertex::\+\+Tiling\+Factor}}.
+
+\Hypertarget{class_vesper_1_1_renderer2_d_a5c7a044d0a34e1b20a2e9a727324ddf6}\index{Vesper::Renderer2D@{Vesper::Renderer2D}!DrawQuadRotated@{DrawQuadRotated}}
+\index{DrawQuadRotated@{DrawQuadRotated}!Vesper::Renderer2D@{Vesper::Renderer2D}}
+\doxysubsubsection{\texorpdfstring{DrawQuadRotated()}{DrawQuadRotated()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_renderer2_d_a5c7a044d0a34e1b20a2e9a727324ddf6} 
+void Vesper::\+\+Renderer2\+D::\+\+Draw\+Quad\+Rotated (\begin{DoxyParamCaption}\item[{const glm::\+vec2 \&}]{position}{, }\item[{const glm::\+vec2 \&}]{size}{, }\item[{float}]{rotation\+Rads}{, }\item[{const glm::\+vec4 \&}]{color}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00357\ \ \ \ \ \{}
+\DoxyCodeLine{00358\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_ac61593eac73ea6fabba060b34c987302}{DrawQuadRotated}}(\{\ position.x,\ position.y,\ 0.0f\ \},\ size,\ rotationRads,\ color);}
+\DoxyCodeLine{00359\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_vesper_1_1_renderer2_d_a1f19d6d7bad01a20033c6815e988e0e4}\index{Vesper::Renderer2D@{Vesper::Renderer2D}!DrawQuadRotated@{DrawQuadRotated}}
+\index{DrawQuadRotated@{DrawQuadRotated}!Vesper::Renderer2D@{Vesper::Renderer2D}}
+\doxysubsubsection{\texorpdfstring{DrawQuadRotated()}{DrawQuadRotated()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_renderer2_d_a1f19d6d7bad01a20033c6815e988e0e4} 
+void Vesper::\+\+Renderer2\+D::\+\+Draw\+Quad\+Rotated (\begin{DoxyParamCaption}\item[{const glm::\+vec3 \&}]{position}{, }\item[{const glm::\+vec2 \&}]{size}{, }\item[{float}]{rotation\+Rads}{, }\item[{const glm::\+vec4 \&}]{color}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00361\ \ \ \ \ \{}
+\DoxyCodeLine{00362\ \ \ \ \ \ \ \ \ glm::mat4\ transform\ =\ glm::translate(glm::mat4(1.0f),\ position)}
+\DoxyCodeLine{00363\ \ \ \ \ \ \ \ \ \ \ \ \ *\ glm::rotate(glm::mat4(1.0f),\ rotationRads,\ \{\ 0.0f,\ 0.0f,\ 1.0f\ \})}
+\DoxyCodeLine{00364\ \ \ \ \ \ \ \ \ \ \ \ \ *\ glm::scale(glm::mat4(1.0f),\ \{\ size.x,\ size.y,\ 1.0f\ \});}
+\DoxyCodeLine{00365\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_ac61593eac73ea6fabba060b34c987302}{DrawQuadRotated}}(transform,\ color);}
+\DoxyCodeLine{00366\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_vesper_1_1_renderer2_d_ac4b8d7d28d6384f102cb0f7690ccc391}\index{Vesper::Renderer2D@{Vesper::Renderer2D}!DrawQuadRotatedWithTexture@{DrawQuadRotatedWithTexture}}
+\index{DrawQuadRotatedWithTexture@{DrawQuadRotatedWithTexture}!Vesper::Renderer2D@{Vesper::Renderer2D}}
+\doxysubsubsection{\texorpdfstring{DrawQuadRotatedWithTexture()}{DrawQuadRotatedWithTexture()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_renderer2_d_ac4b8d7d28d6384f102cb0f7690ccc391} 
+void Vesper::\+\+Renderer2\+D::\+\+Draw\+Quad\+Rotated\+With\+Texture (\begin{DoxyParamCaption}\item[{const glm::\+mat4 \&}]{transform}{, }\item[{const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d}{Sub\+Texture2D}} $>$ \&}]{subtexture}{, }\item[{float}]{tiling\+Factor}{, }\item[{const glm::\+vec4}]{tint\+Color}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00423\ \ \ \ \ \{}
+\DoxyCodeLine{00424\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{00425\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{size\_t}\ quadVertexCount\ =\ 4;}
+\DoxyCodeLine{00426\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ glm::vec2*\ texCoords\ =\ subtexture-\/>GetTexCoords();}
+\DoxyCodeLine{00427\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref<Texture2D>}}\ texture\ =\ subtexture-\/>GetTexture();}
+\DoxyCodeLine{00428\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_ae97e7dd79a5a2250191f042fab689343}{QuadIndexCount}}\ >=\ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a150558bfc80d43d8a1ffdb1a2e6868f0}{MaxIndices}})}
+\DoxyCodeLine{00429\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a0199e67d6224f8abb4e2f31123a5ca9c}{FlushAndReset}}();}
+\DoxyCodeLine{00430\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ textureIndex\ =\ 0.0f;}
+\DoxyCodeLine{00431\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (uint32\_t\ i\ =\ 1;\ i\ <\ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_af34f7bd465efbe72b736be474c0386ec}{TextureSlotIndex}};\ i++)}
+\DoxyCodeLine{00432\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00433\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (*\doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_ae338adbaa3fea2a290e473183372254d}{TextureSlots}}[i].get()\ ==\ *texture.get())}
+\DoxyCodeLine{00434\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00435\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ textureIndex\ =\ (float)i;}
+\DoxyCodeLine{00436\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00437\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00438\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00439\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (textureIndex\ ==\ 0.0f)}
+\DoxyCodeLine{00440\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00441\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_af34f7bd465efbe72b736be474c0386ec}{TextureSlotIndex}}\ >=\ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a7e9955cf146619db9a4ca23541f5499a}{MaxTextureSlots}})}
+\DoxyCodeLine{00442\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a0199e67d6224f8abb4e2f31123a5ca9c}{FlushAndReset}}();}
+\DoxyCodeLine{00443\ \ \ \ \ \ \ \ \ \ \ \ \ textureIndex\ =\ (float)\doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_af34f7bd465efbe72b736be474c0386ec}{TextureSlotIndex}};}
+\DoxyCodeLine{00444\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_ae338adbaa3fea2a290e473183372254d}{TextureSlots}}[\doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_af34f7bd465efbe72b736be474c0386ec}{TextureSlotIndex}}]\ =\ texture;}
+\DoxyCodeLine{00445\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_af34f7bd465efbe72b736be474c0386ec}{TextureSlotIndex}}++;}
+\DoxyCodeLine{00446\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00447\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ quadVertexCount;\ i++)}
+\DoxyCodeLine{00448\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00449\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a9009d2cc897dd8411e577b8ed8c662d2}{QuadVertexBufferPtr}}-\/>\doxymbox{\hyperlink{namespace_vesper_a4ea11ea49e0e5da6aec7dde16d09bca6}{Position}}\ =\ transform\ *\ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_acd48255e4cfeaf82352818560f497b4c}{QuadVertexPositions}}[i];}
+\DoxyCodeLine{00450\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a9009d2cc897dd8411e577b8ed8c662d2}{QuadVertexBufferPtr}}-\/>\doxymbox{\hyperlink{namespace_vesper_a0c6777f7a060892320669ac605c7e590}{Color}}\ =\ tintColor;}
+\DoxyCodeLine{00451\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a9009d2cc897dd8411e577b8ed8c662d2}{QuadVertexBufferPtr}}-\/>\doxymbox{\hyperlink{namespace_vesper_a31080e277722519e196c7446a056cabb}{TexCoord}}\ =\ texCoords[i];}
+\DoxyCodeLine{00452\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a9009d2cc897dd8411e577b8ed8c662d2}{QuadVertexBufferPtr}}-\/>\doxymbox{\hyperlink{namespace_vesper_a8f813cf5df6c8f6fff941e2e4761e2de}{TexIndex}}\ =\ textureIndex;}
+\DoxyCodeLine{00453\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a9009d2cc897dd8411e577b8ed8c662d2}{QuadVertexBufferPtr}}-\/>\doxymbox{\hyperlink{namespace_vesper_a666486ba9101ef7d901d8c3991c13d53}{TilingFactor}}\ =\ tilingFactor;}
+\DoxyCodeLine{00454\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a9009d2cc897dd8411e577b8ed8c662d2}{QuadVertexBufferPtr}}++;}
+\DoxyCodeLine{00455\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00456\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_ae97e7dd79a5a2250191f042fab689343}{QuadIndexCount}}\ +=\ 6;}
+\DoxyCodeLine{00457\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a5a87f280fe2dbd18d48967e3097a2fb1}{Stats}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_1_1_statistics_af20c33069cfb4a0cccd5550dc977d9ba}{QuadCount}}++;}
+\DoxyCodeLine{00458\ }
+\DoxyCodeLine{00459\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a0199e67d6224f8abb4e2f31123a5ca9c}{Flush\+And\+Reset()}}, \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a150558bfc80d43d8a1ffdb1a2e6868f0}{Vesper::\+\+Renderer2\+DData::\+\+Max\+Indices}}, \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a7e9955cf146619db9a4ca23541f5499a}{Vesper::\+\+Renderer2\+DData::\+\+Max\+Texture\+Slots}}, \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_1_1_statistics_af20c33069cfb4a0cccd5550dc977d9ba}{Vesper::\+\+Renderer2\+D::\+\+Statistics::\+\+Quad\+Count}}, \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_ae97e7dd79a5a2250191f042fab689343}{Vesper::\+\+Renderer2\+DData::\+\+Quad\+Index\+Count}}, \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a9009d2cc897dd8411e577b8ed8c662d2}{Vesper::\+\+Renderer2\+DData::\+\+Quad\+Vertex\+Buffer\+Ptr}}, \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{Vesper::\+s\+\_\+\+Data}}, \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a5a87f280fe2dbd18d48967e3097a2fb1}{Vesper::\+\+Renderer2\+DData::\+\+Stats}}, \doxymbox{\hyperlink{namespace_vesper_a8f813cf5df6c8f6fff941e2e4761e2de}{Vesper::\+\+Quad\+Vertex::\+\+Tex\+Index}}, \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_af34f7bd465efbe72b736be474c0386ec}{Vesper::\+\+Renderer2\+DData::\+\+Texture\+Slot\+Index}}, and \doxymbox{\hyperlink{namespace_vesper_a666486ba9101ef7d901d8c3991c13d53}{Vesper::\+\+Quad\+Vertex::\+\+Tiling\+Factor}}.
+
+\Hypertarget{class_vesper_1_1_renderer2_d_a41c4aa9d715e2ea03825360305989f00}\index{Vesper::Renderer2D@{Vesper::Renderer2D}!DrawQuadRotatedWithTexture@{DrawQuadRotatedWithTexture}}
+\index{DrawQuadRotatedWithTexture@{DrawQuadRotatedWithTexture}!Vesper::Renderer2D@{Vesper::Renderer2D}}
+\doxysubsubsection{\texorpdfstring{DrawQuadRotatedWithTexture()}{DrawQuadRotatedWithTexture()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_renderer2_d_a41c4aa9d715e2ea03825360305989f00} 
+void Vesper::\+\+Renderer2\+D::\+\+Draw\+Quad\+Rotated\+With\+Texture (\begin{DoxyParamCaption}\item[{const glm::\+mat4 \&}]{transform}{, }\item[{const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_texture2_d}{Texture2D}} $>$ \&}]{texture}{, }\item[{float}]{tiling\+Factor}{, }\item[{const glm::\+vec4}]{tint\+Color}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00369\ \ \ \ \ \{}
+\DoxyCodeLine{00370\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{00371\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{size\_t}\ quadVertexCount\ =\ 4;}
+\DoxyCodeLine{00372\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ glm::vec2\ texCoords[quadVertexCount]\ =\ \{}
+\DoxyCodeLine{00373\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ 0.0f,\ 0.0f\ \},}
+\DoxyCodeLine{00374\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ 1.0f,\ 0.0f\ \},}
+\DoxyCodeLine{00375\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ 1.0f,\ 1.0f\ \},}
+\DoxyCodeLine{00376\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ 0.0f,\ 1.0f\ \}}
+\DoxyCodeLine{00377\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00378\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_ae97e7dd79a5a2250191f042fab689343}{QuadIndexCount}}\ >=\ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a150558bfc80d43d8a1ffdb1a2e6868f0}{MaxIndices}})}
+\DoxyCodeLine{00379\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a0199e67d6224f8abb4e2f31123a5ca9c}{FlushAndReset}}();}
+\DoxyCodeLine{00380\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ textureIndex\ =\ 0.0f;}
+\DoxyCodeLine{00381\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (uint32\_t\ i\ =\ 1;\ i\ <\ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_af34f7bd465efbe72b736be474c0386ec}{TextureSlotIndex}};\ i++)}
+\DoxyCodeLine{00382\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00383\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (*\doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_ae338adbaa3fea2a290e473183372254d}{TextureSlots}}[i].get()\ ==\ *texture.get())}
+\DoxyCodeLine{00384\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00385\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ textureIndex\ =\ (float)i;}
+\DoxyCodeLine{00386\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00387\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00388\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00389\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (textureIndex\ ==\ 0.0f)}
+\DoxyCodeLine{00390\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00391\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_af34f7bd465efbe72b736be474c0386ec}{TextureSlotIndex}}\ >=\ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a7e9955cf146619db9a4ca23541f5499a}{MaxTextureSlots}})}
+\DoxyCodeLine{00392\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a0199e67d6224f8abb4e2f31123a5ca9c}{FlushAndReset}}();}
+\DoxyCodeLine{00393\ \ \ \ \ \ \ \ \ \ \ \ \ textureIndex\ =\ (float)\doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_af34f7bd465efbe72b736be474c0386ec}{TextureSlotIndex}};}
+\DoxyCodeLine{00394\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_ae338adbaa3fea2a290e473183372254d}{TextureSlots}}[\doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_af34f7bd465efbe72b736be474c0386ec}{TextureSlotIndex}}]\ =\ texture;}
+\DoxyCodeLine{00395\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_af34f7bd465efbe72b736be474c0386ec}{TextureSlotIndex}}++;}
+\DoxyCodeLine{00396\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00397\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ quadVertexCount;\ i++)}
+\DoxyCodeLine{00398\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00399\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a9009d2cc897dd8411e577b8ed8c662d2}{QuadVertexBufferPtr}}-\/>\doxymbox{\hyperlink{namespace_vesper_a4ea11ea49e0e5da6aec7dde16d09bca6}{Position}}\ =\ transform\ *\ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_acd48255e4cfeaf82352818560f497b4c}{QuadVertexPositions}}[i];}
+\DoxyCodeLine{00400\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a9009d2cc897dd8411e577b8ed8c662d2}{QuadVertexBufferPtr}}-\/>\doxymbox{\hyperlink{namespace_vesper_a0c6777f7a060892320669ac605c7e590}{Color}}\ =\ tintColor;}
+\DoxyCodeLine{00401\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a9009d2cc897dd8411e577b8ed8c662d2}{QuadVertexBufferPtr}}-\/>\doxymbox{\hyperlink{namespace_vesper_a31080e277722519e196c7446a056cabb}{TexCoord}}\ =\ texCoords[i];}
+\DoxyCodeLine{00402\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a9009d2cc897dd8411e577b8ed8c662d2}{QuadVertexBufferPtr}}-\/>\doxymbox{\hyperlink{namespace_vesper_a8f813cf5df6c8f6fff941e2e4761e2de}{TexIndex}}\ =\ textureIndex;}
+\DoxyCodeLine{00403\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a9009d2cc897dd8411e577b8ed8c662d2}{QuadVertexBufferPtr}}-\/>\doxymbox{\hyperlink{namespace_vesper_a666486ba9101ef7d901d8c3991c13d53}{TilingFactor}}\ =\ tilingFactor;}
+\DoxyCodeLine{00404\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a9009d2cc897dd8411e577b8ed8c662d2}{QuadVertexBufferPtr}}++;}
+\DoxyCodeLine{00405\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00406\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_ae97e7dd79a5a2250191f042fab689343}{QuadIndexCount}}\ +=\ 6;}
+\DoxyCodeLine{00407\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a5a87f280fe2dbd18d48967e3097a2fb1}{Stats}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_1_1_statistics_af20c33069cfb4a0cccd5550dc977d9ba}{QuadCount}}++;}
+\DoxyCodeLine{00408\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a0199e67d6224f8abb4e2f31123a5ca9c}{Flush\+And\+Reset()}}, \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a150558bfc80d43d8a1ffdb1a2e6868f0}{Vesper::\+\+Renderer2\+DData::\+\+Max\+Indices}}, \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a7e9955cf146619db9a4ca23541f5499a}{Vesper::\+\+Renderer2\+DData::\+\+Max\+Texture\+Slots}}, \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_1_1_statistics_af20c33069cfb4a0cccd5550dc977d9ba}{Vesper::\+\+Renderer2\+D::\+\+Statistics::\+\+Quad\+Count}}, \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_ae97e7dd79a5a2250191f042fab689343}{Vesper::\+\+Renderer2\+DData::\+\+Quad\+Index\+Count}}, \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a9009d2cc897dd8411e577b8ed8c662d2}{Vesper::\+\+Renderer2\+DData::\+\+Quad\+Vertex\+Buffer\+Ptr}}, \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{Vesper::\+s\+\_\+\+Data}}, \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a5a87f280fe2dbd18d48967e3097a2fb1}{Vesper::\+\+Renderer2\+DData::\+\+Stats}}, \doxymbox{\hyperlink{namespace_vesper_a8f813cf5df6c8f6fff941e2e4761e2de}{Vesper::\+\+Quad\+Vertex::\+\+Tex\+Index}}, \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_af34f7bd465efbe72b736be474c0386ec}{Vesper::\+\+Renderer2\+DData::\+\+Texture\+Slot\+Index}}, and \doxymbox{\hyperlink{namespace_vesper_a666486ba9101ef7d901d8c3991c13d53}{Vesper::\+\+Quad\+Vertex::\+\+Tiling\+Factor}}.
+
+\Hypertarget{class_vesper_1_1_renderer2_d_a948c3bda38fc07f5d698813ece11deeb}\index{Vesper::Renderer2D@{Vesper::Renderer2D}!DrawQuadRotatedWithTexture@{DrawQuadRotatedWithTexture}}
+\index{DrawQuadRotatedWithTexture@{DrawQuadRotatedWithTexture}!Vesper::Renderer2D@{Vesper::Renderer2D}}
+\doxysubsubsection{\texorpdfstring{DrawQuadRotatedWithTexture()}{DrawQuadRotatedWithTexture()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_renderer2_d_a948c3bda38fc07f5d698813ece11deeb} 
+void Vesper::\+\+Renderer2\+D::\+\+Draw\+Quad\+Rotated\+With\+Texture (\begin{DoxyParamCaption}\item[{const glm::\+vec2 \&}]{position}{, }\item[{const glm::\+vec2 \&}]{size}{, }\item[{const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d}{Sub\+Texture2D}} $>$ \&}]{subtexture}{, }\item[{float}]{rotation\+Rads}{, }\item[{float}]{tiling\+Factor}{, }\item[{const glm::\+vec4}]{tint\+Color}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00461\ \ \ \ \ \{}
+\DoxyCodeLine{00462\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a41c4aa9d715e2ea03825360305989f00}{DrawQuadRotatedWithTexture}}(\{\ position.x,\ position.y,\ 0.0f\ \},\ size,\ subtexture,\ rotationRads,\ tilingFactor,\ tintColor);}
+\DoxyCodeLine{00463\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_vesper_1_1_renderer2_d_a5cfa9c13c16ae674f23ffe57a07459c9}\index{Vesper::Renderer2D@{Vesper::Renderer2D}!DrawQuadRotatedWithTexture@{DrawQuadRotatedWithTexture}}
+\index{DrawQuadRotatedWithTexture@{DrawQuadRotatedWithTexture}!Vesper::Renderer2D@{Vesper::Renderer2D}}
+\doxysubsubsection{\texorpdfstring{DrawQuadRotatedWithTexture()}{DrawQuadRotatedWithTexture()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_renderer2_d_a5cfa9c13c16ae674f23ffe57a07459c9} 
+void Vesper::\+\+Renderer2\+D::\+\+Draw\+Quad\+Rotated\+With\+Texture (\begin{DoxyParamCaption}\item[{const glm::\+vec2 \&}]{position}{, }\item[{const glm::\+vec2 \&}]{size}{, }\item[{const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_texture2_d}{Texture2D}} $>$ \&}]{texture}{, }\item[{float}]{rotation\+Rads}{, }\item[{float}]{tiling\+Factor}{, }\item[{const glm::\+vec4}]{tint\+Color}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00410\ \ \ \ \ \{}
+\DoxyCodeLine{00411\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a41c4aa9d715e2ea03825360305989f00}{DrawQuadRotatedWithTexture}}(\{\ position.x,\ position.y,\ 0.0f\ \},\ size,\ texture,\ rotationRads,\ tilingFactor,\ tintColor);}
+\DoxyCodeLine{00412\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_vesper_1_1_renderer2_d_ae20126c4ac68e46f6a07d0bce2a953db}\index{Vesper::Renderer2D@{Vesper::Renderer2D}!DrawQuadRotatedWithTexture@{DrawQuadRotatedWithTexture}}
+\index{DrawQuadRotatedWithTexture@{DrawQuadRotatedWithTexture}!Vesper::Renderer2D@{Vesper::Renderer2D}}
+\doxysubsubsection{\texorpdfstring{DrawQuadRotatedWithTexture()}{DrawQuadRotatedWithTexture()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_renderer2_d_ae20126c4ac68e46f6a07d0bce2a953db} 
+void Vesper::\+\+Renderer2\+D::\+\+Draw\+Quad\+Rotated\+With\+Texture (\begin{DoxyParamCaption}\item[{const glm::\+vec3 \&}]{position}{, }\item[{const glm::\+vec2 \&}]{size}{, }\item[{const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d}{Sub\+Texture2D}} $>$ \&}]{subtexture}{, }\item[{float}]{rotation\+Rads}{, }\item[{float}]{tiling\+Factor}{, }\item[{const glm::\+vec4}]{tint\+Color}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00465\ \ \ \ \ \{}
+\DoxyCodeLine{00466\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{00467\ }
+\DoxyCodeLine{00468\ \ \ \ \ \ \ \ \ glm::mat4\ transform\ =\ glm::translate(glm::mat4(1.0f),\ position)}
+\DoxyCodeLine{00469\ \ \ \ \ \ \ \ \ \ \ \ \ *\ glm::rotate(glm::mat4(1.0f),\ rotationRads,\ \{\ 0.0f,\ 0.0f,\ 1.0f\ \})}
+\DoxyCodeLine{00470\ \ \ \ \ \ \ \ \ \ \ \ \ *\ glm::scale(glm::mat4(1.0f),\ \{\ size.x,\ size.y,\ 1.0f\ \});}
+\DoxyCodeLine{00471\ }
+\DoxyCodeLine{00472\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a41c4aa9d715e2ea03825360305989f00}{DrawQuadRotatedWithTexture}}(transform,\ subtexture,\ tilingFactor,\ tintColor);}
+\DoxyCodeLine{00473\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_vesper_1_1_renderer2_d_a41010ec0dd6156a465b7af3c7d741f81}\index{Vesper::Renderer2D@{Vesper::Renderer2D}!DrawQuadRotatedWithTexture@{DrawQuadRotatedWithTexture}}
+\index{DrawQuadRotatedWithTexture@{DrawQuadRotatedWithTexture}!Vesper::Renderer2D@{Vesper::Renderer2D}}
+\doxysubsubsection{\texorpdfstring{DrawQuadRotatedWithTexture()}{DrawQuadRotatedWithTexture()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_renderer2_d_a41010ec0dd6156a465b7af3c7d741f81} 
+void Vesper::\+\+Renderer2\+D::\+\+Draw\+Quad\+Rotated\+With\+Texture (\begin{DoxyParamCaption}\item[{const glm::\+vec3 \&}]{position}{, }\item[{const glm::\+vec2 \&}]{size}{, }\item[{const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_texture2_d}{Texture2D}} $>$ \&}]{texture}{, }\item[{float}]{rotation\+Rads}{, }\item[{float}]{tiling\+Factor}{, }\item[{const glm::\+vec4}]{tint\+Color}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00414\ \ \ \ \ \{}
+\DoxyCodeLine{00415\ \ \ \ \ \ \ \ \ glm::mat4\ transform\ =\ glm::translate(glm::mat4(1.0f),\ position)}
+\DoxyCodeLine{00416\ \ \ \ \ \ \ \ \ \ \ \ \ *\ glm::rotate(glm::mat4(1.0f),\ rotationRads,\ \{\ 0.0f,\ 0.0f,\ 1.0f\ \})}
+\DoxyCodeLine{00417\ \ \ \ \ \ \ \ \ \ \ \ \ *\ glm::scale(glm::mat4(1.0f),\ \{\ size.x,\ size.y,\ 1.0f\ \});}
+\DoxyCodeLine{00418\ }
+\DoxyCodeLine{00419\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a41c4aa9d715e2ea03825360305989f00}{DrawQuadRotatedWithTexture}}(transform,\ texture,\ tilingFactor,\ tintColor);}
+\DoxyCodeLine{00420\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_vesper_1_1_renderer2_d_a273c91ba7abef4d2a99640bf98a4a7d4}\index{Vesper::Renderer2D@{Vesper::Renderer2D}!DrawQuadWithTexture@{DrawQuadWithTexture}}
+\index{DrawQuadWithTexture@{DrawQuadWithTexture}!Vesper::Renderer2D@{Vesper::Renderer2D}}
+\doxysubsubsection{\texorpdfstring{DrawQuadWithTexture()}{DrawQuadWithTexture()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_renderer2_d_a273c91ba7abef4d2a99640bf98a4a7d4} 
+void Vesper::\+\+Renderer2\+D::\+\+Draw\+Quad\+With\+Texture (\begin{DoxyParamCaption}\item[{const glm::\+mat4 \&}]{transform}{, }\item[{const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d}{Sub\+Texture2D}} $>$ \&}]{subtexture}{, }\item[{float}]{tiling\+Factor}{, }\item[{const glm::\+vec4}]{tint\+Color}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00275\ \ \ \ \ \{}
+\DoxyCodeLine{00276\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{00277\ }
+\DoxyCodeLine{00278\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{size\_t}\ quadVertexCount\ =\ 4;}
+\DoxyCodeLine{00279\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ glm::vec2*\ texCoords\ =\ subtexture-\/>GetTexCoords();}
+\DoxyCodeLine{00280\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref<Texture2D>}}\ texture\ =\ subtexture-\/>GetTexture();}
+\DoxyCodeLine{00281\ }
+\DoxyCodeLine{00282\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_ae97e7dd79a5a2250191f042fab689343}{QuadIndexCount}}\ >=\ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a150558bfc80d43d8a1ffdb1a2e6868f0}{MaxIndices}})}
+\DoxyCodeLine{00283\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a0199e67d6224f8abb4e2f31123a5ca9c}{FlushAndReset}}();}
+\DoxyCodeLine{00284\ }
+\DoxyCodeLine{00285\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ textureIndex\ =\ 0.0f;}
+\DoxyCodeLine{00286\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (uint32\_t\ i\ =\ 1;\ i\ <\ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_af34f7bd465efbe72b736be474c0386ec}{TextureSlotIndex}};\ i++)}
+\DoxyCodeLine{00287\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00288\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (*\doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_ae338adbaa3fea2a290e473183372254d}{TextureSlots}}[i].get()\ ==\ *texture.get())}
+\DoxyCodeLine{00289\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00290\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ textureIndex\ =\ (float)i;}
+\DoxyCodeLine{00291\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00292\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00293\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00294\ }
+\DoxyCodeLine{00295\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (textureIndex\ ==\ 0.0f)}
+\DoxyCodeLine{00296\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00297\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_af34f7bd465efbe72b736be474c0386ec}{TextureSlotIndex}}\ >=\ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a7e9955cf146619db9a4ca23541f5499a}{MaxTextureSlots}})}
+\DoxyCodeLine{00298\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a0199e67d6224f8abb4e2f31123a5ca9c}{FlushAndReset}}();}
+\DoxyCodeLine{00299\ }
+\DoxyCodeLine{00300\ \ \ \ \ \ \ \ \ \ \ \ \ textureIndex\ =\ (float)\doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_af34f7bd465efbe72b736be474c0386ec}{TextureSlotIndex}};}
+\DoxyCodeLine{00301\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_ae338adbaa3fea2a290e473183372254d}{TextureSlots}}[\doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_af34f7bd465efbe72b736be474c0386ec}{TextureSlotIndex}}]\ =\ texture;}
+\DoxyCodeLine{00302\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_af34f7bd465efbe72b736be474c0386ec}{TextureSlotIndex}}++;}
+\DoxyCodeLine{00303\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00304\ }
+\DoxyCodeLine{00305\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ quadVertexCount;\ i++)}
+\DoxyCodeLine{00306\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00307\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a9009d2cc897dd8411e577b8ed8c662d2}{QuadVertexBufferPtr}}-\/>\doxymbox{\hyperlink{namespace_vesper_a4ea11ea49e0e5da6aec7dde16d09bca6}{Position}}\ =\ transform\ *\ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_acd48255e4cfeaf82352818560f497b4c}{QuadVertexPositions}}[i];}
+\DoxyCodeLine{00308\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a9009d2cc897dd8411e577b8ed8c662d2}{QuadVertexBufferPtr}}-\/>\doxymbox{\hyperlink{namespace_vesper_a0c6777f7a060892320669ac605c7e590}{Color}}\ =\ tintColor;}
+\DoxyCodeLine{00309\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a9009d2cc897dd8411e577b8ed8c662d2}{QuadVertexBufferPtr}}-\/>\doxymbox{\hyperlink{namespace_vesper_a31080e277722519e196c7446a056cabb}{TexCoord}}\ =\ texCoords[i];}
+\DoxyCodeLine{00310\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a9009d2cc897dd8411e577b8ed8c662d2}{QuadVertexBufferPtr}}-\/>\doxymbox{\hyperlink{namespace_vesper_a8f813cf5df6c8f6fff941e2e4761e2de}{TexIndex}}\ =\ textureIndex;}
+\DoxyCodeLine{00311\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a9009d2cc897dd8411e577b8ed8c662d2}{QuadVertexBufferPtr}}-\/>\doxymbox{\hyperlink{namespace_vesper_a666486ba9101ef7d901d8c3991c13d53}{TilingFactor}}\ =\ tilingFactor;}
+\DoxyCodeLine{00312\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a9009d2cc897dd8411e577b8ed8c662d2}{QuadVertexBufferPtr}}++;}
+\DoxyCodeLine{00313\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00314\ }
+\DoxyCodeLine{00315\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_ae97e7dd79a5a2250191f042fab689343}{QuadIndexCount}}\ +=\ 6;}
+\DoxyCodeLine{00316\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a5a87f280fe2dbd18d48967e3097a2fb1}{Stats}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_1_1_statistics_af20c33069cfb4a0cccd5550dc977d9ba}{QuadCount}}++;}
+\DoxyCodeLine{00317\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a0199e67d6224f8abb4e2f31123a5ca9c}{Flush\+And\+Reset()}}, \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a150558bfc80d43d8a1ffdb1a2e6868f0}{Vesper::\+\+Renderer2\+DData::\+\+Max\+Indices}}, \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a7e9955cf146619db9a4ca23541f5499a}{Vesper::\+\+Renderer2\+DData::\+\+Max\+Texture\+Slots}}, \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_1_1_statistics_af20c33069cfb4a0cccd5550dc977d9ba}{Vesper::\+\+Renderer2\+D::\+\+Statistics::\+\+Quad\+Count}}, \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_ae97e7dd79a5a2250191f042fab689343}{Vesper::\+\+Renderer2\+DData::\+\+Quad\+Index\+Count}}, \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a9009d2cc897dd8411e577b8ed8c662d2}{Vesper::\+\+Renderer2\+DData::\+\+Quad\+Vertex\+Buffer\+Ptr}}, \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{Vesper::\+s\+\_\+\+Data}}, \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a5a87f280fe2dbd18d48967e3097a2fb1}{Vesper::\+\+Renderer2\+DData::\+\+Stats}}, \doxymbox{\hyperlink{namespace_vesper_a8f813cf5df6c8f6fff941e2e4761e2de}{Vesper::\+\+Quad\+Vertex::\+\+Tex\+Index}}, \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_af34f7bd465efbe72b736be474c0386ec}{Vesper::\+\+Renderer2\+DData::\+\+Texture\+Slot\+Index}}, and \doxymbox{\hyperlink{namespace_vesper_a666486ba9101ef7d901d8c3991c13d53}{Vesper::\+\+Quad\+Vertex::\+\+Tiling\+Factor}}.
+
+\Hypertarget{class_vesper_1_1_renderer2_d_afd78da6a4f0aa5af3c7f8d533bd22b49}\index{Vesper::Renderer2D@{Vesper::Renderer2D}!DrawQuadWithTexture@{DrawQuadWithTexture}}
+\index{DrawQuadWithTexture@{DrawQuadWithTexture}!Vesper::Renderer2D@{Vesper::Renderer2D}}
+\doxysubsubsection{\texorpdfstring{DrawQuadWithTexture()}{DrawQuadWithTexture()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_renderer2_d_afd78da6a4f0aa5af3c7f8d533bd22b49} 
+void Vesper::\+\+Renderer2\+D::\+\+Draw\+Quad\+With\+Texture (\begin{DoxyParamCaption}\item[{const glm::\+mat4 \&}]{transform}{, }\item[{const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_texture2_d}{Texture2D}} $>$ \&}]{texture}{, }\item[{float}]{tiling\+Factor}{, }\item[{const glm::\+vec4}]{tint\+Color}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00219\ \ \ \ \ \{}
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{size\_t}\ quadVertexCount\ =\ 4;}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ glm::vec4\ color\ =\ \{\ 1.0f,\ 1.0f,\ 1.0f,\ 1.0f\ \};}
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ glm::vec2\ texCoords[quadVertexCount]\ =\ \{}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ 0.0f,\ 0.0f\ \},}
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ 1.0f,\ 0.0f\ \},}
+\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ 1.0f,\ 1.0f\ \},}
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ 0.0f,\ 1.0f\ \}}
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_ae97e7dd79a5a2250191f042fab689343}{QuadIndexCount}}\ >=\ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a150558bfc80d43d8a1ffdb1a2e6868f0}{MaxIndices}})}
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a0199e67d6224f8abb4e2f31123a5ca9c}{FlushAndReset}}();}
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ textureIndex\ =\ 0.0f;}
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (uint32\_t\ i\ =\ 1;\ i\ <\ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_af34f7bd465efbe72b736be474c0386ec}{TextureSlotIndex}};\ i++)}
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (*\doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_ae338adbaa3fea2a290e473183372254d}{TextureSlots}}[i].get()\ ==\ *texture.get())}
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ textureIndex\ =\ (float)i;}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (textureIndex\ ==\ 0.0f)}
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_af34f7bd465efbe72b736be474c0386ec}{TextureSlotIndex}}\ >=\ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a7e9955cf146619db9a4ca23541f5499a}{MaxTextureSlots}})}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a0199e67d6224f8abb4e2f31123a5ca9c}{FlushAndReset}}();}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \ \ \ \ textureIndex\ =\ (float)\doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_af34f7bd465efbe72b736be474c0386ec}{TextureSlotIndex}};}
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_ae338adbaa3fea2a290e473183372254d}{TextureSlots}}[\doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_af34f7bd465efbe72b736be474c0386ec}{TextureSlotIndex}}]\ =\ texture;}
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_af34f7bd465efbe72b736be474c0386ec}{TextureSlotIndex}}++;}
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ quadVertexCount;\ i++)}
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a9009d2cc897dd8411e577b8ed8c662d2}{QuadVertexBufferPtr}}-\/>\doxymbox{\hyperlink{namespace_vesper_a4ea11ea49e0e5da6aec7dde16d09bca6}{Position}}\ =\ transform\ *\ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_acd48255e4cfeaf82352818560f497b4c}{QuadVertexPositions}}[i];}
+\DoxyCodeLine{00251\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a9009d2cc897dd8411e577b8ed8c662d2}{QuadVertexBufferPtr}}-\/>\doxymbox{\hyperlink{namespace_vesper_a0c6777f7a060892320669ac605c7e590}{Color}}\ =\ tintColor;}
+\DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a9009d2cc897dd8411e577b8ed8c662d2}{QuadVertexBufferPtr}}-\/>\doxymbox{\hyperlink{namespace_vesper_a31080e277722519e196c7446a056cabb}{TexCoord}}\ =\ texCoords[i];}
+\DoxyCodeLine{00253\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a9009d2cc897dd8411e577b8ed8c662d2}{QuadVertexBufferPtr}}-\/>\doxymbox{\hyperlink{namespace_vesper_a8f813cf5df6c8f6fff941e2e4761e2de}{TexIndex}}\ =\ textureIndex;}
+\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a9009d2cc897dd8411e577b8ed8c662d2}{QuadVertexBufferPtr}}-\/>\doxymbox{\hyperlink{namespace_vesper_a666486ba9101ef7d901d8c3991c13d53}{TilingFactor}}\ =\ tilingFactor;}
+\DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a9009d2cc897dd8411e577b8ed8c662d2}{QuadVertexBufferPtr}}++;}
+\DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00257\ }
+\DoxyCodeLine{00258\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_ae97e7dd79a5a2250191f042fab689343}{QuadIndexCount}}\ +=\ 6;}
+\DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a5a87f280fe2dbd18d48967e3097a2fb1}{Stats}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_1_1_statistics_af20c33069cfb4a0cccd5550dc977d9ba}{QuadCount}}++;}
+\DoxyCodeLine{00260\ }
+\DoxyCodeLine{00261\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a0199e67d6224f8abb4e2f31123a5ca9c}{Flush\+And\+Reset()}}, \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a150558bfc80d43d8a1ffdb1a2e6868f0}{Vesper::\+\+Renderer2\+DData::\+\+Max\+Indices}}, \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a7e9955cf146619db9a4ca23541f5499a}{Vesper::\+\+Renderer2\+DData::\+\+Max\+Texture\+Slots}}, \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_1_1_statistics_af20c33069cfb4a0cccd5550dc977d9ba}{Vesper::\+\+Renderer2\+D::\+\+Statistics::\+\+Quad\+Count}}, \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_ae97e7dd79a5a2250191f042fab689343}{Vesper::\+\+Renderer2\+DData::\+\+Quad\+Index\+Count}}, \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a9009d2cc897dd8411e577b8ed8c662d2}{Vesper::\+\+Renderer2\+DData::\+\+Quad\+Vertex\+Buffer\+Ptr}}, \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{Vesper::\+s\+\_\+\+Data}}, \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a5a87f280fe2dbd18d48967e3097a2fb1}{Vesper::\+\+Renderer2\+DData::\+\+Stats}}, \doxymbox{\hyperlink{namespace_vesper_a8f813cf5df6c8f6fff941e2e4761e2de}{Vesper::\+\+Quad\+Vertex::\+\+Tex\+Index}}, \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_af34f7bd465efbe72b736be474c0386ec}{Vesper::\+\+Renderer2\+DData::\+\+Texture\+Slot\+Index}}, and \doxymbox{\hyperlink{namespace_vesper_a666486ba9101ef7d901d8c3991c13d53}{Vesper::\+\+Quad\+Vertex::\+\+Tiling\+Factor}}.
+
+\Hypertarget{class_vesper_1_1_renderer2_d_a794ce83b342f15f7ff59eaf285e92527}\index{Vesper::Renderer2D@{Vesper::Renderer2D}!DrawQuadWithTexture@{DrawQuadWithTexture}}
+\index{DrawQuadWithTexture@{DrawQuadWithTexture}!Vesper::Renderer2D@{Vesper::Renderer2D}}
+\doxysubsubsection{\texorpdfstring{DrawQuadWithTexture()}{DrawQuadWithTexture()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_renderer2_d_a794ce83b342f15f7ff59eaf285e92527} 
+void Vesper::\+\+Renderer2\+D::\+\+Draw\+Quad\+With\+Texture (\begin{DoxyParamCaption}\item[{const glm::\+vec2 \&}]{position}{, }\item[{const glm::\+vec2 \&}]{size}{, }\item[{const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d}{Sub\+Texture2D}} $>$ \&}]{subtexture}{, }\item[{float}]{tiling\+Factor}{, }\item[{const glm::\+vec4}]{tint\+Color}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00319\ \ \ \ \ \{}
+\DoxyCodeLine{00320\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_afd78da6a4f0aa5af3c7f8d533bd22b49}{DrawQuadWithTexture}}(\{\ position.x,\ position.y,\ 0.0f\ \},\ size,\ subtexture,\ tilingFactor,\ tintColor);}
+\DoxyCodeLine{00321\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_vesper_1_1_renderer2_d_a359b7c453c967b9c28117cea83e65281}\index{Vesper::Renderer2D@{Vesper::Renderer2D}!DrawQuadWithTexture@{DrawQuadWithTexture}}
+\index{DrawQuadWithTexture@{DrawQuadWithTexture}!Vesper::Renderer2D@{Vesper::Renderer2D}}
+\doxysubsubsection{\texorpdfstring{DrawQuadWithTexture()}{DrawQuadWithTexture()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_renderer2_d_a359b7c453c967b9c28117cea83e65281} 
+void Vesper::\+\+Renderer2\+D::\+\+Draw\+Quad\+With\+Texture (\begin{DoxyParamCaption}\item[{const glm::\+vec2 \&}]{position}{, }\item[{const glm::\+vec2 \&}]{size}{, }\item[{const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_texture2_d}{Texture2D}} $>$ \&}]{texture}{, }\item[{float}]{tiling\+Factor}{, }\item[{const glm::\+vec4}]{tint\+Color}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00263\ \ \ \ \ \{}
+\DoxyCodeLine{00264\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_afd78da6a4f0aa5af3c7f8d533bd22b49}{DrawQuadWithTexture}}(\{\ position.x,\ position.y,\ 0.0f\ \},\ size,\ texture,\ tilingFactor,\ tintColor);}
+\DoxyCodeLine{00265\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_vesper_1_1_renderer2_d_af825e94b34dd71c4f4d43b1639941a83}\index{Vesper::Renderer2D@{Vesper::Renderer2D}!DrawQuadWithTexture@{DrawQuadWithTexture}}
+\index{DrawQuadWithTexture@{DrawQuadWithTexture}!Vesper::Renderer2D@{Vesper::Renderer2D}}
+\doxysubsubsection{\texorpdfstring{DrawQuadWithTexture()}{DrawQuadWithTexture()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_renderer2_d_af825e94b34dd71c4f4d43b1639941a83} 
+void Vesper::\+\+Renderer2\+D::\+\+Draw\+Quad\+With\+Texture (\begin{DoxyParamCaption}\item[{const glm::\+vec3 \&}]{position}{, }\item[{const glm::\+vec2 \&}]{size}{, }\item[{const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d}{Sub\+Texture2D}} $>$ \&}]{subtexture}{, }\item[{float}]{tiling\+Factor}{, }\item[{const glm::\+vec4}]{tint\+Color}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00323\ \ \ \ \ \{}
+\DoxyCodeLine{00324\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{00325\ }
+\DoxyCodeLine{00326\ \ \ \ \ \ \ \ \ glm::mat4\ transform\ =\ glm::translate(glm::mat4(1.0f),\ position)\ *\ glm::scale(glm::mat4(1.0f),\ \{\ size.x,\ size.y,\ 1.0f\ \});}
+\DoxyCodeLine{00327\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_afd78da6a4f0aa5af3c7f8d533bd22b49}{DrawQuadWithTexture}}(transform,\ subtexture,\ tilingFactor,\ tintColor);}
+\DoxyCodeLine{00328\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_vesper_1_1_renderer2_d_aa5eb19c474de115cb5d55857eb88d581}\index{Vesper::Renderer2D@{Vesper::Renderer2D}!DrawQuadWithTexture@{DrawQuadWithTexture}}
+\index{DrawQuadWithTexture@{DrawQuadWithTexture}!Vesper::Renderer2D@{Vesper::Renderer2D}}
+\doxysubsubsection{\texorpdfstring{DrawQuadWithTexture()}{DrawQuadWithTexture()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_renderer2_d_aa5eb19c474de115cb5d55857eb88d581} 
+void Vesper::\+\+Renderer2\+D::\+\+Draw\+Quad\+With\+Texture (\begin{DoxyParamCaption}\item[{const glm::\+vec3 \&}]{position}{, }\item[{const glm::\+vec2 \&}]{size}{, }\item[{const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_texture2_d}{Texture2D}} $>$ \&}]{texture}{, }\item[{float}]{tiling\+Factor}{, }\item[{const glm::\+vec4}]{tint\+Color}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00267\ \ \ \ \ \{}
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{00269\ }
+\DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ glm::mat4\ transform\ =\ glm::translate(glm::mat4(1.0f),\ position)\ *\ glm::scale(glm::mat4(1.0f),\ \{\ size.x,\ size.y,\ 1.0f\ \});}
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_afd78da6a4f0aa5af3c7f8d533bd22b49}{DrawQuadWithTexture}}(transform,\ texture,\ tilingFactor,\ tintColor);}
+\DoxyCodeLine{00272\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_vesper_1_1_renderer2_d_a4a87e37fd90cb8c33c65412c141db983}\index{Vesper::Renderer2D@{Vesper::Renderer2D}!EndScene@{EndScene}}
+\index{EndScene@{EndScene}!Vesper::Renderer2D@{Vesper::Renderer2D}}
+\doxysubsubsection{\texorpdfstring{EndScene()}{EndScene()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_renderer2_d_a4a87e37fd90cb8c33c65412c141db983} 
+void Vesper::\+\+Renderer2\+D::\+\+End\+Scene (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00161\ \ \ \ \ \{}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ uint32\_t\ dataSize\ =\ (uint32\_t)((uint8\_t*)\doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a9009d2cc897dd8411e577b8ed8c662d2}{QuadVertexBufferPtr}}\ -\/\ (uint8\_t*)\doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_ae10b87e5915f94cdf8133e2c7c309095}{QuadVertexBufferBase}});}
+\DoxyCodeLine{00164\ }
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a993274a6da46ea2cfcaa8825f419c9d8}{QuadVertexBuffer}}-\/>SetData(\doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_ae10b87e5915f94cdf8133e2c7c309095}{QuadVertexBufferBase}},\ dataSize);}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_ac79b4f772e92e9cc5489b7ed0bb9b659}{Flush}}();}
+\DoxyCodeLine{00167\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_ac79b4f772e92e9cc5489b7ed0bb9b659}{Flush()}}, \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_ae10b87e5915f94cdf8133e2c7c309095}{Vesper::\+\+Renderer2\+DData::\+\+Quad\+Vertex\+Buffer\+Base}}, \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a9009d2cc897dd8411e577b8ed8c662d2}{Vesper::\+\+Renderer2\+DData::\+\+Quad\+Vertex\+Buffer\+Ptr}}, and \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{Vesper::\+s\+\_\+\+Data}}.
+
+
+
+Referenced by \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a0199e67d6224f8abb4e2f31123a5ca9c}{Flush\+And\+Reset()}}, \doxymbox{\hyperlink{class_vesper_1_1_editor_layer_a984242ed582e7e06bcfd16bfe5de0a68}{Vesper::\+\+Editor\+Layer::\+\+On\+Update()}}, \doxymbox{\hyperlink{class_vesper_1_1_scene_acb757303df319af60095ae9a4354e440}{Vesper::\+\+Scene::\+\+On\+Update\+Editor()}}, and \doxymbox{\hyperlink{class_vesper_1_1_scene_a7a44a8fc07bf9c8ec2b08229a51441c6}{Vesper::\+\+Scene::\+\+On\+Update\+Runtime()}}.
+
+\Hypertarget{class_vesper_1_1_renderer2_d_ac79b4f772e92e9cc5489b7ed0bb9b659}\index{Vesper::Renderer2D@{Vesper::Renderer2D}!Flush@{Flush}}
+\index{Flush@{Flush}!Vesper::Renderer2D@{Vesper::Renderer2D}}
+\doxysubsubsection{\texorpdfstring{Flush()}{Flush()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_renderer2_d_ac79b4f772e92e9cc5489b7ed0bb9b659} 
+void Vesper::\+\+Renderer2\+D::\+\+Flush (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00170\ \ \ \ \ \{}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Bind\ textures}}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (uint32\_t\ i\ =\ 0;\ i\ <\ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_af34f7bd465efbe72b736be474c0386ec}{TextureSlotIndex}};\ i++)}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_ae338adbaa3fea2a290e473183372254d}{TextureSlots}}[i]-\/>Bind(i);}
+\DoxyCodeLine{00175\ }
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_render_command_ae7d3374adebb2f37f3e74a10e04d405e}{RenderCommand::DrawIndexed}}(\doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a5fef659637993c506a34623b54e7aa22}{QuadVertexArray}},\ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_ae97e7dd79a5a2250191f042fab689343}{QuadIndexCount}});}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a5a87f280fe2dbd18d48967e3097a2fb1}{Stats}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_1_1_statistics_a20255a808e6f6b8fcab59fbfc11bf673}{DrawCalls}}++;}
+\DoxyCodeLine{00178\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_1_1_statistics_a20255a808e6f6b8fcab59fbfc11bf673}{Vesper::\+\+Renderer2\+D::\+\+Statistics::\+\+Draw\+Calls}}, \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_ae97e7dd79a5a2250191f042fab689343}{Vesper::\+\+Renderer2\+DData::\+\+Quad\+Index\+Count}}, \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{Vesper::\+s\+\_\+\+Data}}, \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a5a87f280fe2dbd18d48967e3097a2fb1}{Vesper::\+\+Renderer2\+DData::\+\+Stats}}, and \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_af34f7bd465efbe72b736be474c0386ec}{Vesper::\+\+Renderer2\+DData::\+\+Texture\+Slot\+Index}}.
+
+
+
+Referenced by \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a4a87e37fd90cb8c33c65412c141db983}{End\+Scene()}}.
+
+\Hypertarget{class_vesper_1_1_renderer2_d_a0199e67d6224f8abb4e2f31123a5ca9c}\index{Vesper::Renderer2D@{Vesper::Renderer2D}!FlushAndReset@{FlushAndReset}}
+\index{FlushAndReset@{FlushAndReset}!Vesper::Renderer2D@{Vesper::Renderer2D}}
+\doxysubsubsection{\texorpdfstring{FlushAndReset()}{FlushAndReset()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_renderer2_d_a0199e67d6224f8abb4e2f31123a5ca9c} 
+void Vesper::\+\+Renderer2\+D::\+\+Flush\+And\+Reset (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00508\ \ \ \ \ \{}
+\DoxyCodeLine{00509\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a4a87e37fd90cb8c33c65412c141db983}{EndScene}}();}
+\DoxyCodeLine{00510\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_ae97e7dd79a5a2250191f042fab689343}{QuadIndexCount}}\ =\ 0;}
+\DoxyCodeLine{00511\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a9009d2cc897dd8411e577b8ed8c662d2}{QuadVertexBufferPtr}}\ =\ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_ae10b87e5915f94cdf8133e2c7c309095}{QuadVertexBufferBase}};}
+\DoxyCodeLine{00512\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_af34f7bd465efbe72b736be474c0386ec}{TextureSlotIndex}}\ =\ 1;}
+\DoxyCodeLine{00513\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a4a87e37fd90cb8c33c65412c141db983}{End\+Scene()}}, \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_ae97e7dd79a5a2250191f042fab689343}{Vesper::\+\+Renderer2\+DData::\+\+Quad\+Index\+Count}}, \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_ae10b87e5915f94cdf8133e2c7c309095}{Vesper::\+\+Renderer2\+DData::\+\+Quad\+Vertex\+Buffer\+Base}}, \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a9009d2cc897dd8411e577b8ed8c662d2}{Vesper::\+\+Renderer2\+DData::\+\+Quad\+Vertex\+Buffer\+Ptr}}, \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{Vesper::\+s\+\_\+\+Data}}, and \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_af34f7bd465efbe72b736be474c0386ec}{Vesper::\+\+Renderer2\+DData::\+\+Texture\+Slot\+Index}}.
+
+
+
+Referenced by \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_aba269c4ba2ba99b13b47c9e71bf1f8e3}{Draw\+Quad()}}, \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_ac61593eac73ea6fabba060b34c987302}{Draw\+Quad\+Rotated()}}, \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_ac4b8d7d28d6384f102cb0f7690ccc391}{Draw\+Quad\+Rotated\+With\+Texture()}}, \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a41c4aa9d715e2ea03825360305989f00}{Draw\+Quad\+Rotated\+With\+Texture()}}, \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a273c91ba7abef4d2a99640bf98a4a7d4}{Draw\+Quad\+With\+Texture()}}, and \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_afd78da6a4f0aa5af3c7f8d533bd22b49}{Draw\+Quad\+With\+Texture()}}.
+
+\Hypertarget{class_vesper_1_1_renderer2_d_ac4635220719834831187e63de81046f4}\index{Vesper::Renderer2D@{Vesper::Renderer2D}!GetStats@{GetStats}}
+\index{GetStats@{GetStats}!Vesper::Renderer2D@{Vesper::Renderer2D}}
+\doxysubsubsection{\texorpdfstring{GetStats()}{GetStats()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_renderer2_d_ac4635220719834831187e63de81046f4} 
+\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_1_1_statistics}{Renderer2\+D::\+\+Statistics}} Vesper::\+\+Renderer2\+D::\+\+Get\+Stats (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00503\ \ \ \ \ \{}
+\DoxyCodeLine{00504\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a5a87f280fe2dbd18d48967e3097a2fb1}{Stats}};}
+\DoxyCodeLine{00505\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{Vesper::\+s\+\_\+\+Data}}, and \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a5a87f280fe2dbd18d48967e3097a2fb1}{Vesper::\+\+Renderer2\+DData::\+\+Stats}}.
+
+
+
+Referenced by \doxymbox{\hyperlink{class_vesper_1_1_editor_layer_af5e79508040b18e9fa455830692f6ed0}{Vesper::\+\+Editor\+Layer::\+\+On\+Im\+Gui\+Render()}}.
+
+\Hypertarget{class_vesper_1_1_renderer2_d_a1a66d8f166230f172c5f523d092d00f8}\index{Vesper::Renderer2D@{Vesper::Renderer2D}!GetWhiteTexture@{GetWhiteTexture}}
+\index{GetWhiteTexture@{GetWhiteTexture}!Vesper::Renderer2D@{Vesper::Renderer2D}}
+\doxysubsubsection{\texorpdfstring{GetWhiteTexture()}{GetWhiteTexture()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_renderer2_d_a1a66d8f166230f172c5f523d092d00f8} 
+\doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_texture2_d}{Texture2D}} $>$ Vesper::\+\+Renderer2\+D::\+\+Get\+White\+Texture (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00493\ \ \ \ \ \{}
+\DoxyCodeLine{00494\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a56735598d907904bb8f954ee343f1210}{WhiteTexture}};}
+\DoxyCodeLine{00495\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{Vesper::\+s\+\_\+\+Data}}.
+
+\Hypertarget{class_vesper_1_1_renderer2_d_a4fbfb5a17dac37385dfcf13a0f457ff5}\index{Vesper::Renderer2D@{Vesper::Renderer2D}!Init@{Init}}
+\index{Init@{Init}!Vesper::Renderer2D@{Vesper::Renderer2D}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_renderer2_d_a4fbfb5a17dac37385dfcf13a0f457ff5} 
+void Vesper::\+\+Renderer2\+D::\+\+Init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00056\ \ \ \ \ \{}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a5fef659637993c506a34623b54e7aa22}{QuadVertexArray}}\ =\ (\doxymbox{\hyperlink{class_vesper_1_1_vertex_array_a4adc907aa59d48b933f0aa639f3b9988}{VertexArray::Create}}());}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a993274a6da46ea2cfcaa8825f419c9d8}{QuadVertexBuffer}}\ =\ \doxymbox{\hyperlink{class_vesper_1_1_vertex_buffer_aebb8c3b5192529237b59c79a98f18a55}{VertexBuffer::Create}}(\doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a12d7aaf001a5f0a0830cb1d1de6aa242}{MaxVertices}}\ *\ \textcolor{keyword}{sizeof}(QuadVertex));}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a993274a6da46ea2cfcaa8825f419c9d8}{QuadVertexBuffer}}-\/>SetLayout(\{}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a8a8a1d211464d4bdee46db3c75bfa121}{ShaderDataType::Float3}},\ \textcolor{stringliteral}{"{}a\_Position"{}}\ \ \},}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a33116adc6690289da9b82ea736864eeb}{ShaderDataType::Float4}},\ \textcolor{stringliteral}{"{}a\_Color"{}}\ \ \ \ \ \},}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a6694430a2b471b5d2de071f2ef1fdc57}{ShaderDataType::Float2}},\ \textcolor{stringliteral}{"{}a\_TexCoord"{}}\ \ \ \},}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a22ae0e2b89e5e3d477f988cc36d3272b}{ShaderDataType::Float}},\ \ \textcolor{stringliteral}{"{}a\_TexIndex"{}}\ \ \ \},}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a22ae0e2b89e5e3d477f988cc36d3272b}{ShaderDataType::Float}},\ \ \textcolor{stringliteral}{"{}a\_TilingFactor"{}}\}}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a5fef659637993c506a34623b54e7aa22}{QuadVertexArray}}-\/>AddVertexBuffer(\doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a993274a6da46ea2cfcaa8825f419c9d8}{QuadVertexBuffer}});}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_ae10b87e5915f94cdf8133e2c7c309095}{QuadVertexBufferBase}}\ =\ \textcolor{keyword}{new}\ QuadVertex[\doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a12d7aaf001a5f0a0830cb1d1de6aa242}{MaxVertices}}];}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ uint32\_t*\ quadIndices\ =\ \textcolor{keyword}{new}\ uint32\_t[\doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a150558bfc80d43d8a1ffdb1a2e6868f0}{MaxIndices}}];}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ uint32\_t\ offset\ =\ 0;}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (uint32\_t\ i\ =\ 0;\ i\ <\ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a150558bfc80d43d8a1ffdb1a2e6868f0}{MaxIndices}};\ i\ +=\ 6)\ \{}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ quadIndices[i\ +\ 0]\ =\ offset\ +\ 0;}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ quadIndices[i\ +\ 1]\ =\ offset\ +\ 1;}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ quadIndices[i\ +\ 2]\ =\ offset\ +\ 2;}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ quadIndices[i\ +\ 3]\ =\ offset\ +\ 2;}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ quadIndices[i\ +\ 4]\ =\ offset\ +\ 3;}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ quadIndices[i\ +\ 5]\ =\ offset\ +\ 0;}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ offset\ +=\ 4;}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref<IndexBuffer>}}\ quadIB;}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ quadIB\ =\ (\doxymbox{\hyperlink{class_vesper_1_1_index_buffer_a77def1cbe3dd186ad6d31c5b53c14d88}{IndexBuffer::Create}}(quadIndices,\ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a150558bfc80d43d8a1ffdb1a2e6868f0}{MaxIndices}}));}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a5fef659637993c506a34623b54e7aa22}{QuadVertexArray}}-\/>SetIndexBuffer(quadIB);}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}[]\ quadIndices;}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a56735598d907904bb8f954ee343f1210}{WhiteTexture}}\ =\ \doxymbox{\hyperlink{class_vesper_1_1_texture2_d_ac7a064af2d05049e13f237ae2a508f22}{Texture2D::Create}}(1,\ 1);}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ uint32\_t\ whiteTextureData\ =\ 0xffffffff;}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a56735598d907904bb8f954ee343f1210}{WhiteTexture}}-\/>SetData(\&whiteTextureData,\ \textcolor{keyword}{sizeof}(uint32\_t));}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ int32\_t\ samplers[\doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a7e9955cf146619db9a4ca23541f5499a}{MaxTextureSlots}}];}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (uint32\_t\ i\ =\ 0;\ i\ <\ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a7e9955cf146619db9a4ca23541f5499a}{MaxTextureSlots}};\ i++)}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ samplers[i]\ =\ i;}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a1eac9ac0db96f9d4c4c4075ebe1341aa}{TextureShader}}\ =\ \doxymbox{\hyperlink{class_vesper_1_1_shader_a84e4327fa98e045cc3368f476ea712d6}{Shader::Create}}(\textcolor{stringliteral}{"{}../../Vesper-\/Editor/assets/shaders/Texture.glsl"{}});}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a1eac9ac0db96f9d4c4c4075ebe1341aa}{TextureShader}}-\/>Bind();}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a1eac9ac0db96f9d4c4c4075ebe1341aa}{TextureShader}}-\/>SetIntArray(\textcolor{stringliteral}{"{}u\_Textures"{}},\ samplers,\ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a7e9955cf146619db9a4ca23541f5499a}{MaxTextureSlots}});}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_ae338adbaa3fea2a290e473183372254d}{TextureSlots}}[0]\ =\ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a56735598d907904bb8f954ee343f1210}{WhiteTexture}};}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_acd48255e4cfeaf82352818560f497b4c}{QuadVertexPositions}}[0]\ =\ \{\ -\/0.5f,\ -\/0.5f,\ 0.0f,\ 1.0f\ \};}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_acd48255e4cfeaf82352818560f497b4c}{QuadVertexPositions}}[1]\ =\ \{\ 0.5f,\ -\/0.5f,\ 0.0f,\ 1.0f\ \};}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_acd48255e4cfeaf82352818560f497b4c}{QuadVertexPositions}}[2]\ =\ \{\ 0.5f,\ \ 0.5f,\ 0.0f,\ 1.0f\ \};}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_acd48255e4cfeaf82352818560f497b4c}{QuadVertexPositions}}[3]\ =\ \{\ -\/0.5f,\ \ 0.5f,\ 0.0f,\ 1.0f\ \};}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a22ae0e2b89e5e3d477f988cc36d3272b}{Vesper::\+\+Float}}, \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a6694430a2b471b5d2de071f2ef1fdc57}{Vesper::\+\+Float2}}, \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a8a8a1d211464d4bdee46db3c75bfa121}{Vesper::\+\+Float3}}, \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a33116adc6690289da9b82ea736864eeb}{Vesper::\+\+Float4}}, \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a150558bfc80d43d8a1ffdb1a2e6868f0}{Vesper::\+\+Renderer2\+DData::\+\+Max\+Indices}}, \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a7e9955cf146619db9a4ca23541f5499a}{Vesper::\+\+Renderer2\+DData::\+\+Max\+Texture\+Slots}}, \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a12d7aaf001a5f0a0830cb1d1de6aa242}{Vesper::\+\+Renderer2\+DData::\+\+Max\+Vertices}}, \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_ae10b87e5915f94cdf8133e2c7c309095}{Vesper::\+\+Renderer2\+DData::\+\+Quad\+Vertex\+Buffer\+Base}}, and \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{Vesper::\+s\+\_\+\+Data}}.
+
+
+
+Referenced by \doxymbox{\hyperlink{class_vesper_1_1_renderer_af44c320528448c97bdb376d77abfc38f}{Vesper::\+\+Renderer::\+\+Init()}}.
+
+\Hypertarget{class_vesper_1_1_renderer2_d_a2230d61d96994b384b6ef793d1ffb506}\index{Vesper::Renderer2D@{Vesper::Renderer2D}!ResetStats@{ResetStats}}
+\index{ResetStats@{ResetStats}!Vesper::Renderer2D@{Vesper::Renderer2D}}
+\doxysubsubsection{\texorpdfstring{ResetStats()}{ResetStats()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_renderer2_d_a2230d61d96994b384b6ef793d1ffb506} 
+void Vesper::\+\+Renderer2\+D::\+\+Reset\+Stats (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00498\ \ \ \ \ \{}
+\DoxyCodeLine{00499\ \ \ \ \ \ \ \ \ memset(\&\doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a5a87f280fe2dbd18d48967e3097a2fb1}{Stats}},\ 0,\ \textcolor{keyword}{sizeof}(\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_1_1_statistics}{Statistics}}));}
+\DoxyCodeLine{00500\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{Vesper::\+s\+\_\+\+Data}}, and \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a5a87f280fe2dbd18d48967e3097a2fb1}{Vesper::\+\+Renderer2\+DData::\+\+Stats}}.
+
+
+
+Referenced by \doxymbox{\hyperlink{class_vesper_1_1_editor_layer_a984242ed582e7e06bcfd16bfe5de0a68}{Vesper::\+\+Editor\+Layer::\+\+On\+Update()}}.
+
+\Hypertarget{class_vesper_1_1_renderer2_d_a65dbf36aef449ad46517ae5d760b691d}\index{Vesper::Renderer2D@{Vesper::Renderer2D}!Shutdown@{Shutdown}}
+\index{Shutdown@{Shutdown}!Vesper::Renderer2D@{Vesper::Renderer2D}}
+\doxysubsubsection{\texorpdfstring{Shutdown()}{Shutdown()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_renderer2_d_a65dbf36aef449ad46517ae5d760b691d} 
+void Vesper::\+\+Renderer2\+D::\+\+Shutdown (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00117\ \ \ \ \ \{}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}[]\ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_ae10b87e5915f94cdf8133e2c7c309095}{QuadVertexBufferBase}};}
+\DoxyCodeLine{00121\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_ae10b87e5915f94cdf8133e2c7c309095}{Vesper::\+\+Renderer2\+DData::\+\+Quad\+Vertex\+Buffer\+Base}}, and \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{Vesper::\+s\+\_\+\+Data}}.
+
+\Hypertarget{class_vesper_1_1_renderer2_d_aa7d684bfdac8fe7ea5c5b4317d9a6874}\index{Vesper::Renderer2D@{Vesper::Renderer2D}!StartBatch@{StartBatch}}
+\index{StartBatch@{StartBatch}!Vesper::Renderer2D@{Vesper::Renderer2D}}
+\doxysubsubsection{\texorpdfstring{StartBatch()}{StartBatch()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_renderer2_d_aa7d684bfdac8fe7ea5c5b4317d9a6874} 
+void Vesper::\+\+Renderer2\+D::\+\+Start\+Batch (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00516\ \ \ \ \ \{}
+\DoxyCodeLine{00517\ }
+\DoxyCodeLine{00518\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_ae97e7dd79a5a2250191f042fab689343}{QuadIndexCount}}\ =\ 0;}
+\DoxyCodeLine{00519\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a9009d2cc897dd8411e577b8ed8c662d2}{QuadVertexBufferPtr}}\ =\ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_ae10b87e5915f94cdf8133e2c7c309095}{QuadVertexBufferBase}};}
+\DoxyCodeLine{00520\ }
+\DoxyCodeLine{00521\ \ \ \ \ \ \ \ \ \textcolor{comment}{//s\_Data.CircleIndexCount\ =\ 0;}}
+\DoxyCodeLine{00522\ \ \ \ \ \ \ \ \ \textcolor{comment}{//s\_Data.CircleVertexBufferPtr\ =\ s\_Data.CircleVertexBufferBase;}}
+\DoxyCodeLine{00523\ }
+\DoxyCodeLine{00524\ \ \ \ \ \ \ \ \ \textcolor{comment}{//s\_Data.LineVertexCount\ =\ 0;}}
+\DoxyCodeLine{00525\ \ \ \ \ \ \ \ \ \textcolor{comment}{//s\_Data.LineVertexBufferPtr\ =\ s\_Data.LineVertexBufferBase;}}
+\DoxyCodeLine{00526\ }
+\DoxyCodeLine{00527\ \ \ \ \ \ \ \ \ \textcolor{comment}{//s\_Data.TextIndexCount\ =\ 0;}}
+\DoxyCodeLine{00528\ \ \ \ \ \ \ \ \ \textcolor{comment}{//s\_Data.TextVertexBufferPtr\ =\ s\_Data.TextVertexBufferBase;}}
+\DoxyCodeLine{00529\ }
+\DoxyCodeLine{00530\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_af34f7bd465efbe72b736be474c0386ec}{TextureSlotIndex}}\ =\ 1;}
+\DoxyCodeLine{00531\ }
+\DoxyCodeLine{00532\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_ae97e7dd79a5a2250191f042fab689343}{Vesper::\+\+Renderer2\+DData::\+\+Quad\+Index\+Count}}, \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_ae10b87e5915f94cdf8133e2c7c309095}{Vesper::\+\+Renderer2\+DData::\+\+Quad\+Vertex\+Buffer\+Base}}, \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a9009d2cc897dd8411e577b8ed8c662d2}{Vesper::\+\+Renderer2\+DData::\+\+Quad\+Vertex\+Buffer\+Ptr}}, \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{Vesper::\+s\+\_\+\+Data}}, and \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_af34f7bd465efbe72b736be474c0386ec}{Vesper::\+\+Renderer2\+DData::\+\+Texture\+Slot\+Index}}.
+
+
+
+Referenced by \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a479365533b0aeb53f190646381961d22}{Begin\+Scene()}}.
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+Vesper/\+src/\+\+Vesper/\+\+Renderer/\+\doxymbox{\hyperlink{_renderer2_d_8h}{Renderer2\+D.\+h}}\item 
+Vesper/\+src/\+\+Vesper/\+\+Renderer/\+\doxymbox{\hyperlink{_renderer2_d_8cpp}{Renderer2\+D.\+cpp}}\end{DoxyCompactItemize}

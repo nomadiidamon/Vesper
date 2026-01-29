@@ -1,0 +1,34 @@
+\doxysection{Defines\+\_\+\+Macros.\+h}
+\hypertarget{_defines___macros_8h_source}{}\label{_defines___macros_8h_source}\index{Vesper/src/Vesper/Core/Defines\_Macros.h@{Vesper/src/Vesper/Core/Defines\_Macros.h}}
+\doxymbox{\hyperlink{_defines___macros_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{pragma}\ \textcolor{preprocessor}{once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{comment}{///\ DEFINES}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{BIT}\textcolor{preprocessor}{(}\textcolor{preprocessor}{x}\textcolor{preprocessor}{)}\ \textcolor{preprocessor}{(}1\ \textcolor{preprocessor}{<<}\ \textcolor{preprocessor}{x}\textcolor{preprocessor}{)}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{VZ\_BIND\_EVENT\_FN}\textcolor{preprocessor}{(}\textcolor{preprocessor}{fn}\textcolor{preprocessor}{)}\ \textcolor{preprocessor}{[}\textcolor{keyword}{this}\textcolor{preprocessor}{]}\textcolor{preprocessor}{(}\textcolor{keyword}{auto}\textcolor{preprocessor}{\&\&}\textcolor{preprocessor}{...}\ \textcolor{preprocessor}{args}\textcolor{preprocessor}{)}\ \textcolor{preprocessor}{-\/>}\ \textcolor{keyword}{decltype}\textcolor{preprocessor}{(}\textcolor{keyword}{auto}\textcolor{preprocessor}{)}\ \textcolor{preprocessor}{\{}\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{this}\textcolor{preprocessor}{-\/>}\textcolor{preprocessor}{fn}\textcolor{preprocessor}{(}\textcolor{preprocessor}{std}\textcolor{preprocessor}{::}\textcolor{preprocessor}{forward}\textcolor{preprocessor}{<}\textcolor{keyword}{decltype}\textcolor{preprocessor}{(}\textcolor{preprocessor}{args}\textcolor{preprocessor}{)}\textcolor{preprocessor}{>}\textcolor{preprocessor}{(}\textcolor{preprocessor}{args}\textcolor{preprocessor}{)}\textcolor{preprocessor}{...}\textcolor{preprocessor}{)}\textcolor{preprocessor}{;}\ \textcolor{preprocessor}{\}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{BIND\_EVENT\_FN}\textcolor{preprocessor}{(}\textcolor{preprocessor}{x}\textcolor{preprocessor}{)}\ \textcolor{preprocessor}{std}\textcolor{preprocessor}{::}\textcolor{preprocessor}{bind}\textcolor{preprocessor}{(}\textcolor{preprocessor}{\&}\textcolor{preprocessor}{Application}\textcolor{preprocessor}{::}\textcolor{preprocessor}{x}\textcolor{preprocessor}{,}\ \textcolor{keyword}{this}\textcolor{preprocessor}{,}\ \textcolor{preprocessor}{std}\textcolor{preprocessor}{::}\textcolor{preprocessor}{placeholders}\textcolor{preprocessor}{::}\textcolor{preprocessor}{\_1}\textcolor{preprocessor}{)}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{comment}{///\ TYPE\ ALIASES}}
+\DoxyCodeLine{00010\ \textcolor{keyword}{namespace}\ \doxymbox{\hyperlink{namespace_vesper}{Vesper}}}
+\DoxyCodeLine{00011\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ \doxymbox{\hyperlink{namespace_vesper}{T}}>}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{using}\ \doxymbox{\hyperlink{namespace_vesper}{Scope}}\ =\ \doxymbox{\hyperlink{namespace_vesper}{std}}::\doxymbox{\hyperlink{namespace_vesper}{unique\_ptr}}<\doxymbox{\hyperlink{namespace_vesper}{T}}>;}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}...\ Args>}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{constexpr}\ \doxymbox{\hyperlink{namespace_vesper_a37fd1cd7d536a4b07dc0a734f8fde936}{Scope}}<\doxymbox{\hyperlink{namespace_vesper_a37fd1cd7d536a4b07dc0a734f8fde936}{T}}>\ \doxymbox{\hyperlink{namespace_vesper_a37fd1cd7d536a4b07dc0a734f8fde936}{CreateScope}}(\doxymbox{\hyperlink{namespace_vesper_a37fd1cd7d536a4b07dc0a734f8fde936}{Args}}\&\&...\ \doxymbox{\hyperlink{namespace_vesper_a37fd1cd7d536a4b07dc0a734f8fde936}{args}})}
+\DoxyCodeLine{00016\ \ \ \ \ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::make\_unique<T>(std::forward<Args>(args)...);}
+\DoxyCodeLine{00018\ \ \ \ \ \}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{using}\ Ref\ =\ std::shared\_ptr<T>;}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}...\ Args>}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{constexpr}\ \doxymbox{\hyperlink{namespace_vesper_a313930b55375b2f4dd36375b56f11047}{Ref}}<\doxymbox{\hyperlink{namespace_vesper_a313930b55375b2f4dd36375b56f11047}{T}}>\ \doxymbox{\hyperlink{namespace_vesper_a313930b55375b2f4dd36375b56f11047}{CreateRef}}(\doxymbox{\hyperlink{namespace_vesper_a313930b55375b2f4dd36375b56f11047}{Args}}\&\&...\ \doxymbox{\hyperlink{namespace_vesper_a313930b55375b2f4dd36375b56f11047}{args}})}
+\DoxyCodeLine{00024\ \ \ \ \ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::make\_shared<T>(std::forward<Args>(args)...);}
+\DoxyCodeLine{00026\ \ \ \ \ \}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \}}
+
+\end{DoxyCode}

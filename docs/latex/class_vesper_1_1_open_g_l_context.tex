@@ -1,0 +1,156 @@
+\doxysection{Vesper::\+Open\+GLContext Class Reference}
+\hypertarget{class_vesper_1_1_open_g_l_context}{}\label{class_vesper_1_1_open_g_l_context}\index{Vesper::OpenGLContext@{Vesper::OpenGLContext}}
+
+
+{\ttfamily \+\#include $<$Open\+GLContext.\+h$>$}
+
+Inheritance diagram for Vesper::\+Open\+GLContext:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_vesper_1_1_open_g_l_context}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_vesper_1_1_open_g_l_context_a5cfb7408c0e8c95ce558121ef16dc12e}{Open\+GLContext}} (GLFWwindow \texorpdfstring{$\ast$}{*}window\+Handle)
+\item 
+virtual \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_context_a222b679367afb98d5b4b7a56f0b833bc}{\texorpdfstring{$\sim$}{\string~}\+Open\+GLContext}} ()
+\item 
+void \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_context_a1065ac4bcb2710bf216ad6ef98e73318}{Init}} () override
+\item 
+void \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_context_a6e2645931d1e2ffdd5e6f8130f17f80f}{Swap\+Buffers}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_vesper_1_1_graphics_context}{Vesper::\+\+Graphics\+Context}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \doxymbox{\hyperlink{class_vesper_1_1_graphics_context_af5f44adc2b3221b0724998f669c4ce52}{\texorpdfstring{$\sim$}{\string~}\+Graphics\+Context}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+GLFWwindow \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_context_a2b94fcba4a84db55fbeeddc470902c66}{m\+\_\+\+Window\+Handle}}
+\end{DoxyCompactItemize}
+
+
+\label{doc-constructors}
+\Hypertarget{class_vesper_1_1_open_g_l_context_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_vesper_1_1_open_g_l_context_a5cfb7408c0e8c95ce558121ef16dc12e}\index{Vesper::OpenGLContext@{Vesper::OpenGLContext}!OpenGLContext@{OpenGLContext}}
+\index{OpenGLContext@{OpenGLContext}!Vesper::OpenGLContext@{Vesper::OpenGLContext}}
+\doxysubsubsection{\texorpdfstring{OpenGLContext()}{OpenGLContext()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_open_g_l_context_a5cfb7408c0e8c95ce558121ef16dc12e} 
+Vesper::\+\+Open\+GLContext::\+\+Open\+GLContext (\begin{DoxyParamCaption}\item[{GLFWwindow \texorpdfstring{$\ast$}{*}}]{window\+Handle}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_context_a2b94fcba4a84db55fbeeddc470902c66}{m\_WindowHandle}}(windowHandle) }
+\DoxyCodeLine{00013\ \ \ \ \ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_asserts_8h_a3b51b77f75997760894138afc89403c9}{VZ\_CORE\_ASSERT}}(windowHandle,\ \textcolor{stringliteral}{"{}Window\ handle\ is\ null!"{}});}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_context_a2b94fcba4a84db55fbeeddc470902c66}{m\+\_\+\+Window\+Handle}}.
+
+\Hypertarget{class_vesper_1_1_open_g_l_context_a222b679367afb98d5b4b7a56f0b833bc}\index{Vesper::OpenGLContext@{Vesper::OpenGLContext}!````~OpenGLContext@{\texorpdfstring{$\sim$}{\string~}OpenGLContext}}
+\index{````~OpenGLContext@{\texorpdfstring{$\sim$}{\string~}OpenGLContext}!Vesper::OpenGLContext@{Vesper::OpenGLContext}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}OpenGLContext()}{\string~OpenGLContext()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_open_g_l_context_a222b679367afb98d5b4b7a56f0b833bc} 
+Vesper::\+\+Open\+GLContext::\+\texorpdfstring{$\sim$}{\string~}\+Open\+GLContext (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00019\ \ \ \ \ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\label{doc-func-members}
+\Hypertarget{class_vesper_1_1_open_g_l_context_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_vesper_1_1_open_g_l_context_a1065ac4bcb2710bf216ad6ef98e73318}\index{Vesper::OpenGLContext@{Vesper::OpenGLContext}!Init@{Init}}
+\index{Init@{Init}!Vesper::OpenGLContext@{Vesper::OpenGLContext}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_open_g_l_context_a1065ac4bcb2710bf216ad6ef98e73318} 
+void Vesper::\+\+Open\+GLContext::\+\+Init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \doxymbox{\hyperlink{class_vesper_1_1_graphics_context_a69ff1719f52df244b9980617755f57e6}{Vesper::\+\+Graphics\+Context}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00023\ \ \ \ \ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ glfwMakeContextCurrent(\doxymbox{\hyperlink{class_vesper_1_1_open_g_l_context_a2b94fcba4a84db55fbeeddc470902c66}{m\_WindowHandle}});}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ status\ =\ gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_asserts_8h_a3b51b77f75997760894138afc89403c9}{VZ\_CORE\_ASSERT}}(status,\ \textcolor{stringliteral}{"{}Failed\ to\ initialize\ Glad!"{}});}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_log_8h_adb5d169d80c40496a160a4fd90ebca37}{VZ\_CORE\_INFO}}(\textcolor{stringliteral}{"{}OpenGL\ Info:"{}});}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_log_8h_adb5d169d80c40496a160a4fd90ebca37}{VZ\_CORE\_INFO}}(\textcolor{stringliteral}{"{}\ \ Vendor:\ \{0\}"{}},\ (\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *)glGetString(GL\_VENDOR));}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_log_8h_adb5d169d80c40496a160a4fd90ebca37}{VZ\_CORE\_INFO}}(\textcolor{stringliteral}{"{}\ \ Renderer:\ \{0\}"{}},\ (\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *)glGetString(GL\_RENDERER));}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_log_8h_adb5d169d80c40496a160a4fd90ebca37}{VZ\_CORE\_INFO}}(\textcolor{stringliteral}{"{}\ \ Version:\ \{0\}"{}},\ (\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *)glGetString(GL\_VERSION));}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#ifdef\ VZ\_ENABLE\_ASSERTS }}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ major\ =\ 0,\ minor\ =\ 0;}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ glGetIntegerv(GL\_MAJOR\_VERSION,\ \&major);}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ glGetIntegerv(GL\_MINOR\_VERSION,\ \&minor);}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_asserts_8h_a3b51b77f75997760894138afc89403c9}{VZ\_CORE\_ASSERT}}(major\ >\ 4\ ||\ (major\ ==\ 4\ \&\&\ minor\ >=\ 5),\ \textcolor{stringliteral}{"{}Vesper\ requires\ at\ least\ OpenGL\ version\ 4.5!"{}});}
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#endif }}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_context_a2b94fcba4a84db55fbeeddc470902c66}{m\+\_\+\+Window\+Handle}}.
+
+\Hypertarget{class_vesper_1_1_open_g_l_context_a6e2645931d1e2ffdd5e6f8130f17f80f}\index{Vesper::OpenGLContext@{Vesper::OpenGLContext}!SwapBuffers@{SwapBuffers}}
+\index{SwapBuffers@{SwapBuffers}!Vesper::OpenGLContext@{Vesper::OpenGLContext}}
+\doxysubsubsection{\texorpdfstring{SwapBuffers()}{SwapBuffers()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_open_g_l_context_a6e2645931d1e2ffdd5e6f8130f17f80f} 
+void Vesper::\+\+Open\+GLContext::\+\+Swap\+Buffers (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \doxymbox{\hyperlink{class_vesper_1_1_graphics_context_a91344163e3085d00661d03884cfad28a}{Vesper::\+\+Graphics\+Context}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00045\ \ \ \ \ \{}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ glfwSwapBuffers(\doxymbox{\hyperlink{class_vesper_1_1_open_g_l_context_a2b94fcba4a84db55fbeeddc470902c66}{m\_WindowHandle}});}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_context_a2b94fcba4a84db55fbeeddc470902c66}{m\+\_\+\+Window\+Handle}}.
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_vesper_1_1_open_g_l_context_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_vesper_1_1_open_g_l_context_a2b94fcba4a84db55fbeeddc470902c66}\index{Vesper::OpenGLContext@{Vesper::OpenGLContext}!m\_WindowHandle@{m\_WindowHandle}}
+\index{m\_WindowHandle@{m\_WindowHandle}!Vesper::OpenGLContext@{Vesper::OpenGLContext}}
+\doxysubsubsection{\texorpdfstring{m\_WindowHandle}{m\_WindowHandle}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_open_g_l_context_a2b94fcba4a84db55fbeeddc470902c66} 
+GLFWwindow\texorpdfstring{$\ast$}{*} Vesper::\+\+Open\+GLContext::\+m\+\_\+\+Window\+Handle\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_context_a1065ac4bcb2710bf216ad6ef98e73318}{Init()}}, \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_context_a5cfb7408c0e8c95ce558121ef16dc12e}{Open\+GLContext()}}, and \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_context_a6e2645931d1e2ffdd5e6f8130f17f80f}{Swap\+Buffers()}}.
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+Vesper/\+src/\+\+Render\+API/\+\+Open\+GL/\+\doxymbox{\hyperlink{_open_g_l_context_8h}{Open\+GLContext.\+h}}\item 
+Vesper/\+src/\+\+Render\+API/\+\+Open\+GL/\+\doxymbox{\hyperlink{_open_g_l_context_8cpp}{Open\+GLContext.\+cpp}}\end{DoxyCompactItemize}

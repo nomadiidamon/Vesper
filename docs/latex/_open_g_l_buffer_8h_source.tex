@@ -1,0 +1,46 @@
+\doxysection{Open\+GLBuffer.\+h}
+\hypertarget{_open_g_l_buffer_8h_source}{}\label{_open_g_l_buffer_8h_source}\index{Vesper/src/RenderAPI/OpenGL/OpenGLBuffer.h@{Vesper/src/RenderAPI/OpenGL/OpenGLBuffer.h}}
+\doxymbox{\hyperlink{_open_g_l_buffer_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{pragma}\ \textcolor{preprocessor}{once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\ \textcolor{preprocessor}{"{}Vesper/Renderer/Buffer.h"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{namespace}\ \doxymbox{\hyperlink{namespace_vesper}{Vesper}}\ \{}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keyword}{class}\ \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_vertex_buffer}{OpenGLVertexBuffer}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_vesper_1_1_vertex_buffer}{VertexBuffer}}}
+\DoxyCodeLine{00009\ \ \ \ \ \{}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_vertex_buffer_af1cc3eb7d5ae06976c3a9f4c06d2bc78}{OpenGLVertexBuffer}}(uint32\_t\ size);}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_vertex_buffer_a196f85b48521b001ab9713b9d800f225}{OpenGLVertexBuffer}}(\textcolor{keywordtype}{float}*\ vertices,\ uint32\_t\ size);}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \string~\doxymbox{\hyperlink{class_vesper_1_1_open_g_l_vertex_buffer_ad6b1b7c5dfe57b772bdd71eeeb023109}{OpenGLVertexBuffer}}();}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_vertex_buffer_af591c5766ac4de9e120efe4688b8577d}{Bind}}()\ \textcolor{keyword}{const}\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_vertex_buffer_aa2fb21c0cfa879fea2aa3f3b50b98f1d}{Unbind}}()\ \textcolor{keyword}{const}\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_vertex_buffer_ac02fd02ec29ce29eedb3e5970769235c}{SetLayout}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_vesper_1_1_buffer_layout}{BufferLayout}}\&\ layout)\ \textcolor{keyword}{override}\ \{\ m\_Layout\ =\ layout;\ \}}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_vesper_1_1_buffer_layout}{BufferLayout}}\&\ \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_vertex_buffer_a6cfc47c763126a97a3fca9a0c67d9830}{GetLayout}}()\ \textcolor{keyword}{const}\ \textcolor{keyword}{override}\ \{\ \textcolor{keywordflow}{return}\ m\_Layout;\ \}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_vertex_buffer_aaaaad7515d28ae9efa3c1ba8f9031923}{SetData}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*\ data,\ uint32\_t\ size)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ uint32\_t\ \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_vertex_buffer_aac511a35e834b20e8b87a65ba0a7953c}{m\_RendererID}};}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_buffer_layout}{BufferLayout}}\ \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_vertex_buffer_abea446684f9f15f27fd10f3a3f5daa3b}{m\_Layout}};}
+\DoxyCodeLine{00024\ \ \ \ \ \};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{class}\ \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_index_buffer}{OpenGLIndexBuffer}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_vesper_1_1_index_buffer}{IndexBuffer}}}
+\DoxyCodeLine{00027\ \ \ \ \ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_index_buffer_a48d9d7362e667f300afac07a94e0c10a}{OpenGLIndexBuffer}}(uint32\_t*\ indices,\ uint32\_t\ count);}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \string~\doxymbox{\hyperlink{class_vesper_1_1_open_g_l_index_buffer_aa562d6fd0b83b6007d095dfb43f0473a}{OpenGLIndexBuffer}}();}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_index_buffer_ac368e4da690303036018fdec8ad6ce00}{Bind}}()\ \textcolor{keyword}{const}\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_index_buffer_a78a99bcd46264f4bf7a840a50a227bbb}{Unbind}}()\ \textcolor{keyword}{const}\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ uint32\_t\ \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_index_buffer_a0eca4b84c9f6b4917124c0fe89cfc7a5}{GetCount}}()\ \textcolor{keyword}{const}\ \textcolor{keyword}{override}\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_index_buffer_a4bca6027e51a2d0a9c476be2b2ede661}{m\_Count}};\ \}}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ uint32\_t\ \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_index_buffer_ac6b4d5339c47ee517aae93a2214672fa}{m\_RendererID}};}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ uint32\_t\ \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_index_buffer_a4bca6027e51a2d0a9c476be2b2ede661}{m\_Count}};}
+\DoxyCodeLine{00038\ \ \ \ \ \};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \}}
+
+\end{DoxyCode}

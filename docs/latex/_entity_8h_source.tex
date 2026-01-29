@@ -1,0 +1,91 @@
+\doxysection{Entity.\+h}
+\hypertarget{_entity_8h_source}{}\label{_entity_8h_source}\index{Vesper/src/Vesper/Scene/Entity.h@{Vesper/src/Vesper/Scene/Entity.h}}
+\doxymbox{\hyperlink{_entity_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{pragma}\ \textcolor{preprocessor}{once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\ \textcolor{preprocessor}{"{}entt.hpp"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\ \doxymbox{\hyperlink{_scene_8h}{"{}Scene.h"{}}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{namespace}\ \doxymbox{\hyperlink{namespace_vesper}{Vesper}}\ \{}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{class}\ \doxymbox{\hyperlink{class_vesper_1_1_entity}{Entity}}}
+\DoxyCodeLine{00010\ \ \ \ \ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_entity_a811566437acc4b63996fce6b6a80ee14}{Entity}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_entity_a3611719bf2e8971af008d441b5dd8450}{Entity}}(entt::entity\ handle,\ \doxymbox{\hyperlink{class_vesper_1_1_scene}{Scene}}*\ scene);}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_entity_aca58c68bba3ecef491684c959f89f24f}{Entity}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_vesper_1_1_entity}{Entity}}\&\ other)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_vesper_1_1_entity_aa60cd2ba3a43760ca2d2ffbb47f377c0}{HasComponent}}()\ \textcolor{keyword}{const}}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_entity}{m\_Scene}}-\/>\doxymbox{\hyperlink{class_vesper_1_1_entity}{m\_Registry}}.\doxymbox{\hyperlink{class_vesper_1_1_entity}{all\_of}}<\doxymbox{\hyperlink{class_vesper_1_1_entity}{T}}>(\doxymbox{\hyperlink{class_vesper_1_1_entity}{m\_EntityID}});}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}...\ Args>}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ T\&\ \doxymbox{\hyperlink{class_vesper_1_1_entity_a6740a10fbb70212ef62890386d3be1c2}{AddComponent}}(Args\&\&...\ args)}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_asserts_8h_a3b51b77f75997760894138afc89403c9}{VZ\_CORE\_ASSERT}}(!HasComponent<T>(),\ \textcolor{stringliteral}{"{}Entity\ already\ has\ component!"{}});}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_entity}{T}}\&\ \doxymbox{\hyperlink{class_vesper_1_1_entity}{component}}\ =\ \doxymbox{\hyperlink{class_vesper_1_1_entity}{m\_Scene}}-\/>\doxymbox{\hyperlink{class_vesper_1_1_entity}{m\_Registry}}.\doxymbox{\hyperlink{class_vesper_1_1_entity}{emplace}}<\doxymbox{\hyperlink{class_vesper_1_1_entity}{T}}>(\doxymbox{\hyperlink{class_vesper_1_1_entity}{m\_EntityID}},\ \doxymbox{\hyperlink{class_vesper_1_1_entity}{std}}::\doxymbox{\hyperlink{class_vesper_1_1_entity}{forward}}<\doxymbox{\hyperlink{class_vesper_1_1_entity}{Args}}>(\doxymbox{\hyperlink{class_vesper_1_1_entity}{args}})...);}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_entity}{m\_Scene}}-\/>\doxymbox{\hyperlink{class_vesper_1_1_entity}{OnComponentAdded}}<\doxymbox{\hyperlink{class_vesper_1_1_entity}{T}}>(*\textcolor{keyword}{this},\ \doxymbox{\hyperlink{class_vesper_1_1_entity}{component}});}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_entity}{component}};}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}...\ Args>}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ T\&\ \doxymbox{\hyperlink{class_vesper_1_1_entity_a781ad9a7b38c4f8cbbd37bd38cc7fa75}{AddOrReplaceComponent}}(Args\&\&...\ args)}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_entity}{m\_Scene}}-\/>\doxymbox{\hyperlink{class_vesper_1_1_entity}{m\_Registry}}.\doxymbox{\hyperlink{class_vesper_1_1_entity}{emplace\_or\_replace}}<\doxymbox{\hyperlink{class_vesper_1_1_entity}{T}}>(\doxymbox{\hyperlink{class_vesper_1_1_entity}{m\_EntityID}},\ \doxymbox{\hyperlink{class_vesper_1_1_entity}{std}}::\doxymbox{\hyperlink{class_vesper_1_1_entity}{forward}}<\doxymbox{\hyperlink{class_vesper_1_1_entity}{Args}}>(\doxymbox{\hyperlink{class_vesper_1_1_entity}{args}})...);}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ T\&\ \doxymbox{\hyperlink{class_vesper_1_1_entity_a12a8d4804cbd3346d175f18f6e3a5b26}{GetComponent}}()}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_asserts_8h_a3b51b77f75997760894138afc89403c9}{VZ\_CORE\_ASSERT}}(HasComponent<T>(),\ \textcolor{stringliteral}{"{}Entity\ does\ not\ have\ component!"{}});}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_entity}{m\_Scene}}-\/>\doxymbox{\hyperlink{class_vesper_1_1_entity}{m\_Registry}}.\doxymbox{\hyperlink{class_vesper_1_1_entity}{get}}<\doxymbox{\hyperlink{class_vesper_1_1_entity}{T}}>(\doxymbox{\hyperlink{class_vesper_1_1_entity}{m\_EntityID}});}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}...\ Args>}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ T\&\ \doxymbox{\hyperlink{class_vesper_1_1_entity_a3ea2b74aca7cb2f4df85c7544d2031e7}{GetOrAddComponent}}(Args\&\&...\ args)}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_vesper_1_1_entity}{HasComponent}}<\doxymbox{\hyperlink{class_vesper_1_1_entity}{T}}>())}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_entity}{GetComponent}}<\doxymbox{\hyperlink{class_vesper_1_1_entity}{T}}>();}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_entity}{AddComponent}}<\doxymbox{\hyperlink{class_vesper_1_1_entity}{T}}>(\doxymbox{\hyperlink{class_vesper_1_1_entity}{std}}::\doxymbox{\hyperlink{class_vesper_1_1_entity}{forward}}<\doxymbox{\hyperlink{class_vesper_1_1_entity}{Args}}>(\doxymbox{\hyperlink{class_vesper_1_1_entity}{args}})...);}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_entity_aea82cfff313c6ec856c621656180791c}{RemoveComponent}}()}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_asserts_8h_a3b51b77f75997760894138afc89403c9}{VZ\_CORE\_ASSERT}}(HasComponent<T>(),\ \textcolor{stringliteral}{"{}Entity\ does\ not\ have\ component!"{}});}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_entity}{m\_Scene}}-\/>\doxymbox{\hyperlink{class_vesper_1_1_entity}{m\_Registry}}.\doxymbox{\hyperlink{class_vesper_1_1_entity}{remove}}<\doxymbox{\hyperlink{class_vesper_1_1_entity}{T}}>(\doxymbox{\hyperlink{class_vesper_1_1_entity}{m\_EntityID}});}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ UUID\&\ \doxymbox{\hyperlink{class_vesper_1_1_entity_a68c421479f8c304e6a08bb92c219803b}{GetID}}()}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ GetComponent<UUIDComponent>().ID;}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ \doxymbox{\hyperlink{class_vesper_1_1_entity_a3b9ec5b9915d71c21ded4bc6c93e5c6a}{GetName}}()}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ GetComponent<NameComponent>().Name;}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_entity_aad8d1195380e66f8370cf61c28e810d9}{operator}}\ \textcolor{keywordtype}{bool}()\ \textcolor{keyword}{const}\ \{\ \textcolor{keywordflow}{return}\ m\_EntityID\ !=\ entt::null;\ \}}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_entity}{operator}}\ \doxymbox{\hyperlink{class_vesper_1_1_entity}{entt}}::\doxymbox{\hyperlink{class_vesper_1_1_entity}{entity}}()\ \textcolor{keyword}{const}\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_entity}{m\_EntityID}};\ \}}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_entity}{operator}}\ \doxymbox{\hyperlink{class_vesper_1_1_entity}{uint32\_t}}()\ \textcolor{keyword}{const}\ \{\ \textcolor{keywordflow}{return}\ (\doxymbox{\hyperlink{class_vesper_1_1_entity}{uint32\_t}})\doxymbox{\hyperlink{class_vesper_1_1_entity}{m\_EntityID}};\ \}}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_vesper_1_1_entity}{operator}}==(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_vesper_1_1_entity}{Entity}}\&\ \doxymbox{\hyperlink{class_vesper_1_1_entity}{other}})\ \textcolor{keyword}{const}\ \{\ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_entity}{m\_EntityID}}\ ==\ \doxymbox{\hyperlink{class_vesper_1_1_entity}{other}}.\doxymbox{\hyperlink{class_vesper_1_1_entity}{m\_EntityID}}\ \&\&\ \doxymbox{\hyperlink{class_vesper_1_1_entity}{m\_Scene}}\ ==\ \doxymbox{\hyperlink{class_vesper_1_1_entity}{other}}.\doxymbox{\hyperlink{class_vesper_1_1_entity}{m\_Scene}};\ \ \}}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_vesper_1_1_entity}{operator}}!=(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_vesper_1_1_entity}{Entity}}\&\ \doxymbox{\hyperlink{class_vesper_1_1_entity}{other}})\ \textcolor{keyword}{const}\ \{\ \ \ \ \textcolor{keywordflow}{return}\ !(*\textcolor{keyword}{this}\ ==\ \doxymbox{\hyperlink{class_vesper_1_1_entity}{other}});\ \ \ \}}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_entity}{entt}}::\doxymbox{\hyperlink{class_vesper_1_1_entity}{entity}}\ \doxymbox{\hyperlink{class_vesper_1_1_entity}{m\_EntityID}}\ \{\doxymbox{\hyperlink{class_vesper_1_1_entity}{entt}}::\doxymbox{\hyperlink{class_vesper_1_1_entity}{null}}\};}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_scene}{Scene}}*\ \doxymbox{\hyperlink{class_vesper_1_1_entity_aaa706fa22a0b7b5201081e69c8d75615}{m\_Scene}}\ =\ \textcolor{keywordtype}{nullptr};}
+\DoxyCodeLine{00082\ \ \ \ \ \};}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \}}
+
+\end{DoxyCode}

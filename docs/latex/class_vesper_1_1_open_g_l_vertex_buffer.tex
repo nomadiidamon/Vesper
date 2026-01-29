@@ -1,0 +1,236 @@
+\doxysection{Vesper::\+Open\+GLVertex\+Buffer Class Reference}
+\hypertarget{class_vesper_1_1_open_g_l_vertex_buffer}{}\label{class_vesper_1_1_open_g_l_vertex_buffer}\index{Vesper::OpenGLVertexBuffer@{Vesper::OpenGLVertexBuffer}}
+
+
+{\ttfamily \+\#include $<$Open\+GLBuffer.\+h$>$}
+
+Inheritance diagram for Vesper::\+Open\+GLVertex\+Buffer:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_vesper_1_1_open_g_l_vertex_buffer}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_vesper_1_1_open_g_l_vertex_buffer_af1cc3eb7d5ae06976c3a9f4c06d2bc78}{Open\+GLVertex\+Buffer}} (uint32\+\_\+t size)
+\item 
+\doxymbox{\hyperlink{class_vesper_1_1_open_g_l_vertex_buffer_a196f85b48521b001ab9713b9d800f225}{Open\+GLVertex\+Buffer}} (float \texorpdfstring{$\ast$}{*}vertices, uint32\+\_\+t size)
+\item 
+virtual \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_vertex_buffer_ad6b1b7c5dfe57b772bdd71eeeb023109}{\texorpdfstring{$\sim$}{\string~}\+Open\+GLVertex\+Buffer}} ()
+\item 
+virtual void \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_vertex_buffer_af591c5766ac4de9e120efe4688b8577d}{Bind}} () const override
+\item 
+virtual void \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_vertex_buffer_aa2fb21c0cfa879fea2aa3f3b50b98f1d}{Unbind}} () const override
+\item 
+virtual void \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_vertex_buffer_ac02fd02ec29ce29eedb3e5970769235c}{Set\+Layout}} (const \doxymbox{\hyperlink{class_vesper_1_1_buffer_layout}{Buffer\+Layout}} \&layout) override
+\item 
+virtual const \doxymbox{\hyperlink{class_vesper_1_1_buffer_layout}{Buffer\+Layout}} \& \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_vertex_buffer_a6cfc47c763126a97a3fca9a0c67d9830}{Get\+Layout}} () const override
+\item 
+virtual void \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_vertex_buffer_aaaaad7515d28ae9efa3c1ba8f9031923}{Set\+Data}} (const void \texorpdfstring{$\ast$}{*}data, uint32\+\_\+t size) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_vesper_1_1_vertex_buffer}{Vesper::\+\+Vertex\+Buffer}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \doxymbox{\hyperlink{class_vesper_1_1_vertex_buffer_a0445681d9f18f0eff713d72bcb593c5c}{\texorpdfstring{$\sim$}{\string~}\+Vertex\+Buffer}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_vertex_buffer_aac511a35e834b20e8b87a65ba0a7953c}{m\+\_\+\+Renderer\+ID}}
+\item 
+\doxymbox{\hyperlink{class_vesper_1_1_buffer_layout}{Buffer\+Layout}} \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_vertex_buffer_abea446684f9f15f27fd10f3a3f5daa3b}{m\+\_\+\+Layout}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Public Member Functions inherited from \doxymbox{\hyperlink{class_vesper_1_1_vertex_buffer}{Vesper::\+\+Vertex\+Buffer}}}
+\begin{DoxyCompactItemize}
+\item 
+static \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_vertex_buffer}{Vertex\+Buffer}} $>$ \doxymbox{\hyperlink{class_vesper_1_1_vertex_buffer_aebb8c3b5192529237b59c79a98f18a55}{Create}} (uint32\+\_\+t size)
+\item 
+static \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_vertex_buffer}{Vertex\+Buffer}} $>$ \doxymbox{\hyperlink{class_vesper_1_1_vertex_buffer_a27c31ef14feca818bb876156ac310cbf}{Create}} (float \texorpdfstring{$\ast$}{*}vertices, uint32\+\_\+t size)
+\end{DoxyCompactItemize}
+
+
+\label{doc-constructors}
+\Hypertarget{class_vesper_1_1_open_g_l_vertex_buffer_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_vesper_1_1_open_g_l_vertex_buffer_af1cc3eb7d5ae06976c3a9f4c06d2bc78}\index{Vesper::OpenGLVertexBuffer@{Vesper::OpenGLVertexBuffer}!OpenGLVertexBuffer@{OpenGLVertexBuffer}}
+\index{OpenGLVertexBuffer@{OpenGLVertexBuffer}!Vesper::OpenGLVertexBuffer@{Vesper::OpenGLVertexBuffer}}
+\doxysubsubsection{\texorpdfstring{OpenGLVertexBuffer()}{OpenGLVertexBuffer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_open_g_l_vertex_buffer_af1cc3eb7d5ae06976c3a9f4c06d2bc78} 
+Vesper::\+\+Open\+GLVertex\+Buffer::\+\+Open\+GLVertex\+Buffer (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{size}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00013\ \ \ \ \ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ glCreateBuffers(1,\ \&\doxymbox{\hyperlink{class_vesper_1_1_open_g_l_vertex_buffer_aac511a35e834b20e8b87a65ba0a7953c}{m\_RendererID}});}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ glBindBuffer(GL\_ARRAY\_BUFFER,\ \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_vertex_buffer_aac511a35e834b20e8b87a65ba0a7953c}{m\_RendererID}});}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ glBufferData(GL\_ARRAY\_BUFFER,\ size,\ \textcolor{keyword}{nullptr},\ GL\_DYNAMIC\_DRAW);}
+\DoxyCodeLine{00019\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_vertex_buffer_aac511a35e834b20e8b87a65ba0a7953c}{m\+\_\+\+Renderer\+ID}}.
+
+\Hypertarget{class_vesper_1_1_open_g_l_vertex_buffer_a196f85b48521b001ab9713b9d800f225}\index{Vesper::OpenGLVertexBuffer@{Vesper::OpenGLVertexBuffer}!OpenGLVertexBuffer@{OpenGLVertexBuffer}}
+\index{OpenGLVertexBuffer@{OpenGLVertexBuffer}!Vesper::OpenGLVertexBuffer@{Vesper::OpenGLVertexBuffer}}
+\doxysubsubsection{\texorpdfstring{OpenGLVertexBuffer()}{OpenGLVertexBuffer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_open_g_l_vertex_buffer_a196f85b48521b001ab9713b9d800f225} 
+Vesper::\+\+Open\+GLVertex\+Buffer::\+\+Open\+GLVertex\+Buffer (\begin{DoxyParamCaption}\item[{float \texorpdfstring{$\ast$}{*}}]{vertices}{, }\item[{uint32\+\_\+t}]{size}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00022\ \ \ \ \ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ glCreateBuffers(1,\ \&\doxymbox{\hyperlink{class_vesper_1_1_open_g_l_vertex_buffer_aac511a35e834b20e8b87a65ba0a7953c}{m\_RendererID}});}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ glBindBuffer(GL\_ARRAY\_BUFFER,\ \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_vertex_buffer_aac511a35e834b20e8b87a65ba0a7953c}{m\_RendererID}});}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ glBufferData(GL\_ARRAY\_BUFFER,\ size,\ vertices,\ GL\_STATIC\_DRAW);}
+\DoxyCodeLine{00028\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_vertex_buffer_aac511a35e834b20e8b87a65ba0a7953c}{m\+\_\+\+Renderer\+ID}}.
+
+\Hypertarget{class_vesper_1_1_open_g_l_vertex_buffer_ad6b1b7c5dfe57b772bdd71eeeb023109}\index{Vesper::OpenGLVertexBuffer@{Vesper::OpenGLVertexBuffer}!````~OpenGLVertexBuffer@{\texorpdfstring{$\sim$}{\string~}OpenGLVertexBuffer}}
+\index{````~OpenGLVertexBuffer@{\texorpdfstring{$\sim$}{\string~}OpenGLVertexBuffer}!Vesper::OpenGLVertexBuffer@{Vesper::OpenGLVertexBuffer}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}OpenGLVertexBuffer()}{\string~OpenGLVertexBuffer()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_open_g_l_vertex_buffer_ad6b1b7c5dfe57b772bdd71eeeb023109} 
+Vesper::\+\+Open\+GLVertex\+Buffer::\+\texorpdfstring{$\sim$}{\string~}\+Open\+GLVertex\+Buffer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00031\ \ \ \ \ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ glDeleteBuffers(1,\ \&\doxymbox{\hyperlink{class_vesper_1_1_open_g_l_vertex_buffer_aac511a35e834b20e8b87a65ba0a7953c}{m\_RendererID}});}
+\DoxyCodeLine{00035\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_vertex_buffer_aac511a35e834b20e8b87a65ba0a7953c}{m\+\_\+\+Renderer\+ID}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_vesper_1_1_open_g_l_vertex_buffer_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_vesper_1_1_open_g_l_vertex_buffer_af591c5766ac4de9e120efe4688b8577d}\index{Vesper::OpenGLVertexBuffer@{Vesper::OpenGLVertexBuffer}!Bind@{Bind}}
+\index{Bind@{Bind}!Vesper::OpenGLVertexBuffer@{Vesper::OpenGLVertexBuffer}}
+\doxysubsubsection{\texorpdfstring{Bind()}{Bind()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_open_g_l_vertex_buffer_af591c5766ac4de9e120efe4688b8577d} 
+void Vesper::\+\+Open\+GLVertex\+Buffer::\+\+Bind (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \doxymbox{\hyperlink{class_vesper_1_1_vertex_buffer_a35f1abaca1d7d2e0620b4c7918eb2189}{Vesper::\+\+Vertex\+Buffer}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00038\ \ \ \ \ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ glBindBuffer(GL\_ARRAY\_BUFFER,\ \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_vertex_buffer_aac511a35e834b20e8b87a65ba0a7953c}{m\_RendererID}});}
+\DoxyCodeLine{00042\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_vesper_1_1_open_g_l_vertex_buffer_a6cfc47c763126a97a3fca9a0c67d9830}\index{Vesper::OpenGLVertexBuffer@{Vesper::OpenGLVertexBuffer}!GetLayout@{GetLayout}}
+\index{GetLayout@{GetLayout}!Vesper::OpenGLVertexBuffer@{Vesper::OpenGLVertexBuffer}}
+\doxysubsubsection{\texorpdfstring{GetLayout()}{GetLayout()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_open_g_l_vertex_buffer_a6cfc47c763126a97a3fca9a0c67d9830} 
+virtual const \doxymbox{\hyperlink{class_vesper_1_1_buffer_layout}{Buffer\+Layout}} \& Vesper::\+\+Open\+GLVertex\+Buffer::\+\+Get\+Layout (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \doxymbox{\hyperlink{class_vesper_1_1_vertex_buffer_a9b60ee45f664671b20c0a9532e7f15c2}{Vesper::\+\+Vertex\+Buffer}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00018\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_vertex_buffer_abea446684f9f15f27fd10f3a3f5daa3b}{m\_Layout}};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_vesper_1_1_open_g_l_vertex_buffer_aaaaad7515d28ae9efa3c1ba8f9031923}\index{Vesper::OpenGLVertexBuffer@{Vesper::OpenGLVertexBuffer}!SetData@{SetData}}
+\index{SetData@{SetData}!Vesper::OpenGLVertexBuffer@{Vesper::OpenGLVertexBuffer}}
+\doxysubsubsection{\texorpdfstring{SetData()}{SetData()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_open_g_l_vertex_buffer_aaaaad7515d28ae9efa3c1ba8f9031923} 
+void Vesper::\+\+Open\+GLVertex\+Buffer::\+\+Set\+Data (\begin{DoxyParamCaption}\item[{const void \texorpdfstring{$\ast$}{*}}]{data}{, }\item[{uint32\+\_\+t}]{size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \doxymbox{\hyperlink{class_vesper_1_1_vertex_buffer_aead1778a28478fdfd8149cca7bec7f0c}{Vesper::\+\+Vertex\+Buffer}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00052\ \ \ \ \ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ glBindBuffer(GL\_ARRAY\_BUFFER,\ \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_vertex_buffer_aac511a35e834b20e8b87a65ba0a7953c}{m\_RendererID}});}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ glBufferSubData(GL\_ARRAY\_BUFFER,\ 0,\ size,\ data);}
+\DoxyCodeLine{00056\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_vesper_1_1_open_g_l_vertex_buffer_ac02fd02ec29ce29eedb3e5970769235c}\index{Vesper::OpenGLVertexBuffer@{Vesper::OpenGLVertexBuffer}!SetLayout@{SetLayout}}
+\index{SetLayout@{SetLayout}!Vesper::OpenGLVertexBuffer@{Vesper::OpenGLVertexBuffer}}
+\doxysubsubsection{\texorpdfstring{SetLayout()}{SetLayout()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_open_g_l_vertex_buffer_ac02fd02ec29ce29eedb3e5970769235c} 
+virtual void Vesper::\+\+Open\+GLVertex\+Buffer::\+\+Set\+Layout (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_vesper_1_1_buffer_layout}{Buffer\+Layout}} \&}]{layout}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \doxymbox{\hyperlink{class_vesper_1_1_vertex_buffer_a14fc1e28adc069bee780b3bea5387c8c}{Vesper::\+\+Vertex\+Buffer}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00017\ \{\ \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_vertex_buffer_abea446684f9f15f27fd10f3a3f5daa3b}{m\_Layout}}\ =\ layout;\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_vesper_1_1_open_g_l_vertex_buffer_aa2fb21c0cfa879fea2aa3f3b50b98f1d}\index{Vesper::OpenGLVertexBuffer@{Vesper::OpenGLVertexBuffer}!Unbind@{Unbind}}
+\index{Unbind@{Unbind}!Vesper::OpenGLVertexBuffer@{Vesper::OpenGLVertexBuffer}}
+\doxysubsubsection{\texorpdfstring{Unbind()}{Unbind()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_open_g_l_vertex_buffer_aa2fb21c0cfa879fea2aa3f3b50b98f1d} 
+void Vesper::\+\+Open\+GLVertex\+Buffer::\+\+Unbind (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \doxymbox{\hyperlink{class_vesper_1_1_vertex_buffer_a46d25a5df476ef5efe9b6a16b8eb0a35}{Vesper::\+\+Vertex\+Buffer}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00045\ \ \ \ \ \{}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ glBindBuffer(GL\_ARRAY\_BUFFER,\ 0);}
+\DoxyCodeLine{00049\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_vesper_1_1_open_g_l_vertex_buffer_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_vesper_1_1_open_g_l_vertex_buffer_abea446684f9f15f27fd10f3a3f5daa3b}\index{Vesper::OpenGLVertexBuffer@{Vesper::OpenGLVertexBuffer}!m\_Layout@{m\_Layout}}
+\index{m\_Layout@{m\_Layout}!Vesper::OpenGLVertexBuffer@{Vesper::OpenGLVertexBuffer}}
+\doxysubsubsection{\texorpdfstring{m\_Layout}{m\_Layout}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_open_g_l_vertex_buffer_abea446684f9f15f27fd10f3a3f5daa3b} 
+\doxymbox{\hyperlink{class_vesper_1_1_buffer_layout}{Buffer\+Layout}} Vesper::\+\+Open\+GLVertex\+Buffer::\+m\+\_\+\+Layout\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_vesper_1_1_open_g_l_vertex_buffer_aac511a35e834b20e8b87a65ba0a7953c}\index{Vesper::OpenGLVertexBuffer@{Vesper::OpenGLVertexBuffer}!m\_RendererID@{m\_RendererID}}
+\index{m\_RendererID@{m\_RendererID}!Vesper::OpenGLVertexBuffer@{Vesper::OpenGLVertexBuffer}}
+\doxysubsubsection{\texorpdfstring{m\_RendererID}{m\_RendererID}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_open_g_l_vertex_buffer_aac511a35e834b20e8b87a65ba0a7953c} 
+uint32\+\_\+t Vesper::\+\+Open\+GLVertex\+Buffer::\+m\+\_\+\+Renderer\+ID\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_vertex_buffer_a196f85b48521b001ab9713b9d800f225}{Open\+GLVertex\+Buffer()}}, \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_vertex_buffer_af1cc3eb7d5ae06976c3a9f4c06d2bc78}{Open\+GLVertex\+Buffer()}}, and \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_vertex_buffer_ad6b1b7c5dfe57b772bdd71eeeb023109}{\texorpdfstring{$\sim$}{\string~}\+Open\+GLVertex\+Buffer()}}.
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+Vesper/\+src/\+\+Render\+API/\+\+Open\+GL/\+\doxymbox{\hyperlink{_open_g_l_buffer_8h}{Open\+GLBuffer.\+h}}\item 
+Vesper/\+src/\+\+Render\+API/\+\+Open\+GL/\+\doxymbox{\hyperlink{_open_g_l_buffer_8cpp}{Open\+GLBuffer.\+cpp}}\end{DoxyCompactItemize}

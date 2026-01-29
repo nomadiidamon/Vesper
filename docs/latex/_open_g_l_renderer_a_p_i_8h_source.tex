@@ -1,0 +1,24 @@
+\doxysection{Open\+GLRenderer\+API.\+h}
+\hypertarget{_open_g_l_renderer_a_p_i_8h_source}{}\label{_open_g_l_renderer_a_p_i_8h_source}\index{Vesper/src/RenderAPI/OpenGL/OpenGLRendererAPI.h@{Vesper/src/RenderAPI/OpenGL/OpenGLRendererAPI.h}}
+\doxymbox{\hyperlink{_open_g_l_renderer_a_p_i_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{pragma}\ \textcolor{preprocessor}{once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\ \textcolor{preprocessor}{"{}Vesper/Renderer/RendererAPI.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\ \textcolor{preprocessor}{<}\textcolor{preprocessor}{glm}\textcolor{preprocessor}{/}\textcolor{preprocessor}{glm}\textcolor{preprocessor}{.}\textcolor{preprocessor}{hpp}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\ \textcolor{preprocessor}{<}\textcolor{preprocessor}{memory}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{namespace}\ \doxymbox{\hyperlink{namespace_vesper}{Vesper}}\ \{}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{class}\ \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_renderer_a_p_i}{OpenGLRendererAPI}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_vesper_1_1_renderer_a_p_i}{RendererAPI}}}
+\DoxyCodeLine{00010\ \ \ \ \ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_renderer_a_p_i_a0a5d34c4c9277ce6c939d479be08231f}{Init}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_renderer_a_p_i_a72b5690fec9e67b74768ac4a3495ce7b}{SetViewport}}(uint32\_t\ x,\ uint32\_t\ y,\ uint32\_t\ width,\ uint32\_t\ height)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_renderer_a_p_i_a726d977f8a6de4b97c4c5c715f78e701}{SetClearColor}}(\textcolor{keyword}{const}\ glm::vec4\&\ color)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_renderer_a_p_i_ac09d1fd8859e2bfe3ed4b3d766028390}{Clear}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_renderer_a_p_i_aa4e2df971cce39def4fde8c540f5b255}{DrawIndexed}}(\textcolor{keyword}{const}\ Ref<VertexArray>\&\ vertexArray,\ uint32\_t\ indexCount\ =\ 0)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00017\ \ \ \ \ \};}
+\DoxyCodeLine{00018\ \}}
+
+\end{DoxyCode}

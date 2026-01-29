@@ -1,0 +1,158 @@
+\doxysection{Vesper::\+Input Class Reference}
+\hypertarget{class_vesper_1_1_input}{}\label{class_vesper_1_1_input}\index{Vesper::Input@{Vesper::Input}}
+
+
+{\ttfamily \+\#include $<$Input.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_vesper_1_1_input_ace84026465cec21643cd4a35c4a12235}{Input}} (const Input \&)=delete
+\item 
+\doxymbox{\hyperlink{class_vesper_1_1_input_a3fbe8ee3f6e757a7a0cfb6887ea05b54}{Input}} \& \doxymbox{\hyperlink{class_vesper_1_1_input_a7052afe99c8b718f66770a2af9bba7ed}{operator=}} (const \doxymbox{\hyperlink{class_vesper_1_1_input_a3fbe8ee3f6e757a7a0cfb6887ea05b54}{Input}} \&)=delete
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \doxymbox{\hyperlink{class_vesper_1_1_input_aa8b8dff7d2b768ad79b6888fbdbf31ae}{Is\+Key\+Pressed}} (int keycode)
+\item 
+static bool \doxymbox{\hyperlink{class_vesper_1_1_input_a00b5734fe7e2227aa348e56c3c71a6d2}{Is\+Mouse\+Button\+Pressed}} (int button)
+\item 
+static float \doxymbox{\hyperlink{class_vesper_1_1_input_ae27af138550e8b872978fdc611947a36}{Get\+MouseX}} ()
+\item 
+static float \doxymbox{\hyperlink{class_vesper_1_1_input_a1ceccb5460761e6da9a92b77e0ccf4ab}{Get\+MouseY}} ()
+\item 
+static glm::\+vec2 \doxymbox{\hyperlink{class_vesper_1_1_input_a7cfb2f3a5d04a27f1d0c22b0f4e9c09f}{Get\+Mouse\+Position}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_vesper_1_1_input_a3fbe8ee3f6e757a7a0cfb6887ea05b54}{Input}} ()=default
+\end{DoxyCompactItemize}
+
+
+\label{doc-constructors}
+\Hypertarget{class_vesper_1_1_input_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_vesper_1_1_input_a3fbe8ee3f6e757a7a0cfb6887ea05b54}\index{Vesper::Input@{Vesper::Input}!Input@{Input}}
+\index{Input@{Input}!Vesper::Input@{Vesper::Input}}
+\doxysubsubsection{\texorpdfstring{Input()}{Input()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_input_a3fbe8ee3f6e757a7a0cfb6887ea05b54} 
+Vesper::\+\+Input::\+\+Input (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [default]}}
+
+\Hypertarget{class_vesper_1_1_input_ace84026465cec21643cd4a35c4a12235}\index{Vesper::Input@{Vesper::Input}!Input@{Input}}
+\index{Input@{Input}!Vesper::Input@{Vesper::Input}}
+\doxysubsubsection{\texorpdfstring{Input()}{Input()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_input_ace84026465cec21643cd4a35c4a12235} 
+Vesper::\+\+Input::\+\+Input (\begin{DoxyParamCaption}\item[{const Input \&}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_vesper_1_1_input_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_vesper_1_1_input_a7cfb2f3a5d04a27f1d0c22b0f4e9c09f}\index{Vesper::Input@{Vesper::Input}!GetMousePosition@{GetMousePosition}}
+\index{GetMousePosition@{GetMousePosition}!Vesper::Input@{Vesper::Input}}
+\doxysubsubsection{\texorpdfstring{GetMousePosition()}{GetMousePosition()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_input_a7cfb2f3a5d04a27f1d0c22b0f4e9c09f} 
+glm::\+vec2 Vesper::\+\+Input::\+\+Get\+Mouse\+Position (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00024\ \ \ \ \ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ window\ =\ \textcolor{keyword}{static\_cast<}GLFWwindow*\textcolor{keyword}{>}(\doxymbox{\hyperlink{class_vesper_1_1_application_a7edbd0f4804f897c09ad869239a97ffa}{Application::Get}}().\doxymbox{\hyperlink{class_vesper_1_1_application_af90f220d05b740b6b1596d915b3efab3}{GetWindow}}().\doxymbox{\hyperlink{class_vesper_1_1_window_a4b4b607a2bd868df1672ab69d4f09881}{GetNativeWindow}}());}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ xPos,\ yPos;}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ glfwGetCursorPos(window,\ \&xPos,\ \&yPos);}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \{\ (float)xPos,\ (\textcolor{keywordtype}{float})yPos\ \};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_application_a7edbd0f4804f897c09ad869239a97ffa}{Vesper::\+\+Application::\+\+Get()}}, \doxymbox{\hyperlink{class_vesper_1_1_window_a4b4b607a2bd868df1672ab69d4f09881}{Vesper::\+\+Window::\+\+Get\+Native\+Window()}}, and \doxymbox{\hyperlink{class_vesper_1_1_application_af90f220d05b740b6b1596d915b3efab3}{Vesper::\+\+Application::\+\+Get\+Window()}}.
+
+\Hypertarget{class_vesper_1_1_input_ae27af138550e8b872978fdc611947a36}\index{Vesper::Input@{Vesper::Input}!GetMouseX@{GetMouseX}}
+\index{GetMouseX@{GetMouseX}!Vesper::Input@{Vesper::Input}}
+\doxysubsubsection{\texorpdfstring{GetMouseX()}{GetMouseX()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_input_ae27af138550e8b872978fdc611947a36} 
+float Vesper::\+\+Input::\+\+Get\+MouseX (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00033\ \ \ \ \ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_input_a7cfb2f3a5d04a27f1d0c22b0f4e9c09f}{GetMousePosition}}().x;}
+\DoxyCodeLine{00035\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_vesper_1_1_input_a1ceccb5460761e6da9a92b77e0ccf4ab}\index{Vesper::Input@{Vesper::Input}!GetMouseY@{GetMouseY}}
+\index{GetMouseY@{GetMouseY}!Vesper::Input@{Vesper::Input}}
+\doxysubsubsection{\texorpdfstring{GetMouseY()}{GetMouseY()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_input_a1ceccb5460761e6da9a92b77e0ccf4ab} 
+float Vesper::\+\+Input::\+\+Get\+MouseY (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00037\ \ \ \ \ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_input_a7cfb2f3a5d04a27f1d0c22b0f4e9c09f}{GetMousePosition}}().y;}
+\DoxyCodeLine{00039\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_vesper_1_1_input_aa8b8dff7d2b768ad79b6888fbdbf31ae}\index{Vesper::Input@{Vesper::Input}!IsKeyPressed@{IsKeyPressed}}
+\index{IsKeyPressed@{IsKeyPressed}!Vesper::Input@{Vesper::Input}}
+\doxysubsubsection{\texorpdfstring{IsKeyPressed()}{IsKeyPressed()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_input_aa8b8dff7d2b768ad79b6888fbdbf31ae} 
+bool Vesper::\+\+Input::\+\+Is\+Key\+Pressed (\begin{DoxyParamCaption}\item[{int}]{keycode}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00010\ \ \ \ \ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ window\ =\ \textcolor{keyword}{static\_cast<}GLFWwindow*\textcolor{keyword}{>}(\doxymbox{\hyperlink{class_vesper_1_1_application_a7edbd0f4804f897c09ad869239a97ffa}{Application::Get}}().\doxymbox{\hyperlink{class_vesper_1_1_application_af90f220d05b740b6b1596d915b3efab3}{GetWindow}}().\doxymbox{\hyperlink{class_vesper_1_1_window_a4b4b607a2bd868df1672ab69d4f09881}{GetNativeWindow}}());}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ state\ =\ glfwGetKey(window,\ keycode);}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ state\ ==\ GLFW\_PRESS\ ||\ state\ ==\ GLFW\_REPEAT;}
+\DoxyCodeLine{00014\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_application_a7edbd0f4804f897c09ad869239a97ffa}{Vesper::\+\+Application::\+\+Get()}}, \doxymbox{\hyperlink{class_vesper_1_1_window_a4b4b607a2bd868df1672ab69d4f09881}{Vesper::\+\+Window::\+\+Get\+Native\+Window()}}, and \doxymbox{\hyperlink{class_vesper_1_1_application_af90f220d05b740b6b1596d915b3efab3}{Vesper::\+\+Application::\+\+Get\+Window()}}.
+
+
+
+Referenced by \doxymbox{\hyperlink{class_vesper_1_1_editor_layer_af5e79508040b18e9fa455830692f6ed0}{Vesper::\+\+Editor\+Layer::\+\+On\+Im\+Gui\+Render()}}, \doxymbox{\hyperlink{class_vesper_1_1_editor_layer_a5ce0f9d3cd971a51b177b614ab59db79}{Vesper::\+\+Editor\+Layer::\+\+On\+Key\+Pressed()}}, \doxymbox{\hyperlink{class_vesper_1_1_editor_camera_a48c1eda32fc74bd1fa71c26e04ca9504}{Vesper::\+\+Editor\+Camera::\+\+On\+Update()}}, and \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_controller_a60ed096bf1b7ae905c1c06d101a22f8c}{Vesper::\+\+Orthographic\+Camera\+Controller::\+\+On\+Update()}}.
+
+\Hypertarget{class_vesper_1_1_input_a00b5734fe7e2227aa348e56c3c71a6d2}\index{Vesper::Input@{Vesper::Input}!IsMouseButtonPressed@{IsMouseButtonPressed}}
+\index{IsMouseButtonPressed@{IsMouseButtonPressed}!Vesper::Input@{Vesper::Input}}
+\doxysubsubsection{\texorpdfstring{IsMouseButtonPressed()}{IsMouseButtonPressed()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_input_a00b5734fe7e2227aa348e56c3c71a6d2} 
+bool Vesper::\+\+Input::\+\+Is\+Mouse\+Button\+Pressed (\begin{DoxyParamCaption}\item[{int}]{button}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00017\ \ \ \ \ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ window\ =\ \textcolor{keyword}{static\_cast<}GLFWwindow*\textcolor{keyword}{>}(\doxymbox{\hyperlink{class_vesper_1_1_application_a7edbd0f4804f897c09ad869239a97ffa}{Application::Get}}().\doxymbox{\hyperlink{class_vesper_1_1_application_af90f220d05b740b6b1596d915b3efab3}{GetWindow}}().\doxymbox{\hyperlink{class_vesper_1_1_window_a4b4b607a2bd868df1672ab69d4f09881}{GetNativeWindow}}());}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ state\ =\ glfwGetMouseButton(window,\ button);}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ state\ ==\ GLFW\_PRESS;}
+\DoxyCodeLine{00021\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_application_a7edbd0f4804f897c09ad869239a97ffa}{Vesper::\+\+Application::\+\+Get()}}, \doxymbox{\hyperlink{class_vesper_1_1_window_a4b4b607a2bd868df1672ab69d4f09881}{Vesper::\+\+Window::\+\+Get\+Native\+Window()}}, and \doxymbox{\hyperlink{class_vesper_1_1_application_af90f220d05b740b6b1596d915b3efab3}{Vesper::\+\+Application::\+\+Get\+Window()}}.
+
+
+
+Referenced by \doxymbox{\hyperlink{class_vesper_1_1_editor_camera_a48c1eda32fc74bd1fa71c26e04ca9504}{Vesper::\+\+Editor\+Camera::\+\+On\+Update()}}, and \doxymbox{\hyperlink{class_vesper_1_1_editor_layer_a984242ed582e7e06bcfd16bfe5de0a68}{Vesper::\+\+Editor\+Layer::\+\+On\+Update()}}.
+
+\Hypertarget{class_vesper_1_1_input_a7052afe99c8b718f66770a2af9bba7ed}\index{Vesper::Input@{Vesper::Input}!operator=@{operator=}}
+\index{operator=@{operator=}!Vesper::Input@{Vesper::Input}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_input_a7052afe99c8b718f66770a2af9bba7ed} 
+\doxymbox{\hyperlink{class_vesper_1_1_input_a3fbe8ee3f6e757a7a0cfb6887ea05b54}{Input}} \& Vesper::\+\+Input::\+operator= (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_vesper_1_1_input_a3fbe8ee3f6e757a7a0cfb6887ea05b54}{Input}} \&}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+Vesper/\+src/\+\+Vesper/\+\+Input/\+\doxymbox{\hyperlink{_input_8h}{Input.\+h}}\item 
+Vesper/\+src/\+\+Platform/\+\+Windows/\+\doxymbox{\hyperlink{_windows_input_8cpp}{Windows\+Input.\+cpp}}\end{DoxyCompactItemize}

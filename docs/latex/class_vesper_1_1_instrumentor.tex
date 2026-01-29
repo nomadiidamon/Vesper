@@ -1,0 +1,230 @@
+\doxysection{Vesper::\+Instrumentor Class Reference}
+\hypertarget{class_vesper_1_1_instrumentor}{}\label{class_vesper_1_1_instrumentor}\index{Vesper::Instrumentor@{Vesper::Instrumentor}}
+
+
+{\ttfamily \+\#include $<$Instrumentor.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_vesper_1_1_instrumentor_a6ffcc81f7e3a594fff8add3ba323ce74}{Instrumentor}} ()
+\item 
+void \doxymbox{\hyperlink{class_vesper_1_1_instrumentor_acdc2004ddc288d58591a4f5e8bd7b5d9}{Begin\+Session}} (const std::\+string \&name, const std::\+string \&filepath="{}results.\+json"{})
+\item 
+void \doxymbox{\hyperlink{class_vesper_1_1_instrumentor_a396d186614575c7b0fbf84db474d807b}{End\+Session}} ()
+\item 
+void \doxymbox{\hyperlink{class_vesper_1_1_instrumentor_a868e96beb461ded3358a959a4aef5eda}{Write\+Profile}} (const \doxymbox{\hyperlink{namespace_vesper_struct_vesper_1_1_profile_result}{Profile\+Result}} \&result)
+\item 
+void \doxymbox{\hyperlink{class_vesper_1_1_instrumentor_a4ffb774784a5133c5b38e809c7ba4838}{Write\+Header}} ()
+\item 
+void \doxymbox{\hyperlink{class_vesper_1_1_instrumentor_a96794676daa3894676904f2f96706969}{Write\+Footer}} ()
+\item 
+void \doxymbox{\hyperlink{class_vesper_1_1_instrumentor_afd83a9217b14bb02aeaacb4389465749}{Internal\+End\+Session}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \doxymbox{\hyperlink{class_vesper_1_1_instrumentor_a6ffcc81f7e3a594fff8add3ba323ce74}{Instrumentor}} \& \doxymbox{\hyperlink{class_vesper_1_1_instrumentor_a43ebba932df02103a849eb617ca80114}{Get}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{namespace_vesper_struct_vesper_1_1_instrumentation_session}{Instrumentation\+Session}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_vesper_1_1_instrumentor_aae669e34418a889c352890530c1658f0}{m\+\_\+\+Current\+Session}}
+\item 
+std::\+ofstream \doxymbox{\hyperlink{class_vesper_1_1_instrumentor_a34886a38c88ba344379ba4e987f000b0}{m\+\_\+\+Output\+Stream}}
+\item 
+std::\+mutex \doxymbox{\hyperlink{class_vesper_1_1_instrumentor_ae125a48a215c80a9419ec5049f876e83}{m\+\_\+\+Mutex}}
+\end{DoxyCompactItemize}
+
+
+\label{doc-constructors}
+\Hypertarget{class_vesper_1_1_instrumentor_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_vesper_1_1_instrumentor_a6ffcc81f7e3a594fff8add3ba323ce74}\index{Vesper::Instrumentor@{Vesper::Instrumentor}!Instrumentor@{Instrumentor}}
+\index{Instrumentor@{Instrumentor}!Vesper::Instrumentor@{Vesper::Instrumentor}}
+\doxysubsubsection{\texorpdfstring{Instrumentor()}{Instrumentor()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_instrumentor_a6ffcc81f7e3a594fff8add3ba323ce74} 
+Vesper::\+\+Instrumentor::\+\+Instrumentor (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_vesper_1_1_instrumentor_aae669e34418a889c352890530c1658f0}{m\_CurrentSession}}(\textcolor{keyword}{nullptr}) }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\label{doc-func-members}
+\Hypertarget{class_vesper_1_1_instrumentor_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_vesper_1_1_instrumentor_acdc2004ddc288d58591a4f5e8bd7b5d9}\index{Vesper::Instrumentor@{Vesper::Instrumentor}!BeginSession@{BeginSession}}
+\index{BeginSession@{BeginSession}!Vesper::Instrumentor@{Vesper::Instrumentor}}
+\doxysubsubsection{\texorpdfstring{BeginSession()}{BeginSession()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_instrumentor_acdc2004ddc288d58591a4f5e8bd7b5d9} 
+void Vesper::\+\+Instrumentor::\+\+Begin\+Session (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{name}{, }\item[{const std::\+string \&}]{filepath}{ = {\ttfamily "{}results.json"{}}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ std::lock\_guard\ lock(\doxymbox{\hyperlink{class_vesper_1_1_instrumentor_ae125a48a215c80a9419ec5049f876e83}{m\_Mutex}});}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_vesper_1_1_instrumentor_aae669e34418a889c352890530c1658f0}{m\_CurrentSession}})\ \{}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ If\ there\ is\ already\ a\ current\ session,\ end\ it\ and\ start\ new\ one}}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_vesper_1_1_log_a308072f59ab7bf4c27321ec9cc26bdf6}{Log::GetCoreLogger}}())\ }
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_log_8h_af9f85085b8d9825fe5d84ca485b7ee89}{VZ\_CORE\_ERROR}}(\textcolor{stringliteral}{"{}Instrumentor::BeginSession('\{0\}')\ when\ session\ '\{1\}'\ already\ open."{}},\ name,\ \doxymbox{\hyperlink{class_vesper_1_1_instrumentor_aae669e34418a889c352890530c1658f0}{m\_CurrentSession}}-\/>Name);}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_instrumentor_afd83a9217b14bb02aeaacb4389465749}{InternalEndSession}}();}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_instrumentor_a34886a38c88ba344379ba4e987f000b0}{m\_OutputStream}}.open(filepath);}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_vesper_1_1_instrumentor_a34886a38c88ba344379ba4e987f000b0}{m\_OutputStream}}.is\_open())\ \{}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_instrumentor_aae669e34418a889c352890530c1658f0}{m\_CurrentSession}}\ =\ \textcolor{keyword}{new}\ InstrumentationSession\{\ name\ \};}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_instrumentor_a4ffb774784a5133c5b38e809c7ba4838}{WriteHeader}}();}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_vesper_1_1_log_a308072f59ab7bf4c27321ec9cc26bdf6}{Log::GetCoreLogger}}())\ }
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_log_8h_af9f85085b8d9825fe5d84ca485b7ee89}{VZ\_CORE\_ERROR}}(\textcolor{stringliteral}{"{}Instrumentor\ could\ not\ open\ results\ file\ '\{0\}'."{}},\ filepath);}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_instrumentor_a4ffb774784a5133c5b38e809c7ba4838}{WriteHeader}}();}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_instrumentor_aae669e34418a889c352890530c1658f0}{m\_CurrentSession}}\ =\ \textcolor{keyword}{new}\ InstrumentationSession\{\ name\ \};}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_vesper_1_1_instrumentor_a396d186614575c7b0fbf84db474d807b}\index{Vesper::Instrumentor@{Vesper::Instrumentor}!EndSession@{EndSession}}
+\index{EndSession@{EndSession}!Vesper::Instrumentor@{Vesper::Instrumentor}}
+\doxysubsubsection{\texorpdfstring{EndSession()}{EndSession()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_instrumentor_a396d186614575c7b0fbf84db474d807b} 
+void Vesper::\+\+Instrumentor::\+\+End\+Session (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ std::lock\_guard\ lock(\doxymbox{\hyperlink{class_vesper_1_1_instrumentor_ae125a48a215c80a9419ec5049f876e83}{m\_Mutex}});}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_instrumentor_afd83a9217b14bb02aeaacb4389465749}{InternalEndSession}}();}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_vesper_1_1_instrumentor_a43ebba932df02103a849eb617ca80114}\index{Vesper::Instrumentor@{Vesper::Instrumentor}!Get@{Get}}
+\index{Get@{Get}!Vesper::Instrumentor@{Vesper::Instrumentor}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_instrumentor_a43ebba932df02103a849eb617ca80114} 
+\doxymbox{\hyperlink{class_vesper_1_1_instrumentor_a6ffcc81f7e3a594fff8add3ba323ce74}{Instrumentor}} \& Vesper::\+\+Instrumentor::\+\+Get (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \doxymbox{\hyperlink{class_vesper_1_1_instrumentor_a6ffcc81f7e3a594fff8add3ba323ce74}{Instrumentor}}\ instance;}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ instance;}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_vesper_1_1_instrumentor_afd83a9217b14bb02aeaacb4389465749}\index{Vesper::Instrumentor@{Vesper::Instrumentor}!InternalEndSession@{InternalEndSession}}
+\index{InternalEndSession@{InternalEndSession}!Vesper::Instrumentor@{Vesper::Instrumentor}}
+\doxysubsubsection{\texorpdfstring{InternalEndSession()}{InternalEndSession()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_instrumentor_afd83a9217b14bb02aeaacb4389465749} 
+void Vesper::\+\+Instrumentor::\+\+Internal\+End\+Session (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_vesper_1_1_instrumentor_aae669e34418a889c352890530c1658f0}{m\_CurrentSession}})}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_instrumentor_a96794676daa3894676904f2f96706969}{WriteFooter}}();}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_instrumentor_a34886a38c88ba344379ba4e987f000b0}{m\_OutputStream}}.close();}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ \doxymbox{\hyperlink{class_vesper_1_1_instrumentor_aae669e34418a889c352890530c1658f0}{m\_CurrentSession}};}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_instrumentor_aae669e34418a889c352890530c1658f0}{m\_CurrentSession}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_vesper_1_1_instrumentor_a96794676daa3894676904f2f96706969}\index{Vesper::Instrumentor@{Vesper::Instrumentor}!WriteFooter@{WriteFooter}}
+\index{WriteFooter@{WriteFooter}!Vesper::Instrumentor@{Vesper::Instrumentor}}
+\doxysubsubsection{\texorpdfstring{WriteFooter()}{WriteFooter()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_instrumentor_a96794676daa3894676904f2f96706969} 
+void Vesper::\+\+Instrumentor::\+\+Write\+Footer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_instrumentor_a34886a38c88ba344379ba4e987f000b0}{m\_OutputStream}}\ <<\ \textcolor{stringliteral}{"{}]\}"{}};}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_instrumentor_a34886a38c88ba344379ba4e987f000b0}{m\_OutputStream}}.flush();}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_vesper_1_1_instrumentor_a4ffb774784a5133c5b38e809c7ba4838}\index{Vesper::Instrumentor@{Vesper::Instrumentor}!WriteHeader@{WriteHeader}}
+\index{WriteHeader@{WriteHeader}!Vesper::Instrumentor@{Vesper::Instrumentor}}
+\doxysubsubsection{\texorpdfstring{WriteHeader()}{WriteHeader()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_instrumentor_a4ffb774784a5133c5b38e809c7ba4838} 
+void Vesper::\+\+Instrumentor::\+\+Write\+Header (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_instrumentor_a34886a38c88ba344379ba4e987f000b0}{m\_OutputStream}}\ <<\ \textcolor{stringliteral}{"{}\{\(\backslash\)"{}otherData\(\backslash\)"{}:\ \{\},\(\backslash\)"{}traceEvents\(\backslash\)"{}:["{}};}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_instrumentor_a34886a38c88ba344379ba4e987f000b0}{m\_OutputStream}}.flush();}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_vesper_1_1_instrumentor_a868e96beb461ded3358a959a4aef5eda}\index{Vesper::Instrumentor@{Vesper::Instrumentor}!WriteProfile@{WriteProfile}}
+\index{WriteProfile@{WriteProfile}!Vesper::Instrumentor@{Vesper::Instrumentor}}
+\doxysubsubsection{\texorpdfstring{WriteProfile()}{WriteProfile()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_instrumentor_a868e96beb461ded3358a959a4aef5eda} 
+void Vesper::\+\+Instrumentor::\+\+Write\+Profile (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{namespace_vesper_struct_vesper_1_1_profile_result}{Profile\+Result}} \&}]{result}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_instrumentor_a34886a38c88ba344379ba4e987f000b0}{m\_OutputStream}}\ <<\ \textcolor{stringliteral}{"{},"{}};}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ name\ =\ result.Name;}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ std::replace(name.begin(),\ name.end(),\ \textcolor{charliteral}{'"{}'},\ \textcolor{charliteral}{'\(\backslash\)''});}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_instrumentor_a34886a38c88ba344379ba4e987f000b0}{m\_OutputStream}}\ <<\ \textcolor{stringliteral}{"{}\{"{}};}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_instrumentor_a34886a38c88ba344379ba4e987f000b0}{m\_OutputStream}}\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)"{}cat\(\backslash\)"{}:\(\backslash\)"{}function\(\backslash\)"{},"{}};}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_instrumentor_a34886a38c88ba344379ba4e987f000b0}{m\_OutputStream}}\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)"{}dur\(\backslash\)"{}:"{}}\ <<\ (result.End\ -\/\ result.Start)\ <<\ \textcolor{charliteral}{','};}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_instrumentor_a34886a38c88ba344379ba4e987f000b0}{m\_OutputStream}}\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)"{}name\(\backslash\)"{}:\(\backslash\)"{}"{}}\ <<\ name\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)"{},"{}};}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_instrumentor_a34886a38c88ba344379ba4e987f000b0}{m\_OutputStream}}\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)"{}ph\(\backslash\)"{}:\(\backslash\)"{}X\(\backslash\)"{},"{}};}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_instrumentor_a34886a38c88ba344379ba4e987f000b0}{m\_OutputStream}}\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)"{}pid\(\backslash\)"{}:0,"{}};}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_instrumentor_a34886a38c88ba344379ba4e987f000b0}{m\_OutputStream}}\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)"{}tid\(\backslash\)"{}:"{}}\ <<\ result.ThreadID\ <<\ \textcolor{stringliteral}{"{},"{}};}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_instrumentor_a34886a38c88ba344379ba4e987f000b0}{m\_OutputStream}}\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)"{}ts\(\backslash\)"{}:"{}}\ <<\ result.Start;}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_instrumentor_a34886a38c88ba344379ba4e987f000b0}{m\_OutputStream}}\ <<\ \textcolor{stringliteral}{"{}\}"{}};}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ std::lock\_guard\ lock(\doxymbox{\hyperlink{class_vesper_1_1_instrumentor_ae125a48a215c80a9419ec5049f876e83}{m\_Mutex}});}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_vesper_1_1_instrumentor_aae669e34418a889c352890530c1658f0}{m\_CurrentSession}})}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//m\_OutputStream\ <<\ json.str();}}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_instrumentor_a34886a38c88ba344379ba4e987f000b0}{m\_OutputStream}}.flush();}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_vesper_1_1_instrumentor_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_vesper_1_1_instrumentor_aae669e34418a889c352890530c1658f0}\index{Vesper::Instrumentor@{Vesper::Instrumentor}!m\_CurrentSession@{m\_CurrentSession}}
+\index{m\_CurrentSession@{m\_CurrentSession}!Vesper::Instrumentor@{Vesper::Instrumentor}}
+\doxysubsubsection{\texorpdfstring{m\_CurrentSession}{m\_CurrentSession}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_instrumentor_aae669e34418a889c352890530c1658f0} 
+\doxymbox{\hyperlink{namespace_vesper_struct_vesper_1_1_instrumentation_session}{Instrumentation\+Session}}\texorpdfstring{$\ast$}{*} Vesper::\+\+Instrumentor::\+m\+\_\+\+Current\+Session\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_vesper_1_1_instrumentor_ae125a48a215c80a9419ec5049f876e83}\index{Vesper::Instrumentor@{Vesper::Instrumentor}!m\_Mutex@{m\_Mutex}}
+\index{m\_Mutex@{m\_Mutex}!Vesper::Instrumentor@{Vesper::Instrumentor}}
+\doxysubsubsection{\texorpdfstring{m\_Mutex}{m\_Mutex}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_instrumentor_ae125a48a215c80a9419ec5049f876e83} 
+std::\+mutex Vesper::\+\+Instrumentor::\+m\+\_\+\+Mutex\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_vesper_1_1_instrumentor_a34886a38c88ba344379ba4e987f000b0}\index{Vesper::Instrumentor@{Vesper::Instrumentor}!m\_OutputStream@{m\_OutputStream}}
+\index{m\_OutputStream@{m\_OutputStream}!Vesper::Instrumentor@{Vesper::Instrumentor}}
+\doxysubsubsection{\texorpdfstring{m\_OutputStream}{m\_OutputStream}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_instrumentor_a34886a38c88ba344379ba4e987f000b0} 
+std::\+ofstream Vesper::\+\+Instrumentor::\+m\+\_\+\+Output\+Stream\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+Vesper/\+src/\+\+Vesper/\+\+Debug/\+\doxymbox{\hyperlink{_instrumentor_8h}{Instrumentor.\+h}}\end{DoxyCompactItemize}

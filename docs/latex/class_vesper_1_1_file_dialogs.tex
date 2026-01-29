@@ -1,0 +1,85 @@
+\doxysection{Vesper::\+File\+Dialogs Class Reference}
+\hypertarget{class_vesper_1_1_file_dialogs}{}\label{class_vesper_1_1_file_dialogs}\index{Vesper::FileDialogs@{Vesper::FileDialogs}}
+
+
+{\ttfamily \+\#include $<$Platform\+Utils.\+h$>$}
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std::\+string \doxymbox{\hyperlink{class_vesper_1_1_file_dialogs_a30ef477107af39176c77dd554ca88f6a}{Open\+File}} (const char \texorpdfstring{$\ast$}{*}filter)
+\item 
+static std::\+string \doxymbox{\hyperlink{class_vesper_1_1_file_dialogs_a2929cc61038cd4dce65005ab83760607}{Save\+File}} (const char \texorpdfstring{$\ast$}{*}filter)
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{class_vesper_1_1_file_dialogs_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_vesper_1_1_file_dialogs_a30ef477107af39176c77dd554ca88f6a}\index{Vesper::FileDialogs@{Vesper::FileDialogs}!OpenFile@{OpenFile}}
+\index{OpenFile@{OpenFile}!Vesper::FileDialogs@{Vesper::FileDialogs}}
+\doxysubsubsection{\texorpdfstring{OpenFile()}{OpenFile()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_file_dialogs_a30ef477107af39176c77dd554ca88f6a} 
+std::\+string Vesper::\+\+File\+Dialogs::\+\+Open\+File (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{filter}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ OPENFILENAMEA\ ofn;}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ CHAR\ szFile[260]\ =\ \{\ 0\ \};}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ ZeroMemory(\&ofn,\ \textcolor{keyword}{sizeof}(ofn));}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ ofn.lStructSize\ =\ \textcolor{keyword}{sizeof}(ofn);}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ ofn.hwndOwner\ =\ glfwGetWin32Window((GLFWwindow*)\doxymbox{\hyperlink{class_vesper_1_1_application_a7edbd0f4804f897c09ad869239a97ffa}{Vesper::Application::Get}}().GetWindow().GetNativeWindow());}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ ofn.lpstrFile\ =\ szFile;}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ ofn.nMaxFile\ =\ \textcolor{keyword}{sizeof}(szFile);}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ ofn.lpstrFilter\ =\ filter;}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ ofn.nFilterIndex\ =\ 1;}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ ofn.Flags\ =\ OFN\_PATHMUSTEXIST\ |\ OFN\_FILEMUSTEXIST\ |\ OFN\_NOCHANGEDIR;}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (GetOpenFileNameA(\&ofn)\ ==\ TRUE)}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::string(ofn.lpstrFile);}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::string();}
+\DoxyCodeLine{00027\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_vesper_1_1_file_dialogs_a2929cc61038cd4dce65005ab83760607}\index{Vesper::FileDialogs@{Vesper::FileDialogs}!SaveFile@{SaveFile}}
+\index{SaveFile@{SaveFile}!Vesper::FileDialogs@{Vesper::FileDialogs}}
+\doxysubsubsection{\texorpdfstring{SaveFile()}{SaveFile()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_file_dialogs_a2929cc61038cd4dce65005ab83760607} 
+std::\+string Vesper::\+\+File\+Dialogs::\+\+Save\+File (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{filter}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ OPENFILENAMEA\ ofn;}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ CHAR\ szFile[260]\ =\ \{\ 0\ \};}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ CHAR\ currentDir[256]\ =\ \{\ 0\ \};}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ ZeroMemory(\&ofn,\ \textcolor{keyword}{sizeof}(OPENFILENAME));}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ ofn.lStructSize\ =\ \textcolor{keyword}{sizeof}(OPENFILENAME);}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ ofn.hwndOwner\ =\ glfwGetWin32Window((GLFWwindow*)\doxymbox{\hyperlink{class_vesper_1_1_application_a7edbd0f4804f897c09ad869239a97ffa}{Application::Get}}().GetWindow().GetNativeWindow());}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ ofn.lpstrFile\ =\ szFile;}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ ofn.nMaxFile\ =\ \textcolor{keyword}{sizeof}(szFile);}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (GetCurrentDirectoryA(256,\ currentDir))}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ ofn.lpstrInitialDir\ =\ currentDir;}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ ofn.lpstrFilter\ =\ filter;}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ ofn.nFilterIndex\ =\ 1;}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ ofn.Flags\ =\ OFN\_PATHMUSTEXIST\ |\ OFN\_OVERWRITEPROMPT\ |\ OFN\_NOCHANGEDIR;}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Sets\ the\ default\ extension\ by\ extracting\ it\ from\ the\ filter}}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ ofn.lpstrDefExt\ =\ strchr(filter,\ \textcolor{charliteral}{'\(\backslash\)0'})\ +\ 1;}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (GetSaveFileNameA(\&ofn)\ ==\ TRUE)}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ofn.lpstrFile;}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::string();}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+Vesper/\+src/\+\+Vesper/\+\+Utils/\+\doxymbox{\hyperlink{_platform_utils_8h}{Platform\+Utils.\+h}}\item 
+Vesper/\+src/\+\+Platform/\+\+Windows/\+\doxymbox{\hyperlink{_windows_platform_utils_8cpp}{Windows\+Platform\+Utils.\+cpp}}\end{DoxyCompactItemize}

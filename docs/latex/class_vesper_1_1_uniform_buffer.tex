@@ -1,0 +1,85 @@
+\doxysection{Vesper::\+Uniform\+Buffer Class Reference}
+\hypertarget{class_vesper_1_1_uniform_buffer}{}\label{class_vesper_1_1_uniform_buffer}\index{Vesper::UniformBuffer@{Vesper::UniformBuffer}}
+
+
+{\ttfamily \+\#include $<$Uniform\+Buffer.\+h$>$}
+
+Inheritance diagram for Vesper::\+Uniform\+Buffer:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_vesper_1_1_uniform_buffer}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \doxymbox{\hyperlink{class_vesper_1_1_uniform_buffer_a0e5c3de2c9790c2dc917ba1b934636ef}{\texorpdfstring{$\sim$}{\string~}\+Uniform\+Buffer}} ()
+\item 
+virtual void \doxymbox{\hyperlink{class_vesper_1_1_uniform_buffer_aa92c14a41aeab170d2407cd949558a14}{Set\+Data}} (const void \texorpdfstring{$\ast$}{*}data, uint32\+\_\+t size, uint32\+\_\+t offset=0)=0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_uniform_buffer}{Uniform\+Buffer}} $>$ \doxymbox{\hyperlink{class_vesper_1_1_uniform_buffer_a03267e75be5b58c3a687b738dd3d7689}{Create}} (uint32\+\_\+t size, uint32\+\_\+t binding)
+\end{DoxyCompactItemize}
+
+
+\label{doc-constructors}
+\Hypertarget{class_vesper_1_1_uniform_buffer_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_vesper_1_1_uniform_buffer_a0e5c3de2c9790c2dc917ba1b934636ef}\index{Vesper::UniformBuffer@{Vesper::UniformBuffer}!````~UniformBuffer@{\texorpdfstring{$\sim$}{\string~}UniformBuffer}}
+\index{````~UniformBuffer@{\texorpdfstring{$\sim$}{\string~}UniformBuffer}!Vesper::UniformBuffer@{Vesper::UniformBuffer}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}UniformBuffer()}{\string~UniformBuffer()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_uniform_buffer_a0e5c3de2c9790c2dc917ba1b934636ef} 
+virtual Vesper::\+\+Uniform\+Buffer::\+\texorpdfstring{$\sim$}{\string~}\+Uniform\+Buffer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00010\ \{\}}
+
+\end{DoxyCode}
+
+
+\label{doc-func-members}
+\Hypertarget{class_vesper_1_1_uniform_buffer_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_vesper_1_1_uniform_buffer_a03267e75be5b58c3a687b738dd3d7689}\index{Vesper::UniformBuffer@{Vesper::UniformBuffer}!Create@{Create}}
+\index{Create@{Create}!Vesper::UniformBuffer@{Vesper::UniformBuffer}}
+\doxysubsubsection{\texorpdfstring{Create()}{Create()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_uniform_buffer_a03267e75be5b58c3a687b738dd3d7689} 
+\doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_uniform_buffer}{Uniform\+Buffer}} $>$ Vesper::\+\+Uniform\+Buffer::\+\+Create (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{size}{, }\item[{uint32\+\_\+t}]{binding}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00010\ \ \ \ \ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (\doxymbox{\hyperlink{class_vesper_1_1_renderer_af8221f49491f130b6de7feb1b5093227}{Renderer::GetAPI}}())}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{class_vesper_1_1_renderer_a_p_i_acbef8f1a2c9546387b6513640c5c7995a6adf97f83acf6453d4a6a4b1070f3754}{RendererAPI::API::None}}:\ \ \ \ \doxymbox{\hyperlink{_asserts_8h_a3b51b77f75997760894138afc89403c9}{VZ\_CORE\_ASSERT}}(\textcolor{keyword}{false},\ \textcolor{stringliteral}{"{}RendererAPI::None\ is\ currently\ not\ supported!"{}});\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{class_vesper_1_1_renderer_a_p_i_acbef8f1a2c9546387b6513640c5c7995a760716b590ee7c0adc25f434f577d8be}{RendererAPI::API::OpenGL}}:\ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{namespace_vesper_a313930b55375b2f4dd36375b56f11047}{CreateRef<OpenGLUniformBuffer>}}(size,\ binding);}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_asserts_8h_a3b51b77f75997760894138afc89403c9}{VZ\_CORE\_ASSERT}}(\textcolor{keyword}{false},\ \textcolor{stringliteral}{"{}Unknown\ RendererAPI!"{}});}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00019\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_renderer_af8221f49491f130b6de7feb1b5093227}{Vesper::\+\+Renderer::\+\+Get\+API()}}, \doxymbox{\hyperlink{class_vesper_1_1_renderer_a_p_i_acbef8f1a2c9546387b6513640c5c7995a6adf97f83acf6453d4a6a4b1070f3754}{Vesper::\+\+Renderer\+API::\+\+None}}, and \doxymbox{\hyperlink{class_vesper_1_1_renderer_a_p_i_acbef8f1a2c9546387b6513640c5c7995a760716b590ee7c0adc25f434f577d8be}{Vesper::\+\+Renderer\+API::\+\+Open\+GL}}.
+
+\Hypertarget{class_vesper_1_1_uniform_buffer_aa92c14a41aeab170d2407cd949558a14}\index{Vesper::UniformBuffer@{Vesper::UniformBuffer}!SetData@{SetData}}
+\index{SetData@{SetData}!Vesper::UniformBuffer@{Vesper::UniformBuffer}}
+\doxysubsubsection{\texorpdfstring{SetData()}{SetData()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_uniform_buffer_aa92c14a41aeab170d2407cd949558a14} 
+virtual void Vesper::\+\+Uniform\+Buffer::\+\+Set\+Data (\begin{DoxyParamCaption}\item[{const void \texorpdfstring{$\ast$}{*}}]{data}{, }\item[{uint32\+\_\+t}]{size}{, }\item[{uint32\+\_\+t}]{offset}{ = {\ttfamily 0}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_uniform_buffer_ade65cf1627a5a29a66993bf631931a39}{Vesper::\+\+Open\+GLUniform\+Buffer}}.
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+Vesper/\+src/\+\+Vesper/\+\+Renderer/\+\doxymbox{\hyperlink{_uniform_buffer_8h}{Uniform\+Buffer.\+h}}\item 
+Vesper/\+src/\+\+Vesper/\+\+Renderer/\+\doxymbox{\hyperlink{_uniform_buffer_8cpp}{Uniform\+Buffer.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,168 @@
+\doxysection{Vesper::\+Texture\+Animation\+Component Struct Reference}
+\hypertarget{struct_vesper_1_1_texture_animation_component}{}\label{struct_vesper_1_1_texture_animation_component}\index{Vesper::TextureAnimationComponent@{Vesper::TextureAnimationComponent}}
+
+
+{\ttfamily \+\#include $<$Components.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component_ab66bd56f2dc429e6011bcddbb03ac315}{Texture\+Animation\+Component}} ()=default
+\item 
+\doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component_afe317229f4386b384d17b0990b2ecf60}{Texture\+Animation\+Component}} (const Texture\+Animation\+Component \&)=default
+\item 
+\doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component_aadf0433d47a416bd3147f4d7cb3e80e5}{Texture\+Animation\+Component}} (const std::\+vector$<$ \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d}{Sub\+Texture2D}} $>$ $>$ \&sub\+Textures, float frame\+Time)
+\item 
+\doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component_aa922de981346349f7cc8e1f37d8d448e}{operator std::\+vector$<$ Ref$<$ Sub\+Texture2\+D $>$ $>$ \&}} ()
+\item 
+\doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component_ac9020f89159cc9131ebb837cbf5b24db}{operator const std::\+vector$<$ Ref$<$ Sub\+Texture2\+D $>$ $>$ \&}} () const
+\item 
+std::\+vector$<$ \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d}{Sub\+Texture2D}} $>$ $>$ \& \doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component_a642de2be8aeb93f035224e5fff2ecf18}{Get\+Sub\+Textures}} ()
+\item 
+uint32\+\_\+t \doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component_a64a918823e214803efe4179fcfecb0fb}{Get\+Current\+Frame}} () const
+\item 
+void \doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component_acca7dd5c0925deaa8fbf585ec9f7d240}{Update}} (float delta\+Time)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std::\+vector$<$ \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d}{Sub\+Texture2D}} $>$ $>$ \doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component_a21542f18f8f3b9de5c167e200a7eb515}{Sub\+Textures}}
+\item 
+uint32\+\_\+t \doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component_a750510c360faf4c4c509f2555d9dd60d}{Current\+Frame}} = 0
+\item 
+float \doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component_ab80a76f7f5a5a5bdb9959262742c5869}{Frame\+Time}} = 0.\+6f
+\item 
+float \doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component_a16a0dc3f1aee3138fee0b181064d0031}{Time\+Accumulator}} = 0.\+0f
+\end{DoxyCompactItemize}
+
+
+\label{doc-constructors}
+\Hypertarget{struct_vesper_1_1_texture_animation_component_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{struct_vesper_1_1_texture_animation_component_ab66bd56f2dc429e6011bcddbb03ac315}\index{Vesper::TextureAnimationComponent@{Vesper::TextureAnimationComponent}!TextureAnimationComponent@{TextureAnimationComponent}}
+\index{TextureAnimationComponent@{TextureAnimationComponent}!Vesper::TextureAnimationComponent@{Vesper::TextureAnimationComponent}}
+\doxysubsubsection{\texorpdfstring{TextureAnimationComponent()}{TextureAnimationComponent()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{struct_vesper_1_1_texture_animation_component_ab66bd56f2dc429e6011bcddbb03ac315} 
+Vesper::\+\+Texture\+Animation\+Component::\+\+Texture\+Animation\+Component (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\Hypertarget{struct_vesper_1_1_texture_animation_component_afe317229f4386b384d17b0990b2ecf60}\index{Vesper::TextureAnimationComponent@{Vesper::TextureAnimationComponent}!TextureAnimationComponent@{TextureAnimationComponent}}
+\index{TextureAnimationComponent@{TextureAnimationComponent}!Vesper::TextureAnimationComponent@{Vesper::TextureAnimationComponent}}
+\doxysubsubsection{\texorpdfstring{TextureAnimationComponent()}{TextureAnimationComponent()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{struct_vesper_1_1_texture_animation_component_afe317229f4386b384d17b0990b2ecf60} 
+Vesper::\+\+Texture\+Animation\+Component::\+\+Texture\+Animation\+Component (\begin{DoxyParamCaption}\item[{const Texture\+Animation\+Component \&}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\Hypertarget{struct_vesper_1_1_texture_animation_component_aadf0433d47a416bd3147f4d7cb3e80e5}\index{Vesper::TextureAnimationComponent@{Vesper::TextureAnimationComponent}!TextureAnimationComponent@{TextureAnimationComponent}}
+\index{TextureAnimationComponent@{TextureAnimationComponent}!Vesper::TextureAnimationComponent@{Vesper::TextureAnimationComponent}}
+\doxysubsubsection{\texorpdfstring{TextureAnimationComponent()}{TextureAnimationComponent()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{struct_vesper_1_1_texture_animation_component_aadf0433d47a416bd3147f4d7cb3e80e5} 
+Vesper::\+\+Texture\+Animation\+Component::\+\+Texture\+Animation\+Component (\begin{DoxyParamCaption}\item[{const std::\+vector$<$ \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d}{Sub\+Texture2D}} $>$ $>$ \&}]{sub\+Textures}{, }\item[{float}]{frame\+Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component_a21542f18f8f3b9de5c167e200a7eb515}{SubTextures}}(subTextures),\ \doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component_ab80a76f7f5a5a5bdb9959262742c5869}{FrameTime}}(frameTime)\ \{}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\label{doc-func-members}
+\Hypertarget{struct_vesper_1_1_texture_animation_component_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_vesper_1_1_texture_animation_component_a64a918823e214803efe4179fcfecb0fb}\index{Vesper::TextureAnimationComponent@{Vesper::TextureAnimationComponent}!GetCurrentFrame@{GetCurrentFrame}}
+\index{GetCurrentFrame@{GetCurrentFrame}!Vesper::TextureAnimationComponent@{Vesper::TextureAnimationComponent}}
+\doxysubsubsection{\texorpdfstring{GetCurrentFrame()}{GetCurrentFrame()}}
+{\footnotesize\ttfamily \label{struct_vesper_1_1_texture_animation_component_a64a918823e214803efe4179fcfecb0fb} 
+uint32\+\_\+t Vesper::\+\+Texture\+Animation\+Component::\+\+Get\+Current\+Frame (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00139\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component_a750510c360faf4c4c509f2555d9dd60d}{CurrentFrame}};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{struct_vesper_1_1_texture_animation_component_a642de2be8aeb93f035224e5fff2ecf18}\index{Vesper::TextureAnimationComponent@{Vesper::TextureAnimationComponent}!GetSubTextures@{GetSubTextures}}
+\index{GetSubTextures@{GetSubTextures}!Vesper::TextureAnimationComponent@{Vesper::TextureAnimationComponent}}
+\doxysubsubsection{\texorpdfstring{GetSubTextures()}{GetSubTextures()}}
+{\footnotesize\ttfamily \label{struct_vesper_1_1_texture_animation_component_a642de2be8aeb93f035224e5fff2ecf18} 
+std::\+vector$<$ \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d}{Sub\+Texture2D}} $>$ $>$ \& Vesper::\+\+Texture\+Animation\+Component::\+\+Get\+Sub\+Textures (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00138\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component_a21542f18f8f3b9de5c167e200a7eb515}{SubTextures}};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{struct_vesper_1_1_texture_animation_component_ac9020f89159cc9131ebb837cbf5b24db}\index{Vesper::TextureAnimationComponent@{Vesper::TextureAnimationComponent}!operator const std::vector$<$ Ref$<$ SubTexture2D $>$ $>$ \&@{operator const std::vector$<$ Ref$<$ SubTexture2D $>$ $>$ \&}}
+\index{operator const std::vector$<$ Ref$<$ SubTexture2D $>$ $>$ \&@{operator const std::vector$<$ Ref$<$ SubTexture2D $>$ $>$ \&}!Vesper::TextureAnimationComponent@{Vesper::TextureAnimationComponent}}
+\doxysubsubsection{\texorpdfstring{operator const std::vector$<$ Ref$<$ SubTexture2D $>$ $>$ \&()}{operator const std::vector< Ref< SubTexture2D > > \&()}}
+{\footnotesize\ttfamily \label{struct_vesper_1_1_texture_animation_component_ac9020f89159cc9131ebb837cbf5b24db} 
+Vesper::\+\+Texture\+Animation\+Component::\+operator const std::\+vector$<$ \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d}{Sub\+Texture2D}} $>$ $>$ \& (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00136\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component_a21542f18f8f3b9de5c167e200a7eb515}{SubTextures}};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{struct_vesper_1_1_texture_animation_component_aa922de981346349f7cc8e1f37d8d448e}\index{Vesper::TextureAnimationComponent@{Vesper::TextureAnimationComponent}!operator std::vector$<$ Ref$<$ SubTexture2D $>$ $>$ \&@{operator std::vector$<$ Ref$<$ SubTexture2D $>$ $>$ \&}}
+\index{operator std::vector$<$ Ref$<$ SubTexture2D $>$ $>$ \&@{operator std::vector$<$ Ref$<$ SubTexture2D $>$ $>$ \&}!Vesper::TextureAnimationComponent@{Vesper::TextureAnimationComponent}}
+\doxysubsubsection{\texorpdfstring{operator std::vector$<$ Ref$<$ SubTexture2D $>$ $>$ \&()}{operator std::vector< Ref< SubTexture2D > > \&()}}
+{\footnotesize\ttfamily \label{struct_vesper_1_1_texture_animation_component_aa922de981346349f7cc8e1f37d8d448e} 
+Vesper::\+\+Texture\+Animation\+Component::\+operator std::\+vector$<$ \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d}{Sub\+Texture2D}} $>$ $>$ \& (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00135\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component_a21542f18f8f3b9de5c167e200a7eb515}{SubTextures}};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{struct_vesper_1_1_texture_animation_component_acca7dd5c0925deaa8fbf585ec9f7d240}\index{Vesper::TextureAnimationComponent@{Vesper::TextureAnimationComponent}!Update@{Update}}
+\index{Update@{Update}!Vesper::TextureAnimationComponent@{Vesper::TextureAnimationComponent}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily \label{struct_vesper_1_1_texture_animation_component_acca7dd5c0925deaa8fbf585ec9f7d240} 
+void Vesper::\+\+Texture\+Animation\+Component::\+\+Update (\begin{DoxyParamCaption}\item[{float}]{delta\+Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component_a21542f18f8f3b9de5c167e200a7eb515}{SubTextures}}.empty()\ ||\ \doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component_ab80a76f7f5a5a5bdb9959262742c5869}{FrameTime}}\ <=\ 0.0f)}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component_a16a0dc3f1aee3138fee0b181064d0031}{TimeAccumulator}}\ +=\ deltaTime;}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (\doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component_a16a0dc3f1aee3138fee0b181064d0031}{TimeAccumulator}}\ >=\ \doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component_ab80a76f7f5a5a5bdb9959262742c5869}{FrameTime}})\ \{}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component_a750510c360faf4c4c509f2555d9dd60d}{CurrentFrame}}\ =\ (\doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component_a750510c360faf4c4c509f2555d9dd60d}{CurrentFrame}}\ +\ 1)\ \%\ \textcolor{keyword}{static\_cast<}uint32\_t\textcolor{keyword}{>}(\doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component_a21542f18f8f3b9de5c167e200a7eb515}{SubTextures}}.size());}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component_a16a0dc3f1aee3138fee0b181064d0031}{TimeAccumulator}}\ -\/=\ \doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component_ab80a76f7f5a5a5bdb9959262742c5869}{FrameTime}};}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\label{doc-variable-members}
+\Hypertarget{struct_vesper_1_1_texture_animation_component_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_vesper_1_1_texture_animation_component_a750510c360faf4c4c509f2555d9dd60d}\index{Vesper::TextureAnimationComponent@{Vesper::TextureAnimationComponent}!CurrentFrame@{CurrentFrame}}
+\index{CurrentFrame@{CurrentFrame}!Vesper::TextureAnimationComponent@{Vesper::TextureAnimationComponent}}
+\doxysubsubsection{\texorpdfstring{CurrentFrame}{CurrentFrame}}
+{\footnotesize\ttfamily \label{struct_vesper_1_1_texture_animation_component_a750510c360faf4c4c509f2555d9dd60d} 
+uint32\+\_\+t Vesper::\+\+Texture\+Animation\+Component::\+\+Current\+Frame = 0}
+
+\Hypertarget{struct_vesper_1_1_texture_animation_component_ab80a76f7f5a5a5bdb9959262742c5869}\index{Vesper::TextureAnimationComponent@{Vesper::TextureAnimationComponent}!FrameTime@{FrameTime}}
+\index{FrameTime@{FrameTime}!Vesper::TextureAnimationComponent@{Vesper::TextureAnimationComponent}}
+\doxysubsubsection{\texorpdfstring{FrameTime}{FrameTime}}
+{\footnotesize\ttfamily \label{struct_vesper_1_1_texture_animation_component_ab80a76f7f5a5a5bdb9959262742c5869} 
+float Vesper::\+\+Texture\+Animation\+Component::\+\+Frame\+Time = 0.\+6f}
+
+\Hypertarget{struct_vesper_1_1_texture_animation_component_a21542f18f8f3b9de5c167e200a7eb515}\index{Vesper::TextureAnimationComponent@{Vesper::TextureAnimationComponent}!SubTextures@{SubTextures}}
+\index{SubTextures@{SubTextures}!Vesper::TextureAnimationComponent@{Vesper::TextureAnimationComponent}}
+\doxysubsubsection{\texorpdfstring{SubTextures}{SubTextures}}
+{\footnotesize\ttfamily \label{struct_vesper_1_1_texture_animation_component_a21542f18f8f3b9de5c167e200a7eb515} 
+std::\+vector$<$\doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$\doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d}{Sub\+Texture2D}}$>$ $>$ Vesper::\+\+Texture\+Animation\+Component::\+\+Sub\+Textures}
+
+\Hypertarget{struct_vesper_1_1_texture_animation_component_a16a0dc3f1aee3138fee0b181064d0031}\index{Vesper::TextureAnimationComponent@{Vesper::TextureAnimationComponent}!TimeAccumulator@{TimeAccumulator}}
+\index{TimeAccumulator@{TimeAccumulator}!Vesper::TextureAnimationComponent@{Vesper::TextureAnimationComponent}}
+\doxysubsubsection{\texorpdfstring{TimeAccumulator}{TimeAccumulator}}
+{\footnotesize\ttfamily \label{struct_vesper_1_1_texture_animation_component_a16a0dc3f1aee3138fee0b181064d0031} 
+float Vesper::\+\+Texture\+Animation\+Component::\+\+Time\+Accumulator = 0.\+0f}
+
+
+
+The documentation for this struct was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+Vesper/\+src/\+\+Vesper/\+\+Scene/\+\doxymbox{\hyperlink{_components_8h}{Components.\+h}}\end{DoxyCompactItemize}

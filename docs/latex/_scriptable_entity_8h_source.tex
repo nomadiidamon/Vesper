@@ -1,0 +1,32 @@
+\doxysection{Scriptable\+Entity.\+h}
+\hypertarget{_scriptable_entity_8h_source}{}\label{_scriptable_entity_8h_source}\index{Vesper/src/Vesper/Scene/ScriptableEntity.h@{Vesper/src/Vesper/Scene/ScriptableEntity.h}}
+\doxymbox{\hyperlink{_scriptable_entity_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{pragma}\ \textcolor{preprocessor}{once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\ \doxymbox{\hyperlink{_entity_8h}{"{}Entity.h"{}}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{namespace}\ \doxymbox{\hyperlink{namespace_vesper}{Vesper}}\ \{}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keyword}{class}\ \doxymbox{\hyperlink{class_vesper_1_1_scriptable_entity}{ScriptableEntity}}}
+\DoxyCodeLine{00008\ \ \ \ \ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \string~\doxymbox{\hyperlink{class_vesper_1_1_scriptable_entity_a787e175ce2a3811576c159b21ee6c7ce}{ScriptableEntity}}()\ \{\};}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ T\&\ \doxymbox{\hyperlink{class_vesper_1_1_scriptable_entity_ab54a267b7a3955dc4066c1f525eb9af8}{GetComponent}}()}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_scriptable_entity}{m\_Entity}}.\doxymbox{\hyperlink{class_vesper_1_1_scriptable_entity}{GetComponent}}<\doxymbox{\hyperlink{class_vesper_1_1_scriptable_entity}{T}}>();}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_scriptable_entity_a411673888486656cc472552c5a2f8c7c}{OnCreate}}()\ \{\}}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_scriptable_entity_ab10c29408758e068dbab38765adab286}{OnDestroy}}()\ \{\}}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_scriptable_entity_aebc5ec9861be990c3e5fbdce905e1639}{OnUpdate}}(\doxymbox{\hyperlink{class_vesper_1_1_timestep}{Timestep}}\ ts)\ \{\}}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_entity}{Entity}}\ \doxymbox{\hyperlink{class_vesper_1_1_scriptable_entity_a83cce6f3d418e7e02578101bc95cc498}{m\_Entity}};}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class}\ \doxymbox{\hyperlink{class_vesper_1_1_scriptable_entity}{Scene}};}
+\DoxyCodeLine{00025\ \ \ \ \ \};}
+\DoxyCodeLine{00026\ \}}
+
+\end{DoxyCode}

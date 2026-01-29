@@ -1,0 +1,92 @@
+\doxysection{Vesper/\+src/\+\+Vesper/\+\+App/\+\+Application.h File Reference}
+\hypertarget{_application_8h}{}\label{_application_8h}\index{Vesper/src/Vesper/App/Application.h@{Vesper/src/Vesper/App/Application.h}}
+{\ttfamily \+\#include "{}../\+\+Core/\+\+Base.\+h"{}}\newline
+{\ttfamily \+\#include "{}Window.\+h"{}}\newline
+{\ttfamily \+\#include "{}Vesper/\+\+App/\+\+Layer\+Stack.\+h"{}}\newline
+{\ttfamily \+\#include "{}Vesper/\+\+Events/\+\+Event.\+h"{}}\newline
+{\ttfamily \+\#include "{}Vesper/\+\+Events/\+\+Application\+Event.\+h"{}}\newline
+{\ttfamily \+\#include "{}Vesper/\+\+Core/\+\+Timestep.\+h"{}}\newline
+{\ttfamily \+\#include "{}Vesper/\+\+Im\+Gui/\+\+Im\+Gui\+Layer.\+h"{}}\newline
+{\ttfamily \+\#include "{}Vesper/\+\+Renderer/\+\+Renderer\+API.\+h"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{namespace_vesper_struct_vesper_1_1_application_settings}{Vesper::\+\+Application\+Settings}}
+\begin{DoxyCompactList}\small\item\em WIP.  \doxymbox{\hyperlink{namespace_vesper_struct_vesper_1_1_application_settings}{More...}}\end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_vesper_1_1_application}{Vesper::\+\+Application}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \doxymbox{\hyperlink{namespace_vesper}{Vesper}}
+\begin{DoxyCompactList}\small\item\em TEMPORARY. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \doxymbox{\hyperlink{namespace_vesper_a5302ff07d23533d2da0500a894dca563}{Vesper::\+\+Window\+Mode}} \{ \doxymbox{\hyperlink{namespace_vesper_a5302ff07d23533d2da0500a894dca563ab13311ab51c4c34757f67f26580018dd}{Vesper::\+\+Windowed}} = 0
+, \doxymbox{\hyperlink{namespace_vesper_a5302ff07d23533d2da0500a894dca563a0829ea6734059d66e6bf87096b215dc1}{Vesper::\+\+Fullscreen}} = 1
+, \doxymbox{\hyperlink{namespace_vesper_a5302ff07d23533d2da0500a894dca563a78f0192ac55eba33ee88d026452952e5}{Vesper::\+\+Borderless}} = 2
+ \}
+\begin{DoxyCompactList}\small\item\em WIP. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_vesper_1_1_application}{Application}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{namespace_vesper_a43e1ca989eabb42f3b23b79517ff1a65}{Vesper::\+\+Create\+Application}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Class Documentation}
+\index{Vesper::ApplicationSettings@{Vesper::ApplicationSettings}}
+\label{struct_vesper_1_1_application_settings}
+\Hypertarget{namespace_vesper_struct_vesper_1_1_application_settings}
+\doxysubsubsection{struct Vesper::\+Application\+Settings}
+WIP. \begin{DoxyFields}{Class Members}
+\doxymbox{\Hypertarget{namespace_vesper_aae07ab83a36c017b0c8a2e7be6c1f622}\label{namespace_vesper_aae07ab83a36c017b0c8a2e7be6c1f622}} 
+string&
+ApplicationName = "{}Vesper Application"{}&
+\\
+\hline
+
+\doxymbox{\Hypertarget{namespace_vesper_a43f486b06ce23206255777a7ce86434a}\label{namespace_vesper_a43f486b06ce23206255777a7ce86434a}} 
+bool&
+EnableImGui = true&
+\\
+\hline
+
+\doxymbox{\Hypertarget{namespace_vesper_a8cca612d7aafd0950a74094c8c130884}\label{namespace_vesper_a8cca612d7aafd0950a74094c8c130884}} 
+bool&
+EnableVSync = false&
+\\
+\hline
+
+\doxymbox{\Hypertarget{namespace_vesper_acb36b4212448908d78bb98c032059e2f}\label{namespace_vesper_acb36b4212448908d78bb98c032059e2f}} 
+uint32\_t&
+Height = 720&
+\\
+\hline
+
+\doxymbox{\Hypertarget{namespace_vesper_a070ef5f051d2044518b21aec7b576d6a}\label{namespace_vesper_a070ef5f051d2044518b21aec7b576d6a}} 
+\doxymbox{\hyperlink{namespace_vesper_a5302ff07d23533d2da0500a894dca563}{WindowMode}}&
+Mode = \doxymbox{\hyperlink{namespace_vesper_a5302ff07d23533d2da0500a894dca563ab13311ab51c4c34757f67f26580018dd}{WindowMode::Windowed}}&
+\\
+\hline
+
+\doxymbox{\Hypertarget{namespace_vesper_a710628604ff491eba5bcb4fada92139a}\label{namespace_vesper_a710628604ff491eba5bcb4fada92139a}} 
+API&
+RendererAPI = \doxymbox{\hyperlink{class_vesper_1_1_renderer_a_p_i_acbef8f1a2c9546387b6513640c5c7995a760716b590ee7c0adc25f434f577d8be}{RendererAPI::API::OpenGL}}&
+\\
+\hline
+
+\doxymbox{\Hypertarget{namespace_vesper_a37c7f9b296cb625432b51cc341bdceb3}\label{namespace_vesper_a37c7f9b296cb625432b51cc341bdceb3}} 
+uint32\_t&
+Width = 1280&
+\\
+\hline
+
+\doxymbox{\Hypertarget{namespace_vesper_a022651e24a0f24c494c268171d6e1185}\label{namespace_vesper_a022651e24a0f24c494c268171d6e1185}} 
+string&
+WorkingDirectory&
+\\
+\hline
+
+\end{DoxyFields}

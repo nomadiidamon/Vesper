@@ -1,0 +1,46 @@
+\doxysection{Platform\+Detection.\+h}
+\hypertarget{_platform_detection_8h_source}{}\label{_platform_detection_8h_source}\index{Vesper/src/Vesper/Core/PlatformDetection.h@{Vesper/src/Vesper/Core/PlatformDetection.h}}
+\doxymbox{\hyperlink{_platform_detection_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{pragma}\ \textcolor{preprocessor}{once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\ \textcolor{preprocessor}{<}\textcolor{preprocessor}{memory}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ Platform\ detection}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{ifdef}\ \_WIN32}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{comment}{/*Windows\ x64/x86*/}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{ifdef}\ \_WIN64}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{comment}{/*Windows\ x64\ \ */}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{ifndef}\ \textcolor{preprocessor}{VZ\_PLATFORM\_WINDOWS}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{VZ\_PLATFORM\_WINDOWS}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{endif}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{else}}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*Windows\ x86*/}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{error}\ \textcolor{stringliteral}{"{}x86\ Builds\ are\ not\ supported!"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{endif}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{elif}\ \textcolor{preprocessor}{defined}\textcolor{preprocessor}{(}\textcolor{preprocessor}{\_\_APPLE\_\_}\textcolor{preprocessor}{)}\ \textcolor{preprocessor}{||}\ \textcolor{preprocessor}{defined}\textcolor{preprocessor}{(}\textcolor{preprocessor}{\_\_MACH\_\_}\textcolor{preprocessor}{)}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\ \textcolor{preprocessor}{<}\textcolor{preprocessor}{TargetConditionals}\textcolor{preprocessor}{.}\textcolor{preprocessor}{h}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00019\ \textcolor{comment}{/*Apple\ platforms\ */}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{if}\ \textcolor{preprocessor}{TARGET\_IPHONE\_SIMULATOR}\ \textcolor{preprocessor}{==}\ 1}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{error}\ \textcolor{stringliteral}{"{}IOS\ Simulator\ is\ not\ supported!"{}}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{elif}\ \textcolor{preprocessor}{TARGET\_OS\_IPHONE}\ \textcolor{preprocessor}{==}\ 1}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{VZ\_PLATFORM\_IOS}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{error}\ \textcolor{stringliteral}{"{}IOS\ is\ not\ supported!"{}}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{elif}\ \textcolor{preprocessor}{TARGET\_OS\_MAC}\ \textcolor{preprocessor}{==}\ 1}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{VZ\_PLATFORM\_MACOS}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{error}\ \textcolor{stringliteral}{"{}MacOS\ is\ not\ supported!"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{else}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{error}\ \textcolor{stringliteral}{"{}Unknown\ Apple\ platform!"{}}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{endif}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{elif}\ \textcolor{preprocessor}{defined}\textcolor{preprocessor}{(}\textcolor{preprocessor}{\_\_ANDROID\_\_}\textcolor{preprocessor}{)}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{VZ\_PLATFORM\_ANDROID}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{error}\ \textcolor{stringliteral}{"{}Android\ is\ not\ supported!"{}}}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{elif}\ \textcolor{preprocessor}{defined}\textcolor{preprocessor}{(}\textcolor{preprocessor}{\_\_linux\_\_}\textcolor{preprocessor}{)}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{VZ\_PLATFORM\_LINUX}}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{error}\ \textcolor{stringliteral}{"{}Linux\ is\ not\ supported!"{}}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{else}}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{comment}{/*Unknown\ compiler/platform*/}}
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{error}\ \textcolor{stringliteral}{"{}Unknown\ platform!"{}}}
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{endif}\ \textcolor{comment}{//\ End\ of\ platform\ detection}}
+
+\end{DoxyCode}

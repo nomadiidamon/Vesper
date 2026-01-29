@@ -1,0 +1,117 @@
+\doxysection{Vesper::\+Mouse\+Button\+Event Class Reference}
+\hypertarget{class_vesper_1_1_mouse_button_event}{}\label{class_vesper_1_1_mouse_button_event}\index{Vesper::MouseButtonEvent@{Vesper::MouseButtonEvent}}
+
+
+{\ttfamily \+\#include $<$Mouse\+Event.\+h$>$}
+
+Inheritance diagram for Vesper::\+Mouse\+Button\+Event:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_vesper_1_1_mouse_button_event}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event_ace3614a44a91aeb7c90e14fa087d5d43}{Get\+Mouse\+Button}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_vesper_1_1_event}{Vesper::\+\+Event}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \doxymbox{\hyperlink{class_vesper_1_1_event_a516fc6585a1ca21f7d73fc4deb461ee2}{\texorpdfstring{$\sim$}{\string~}\+Event}} ()=default
+\item 
+virtual \doxymbox{\hyperlink{namespace_vesper_ada4bc37927ce22c44ea0083a224d3bb5}{Event\+Type}} \doxymbox{\hyperlink{class_vesper_1_1_event_a82499595903097f8d2a81e9b0ebfba3d}{Get\+Event\+Type}} () const =0
+\item 
+virtual const char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_vesper_1_1_event_af39d90d8ec2e84488c593c517a8e9b6e}{Get\+Name}} () const =0
+\item 
+virtual int \doxymbox{\hyperlink{class_vesper_1_1_event_a71e621bec32702d59c7e7ed82c53ac08}{Get\+Category\+Flags}} () const =0
+\item 
+virtual std::\+string \doxymbox{\hyperlink{class_vesper_1_1_event_aaba48fc434a2539c5ce000fda6aa7f05}{To\+String}} () const
+\item 
+bool \doxymbox{\hyperlink{class_vesper_1_1_event_a02448606191e9e1cc7869bffd2cb20f7}{Is\+In\+Category}} (\doxymbox{\hyperlink{namespace_vesper_ad79da63be4419c3a218acaa990decabe}{Event\+Category}} category)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event_ada06b672494998951a14cd7888f45b50}{Mouse\+Button\+Event}} (int button)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event_ac7a0d970c0a29aac9ee2643224a8daa5}{m\+\_\+\+Button}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Attributes inherited from \doxymbox{\hyperlink{class_vesper_1_1_event}{Vesper::\+\+Event}}}
+\begin{DoxyCompactItemize}
+\item 
+bool \doxymbox{\hyperlink{class_vesper_1_1_event_ab6bc1a2214e615b994cff03df207a0f1}{Handled}} = false
+\end{DoxyCompactItemize}
+
+
+\label{doc-constructors}
+\Hypertarget{class_vesper_1_1_mouse_button_event_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_vesper_1_1_mouse_button_event_ada06b672494998951a14cd7888f45b50}\index{Vesper::MouseButtonEvent@{Vesper::MouseButtonEvent}!MouseButtonEvent@{MouseButtonEvent}}
+\index{MouseButtonEvent@{MouseButtonEvent}!Vesper::MouseButtonEvent@{Vesper::MouseButtonEvent}}
+\doxysubsubsection{\texorpdfstring{MouseButtonEvent()}{MouseButtonEvent()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_mouse_button_event_ada06b672494998951a14cd7888f45b50} 
+Vesper::\+\+Mouse\+Button\+Event::\+\+Mouse\+Button\+Event (\begin{DoxyParamCaption}\item[{int}]{button}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event_ac7a0d970c0a29aac9ee2643224a8daa5}{m\_Button}}(button)\ \{}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event_ac7a0d970c0a29aac9ee2643224a8daa5}{m\+\_\+\+Button}}.
+
+
+
+Referenced by \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_pressed_event_a3924c42eeceae9390a16a2d750b4a832}{Vesper::\+\+Mouse\+Button\+Pressed\+Event::\+\+Mouse\+Button\+Pressed\+Event()}}, and \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_released_event_a500223a0b6aaedcaa8b881b01dabfff1}{Vesper::\+\+Mouse\+Button\+Released\+Event::\+\+Mouse\+Button\+Released\+Event()}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_vesper_1_1_mouse_button_event_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_vesper_1_1_mouse_button_event_ace3614a44a91aeb7c90e14fa087d5d43}\index{Vesper::MouseButtonEvent@{Vesper::MouseButtonEvent}!GetMouseButton@{GetMouseButton}}
+\index{GetMouseButton@{GetMouseButton}!Vesper::MouseButtonEvent@{Vesper::MouseButtonEvent}}
+\doxysubsubsection{\texorpdfstring{GetMouseButton()}{GetMouseButton()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_mouse_button_event_ace3614a44a91aeb7c90e14fa087d5d43} 
+int Vesper::\+\+Mouse\+Button\+Event::\+\+Get\+Mouse\+Button (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00059\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event_ac7a0d970c0a29aac9ee2643224a8daa5}{m\_Button}};\ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event_ac7a0d970c0a29aac9ee2643224a8daa5}{m\+\_\+\+Button}}.
+
+
+
+Referenced by \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_pressed_event_a9cc088a6bc2d238bb6e4df9107cbea72}{Vesper::\+\+Mouse\+Button\+Pressed\+Event::\+\+To\+String()}}, and \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_released_event_a65f37698ff0f126ce6a1c063a312de13}{Vesper::\+\+Mouse\+Button\+Released\+Event::\+\+To\+String()}}.
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_vesper_1_1_mouse_button_event_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_vesper_1_1_mouse_button_event_ac7a0d970c0a29aac9ee2643224a8daa5}\index{Vesper::MouseButtonEvent@{Vesper::MouseButtonEvent}!m\_Button@{m\_Button}}
+\index{m\_Button@{m\_Button}!Vesper::MouseButtonEvent@{Vesper::MouseButtonEvent}}
+\doxysubsubsection{\texorpdfstring{m\_Button}{m\_Button}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_mouse_button_event_ac7a0d970c0a29aac9ee2643224a8daa5} 
+int Vesper::\+\+Mouse\+Button\+Event::\+m\+\_\+\+Button\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Referenced by \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event_ace3614a44a91aeb7c90e14fa087d5d43}{Get\+Mouse\+Button()}}, and \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event_ada06b672494998951a14cd7888f45b50}{Mouse\+Button\+Event()}}.
+
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+Vesper/\+src/\+\+Vesper/\+\+Events/\+\doxymbox{\hyperlink{_mouse_event_8h}{Mouse\+Event.\+h}}\end{DoxyCompactItemize}

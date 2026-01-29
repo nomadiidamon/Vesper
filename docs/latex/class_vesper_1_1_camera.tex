@@ -1,0 +1,97 @@
+\doxysection{Vesper::\+Camera Class Reference}
+\hypertarget{class_vesper_1_1_camera}{}\label{class_vesper_1_1_camera}\index{Vesper::Camera@{Vesper::Camera}}
+
+
+{\ttfamily \+\#include $<$Camera.\+h$>$}
+
+Inheritance diagram for Vesper::\+Camera:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_vesper_1_1_camera}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_vesper_1_1_camera_a328bf6c8f5a746a32458cea56eae1c38}{Camera}} ()=default
+\item 
+\doxymbox{\hyperlink{class_vesper_1_1_camera_adda68ac5d1e80852c315f86327a71653}{Camera}} (const glm::\+mat4 \&projection)
+\item 
+\doxymbox{\hyperlink{class_vesper_1_1_camera_a9d8eaf165d5aacf9686f5a5384ab9c34}{\texorpdfstring{$\sim$}{\string~}\+Camera}} ()=default
+\item 
+const glm::\+mat4 \& \doxymbox{\hyperlink{class_vesper_1_1_camera_a3b54da4192d893dd732a774802fbcc9c}{Get\+Projection}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+glm::\+mat4 \doxymbox{\hyperlink{class_vesper_1_1_camera_ad2c5fa0158aeff7e067c9ee35ed78a2b}{m\+\_\+\+Projection}} = glm::\+mat4(1.\+0f)
+\end{DoxyCompactItemize}
+
+
+\label{doc-constructors}
+\Hypertarget{class_vesper_1_1_camera_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_vesper_1_1_camera_a328bf6c8f5a746a32458cea56eae1c38}\index{Vesper::Camera@{Vesper::Camera}!Camera@{Camera}}
+\index{Camera@{Camera}!Vesper::Camera@{Vesper::Camera}}
+\doxysubsubsection{\texorpdfstring{Camera()}{Camera()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_camera_a328bf6c8f5a746a32458cea56eae1c38} 
+Vesper::\+\+Camera::\+\+Camera (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\Hypertarget{class_vesper_1_1_camera_adda68ac5d1e80852c315f86327a71653}\index{Vesper::Camera@{Vesper::Camera}!Camera@{Camera}}
+\index{Camera@{Camera}!Vesper::Camera@{Vesper::Camera}}
+\doxysubsubsection{\texorpdfstring{Camera()}{Camera()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_camera_adda68ac5d1e80852c315f86327a71653} 
+Vesper::\+\+Camera::\+\+Camera (\begin{DoxyParamCaption}\item[{const glm::\+mat4 \&}]{projection}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_vesper_1_1_camera_ad2c5fa0158aeff7e067c9ee35ed78a2b}{m\_Projection}}(projection)\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_camera_adda68ac5d1e80852c315f86327a71653}{Camera()}}.
+
+
+
+Referenced by \doxymbox{\hyperlink{class_vesper_1_1_camera_adda68ac5d1e80852c315f86327a71653}{Camera()}}.
+
+\Hypertarget{class_vesper_1_1_camera_a9d8eaf165d5aacf9686f5a5384ab9c34}\index{Vesper::Camera@{Vesper::Camera}!````~Camera@{\texorpdfstring{$\sim$}{\string~}Camera}}
+\index{````~Camera@{\texorpdfstring{$\sim$}{\string~}Camera}!Vesper::Camera@{Vesper::Camera}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Camera()}{\string~Camera()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_camera_a9d8eaf165d5aacf9686f5a5384ab9c34} 
+Vesper::\+\+Camera::\+\texorpdfstring{$\sim$}{\string~}\+Camera (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_vesper_1_1_camera_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_vesper_1_1_camera_a3b54da4192d893dd732a774802fbcc9c}\index{Vesper::Camera@{Vesper::Camera}!GetProjection@{GetProjection}}
+\index{GetProjection@{GetProjection}!Vesper::Camera@{Vesper::Camera}}
+\doxysubsubsection{\texorpdfstring{GetProjection()}{GetProjection()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_camera_a3b54da4192d893dd732a774802fbcc9c} 
+const glm::\+mat4 \& Vesper::\+\+Camera::\+\+Get\+Projection (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00015\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_camera_ad2c5fa0158aeff7e067c9ee35ed78a2b}{m\_Projection}};\ \}}
+
+\end{DoxyCode}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_vesper_1_1_camera_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_vesper_1_1_camera_ad2c5fa0158aeff7e067c9ee35ed78a2b}\index{Vesper::Camera@{Vesper::Camera}!m\_Projection@{m\_Projection}}
+\index{m\_Projection@{m\_Projection}!Vesper::Camera@{Vesper::Camera}}
+\doxysubsubsection{\texorpdfstring{m\_Projection}{m\_Projection}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_camera_ad2c5fa0158aeff7e067c9ee35ed78a2b} 
+glm::\+mat4 Vesper::\+\+Camera::\+m\+\_\+\+Projection = glm::\+mat4(1.\+0f)\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+Vesper/\+src/\+\+Vesper/\+\+Renderer/\+\doxymbox{\hyperlink{_camera_8h}{Camera.\+h}}\end{DoxyCompactItemize}

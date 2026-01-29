@@ -1,0 +1,283 @@
+\doxysection{Vesper::\+Particle\+System Class Reference}
+\hypertarget{class_vesper_1_1_particle_system}{}\label{class_vesper_1_1_particle_system}\index{Vesper::ParticleSystem@{Vesper::ParticleSystem}}
+
+
+{\ttfamily \+\#include $<$Particle\+System.\+h$>$}
+
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{class_vesper_1_1_particle_system_struct_vesper_1_1_particle_system_1_1_particle}{Particle}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_vesper_1_1_particle_system_a22a477e8361045bed4a2f3a6fe2e117c}{Particle\+System}} ()
+\item 
+\doxymbox{\hyperlink{class_vesper_1_1_particle_system_a571acb2630cf39c4be73aefe7bc7e765}{Particle\+System}} (uint32\+\_\+t max\+Particles)
+\item 
+void \doxymbox{\hyperlink{class_vesper_1_1_particle_system_af5dae651edaf6978930507724f80ee2b}{On\+Update}} (\doxymbox{\hyperlink{class_vesper_1_1_timestep}{Timestep}} ts)
+\item 
+void \doxymbox{\hyperlink{class_vesper_1_1_particle_system_a9b83cfdb93feefc0480c940c4048ea57}{On\+Render}} (\doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera}{Orthographic\+Camera}} \&camera)
+\item 
+void \doxymbox{\hyperlink{class_vesper_1_1_particle_system_ac5d9958ce74679d4115e9b2df4ce1412}{Emit}} (const \doxymbox{\hyperlink{namespace_vesper_struct_vesper_1_1_particle_props}{Particle\+Props}} \&particle\+Props)
+\item 
+void \doxymbox{\hyperlink{class_vesper_1_1_particle_system_a3f455d771986c0a89edebf05bcedd5a4}{Set\+Particle\+Props}} (const \doxymbox{\hyperlink{namespace_vesper_struct_vesper_1_1_particle_props}{Particle\+Props}} \&particle\+Props)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std::\+vector$<$ \doxymbox{\hyperlink{class_vesper_1_1_particle_system_struct_vesper_1_1_particle_system_1_1_particle}{Particle}} $>$ \doxymbox{\hyperlink{class_vesper_1_1_particle_system_acf53e1bfaaf2232a67331a7e61cb5443}{m\+\_\+\+Particle\+Pool}}
+\item 
+uint32\+\_\+t \doxymbox{\hyperlink{class_vesper_1_1_particle_system_a60b05bf22c735e070684cf82d19b98f7}{m\+\_\+\+Pool\+Index}} = 999
+\item 
+\doxymbox{\hyperlink{namespace_vesper_struct_vesper_1_1_particle_props}{Particle\+Props}} \doxymbox{\hyperlink{class_vesper_1_1_particle_system_af730c1029248d1e90076e753718969c2}{m\+\_\+\+Props}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Class Documentation}
+\index{Vesper::ParticleSystem::Particle@{Vesper::ParticleSystem::Particle}}
+\label{struct_vesper_1_1_particle_system_1_1_particle}
+\Hypertarget{class_vesper_1_1_particle_system_struct_vesper_1_1_particle_system_1_1_particle}
+\doxysubsubsection{struct Vesper::\+Particle\+System::\+Particle}
+\begin{DoxyFields}{Class Members}
+\doxymbox{\Hypertarget{class_vesper_1_1_particle_system_af84711eb47c08c412c2afad0dd89bc38}\label{class_vesper_1_1_particle_system_af84711eb47c08c412c2afad0dd89bc38}} 
+bool&
+Active = false&
+\\
+\hline
+
+\doxymbox{\Hypertarget{class_vesper_1_1_particle_system_a63cffc4c6f780048c87b85ba0d183de1}\label{class_vesper_1_1_particle_system_a63cffc4c6f780048c87b85ba0d183de1}} 
+vec4&
+ColorBegin&
+\\
+\hline
+
+\doxymbox{\Hypertarget{class_vesper_1_1_particle_system_a743590a121c8aafbea2a06187bb6a002}\label{class_vesper_1_1_particle_system_a743590a121c8aafbea2a06187bb6a002}} 
+vec4&
+ColorEnd&
+\\
+\hline
+
+\doxymbox{\Hypertarget{class_vesper_1_1_particle_system_a18e97550ec4b793aba6a914ba16ee9ef}\label{class_vesper_1_1_particle_system_a18e97550ec4b793aba6a914ba16ee9ef}} 
+float&
+LifeRemaining = 0.0f&
+\\
+\hline
+
+\doxymbox{\Hypertarget{class_vesper_1_1_particle_system_a8d6fa78352e0d93c929a923729070f64}\label{class_vesper_1_1_particle_system_a8d6fa78352e0d93c929a923729070f64}} 
+float&
+LifeTime = 0.0f&
+\\
+\hline
+
+\doxymbox{\Hypertarget{class_vesper_1_1_particle_system_a6d98e5e1a0382d730332c387660b88a3}\label{class_vesper_1_1_particle_system_a6d98e5e1a0382d730332c387660b88a3}} 
+vec3&
+Position&
+\\
+\hline
+
+\doxymbox{\Hypertarget{class_vesper_1_1_particle_system_a6b0587ee56c0b51d5ec2b11d1d0a0a3f}\label{class_vesper_1_1_particle_system_a6b0587ee56c0b51d5ec2b11d1d0a0a3f}} 
+float&
+Rotation&
+\\
+\hline
+
+\doxymbox{\Hypertarget{class_vesper_1_1_particle_system_a7e9ca15955728241f96a30f927e4a53b}\label{class_vesper_1_1_particle_system_a7e9ca15955728241f96a30f927e4a53b}} 
+float&
+SizeBegin&
+\\
+\hline
+
+\doxymbox{\Hypertarget{class_vesper_1_1_particle_system_a75808aa75ff1e5dcca47c7da65168bba}\label{class_vesper_1_1_particle_system_a75808aa75ff1e5dcca47c7da65168bba}} 
+float&
+SizeEnd&
+\\
+\hline
+
+\doxymbox{\Hypertarget{class_vesper_1_1_particle_system_a80c557236267c713721a792bcec04879}\label{class_vesper_1_1_particle_system_a80c557236267c713721a792bcec04879}} 
+vec3&
+Velocity&
+\\
+\hline
+
+\end{DoxyFields}
+
+
+\label{doc-constructors}
+\Hypertarget{class_vesper_1_1_particle_system_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_vesper_1_1_particle_system_a22a477e8361045bed4a2f3a6fe2e117c}\index{Vesper::ParticleSystem@{Vesper::ParticleSystem}!ParticleSystem@{ParticleSystem}}
+\index{ParticleSystem@{ParticleSystem}!Vesper::ParticleSystem@{Vesper::ParticleSystem}}
+\doxysubsubsection{\texorpdfstring{ParticleSystem()}{ParticleSystem()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_particle_system_a22a477e8361045bed4a2f3a6fe2e117c} 
+Vesper::\+\+Particle\+System::\+\+Particle\+System (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00013\ \ \ \ \ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_particle_system_a60b05bf22c735e070684cf82d19b98f7}{m\_PoolIndex}}\ =\ 999;}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_particle_system_acf53e1bfaaf2232a67331a7e61cb5443}{m\_ParticlePool}}.resize(1000);}
+\DoxyCodeLine{00016\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_particle_system_a60b05bf22c735e070684cf82d19b98f7}{m\+\_\+\+Pool\+Index}}.
+
+\Hypertarget{class_vesper_1_1_particle_system_a571acb2630cf39c4be73aefe7bc7e765}\index{Vesper::ParticleSystem@{Vesper::ParticleSystem}!ParticleSystem@{ParticleSystem}}
+\index{ParticleSystem@{ParticleSystem}!Vesper::ParticleSystem@{Vesper::ParticleSystem}}
+\doxysubsubsection{\texorpdfstring{ParticleSystem()}{ParticleSystem()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_particle_system_a571acb2630cf39c4be73aefe7bc7e765} 
+Vesper::\+\+Particle\+System::\+\+Particle\+System (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{max\+Particles}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_vesper_1_1_particle_system_a60b05bf22c735e070684cf82d19b98f7}{m\_PoolIndex}}(maxParticles\ -\/\ 1) }
+\DoxyCodeLine{00020\ \ \ \ \ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_particle_system_acf53e1bfaaf2232a67331a7e61cb5443}{m\_ParticlePool}}.resize(maxParticles);}
+\DoxyCodeLine{00022\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_particle_system_a60b05bf22c735e070684cf82d19b98f7}{m\+\_\+\+Pool\+Index}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_vesper_1_1_particle_system_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_vesper_1_1_particle_system_ac5d9958ce74679d4115e9b2df4ce1412}\index{Vesper::ParticleSystem@{Vesper::ParticleSystem}!Emit@{Emit}}
+\index{Emit@{Emit}!Vesper::ParticleSystem@{Vesper::ParticleSystem}}
+\doxysubsubsection{\texorpdfstring{Emit()}{Emit()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_particle_system_ac5d9958ce74679d4115e9b2df4ce1412} 
+void Vesper::\+\+Particle\+System::\+\+Emit (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{namespace_vesper_struct_vesper_1_1_particle_props}{Particle\+Props}} \&}]{particle\+Props}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00064\ \ \ \ \ \{}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_particle_system_struct_vesper_1_1_particle_system_1_1_particle}{Particle}}\&\ particle\ =\ \doxymbox{\hyperlink{class_vesper_1_1_particle_system_acf53e1bfaaf2232a67331a7e61cb5443}{m\_ParticlePool}}[\doxymbox{\hyperlink{class_vesper_1_1_particle_system_a60b05bf22c735e070684cf82d19b98f7}{m\_PoolIndex}}];}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ particle.Active\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ particle.Position\ =\ particleProps.Position;}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ particle.Rotation\ =\ particleProps.Rotation\ +\ particleProps.RotationVariation\ *\ (\doxymbox{\hyperlink{namespace_vesper_1_1_random_a5fd29fe179c63f4e158098a921cc000f}{Vesper::Random::Float1}}()\ -\/\ 0.5f);}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ particle.Velocity\ =\ particleProps.Velocity;}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ particle.Velocity.x\ +=\ particleProps.VelocityVariation.x\ *\ (\doxymbox{\hyperlink{namespace_vesper_1_1_random_a5fd29fe179c63f4e158098a921cc000f}{Vesper::Random::Float1}}()\ -\/\ 0.5f);}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ particle.Velocity.y\ +=\ particleProps.VelocityVariation.y\ *\ (\doxymbox{\hyperlink{namespace_vesper_1_1_random_a5fd29fe179c63f4e158098a921cc000f}{Vesper::Random::Float1}}()\ -\/\ 0.5f);}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ particle.ColorBegin\ =\ particleProps.ColorBegin;}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ particle.ColorEnd\ =\ particleProps.ColorEnd;}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ particle.SizeBegin\ =\ particleProps.SizeBegin\ +\ particleProps.SizeVariation\ *\ (\doxymbox{\hyperlink{namespace_vesper_1_1_random_a5fd29fe179c63f4e158098a921cc000f}{Vesper::Random::Float1}}()\ -\/\ 0.5f);}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ particle.SizeEnd\ =\ particleProps.SizeEnd;}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ particle.LifeTime\ =\ particleProps.LifeTime\ +\ particleProps.LifetimeVariation\ *\ (\doxymbox{\hyperlink{namespace_vesper_1_1_random_a5fd29fe179c63f4e158098a921cc000f}{Vesper::Random::Float1}}()\ -\/\ 0.5f);}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ particle.LifeRemaining\ =\ particle.LifeTime;}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_particle_system_a60b05bf22c735e070684cf82d19b98f7}{m\_PoolIndex}}\ =\ -\/-\/\doxymbox{\hyperlink{class_vesper_1_1_particle_system_a60b05bf22c735e070684cf82d19b98f7}{m\_PoolIndex}}\ \%\ \doxymbox{\hyperlink{class_vesper_1_1_particle_system_acf53e1bfaaf2232a67331a7e61cb5443}{m\_ParticlePool}}.size();}
+\DoxyCodeLine{00083\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_particle_system_af84711eb47c08c412c2afad0dd89bc38}{Vesper::\+\+Particle\+System::\+\+Particle::\+\+Active}}, \doxymbox{\hyperlink{namespace_vesper_1_1_random_a5fd29fe179c63f4e158098a921cc000f}{Vesper::\+\+Random::\+\+Float1()}}, \doxymbox{\hyperlink{class_vesper_1_1_particle_system_a18e97550ec4b793aba6a914ba16ee9ef}{Vesper::\+\+Particle\+System::\+\+Particle::\+\+Life\+Remaining}}, \doxymbox{\hyperlink{namespace_vesper_a3eecf8559895b68d5678b63010100851}{Vesper::\+\+Particle\+Props::\+\+Life\+Time}}, \doxymbox{\hyperlink{class_vesper_1_1_particle_system_a8d6fa78352e0d93c929a923729070f64}{Vesper::\+\+Particle\+System::\+\+Particle::\+\+Life\+Time}}, \doxymbox{\hyperlink{namespace_vesper_a0fa1203452470316871c53cef755a8eb}{Vesper::\+\+Particle\+Props::\+\+Lifetime\+Variation}}, \doxymbox{\hyperlink{namespace_vesper_afe324d4034536e14e8b110fbbd65fb9e}{Vesper::\+\+Particle\+Props::\+\+Rotation}}, \doxymbox{\hyperlink{class_vesper_1_1_particle_system_a6b0587ee56c0b51d5ec2b11d1d0a0a3f}{Vesper::\+\+Particle\+System::\+\+Particle::\+\+Rotation}}, \doxymbox{\hyperlink{namespace_vesper_a67c9eaaa461bd1149c587c0f4e3c02c3}{Vesper::\+\+Particle\+Props::\+\+Rotation\+Variation}}, \doxymbox{\hyperlink{namespace_vesper_a72b9b818d5605e2aacd4ba4f0b863214}{Vesper::\+\+Particle\+Props::\+\+Size\+Begin}}, \doxymbox{\hyperlink{class_vesper_1_1_particle_system_a7e9ca15955728241f96a30f927e4a53b}{Vesper::\+\+Particle\+System::\+\+Particle::\+\+Size\+Begin}}, \doxymbox{\hyperlink{namespace_vesper_a90662c053ea9e19f7e985a41df3843b9}{Vesper::\+\+Particle\+Props::\+\+Size\+End}}, \doxymbox{\hyperlink{class_vesper_1_1_particle_system_a75808aa75ff1e5dcca47c7da65168bba}{Vesper::\+\+Particle\+System::\+\+Particle::\+\+Size\+End}}, and \doxymbox{\hyperlink{namespace_vesper_a67809d260f3d07a0b972ce767e286462}{Vesper::\+\+Particle\+Props::\+\+Size\+Variation}}.
+
+\Hypertarget{class_vesper_1_1_particle_system_a9b83cfdb93feefc0480c940c4048ea57}\index{Vesper::ParticleSystem@{Vesper::ParticleSystem}!OnRender@{OnRender}}
+\index{OnRender@{OnRender}!Vesper::ParticleSystem@{Vesper::ParticleSystem}}
+\doxysubsubsection{\texorpdfstring{OnRender()}{OnRender()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_particle_system_a9b83cfdb93feefc0480c940c4048ea57} 
+void Vesper::\+\+Particle\+System::\+\+On\+Render (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera}{Vesper::\+\+Orthographic\+Camera}} \&}]{camera}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00044\ \ \ \ \ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ particle\ :\ \doxymbox{\hyperlink{class_vesper_1_1_particle_system_acf53e1bfaaf2232a67331a7e61cb5443}{m\_ParticlePool}})}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!particle.Active)}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ life\ =\ particle.LifeRemaining\ /\ particle.LifeTime;}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ glm::vec4\ color\ =\ glm::lerp(particle.ColorEnd,\ particle.ColorBegin,\ life);}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ size\ =\ glm::lerp(particle.SizeEnd,\ particle.SizeBegin,\ life);}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a41c4aa9d715e2ea03825360305989f00}{Vesper::Renderer2D::DrawQuadRotatedWithTexture}}(}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\ particle.Position\ \},}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\ size,\ size\ \},}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a1a66d8f166230f172c5f523d092d00f8}{Vesper::Renderer2D::GetWhiteTexture}}(),}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ particle.Rotation,\ 1.0f,\ color);}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00061\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_vesper_1_1_particle_system_af5dae651edaf6978930507724f80ee2b}\index{Vesper::ParticleSystem@{Vesper::ParticleSystem}!OnUpdate@{OnUpdate}}
+\index{OnUpdate@{OnUpdate}!Vesper::ParticleSystem@{Vesper::ParticleSystem}}
+\doxysubsubsection{\texorpdfstring{OnUpdate()}{OnUpdate()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_particle_system_af5dae651edaf6978930507724f80ee2b} 
+void Vesper::\+\+Particle\+System::\+\+On\+Update (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_vesper_1_1_timestep}{Vesper::\+\+Timestep}}}]{ts}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00025\ \ \ \ \ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ particle\ :\ \doxymbox{\hyperlink{class_vesper_1_1_particle_system_acf53e1bfaaf2232a67331a7e61cb5443}{m\_ParticlePool}})}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!particle.Active)}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (particle.LifeRemaining\ <=\ 0.0f)}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ particle.Active\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ particle.LifeRemaining\ -\/=\ ts;}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ particle.Position\ +=\ particle.Velocity\ *\ (float)ts;}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ particle.Rotation\ +=\ 0.01f\ *\ ts;}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00041\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_vesper_1_1_particle_system_a3f455d771986c0a89edebf05bcedd5a4}\index{Vesper::ParticleSystem@{Vesper::ParticleSystem}!SetParticleProps@{SetParticleProps}}
+\index{SetParticleProps@{SetParticleProps}!Vesper::ParticleSystem@{Vesper::ParticleSystem}}
+\doxysubsubsection{\texorpdfstring{SetParticleProps()}{SetParticleProps()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_particle_system_a3f455d771986c0a89edebf05bcedd5a4} 
+void Vesper::\+\+Particle\+System::\+\+Set\+Particle\+Props (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{namespace_vesper_struct_vesper_1_1_particle_props}{Particle\+Props}} \&}]{particle\+Props}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00033\ \{\ \doxymbox{\hyperlink{class_vesper_1_1_particle_system_af730c1029248d1e90076e753718969c2}{m\_Props}}\ =\ particleProps;\ \}}
+
+\end{DoxyCode}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_vesper_1_1_particle_system_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_vesper_1_1_particle_system_acf53e1bfaaf2232a67331a7e61cb5443}\index{Vesper::ParticleSystem@{Vesper::ParticleSystem}!m\_ParticlePool@{m\_ParticlePool}}
+\index{m\_ParticlePool@{m\_ParticlePool}!Vesper::ParticleSystem@{Vesper::ParticleSystem}}
+\doxysubsubsection{\texorpdfstring{m\_ParticlePool}{m\_ParticlePool}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_particle_system_acf53e1bfaaf2232a67331a7e61cb5443} 
+std::\+vector$<$\doxymbox{\hyperlink{class_vesper_1_1_particle_system_struct_vesper_1_1_particle_system_1_1_particle}{Particle}}$>$ Vesper::\+\+Particle\+System::\+m\+\_\+\+Particle\+Pool\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_vesper_1_1_particle_system_a60b05bf22c735e070684cf82d19b98f7}\index{Vesper::ParticleSystem@{Vesper::ParticleSystem}!m\_PoolIndex@{m\_PoolIndex}}
+\index{m\_PoolIndex@{m\_PoolIndex}!Vesper::ParticleSystem@{Vesper::ParticleSystem}}
+\doxysubsubsection{\texorpdfstring{m\_PoolIndex}{m\_PoolIndex}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_particle_system_a60b05bf22c735e070684cf82d19b98f7} 
+uint32\+\_\+t Vesper::\+\+Particle\+System::\+m\+\_\+\+Pool\+Index = 999\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by \doxymbox{\hyperlink{class_vesper_1_1_particle_system_a22a477e8361045bed4a2f3a6fe2e117c}{Particle\+System()}}, and \doxymbox{\hyperlink{class_vesper_1_1_particle_system_a571acb2630cf39c4be73aefe7bc7e765}{Particle\+System()}}.
+
+\Hypertarget{class_vesper_1_1_particle_system_af730c1029248d1e90076e753718969c2}\index{Vesper::ParticleSystem@{Vesper::ParticleSystem}!m\_Props@{m\_Props}}
+\index{m\_Props@{m\_Props}!Vesper::ParticleSystem@{Vesper::ParticleSystem}}
+\doxysubsubsection{\texorpdfstring{m\_Props}{m\_Props}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_particle_system_af730c1029248d1e90076e753718969c2} 
+\doxymbox{\hyperlink{namespace_vesper_struct_vesper_1_1_particle_props}{Particle\+Props}} Vesper::\+\+Particle\+System::\+m\+\_\+\+Props\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+Vesper/\+src/\+\+Vesper/\+\+Particle\+System/\+\doxymbox{\hyperlink{_particle_system_8h}{Particle\+System.\+h}}\item 
+Vesper/\+src/\+\+Vesper/\+\+Particle\+System/\+\doxymbox{\hyperlink{_particle_system_8cpp}{Particle\+System.\+cpp}}\end{DoxyCompactItemize}

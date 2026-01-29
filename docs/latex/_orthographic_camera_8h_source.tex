@@ -1,0 +1,40 @@
+\doxysection{Orthographic\+Camera.\+h}
+\hypertarget{_orthographic_camera_8h_source}{}\label{_orthographic_camera_8h_source}\index{Vesper/src/Vesper/Renderer/OrthographicCamera.h@{Vesper/src/Vesper/Renderer/OrthographicCamera.h}}
+\doxymbox{\hyperlink{_orthographic_camera_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{pragma}\ \textcolor{preprocessor}{once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\ \textcolor{preprocessor}{<}\textcolor{preprocessor}{glm}\textcolor{preprocessor}{/}\textcolor{preprocessor}{glm}\textcolor{preprocessor}{.}\textcolor{preprocessor}{hpp}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{keyword}{namespace}\ \doxymbox{\hyperlink{namespace_vesper}{Vesper}}\ \{}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \ \ \ \ \textcolor{keyword}{class}\ \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera}{OrthographicCamera}}}
+\DoxyCodeLine{00007\ \ \ \ \ \{}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_adeebc9b7ff1d0a8f63432ccd2181c450}{OrthographicCamera}}(\textcolor{keywordtype}{float}\ left,\ \textcolor{keywordtype}{float}\ right,\ \textcolor{keywordtype}{float}\ bottom,\ \textcolor{keywordtype}{float}\ top);}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_a4c3183cbd4a1038bc546dedf7fd6d4e1}{SetProjection}}(\textcolor{keywordtype}{float}\ left,\ \textcolor{keywordtype}{float}\ right,\ \textcolor{keywordtype}{float}\ bottom,\ \textcolor{keywordtype}{float}\ top);}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_a62dbb43f26a576d8acb518a7444201da}{SetPosition}}(\textcolor{keyword}{const}\ glm::vec3\&\ position)\ \{\ m\_Position\ =\ position;\ \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_a6f7543cf270bf33ff0728ca43fd70e0a}{RecalculateViewMatrix}}\doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_a6f7543cf270bf33ff0728ca43fd70e0a}{(}}\doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_a6f7543cf270bf33ff0728ca43fd70e0a}{)}};\ \}}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_ab95656a6445766fd0c34f58007b4c67e}{glm}}::\doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_ab95656a6445766fd0c34f58007b4c67e}{vec3}}\&\ \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_ab95656a6445766fd0c34f58007b4c67e}{GetPosition}}()\ \textcolor{keyword}{const}\ \{\ \textcolor{keywordflow}{return}\ m\_Position;\ \}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_ac4c65d06e7ffd655ecb005dc56bbcf64}{SetRotation}}(\textcolor{keywordtype}{float}\ rotation)\ \{\ \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_ab044df719b1acbe67ad51f5318bcf883}{m\_Rotation}}\ =\ rotation;\ \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_a6f7543cf270bf33ff0728ca43fd70e0a}{RecalculateViewMatrix}}\doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_a6f7543cf270bf33ff0728ca43fd70e0a}{(}}\doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_a6f7543cf270bf33ff0728ca43fd70e0a}{)}};\ \}}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_aa914afe4de2c561e477f129ece7c23f4}{GetRotation}}()\ \textcolor{keyword}{const}\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_ab044df719b1acbe67ad51f5318bcf883}{m\_Rotation}};\ \}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_abe78b3422eaababefd37305dbbe86578}{glm}}::\doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_abe78b3422eaababefd37305dbbe86578}{mat4}}\&\ \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_abe78b3422eaababefd37305dbbe86578}{GetProjectionMatrix}}()\ \textcolor{keyword}{const}\ \{\ \textcolor{keywordflow}{return}\ m\_ProjectionMatrix;\ \}}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_a81810b62e2203958d8f3df98aac46c7e}{glm}}::\doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_a81810b62e2203958d8f3df98aac46c7e}{mat4}}\&\ \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_a81810b62e2203958d8f3df98aac46c7e}{GetViewMatrix}}()\ \textcolor{keyword}{const}\ \{\ \textcolor{keywordflow}{return}\ m\_ViewMatrix;\ \}}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_a8f930e2058ee4a3bc83d1bbb25b2f8ea}{glm}}::\doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_a8f930e2058ee4a3bc83d1bbb25b2f8ea}{mat4}}\&\ \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_a8f930e2058ee4a3bc83d1bbb25b2f8ea}{GetViewProjectionMatrix}}()\ \textcolor{keyword}{const}\ \{\ \textcolor{keywordflow}{return}\ m\_ViewProjectionMatrix;\ \}}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_a6f7543cf270bf33ff0728ca43fd70e0a}{RecalculateViewMatrix}}();}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_aa1e5d2578f5f3f0df0be5a7780875b3d}{glm}}::\doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_aa1e5d2578f5f3f0df0be5a7780875b3d}{mat4}}\ \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_aa1e5d2578f5f3f0df0be5a7780875b3d}{m\_ProjectionMatrix}};}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_a75cc345a0a2f9ee84951ec98bcd9fd6d}{glm}}::\doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_a75cc345a0a2f9ee84951ec98bcd9fd6d}{mat4}}\ \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_a75cc345a0a2f9ee84951ec98bcd9fd6d}{m\_ViewMatrix}};}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_a162103028870592a97ae96d87b1b7649}{glm}}::\doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_a162103028870592a97ae96d87b1b7649}{mat4}}\ \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_a162103028870592a97ae96d87b1b7649}{m\_ViewProjectionMatrix}};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_af5f58ee114c485ec4749908b1a57306e}{glm}}::\doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_af5f58ee114c485ec4749908b1a57306e}{vec3}}\ \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_af5f58ee114c485ec4749908b1a57306e}{m\_Position}}\ =\ \{\ 0.0f,\ 0.0f,\ 0.0f\ \};}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_ab044df719b1acbe67ad51f5318bcf883}{m\_Rotation}}\ =\ 0.0f;}
+\DoxyCodeLine{00032\ \ \ \ \ \};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \}}
+
+\end{DoxyCode}

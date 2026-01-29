@@ -1,0 +1,48 @@
+\doxysection{Texture.\+h}
+\hypertarget{_texture_8h_source}{}\label{_texture_8h_source}\index{Vesper/src/Vesper/Renderer/Texture.h@{Vesper/src/Vesper/Renderer/Texture.h}}
+\doxymbox{\hyperlink{_texture_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{pragma}\ \textcolor{preprocessor}{once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{keyword}{namespace}\ \doxymbox{\hyperlink{namespace_vesper}{Vesper}}\ \{}
+\DoxyCodeLine{00004\ \ \ \ \ \textcolor{keyword}{class}\ \doxymbox{\hyperlink{class_vesper_1_1_texture2_d}{Texture2D}};}
+\DoxyCodeLine{00005\ \ \ \ \ \textcolor{keyword}{class}\ \doxymbox{\hyperlink{class_vesper_1_1_texture}{Texture}}}
+\DoxyCodeLine{00006\ \ \ \ \ \{}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00008\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \string~\doxymbox{\hyperlink{class_vesper_1_1_texture_abaee8793ab274eb12e797affb8bb5406}{Texture}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ uint32\_t\ \doxymbox{\hyperlink{class_vesper_1_1_texture_a7e31e9571857dded8570e2c102235d4c}{GetWidth}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ uint32\_t\ \doxymbox{\hyperlink{class_vesper_1_1_texture_a9b506f28915ef764c52b23897606628b}{GetHeight}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ uint32\_t\ \doxymbox{\hyperlink{class_vesper_1_1_texture_aac3791b93ab26cf8c8df7ae02c6cc8d3}{GetRendererID}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_texture_aecdaafa875ff2ce3e3972f4c42b23194}{Bind}}(uint32\_t\ slot\ =\ 0)\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_texture_aae25563a473b10ba3cea4d82310d734a}{SetData}}(\textcolor{keywordtype}{void}*\ data,\ uint32\_t\ size)\ =\ 0;}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_vesper_1_1_texture_a82a2ccb871e737e685589ab0dbd35a34}{operator}}==(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_vesper_1_1_texture2_d}{Texture2D}}\&\ other)\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ std::string\ \doxymbox{\hyperlink{class_vesper_1_1_texture_a8b5e8ba4dc3e4cec52810b22dab26dd7}{GetName}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00019\ \ \ \ \ \};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{class}\ \doxymbox{\hyperlink{class_vesper_1_1_texture2_d}{Texture2D}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_vesper_1_1_texture}{Texture}}}
+\DoxyCodeLine{00022\ \ \ \ \ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \doxymbox{\hyperlink{class_vesper_1_1_texture2_d_ac7a064af2d05049e13f237ae2a508f22}{Ref}}<\doxymbox{\hyperlink{class_vesper_1_1_texture2_d_ac7a064af2d05049e13f237ae2a508f22}{Texture2D}}>\ \doxymbox{\hyperlink{class_vesper_1_1_texture2_d_ac7a064af2d05049e13f237ae2a508f22}{Create}}(\doxymbox{\hyperlink{class_vesper_1_1_texture2_d_ac7a064af2d05049e13f237ae2a508f22}{uint32\_t}}\ \doxymbox{\hyperlink{class_vesper_1_1_texture2_d_ac7a064af2d05049e13f237ae2a508f22}{width}},\ \doxymbox{\hyperlink{class_vesper_1_1_texture2_d_ac7a064af2d05049e13f237ae2a508f22}{uint32\_t}}\ \doxymbox{\hyperlink{class_vesper_1_1_texture2_d_ac7a064af2d05049e13f237ae2a508f22}{height}});}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \doxymbox{\hyperlink{class_vesper_1_1_texture2_d_a8a1697b19fa2ebcd26fb387b2adaa0f7}{Ref}}<\doxymbox{\hyperlink{class_vesper_1_1_texture2_d_a8a1697b19fa2ebcd26fb387b2adaa0f7}{Texture2D}}>\ \doxymbox{\hyperlink{class_vesper_1_1_texture2_d_a8a1697b19fa2ebcd26fb387b2adaa0f7}{Create}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_vesper_1_1_texture2_d_a8a1697b19fa2ebcd26fb387b2adaa0f7}{std}}::\doxymbox{\hyperlink{class_vesper_1_1_texture2_d_a8a1697b19fa2ebcd26fb387b2adaa0f7}{string}}\&\ \doxymbox{\hyperlink{class_vesper_1_1_texture2_d_a8a1697b19fa2ebcd26fb387b2adaa0f7}{path}});}
+\DoxyCodeLine{00026\ \ \ \ \ \};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{class}\ \doxymbox{\hyperlink{class_vesper_1_1_texture_library}{TextureLibrary}}}
+\DoxyCodeLine{00030\ \ \ \ \ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_texture_library_acb9dda16f150226e9a9efd84038e4eec}{Add}}(\textcolor{keyword}{const}\ std::string\&\ name,\ \textcolor{keyword}{const}\ Ref<Texture2D>\&\ texture);}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_texture_library_a76e806d5c958f3e1049b1eb2119ab3f6}{Add}}(\textcolor{keyword}{const}\ Ref<Texture2D>\&\ texture);}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_texture_library_aec7a8eefe386f9373e7d7a301a39743c}{Ref}}<\doxymbox{\hyperlink{class_vesper_1_1_texture_library_aec7a8eefe386f9373e7d7a301a39743c}{Texture2D}}>\ \doxymbox{\hyperlink{class_vesper_1_1_texture_library_aec7a8eefe386f9373e7d7a301a39743c}{Load}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_vesper_1_1_texture_library_aec7a8eefe386f9373e7d7a301a39743c}{std}}::\doxymbox{\hyperlink{class_vesper_1_1_texture_library_aec7a8eefe386f9373e7d7a301a39743c}{string}}\&\ \doxymbox{\hyperlink{class_vesper_1_1_texture_library_aec7a8eefe386f9373e7d7a301a39743c}{filepath}});}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_texture_library_ad279b00e48cfd7cfe599fc5b51d5e55c}{Ref}}<\doxymbox{\hyperlink{class_vesper_1_1_texture_library_ad279b00e48cfd7cfe599fc5b51d5e55c}{Texture2D}}>\ \doxymbox{\hyperlink{class_vesper_1_1_texture_library_ad279b00e48cfd7cfe599fc5b51d5e55c}{Load}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_vesper_1_1_texture_library_ad279b00e48cfd7cfe599fc5b51d5e55c}{std}}::\doxymbox{\hyperlink{class_vesper_1_1_texture_library_ad279b00e48cfd7cfe599fc5b51d5e55c}{string}}\&\ \doxymbox{\hyperlink{class_vesper_1_1_texture_library_ad279b00e48cfd7cfe599fc5b51d5e55c}{name}},\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_vesper_1_1_texture_library_ad279b00e48cfd7cfe599fc5b51d5e55c}{std}}::\doxymbox{\hyperlink{class_vesper_1_1_texture_library_ad279b00e48cfd7cfe599fc5b51d5e55c}{string}}\&\ \doxymbox{\hyperlink{class_vesper_1_1_texture_library_ad279b00e48cfd7cfe599fc5b51d5e55c}{filepath}});}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_texture_library_ac1c0ebf2ecdbe318a4b9bc82b063067c}{Ref}}<\doxymbox{\hyperlink{class_vesper_1_1_texture_library_ac1c0ebf2ecdbe318a4b9bc82b063067c}{Texture2D}}>\ \doxymbox{\hyperlink{class_vesper_1_1_texture_library_ac1c0ebf2ecdbe318a4b9bc82b063067c}{Get}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_vesper_1_1_texture_library_ac1c0ebf2ecdbe318a4b9bc82b063067c}{std}}::\doxymbox{\hyperlink{class_vesper_1_1_texture_library_ac1c0ebf2ecdbe318a4b9bc82b063067c}{string}}\&\ \doxymbox{\hyperlink{class_vesper_1_1_texture_library_ac1c0ebf2ecdbe318a4b9bc82b063067c}{name}})\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_vesper_1_1_texture_library_ac4d208632772655db25137f5d9f912c1}{Exists}}(\textcolor{keyword}{const}\ std::string\&\ name)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_texture_library_ae673a15f8fe385485c58861e7741d92a}{std}}::\doxymbox{\hyperlink{class_vesper_1_1_texture_library_ae673a15f8fe385485c58861e7741d92a}{unordered\_map}}<\doxymbox{\hyperlink{class_vesper_1_1_texture_library_ae673a15f8fe385485c58861e7741d92a}{std}}::\doxymbox{\hyperlink{class_vesper_1_1_texture_library_ae673a15f8fe385485c58861e7741d92a}{string}},\ \doxymbox{\hyperlink{class_vesper_1_1_texture_library_ae673a15f8fe385485c58861e7741d92a}{Ref}}<\doxymbox{\hyperlink{class_vesper_1_1_texture_library_ae673a15f8fe385485c58861e7741d92a}{Texture2D}}>>\ \doxymbox{\hyperlink{class_vesper_1_1_texture_library_ae673a15f8fe385485c58861e7741d92a}{m\_Textures}};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \};}
+\DoxyCodeLine{00042\ \}}
+
+\end{DoxyCode}

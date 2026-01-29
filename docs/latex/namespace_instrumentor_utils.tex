@@ -1,0 +1,62 @@
+\doxysection{Instrumentor\+Utils Namespace Reference}
+\hypertarget{namespace_instrumentor_utils}{}\label{namespace_instrumentor_utils}\index{InstrumentorUtils@{InstrumentorUtils}}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{namespace_instrumentor_utils_struct_instrumentor_utils_1_1_change_result}{Change\+Result}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$size\+\_\+t N, size\+\_\+t K$>$ }\\constexpr auto \doxymbox{\hyperlink{namespace_instrumentor_utils_ae15d8cc9cf5564f45a9731202fd5c2ff}{Cleanup\+Output\+String}} (const char(\&expr)\+[N]\+, const char(\&remove)\+[K]\+)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Class Documentation}
+\index{InstrumentorUtils::ChangeResult@{InstrumentorUtils::ChangeResult}}
+\label{struct_instrumentor_utils_1_1_change_result}
+\Hypertarget{namespace_instrumentor_utils_struct_instrumentor_utils_1_1_change_result}
+\doxysubsubsection{struct Instrumentor\+Utils::\+Change\+Result}
+\subsubsection*{template$<$size\+\_\+t N$>$\newline
+struct Instrumentor\+Utils::\+\+Change\+Result$<$ N $>$}
+\begin{DoxyFields}{Class Members}
+\doxymbox{\Hypertarget{namespace_instrumentor_utils_ac01edcf5dfb9a10440bf406a9fde573c}\label{namespace_instrumentor_utils_ac01edcf5dfb9a10440bf406a9fde573c}} 
+char&
+Data\+[N]\+&
+\\
+\hline
+
+\end{DoxyFields}
+
+
+\label{doc-func-members}
+\Hypertarget{namespace_instrumentor_utils_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{namespace_instrumentor_utils_ae15d8cc9cf5564f45a9731202fd5c2ff}\index{InstrumentorUtils@{InstrumentorUtils}!CleanupOutputString@{CleanupOutputString}}
+\index{CleanupOutputString@{CleanupOutputString}!InstrumentorUtils@{InstrumentorUtils}}
+\doxysubsubsection{\texorpdfstring{CleanupOutputString()}{CleanupOutputString()}}
+{\footnotesize\ttfamily \label{namespace_instrumentor_utils_ae15d8cc9cf5564f45a9731202fd5c2ff} 
+template$<$size\+\_\+t N, size\+\_\+t K$>$ \\
+auto Instrumentor\+Utils::\+\+Cleanup\+Output\+String (\begin{DoxyParamCaption}\item[{const char(\&)}]{expr}{\+[\+N]\+, }\item[{const char(\&)}]{remove}{\+[\+K]\+}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00185\ \ \ \ \ \{}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_instrumentor_utils_struct_instrumentor_utils_1_1_change_result}{ChangeResult<N>}}\ result\ =\ \{\};}
+\DoxyCodeLine{00187\ }
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ srcIndex\ =\ 0;}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ dstIndex\ =\ 0;}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (srcIndex\ <\ N)}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ matchIndex\ =\ 0;}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (matchIndex\ <\ K\ -\/\ 1\ \&\&\ srcIndex\ +\ matchIndex\ <\ N\ -\/\ 1\ \&\&\ expr[srcIndex\ +\ matchIndex]\ ==\ remove[matchIndex])}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ matchIndex++;}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (matchIndex\ ==\ K\ -\/\ 1)}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ srcIndex\ +=\ matchIndex;}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \ \ \ \ result.\doxymbox{\hyperlink{namespace_instrumentor_utils_ac01edcf5dfb9a10440bf406a9fde573c}{Data}}[dstIndex++]\ =\ expr[srcIndex]\ ==\ \textcolor{charliteral}{'"{}'}\ ?\ \textcolor{charliteral}{'\(\backslash\)''}\ :\ expr[srcIndex];}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \ \ \ \ srcIndex++;}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
+\DoxyCodeLine{00201\ \ \ \ \ \}}
+
+\end{DoxyCode}

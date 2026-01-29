@@ -1,0 +1,127 @@
+\doxysection{Vesper::\+Scriptable\+Entity Class Reference}
+\hypertarget{class_vesper_1_1_scriptable_entity}{}\label{class_vesper_1_1_scriptable_entity}\index{Vesper::ScriptableEntity@{Vesper::ScriptableEntity}}
+
+
+{\ttfamily \+\#include $<$Scriptable\+Entity.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \doxymbox{\hyperlink{class_vesper_1_1_scriptable_entity_a787e175ce2a3811576c159b21ee6c7ce}{\texorpdfstring{$\sim$}{\string~}\+Scriptable\+Entity}} ()
+\item 
+{\footnotesize template$<$typename T$>$ }\\T \& \doxymbox{\hyperlink{class_vesper_1_1_scriptable_entity_ab54a267b7a3955dc4066c1f525eb9af8}{Get\+Component}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \doxymbox{\hyperlink{class_vesper_1_1_scriptable_entity_a411673888486656cc472552c5a2f8c7c}{On\+Create}} ()
+\item 
+virtual void \doxymbox{\hyperlink{class_vesper_1_1_scriptable_entity_ab10c29408758e068dbab38765adab286}{On\+Destroy}} ()
+\item 
+virtual void \doxymbox{\hyperlink{class_vesper_1_1_scriptable_entity_aebc5ec9861be990c3e5fbdce905e1639}{On\+Update}} (\doxymbox{\hyperlink{class_vesper_1_1_timestep}{Timestep}} ts)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_vesper_1_1_entity}{Entity}} \doxymbox{\hyperlink{class_vesper_1_1_scriptable_entity_a83cce6f3d418e7e02578101bc95cc498}{m\+\_\+\+Entity}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \doxymbox{\hyperlink{class_vesper_1_1_scriptable_entity_a032858ae1fe02d2d1170981c2af2d67c}{Scene}}
+\end{DoxyCompactItemize}
+
+
+\label{doc-constructors}
+\Hypertarget{class_vesper_1_1_scriptable_entity_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_vesper_1_1_scriptable_entity_a787e175ce2a3811576c159b21ee6c7ce}\index{Vesper::ScriptableEntity@{Vesper::ScriptableEntity}!````~ScriptableEntity@{\texorpdfstring{$\sim$}{\string~}ScriptableEntity}}
+\index{````~ScriptableEntity@{\texorpdfstring{$\sim$}{\string~}ScriptableEntity}!Vesper::ScriptableEntity@{Vesper::ScriptableEntity}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ScriptableEntity()}{\string~ScriptableEntity()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_scriptable_entity_a787e175ce2a3811576c159b21ee6c7ce} 
+virtual Vesper::\+\+Scriptable\+Entity::\+\texorpdfstring{$\sim$}{\string~}\+Scriptable\+Entity (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00010\ \{\};}
+
+\end{DoxyCode}
+
+
+\label{doc-func-members}
+\Hypertarget{class_vesper_1_1_scriptable_entity_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_vesper_1_1_scriptable_entity_ab54a267b7a3955dc4066c1f525eb9af8}\index{Vesper::ScriptableEntity@{Vesper::ScriptableEntity}!GetComponent@{GetComponent}}
+\index{GetComponent@{GetComponent}!Vesper::ScriptableEntity@{Vesper::ScriptableEntity}}
+\doxysubsubsection{\texorpdfstring{GetComponent()}{GetComponent()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_scriptable_entity_ab54a267b7a3955dc4066c1f525eb9af8} 
+template$<$typename T$>$ \\
+T \& Vesper::\+\+Scriptable\+Entity::\+\+Get\+Component (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_scriptable_entity_a83cce6f3d418e7e02578101bc95cc498}{m\_Entity}}.GetComponent<T>();}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_vesper_1_1_scriptable_entity_a411673888486656cc472552c5a2f8c7c}\index{Vesper::ScriptableEntity@{Vesper::ScriptableEntity}!OnCreate@{OnCreate}}
+\index{OnCreate@{OnCreate}!Vesper::ScriptableEntity@{Vesper::ScriptableEntity}}
+\doxysubsubsection{\texorpdfstring{OnCreate()}{OnCreate()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_scriptable_entity_a411673888486656cc472552c5a2f8c7c} 
+virtual void Vesper::\+\+Scriptable\+Entity::\+\+On\+Create (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00019\ \{\}}
+
+\end{DoxyCode}
+\Hypertarget{class_vesper_1_1_scriptable_entity_ab10c29408758e068dbab38765adab286}\index{Vesper::ScriptableEntity@{Vesper::ScriptableEntity}!OnDestroy@{OnDestroy}}
+\index{OnDestroy@{OnDestroy}!Vesper::ScriptableEntity@{Vesper::ScriptableEntity}}
+\doxysubsubsection{\texorpdfstring{OnDestroy()}{OnDestroy()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_scriptable_entity_ab10c29408758e068dbab38765adab286} 
+virtual void Vesper::\+\+Scriptable\+Entity::\+\+On\+Destroy (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00020\ \{\}}
+
+\end{DoxyCode}
+\Hypertarget{class_vesper_1_1_scriptable_entity_aebc5ec9861be990c3e5fbdce905e1639}\index{Vesper::ScriptableEntity@{Vesper::ScriptableEntity}!OnUpdate@{OnUpdate}}
+\index{OnUpdate@{OnUpdate}!Vesper::ScriptableEntity@{Vesper::ScriptableEntity}}
+\doxysubsubsection{\texorpdfstring{OnUpdate()}{OnUpdate()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_scriptable_entity_aebc5ec9861be990c3e5fbdce905e1639} 
+virtual void Vesper::\+\+Scriptable\+Entity::\+\+On\+Update (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_vesper_1_1_timestep}{Timestep}}}]{ts}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00021\ \{\}}
+
+\end{DoxyCode}
+
+
+\label{doc-related-members}
+\Hypertarget{class_vesper_1_1_scriptable_entity_doc-related-members}
+\doxysubsection{Friends And Related Symbol Documentation}
+\Hypertarget{class_vesper_1_1_scriptable_entity_a032858ae1fe02d2d1170981c2af2d67c}\index{Vesper::ScriptableEntity@{Vesper::ScriptableEntity}!Scene@{Scene}}
+\index{Scene@{Scene}!Vesper::ScriptableEntity@{Vesper::ScriptableEntity}}
+\doxysubsubsection{\texorpdfstring{Scene}{Scene}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_scriptable_entity_a032858ae1fe02d2d1170981c2af2d67c} 
+friend class Scene\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_vesper_1_1_scriptable_entity_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_vesper_1_1_scriptable_entity_a83cce6f3d418e7e02578101bc95cc498}\index{Vesper::ScriptableEntity@{Vesper::ScriptableEntity}!m\_Entity@{m\_Entity}}
+\index{m\_Entity@{m\_Entity}!Vesper::ScriptableEntity@{Vesper::ScriptableEntity}}
+\doxysubsubsection{\texorpdfstring{m\_Entity}{m\_Entity}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_scriptable_entity_a83cce6f3d418e7e02578101bc95cc498} 
+\doxymbox{\hyperlink{class_vesper_1_1_entity}{Entity}} Vesper::\+\+Scriptable\+Entity::\+m\+\_\+\+Entity\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+Vesper/\+src/\+\+Vesper/\+\+Scene/\+\doxymbox{\hyperlink{_scriptable_entity_8h}{Scriptable\+Entity.\+h}}\end{DoxyCompactItemize}

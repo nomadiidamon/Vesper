@@ -1,0 +1,93 @@
+\doxysection{YAML::\+convert\texorpdfstring{$<$}{<} glm::\+vec2 \texorpdfstring{$>$}{>} Struct Reference}
+\hypertarget{struct_y_a_m_l_1_1convert_3_01glm_1_1vec2_01_4}{}\label{struct_y_a_m_l_1_1convert_3_01glm_1_1vec2_01_4}\index{YAML::convert$<$ glm::vec2 $>$@{YAML::convert$<$ glm::vec2 $>$}}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Node \doxymbox{\hyperlink{struct_y_a_m_l_1_1convert_3_01glm_1_1vec2_01_4_a03c614791e8dcc9ff30dcc8f1ff7f295}{encode}} (const glm::\+vec2 \&rhs)
+\item 
+static bool \doxymbox{\hyperlink{struct_y_a_m_l_1_1convert_3_01glm_1_1vec2_01_4_a5f4cd190c09075319d138eb24682a1fe}{decode}} (const Node \&node, glm::\+vec2 \&rhs)
+\item 
+static Node \doxymbox{\hyperlink{struct_y_a_m_l_1_1convert_3_01glm_1_1vec2_01_4_a03c614791e8dcc9ff30dcc8f1ff7f295}{encode}} (const glm::\+vec2 \&rhs)
+\item 
+static bool \doxymbox{\hyperlink{struct_y_a_m_l_1_1convert_3_01glm_1_1vec2_01_4_a5f4cd190c09075319d138eb24682a1fe}{decode}} (const Node \&node, glm::\+vec2 \&rhs)
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{struct_y_a_m_l_1_1convert_3_01glm_1_1vec2_01_4_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_y_a_m_l_1_1convert_3_01glm_1_1vec2_01_4_a5f4cd190c09075319d138eb24682a1fe}\index{YAML::convert$<$ glm::vec2 $>$@{YAML::convert$<$ glm::vec2 $>$}!decode@{decode}}
+\index{decode@{decode}!YAML::convert$<$ glm::vec2 $>$@{YAML::convert$<$ glm::vec2 $>$}}
+\doxysubsubsection{\texorpdfstring{decode()}{decode()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_y_a_m_l_1_1convert_3_01glm_1_1vec2_01_4_a5f4cd190c09075319d138eb24682a1fe} 
+bool YAML::\+convert$<$ glm::\+vec2 $>$::\+decode (\begin{DoxyParamCaption}\item[{const Node \&}]{node}{, }\item[{glm::\+vec2 \&}]{rhs}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!node.IsSequence()\ ||\ node.size()\ !=\ 2)}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ rhs.x\ =\ node[0].as<\textcolor{keywordtype}{float}>();}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ rhs.y\ =\ node[1].as<\textcolor{keywordtype}{float}>();}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{struct_y_a_m_l_1_1convert_3_01glm_1_1vec2_01_4_a5f4cd190c09075319d138eb24682a1fe}\index{YAML::convert$<$ glm::vec2 $>$@{YAML::convert$<$ glm::vec2 $>$}!decode@{decode}}
+\index{decode@{decode}!YAML::convert$<$ glm::vec2 $>$@{YAML::convert$<$ glm::vec2 $>$}}
+\doxysubsubsection{\texorpdfstring{decode()}{decode()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_y_a_m_l_1_1convert_3_01glm_1_1vec2_01_4_a5f4cd190c09075319d138eb24682a1fe} 
+bool YAML::\+convert$<$ glm::\+vec2 $>$::\+decode (\begin{DoxyParamCaption}\item[{const Node \&}]{node}{, }\item[{glm::\+vec2 \&}]{rhs}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!node.IsSequence()\ ||\ node.size()\ !=\ 2)}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ rhs.x\ =\ node[0].as<\textcolor{keywordtype}{float}>();}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ rhs.y\ =\ node[1].as<\textcolor{keywordtype}{float}>();}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{struct_y_a_m_l_1_1convert_3_01glm_1_1vec2_01_4_a03c614791e8dcc9ff30dcc8f1ff7f295}\index{YAML::convert$<$ glm::vec2 $>$@{YAML::convert$<$ glm::vec2 $>$}!encode@{encode}}
+\index{encode@{encode}!YAML::convert$<$ glm::vec2 $>$@{YAML::convert$<$ glm::vec2 $>$}}
+\doxysubsubsection{\texorpdfstring{encode()}{encode()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_y_a_m_l_1_1convert_3_01glm_1_1vec2_01_4_a03c614791e8dcc9ff30dcc8f1ff7f295} 
+Node YAML::\+convert$<$ glm::\+vec2 $>$::\+encode (\begin{DoxyParamCaption}\item[{const glm::\+vec2 \&}]{rhs}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ Node\ node;}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ node.push\_back(rhs.x);}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ node.push\_back(rhs.y);}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ node.SetStyle(EmitterStyle::Flow);}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ node;}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{struct_y_a_m_l_1_1convert_3_01glm_1_1vec2_01_4_a03c614791e8dcc9ff30dcc8f1ff7f295}\index{YAML::convert$<$ glm::vec2 $>$@{YAML::convert$<$ glm::vec2 $>$}!encode@{encode}}
+\index{encode@{encode}!YAML::convert$<$ glm::vec2 $>$@{YAML::convert$<$ glm::vec2 $>$}}
+\doxysubsubsection{\texorpdfstring{encode()}{encode()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_y_a_m_l_1_1convert_3_01glm_1_1vec2_01_4_a03c614791e8dcc9ff30dcc8f1ff7f295} 
+Node YAML::\+convert$<$ glm::\+vec2 $>$::\+encode (\begin{DoxyParamCaption}\item[{const glm::\+vec2 \&}]{rhs}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ Node\ node;}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ node.push\_back(rhs.x);}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ node.push\_back(rhs.y);}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ node.SetStyle(EmitterStyle::Flow);}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ node;}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this struct was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+Vesper/\+src/\+\+Vesper/\+\+Scene/\+\doxymbox{\hyperlink{_scene_serializer_8cpp}{Scene\+Serializer.\+cpp}}\end{DoxyCompactItemize}

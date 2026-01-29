@@ -1,0 +1,220 @@
+\doxysection{Vesper::\+Layer\+Stack Class Reference}
+\hypertarget{class_vesper_1_1_layer_stack}{}\label{class_vesper_1_1_layer_stack}\index{Vesper::LayerStack@{Vesper::LayerStack}}
+
+
+{\ttfamily \+\#include $<$Layer\+Stack.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_vesper_1_1_layer_stack_a01ab5d24098db960d7bac1225cbb542e}{Layer\+Stack}} ()
+\item 
+\doxymbox{\hyperlink{class_vesper_1_1_layer_stack_ad19fe2a97a277a4fb3827c4641317fd8}{\texorpdfstring{$\sim$}{\string~}\+Layer\+Stack}} ()
+\item 
+void \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_a56bdbb1eb43e4f1718c51f5c5752cdef}{Push\+Layer}} (\doxymbox{\hyperlink{class_vesper_1_1_layer}{Layer}} \texorpdfstring{$\ast$}{*}layer)
+\item 
+void \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_abf19258f086ca897456a513038e52c04}{Push\+Overlay}} (\doxymbox{\hyperlink{class_vesper_1_1_layer}{Layer}} \texorpdfstring{$\ast$}{*}overlay)
+\item 
+void \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_ad923292e88c1f2449bb82f28923234a4}{Pop\+Layer}} (\doxymbox{\hyperlink{class_vesper_1_1_layer}{Layer}} \texorpdfstring{$\ast$}{*}layer)
+\item 
+void \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_a18721a4d3abe075ecf5da87c819430b7}{Pop\+Overlay}} (\doxymbox{\hyperlink{class_vesper_1_1_layer}{Layer}} \texorpdfstring{$\ast$}{*}overlay)
+\item 
+std::\+vector$<$ \doxymbox{\hyperlink{class_vesper_1_1_layer}{Layer}} \texorpdfstring{$\ast$}{*} $>$::\+iterator \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_a5ee33180fe933e5a8467e3e2343ddc24}{begin}} ()
+\item 
+std::\+vector$<$ \doxymbox{\hyperlink{class_vesper_1_1_layer}{Layer}} \texorpdfstring{$\ast$}{*} $>$::\+iterator \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_a425bad698ba5806a97a6f10c1177079a}{end}} ()
+\item 
+std::\+vector$<$ \doxymbox{\hyperlink{class_vesper_1_1_layer}{Layer}} \texorpdfstring{$\ast$}{*} $>$::\+reverse\+\_\+iterator \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_a7b7247fb3593bb810f52e1194ad5a797}{rbegin}} ()
+\item 
+std::\+vector$<$ \doxymbox{\hyperlink{class_vesper_1_1_layer}{Layer}} \texorpdfstring{$\ast$}{*} $>$::\+reverse\+\_\+iterator \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_a4f61004478b6d8449a9b9bf4e70dfd03}{rend}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std::\+vector$<$ \doxymbox{\hyperlink{class_vesper_1_1_layer}{Layer}} \texorpdfstring{$\ast$}{*} $>$ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_a22415e6ba25b7cf484a57548b7fce01c}{m\+\_\+\+Layers}}
+\item 
+unsigned int \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_a2722bad174bdd9e8c4bf4e8435a82df4}{m\+\_\+\+Layer\+Insert\+Index}} = 0
+\end{DoxyCompactItemize}
+
+
+\label{doc-constructors}
+\Hypertarget{class_vesper_1_1_layer_stack_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_vesper_1_1_layer_stack_a01ab5d24098db960d7bac1225cbb542e}\index{Vesper::LayerStack@{Vesper::LayerStack}!LayerStack@{LayerStack}}
+\index{LayerStack@{LayerStack}!Vesper::LayerStack@{Vesper::LayerStack}}
+\doxysubsubsection{\texorpdfstring{LayerStack()}{LayerStack()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_layer_stack_a01ab5d24098db960d7bac1225cbb542e} 
+Vesper::\+\+Layer\+Stack::\+\+Layer\+Stack (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00007\ \ \ \ \ \{}
+\DoxyCodeLine{00008\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_vesper_1_1_layer_stack_ad19fe2a97a277a4fb3827c4641317fd8}\index{Vesper::LayerStack@{Vesper::LayerStack}!````~LayerStack@{\texorpdfstring{$\sim$}{\string~}LayerStack}}
+\index{````~LayerStack@{\texorpdfstring{$\sim$}{\string~}LayerStack}!Vesper::LayerStack@{Vesper::LayerStack}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}LayerStack()}{\string~LayerStack()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_layer_stack_ad19fe2a97a277a4fb3827c4641317fd8} 
+Vesper::\+\+Layer\+Stack::\+\texorpdfstring{$\sim$}{\string~}\+Layer\+Stack (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00011\ \ \ \ \ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (Layer*\ layer\ :\ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_a22415e6ba25b7cf484a57548b7fce01c}{m\_Layers}})}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \ \ \ \ layer-\/>OnDetach();}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ layer;}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00017\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\label{doc-func-members}
+\Hypertarget{class_vesper_1_1_layer_stack_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_vesper_1_1_layer_stack_a5ee33180fe933e5a8467e3e2343ddc24}\index{Vesper::LayerStack@{Vesper::LayerStack}!begin@{begin}}
+\index{begin@{begin}!Vesper::LayerStack@{Vesper::LayerStack}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_layer_stack_a5ee33180fe933e5a8467e3e2343ddc24} 
+std::\+vector$<$ \doxymbox{\hyperlink{class_vesper_1_1_layer}{Layer}} \texorpdfstring{$\ast$}{*} $>$::\+iterator Vesper::\+\+Layer\+Stack::\+begin (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00020\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_a22415e6ba25b7cf484a57548b7fce01c}{m\_Layers}}.begin();\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_vesper_1_1_layer_stack_a425bad698ba5806a97a6f10c1177079a}\index{Vesper::LayerStack@{Vesper::LayerStack}!end@{end}}
+\index{end@{end}!Vesper::LayerStack@{Vesper::LayerStack}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_layer_stack_a425bad698ba5806a97a6f10c1177079a} 
+std::\+vector$<$ \doxymbox{\hyperlink{class_vesper_1_1_layer}{Layer}} \texorpdfstring{$\ast$}{*} $>$::\+iterator Vesper::\+\+Layer\+Stack::\+end (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00021\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_a22415e6ba25b7cf484a57548b7fce01c}{m\_Layers}}.end();\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_vesper_1_1_layer_stack_ad923292e88c1f2449bb82f28923234a4}\index{Vesper::LayerStack@{Vesper::LayerStack}!PopLayer@{PopLayer}}
+\index{PopLayer@{PopLayer}!Vesper::LayerStack@{Vesper::LayerStack}}
+\doxysubsubsection{\texorpdfstring{PopLayer()}{PopLayer()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_layer_stack_ad923292e88c1f2449bb82f28923234a4} 
+void Vesper::\+\+Layer\+Stack::\+\+Pop\+Layer (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_vesper_1_1_layer}{Layer}} \texorpdfstring{$\ast$}{*}}]{layer}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00033\ \ \ \ \ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ it\ =\ std::find(\doxymbox{\hyperlink{class_vesper_1_1_layer_stack_a22415e6ba25b7cf484a57548b7fce01c}{m\_Layers}}.begin(),\ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_a22415e6ba25b7cf484a57548b7fce01c}{m\_Layers}}.end(),\ layer);}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (it\ !=\ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_a22415e6ba25b7cf484a57548b7fce01c}{m\_Layers}}.end())}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_a22415e6ba25b7cf484a57548b7fce01c}{m\_Layers}}.erase(it);}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_a2722bad174bdd9e8c4bf4e8435a82df4}{m\_LayerInsertIndex}}-\/-\/;}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00041\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_a2722bad174bdd9e8c4bf4e8435a82df4}{m\+\_\+\+Layer\+Insert\+Index}}.
+
+\Hypertarget{class_vesper_1_1_layer_stack_a18721a4d3abe075ecf5da87c819430b7}\index{Vesper::LayerStack@{Vesper::LayerStack}!PopOverlay@{PopOverlay}}
+\index{PopOverlay@{PopOverlay}!Vesper::LayerStack@{Vesper::LayerStack}}
+\doxysubsubsection{\texorpdfstring{PopOverlay()}{PopOverlay()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_layer_stack_a18721a4d3abe075ecf5da87c819430b7} 
+void Vesper::\+\+Layer\+Stack::\+\+Pop\+Overlay (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_vesper_1_1_layer}{Layer}} \texorpdfstring{$\ast$}{*}}]{overlay}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00043\ \ \ \ \ \{}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ it\ =\ std::find(\doxymbox{\hyperlink{class_vesper_1_1_layer_stack_a22415e6ba25b7cf484a57548b7fce01c}{m\_Layers}}.begin(),\ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_a22415e6ba25b7cf484a57548b7fce01c}{m\_Layers}}.end(),\ overlay);}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (it\ !=\ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_a22415e6ba25b7cf484a57548b7fce01c}{m\_Layers}}.end())}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_a22415e6ba25b7cf484a57548b7fce01c}{m\_Layers}}.erase(it);}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00050\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_vesper_1_1_layer_stack_a56bdbb1eb43e4f1718c51f5c5752cdef}\index{Vesper::LayerStack@{Vesper::LayerStack}!PushLayer@{PushLayer}}
+\index{PushLayer@{PushLayer}!Vesper::LayerStack@{Vesper::LayerStack}}
+\doxysubsubsection{\texorpdfstring{PushLayer()}{PushLayer()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_layer_stack_a56bdbb1eb43e4f1718c51f5c5752cdef} 
+void Vesper::\+\+Layer\+Stack::\+\+Push\+Layer (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_vesper_1_1_layer}{Layer}} \texorpdfstring{$\ast$}{*}}]{layer}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00020\ \ \ \ \ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_a22415e6ba25b7cf484a57548b7fce01c}{m\_Layers}}.emplace(\doxymbox{\hyperlink{class_vesper_1_1_layer_stack_a22415e6ba25b7cf484a57548b7fce01c}{m\_Layers}}.begin()\ +\ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_a2722bad174bdd9e8c4bf4e8435a82df4}{m\_LayerInsertIndex}},\ layer);}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_a2722bad174bdd9e8c4bf4e8435a82df4}{m\_LayerInsertIndex}}++;}
+\DoxyCodeLine{00024\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_a2722bad174bdd9e8c4bf4e8435a82df4}{m\+\_\+\+Layer\+Insert\+Index}}.
+
+\Hypertarget{class_vesper_1_1_layer_stack_abf19258f086ca897456a513038e52c04}\index{Vesper::LayerStack@{Vesper::LayerStack}!PushOverlay@{PushOverlay}}
+\index{PushOverlay@{PushOverlay}!Vesper::LayerStack@{Vesper::LayerStack}}
+\doxysubsubsection{\texorpdfstring{PushOverlay()}{PushOverlay()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_layer_stack_abf19258f086ca897456a513038e52c04} 
+void Vesper::\+\+Layer\+Stack::\+\+Push\+Overlay (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_vesper_1_1_layer}{Layer}} \texorpdfstring{$\ast$}{*}}]{overlay}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00027\ \ \ \ \ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_a22415e6ba25b7cf484a57548b7fce01c}{m\_Layers}}.emplace\_back(overlay);}
+\DoxyCodeLine{00030\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_vesper_1_1_layer_stack_a7b7247fb3593bb810f52e1194ad5a797}\index{Vesper::LayerStack@{Vesper::LayerStack}!rbegin@{rbegin}}
+\index{rbegin@{rbegin}!Vesper::LayerStack@{Vesper::LayerStack}}
+\doxysubsubsection{\texorpdfstring{rbegin()}{rbegin()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_layer_stack_a7b7247fb3593bb810f52e1194ad5a797} 
+std::\+vector$<$ \doxymbox{\hyperlink{class_vesper_1_1_layer}{Layer}} \texorpdfstring{$\ast$}{*} $>$::\+reverse\+\_\+iterator Vesper::\+\+Layer\+Stack::\+rbegin (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00022\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_a22415e6ba25b7cf484a57548b7fce01c}{m\_Layers}}.rbegin();\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_vesper_1_1_layer_stack_a4f61004478b6d8449a9b9bf4e70dfd03}\index{Vesper::LayerStack@{Vesper::LayerStack}!rend@{rend}}
+\index{rend@{rend}!Vesper::LayerStack@{Vesper::LayerStack}}
+\doxysubsubsection{\texorpdfstring{rend()}{rend()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_layer_stack_a4f61004478b6d8449a9b9bf4e70dfd03} 
+std::\+vector$<$ \doxymbox{\hyperlink{class_vesper_1_1_layer}{Layer}} \texorpdfstring{$\ast$}{*} $>$::\+reverse\+\_\+iterator Vesper::\+\+Layer\+Stack::\+rend (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00023\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_a22415e6ba25b7cf484a57548b7fce01c}{m\_Layers}}.rend();\ \}}
+
+\end{DoxyCode}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_vesper_1_1_layer_stack_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_vesper_1_1_layer_stack_a2722bad174bdd9e8c4bf4e8435a82df4}\index{Vesper::LayerStack@{Vesper::LayerStack}!m\_LayerInsertIndex@{m\_LayerInsertIndex}}
+\index{m\_LayerInsertIndex@{m\_LayerInsertIndex}!Vesper::LayerStack@{Vesper::LayerStack}}
+\doxysubsubsection{\texorpdfstring{m\_LayerInsertIndex}{m\_LayerInsertIndex}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_layer_stack_a2722bad174bdd9e8c4bf4e8435a82df4} 
+unsigned int Vesper::\+\+Layer\+Stack::\+m\+\_\+\+Layer\+Insert\+Index = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_ad923292e88c1f2449bb82f28923234a4}{Pop\+Layer()}}, and \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_a56bdbb1eb43e4f1718c51f5c5752cdef}{Push\+Layer()}}.
+
+\Hypertarget{class_vesper_1_1_layer_stack_a22415e6ba25b7cf484a57548b7fce01c}\index{Vesper::LayerStack@{Vesper::LayerStack}!m\_Layers@{m\_Layers}}
+\index{m\_Layers@{m\_Layers}!Vesper::LayerStack@{Vesper::LayerStack}}
+\doxysubsubsection{\texorpdfstring{m\_Layers}{m\_Layers}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_layer_stack_a22415e6ba25b7cf484a57548b7fce01c} 
+std::\+vector$<$\doxymbox{\hyperlink{class_vesper_1_1_layer}{Layer}}\texorpdfstring{$\ast$}{*}$>$ Vesper::\+\+Layer\+Stack::\+m\+\_\+\+Layers\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+Vesper/\+src/\+\+Vesper/\+\+App/\+\doxymbox{\hyperlink{_layer_stack_8h}{Layer\+Stack.\+h}}\item 
+Vesper/\+src/\+\+Vesper/\+\+App/\+\doxymbox{\hyperlink{_layer_stack_8cpp}{Layer\+Stack.\+cpp}}\end{DoxyCompactItemize}

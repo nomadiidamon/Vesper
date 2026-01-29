@@ -1,0 +1,35 @@
+\doxysection{Vesper/\+src/\+\+Vesper/\+\+Scene/\+\+Scene\+Serializer.cpp File Reference}
+\hypertarget{_scene_serializer_8cpp}{}\label{_scene_serializer_8cpp}\index{Vesper/src/Vesper/Scene/SceneSerializer.cpp@{Vesper/src/Vesper/Scene/SceneSerializer.cpp}}
+{\ttfamily \+\#include "{}vzpch.\+h"{}}\newline
+{\ttfamily \+\#include "{}Scene\+Serializer.\+h"{}}\newline
+{\ttfamily \+\#include "{}Entity.\+h"{}}\newline
+{\ttfamily \+\#include "{}Components.\+h"{}}\newline
+{\ttfamily \+\#include $<$fstream$>$}\newline
+{\ttfamily \+\#include $<$yaml-\/cpp/\+yaml.\+h$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{struct_y_a_m_l_1_1convert_3_01glm_1_1vec2_01_4}{YAML::\+convert$<$ glm::\+vec2 $>$}}
+\item 
+struct \doxymbox{\hyperlink{struct_y_a_m_l_1_1convert_3_01glm_1_1vec3_01_4}{YAML::\+convert$<$ glm::\+vec3 $>$}}
+\item 
+struct \doxymbox{\hyperlink{struct_y_a_m_l_1_1convert_3_01glm_1_1vec4_01_4}{YAML::\+convert$<$ glm::\+vec4 $>$}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \doxymbox{\hyperlink{namespace_y_a_m_l}{YAML}}
+\item 
+namespace \doxymbox{\hyperlink{namespace_vesper}{Vesper}}
+\begin{DoxyCompactList}\small\item\em TEMPORARY. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+YAML::\+\+Emitter \& \doxymbox{\hyperlink{namespace_y_a_m_l_a38cba2ba0e11f6351f57f1b97adbd121}{YAML::\+operator$<$$<$}} (YAML::\+\+Emitter \&out, const glm::\+vec2 \&v)
+\item 
+YAML::\+\+Emitter \& \doxymbox{\hyperlink{namespace_y_a_m_l_aa688e663755fee4c24e731998b619d31}{YAML::\+operator$<$$<$}} (YAML::\+\+Emitter \&out, const glm::\+vec3 \&v)
+\item 
+YAML::\+\+Emitter \& \doxymbox{\hyperlink{namespace_y_a_m_l_ac8a3265e966fd52e3a7eb150ff8eb1e0}{YAML::\+operator$<$$<$}} (YAML::\+\+Emitter \&out, const glm::\+vec4 \&v)
+\item 
+static void \doxymbox{\hyperlink{namespace_vesper_afd6defdd6d228a26a11631a007bb7a07}{Vesper::\+\+Serialize\+Entity}} (YAML::\+\+Emitter \&out, \doxymbox{\hyperlink{class_vesper_1_1_entity}{Entity}} entity)
+\end{DoxyCompactItemize}

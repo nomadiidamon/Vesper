@@ -1,0 +1,165 @@
+\doxysection{Vesper::\+Window\+Resize\+Event Class Reference}
+\hypertarget{class_vesper_1_1_window_resize_event}{}\label{class_vesper_1_1_window_resize_event}\index{Vesper::WindowResizeEvent@{Vesper::WindowResizeEvent}}
+
+
+{\ttfamily \+\#include $<$Application\+Event.\+h$>$}
+
+Inheritance diagram for Vesper::\+Window\+Resize\+Event:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_vesper_1_1_window_resize_event}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_vesper_1_1_window_resize_event_a5fced4b1f010f72bc96e24bc035384d6}{Window\+Resize\+Event}} (unsigned int width, unsigned int height)
+\item 
+unsigned int \doxymbox{\hyperlink{class_vesper_1_1_window_resize_event_a9923219babc6305000146a653e04c211}{Get\+Width}} () const
+\item 
+unsigned int \doxymbox{\hyperlink{class_vesper_1_1_window_resize_event_a2e1f24a30dfdeb6ae0d83b5e2f00658b}{Get\+Height}} () const
+\item 
+std::\+string \doxymbox{\hyperlink{class_vesper_1_1_window_resize_event_a68faa6be8944358148545c0f640a2962}{To\+String}} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_vesper_1_1_event}{Vesper::\+\+Event}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \doxymbox{\hyperlink{class_vesper_1_1_event_a516fc6585a1ca21f7d73fc4deb461ee2}{\texorpdfstring{$\sim$}{\string~}\+Event}} ()=default
+\item 
+virtual \doxymbox{\hyperlink{namespace_vesper_ada4bc37927ce22c44ea0083a224d3bb5}{Event\+Type}} \doxymbox{\hyperlink{class_vesper_1_1_event_a82499595903097f8d2a81e9b0ebfba3d}{Get\+Event\+Type}} () const =0
+\item 
+virtual const char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_vesper_1_1_event_af39d90d8ec2e84488c593c517a8e9b6e}{Get\+Name}} () const =0
+\item 
+virtual int \doxymbox{\hyperlink{class_vesper_1_1_event_a71e621bec32702d59c7e7ed82c53ac08}{Get\+Category\+Flags}} () const =0
+\item 
+bool \doxymbox{\hyperlink{class_vesper_1_1_event_a02448606191e9e1cc7869bffd2cb20f7}{Is\+In\+Category}} (\doxymbox{\hyperlink{namespace_vesper_ad79da63be4419c3a218acaa990decabe}{Event\+Category}} category)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \doxymbox{\hyperlink{class_vesper_1_1_window_resize_event_ad3171f43740e9c61e3cabd106ba6a13e}{m\+\_\+\+Width}}
+\item 
+unsigned int \doxymbox{\hyperlink{class_vesper_1_1_window_resize_event_a5f80f77100f9310e3d35563339b33727}{m\+\_\+\+Height}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Attributes inherited from \doxymbox{\hyperlink{class_vesper_1_1_event}{Vesper::\+\+Event}}}
+\begin{DoxyCompactItemize}
+\item 
+bool \doxymbox{\hyperlink{class_vesper_1_1_event_ab6bc1a2214e615b994cff03df207a0f1}{Handled}} = false
+\end{DoxyCompactItemize}
+
+
+\label{doc-constructors}
+\Hypertarget{class_vesper_1_1_window_resize_event_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_vesper_1_1_window_resize_event_a5fced4b1f010f72bc96e24bc035384d6}\index{Vesper::WindowResizeEvent@{Vesper::WindowResizeEvent}!WindowResizeEvent@{WindowResizeEvent}}
+\index{WindowResizeEvent@{WindowResizeEvent}!Vesper::WindowResizeEvent@{Vesper::WindowResizeEvent}}
+\doxysubsubsection{\texorpdfstring{WindowResizeEvent()}{WindowResizeEvent()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_window_resize_event_a5fced4b1f010f72bc96e24bc035384d6} 
+Vesper::\+\+Window\+Resize\+Event::\+\+Window\+Resize\+Event (\begin{DoxyParamCaption}\item[{unsigned int}]{width}{, }\item[{unsigned int}]{height}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_vesper_1_1_window_resize_event_ad3171f43740e9c61e3cabd106ba6a13e}{m\_Width}}(width),\ \doxymbox{\hyperlink{class_vesper_1_1_window_resize_event_a5f80f77100f9310e3d35563339b33727}{m\_Height}}(height)\ \{\}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_window_resize_event_a5f80f77100f9310e3d35563339b33727}{m\+\_\+\+Height}}, and \doxymbox{\hyperlink{class_vesper_1_1_window_resize_event_ad3171f43740e9c61e3cabd106ba6a13e}{m\+\_\+\+Width}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_vesper_1_1_window_resize_event_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_vesper_1_1_window_resize_event_a2e1f24a30dfdeb6ae0d83b5e2f00658b}\index{Vesper::WindowResizeEvent@{Vesper::WindowResizeEvent}!GetHeight@{GetHeight}}
+\index{GetHeight@{GetHeight}!Vesper::WindowResizeEvent@{Vesper::WindowResizeEvent}}
+\doxysubsubsection{\texorpdfstring{GetHeight()}{GetHeight()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_window_resize_event_a2e1f24a30dfdeb6ae0d83b5e2f00658b} 
+unsigned int Vesper::\+\+Window\+Resize\+Event::\+\+Get\+Height (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00016\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_window_resize_event_a5f80f77100f9310e3d35563339b33727}{m\_Height}};\ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_window_resize_event_a5f80f77100f9310e3d35563339b33727}{m\+\_\+\+Height}}.
+
+
+
+Referenced by \doxymbox{\hyperlink{class_vesper_1_1_application_a767d42619845c71cd63b6ddd1deee009}{Vesper::\+\+Application::\+\+On\+Window\+Resize()}}, and \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_controller_af347e6da62eff26c8d419c12b9ae0e70}{Vesper::\+\+Orthographic\+Camera\+Controller::\+\+On\+Window\+Resized()}}.
+
+\Hypertarget{class_vesper_1_1_window_resize_event_a9923219babc6305000146a653e04c211}\index{Vesper::WindowResizeEvent@{Vesper::WindowResizeEvent}!GetWidth@{GetWidth}}
+\index{GetWidth@{GetWidth}!Vesper::WindowResizeEvent@{Vesper::WindowResizeEvent}}
+\doxysubsubsection{\texorpdfstring{GetWidth()}{GetWidth()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_window_resize_event_a9923219babc6305000146a653e04c211} 
+unsigned int Vesper::\+\+Window\+Resize\+Event::\+\+Get\+Width (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00015\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_window_resize_event_ad3171f43740e9c61e3cabd106ba6a13e}{m\_Width}};\ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_window_resize_event_ad3171f43740e9c61e3cabd106ba6a13e}{m\+\_\+\+Width}}.
+
+
+
+Referenced by \doxymbox{\hyperlink{class_vesper_1_1_application_a767d42619845c71cd63b6ddd1deee009}{Vesper::\+\+Application::\+\+On\+Window\+Resize()}}, and \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_controller_af347e6da62eff26c8d419c12b9ae0e70}{Vesper::\+\+Orthographic\+Camera\+Controller::\+\+On\+Window\+Resized()}}.
+
+\Hypertarget{class_vesper_1_1_window_resize_event_a68faa6be8944358148545c0f640a2962}\index{Vesper::WindowResizeEvent@{Vesper::WindowResizeEvent}!ToString@{ToString}}
+\index{ToString@{ToString}!Vesper::WindowResizeEvent@{Vesper::WindowResizeEvent}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_window_resize_event_a68faa6be8944358148545c0f640a2962} 
+std::\+string Vesper::\+\+Window\+Resize\+Event::\+\+To\+String (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \doxymbox{\hyperlink{class_vesper_1_1_event_aaba48fc434a2539c5ce000fda6aa7f05}{Vesper::\+\+Event}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ std::stringstream\ ss;}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ ss\ <<\ \textcolor{stringliteral}{"{}WindowResizeEvent:\ "{}}\ <<\ \doxymbox{\hyperlink{class_vesper_1_1_window_resize_event_ad3171f43740e9c61e3cabd106ba6a13e}{m\_Width}}\ <<\ \textcolor{stringliteral}{"{},\ "{}}\ <<\ \doxymbox{\hyperlink{class_vesper_1_1_window_resize_event_a5f80f77100f9310e3d35563339b33727}{m\_Height}};}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ss.str();}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_window_resize_event_a5f80f77100f9310e3d35563339b33727}{m\+\_\+\+Height}}, and \doxymbox{\hyperlink{class_vesper_1_1_window_resize_event_ad3171f43740e9c61e3cabd106ba6a13e}{m\+\_\+\+Width}}.
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_vesper_1_1_window_resize_event_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_vesper_1_1_window_resize_event_a5f80f77100f9310e3d35563339b33727}\index{Vesper::WindowResizeEvent@{Vesper::WindowResizeEvent}!m\_Height@{m\_Height}}
+\index{m\_Height@{m\_Height}!Vesper::WindowResizeEvent@{Vesper::WindowResizeEvent}}
+\doxysubsubsection{\texorpdfstring{m\_Height}{m\_Height}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_window_resize_event_a5f80f77100f9310e3d35563339b33727} 
+unsigned int Vesper::\+\+Window\+Resize\+Event::\+m\+\_\+\+Height\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by \doxymbox{\hyperlink{class_vesper_1_1_window_resize_event_a2e1f24a30dfdeb6ae0d83b5e2f00658b}{Get\+Height()}}, \doxymbox{\hyperlink{class_vesper_1_1_window_resize_event_a68faa6be8944358148545c0f640a2962}{To\+String()}}, and \doxymbox{\hyperlink{class_vesper_1_1_window_resize_event_a5fced4b1f010f72bc96e24bc035384d6}{Window\+Resize\+Event()}}.
+
+\Hypertarget{class_vesper_1_1_window_resize_event_ad3171f43740e9c61e3cabd106ba6a13e}\index{Vesper::WindowResizeEvent@{Vesper::WindowResizeEvent}!m\_Width@{m\_Width}}
+\index{m\_Width@{m\_Width}!Vesper::WindowResizeEvent@{Vesper::WindowResizeEvent}}
+\doxysubsubsection{\texorpdfstring{m\_Width}{m\_Width}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_window_resize_event_ad3171f43740e9c61e3cabd106ba6a13e} 
+unsigned int Vesper::\+\+Window\+Resize\+Event::\+m\+\_\+\+Width\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by \doxymbox{\hyperlink{class_vesper_1_1_window_resize_event_a9923219babc6305000146a653e04c211}{Get\+Width()}}, \doxymbox{\hyperlink{class_vesper_1_1_window_resize_event_a68faa6be8944358148545c0f640a2962}{To\+String()}}, and \doxymbox{\hyperlink{class_vesper_1_1_window_resize_event_a5fced4b1f010f72bc96e24bc035384d6}{Window\+Resize\+Event()}}.
+
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+Vesper/\+src/\+\+Vesper/\+\+Events/\+\doxymbox{\hyperlink{_application_event_8h}{Application\+Event.\+h}}\end{DoxyCompactItemize}

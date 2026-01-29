@@ -1,0 +1,219 @@
+\doxysection{Vesper::\+File\+System Class Reference}
+\hypertarget{class_vesper_1_1_file_system}{}\label{class_vesper_1_1_file_system}\index{Vesper::FileSystem@{Vesper::FileSystem}}
+
+
+{\ttfamily \+\#include $<$Platform\+Utils.\+h$>$}
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \doxymbox{\hyperlink{class_vesper_1_1_file_system_a0b7082f007ed6f6d20f368c6c7a40e77}{Initialize}} ()
+\item 
+static std::\+string \doxymbox{\hyperlink{class_vesper_1_1_file_system_a37e6a0b2435fe022ca5bfdf98ea06363}{Get\+Current\+Working\+Directory}} ()
+\item 
+static std::\+string \doxymbox{\hyperlink{class_vesper_1_1_file_system_aed25a15bc7528425806ac8e297f4129d}{Get\+Absolute\+Path}} (const std::\+string \&relative\+Path)
+\item 
+static std::\+string \doxymbox{\hyperlink{class_vesper_1_1_file_system_a7136190c41a45d49ed5dfa8a19e9c00f}{Get\+Traveling\+Up\+Path}} (const std::\+string \&path)
+\item 
+static bool \doxymbox{\hyperlink{class_vesper_1_1_file_system_af0a19c3177229dd8e49aeeeb5c14daed}{Is\+Initialized}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static bool \doxymbox{\hyperlink{class_vesper_1_1_file_system_aee517b584d608cabe22b5cf855a149d6}{m\+\_\+\+Initialized}} = false
+\item 
+static std::\+string \doxymbox{\hyperlink{class_vesper_1_1_file_system_a7ea8de66c4e9609a160e62626dd81fcb}{m\+\_\+\+Root\+Engine\+Directory}} = "{}"{}
+\item 
+static std::\+string \doxymbox{\hyperlink{class_vesper_1_1_file_system_a2267d09159c22a8537d36da0384c6acf}{m\+\_\+\+Root\+Editor\+Directory}} = "{}"{}
+\item 
+static std::\+string \doxymbox{\hyperlink{class_vesper_1_1_file_system_a6667719a2c0445a6017f0880cbed4077}{m\+\_\+\+Resources\+Directory}} = "{}"{}
+\item 
+static std::\+string \doxymbox{\hyperlink{class_vesper_1_1_file_system_a4aee80fefcb52f47601ecfcc1dd46b2f}{m\+\_\+\+Assets\+Directory}} = "{}"{}
+\item 
+static std::\+string \doxymbox{\hyperlink{class_vesper_1_1_file_system_a36e0c2a7eddfba9df844f0d655c02389}{m\+\_\+\+Projects\+Directory}} = "{}"{}
+\item 
+static std::\+string \doxymbox{\hyperlink{class_vesper_1_1_file_system_ab8862f1fd78040b46ff6ccd100ea6721}{m\+\_\+\+Current\+Project\+Directory}} = "{}"{}
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{class_vesper_1_1_file_system_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_vesper_1_1_file_system_aed25a15bc7528425806ac8e297f4129d}\index{Vesper::FileSystem@{Vesper::FileSystem}!GetAbsolutePath@{GetAbsolutePath}}
+\index{GetAbsolutePath@{GetAbsolutePath}!Vesper::FileSystem@{Vesper::FileSystem}}
+\doxysubsubsection{\texorpdfstring{GetAbsolutePath()}{GetAbsolutePath()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_file_system_aed25a15bc7528425806ac8e297f4129d} 
+std::\+string Vesper::\+\+File\+System::\+\+Get\+Absolute\+Path (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{relative\+Path}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ fullPath[MAX\_PATH];}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_fullpath(fullPath,\ relativePath.c\_str(),\ MAX\_PATH)\ !=\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::string(fullPath);}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::string();}
+\DoxyCodeLine{00110\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referenced by \doxymbox{\hyperlink{class_vesper_1_1_file_system_a0b7082f007ed6f6d20f368c6c7a40e77}{Initialize()}}.
+
+\Hypertarget{class_vesper_1_1_file_system_a37e6a0b2435fe022ca5bfdf98ea06363}\index{Vesper::FileSystem@{Vesper::FileSystem}!GetCurrentWorkingDirectory@{GetCurrentWorkingDirectory}}
+\index{GetCurrentWorkingDirectory@{GetCurrentWorkingDirectory}!Vesper::FileSystem@{Vesper::FileSystem}}
+\doxysubsubsection{\texorpdfstring{GetCurrentWorkingDirectory()}{GetCurrentWorkingDirectory()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_file_system_a37e6a0b2435fe022ca5bfdf98ea06363} 
+std::\+string Vesper::\+\+File\+System::\+\+Get\+Current\+Working\+Directory (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ CHAR\ currentDir[256]\ =\ \{\ 0\ \};}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (GetCurrentDirectoryA(256,\ currentDir))}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::string(currentDir);}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::string();}
+\DoxyCodeLine{00102\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_vesper_1_1_file_system_a7136190c41a45d49ed5dfa8a19e9c00f}\index{Vesper::FileSystem@{Vesper::FileSystem}!GetTravelingUpPath@{GetTravelingUpPath}}
+\index{GetTravelingUpPath@{GetTravelingUpPath}!Vesper::FileSystem@{Vesper::FileSystem}}
+\doxysubsubsection{\texorpdfstring{GetTravelingUpPath()}{GetTravelingUpPath()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_file_system_a7136190c41a45d49ed5dfa8a19e9c00f} 
+std::\+string Vesper::\+\+File\+System::\+\+Get\+Traveling\+Up\+Path (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{path}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ pos\ =\ path.find\_last\_of(\textcolor{stringliteral}{"{}/\(\backslash\)\(\backslash\)"{}});}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (pos\ !=\ std::string::npos)\ \{}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ path.substr(0,\ pos);}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::string();}
+\DoxyCodeLine{00118\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referenced by \doxymbox{\hyperlink{class_vesper_1_1_file_system_a0b7082f007ed6f6d20f368c6c7a40e77}{Initialize()}}.
+
+\Hypertarget{class_vesper_1_1_file_system_a0b7082f007ed6f6d20f368c6c7a40e77}\index{Vesper::FileSystem@{Vesper::FileSystem}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!Vesper::FileSystem@{Vesper::FileSystem}}
+\doxysubsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_file_system_a0b7082f007ed6f6d20f368c6c7a40e77} 
+void Vesper::\+\+File\+System::\+\+Initialize (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_vesper_1_1_file_system_aee517b584d608cabe22b5cf855a149d6}{m\_Initialized}})}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_file_system_aee517b584d608cabe22b5cf855a149d6}{m\_Initialized}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Set\ Root\ Engine\ Directory}}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_file_system_a7ea8de66c4e9609a160e62626dd81fcb}{m\_RootEngineDirectory}}\ =\ \doxymbox{\hyperlink{class_vesper_1_1_file_system_a7136190c41a45d49ed5dfa8a19e9c00f}{GetTravelingUpPath}}(\doxymbox{\hyperlink{class_vesper_1_1_file_system_a7136190c41a45d49ed5dfa8a19e9c00f}{GetTravelingUpPath}}(\doxymbox{\hyperlink{class_vesper_1_1_file_system_a7136190c41a45d49ed5dfa8a19e9c00f}{GetTravelingUpPath}}(\doxymbox{\hyperlink{class_vesper_1_1_file_system_aed25a15bc7528425806ac8e297f4129d}{GetAbsolutePath}}(\textcolor{stringliteral}{"{}."{}}))));}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Set\ Root\ Editor\ Directory}}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_file_system_a2267d09159c22a8537d36da0384c6acf}{m\_RootEditorDirectory}}\ =\ \doxymbox{\hyperlink{class_vesper_1_1_file_system_aed25a15bc7528425806ac8e297f4129d}{GetAbsolutePath}}(\textcolor{stringliteral}{"{}../../Vesper-\/Editor/"{}});}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Set\ Resources\ Directory}}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_file_system_a6667719a2c0445a6017f0880cbed4077}{m\_ResourcesDirectory}}\ =\ \doxymbox{\hyperlink{class_vesper_1_1_file_system_aed25a15bc7528425806ac8e297f4129d}{GetAbsolutePath}}(\doxymbox{\hyperlink{class_vesper_1_1_file_system_a7ea8de66c4e9609a160e62626dd81fcb}{m\_RootEngineDirectory}}\ +\ \textcolor{stringliteral}{"{}/Resources/"{}});}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Set\ Assets\ Directory}}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_file_system_a4aee80fefcb52f47601ecfcc1dd46b2f}{m\_AssetsDirectory}}\ =\ \doxymbox{\hyperlink{class_vesper_1_1_file_system_aed25a15bc7528425806ac8e297f4129d}{GetAbsolutePath}}(\doxymbox{\hyperlink{class_vesper_1_1_file_system_a2267d09159c22a8537d36da0384c6acf}{m\_RootEditorDirectory}}\ +\ \textcolor{stringliteral}{"{}/assets"{}});}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Set\ Projects\ Directory}}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_file_system_a36e0c2a7eddfba9df844f0d655c02389}{m\_ProjectsDirectory}}\ =\ \doxymbox{\hyperlink{class_vesper_1_1_file_system_aed25a15bc7528425806ac8e297f4129d}{GetAbsolutePath}}(\doxymbox{\hyperlink{class_vesper_1_1_file_system_a7ea8de66c4e9609a160e62626dd81fcb}{m\_RootEngineDirectory}}\ +\ \textcolor{stringliteral}{"{}/Projects"{}});}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Set\ Current\ Project\ Directory}}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_file_system_ab8862f1fd78040b46ff6ccd100ea6721}{m\_CurrentProjectDirectory}}\ =\ \doxymbox{\hyperlink{class_vesper_1_1_file_system_aed25a15bc7528425806ac8e297f4129d}{GetAbsolutePath}}(\doxymbox{\hyperlink{class_vesper_1_1_file_system_a36e0c2a7eddfba9df844f0d655c02389}{m\_ProjectsDirectory}}\ +\ \textcolor{stringliteral}{"{}/DefaultProject"{}});}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Log\ Directories\ for\ Debugging}}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_log_8h_a745dd924b08fe6cfa0156a813491ee25}{VZ\_CORE\_TRACE}}(\textcolor{stringliteral}{"{}FileSystem\ initialized"{}});}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_log_8h_a745dd924b08fe6cfa0156a813491ee25}{VZ\_CORE\_TRACE}}(\textcolor{stringliteral}{"{}FileSystem\ Directories:"{}});}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_log_8h_a745dd924b08fe6cfa0156a813491ee25}{VZ\_CORE\_TRACE}}(\textcolor{stringliteral}{"{}Root\ Engine\ Directory\ :\ "{}}\ +\ \doxymbox{\hyperlink{class_vesper_1_1_file_system_a7ea8de66c4e9609a160e62626dd81fcb}{m\_RootEngineDirectory}});}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_log_8h_a745dd924b08fe6cfa0156a813491ee25}{VZ\_CORE\_TRACE}}(\textcolor{stringliteral}{"{}Root\ Editor\ Directory\ :\ "{}}\ +\ \doxymbox{\hyperlink{class_vesper_1_1_file_system_a2267d09159c22a8537d36da0384c6acf}{m\_RootEditorDirectory}});}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_log_8h_a745dd924b08fe6cfa0156a813491ee25}{VZ\_CORE\_TRACE}}(\textcolor{stringliteral}{"{}Resources\ Directory\ \ \ :\ "{}}\ +\ \doxymbox{\hyperlink{class_vesper_1_1_file_system_a6667719a2c0445a6017f0880cbed4077}{m\_ResourcesDirectory}});}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_log_8h_a745dd924b08fe6cfa0156a813491ee25}{VZ\_CORE\_TRACE}}(\textcolor{stringliteral}{"{}Assets\ Directory\ \ \ \ \ \ :\ "{}}\ +\ \doxymbox{\hyperlink{class_vesper_1_1_file_system_a4aee80fefcb52f47601ecfcc1dd46b2f}{m\_AssetsDirectory}});}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_log_8h_a745dd924b08fe6cfa0156a813491ee25}{VZ\_CORE\_TRACE}}(\textcolor{stringliteral}{"{}Projects\ Directory\ \ \ \ :\ "{}}\ +\ \doxymbox{\hyperlink{class_vesper_1_1_file_system_a36e0c2a7eddfba9df844f0d655c02389}{m\_ProjectsDirectory}});}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_log_8h_a745dd924b08fe6cfa0156a813491ee25}{VZ\_CORE\_TRACE}}(\textcolor{stringliteral}{"{}Current\ Project\ Directory\ :\ "{}}\ +\ \doxymbox{\hyperlink{class_vesper_1_1_file_system_ab8862f1fd78040b46ff6ccd100ea6721}{m\_CurrentProjectDirectory}});}
+\DoxyCodeLine{00095\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_file_system_aed25a15bc7528425806ac8e297f4129d}{Get\+Absolute\+Path()}}, \doxymbox{\hyperlink{class_vesper_1_1_file_system_a7136190c41a45d49ed5dfa8a19e9c00f}{Get\+Traveling\+Up\+Path()}}, and \doxymbox{\hyperlink{class_vesper_1_1_file_system_aee517b584d608cabe22b5cf855a149d6}{m\+\_\+\+Initialized}}.
+
+
+
+Referenced by \doxymbox{\hyperlink{class_vesper_1_1_editor_layer_ab3c26e6d9cada8bd70054e582578c4ec}{Vesper::\+\+Editor\+Layer::\+\+On\+Attach()}}.
+
+\Hypertarget{class_vesper_1_1_file_system_af0a19c3177229dd8e49aeeeb5c14daed}\index{Vesper::FileSystem@{Vesper::FileSystem}!IsInitialized@{IsInitialized}}
+\index{IsInitialized@{IsInitialized}!Vesper::FileSystem@{Vesper::FileSystem}}
+\doxysubsubsection{\texorpdfstring{IsInitialized()}{IsInitialized()}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_file_system_af0a19c3177229dd8e49aeeeb5c14daed} 
+bool Vesper::\+\+File\+System::\+\+Is\+Initialized (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00022\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_file_system_aee517b584d608cabe22b5cf855a149d6}{m\_Initialized}};\ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_vesper_1_1_file_system_aee517b584d608cabe22b5cf855a149d6}{m\+\_\+\+Initialized}}.
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_vesper_1_1_file_system_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_vesper_1_1_file_system_a4aee80fefcb52f47601ecfcc1dd46b2f}\index{Vesper::FileSystem@{Vesper::FileSystem}!m\_AssetsDirectory@{m\_AssetsDirectory}}
+\index{m\_AssetsDirectory@{m\_AssetsDirectory}!Vesper::FileSystem@{Vesper::FileSystem}}
+\doxysubsubsection{\texorpdfstring{m\_AssetsDirectory}{m\_AssetsDirectory}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_file_system_a4aee80fefcb52f47601ecfcc1dd46b2f} 
+std::\+string Vesper::\+\+File\+System::\+m\+\_\+\+Assets\+Directory = "{}"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_vesper_1_1_file_system_ab8862f1fd78040b46ff6ccd100ea6721}\index{Vesper::FileSystem@{Vesper::FileSystem}!m\_CurrentProjectDirectory@{m\_CurrentProjectDirectory}}
+\index{m\_CurrentProjectDirectory@{m\_CurrentProjectDirectory}!Vesper::FileSystem@{Vesper::FileSystem}}
+\doxysubsubsection{\texorpdfstring{m\_CurrentProjectDirectory}{m\_CurrentProjectDirectory}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_file_system_ab8862f1fd78040b46ff6ccd100ea6721} 
+std::\+string Vesper::\+\+File\+System::\+m\+\_\+\+Current\+Project\+Directory = "{}"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_vesper_1_1_file_system_aee517b584d608cabe22b5cf855a149d6}\index{Vesper::FileSystem@{Vesper::FileSystem}!m\_Initialized@{m\_Initialized}}
+\index{m\_Initialized@{m\_Initialized}!Vesper::FileSystem@{Vesper::FileSystem}}
+\doxysubsubsection{\texorpdfstring{m\_Initialized}{m\_Initialized}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_file_system_aee517b584d608cabe22b5cf855a149d6} 
+bool Vesper::\+\+File\+System::\+m\+\_\+\+Initialized = false\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Referenced by \doxymbox{\hyperlink{class_vesper_1_1_file_system_a0b7082f007ed6f6d20f368c6c7a40e77}{Initialize()}}, and \doxymbox{\hyperlink{class_vesper_1_1_file_system_af0a19c3177229dd8e49aeeeb5c14daed}{Is\+Initialized()}}.
+
+\Hypertarget{class_vesper_1_1_file_system_a36e0c2a7eddfba9df844f0d655c02389}\index{Vesper::FileSystem@{Vesper::FileSystem}!m\_ProjectsDirectory@{m\_ProjectsDirectory}}
+\index{m\_ProjectsDirectory@{m\_ProjectsDirectory}!Vesper::FileSystem@{Vesper::FileSystem}}
+\doxysubsubsection{\texorpdfstring{m\_ProjectsDirectory}{m\_ProjectsDirectory}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_file_system_a36e0c2a7eddfba9df844f0d655c02389} 
+std::\+string Vesper::\+\+File\+System::\+m\+\_\+\+Projects\+Directory = "{}"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_vesper_1_1_file_system_a6667719a2c0445a6017f0880cbed4077}\index{Vesper::FileSystem@{Vesper::FileSystem}!m\_ResourcesDirectory@{m\_ResourcesDirectory}}
+\index{m\_ResourcesDirectory@{m\_ResourcesDirectory}!Vesper::FileSystem@{Vesper::FileSystem}}
+\doxysubsubsection{\texorpdfstring{m\_ResourcesDirectory}{m\_ResourcesDirectory}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_file_system_a6667719a2c0445a6017f0880cbed4077} 
+std::\+string Vesper::\+\+File\+System::\+m\+\_\+\+Resources\+Directory = "{}"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_vesper_1_1_file_system_a2267d09159c22a8537d36da0384c6acf}\index{Vesper::FileSystem@{Vesper::FileSystem}!m\_RootEditorDirectory@{m\_RootEditorDirectory}}
+\index{m\_RootEditorDirectory@{m\_RootEditorDirectory}!Vesper::FileSystem@{Vesper::FileSystem}}
+\doxysubsubsection{\texorpdfstring{m\_RootEditorDirectory}{m\_RootEditorDirectory}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_file_system_a2267d09159c22a8537d36da0384c6acf} 
+std::\+string Vesper::\+\+File\+System::\+m\+\_\+\+Root\+Editor\+Directory = "{}"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_vesper_1_1_file_system_a7ea8de66c4e9609a160e62626dd81fcb}\index{Vesper::FileSystem@{Vesper::FileSystem}!m\_RootEngineDirectory@{m\_RootEngineDirectory}}
+\index{m\_RootEngineDirectory@{m\_RootEngineDirectory}!Vesper::FileSystem@{Vesper::FileSystem}}
+\doxysubsubsection{\texorpdfstring{m\_RootEngineDirectory}{m\_RootEngineDirectory}}
+{\footnotesize\ttfamily \label{class_vesper_1_1_file_system_a7ea8de66c4e9609a160e62626dd81fcb} 
+std::\+string Vesper::\+\+File\+System::\+m\+\_\+\+Root\+Engine\+Directory = "{}"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+Vesper/\+src/\+\+Vesper/\+\+Utils/\+\doxymbox{\hyperlink{_platform_utils_8h}{Platform\+Utils.\+h}}\item 
+Vesper/\+src/\+\+Platform/\+\+Windows/\+\doxymbox{\hyperlink{_windows_platform_utils_8cpp}{Windows\+Platform\+Utils.\+cpp}}\end{DoxyCompactItemize}
