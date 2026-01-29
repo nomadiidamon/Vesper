@@ -20,9 +20,12 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+      
     steps:
-      - name: Checkout
+      - name: Checkout docs branch
         uses: actions/checkout@v4
+        with:
+          ref: docs
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
