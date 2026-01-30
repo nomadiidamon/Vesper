@@ -6,15 +6,25 @@
 
 namespace Vesper {
 
-	class VESPER_API WindowResizeEvent : public Event
+	/// @class WindowResizeEvent
+	/// @brief Event for registering window resize.
+	class WindowResizeEvent : public Event
 	{
 	public:
+
+		/// @brief Construct a WindowResizeEvent with the specified width and height.
+		///
+		/// @param width The new width of the window.
+		/// @param height The new height of the window.
 		WindowResizeEvent(unsigned int width, unsigned int height)
 			: m_Width(width), m_Height(height) {}
 
+		/// @brief Get the new width of the window.
 		unsigned int GetWidth() const { return m_Width; }
+		/// @brief Get the new height of the window.
 		unsigned int GetHeight() const { return m_Height; }
 
+		/// @brief Convert the event to a string representation.
 		std::string ToString() const override
 		{
 			std::stringstream ss;
@@ -29,7 +39,9 @@ namespace Vesper {
 		unsigned int m_Width, m_Height;
 	};
 
-	class VESPER_API WindowCloseEvent : public Event
+	/// @class WindowCloseEvent
+	/// @brief Event for registering window close.
+	class WindowCloseEvent : public Event
 	{
 	public:
 		WindowCloseEvent() {}
@@ -38,7 +50,9 @@ namespace Vesper {
 		EVENT_CLASS_CATEGORY(EventCategoryApplication)
 	};
 
-	class VESPER_API AppTickEvent : public Event
+	/// @class AppTickEvent
+	/// @brief Event for registering application tick.
+	class AppTickEvent : public Event
 	{
 	public:
 		AppTickEvent() {}
@@ -47,7 +61,9 @@ namespace Vesper {
 		EVENT_CLASS_CATEGORY(EventCategoryApplication)
 	};
 
-	class VESPER_API AppUpdateEvent : public Event
+	/// @class AppUpdateEvent
+	/// @brief Event for registering application update.
+	class AppUpdateEvent : public Event
 	{
 	public:
 		AppUpdateEvent() {}
@@ -56,7 +72,9 @@ namespace Vesper {
 		EVENT_CLASS_CATEGORY(EventCategoryApplication)
 	};
 
-	class VESPER_API AppRenderEvent : public Event
+	/// @class AppRenderEvent
+	/// @brief Event for registering application render.
+	class AppRenderEvent : public Event
 	{
 	public:
 		AppRenderEvent() {}
