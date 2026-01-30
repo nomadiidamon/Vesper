@@ -45,17 +45,17 @@ namespace Vesper {
 
 	void EditorCamera::OnUpdate(Timestep ts)
 	{
-		if (Input::IsKeyPressed(VZ_KEY_LEFT_ALT))
+		if (Input::IsKeyPressed(Key::LeftAlt))
 		{
 			const glm::vec2& mouse{ Input::GetMouseX(), Input::GetMouseY() };
 			glm::vec2 delta = (mouse - m_InitialMousePosition) * 0.003f;
 			m_InitialMousePosition = mouse;
 
-			if (Input::IsMouseButtonPressed(VZ_MOUSE_BUTTON_MIDDLE))
+			if (Input::IsMouseButtonPressed(Mouse::ButtonMiddle))
 				MousePan(delta);
-			else if (Input::IsMouseButtonPressed(VZ_MOUSE_BUTTON_LEFT))
+			else if (Input::IsMouseButtonPressed(Mouse::ButtonLeft))
 				MouseRotate(delta);
-			else if (Input::IsMouseButtonPressed(VZ_MOUSE_BUTTON_RIGHT))
+			else if (Input::IsMouseButtonPressed(Mouse::ButtonRight))
 				MouseZoom(-delta.y);
 		}
 

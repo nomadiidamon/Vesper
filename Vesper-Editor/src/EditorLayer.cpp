@@ -380,7 +380,7 @@ namespace Vesper {
 						}
 					}
 
-					if (Input::IsMouseButtonPressed(VZ_MOUSE_BUTTON_LEFT) && m_ViewportHovered)
+					if (Input::IsMouseButtonPressed(Mouse::ButtonLeft) && m_ViewportHovered)
 					{
 						ImVec2 mousePos = ImGui::GetMousePos();
 
@@ -624,7 +624,7 @@ namespace Vesper {
 				glm::mat4 transform = tc.GetTransform();
 
 				// Snapping
-				bool snap = Input::IsKeyPressed(VZ_KEY_LEFT_CONTROL);
+				bool snap = Input::IsKeyPressed(Key::LeftControl);
 				// use the editor layer snap values
 				float snapValue = m_TranslationSnap;
 				if (m_GizmoType == ImGuizmo::OPERATION::ROTATE)
@@ -672,12 +672,12 @@ namespace Vesper {
 		if (e.GetRepeatCount() > 0)
 			return false;
 
-		bool control = Input::IsKeyPressed(VZ_KEY_LEFT_CONTROL) || Input::IsKeyPressed(VZ_KEY_RIGHT_CONTROL);
-		bool shift = Input::IsKeyPressed(VZ_KEY_LEFT_SHIFT) || Input::IsKeyPressed(VZ_KEY_RIGHT_SHIFT);
+		bool control = Input::IsKeyPressed(Key::LeftControl) || Input::IsKeyPressed(Key::RightControl);
+		bool shift = Input::IsKeyPressed(Key::LeftShift) || Input::IsKeyPressed(Key::RightShift);
 		switch (e.GetKeyCode())
 		{
 			// Scene Shortcuts
-		case VZ_KEY_N:
+		case Key::N:
 
 			if (control)
 			{
@@ -685,14 +685,14 @@ namespace Vesper {
 			}
 			break;
 
-		case VZ_KEY_O:
+		case Key::O:
 			if (control)
 			{
 				OpenScene();
 			}
 			break;
 
-		case VZ_KEY_S:
+		case Key::S:
 			if (control && shift)
 			{
 				SaveSceneAs();
@@ -701,16 +701,16 @@ namespace Vesper {
 
 
 			// Gizmo Shortcuts
-		case VZ_KEY_Q:
+		case Key::Q:
 			m_GizmoType = -1;
 			break;
-		case VZ_KEY_W:
+		case Key::W:
 			m_GizmoType = ImGuizmo::OPERATION::TRANSLATE;
 			break;
-		case VZ_KEY_E:
+		case Key::E:
 			m_GizmoType = ImGuizmo::OPERATION::ROTATE;
 			break;
-		case VZ_KEY_R:
+		case Key::R:
 			m_GizmoType = ImGuizmo::OPERATION::SCALE;
 			break;
 		}

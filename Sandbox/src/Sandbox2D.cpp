@@ -197,7 +197,7 @@ void Sandbox2D::OnUpdate(Vesper::Timestep ts)
 				}
 			}
 
-			if (Vesper::Input::IsMouseButtonPressed(VZ_MOUSE_BUTTON_LEFT))
+			if (Vesper::Input::IsMouseButtonPressed(Vesper::Mouse::ButtonLeft))
 			{
 				glm::vec2 mousePos = Vesper::Input::GetMousePosition();
 				auto width = Vesper::Application::Get().GetWindow().GetWidth();

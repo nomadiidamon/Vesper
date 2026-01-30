@@ -6,25 +6,44 @@
 
 namespace Vesper {
 
-	class VESPER_API KeyEvent : public Event
+	/// @class KeyEvent
+	/// @brief Base class for keyboard events.
+	class KeyEvent : public Event
 	{
 	public:
+
+		/// @brief Get the key code associated with the event.
 		inline int GetKeyCode() const { return m_KeyCode; }
+
 		EVENT_CLASS_CATEGORY(EventCategoryKeyboard | EventCategoryInput)
 	protected:
+
+		/// @brief Construct a KeyEvent with the specified key code.
+		///
+		/// @param keycode The key code associated with the event.
+		/// Restricted specific construction to derived classes.
 		KeyEvent(int keycode)
 			: m_KeyCode(keycode) {}
 		int m_KeyCode;
 	};
 
-	class VESPER_API KeyPressedEvent : public KeyEvent
+	/// @class KeyPressedEvent
+	/// @brief Event for registering key press.
+	class KeyPressedEvent : public KeyEvent
 	{
 	public:
+
+		/// @brief Construct a KeyPressedEvent with the specified key code and repeat count.
+		///
+		/// @param keycode The key code associated with the event.
+		/// @param repeatCount The number of times the key press is repeated.
 		KeyPressedEvent(int keycode, int repeatCount)
 			: KeyEvent(keycode), m_RepeatCount(repeatCount) {}
 
+		/// @brief Get the repeat count of the key press event.
 		inline int GetRepeatCount() const { return m_RepeatCount; }
 
+		/// @brief Convert the event to a string representation.
 		std::string ToString() const override
 		{
 			std::stringstream ss;
@@ -37,12 +56,18 @@ namespace Vesper {
 		int m_RepeatCount;
 	};
 
-	class VESPER_API KeyReleasedEvent : public KeyEvent
+	/// @class KeyReleasedEvent
+	/// @brief Event for registering key release.
+	class KeyReleasedEvent : public KeyEvent
 	{
 	public:
+		/// @brief Construct a KeyReleasedEvent with the specified key code.
+		/// 
+		/// @param keycode The key code associated with the event.
 		KeyReleasedEvent(int keycode)
 			: KeyEvent(keycode) {}
 
+		/// @brief Convert the event to a string representation.
 		std::string ToString() const override
 		{
 			std::stringstream ss;
@@ -53,14 +78,19 @@ namespace Vesper {
 		EVENT_CLASS_TYPE(KeyReleased)
 	};
 
-	class VESPER_API KeyTypedEvent : public KeyEvent
+	/// @class KeyTypedEvent
+	/// @brief Event for registering key typing.
+	class KeyTypedEvent : public KeyEvent
 	{
 	public:
+		/// @brief Construct a KeyTypedEvent with the specified key code.
+		///
+		/// @param keycode The key code associated with the event.
 		KeyTypedEvent(int keycode)
 			: KeyEvent(keycode) {
 		}
 
-
+		/// @brief Convert the event to a string representation.
 		std::string ToString() const override
 		{
 			std::stringstream ss;
