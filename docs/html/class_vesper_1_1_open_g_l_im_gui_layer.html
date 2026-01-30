@@ -106,7 +106,7 @@ Inheritance diagram for Vesper::OpenGLImGuiLayer:</div>
   <img src="class_vesper_1_1_open_g_l_im_gui_layer.png" usemap="#Vesper_3A_3AOpenGLImGuiLayer_map" alt=""/>
   <map id="Vesper_3A_3AOpenGLImGuiLayer_map" name="Vesper_3A_3AOpenGLImGuiLayer_map">
 <area href="class_vesper_1_1_im_gui_layer.html" alt="Vesper::ImGuiLayer" shape="rect" coords="0,56,170,80"/>
-<area href="class_vesper_1_1_layer.html" alt="Vesper::Layer" shape="rect" coords="0,0,170,24"/>
+<area href="class_vesper_1_1_layer.html" title="Represents a reusable application layer that receives lifecycle callbacks (attach,..." alt="Vesper::Layer" shape="rect" coords="0,0,170,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -115,9 +115,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5df0e20d283a9d1824cb333c7d8603b3" id="r_a5df0e20d283a9d1824cb333c7d8603b3"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a5df0e20d283a9d1824cb333c7d8603b3">OpenGLImGuiLayer</a> ()</td></tr>
 <tr class="memitem:a49caf275a629c259c177e475fe0c5582" id="r_a49caf275a629c259c177e475fe0c5582"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a49caf275a629c259c177e475fe0c5582">~OpenGLImGuiLayer</a> ()</td></tr>
 <tr class="memitem:aec233ad0c31eac8ed225da6eb3cff5a7" id="r_aec233ad0c31eac8ed225da6eb3cff5a7"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#aec233ad0c31eac8ed225da6eb3cff5a7">OnAttach</a> () override</td></tr>
+<tr class="memdesc:aec233ad0c31eac8ed225da6eb3cff5a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when the layer is attached to the application.  <br /></td></tr>
 <tr class="memitem:a87f6d03be6b07a523c9ecb7a31845e07" id="r_a87f6d03be6b07a523c9ecb7a31845e07"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a87f6d03be6b07a523c9ecb7a31845e07">OnDetach</a> () override</td></tr>
+<tr class="memdesc:a87f6d03be6b07a523c9ecb7a31845e07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when the layer is detached from the application.  <br /></td></tr>
 <tr class="memitem:a3a60ac5d57e0e009b776b073718e61bd" id="r_a3a60ac5d57e0e009b776b073718e61bd"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a3a60ac5d57e0e009b776b073718e61bd">OnImGuiRender</a> () override</td></tr>
+<tr class="memdesc:a3a60ac5d57e0e009b776b073718e61bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when the layer should render its ImGui components.  <br /></td></tr>
 <tr class="memitem:a94034e176531bb844aadb4d300507106" id="r_a94034e176531bb844aadb4d300507106"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a94034e176531bb844aadb4d300507106">OnEvent</a> (<a class="el" href="class_vesper_1_1_event.html">Event</a> &amp;e) override</td></tr>
+<tr class="memdesc:a94034e176531bb844aadb4d300507106"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when an event is dispatched to the layer.  <br /></td></tr>
 <tr class="memitem:a86fba38bc72554d6a49608467f42032e" id="r_a86fba38bc72554d6a49608467f42032e"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a86fba38bc72554d6a49608467f42032e">Begin</a> () override</td></tr>
 <tr class="memitem:a92b5302941639739203c79bfe9aa1eb1" id="r_a92b5302941639739203c79bfe9aa1eb1"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a92b5302941639739203c79bfe9aa1eb1">End</a> () override</td></tr>
 <tr class="memitem:a42d937d1cdb39a3cc80288bb9d3dd2bd" id="r_a42d937d1cdb39a3cc80288bb9d3dd2bd"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a42d937d1cdb39a3cc80288bb9d3dd2bd">SetBlockEvents</a> (bool block)</td></tr>
@@ -127,10 +131,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1b9744b500d8e3c74c9336c9f35b019f inherit pub_methods_class_vesper_1_1_im_gui_layer" id="r_a1b9744b500d8e3c74c9336c9f35b019f"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="class_vesper_1_1_im_gui_layer.html#a1b9744b500d8e3c74c9336c9f35b019f">~ImGuiLayer</a> ()</td></tr>
 <tr class="inherit_header pub_methods_class_vesper_1_1_layer"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_vesper_1_1_layer')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="class_vesper_1_1_layer.html">Vesper::Layer</a></td></tr>
 <tr class="memitem:aa2fadd42504c70ef28da27b724d276c7 inherit pub_methods_class_vesper_1_1_layer" id="r_aa2fadd42504c70ef28da27b724d276c7"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="class_vesper_1_1_layer.html#aa2fadd42504c70ef28da27b724d276c7">Layer</a> (const std::string &amp;name=&quot;Layer&quot;)</td></tr>
+<tr class="memdesc:aa2fadd42504c70ef28da27b724d276c7 inherit pub_methods_class_vesper_1_1_layer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="class_vesper_1_1_layer.html" title="Represents a reusable application layer that receives lifecycle callbacks (attach,...">Layer</a> with an optional name for debugging purposes.  <br /></td></tr>
 <tr class="memitem:abebb6b76f4d726745c9ce3f2ccce4c0e inherit pub_methods_class_vesper_1_1_layer" id="r_abebb6b76f4d726745c9ce3f2ccce4c0e"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="class_vesper_1_1_layer.html#abebb6b76f4d726745c9ce3f2ccce4c0e">~Layer</a> ()</td></tr>
 <tr class="memitem:a5403125ae4cb201a6d9cbbacef0480ec inherit pub_methods_class_vesper_1_1_layer" id="r_a5403125ae4cb201a6d9cbbacef0480ec"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="class_vesper_1_1_layer.html#a5403125ae4cb201a6d9cbbacef0480ec">OnUpdate</a> (<a class="el" href="class_vesper_1_1_timestep.html">Timestep</a> ts)</td></tr>
+<tr class="memdesc:a5403125ae4cb201a6d9cbbacef0480ec inherit pub_methods_class_vesper_1_1_layer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called every frame to update the layer with the given timestep.  <br /></td></tr>
 <tr class="memitem:adf08d2acd6e08c78993139afc439ae9c inherit pub_methods_class_vesper_1_1_layer" id="r_adf08d2acd6e08c78993139afc439ae9c"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="class_vesper_1_1_layer.html#adf08d2acd6e08c78993139afc439ae9c">OnRender</a> ()</td></tr>
+<tr class="memdesc:adf08d2acd6e08c78993139afc439ae9c inherit pub_methods_class_vesper_1_1_layer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when the layer should render its contents.  <br /></td></tr>
 <tr class="memitem:a2989c7f8093597b4920c06a3aad407e2 inherit pub_methods_class_vesper_1_1_layer" id="r_a2989c7f8093597b4920c06a3aad407e2"><td class="memItemLeft">const std::string &amp;&#160;</td><td class="memItemRight"><a class="el" href="class_vesper_1_1_layer.html#a2989c7f8093597b4920c06a3aad407e2">GetName</a> () const</td></tr>
+<tr class="memdesc:a2989c7f8093597b4920c06a3aad407e2 inherit pub_methods_class_vesper_1_1_layer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the name of the layer for debugging purposes.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -139,6 +147,7 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:aa4b07490348a4daf7af213d49e7684f4 inherit pro_attribs_class_vesper_1_1_im_gui_layer" id="r_aa4b07490348a4daf7af213d49e7684f4"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="class_vesper_1_1_im_gui_layer.html#aa4b07490348a4daf7af213d49e7684f4">m_Time</a> = 0.0f</td></tr>
 <tr class="inherit_header pro_attribs_class_vesper_1_1_layer"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_class_vesper_1_1_layer')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Attributes inherited from <a class="el" href="class_vesper_1_1_layer.html">Vesper::Layer</a></td></tr>
 <tr class="memitem:ad623a46178f0cd2eff4079ee323402c3 inherit pro_attribs_class_vesper_1_1_layer" id="r_ad623a46178f0cd2eff4079ee323402c3"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="class_vesper_1_1_layer.html#ad623a46178f0cd2eff4079ee323402c3">m_DebugName</a></td></tr>
+<tr class="memdesc:ad623a46178f0cd2eff4079ee323402c3 inherit pro_attribs_class_vesper_1_1_layer"><td class="mdescLeft">&#160;</td><td class="mdescRight">The name of the layer assigned at creation, used for debugging.  <br /></td></tr>
 </table>
 <a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a5df0e20d283a9d1824cb333c7d8603b3" name="a5df0e20d283a9d1824cb333c7d8603b3"></a>
@@ -273,6 +282,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Called when the layer is attached to the application. </p>
+
 <p>Reimplemented from <a class="el" href="class_vesper_1_1_im_gui_layer.html#aeb2e5a03cd424c37478476f6c63d025b">Vesper::ImGuiLayer</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   29</span>    {</div>
 <div class="line"><span class="lineno">   30</span>        <a class="code hl_function" href="class_vesper_1_1_im_gui_layer.html#aeb2e5a03cd424c37478476f6c63d025b">ImGuiLayer::OnAttach</a>();</div>
@@ -280,7 +291,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   32</span> </div>
 <div class="line"><span class="lineno">   33</span> </div>
 <div class="line"><span class="lineno">   34</span>    }</div>
-<div class="ttc" id="aclass_vesper_1_1_im_gui_layer_html_aeb2e5a03cd424c37478476f6c63d025b"><div class="ttname"><a href="class_vesper_1_1_im_gui_layer.html#aeb2e5a03cd424c37478476f6c63d025b">Vesper::ImGuiLayer::OnAttach</a></div><div class="ttdeci">virtual void OnAttach() override</div><div class="ttdef"><b>Definition</b> ImGuiLayer.cpp:29</div></div>
+<div class="ttc" id="aclass_vesper_1_1_im_gui_layer_html_aeb2e5a03cd424c37478476f6c63d025b"><div class="ttname"><a href="class_vesper_1_1_im_gui_layer.html#aeb2e5a03cd424c37478476f6c63d025b">Vesper::ImGuiLayer::OnAttach</a></div><div class="ttdeci">virtual void OnAttach() override</div><div class="ttdoc">Called when the layer is attached to the application.</div><div class="ttdef"><b>Definition</b> ImGuiLayer.cpp:29</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="class_vesper_1_1_im_gui_layer.html#aeb2e5a03cd424c37478476f6c63d025b">Vesper::ImGuiLayer::OnAttach()</a>.</p>
 
@@ -309,6 +320,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Called when the layer is detached from the application. </p>
+
 <p>Reimplemented from <a class="el" href="class_vesper_1_1_im_gui_layer.html#a656bc171954d83d0c8c3b273cac6ca7b">Vesper::ImGuiLayer</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   37</span>    {</div>
 <div class="line"><span class="lineno">   38</span>        <a class="code hl_function" href="class_vesper_1_1_im_gui_layer.html#a656bc171954d83d0c8c3b273cac6ca7b">ImGuiLayer::OnDetach</a>();</div>
@@ -316,7 +329,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   40</span> </div>
 <div class="line"><span class="lineno">   41</span> </div>
 <div class="line"><span class="lineno">   42</span>    }</div>
-<div class="ttc" id="aclass_vesper_1_1_im_gui_layer_html_a656bc171954d83d0c8c3b273cac6ca7b"><div class="ttname"><a href="class_vesper_1_1_im_gui_layer.html#a656bc171954d83d0c8c3b273cac6ca7b">Vesper::ImGuiLayer::OnDetach</a></div><div class="ttdeci">virtual void OnDetach() override</div><div class="ttdef"><b>Definition</b> ImGuiLayer.cpp:69</div></div>
+<div class="ttc" id="aclass_vesper_1_1_im_gui_layer_html_a656bc171954d83d0c8c3b273cac6ca7b"><div class="ttname"><a href="class_vesper_1_1_im_gui_layer.html#a656bc171954d83d0c8c3b273cac6ca7b">Vesper::ImGuiLayer::OnDetach</a></div><div class="ttdeci">virtual void OnDetach() override</div><div class="ttdoc">Called when the layer is detached from the application.</div><div class="ttdef"><b>Definition</b> ImGuiLayer.cpp:69</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="class_vesper_1_1_im_gui_layer.html#a656bc171954d83d0c8c3b273cac6ca7b">Vesper::ImGuiLayer::OnDetach()</a>.</p>
 
@@ -334,7 +347,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">void Vesper::OpenGLImGuiLayer::OnEvent </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_vesper_1_1_event.html">Event</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_vesper_1_1_event.html">Event</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>event</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -345,13 +358,21 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Called when an event is dispatched to the layer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">event</td><td>The event being dispatched. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p>Reimplemented from <a class="el" href="class_vesper_1_1_im_gui_layer.html#a224b66c3c8a7515b401f5b1db00978ea">Vesper::ImGuiLayer</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   52</span>    {</div>
 <div class="line"><span class="lineno">   53</span>        <a class="code hl_function" href="class_vesper_1_1_im_gui_layer.html#a224b66c3c8a7515b401f5b1db00978ea">ImGuiLayer::OnEvent</a>(e);</div>
 <div class="line"><span class="lineno">   54</span> </div>
 <div class="line"><span class="lineno">   55</span> </div>
 <div class="line"><span class="lineno">   56</span>    }</div>
-<div class="ttc" id="aclass_vesper_1_1_im_gui_layer_html_a224b66c3c8a7515b401f5b1db00978ea"><div class="ttname"><a href="class_vesper_1_1_im_gui_layer.html#a224b66c3c8a7515b401f5b1db00978ea">Vesper::ImGuiLayer::OnEvent</a></div><div class="ttdeci">virtual void OnEvent(Event &amp;e) override</div><div class="ttdef"><b>Definition</b> ImGuiLayer.cpp:86</div></div>
+<div class="ttc" id="aclass_vesper_1_1_im_gui_layer_html_a224b66c3c8a7515b401f5b1db00978ea"><div class="ttname"><a href="class_vesper_1_1_im_gui_layer.html#a224b66c3c8a7515b401f5b1db00978ea">Vesper::ImGuiLayer::OnEvent</a></div><div class="ttdeci">virtual void OnEvent(Event &amp;e) override</div><div class="ttdoc">Called when an event is dispatched to the layer.</div><div class="ttdef"><b>Definition</b> ImGuiLayer.cpp:86</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="class_vesper_1_1_im_gui_layer.html#a224b66c3c8a7515b401f5b1db00978ea">Vesper::ImGuiLayer::OnEvent()</a>.</p>
 
@@ -380,13 +401,15 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Called when the layer should render its ImGui components. </p>
+
 <p>Reimplemented from <a class="el" href="class_vesper_1_1_im_gui_layer.html#a70973f0316b1a8bc9a6052c894170a1f">Vesper::ImGuiLayer</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   45</span>    {</div>
 <div class="line"><span class="lineno">   46</span>        <a class="code hl_function" href="class_vesper_1_1_im_gui_layer.html#a70973f0316b1a8bc9a6052c894170a1f">ImGuiLayer::OnImGuiRender</a>();</div>
 <div class="line"><span class="lineno">   47</span> </div>
 <div class="line"><span class="lineno">   48</span> </div>
 <div class="line"><span class="lineno">   49</span>    }</div>
-<div class="ttc" id="aclass_vesper_1_1_im_gui_layer_html_a70973f0316b1a8bc9a6052c894170a1f"><div class="ttname"><a href="class_vesper_1_1_im_gui_layer.html#a70973f0316b1a8bc9a6052c894170a1f">Vesper::ImGuiLayer::OnImGuiRender</a></div><div class="ttdeci">virtual void OnImGuiRender() override</div><div class="ttdef"><b>Definition</b> ImGuiLayer.cpp:81</div></div>
+<div class="ttc" id="aclass_vesper_1_1_im_gui_layer_html_a70973f0316b1a8bc9a6052c894170a1f"><div class="ttname"><a href="class_vesper_1_1_im_gui_layer.html#a70973f0316b1a8bc9a6052c894170a1f">Vesper::ImGuiLayer::OnImGuiRender</a></div><div class="ttdeci">virtual void OnImGuiRender() override</div><div class="ttdoc">Called when the layer should render its ImGui components.</div><div class="ttdef"><b>Definition</b> ImGuiLayer.cpp:81</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="class_vesper_1_1_im_gui_layer.html#a70973f0316b1a8bc9a6052c894170a1f">Vesper::ImGuiLayer::OnImGuiRender()</a>.</p>
 

@@ -98,6 +98,9 @@ $(function(){initNavTree('class_vesper_1_1_window_close_event.html','','class_ve
 </div><!--header-->
 <div class="contents">
 
+<p><a class="el" href="class_vesper_1_1_event.html" title="Abstract base class for all events.">Event</a> for registering window close.  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_application_event_8h_source.html">ApplicationEvent.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Vesper::WindowCloseEvent:</div>
@@ -105,7 +108,7 @@ Inheritance diagram for Vesper::WindowCloseEvent:</div>
  <div class="center">
   <img src="class_vesper_1_1_window_close_event.png" usemap="#Vesper_3A_3AWindowCloseEvent_map" alt=""/>
   <map id="Vesper_3A_3AWindowCloseEvent_map" name="Vesper_3A_3AWindowCloseEvent_map">
-<area href="class_vesper_1_1_event.html" alt="Vesper::Event" shape="rect" coords="0,0,167,24"/>
+<area href="class_vesper_1_1_event.html" title="Abstract base class for all events." alt="Vesper::Event" shape="rect" coords="0,0,167,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -115,17 +118,25 @@ Public Member Functions</h2></td></tr>
 <tr class="inherit_header pub_methods_class_vesper_1_1_event"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_vesper_1_1_event')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="class_vesper_1_1_event.html">Vesper::Event</a></td></tr>
 <tr class="memitem:a516fc6585a1ca21f7d73fc4deb461ee2 inherit pub_methods_class_vesper_1_1_event" id="r_a516fc6585a1ca21f7d73fc4deb461ee2"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="class_vesper_1_1_event.html#a516fc6585a1ca21f7d73fc4deb461ee2">~Event</a> ()=default</td></tr>
 <tr class="memitem:a82499595903097f8d2a81e9b0ebfba3d inherit pub_methods_class_vesper_1_1_event" id="r_a82499595903097f8d2a81e9b0ebfba3d"><td class="memItemLeft">virtual <a class="el" href="namespace_vesper.html#ada4bc37927ce22c44ea0083a224d3bb5">EventType</a>&#160;</td><td class="memItemRight"><a class="el" href="class_vesper_1_1_event.html#a82499595903097f8d2a81e9b0ebfba3d">GetEventType</a> () const =0</td></tr>
+<tr class="memdesc:a82499595903097f8d2a81e9b0ebfba3d inherit pub_methods_class_vesper_1_1_event"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the type of the event.  <br /></td></tr>
 <tr class="memitem:af39d90d8ec2e84488c593c517a8e9b6e inherit pub_methods_class_vesper_1_1_event" id="r_af39d90d8ec2e84488c593c517a8e9b6e"><td class="memItemLeft">virtual const char *&#160;</td><td class="memItemRight"><a class="el" href="class_vesper_1_1_event.html#af39d90d8ec2e84488c593c517a8e9b6e">GetName</a> () const =0</td></tr>
+<tr class="memdesc:af39d90d8ec2e84488c593c517a8e9b6e inherit pub_methods_class_vesper_1_1_event"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the name of the event.  <br /></td></tr>
 <tr class="memitem:a71e621bec32702d59c7e7ed82c53ac08 inherit pub_methods_class_vesper_1_1_event" id="r_a71e621bec32702d59c7e7ed82c53ac08"><td class="memItemLeft">virtual int&#160;</td><td class="memItemRight"><a class="el" href="class_vesper_1_1_event.html#a71e621bec32702d59c7e7ed82c53ac08">GetCategoryFlags</a> () const =0</td></tr>
+<tr class="memdesc:a71e621bec32702d59c7e7ed82c53ac08 inherit pub_methods_class_vesper_1_1_event"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the category flags of the event.  <br /></td></tr>
 <tr class="memitem:aaba48fc434a2539c5ce000fda6aa7f05 inherit pub_methods_class_vesper_1_1_event" id="r_aaba48fc434a2539c5ce000fda6aa7f05"><td class="memItemLeft">virtual std::string&#160;</td><td class="memItemRight"><a class="el" href="class_vesper_1_1_event.html#aaba48fc434a2539c5ce000fda6aa7f05">ToString</a> () const</td></tr>
+<tr class="memdesc:aaba48fc434a2539c5ce000fda6aa7f05 inherit pub_methods_class_vesper_1_1_event"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert the event to a string representation.  <br /></td></tr>
 <tr class="memitem:a02448606191e9e1cc7869bffd2cb20f7 inherit pub_methods_class_vesper_1_1_event" id="r_a02448606191e9e1cc7869bffd2cb20f7"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="class_vesper_1_1_event.html#a02448606191e9e1cc7869bffd2cb20f7">IsInCategory</a> (<a class="el" href="namespace_vesper.html#ad79da63be4419c3a218acaa990decabe">EventCategory</a> category)</td></tr>
+<tr class="memdesc:a02448606191e9e1cc7869bffd2cb20f7 inherit pub_methods_class_vesper_1_1_event"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the event is in a specific category.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_attribs_class_vesper_1_1_event"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_attribs_class_vesper_1_1_event')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Attributes inherited from <a class="el" href="class_vesper_1_1_event.html">Vesper::Event</a></td></tr>
 <tr class="memitem:ab6bc1a2214e615b994cff03df207a0f1 inherit pub_attribs_class_vesper_1_1_event" id="r_ab6bc1a2214e615b994cff03df207a0f1"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="class_vesper_1_1_event.html#ab6bc1a2214e615b994cff03df207a0f1">Handled</a> = false</td></tr>
+<tr class="memdesc:ab6bc1a2214e615b994cff03df207a0f1 inherit pub_attribs_class_vesper_1_1_event"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether the event has been handled.  <br /></td></tr>
 </table>
-<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="class_vesper_1_1_event.html" title="Abstract base class for all events.">Event</a> for registering window close. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aa442191179038014782b10a610e9d1b6" name="aa442191179038014782b10a610e9d1b6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa442191179038014782b10a610e9d1b6">&#9670;&#160;</a></span>WindowCloseEvent()</h2>
 
@@ -148,7 +159,7 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   35</span>{}</div>
+<div class="fragment"><div class="line"><span class="lineno">   47</span>{}</div>
 </div><!-- fragment -->
 </div>
 </div>

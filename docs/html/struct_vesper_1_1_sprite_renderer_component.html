@@ -98,6 +98,9 @@ $(function(){initNavTree('struct_vesper_1_1_sprite_renderer_component.html','','
 </div><!--header-->
 <div class="contents">
 
+<p>Component that holds sprite rendering data.  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_components_8h_source.html">Components.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -105,19 +108,28 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a85c267e505796ddb9a9b7552783aad8c" id="r_a85c267e505796ddb9a9b7552783aad8c"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a85c267e505796ddb9a9b7552783aad8c">SpriteRendererComponent</a> ()=default</td></tr>
 <tr class="memitem:a4329a5438b2fbfc5307e01c09351ada2" id="r_a4329a5438b2fbfc5307e01c09351ada2"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a4329a5438b2fbfc5307e01c09351ada2">SpriteRendererComponent</a> (const SpriteRendererComponent &amp;)=default</td></tr>
 <tr class="memitem:adf70b8e8326c401c67c70e06b4dac563" id="r_adf70b8e8326c401c67c70e06b4dac563"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#adf70b8e8326c401c67c70e06b4dac563">SpriteRendererComponent</a> (const glm::vec4 &amp;color)</td></tr>
+<tr class="memdesc:adf70b8e8326c401c67c70e06b4dac563"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor that initializes the color.  <br /></td></tr>
 <tr class="memitem:ad7bc4615b75c76dbee45cbc15383a9dd" id="r_ad7bc4615b75c76dbee45cbc15383a9dd"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ad7bc4615b75c76dbee45cbc15383a9dd">operator glm::vec4 &amp;</a> ()</td></tr>
 <tr class="memitem:a105c71b77e49c7c00b493b57c7d61108" id="r_a105c71b77e49c7c00b493b57c7d61108"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a105c71b77e49c7c00b493b57c7d61108">operator const glm::vec4 &amp;</a> () const</td></tr>
 <tr class="memitem:ac0cef73b959fbf87956b0cd066bc5dfd" id="r_ac0cef73b959fbf87956b0cd066bc5dfd"><td class="memItemLeft">glm::vec4 &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ac0cef73b959fbf87956b0cd066bc5dfd">GetColor</a> ()</td></tr>
+<tr class="memdesc:ac0cef73b959fbf87956b0cd066bc5dfd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the color of the sprite.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:aa7e606fafd917f6b58ad3fe4d563aa0e" id="r_aa7e606fafd917f6b58ad3fe4d563aa0e"><td class="memItemLeft">glm::vec4&#160;</td><td class="memItemRight"><a class="el" href="#aa7e606fafd917f6b58ad3fe4d563aa0e">Color</a> { 1.0f, 1.0f, 1.0f, 1.0f }</td></tr>
+<tr class="memdesc:aa7e606fafd917f6b58ad3fe4d563aa0e"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="namespace_vesper_1_1_color.html">Color</a> of the sprite.  <br /></td></tr>
 <tr class="memitem:a5a57c23214bb833dda2791ee6f170f69" id="r_a5a57c23214bb833dda2791ee6f170f69"><td class="memItemLeft"><a class="el" href="namespace_vesper.html#ad1f51d7e944b5e23b18b12cacd5f0d27">Ref</a>&lt; <a class="el" href="class_vesper_1_1_texture2_d.html">Texture2D</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a5a57c23214bb833dda2791ee6f170f69">Texture</a> = nullptr</td></tr>
+<tr class="memdesc:a5a57c23214bb833dda2791ee6f170f69"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_vesper_1_1_texture.html">Texture</a> of the sprite.  <br /></td></tr>
 <tr class="memitem:a4aa45da4cf21e0ed9f4246523a742a18" id="r_a4aa45da4cf21e0ed9f4246523a742a18"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a4aa45da4cf21e0ed9f4246523a742a18">TilingFactor</a> = 1.0f</td></tr>
+<tr class="memdesc:a4aa45da4cf21e0ed9f4246523a742a18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tiling factor for the texture.  <br /></td></tr>
 <tr class="memitem:a9881e92813bd33943511addb411d1eec" id="r_a9881e92813bd33943511addb411d1eec"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a9881e92813bd33943511addb411d1eec">TextureEnabled</a> = false</td></tr>
+<tr class="memdesc:a9881e92813bd33943511addb411d1eec"><td class="mdescLeft">&#160;</td><td class="mdescRight">whether the texturing is enabled  <br /></td></tr>
 <tr class="memitem:a78c4dc66ff2541f777f44da2484c137a" id="r_a78c4dc66ff2541f777f44da2484c137a"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a78c4dc66ff2541f777f44da2484c137a">Billboard</a> = false</td></tr>
+<tr class="memdesc:a78c4dc66ff2541f777f44da2484c137a"><td class="mdescLeft">&#160;</td><td class="mdescRight">whether the sprite should always face the camera  <br /></td></tr>
 </table>
-<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Component that holds sprite rendering data. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a85c267e505796ddb9a9b7552783aad8c" name="a85c267e505796ddb9a9b7552783aad8c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a85c267e505796ddb9a9b7552783aad8c">&#9670;&#160;</a></span>SpriteRendererComponent() <span class="overload">[1/3]</span></h2>
 
@@ -190,10 +202,16 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   80</span>            : <a class="code hl_variable" href="#aa7e606fafd917f6b58ad3fe4d563aa0e">Color</a>(color) {</div>
-<div class="line"><span class="lineno">   81</span>        }</div>
-<div class="ttc" id="astruct_vesper_1_1_sprite_renderer_component_html_aa7e606fafd917f6b58ad3fe4d563aa0e"><div class="ttname"><a href="#aa7e606fafd917f6b58ad3fe4d563aa0e">Vesper::SpriteRendererComponent::Color</a></div><div class="ttdeci">glm::vec4 Color</div><div class="ttdef"><b>Definition</b> Components.h:73</div></div>
+
+<p>Constructor that initializes the color. </p>
+<div class="fragment"><div class="line"><span class="lineno">  102</span>            : <a class="code hl_variable" href="#aa7e606fafd917f6b58ad3fe4d563aa0e">Color</a>(color) {</div>
+<div class="line"><span class="lineno">  103</span>        }</div>
+<div class="ttc" id="astruct_vesper_1_1_sprite_renderer_component_html_aa7e606fafd917f6b58ad3fe4d563aa0e"><div class="ttname"><a href="#aa7e606fafd917f6b58ad3fe4d563aa0e">Vesper::SpriteRendererComponent::Color</a></div><div class="ttdeci">glm::vec4 Color</div><div class="ttdoc">Color of the sprite.</div><div class="ttdef"><b>Definition</b> Components.h:92</div></div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="#adf70b8e8326c401c67c70e06b4dac563">SpriteRendererComponent()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="#adf70b8e8326c401c67c70e06b4dac563">SpriteRendererComponent()</a>.</p>
+
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
@@ -219,7 +237,9 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   86</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#aa7e606fafd917f6b58ad3fe4d563aa0e">Color</a>; }</div>
+
+<p>Returns the color of the sprite. </p>
+<div class="fragment"><div class="line"><span class="lineno">  109</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#aa7e606fafd917f6b58ad3fe4d563aa0e">Color</a>; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -245,7 +265,7 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   84</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#aa7e606fafd917f6b58ad3fe4d563aa0e">Color</a>; }</div>
+<div class="fragment"><div class="line"><span class="lineno">  106</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#aa7e606fafd917f6b58ad3fe4d563aa0e">Color</a>; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -271,7 +291,7 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   83</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#aa7e606fafd917f6b58ad3fe4d563aa0e">Color</a>; }</div>
+<div class="fragment"><div class="line"><span class="lineno">  105</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#aa7e606fafd917f6b58ad3fe4d563aa0e">Color</a>; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -288,6 +308,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>whether the sprite should always face the camera </p>
+<p>WIP </p>
+
 </div>
 </div>
 <a id="aa7e606fafd917f6b58ad3fe4d563aa0e" name="aa7e606fafd917f6b58ad3fe4d563aa0e"></a>
@@ -301,7 +324,9 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   73</span>{ 1.0f, 1.0f, 1.0f, 1.0f };</div>
+
+<p><a class="el" href="namespace_vesper_1_1_color.html">Color</a> of the sprite. </p>
+<div class="fragment"><div class="line"><span class="lineno">   92</span>{ 1.0f, 1.0f, 1.0f, 1.0f };</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -317,6 +342,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p><a class="el" href="class_vesper_1_1_texture.html">Texture</a> of the sprite. </p>
+
 </div>
 </div>
 <a id="a9881e92813bd33943511addb411d1eec" name="a9881e92813bd33943511addb411d1eec"></a>
@@ -331,6 +358,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>whether the texturing is enabled </p>
+
 </div>
 </div>
 <a id="a4aa45da4cf21e0ed9f4246523a742a18" name="a4aa45da4cf21e0ed9f4246523a742a18"></a>
@@ -344,6 +373,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Tiling factor for the texture. </p>
 
 </div>
 </div>

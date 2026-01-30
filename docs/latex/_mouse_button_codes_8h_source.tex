@@ -4,18 +4,34 @@
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{pragma}\ \textcolor{preprocessor}{once}}
 \DoxyCodeLine{00002\ }
-\DoxyCodeLine{00003\ \textcolor{comment}{//\ From\ glfw3.h}}
-\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{VZ\_MOUSE\_BUTTON\_1}\ \ \ \ \ \ \ \ \ 0}
-\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{VZ\_MOUSE\_BUTTON\_2}\ \ \ \ \ \ \ \ \ 1}
-\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{VZ\_MOUSE\_BUTTON\_3}\ \ \ \ \ \ \ \ \ 2}
-\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{VZ\_MOUSE\_BUTTON\_4}\ \ \ \ \ \ \ \ \ 3}
-\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{VZ\_MOUSE\_BUTTON\_5}\ \ \ \ \ \ \ \ \ 4}
-\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{VZ\_MOUSE\_BUTTON\_6}\ \ \ \ \ \ \ \ \ 5}
-\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{VZ\_MOUSE\_BUTTON\_7}\ \ \ \ \ \ \ \ \ 6}
-\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{VZ\_MOUSE\_BUTTON\_8}\ \ \ \ \ \ \ \ \ 7}
-\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{VZ\_MOUSE\_BUTTON\_LAST}\ \ \ \ \ \ \doxymbox{\hyperlink{_mouse_button_codes_8h_ad594ed192110331588d2058a20fa4c8c}{VZ\_MOUSE\_BUTTON\_8}}}
-\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{VZ\_MOUSE\_BUTTON\_LEFT}\ \ \ \ \ \ \doxymbox{\hyperlink{_mouse_button_codes_8h_a8aaea60cbe14993d3ad6039f426a4ca2}{VZ\_MOUSE\_BUTTON\_1}}}
-\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{VZ\_MOUSE\_BUTTON\_RIGHT}\ \ \ \ \ \doxymbox{\hyperlink{_mouse_button_codes_8h_abaee26fd561fe1702ff95bc6633bd152}{VZ\_MOUSE\_BUTTON\_2}}}
-\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{VZ\_MOUSE\_BUTTON\_MIDDLE}\ \ \ \ \doxymbox{\hyperlink{_mouse_button_codes_8h_aac76830caef11ec36108011aa9705c28}{VZ\_MOUSE\_BUTTON\_3}}}
+\DoxyCodeLine{00003\ \textcolor{keyword}{namespace}\ \doxymbox{\hyperlink{namespace_vesper}{Vesper}}\ \{}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \ \ \ \ \textcolor{comment}{///\ @brief\ Alias\ for\ mouse\ button\ code\ type.}}
+\DoxyCodeLine{00006\ \ \ \ \ \textcolor{keyword}{using}\ \doxymbox{\hyperlink{namespace_vesper_a4846689fe9c6b05a019db677a629f0d6}{MouseCode}}\ =\ uint8\_t;}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{comment}{///\ @namespace\ Vesper::Mouse}}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{comment}{///\ @brief\ Namespace\ for\ mouse\ button\ codes.}}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{namespace}\ Mouse\ \{}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Enumeration\ of\ mouse\ button\ codes.}}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \textcolor{keyword}{enum}\ :\ MouseCode}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ From\ glfw3.h}}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_1_1_mouse_a9273402fdf359e292faf8f940e5eddffac1321d971f3b4356ff269f7f48ab2388}{Button0}}\ =\ 0,}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_1_1_mouse_a9273402fdf359e292faf8f940e5eddffadd248976a5cff1d04d9c494fdde85210}{Button1}}\ =\ 1,}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_1_1_mouse_a9273402fdf359e292faf8f940e5eddffa7425047afb6f07f6b2e39b9528b7d606}{Button2}}\ =\ 2,}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_1_1_mouse_a9273402fdf359e292faf8f940e5eddffa14ccd9f59f89c8a8e2cb356418347e18}{Button3}}\ =\ 3,}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_1_1_mouse_a9273402fdf359e292faf8f940e5eddffa0bb6febb49c571f11d56d82c0d1292cd}{Button4}}\ =\ 4,}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_1_1_mouse_a9273402fdf359e292faf8f940e5eddffa91fbb722ad6c9813669a519696222990}{Button5}}\ =\ 5,}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_1_1_mouse_a9273402fdf359e292faf8f940e5eddffa297001fa398983be40203ad1ca7331ad}{Button6}}\ =\ 6,}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_1_1_mouse_a9273402fdf359e292faf8f940e5eddffa4711a4c3fa6baac31ea24c0f669bb499}{Button7}}\ =\ 7,}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_1_1_mouse_a9273402fdf359e292faf8f940e5eddffa840269c635dbba9c3db72d2c0167a8fa}{ButtonLast}}\ =\ \doxymbox{\hyperlink{namespace_vesper_1_1_mouse_a9273402fdf359e292faf8f940e5eddffa4711a4c3fa6baac31ea24c0f669bb499}{Button7}},}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_1_1_mouse_a9273402fdf359e292faf8f940e5eddffa61b9dc89f19b026b765f219b6eecebaf}{ButtonLeft}}\ =\ \doxymbox{\hyperlink{namespace_vesper_1_1_mouse_a9273402fdf359e292faf8f940e5eddffac1321d971f3b4356ff269f7f48ab2388}{Button0}},}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_1_1_mouse_a9273402fdf359e292faf8f940e5eddffa36dc355d5be9b54f54e03e93d84442fb}{ButtonRight}}\ =\ \doxymbox{\hyperlink{namespace_vesper_1_1_mouse_a9273402fdf359e292faf8f940e5eddffadd248976a5cff1d04d9c494fdde85210}{Button1}},}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_1_1_mouse_a9273402fdf359e292faf8f940e5eddffa20e334db3ecdec2ddd158e962afd2ea8}{ButtonMiddle}}\ =\ \doxymbox{\hyperlink{namespace_vesper_1_1_mouse_a9273402fdf359e292faf8f940e5eddffa7425047afb6f07f6b2e39b9528b7d606}{Button2}},}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00030\ \ \ \ \ \}}
+\DoxyCodeLine{00031\ \}}
 
 \end{DoxyCode}

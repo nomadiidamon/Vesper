@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['or_20sandbox_0',['Run the editor or sandbox',['../index.html#autotoc_md5',1,'']]],
-  ['overview_1',['Quick overview',['../index.html#autotoc_md1',1,'']]]
+  ['new_20project_20example_20code_0',['New Project example code',['../index.html#autotoc_md6',1,'']]],
+  ['notes_20todo_1',['Notes / TODO',['../index.html#autotoc_md9',1,'']]]
 ];

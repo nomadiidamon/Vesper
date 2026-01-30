@@ -1,5 +1,20 @@
 var searchData=
 [
-  ['bool_0',['Bool',['../namespace_vesper.html#af97d3e5c1fb6c279c1b31b887687a131ac26f15e86e3de4c398a8273272aba034',1,'Vesper']]],
-  ['borderless_1',['Borderless',['../namespace_vesper.html#a5302ff07d23533d2da0500a894dca563a78f0192ac55eba33ee88d026452952e5',1,'Vesper']]]
+  ['b_0',['B',['../namespace_vesper_1_1_key.html#a9d802d64a043b9c5e780fdd5b2c430ada45aa6a9887c39a6051368817d19a1e15',1,'Vesper::Key']]],
+  ['backslash_1',['Backslash',['../namespace_vesper_1_1_key.html#a9d802d64a043b9c5e780fdd5b2c430adabb58b1ab6afad7141abd291aa224b6d2',1,'Vesper::Key']]],
+  ['backspace_2',['Backspace',['../namespace_vesper_1_1_key.html#a9d802d64a043b9c5e780fdd5b2c430ada41b2593b30a6e294505f09f40fcd5e5f',1,'Vesper::Key']]],
+  ['bool_3',['Bool',['../namespace_vesper.html#af97d3e5c1fb6c279c1b31b887687a131ac26f15e86e3de4c398a8273272aba034',1,'Vesper']]],
+  ['borderless_4',['Borderless',['../namespace_vesper.html#a5302ff07d23533d2da0500a894dca563a78f0192ac55eba33ee88d026452952e5',1,'Vesper']]],
+  ['button0_5',['Button0',['../namespace_vesper_1_1_mouse.html#a9273402fdf359e292faf8f940e5eddffac1321d971f3b4356ff269f7f48ab2388',1,'Vesper::Mouse']]],
+  ['button1_6',['Button1',['../namespace_vesper_1_1_mouse.html#a9273402fdf359e292faf8f940e5eddffadd248976a5cff1d04d9c494fdde85210',1,'Vesper::Mouse']]],
+  ['button2_7',['Button2',['../namespace_vesper_1_1_mouse.html#a9273402fdf359e292faf8f940e5eddffa7425047afb6f07f6b2e39b9528b7d606',1,'Vesper::Mouse']]],
+  ['button3_8',['Button3',['../namespace_vesper_1_1_mouse.html#a9273402fdf359e292faf8f940e5eddffa14ccd9f59f89c8a8e2cb356418347e18',1,'Vesper::Mouse']]],
+  ['button4_9',['Button4',['../namespace_vesper_1_1_mouse.html#a9273402fdf359e292faf8f940e5eddffa0bb6febb49c571f11d56d82c0d1292cd',1,'Vesper::Mouse']]],
+  ['button5_10',['Button5',['../namespace_vesper_1_1_mouse.html#a9273402fdf359e292faf8f940e5eddffa91fbb722ad6c9813669a519696222990',1,'Vesper::Mouse']]],
+  ['button6_11',['Button6',['../namespace_vesper_1_1_mouse.html#a9273402fdf359e292faf8f940e5eddffa297001fa398983be40203ad1ca7331ad',1,'Vesper::Mouse']]],
+  ['button7_12',['Button7',['../namespace_vesper_1_1_mouse.html#a9273402fdf359e292faf8f940e5eddffa4711a4c3fa6baac31ea24c0f669bb499',1,'Vesper::Mouse']]],
+  ['buttonlast_13',['ButtonLast',['../namespace_vesper_1_1_mouse.html#a9273402fdf359e292faf8f940e5eddffa840269c635dbba9c3db72d2c0167a8fa',1,'Vesper::Mouse']]],
+  ['buttonleft_14',['ButtonLeft',['../namespace_vesper_1_1_mouse.html#a9273402fdf359e292faf8f940e5eddffa61b9dc89f19b026b765f219b6eecebaf',1,'Vesper::Mouse']]],
+  ['buttonmiddle_15',['ButtonMiddle',['../namespace_vesper_1_1_mouse.html#a9273402fdf359e292faf8f940e5eddffa20e334db3ecdec2ddd158e962afd2ea8',1,'Vesper::Mouse']]],
+  ['buttonright_16',['ButtonRight',['../namespace_vesper_1_1_mouse.html#a9273402fdf359e292faf8f940e5eddffa36dc355d5be9b54f54e03e93d84442fb',1,'Vesper::Mouse']]]
 ];

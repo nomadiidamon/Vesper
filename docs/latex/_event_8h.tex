@@ -6,9 +6,9 @@
 \begin{DoxyCompactItemize}
 \item 
 class \doxymbox{\hyperlink{class_vesper_1_1_event}{Vesper::\+\+Event}}
-\item 
+\begin{DoxyCompactList}\small\item\em Abstract base class for all events. \end{DoxyCompactList}\item 
 class \doxymbox{\hyperlink{class_vesper_1_1_event_dispatcher}{Vesper::\+\+Event\+Dispatcher}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Stack-\/based templated event dispatcher. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
@@ -18,9 +18,9 @@ namespace \doxymbox{\hyperlink{namespace_vesper}{Vesper}}
 \begin{DoxyCompactItemize}
 \item 
 \+\#define \doxymbox{\hyperlink{_event_8h_a80d534fc4d69a68eefd1573fd0ac2f44}{EVENT\+\_\+\+CLASS\+\_\+\+TYPE}}(type)
-\item 
+\begin{DoxyCompactList}\small\item\em Macro to define event type in event subclasses. \end{DoxyCompactList}\item 
 \+\#define \doxymbox{\hyperlink{_event_8h_abd52deea587a36ef619e596a0c691839}{EVENT\+\_\+\+CLASS\+\_\+\+CATEGORY}}(category)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Macro to define event category in event subclasses. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Enumerations}
 \begin{DoxyCompactItemize}
 \item 
@@ -45,7 +45,7 @@ enum class \doxymbox{\hyperlink{namespace_vesper_ada4bc37927ce22c44ea0083a224d3b
 , \doxymbox{\hyperlink{namespace_vesper_ada4bc37927ce22c44ea0083a224d3bb5ac2770ad109c8063ce69a3608a9a16c08}{Vesper::\+\+Mouse\+Moved}}
 , \doxymbox{\hyperlink{namespace_vesper_ada4bc37927ce22c44ea0083a224d3bb5a50edb169910041bb3c06f6e8322d74c1}{Vesper::\+\+Mouse\+Scrolled}}
  \}
-\item 
+\begin{DoxyCompactList}\small\item\em Enumeration of event types. \end{DoxyCompactList}\item 
 enum \doxymbox{\hyperlink{namespace_vesper_ad79da63be4419c3a218acaa990decabe}{Vesper::\+\+Event\+Category}} \{ \newline
 \doxymbox{\hyperlink{namespace_vesper_ad79da63be4419c3a218acaa990decabea5af280140310d5b7f04b47a0c0a49f9f}{Vesper::\+\+None}} = 0
 , \doxymbox{\hyperlink{namespace_vesper_ad79da63be4419c3a218acaa990decabea528846d063c87fe2abe290ff90ee9eb3}{Vesper::\+\+Event\+Category\+Application}} = BIT(0)
@@ -55,12 +55,12 @@ enum \doxymbox{\hyperlink{namespace_vesper_ad79da63be4419c3a218acaa990decabe}{Ve
 \doxymbox{\hyperlink{namespace_vesper_ad79da63be4419c3a218acaa990decabea3c4a955f5c8263670268bd87fefc1f16}{Vesper::\+\+Event\+Category\+Mouse}} = BIT(3)
 , \doxymbox{\hyperlink{namespace_vesper_ad79da63be4419c3a218acaa990decabea17ff2a7e3b7077c99dafe654f2b9bc34}{Vesper::\+\+Event\+Category\+Mouse\+Button}} = BIT(4)
  \}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Enumeration of event categories. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 std::\+string \doxymbox{\hyperlink{namespace_vesper_a2ad5c87552bf4fd64385dc411970ec76}{Vesper::\+format\+\_\+as}} (const \doxymbox{\hyperlink{class_vesper_1_1_event}{Event}} \&e)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Format an event as a string. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \label{doc-define-members}
@@ -77,6 +77,10 @@ std::\+string \doxymbox{\hyperlink{namespace_vesper_a2ad5c87552bf4fd64385dc41197
 \DoxyCodeLine{\textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ GetCategoryFlags()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ category;\ \}}
 
 \end{DoxyCode}
+
+
+Macro to define event category in event subclasses. 
+
 \Hypertarget{_event_8h_a80d534fc4d69a68eefd1573fd0ac2f44}\index{Event.h@{Event.h}!EVENT\_CLASS\_TYPE@{EVENT\_CLASS\_TYPE}}
 \index{EVENT\_CLASS\_TYPE@{EVENT\_CLASS\_TYPE}!Event.h@{Event.h}}
 \doxysubsubsection{\texorpdfstring{EVENT\_CLASS\_TYPE}{EVENT\_CLASS\_TYPE}}
@@ -91,9 +95,13 @@ std::\+string \doxymbox{\hyperlink{namespace_vesper_a2ad5c87552bf4fd64385dc41197
 
 \end{DoxyCode}
 
+
+Macro to define event type in event subclasses. 
+
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ EVENT\_CLASS\_TYPE(type)\ static\ EventType\ GetStaticType()\ \{\ return\ EventType::\#\#type;\ \}\(\backslash\) }}
-\DoxyCodeLine{00028\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ virtual\ EventType\ GetEventType()\ const\ override\ \{\ return\ GetStaticType();\ \}\(\backslash\) }}
-\DoxyCodeLine{00029\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ virtual\ const\ char*\ GetName()\ const\ override\ \{\ return\ \#type;\ \} }}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#define\ EVENT\_CLASS\_TYPE(type)\ static\ EventType\ GetStaticType()\ \{\ return\ EventType::\#\#type;\ \}\(\backslash\) }}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ virtual\ EventType\ GetEventType()\ const\ override\ \{\ return\ GetStaticType();\ \}\(\backslash\) }}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ virtual\ const\ char*\ GetName()\ const\ override\ \{\ return\ \#type;\ \} }}
 
 \end{DoxyCode}

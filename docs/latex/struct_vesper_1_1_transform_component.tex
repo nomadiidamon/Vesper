@@ -2,6 +2,11 @@
 \hypertarget{struct_vesper_1_1_transform_component}{}\label{struct_vesper_1_1_transform_component}\index{Vesper::TransformComponent@{Vesper::TransformComponent}}
 
 
+Component that holds the transform of an entity.  
+
+
+
+
 {\ttfamily \+\#include $<$Components.\+h$>$}
 
 \doxysubsubsection*{Public Member Functions}
@@ -12,19 +17,22 @@
 \doxymbox{\hyperlink{struct_vesper_1_1_transform_component_a560e3d1e61c0692782e36f99b159863a}{Transform\+Component}} (const Transform\+Component \&)=default
 \item 
 \doxymbox{\hyperlink{struct_vesper_1_1_transform_component_a286f3a1bf0af79d94f952759ff51f846}{Transform\+Component}} (const glm::\+vec3 \&translation)
-\item 
+\begin{DoxyCompactList}\small\item\em Constructor that initializes the translation with a 3D vector. \end{DoxyCompactList}\item 
 glm::\+mat4 \doxymbox{\hyperlink{struct_vesper_1_1_transform_component_a4d0f447eac962ef277fe1180ef4a422e}{Get\+Transform}} () const
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Calculates and returns the transformation matrix. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 glm::\+vec3 \doxymbox{\hyperlink{struct_vesper_1_1_transform_component_ab76e5ae40adaf47f5b9affb5ab81c0b9}{Translation}} = \{ 0.\+0f, 0.\+0f, 0.\+0f \}
-\item 
+\begin{DoxyCompactList}\small\item\em Translation (position) vector. \end{DoxyCompactList}\item 
 glm::\+vec3 \doxymbox{\hyperlink{struct_vesper_1_1_transform_component_afa7331f7960d639da91b9e41373f5144}{Rotation}} = \{ 0.\+0f, 0.\+0f, 0.\+0f \}
-\item 
+\begin{DoxyCompactList}\small\item\em Rotation vector (in radians). \end{DoxyCompactList}\item 
 glm::\+vec3 \doxymbox{\hyperlink{struct_vesper_1_1_transform_component_a4655769f7629c9ea59ff14fb4aba13d9}{Scale}} = \{ 1.\+0f, 1.\+0f, 1.\+0f \}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Scale vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Component that holds the transform of an entity. 
 
 \label{doc-constructors}
 \Hypertarget{struct_vesper_1_1_transform_component_doc-constructors}
@@ -48,11 +56,23 @@ Vesper::\+\+Transform\+Component::\+\+Transform\+Component (\begin{DoxyParamCapt
 Vesper::\+\+Transform\+Component::\+\+Transform\+Component (\begin{DoxyParamCaption}\item[{const glm::\+vec3 \&}]{translation}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
+
+Constructor that initializes the translation with a 3D vector. 
+
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{struct_vesper_1_1_transform_component_ab76e5ae40adaf47f5b9affb5ab81c0b9}{Translation}}(translation)\ \{}
-\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{struct_vesper_1_1_transform_component_ab76e5ae40adaf47f5b9affb5ab81c0b9}{Translation}}(translation)\ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \}}
 
 \end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{struct_vesper_1_1_transform_component_a286f3a1bf0af79d94f952759ff51f846}{Transform\+Component()}}.
+
+
+
+Referenced by \doxymbox{\hyperlink{struct_vesper_1_1_transform_component_a286f3a1bf0af79d94f952759ff51f846}{Transform\+Component()}}.
+
 
 
 \label{doc-func-members}
@@ -65,14 +85,18 @@ Vesper::\+\+Transform\+Component::\+\+Transform\+Component (\begin{DoxyParamCapt
 glm::\+mat4 Vesper::\+\+Transform\+Component::\+\+Get\+Transform (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
+
+Calculates and returns the transformation matrix. 
+
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ glm::mat4\ rotation\ =\ glm::toMat4(glm::quat(\doxymbox{\hyperlink{struct_vesper_1_1_transform_component_afa7331f7960d639da91b9e41373f5144}{Rotation}}));}
-\DoxyCodeLine{00064\ }
-\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ glm::translate(glm::mat4(1.0f),\ \doxymbox{\hyperlink{struct_vesper_1_1_transform_component_ab76e5ae40adaf47f5b9affb5ab81c0b9}{Translation}})}
-\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *\ rotation}
-\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *\ glm::scale(glm::mat4(1.0f),\ \doxymbox{\hyperlink{struct_vesper_1_1_transform_component_a4655769f7629c9ea59ff14fb4aba13d9}{Scale}});}
-\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ glm::mat4\ rotation\ =\ glm::toMat4(glm::quat(\doxymbox{\hyperlink{struct_vesper_1_1_transform_component_afa7331f7960d639da91b9e41373f5144}{Rotation}}));}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ glm::translate(glm::mat4(1.0f),\ \doxymbox{\hyperlink{struct_vesper_1_1_transform_component_ab76e5ae40adaf47f5b9affb5ab81c0b9}{Translation}})}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *\ rotation}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *\ glm::scale(glm::mat4(1.0f),\ \doxymbox{\hyperlink{struct_vesper_1_1_transform_component_a4655769f7629c9ea59ff14fb4aba13d9}{Scale}});}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \}}
 
 \end{DoxyCode}
 
@@ -87,8 +111,12 @@ glm::\+mat4 Vesper::\+\+Transform\+Component::\+\+Get\+Transform (\begin{DoxyPar
 glm::\+vec3 Vesper::\+\+Transform\+Component::\+\+Rotation = \{ 0.\+0f, 0.\+0f, 0.\+0f \}}
 
 
+
+Rotation vector (in radians). 
+
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00052\ \{\ 0.0f,\ 0.0f,\ 0.0f\ \};}
+\DoxyCodeLine{00066\ \{\ 0.0f,\ 0.0f,\ 0.0f\ \};}
 
 \end{DoxyCode}
 \Hypertarget{struct_vesper_1_1_transform_component_a4655769f7629c9ea59ff14fb4aba13d9}\index{Vesper::TransformComponent@{Vesper::TransformComponent}!Scale@{Scale}}
@@ -98,8 +126,12 @@ glm::\+vec3 Vesper::\+\+Transform\+Component::\+\+Rotation = \{ 0.\+0f, 0.\+0f, 
 glm::\+vec3 Vesper::\+\+Transform\+Component::\+\+Scale = \{ 1.\+0f, 1.\+0f, 1.\+0f \}}
 
 
+
+Scale vector. 
+
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00053\ \{\ 1.0f,\ 1.0f,\ 1.0f\ \};}
+\DoxyCodeLine{00068\ \{\ 1.0f,\ 1.0f,\ 1.0f\ \};}
 
 \end{DoxyCode}
 \Hypertarget{struct_vesper_1_1_transform_component_ab76e5ae40adaf47f5b9affb5ab81c0b9}\index{Vesper::TransformComponent@{Vesper::TransformComponent}!Translation@{Translation}}
@@ -109,8 +141,12 @@ glm::\+vec3 Vesper::\+\+Transform\+Component::\+\+Scale = \{ 1.\+0f, 1.\+0f, 1.\
 glm::\+vec3 Vesper::\+\+Transform\+Component::\+\+Translation = \{ 0.\+0f, 0.\+0f, 0.\+0f \}}
 
 
+
+Translation (position) vector. 
+
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00051\ \{\ 0.0f,\ 0.0f,\ 0.0f\ \};}
+\DoxyCodeLine{00064\ \{\ 0.0f,\ 0.0f,\ 0.0f\ \};}
 
 \end{DoxyCode}
 

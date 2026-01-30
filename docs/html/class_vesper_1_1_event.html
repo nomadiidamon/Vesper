@@ -98,6 +98,9 @@ $(function(){initNavTree('class_vesper_1_1_event.html','','class_vesper_1_1_even
 </div><!--header-->
 <div class="contents">
 
+<p>Abstract base class for all events.  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_event_8h_source.html">Event.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Vesper::Event:</div>
@@ -105,15 +108,15 @@ Inheritance diagram for Vesper::Event:</div>
  <div class="center">
   <img src="class_vesper_1_1_event.png" usemap="#Vesper_3A_3AEvent_map" alt=""/>
   <map id="Vesper_3A_3AEvent_map" name="Vesper_3A_3AEvent_map">
-<area href="class_vesper_1_1_app_render_event.html" alt="Vesper::AppRenderEvent" shape="rect" coords="186,56,362,80"/>
-<area href="class_vesper_1_1_app_tick_event.html" alt="Vesper::AppTickEvent" shape="rect" coords="186,112,362,136"/>
-<area href="class_vesper_1_1_app_update_event.html" alt="Vesper::AppUpdateEvent" shape="rect" coords="186,168,362,192"/>
-<area href="class_vesper_1_1_key_event.html" alt="Vesper::KeyEvent" shape="rect" coords="186,224,362,248"/>
-<area href="class_vesper_1_1_mouse_button_event.html" alt="Vesper::MouseButtonEvent" shape="rect" coords="186,280,362,304"/>
-<area href="class_vesper_1_1_mouse_moved_event.html" alt="Vesper::MouseMovedEvent" shape="rect" coords="186,336,362,360"/>
-<area href="class_vesper_1_1_mouse_scrolled_event.html" alt="Vesper::MouseScrolledEvent" shape="rect" coords="186,392,362,416"/>
-<area href="class_vesper_1_1_window_close_event.html" alt="Vesper::WindowCloseEvent" shape="rect" coords="186,448,362,472"/>
-<area href="class_vesper_1_1_window_resize_event.html" alt="Vesper::WindowResizeEvent" shape="rect" coords="186,504,362,528"/>
+<area href="class_vesper_1_1_app_render_event.html" title="Event for registering application render." alt="Vesper::AppRenderEvent" shape="rect" coords="186,56,362,80"/>
+<area href="class_vesper_1_1_app_tick_event.html" title="Event for registering application tick." alt="Vesper::AppTickEvent" shape="rect" coords="186,112,362,136"/>
+<area href="class_vesper_1_1_app_update_event.html" title="Event for registering application update." alt="Vesper::AppUpdateEvent" shape="rect" coords="186,168,362,192"/>
+<area href="class_vesper_1_1_key_event.html" title="Base class for keyboard events." alt="Vesper::KeyEvent" shape="rect" coords="186,224,362,248"/>
+<area href="class_vesper_1_1_mouse_button_event.html" title="Base class for mouse button events." alt="Vesper::MouseButtonEvent" shape="rect" coords="186,280,362,304"/>
+<area href="class_vesper_1_1_mouse_moved_event.html" title="Event for registering mouse movement." alt="Vesper::MouseMovedEvent" shape="rect" coords="186,336,362,360"/>
+<area href="class_vesper_1_1_mouse_scrolled_event.html" title="Event for registering mouse scroll wheel movement." alt="Vesper::MouseScrolledEvent" shape="rect" coords="186,392,362,416"/>
+<area href="class_vesper_1_1_window_close_event.html" title="Event for registering window close." alt="Vesper::WindowCloseEvent" shape="rect" coords="186,448,362,472"/>
+<area href="class_vesper_1_1_window_resize_event.html" title="Event for registering window resize." alt="Vesper::WindowResizeEvent" shape="rect" coords="186,504,362,528"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -121,20 +124,28 @@ Inheritance diagram for Vesper::Event:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a516fc6585a1ca21f7d73fc4deb461ee2" id="r_a516fc6585a1ca21f7d73fc4deb461ee2"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="#a516fc6585a1ca21f7d73fc4deb461ee2">~Event</a> ()=default</td></tr>
 <tr class="memitem:a82499595903097f8d2a81e9b0ebfba3d" id="r_a82499595903097f8d2a81e9b0ebfba3d"><td class="memItemLeft">virtual <a class="el" href="namespace_vesper.html#ada4bc37927ce22c44ea0083a224d3bb5">EventType</a>&#160;</td><td class="memItemRight"><a class="el" href="#a82499595903097f8d2a81e9b0ebfba3d">GetEventType</a> () const =0</td></tr>
+<tr class="memdesc:a82499595903097f8d2a81e9b0ebfba3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the type of the event.  <br /></td></tr>
 <tr class="memitem:af39d90d8ec2e84488c593c517a8e9b6e" id="r_af39d90d8ec2e84488c593c517a8e9b6e"><td class="memItemLeft">virtual const char *&#160;</td><td class="memItemRight"><a class="el" href="#af39d90d8ec2e84488c593c517a8e9b6e">GetName</a> () const =0</td></tr>
+<tr class="memdesc:af39d90d8ec2e84488c593c517a8e9b6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the name of the event.  <br /></td></tr>
 <tr class="memitem:a71e621bec32702d59c7e7ed82c53ac08" id="r_a71e621bec32702d59c7e7ed82c53ac08"><td class="memItemLeft">virtual int&#160;</td><td class="memItemRight"><a class="el" href="#a71e621bec32702d59c7e7ed82c53ac08">GetCategoryFlags</a> () const =0</td></tr>
+<tr class="memdesc:a71e621bec32702d59c7e7ed82c53ac08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the category flags of the event.  <br /></td></tr>
 <tr class="memitem:aaba48fc434a2539c5ce000fda6aa7f05" id="r_aaba48fc434a2539c5ce000fda6aa7f05"><td class="memItemLeft">virtual std::string&#160;</td><td class="memItemRight"><a class="el" href="#aaba48fc434a2539c5ce000fda6aa7f05">ToString</a> () const</td></tr>
+<tr class="memdesc:aaba48fc434a2539c5ce000fda6aa7f05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert the event to a string representation.  <br /></td></tr>
 <tr class="memitem:a02448606191e9e1cc7869bffd2cb20f7" id="r_a02448606191e9e1cc7869bffd2cb20f7"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a02448606191e9e1cc7869bffd2cb20f7">IsInCategory</a> (<a class="el" href="namespace_vesper.html#ad79da63be4419c3a218acaa990decabe">EventCategory</a> category)</td></tr>
+<tr class="memdesc:a02448606191e9e1cc7869bffd2cb20f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the event is in a specific category.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:ab6bc1a2214e615b994cff03df207a0f1" id="r_ab6bc1a2214e615b994cff03df207a0f1"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ab6bc1a2214e615b994cff03df207a0f1">Handled</a> = false</td></tr>
+<tr class="memdesc:ab6bc1a2214e615b994cff03df207a0f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether the event has been handled.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-friends" class="groupheader"><a id="friends" name="friends"></a>
 Friends</h2></td></tr>
 <tr class="memitem:aad5f38ccd490ea17008460423f52325a" id="r_aad5f38ccd490ea17008460423f52325a"><td class="memItemLeft">class&#160;</td><td class="memItemRight"><a class="el" href="#aad5f38ccd490ea17008460423f52325a">EventDispatcher</a></td></tr>
 </table>
-<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Abstract base class for all events. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a516fc6585a1ca21f7d73fc4deb461ee2" name="a516fc6585a1ca21f7d73fc4deb461ee2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a516fc6585a1ca21f7d73fc4deb461ee2">&#9670;&#160;</a></span>~Event()</h2>
 
@@ -184,6 +195,8 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Get the category flags of the event. </p>
+
 <p class="reference">Referenced by <a class="el" href="#a02448606191e9e1cc7869bffd2cb20f7">IsInCategory()</a>.</p>
 
 </div>
@@ -211,6 +224,8 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Get the type of the event. </p>
+
 </div>
 </div>
 <a id="af39d90d8ec2e84488c593c517a8e9b6e" name="af39d90d8ec2e84488c593c517a8e9b6e"></a>
@@ -235,6 +250,8 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Get the name of the event. </p>
 
 <p class="reference">Referenced by <a class="el" href="#aaba48fc434a2539c5ce000fda6aa7f05">ToString()</a>.</p>
 
@@ -262,10 +279,12 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   44</span>        {</div>
-<div class="line"><span class="lineno">   45</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="#a71e621bec32702d59c7e7ed82c53ac08">GetCategoryFlags</a>() &amp; category;</div>
-<div class="line"><span class="lineno">   46</span>        }</div>
-<div class="ttc" id="aclass_vesper_1_1_event_html_a71e621bec32702d59c7e7ed82c53ac08"><div class="ttname"><a href="#a71e621bec32702d59c7e7ed82c53ac08">Vesper::Event::GetCategoryFlags</a></div><div class="ttdeci">virtual int GetCategoryFlags() const =0</div></div>
+
+<p>Check if the event is in a specific category. </p>
+<div class="fragment"><div class="line"><span class="lineno">   59</span>        {</div>
+<div class="line"><span class="lineno">   60</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="#a71e621bec32702d59c7e7ed82c53ac08">GetCategoryFlags</a>() &amp; category;</div>
+<div class="line"><span class="lineno">   61</span>        }</div>
+<div class="ttc" id="aclass_vesper_1_1_event_html_a71e621bec32702d59c7e7ed82c53ac08"><div class="ttname"><a href="#a71e621bec32702d59c7e7ed82c53ac08">Vesper::Event::GetCategoryFlags</a></div><div class="ttdeci">virtual int GetCategoryFlags() const =0</div><div class="ttdoc">Get the category flags of the event.</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a71e621bec32702d59c7e7ed82c53ac08">GetCategoryFlags()</a>.</p>
 
@@ -296,9 +315,11 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Convert the event to a string representation. </p>
+
 <p>Reimplemented in <a class="el" href="class_vesper_1_1_key_pressed_event.html#a714614a3073492951b1b5001209d0d88">Vesper::KeyPressedEvent</a>, <a class="el" href="class_vesper_1_1_key_released_event.html#a3b3a0210a59f5cb1f66dcf0494b739b9">Vesper::KeyReleasedEvent</a>, <a class="el" href="class_vesper_1_1_key_typed_event.html#a629f52af17e5e1f56e99d006191a4518">Vesper::KeyTypedEvent</a>, <a class="el" href="class_vesper_1_1_mouse_button_pressed_event.html#a9cc088a6bc2d238bb6e4df9107cbea72">Vesper::MouseButtonPressedEvent</a>, <a class="el" href="class_vesper_1_1_mouse_button_released_event.html#a65f37698ff0f126ce6a1c063a312de13">Vesper::MouseButtonReleasedEvent</a>, <a class="el" href="class_vesper_1_1_mouse_moved_event.html#a2ccfeb59c21f70a757921b76f21f5bee">Vesper::MouseMovedEvent</a>, <a class="el" href="class_vesper_1_1_mouse_scrolled_event.html#ad1042edae967b19753014021b941f051">Vesper::MouseScrolledEvent</a>, and <a class="el" href="class_vesper_1_1_window_resize_event.html#a68faa6be8944358148545c0f640a2962">Vesper::WindowResizeEvent</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   41</span>{ <span class="keywordflow">return</span> <a class="code hl_function" href="#af39d90d8ec2e84488c593c517a8e9b6e">GetName</a>(); }</div>
-<div class="ttc" id="aclass_vesper_1_1_event_html_af39d90d8ec2e84488c593c517a8e9b6e"><div class="ttname"><a href="#af39d90d8ec2e84488c593c517a8e9b6e">Vesper::Event::GetName</a></div><div class="ttdeci">virtual const char * GetName() const =0</div></div>
+<div class="fragment"><div class="line"><span class="lineno">   55</span>{ <span class="keywordflow">return</span> <a class="code hl_function" href="#af39d90d8ec2e84488c593c517a8e9b6e">GetName</a>(); }</div>
+<div class="ttc" id="aclass_vesper_1_1_event_html_af39d90d8ec2e84488c593c517a8e9b6e"><div class="ttname"><a href="#af39d90d8ec2e84488c593c517a8e9b6e">Vesper::Event::GetName</a></div><div class="ttdeci">virtual const char * GetName() const =0</div><div class="ttdoc">Get the name of the event.</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#af39d90d8ec2e84488c593c517a8e9b6e">GetName()</a>.</p>
 
@@ -339,6 +360,8 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Indicates whether the event has been handled. </p>
 
 <p class="reference">Referenced by <a class="el" href="class_vesper_1_1_im_gui_layer.html#a224b66c3c8a7515b401f5b1db00978ea">Vesper::ImGuiLayer::OnEvent()</a>.</p>
 

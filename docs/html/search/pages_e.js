@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['sandbox_0',['Run the editor or sandbox',['../index.html#autotoc_md5',1,'']]],
-  ['started_20clone_20third_20party_20libs_1',['Getting started (clone + third-party libs)',['../index.html#autotoc_md3',1,'']]],
-  ['studio_202022_2',['Build (Visual Studio 2022)',['../index.html#autotoc_md4',1,'']]]
+  ['repository_20layout_20high_20level_0',['Repository layout (high level)',['../index.html#autotoc_md2',1,'']]],
+  ['run_20the_20editor_20or_20sandbox_1',['Run the editor or sandbox',['../index.html#autotoc_md5',1,'']]]
 ];

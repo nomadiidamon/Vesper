@@ -98,14 +98,21 @@ $(function(){initNavTree('class_vesper_1_1_file_dialogs.html','','class_vesper_1
 </div><!--header-->
 <div class="contents">
 
+<p>Cross-platform file dialog utilities.  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_platform_utils_8h_source.html">PlatformUtils.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a30ef477107af39176c77dd554ca88f6a" id="r_a30ef477107af39176c77dd554ca88f6a"><td class="memItemLeft">static std::string&#160;</td><td class="memItemRight"><a class="el" href="#a30ef477107af39176c77dd554ca88f6a">OpenFile</a> (const char *filter)</td></tr>
+<tr class="memdesc:a30ef477107af39176c77dd554ca88f6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opens a file dialog to select a file to open.  <br /></td></tr>
 <tr class="memitem:a2929cc61038cd4dce65005ab83760607" id="r_a2929cc61038cd4dce65005ab83760607"><td class="memItemLeft">static std::string&#160;</td><td class="memItemRight"><a class="el" href="#a2929cc61038cd4dce65005ab83760607">SaveFile</a> (const char *filter)</td></tr>
+<tr class="memdesc:a2929cc61038cd4dce65005ab83760607"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opens a file dialog to select a location to save a file.  <br /></td></tr>
 </table>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Cross-platform file dialog utilities. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a30ef477107af39176c77dd554ca88f6a" name="a30ef477107af39176c77dd554ca88f6a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a30ef477107af39176c77dd554ca88f6a">&#9670;&#160;</a></span>OpenFile()</h2>
 
@@ -128,6 +135,15 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Opens a file dialog to select a file to open. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filter</td><td>The file type filter for the dialog. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The selected file path or an empty string if cancelled. </dd></dl>
 <div class="fragment"><div class="line"><span class="lineno">   12</span>                                                      {</div>
 <div class="line"><span class="lineno">   13</span> </div>
 <div class="line"><span class="lineno">   14</span>        OPENFILENAMEA ofn;</div>
@@ -144,7 +160,7 @@ Static Public Member Functions</h2></td></tr>
 <div class="line"><span class="lineno">   25</span>            <span class="keywordflow">return</span> std::string(ofn.lpstrFile);</div>
 <div class="line"><span class="lineno">   26</span>        <span class="keywordflow">return</span> std::string();</div>
 <div class="line"><span class="lineno">   27</span>    }</div>
-<div class="ttc" id="aclass_vesper_1_1_application_html_a7edbd0f4804f897c09ad869239a97ffa"><div class="ttname"><a href="class_vesper_1_1_application.html#a7edbd0f4804f897c09ad869239a97ffa">Vesper::Application::Get</a></div><div class="ttdeci">static Application &amp; Get()</div><div class="ttdef"><b>Definition</b> Application.h:52</div></div>
+<div class="ttc" id="aclass_vesper_1_1_application_html_a7edbd0f4804f897c09ad869239a97ffa"><div class="ttname"><a href="class_vesper_1_1_application.html#a7edbd0f4804f897c09ad869239a97ffa">Vesper::Application::Get</a></div><div class="ttdeci">static Application &amp; Get()</div><div class="ttdoc">Retrieves the singleton instance of the Application.</div><div class="ttdef"><b>Definition</b> Application.h:67</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -170,6 +186,15 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Opens a file dialog to select a location to save a file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filter</td><td>The file type filter for the dialog. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The selected file path or an empty string if cancelled. </dd></dl>
 <div class="fragment"><div class="line"><span class="lineno">   29</span>                                                      {</div>
 <div class="line"><span class="lineno">   30</span> </div>
 <div class="line"><span class="lineno">   31</span>        OPENFILENAMEA ofn;</div>

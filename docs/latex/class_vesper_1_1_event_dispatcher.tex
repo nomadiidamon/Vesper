@@ -2,26 +2,34 @@
 \hypertarget{class_vesper_1_1_event_dispatcher}{}\label{class_vesper_1_1_event_dispatcher}\index{Vesper::EventDispatcher@{Vesper::EventDispatcher}}
 
 
+Stack-\/based templated event dispatcher.  
+
+
+
+
 {\ttfamily \+\#include $<$Event.\+h$>$}
 
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \doxymbox{\hyperlink{class_vesper_1_1_event_dispatcher_a36333b75f87ed66846359cf13ca5c6d8}{Event\+Dispatcher}} (\doxymbox{\hyperlink{class_vesper_1_1_event}{Event}} \&event)
-\item 
+\begin{DoxyCompactList}\small\item\em Construct an \doxylink{class_vesper_1_1_event_dispatcher}{Event\+Dispatcher} for a specific event. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename T$>$ }\\bool \doxymbox{\hyperlink{class_vesper_1_1_event_dispatcher_a89ceb12a4db98613c7ee48d8cb6d1cc4}{Dispatch}} (\doxymbox{\hyperlink{class_vesper_1_1_event_dispatcher_a47e85a37448abd041c47ad9bd252b45e}{Event\+Fn}}$<$ T $>$ func)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Dispatch the event to the appropriate handler if the types match. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Types}
 \begin{DoxyCompactItemize}
 \item 
 {\footnotesize template$<$typename T$>$ }\\using \doxymbox{\hyperlink{class_vesper_1_1_event_dispatcher_a47e85a37448abd041c47ad9bd252b45e}{Event\+Fn}} = std::\+function$<$bool(T\&)$>$
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Type alias for event handling functions. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \doxymbox{\hyperlink{class_vesper_1_1_event}{Event}} \& \doxymbox{\hyperlink{class_vesper_1_1_event_dispatcher_a5dfa8fe5db172910af70a30ba28c3338}{m\+\_\+\+Event}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The event to be dispatched. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Stack-\/based templated event dispatcher. 
 
 \label{doc-typedef-members}
 \Hypertarget{class_vesper_1_1_event_dispatcher_doc-typedef-members}
@@ -35,6 +43,10 @@ using \doxymbox{\hyperlink{class_vesper_1_1_event_dispatcher_a47e85a37448abd041c
 
 
 
+Type alias for event handling functions. 
+
+
+
 \label{doc-constructors}
 \Hypertarget{class_vesper_1_1_event_dispatcher_doc-constructors}
 \doxysubsection{Constructor \& Destructor Documentation}
@@ -45,10 +57,19 @@ using \doxymbox{\hyperlink{class_vesper_1_1_event_dispatcher_a47e85a37448abd041c
 Vesper::\+\+Event\+Dispatcher::\+\+Event\+Dispatcher (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_vesper_1_1_event}{Event}} \&}]{event}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
+
+Construct an \doxylink{class_vesper_1_1_event_dispatcher}{Event\+Dispatcher} for a specific event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & The event to dispatch. \\
+\hline
+\end{DoxyParams}
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_vesper_1_1_event_dispatcher_a5dfa8fe5db172910af70a30ba28c3338}{m\_Event}}(event) }
-\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_vesper_1_1_event_dispatcher_a5dfa8fe5db172910af70a30ba28c3338}{m\_Event}}(event) }
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \}}
 
 \end{DoxyCode}
 
@@ -72,15 +93,32 @@ template$<$typename T$>$ \\
 bool Vesper::\+\+Event\+Dispatcher::\+\+Dispatch (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_vesper_1_1_event_dispatcher_a47e85a37448abd041c47ad9bd252b45e}{Event\+Fn}}$<$ T $>$}]{func}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
+
+Dispatch the event to the appropriate handler if the types match. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of the event to dispatch. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em func} & The function to handle the event. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the event was handled, false otherwise. 
+\end{DoxyReturn}
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_vesper_1_1_event_dispatcher_a5dfa8fe5db172910af70a30ba28c3338}{m\_Event}}.GetEventType()\ ==\ T::GetStaticType())}
-\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_event_dispatcher_a5dfa8fe5db172910af70a30ba28c3338}{m\_Event}}.Handled\ =\ func(*(T*)\&\doxymbox{\hyperlink{class_vesper_1_1_event_dispatcher_a5dfa8fe5db172910af70a30ba28c3338}{m\_Event}});}
-\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
-\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
-\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_vesper_1_1_event_dispatcher_a5dfa8fe5db172910af70a30ba28c3338}{m\_Event}}.GetEventType()\ ==\ T::GetStaticType())}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_event_dispatcher_a5dfa8fe5db172910af70a30ba28c3338}{m\_Event}}.Handled\ =\ func(*(T*)\&\doxymbox{\hyperlink{class_vesper_1_1_event_dispatcher_a5dfa8fe5db172910af70a30ba28c3338}{m\_Event}});}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \}}
 
 \end{DoxyCode}
 
@@ -93,6 +131,10 @@ bool Vesper::\+\+Event\+Dispatcher::\+\+Dispatch (\begin{DoxyParamCaption}\item[
 \doxysubsubsection{\texorpdfstring{m\_Event}{m\_Event}}
 {\footnotesize\ttfamily \label{class_vesper_1_1_event_dispatcher_a5dfa8fe5db172910af70a30ba28c3338} 
 \doxymbox{\hyperlink{class_vesper_1_1_event}{Event}}\& Vesper::\+\+Event\+Dispatcher::\+m\+\_\+\+Event\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The event to be dispatched. 
 
 
 

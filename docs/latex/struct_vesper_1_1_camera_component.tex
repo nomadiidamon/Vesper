@@ -2,6 +2,11 @@
 \hypertarget{struct_vesper_1_1_camera_component}{}\label{struct_vesper_1_1_camera_component}\index{Vesper::CameraComponent@{Vesper::CameraComponent}}
 
 
+Component that holds camera data.  
+
+
+
+
 {\ttfamily \+\#include $<$Components.\+h$>$}
 
 \doxysubsubsection*{Public Member Functions}
@@ -15,12 +20,15 @@
 \begin{DoxyCompactItemize}
 \item 
 \doxymbox{\hyperlink{class_vesper_1_1_scene_camera}{Scene\+Camera}} \doxymbox{\hyperlink{struct_vesper_1_1_camera_component_ae088ce563caf2cfe105fef3ed19af305}{Camera}}
-\item 
+\begin{DoxyCompactList}\small\item\em The scene camera. \end{DoxyCompactList}\item 
 bool \doxymbox{\hyperlink{struct_vesper_1_1_camera_component_a314710621af84eb010cae49491208b86}{Primary}} = true
-\item 
+\begin{DoxyCompactList}\small\item\em Whether this camera is the primary camera. \end{DoxyCompactList}\item 
 bool \doxymbox{\hyperlink{struct_vesper_1_1_camera_component_af3af61f36ac41376c70a624b7496558a}{Fixed\+Aspect\+Ratio}} = false
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Whether the aspect ratio is fixed. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Component that holds camera data. 
 
 \label{doc-constructors}
 \Hypertarget{struct_vesper_1_1_camera_component_doc-constructors}
@@ -48,11 +56,19 @@ Vesper::\+\+Camera\+Component::\+\+Camera\+Component (\begin{DoxyParamCaption}\i
 {\footnotesize\ttfamily \label{struct_vesper_1_1_camera_component_ae088ce563caf2cfe105fef3ed19af305} 
 \doxymbox{\hyperlink{class_vesper_1_1_scene_camera}{Scene\+Camera}} Vesper::\+\+Camera\+Component::\+\+Camera}
 
+
+
+The scene camera. 
+
 \Hypertarget{struct_vesper_1_1_camera_component_af3af61f36ac41376c70a624b7496558a}\index{Vesper::CameraComponent@{Vesper::CameraComponent}!FixedAspectRatio@{FixedAspectRatio}}
 \index{FixedAspectRatio@{FixedAspectRatio}!Vesper::CameraComponent@{Vesper::CameraComponent}}
 \doxysubsubsection{\texorpdfstring{FixedAspectRatio}{FixedAspectRatio}}
 {\footnotesize\ttfamily \label{struct_vesper_1_1_camera_component_af3af61f36ac41376c70a624b7496558a} 
 bool Vesper::\+\+Camera\+Component::\+\+Fixed\+Aspect\+Ratio = false}
+
+
+
+Whether the aspect ratio is fixed. 
 
 \Hypertarget{struct_vesper_1_1_camera_component_a314710621af84eb010cae49491208b86}\index{Vesper::CameraComponent@{Vesper::CameraComponent}!Primary@{Primary}}
 \index{Primary@{Primary}!Vesper::CameraComponent@{Vesper::CameraComponent}}
@@ -61,6 +77,10 @@ bool Vesper::\+\+Camera\+Component::\+\+Fixed\+Aspect\+Ratio = false}
 bool Vesper::\+\+Camera\+Component::\+\+Primary = true}
 
 
+
+Whether this camera is the primary camera. 
+
+If multiple cameras exist, the primary camera for rendering will be the first one found marked as primary. 
 
 The documentation for this struct was generated from the following file:\+\begin{DoxyCompactItemize}
 \item 

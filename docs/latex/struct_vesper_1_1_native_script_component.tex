@@ -2,23 +2,31 @@
 \hypertarget{struct_vesper_1_1_native_script_component}{}\label{struct_vesper_1_1_native_script_component}\index{Vesper::NativeScriptComponent@{Vesper::NativeScriptComponent}}
 
 
+Component that holds scripting data for an entity.  
+
+
+
+
 {\ttfamily \+\#include $<$Components.\+h$>$}
 
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 {\footnotesize template$<$typename T$>$ }\\void \doxymbox{\hyperlink{struct_vesper_1_1_native_script_component_a238c55d28fd5b4b7e11762fe8664be9e}{Bind}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Binds a script type to this component. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \doxymbox{\hyperlink{class_vesper_1_1_scriptable_entity}{Scriptable\+Entity}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{struct_vesper_1_1_native_script_component_a745bfcacb93afb4ff3e5f4ae7f0c3668}{Instance}} = nullptr
-\item 
+\begin{DoxyCompactList}\small\item\em Pointer to the instance of the scriptable entity. \end{DoxyCompactList}\item 
 \doxymbox{\hyperlink{class_vesper_1_1_scriptable_entity}{Scriptable\+Entity}} \texorpdfstring{$\ast$}{*}(\texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{struct_vesper_1_1_native_script_component_ab73d2c29ae882197345ba020a267c284}{Instantiate\+Script}} )()
-\item 
+\begin{DoxyCompactList}\small\item\em Function pointer to instantiate the script. \end{DoxyCompactList}\item 
 void(\texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{struct_vesper_1_1_native_script_component_a894ee963a7341f6d432435e96d57f73f}{Destroy\+Script}} )(\doxymbox{\hyperlink{struct_vesper_1_1_native_script_component}{Native\+Script\+Component}} \texorpdfstring{$\ast$}{*})
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Function pointer to destroy the script. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Component that holds scripting data for an entity. 
 
 \label{doc-func-members}
 \Hypertarget{struct_vesper_1_1_native_script_component_doc-func-members}
@@ -31,11 +39,20 @@ template$<$typename T$>$ \\
 void Vesper::\+\+Native\+Script\+Component::\+\+Bind (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
+
+Binds a script type to this component. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of the script to bind. \\
+\hline
+\end{DoxyTemplParams}
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_vesper_1_1_native_script_component_ab73d2c29ae882197345ba020a267c284}{InstantiateScript}}\ =\ []()\ \{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}ScriptableEntity*\textcolor{keyword}{>}\ (\textcolor{keyword}{new}\ T());\ \};}
-\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_vesper_1_1_native_script_component_a894ee963a7341f6d432435e96d57f73f}{DestroyScript}}\ =\ [](NativeScriptComponent*\ nsc)\ \{\ \textcolor{keyword}{delete}\ nsc-\/>Instance;\ nsc-\/>Instance\ =\ \textcolor{keyword}{nullptr};\ \};}
-\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_vesper_1_1_native_script_component_ab73d2c29ae882197345ba020a267c284}{InstantiateScript}}\ =\ []()\ \{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}ScriptableEntity*\textcolor{keyword}{>}\ (\textcolor{keyword}{new}\ \doxymbox{\hyperlink{namespace_vesper_1_1_key_a9d802d64a043b9c5e780fdd5b2c430adabdb37f1a703413cdaf86760e7de9b5ba}{T}}());\ \};}
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_vesper_1_1_native_script_component_a894ee963a7341f6d432435e96d57f73f}{DestroyScript}}\ =\ [](NativeScriptComponent*\ nsc)\ \{\ \textcolor{keyword}{delete}\ nsc-\/>Instance;\ nsc-\/>Instance\ =\ \textcolor{keyword}{nullptr};\ \};}
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \}}
 
 \end{DoxyCode}
 
@@ -49,17 +66,29 @@ void Vesper::\+\+Native\+Script\+Component::\+\+Bind (\begin{DoxyParamCaption}{}
 {\footnotesize\ttfamily \label{struct_vesper_1_1_native_script_component_a894ee963a7341f6d432435e96d57f73f} 
 void(\texorpdfstring{$\ast$}{*} Vesper::\+\+Native\+Script\+Component::\+\+Destroy\+Script) (\doxymbox{\hyperlink{struct_vesper_1_1_native_script_component}{Native\+Script\+Component}} \texorpdfstring{$\ast$}{*})}
 
+
+
+Function pointer to destroy the script. 
+
 \Hypertarget{struct_vesper_1_1_native_script_component_a745bfcacb93afb4ff3e5f4ae7f0c3668}\index{Vesper::NativeScriptComponent@{Vesper::NativeScriptComponent}!Instance@{Instance}}
 \index{Instance@{Instance}!Vesper::NativeScriptComponent@{Vesper::NativeScriptComponent}}
 \doxysubsubsection{\texorpdfstring{Instance}{Instance}}
 {\footnotesize\ttfamily \label{struct_vesper_1_1_native_script_component_a745bfcacb93afb4ff3e5f4ae7f0c3668} 
 \doxymbox{\hyperlink{class_vesper_1_1_scriptable_entity}{Scriptable\+Entity}}\texorpdfstring{$\ast$}{*} Vesper::\+\+Native\+Script\+Component::\+\+Instance = nullptr}
 
+
+
+Pointer to the instance of the scriptable entity. 
+
 \Hypertarget{struct_vesper_1_1_native_script_component_ab73d2c29ae882197345ba020a267c284}\index{Vesper::NativeScriptComponent@{Vesper::NativeScriptComponent}!InstantiateScript@{InstantiateScript}}
 \index{InstantiateScript@{InstantiateScript}!Vesper::NativeScriptComponent@{Vesper::NativeScriptComponent}}
 \doxysubsubsection{\texorpdfstring{InstantiateScript}{InstantiateScript}}
 {\footnotesize\ttfamily \label{struct_vesper_1_1_native_script_component_ab73d2c29ae882197345ba020a267c284} 
 \doxymbox{\hyperlink{class_vesper_1_1_scriptable_entity}{Scriptable\+Entity}} \texorpdfstring{$\ast$}{*}(\texorpdfstring{$\ast$}{*} Vesper::\+\+Native\+Script\+Component::\+\+Instantiate\+Script) ()}
+
+
+
+Function pointer to instantiate the script. 
 
 
 

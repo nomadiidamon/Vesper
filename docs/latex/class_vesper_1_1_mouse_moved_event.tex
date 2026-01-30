@@ -2,6 +2,11 @@
 \hypertarget{class_vesper_1_1_mouse_moved_event}{}\label{class_vesper_1_1_mouse_moved_event}\index{Vesper::MouseMovedEvent@{Vesper::MouseMovedEvent}}
 
 
+\doxylink{class_vesper_1_1_event}{Event} for registering mouse movement.  
+
+
+
+
 {\ttfamily \+\#include $<$Mouse\+Event.\+h$>$}
 
 Inheritance diagram for Vesper::\+Mouse\+Moved\+Event:\+\begin{figure}[H]
@@ -14,26 +19,26 @@ Inheritance diagram for Vesper::\+Mouse\+Moved\+Event:\+\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 \doxymbox{\hyperlink{class_vesper_1_1_mouse_moved_event_ad5a836372f9ac72a226b510e5cf92b14}{Mouse\+Moved\+Event}} (float x, float y)
-\item 
+\begin{DoxyCompactList}\small\item\em Construct a \doxylink{class_vesper_1_1_mouse_moved_event}{Mouse\+Moved\+Event} with the specified x and y coordinates. \end{DoxyCompactList}\item 
 float \doxymbox{\hyperlink{class_vesper_1_1_mouse_moved_event_aa68e8151dd543c43d1917a7b21484671}{GetX}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Get the x coordinate of the mouse. \end{DoxyCompactList}\item 
 float \doxymbox{\hyperlink{class_vesper_1_1_mouse_moved_event_af598ce2634633a7432d900a7ad3ab3fa}{GetY}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Get the y coordinate of the mouse. \end{DoxyCompactList}\item 
 std::\+string \doxymbox{\hyperlink{class_vesper_1_1_mouse_moved_event_a2ccfeb59c21f70a757921b76f21f5bee}{To\+String}} () const override
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Convert the event to a string representation. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_vesper_1_1_event}{Vesper::\+\+Event}}}
 \begin{DoxyCompactItemize}
 \item 
 virtual \doxymbox{\hyperlink{class_vesper_1_1_event_a516fc6585a1ca21f7d73fc4deb461ee2}{\texorpdfstring{$\sim$}{\string~}\+Event}} ()=default
 \item 
 virtual \doxymbox{\hyperlink{namespace_vesper_ada4bc37927ce22c44ea0083a224d3bb5}{Event\+Type}} \doxymbox{\hyperlink{class_vesper_1_1_event_a82499595903097f8d2a81e9b0ebfba3d}{Get\+Event\+Type}} () const =0
-\item 
+\begin{DoxyCompactList}\small\item\em Get the type of the event. \end{DoxyCompactList}\item 
 virtual const char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_vesper_1_1_event_af39d90d8ec2e84488c593c517a8e9b6e}{Get\+Name}} () const =0
-\item 
+\begin{DoxyCompactList}\small\item\em Get the name of the event. \end{DoxyCompactList}\item 
 virtual int \doxymbox{\hyperlink{class_vesper_1_1_event_a71e621bec32702d59c7e7ed82c53ac08}{Get\+Category\+Flags}} () const =0
-\item 
+\begin{DoxyCompactList}\small\item\em Get the category flags of the event. \end{DoxyCompactList}\item 
 bool \doxymbox{\hyperlink{class_vesper_1_1_event_a02448606191e9e1cc7869bffd2cb20f7}{Is\+In\+Category}} (\doxymbox{\hyperlink{namespace_vesper_ad79da63be4419c3a218acaa990decabe}{Event\+Category}} category)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Check if the event is in a specific category. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -46,8 +51,11 @@ float \doxymbox{\hyperlink{class_vesper_1_1_mouse_moved_event_a7638e12f67f1aa78a
 \begin{DoxyCompactItemize}
 \item 
 bool \doxymbox{\hyperlink{class_vesper_1_1_event_ab6bc1a2214e615b994cff03df207a0f1}{Handled}} = false
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Indicates whether the event has been handled. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+\doxylink{class_vesper_1_1_event}{Event} for registering mouse movement. 
 
 \label{doc-constructors}
 \Hypertarget{class_vesper_1_1_mouse_moved_event_doc-constructors}
@@ -59,9 +67,20 @@ bool \doxymbox{\hyperlink{class_vesper_1_1_event_ab6bc1a2214e615b994cff03df207a0
 Vesper::\+\+Mouse\+Moved\+Event::\+\+Mouse\+Moved\+Event (\begin{DoxyParamCaption}\item[{float}]{x}{, }\item[{float}]{y}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
+
+Construct a \doxylink{class_vesper_1_1_mouse_moved_event}{Mouse\+Moved\+Event} with the specified x and y coordinates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x coordinate of the mouse. \\
+\hline
+{\em y} & The y coordinate of the mouse. \\
+\hline
+\end{DoxyParams}
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_moved_event_a54b8481a65e4fbe5f4053d137ab724a8}{m\_MouseX}}(x),\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_moved_event_a7638e12f67f1aa78a3beb084e3642dd8}{m\_MouseY}}(y)\ \{}
-\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_moved_event_a54b8481a65e4fbe5f4053d137ab724a8}{m\_MouseX}}(x),\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_moved_event_a7638e12f67f1aa78a3beb084e3642dd8}{m\_MouseY}}(y)\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \}}
 
 \end{DoxyCode}
 
@@ -80,8 +99,12 @@ References \doxymbox{\hyperlink{class_vesper_1_1_mouse_moved_event_a54b8481a65e4
 float Vesper::\+\+Mouse\+Moved\+Event::\+\+GetX (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
+
+Get the x coordinate of the mouse. 
+
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00017\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_moved_event_a54b8481a65e4fbe5f4053d137ab724a8}{m\_MouseX}};\ \}}
+\DoxyCodeLine{00024\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_moved_event_a54b8481a65e4fbe5f4053d137ab724a8}{m\_MouseX}};\ \}}
 
 \end{DoxyCode}
 
@@ -95,8 +118,12 @@ References \doxymbox{\hyperlink{class_vesper_1_1_mouse_moved_event_a54b8481a65e4
 float Vesper::\+\+Mouse\+Moved\+Event::\+\+GetY (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
+
+Get the y coordinate of the mouse. 
+
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00018\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_moved_event_a7638e12f67f1aa78a3beb084e3642dd8}{m\_MouseY}};\ \}}
+\DoxyCodeLine{00026\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_moved_event_a7638e12f67f1aa78a3beb084e3642dd8}{m\_MouseY}};\ \}}
 
 \end{DoxyCode}
 
@@ -111,15 +138,19 @@ std::\+string Vesper::\+\+Mouse\+Moved\+Event::\+\+To\+String (\begin{DoxyParamC
 
 
 
+Convert the event to a string representation. 
+
+
+
 Reimplemented from \doxymbox{\hyperlink{class_vesper_1_1_event_aaba48fc434a2539c5ce000fda6aa7f05}{Vesper::\+\+Event}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ std::stringstream\ ss;}
-\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ ss\ <<\ \textcolor{stringliteral}{"{}MouseMovedEvent:\ "{}}\ <<\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_moved_event_a54b8481a65e4fbe5f4053d137ab724a8}{m\_MouseX}}\ <<\ \textcolor{stringliteral}{"{},\ "{}}\ <<\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_moved_event_a7638e12f67f1aa78a3beb084e3642dd8}{m\_MouseY}};}
-\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ss.str();}
-\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ std::stringstream\ ss;}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ ss\ <<\ \textcolor{stringliteral}{"{}MouseMovedEvent:\ "{}}\ <<\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_moved_event_a54b8481a65e4fbe5f4053d137ab724a8}{m\_MouseX}}\ <<\ \textcolor{stringliteral}{"{},\ "{}}\ <<\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_moved_event_a7638e12f67f1aa78a3beb084e3642dd8}{m\_MouseY}};}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ss.str();}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \}}
 
 \end{DoxyCode}
 

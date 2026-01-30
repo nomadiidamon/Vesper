@@ -2,6 +2,11 @@
 \hypertarget{class_vesper_1_1_scriptable_entity}{}\label{class_vesper_1_1_scriptable_entity}\index{Vesper::ScriptableEntity@{Vesper::ScriptableEntity}}
 
 
+Base class for scriptable entities within a scene.  
+
+
+
+
 {\ttfamily \+\#include $<$Scriptable\+Entity.\+h$>$}
 
 \doxysubsubsection*{Public Member Functions}
@@ -10,16 +15,16 @@
 virtual \doxymbox{\hyperlink{class_vesper_1_1_scriptable_entity_a787e175ce2a3811576c159b21ee6c7ce}{\texorpdfstring{$\sim$}{\string~}\+Scriptable\+Entity}} ()
 \item 
 {\footnotesize template$<$typename T$>$ }\\T \& \doxymbox{\hyperlink{class_vesper_1_1_scriptable_entity_ab54a267b7a3955dc4066c1f525eb9af8}{Get\+Component}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Retrieves a reference to a component of type T attached to the entity. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 virtual void \doxymbox{\hyperlink{class_vesper_1_1_scriptable_entity_a411673888486656cc472552c5a2f8c7c}{On\+Create}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Sets the entity associated with this scriptable entity. \end{DoxyCompactList}\item 
 virtual void \doxymbox{\hyperlink{class_vesper_1_1_scriptable_entity_ab10c29408758e068dbab38765adab286}{On\+Destroy}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Called when the entity is destroyed. \end{DoxyCompactList}\item 
 virtual void \doxymbox{\hyperlink{class_vesper_1_1_scriptable_entity_aebc5ec9861be990c3e5fbdce905e1639}{On\+Update}} (\doxymbox{\hyperlink{class_vesper_1_1_timestep}{Timestep}} ts)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Called every frame to update the entity. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -32,6 +37,11 @@ class \doxymbox{\hyperlink{class_vesper_1_1_scriptable_entity_a032858ae1fe02d2d1
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Detailed Description}
+Base class for scriptable entities within a scene. 
+
+A \doxylink{class_vesper_1_1_scriptable_entity}{Scriptable\+Entity} allows for custom behavior to be defined for entities in a scene, not already provided as standardized components. 
+
 \label{doc-constructors}
 \Hypertarget{class_vesper_1_1_scriptable_entity_doc-constructors}
 \doxysubsection{Constructor \& Destructor Documentation}
@@ -43,7 +53,7 @@ virtual Vesper::\+\+Scriptable\+Entity::\+\texorpdfstring{$\sim$}{\string~}\+Scr
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00010\ \{\};}
+\DoxyCodeLine{00013\ \{\};}
 
 \end{DoxyCode}
 
@@ -59,10 +69,22 @@ template$<$typename T$>$ \\
 T \& Vesper::\+\+Scriptable\+Entity::\+\+Get\+Component (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
+
+Retrieves a reference to a component of type T attached to the entity. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of the component to retrieve. \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+Reference to the component of type T. Will assert if the component does not exist. 
+\end{DoxyReturn}
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_scriptable_entity_a83cce6f3d418e7e02578101bc95cc498}{m\_Entity}}.GetComponent<T>();}
-\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_scriptable_entity_a83cce6f3d418e7e02578101bc95cc498}{m\_Entity}}.GetComponent<\doxymbox{\hyperlink{namespace_vesper_1_1_key_a9d802d64a043b9c5e780fdd5b2c430adabdb37f1a703413cdaf86760e7de9b5ba}{T}}>();}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \}}
 
 \end{DoxyCode}
 \Hypertarget{class_vesper_1_1_scriptable_entity_a411673888486656cc472552c5a2f8c7c}\index{Vesper::ScriptableEntity@{Vesper::ScriptableEntity}!OnCreate@{OnCreate}}
@@ -72,8 +94,12 @@ T \& Vesper::\+\+Scriptable\+Entity::\+\+Get\+Component (\begin{DoxyParamCaption
 virtual void Vesper::\+\+Scriptable\+Entity::\+\+On\+Create (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
 
 
+
+Sets the entity associated with this scriptable entity. 
+
+Meant for internal use by the \doxylink{class_vesper_1_1_scene}{Scene} class. Should be overridden in derived classes if additional setup is required when the entity is set. 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00019\ \{\}}
+\DoxyCodeLine{00031\ \{\}}
 
 \end{DoxyCode}
 \Hypertarget{class_vesper_1_1_scriptable_entity_ab10c29408758e068dbab38765adab286}\index{Vesper::ScriptableEntity@{Vesper::ScriptableEntity}!OnDestroy@{OnDestroy}}
@@ -83,8 +109,12 @@ virtual void Vesper::\+\+Scriptable\+Entity::\+\+On\+Create (\begin{DoxyParamCap
 virtual void Vesper::\+\+Scriptable\+Entity::\+\+On\+Destroy (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
 
 
+
+Called when the entity is destroyed. 
+
+Meant for internal use by the \doxylink{class_vesper_1_1_scene}{Scene} class. Should be overridden in derived classes to handle cleanup. 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00020\ \{\}}
+\DoxyCodeLine{00037\ \{\}}
 
 \end{DoxyCode}
 \Hypertarget{class_vesper_1_1_scriptable_entity_aebc5ec9861be990c3e5fbdce905e1639}\index{Vesper::ScriptableEntity@{Vesper::ScriptableEntity}!OnUpdate@{OnUpdate}}
@@ -94,8 +124,17 @@ virtual void Vesper::\+\+Scriptable\+Entity::\+\+On\+Destroy (\begin{DoxyParamCa
 virtual void Vesper::\+\+Scriptable\+Entity::\+\+On\+Update (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_vesper_1_1_timestep}{Timestep}}}]{ts}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
 
 
+
+Called every frame to update the entity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ts} & The timestep representing the time elapsed since the last update. Custom behavior should be implemented here in derived classes. \\
+\hline
+\end{DoxyParams}
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00021\ \{\}}
+\DoxyCodeLine{00043\ \{\}}
 
 \end{DoxyCode}
 

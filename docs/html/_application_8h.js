@@ -16,5 +16,5 @@ var _application_8h =
       [ "Vesper::WindowMode::Fullscreen", "namespace_vesper.html#a5302ff07d23533d2da0500a894dca563a0829ea6734059d66e6bf87096b215dc1", null ],
       [ "Vesper::WindowMode::Borderless", "namespace_vesper.html#a5302ff07d23533d2da0500a894dca563a78f0192ac55eba33ee88d026452952e5", null ]
     ] ],
-    [ "Vesper::CreateApplication", "namespace_vesper.html#a43e1ca989eabb42f3b23b79517ff1a65", null ]
+    [ "Vesper::CreateApplication", "namespace_vesper.html#ad515973d88dbc403525505f804b420e4", null ]
 ];

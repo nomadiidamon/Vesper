@@ -15,176 +15,243 @@
 \DoxyCodeLine{00011\ }
 \DoxyCodeLine{00012\ \textcolor{keyword}{namespace}\ \doxymbox{\hyperlink{namespace_vesper}{Vesper}}}
 \DoxyCodeLine{00013\ \{}
-\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{struct}\ UUID\ \{}
-\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ std::string\ ID;}
-\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ UUID()\ \{\ ID\ =\ Random::UUID();\ \}}
-\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ UUID(\textcolor{keyword}{const}\ std::string\&\ id)}
-\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ :\ ID\{\ id\ \}\ \{}
-\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ operator\ std::string\&\ ()\ \{\ \textcolor{keywordflow}{return}\ ID;\ \}}
-\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ operator\ \textcolor{keyword}{const}\ std::string\&\ ()\ \textcolor{keyword}{const}\ \{\ \textcolor{keywordflow}{return}\ ID;\ \}}
-\DoxyCodeLine{00022\ \ \ \ \ \};}
-\DoxyCodeLine{00023\ }
-\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{struct}\ UUIDComponent\ \{}
-\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ UUID\ ID;}
-\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ UUIDComponent()}
-\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ :\ ID()\ \{}
-\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ UUIDComponent(\textcolor{keyword}{const}\ UUIDComponent\&)\ =\ \textcolor{keywordflow}{default};}
-\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ UUIDComponent(\textcolor{keyword}{const}\ std::string\&\ id)}
-\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ :\ ID\{\ id\ \}\ \{}
-\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{comment}{///\ @brief\ Universally\ Unique\ Identifier\ }}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{comment}{///\ }}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{comment}{///\ A\ simple\ wrapper\ around\ a\ string\ representing\ a\ UUID.}}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{struct}\ \doxymbox{\hyperlink{struct_vesper_1_1_u_u_i_d}{UUID}}\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ The\ string\ representation\ of\ the\ UUID.}}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_vesper_1_1_u_u_i_d_acf02a244f181ab1706f29b21531a0ec6}{std}}::\doxymbox{\hyperlink{struct_vesper_1_1_u_u_i_d_acf02a244f181ab1706f29b21531a0ec6}{string}}\ \doxymbox{\hyperlink{struct_vesper_1_1_u_u_i_d_acf02a244f181ab1706f29b21531a0ec6}{ID}};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_vesper_1_1_u_u_i_d_a5b59161dd7d5383d571ee3c8c1854f86}{UUID}}()\ \{\ ID\ =\ Random::UUID();\ \}}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ UUID(\textcolor{keyword}{const}\ std::string\&\ id)}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ :\ ID\{\ id\ \}\ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_vesper_1_1_u_u_i_d}{operator}}\ \doxymbox{\hyperlink{struct_vesper_1_1_u_u_i_d}{std}}::\doxymbox{\hyperlink{struct_vesper_1_1_u_u_i_d}{string}}\&\ ()\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{struct_vesper_1_1_u_u_i_d}{ID}};\ \}}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_vesper_1_1_u_u_i_d}{operator}}\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_vesper_1_1_u_u_i_d}{std}}::\doxymbox{\hyperlink{struct_vesper_1_1_u_u_i_d}{string}}\&\ ()\ \textcolor{keyword}{const}\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{struct_vesper_1_1_u_u_i_d}{ID}};\ \}}
+\DoxyCodeLine{00027\ \ \ \ \ \};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{comment}{///\ @brief\ Component\ that\ holds\ a\ UUID.}}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{struct}\ \doxymbox{\hyperlink{struct_vesper_1_1_u_u_i_d_component}{UUIDComponent}}\ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ The\ UUID\ of\ the\ owning\ entity.}}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_vesper_1_1_u_u_i_d}{UUID}}\ \doxymbox{\hyperlink{struct_vesper_1_1_u_u_i_d_component_ad177874069cc0427da6b0d3900052281}{ID}};}
 \DoxyCodeLine{00033\ }
-\DoxyCodeLine{00034\ \ \ \ \ \};}
-\DoxyCodeLine{00035\ }
-\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{struct}\ NameComponent}
-\DoxyCodeLine{00037\ \ \ \ \ \{}
-\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ std::string\ Name;}
-\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ NameComponent()\ =\ \textcolor{keywordflow}{default};}
-\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ NameComponent(\textcolor{keyword}{const}\ NameComponent\&)\ =\ \textcolor{keywordflow}{default};}
-\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ NameComponent(\textcolor{keyword}{const}\ std::string\&\ name)}
-\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ :\ Name(name)\ \{}
-\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ operator\ std::string\&\ ()\ \{\ \textcolor{keywordflow}{return}\ Name;\ \}}
-\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ operator\ \textcolor{keyword}{const}\ std::string\&\ ()\ \textcolor{keyword}{const}\ \{\ \textcolor{keywordflow}{return}\ Name;\ \}}
-\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ std::string\&\ GetName()\ \{\ \textcolor{keywordflow}{return}\ Name;\ \}}
-\DoxyCodeLine{00047\ \ \ \ \ \};}
-\DoxyCodeLine{00048\ }
-\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keyword}{struct}\ TransformComponent}
-\DoxyCodeLine{00050\ \ \ \ \ \{}
-\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ glm::vec3\ Translation\ =\ \{\ 0.0f,\ 0.0f,\ 0.0f\ \};}
-\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ glm::vec3\ Rotation\ =\ \{\ 0.0f,\ 0.0f,\ 0.0f\ \};}
-\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ glm::vec3\ Scale\ =\ \{\ 1.0f,\ 1.0f,\ 1.0f\ \};}
-\DoxyCodeLine{00054\ }
-\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ TransformComponent()\ =\ \textcolor{keywordflow}{default};}
-\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ TransformComponent(\textcolor{keyword}{const}\ TransformComponent\&)\ =\ \textcolor{keywordflow}{default};}
-\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ TransformComponent(\textcolor{keyword}{const}\ glm::vec3\&\ translation)}
-\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ :\ Translation(translation)\ \{}
-\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00060\ }
-\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ glm::mat4\ GetTransform()\ \textcolor{keyword}{const}}
-\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ glm::mat4\ rotation\ =\ glm::toMat4(glm::quat(Rotation));}
-\DoxyCodeLine{00064\ }
-\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ glm::translate(glm::mat4(1.0f),\ Translation)}
-\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *\ rotation}
-\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *\ glm::scale(glm::mat4(1.0f),\ Scale);}
-\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00069\ \ \ \ \ \};}
-\DoxyCodeLine{00070\ }
-\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keyword}{struct}\ SpriteRendererComponent}
-\DoxyCodeLine{00072\ \ \ \ \ \{}
-\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ glm::vec4\ Color\{\ 1.0f,\ 1.0f,\ 1.0f,\ 1.0f\ \};}
-\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ Ref<Texture2D>\ Texture\ =\ \textcolor{keywordtype}{nullptr};}
-\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ TilingFactor\ =\ 1.0f;}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_vesper_1_1_u_u_i_d_component_ad0ad61938f5be3473b9fbd4a2091f0cd}{UUIDComponent}}()}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{struct_vesper_1_1_u_u_i_d_component_ad0ad61938f5be3473b9fbd4a2091f0cd}{ID}}()\ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_vesper_1_1_u_u_i_d_component_a977f54d29a1084f29d96883f4bb00b69}{UUIDComponent}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_vesper_1_1_u_u_i_d_component}{UUIDComponent}}\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ UUIDComponent(\textcolor{keyword}{const}\ std::string\&\ id)}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ :\ ID\{\ id\ \}\ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{comment}{///\ @brief\ Component\ that\ holds\ the\ name\ of\ an\ entity.}}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keyword}{struct}\ \doxymbox{\hyperlink{struct_vesper_1_1_name_component}{NameComponent}}}
+\DoxyCodeLine{00046\ \ \ \ \ \{}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ The\ name\ of\ the\ owning\ entity.}}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_vesper_1_1_name_component_a6715c1bb65252f37530e94971b776a56}{std}}::\doxymbox{\hyperlink{struct_vesper_1_1_name_component_a6715c1bb65252f37530e94971b776a56}{string}}\ \doxymbox{\hyperlink{struct_vesper_1_1_name_component_a6715c1bb65252f37530e94971b776a56}{Name}};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_vesper_1_1_name_component_a765a8a3f57a4ee991ae18ddcca21c588}{NameComponent}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_vesper_1_1_name_component_a5c908c8c06f1178b0409977b71c424c9}{NameComponent}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_vesper_1_1_name_component}{NameComponent}}\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ NameComponent(\textcolor{keyword}{const}\ std::string\&\ name)}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ :\ Name(name)\ \{}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_vesper_1_1_name_component}{operator}}\ \doxymbox{\hyperlink{struct_vesper_1_1_name_component}{std}}::\doxymbox{\hyperlink{struct_vesper_1_1_name_component}{string}}\&\ ()\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{struct_vesper_1_1_name_component}{Name}};\ \}}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_vesper_1_1_name_component}{operator}}\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_vesper_1_1_name_component}{std}}::\doxymbox{\hyperlink{struct_vesper_1_1_name_component}{string}}\&\ ()\ \textcolor{keyword}{const}\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{struct_vesper_1_1_name_component}{Name}};\ \}}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_vesper_1_1_name_component}{std}}::\doxymbox{\hyperlink{struct_vesper_1_1_name_component}{string}}\&\ \doxymbox{\hyperlink{struct_vesper_1_1_name_component}{GetName}}()\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{struct_vesper_1_1_name_component}{Name}};\ \}}
+\DoxyCodeLine{00058\ \ \ \ \ \};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{comment}{///\ @brief\ Component\ that\ holds\ the\ transform\ of\ an\ entity.}}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keyword}{struct}\ \doxymbox{\hyperlink{struct_vesper_1_1_transform_component}{TransformComponent}}}
+\DoxyCodeLine{00062\ \ \ \ \ \{}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Translation\ (position)\ vector.}}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_vesper_1_1_transform_component_ab76e5ae40adaf47f5b9affb5ab81c0b9}{glm}}::\doxymbox{\hyperlink{struct_vesper_1_1_transform_component_ab76e5ae40adaf47f5b9affb5ab81c0b9}{vec3}}\ \doxymbox{\hyperlink{struct_vesper_1_1_transform_component_ab76e5ae40adaf47f5b9affb5ab81c0b9}{Translation}}\ =\ \{\ 0.0f,\ 0.0f,\ 0.0f\ \};}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Rotation\ vector\ (in\ radians).}}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_vesper_1_1_transform_component_afa7331f7960d639da91b9e41373f5144}{glm}}::\doxymbox{\hyperlink{struct_vesper_1_1_transform_component_afa7331f7960d639da91b9e41373f5144}{vec3}}\ \doxymbox{\hyperlink{struct_vesper_1_1_transform_component_afa7331f7960d639da91b9e41373f5144}{Rotation}}\ =\ \{\ 0.0f,\ 0.0f,\ 0.0f\ \};}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Scale\ vector.}}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_vesper_1_1_transform_component_a4655769f7629c9ea59ff14fb4aba13d9}{glm}}::\doxymbox{\hyperlink{struct_vesper_1_1_transform_component_a4655769f7629c9ea59ff14fb4aba13d9}{vec3}}\ \doxymbox{\hyperlink{struct_vesper_1_1_transform_component_a4655769f7629c9ea59ff14fb4aba13d9}{Scale}}\ =\ \{\ 1.0f,\ 1.0f,\ 1.0f\ \};}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_vesper_1_1_transform_component_a7e1d047861c7441c3e72abd9439ef6c2}{TransformComponent}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_vesper_1_1_transform_component_a560e3d1e61c0692782e36f99b159863a}{TransformComponent}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_vesper_1_1_transform_component}{TransformComponent}}\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Constructor\ that\ initializes\ the\ translation\ with\ a\ 3D\ vector.}}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_vesper_1_1_transform_component_a286f3a1bf0af79d94f952759ff51f846}{TransformComponent}}(\textcolor{keyword}{const}\ glm::vec3\&\ translation)}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{struct_vesper_1_1_transform_component_a286f3a1bf0af79d94f952759ff51f846}{Translation}}(\doxymbox{\hyperlink{struct_vesper_1_1_transform_component_a286f3a1bf0af79d94f952759ff51f846}{translation}})\ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{00076\ }
-\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ SpriteRendererComponent()\ =\ \textcolor{keywordflow}{default};}
-\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ SpriteRendererComponent(\textcolor{keyword}{const}\ SpriteRendererComponent\&)\ =\ \textcolor{keywordflow}{default};}
-\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ SpriteRendererComponent(\textcolor{keyword}{const}\ glm::vec4\&\ color)}
-\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ :\ Color(color)\ \{}
-\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00082\ }
-\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ operator\ glm::vec4\&\ ()\ \{\ \textcolor{keywordflow}{return}\ Color;\ \}}
-\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ operator\ \textcolor{keyword}{const}\ glm::vec4\&\ ()\ \textcolor{keyword}{const}\ \{\ \textcolor{keywordflow}{return}\ Color;\ \}}
-\DoxyCodeLine{00085\ }
-\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ glm::vec4\&\ GetColor()\ \{\ \textcolor{keywordflow}{return}\ Color;\ \}}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Calculates\ and\ returns\ the\ transformation\ matrix.}}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_vesper_1_1_transform_component_a4d0f447eac962ef277fe1180ef4a422e}{glm}}::\doxymbox{\hyperlink{struct_vesper_1_1_transform_component_a4d0f447eac962ef277fe1180ef4a422e}{mat4}}\ \doxymbox{\hyperlink{struct_vesper_1_1_transform_component_a4d0f447eac962ef277fe1180ef4a422e}{GetTransform}}()\ \textcolor{keyword}{const}}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ glm::mat4\ rotation\ =\ glm::toMat4(glm::quat(Rotation));}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ glm::translate(glm::mat4(1.0f),\ Translation)}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *\ rotation}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *\ glm::scale(glm::mat4(1.0f),\ Scale);}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00086\ \ \ \ \ \};}
 \DoxyCodeLine{00087\ }
-\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ TextureEnabled\ =\ \textcolor{keyword}{false};}
-\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ Billboard\ =\ \textcolor{keyword}{false};}
-\DoxyCodeLine{00090\ \ \ \ \ \};}
-\DoxyCodeLine{00091\ }
-\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keyword}{struct}\ SubTextureComponent}
-\DoxyCodeLine{00093\ \ \ \ \ \{}
-\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ Ref<SubTexture2D>\ SubTexture;}
-\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ glm::vec2\ TilingFactor\ =\ \{\ 1.0f,\ 1.0f\ \};}
-\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ glm::vec2\ Offset\ =\ \{\ 0.0f,\ 0.0f\ \};}
-\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ SubTextureComponent()\ =\ \textcolor{keywordflow}{default};}
-\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ SubTextureComponent(\textcolor{keyword}{const}\ Ref<Texture2D>\&\ texture)}
-\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ :\ SubTexture(SubTexture2D::CreateFromCoords(texture,\ \{\ 0,\ 0\ \},\ \{\ texture-\/>GetWidth(),\ texture-\/>GetHeight()\ \}))\ \{}
-\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ SubTextureComponent(\textcolor{keyword}{const}\ Ref<SubTexture2D>\&\ subTexture)}
-\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ :\ SubTexture(subTexture)\ \{}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{comment}{///\ @brief\ Component\ that\ holds\ sprite\ rendering\ data.}}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keyword}{struct}\ \doxymbox{\hyperlink{struct_vesper_1_1_sprite_renderer_component}{SpriteRendererComponent}}}
+\DoxyCodeLine{00090\ \ \ \ \ \{}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Color\ of\ the\ sprite.}}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_vesper_1_1_sprite_renderer_component_aa7e606fafd917f6b58ad3fe4d563aa0e}{glm}}::\doxymbox{\hyperlink{struct_vesper_1_1_sprite_renderer_component_aa7e606fafd917f6b58ad3fe4d563aa0e}{vec4}}\ \doxymbox{\hyperlink{struct_vesper_1_1_sprite_renderer_component_aa7e606fafd917f6b58ad3fe4d563aa0e}{Color}}\{\ 1.0f,\ 1.0f,\ 1.0f,\ 1.0f\ \};}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Texture\ of\ the\ sprite.}}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_vesper_1_1_sprite_renderer_component_a5a57c23214bb833dda2791ee6f170f69}{Ref}}<\doxymbox{\hyperlink{struct_vesper_1_1_sprite_renderer_component_a5a57c23214bb833dda2791ee6f170f69}{Texture2D}}>\ \doxymbox{\hyperlink{struct_vesper_1_1_sprite_renderer_component_a5a57c23214bb833dda2791ee6f170f69}{Texture}}\ =\ \textcolor{keywordtype}{nullptr};}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Tiling\ factor\ for\ the\ texture.}}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{struct_vesper_1_1_sprite_renderer_component_a4aa45da4cf21e0ed9f4246523a742a18}{TilingFactor}}\ =\ 1.0f;}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_vesper_1_1_sprite_renderer_component_a85c267e505796ddb9a9b7552783aad8c}{SpriteRendererComponent}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_vesper_1_1_sprite_renderer_component_a4329a5438b2fbfc5307e01c09351ada2}{SpriteRendererComponent}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_vesper_1_1_sprite_renderer_component}{SpriteRendererComponent}}\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Constructor\ that\ initializes\ the\ color.}}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_vesper_1_1_sprite_renderer_component_adf70b8e8326c401c67c70e06b4dac563}{SpriteRendererComponent}}(\textcolor{keyword}{const}\ glm::vec4\&\ color)}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{struct_vesper_1_1_sprite_renderer_component_adf70b8e8326c401c67c70e06b4dac563}{Color}}(\doxymbox{\hyperlink{struct_vesper_1_1_sprite_renderer_component_adf70b8e8326c401c67c70e06b4dac563}{color}})\ \{}
 \DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{00104\ }
-\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ SetTexture(\textcolor{keyword}{const}\ Ref<Texture2D>\&\ texture)\ \{}
-\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ SubTexture\ =\ SubTexture2D::CreateFromCoords(texture,\ \{\ 0,\ 0\ \},\ \{\ texture-\/>GetWidth(),\ texture-\/>GetHeight()\ \});}
-\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00108\ }
-\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ SetTilingFactor(\textcolor{keyword}{const}\ glm::vec2\&\ tiling)\ \{}
-\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ TilingFactor\ =\ tiling;}
-\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00112\ }
-\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ SetOffset(\textcolor{keyword}{const}\ glm::vec2\&\ offset)\ \{}
-\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ Offset\ =\ offset;}
-\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00116\ }
-\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ operator\ Ref<SubTexture2D>\&\ ()\ \{\ \textcolor{keywordflow}{return}\ SubTexture;\ \}}
-\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ operator\ \textcolor{keyword}{const}\ Ref<SubTexture2D>\&\ ()\ \textcolor{keyword}{const}\ \{\ \textcolor{keywordflow}{return}\ SubTexture;\ \}}
-\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ Ref<SubTexture2D>\&\ GetSubTexture()\ \{\ \textcolor{keywordflow}{return}\ SubTexture;\ \}}
-\DoxyCodeLine{00120\ \ \ \ \ \};}
-\DoxyCodeLine{00121\ }
-\DoxyCodeLine{00122\ \ \ \ \ \textcolor{comment}{//\ Animates\ through\ a\ series\ of\ sub\ textures\ (can\ be\ used\ with\ full\ textures)}}
-\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keyword}{struct}\ TextureAnimationComponent}
-\DoxyCodeLine{00124\ \ \ \ \ \{}
-\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ std::vector<Ref<SubTexture2D>>\ SubTextures;}
-\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ uint32\_t\ CurrentFrame\ =\ 0;}
-\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ FrameTime\ =\ 0.6f;\ \textcolor{comment}{//\ Time\ per\ frame\ in\ seconds}}
-\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ TimeAccumulator\ =\ 0.0f;\ \textcolor{comment}{//\ per-\/instance\ accumulator}}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_vesper_1_1_sprite_renderer_component}{operator}}\ \doxymbox{\hyperlink{struct_vesper_1_1_sprite_renderer_component}{glm}}::\doxymbox{\hyperlink{struct_vesper_1_1_sprite_renderer_component}{vec4}}\&\ ()\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{struct_vesper_1_1_sprite_renderer_component}{Color}};\ \}}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_vesper_1_1_sprite_renderer_component}{operator}}\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_vesper_1_1_sprite_renderer_component}{glm}}::\doxymbox{\hyperlink{struct_vesper_1_1_sprite_renderer_component}{vec4}}\&\ ()\ \textcolor{keyword}{const}\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{struct_vesper_1_1_sprite_renderer_component}{Color}};\ \}}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Returns\ the\ color\ of\ the\ sprite.}}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_vesper_1_1_sprite_renderer_component}{glm}}::\doxymbox{\hyperlink{struct_vesper_1_1_sprite_renderer_component}{vec4}}\&\ \doxymbox{\hyperlink{struct_vesper_1_1_sprite_renderer_component}{GetColor}}()\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{struct_vesper_1_1_sprite_renderer_component}{Color}};\ \}}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ whether\ the\ texturing\ is\ enabled}}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{struct_vesper_1_1_sprite_renderer_component}{TextureEnabled}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ whether\ the\ sprite\ should\ always\ face\ the\ camera}}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \textcolor{comment}{///}}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ WIP}}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{struct_vesper_1_1_sprite_renderer_component_a78c4dc66ff2541f777f44da2484c137a}{Billboard}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00118\ \ \ \ \ \};}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{comment}{///\ @brief\ Component\ that\ holds\ sub-\/texture\ data\ for\ sprites.}}
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keyword}{struct}\ \doxymbox{\hyperlink{struct_vesper_1_1_sub_texture_component}{SubTextureComponent}}}
+\DoxyCodeLine{00122\ \ \ \ \ \{}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ The\ sub-\/texture\ reference.}}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_vesper_1_1_sub_texture_component_ac1d16aab60b9c8eb56509bae122282ff}{Ref}}<\doxymbox{\hyperlink{struct_vesper_1_1_sub_texture_component_ac1d16aab60b9c8eb56509bae122282ff}{SubTexture2D}}>\ \doxymbox{\hyperlink{struct_vesper_1_1_sub_texture_component_ac1d16aab60b9c8eb56509bae122282ff}{SubTexture}};}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Tiling\ factor\ for\ the\ sub-\/texture.}}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_vesper_1_1_sub_texture_component_ad0fae7fe876f41da5b70873bb3eb74f7}{glm}}::\doxymbox{\hyperlink{struct_vesper_1_1_sub_texture_component_ad0fae7fe876f41da5b70873bb3eb74f7}{vec2}}\ \doxymbox{\hyperlink{struct_vesper_1_1_sub_texture_component_ad0fae7fe876f41da5b70873bb3eb74f7}{TilingFactor}}\ =\ \{\ 1.0f,\ 1.0f\ \};}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Offset\ for\ the\ sub-\/texture.}}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_vesper_1_1_sub_texture_component_a49bfa08639639e1e83e0f793aae92e66}{glm}}::\doxymbox{\hyperlink{struct_vesper_1_1_sub_texture_component_a49bfa08639639e1e83e0f793aae92e66}{vec2}}\ \doxymbox{\hyperlink{struct_vesper_1_1_sub_texture_component_a49bfa08639639e1e83e0f793aae92e66}{Offset}}\ =\ \{\ 0.0f,\ 0.0f\ \};}
 \DoxyCodeLine{00129\ }
-\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ TextureAnimationComponent()\ =\ \textcolor{keywordflow}{default};}
-\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ TextureAnimationComponent(\textcolor{keyword}{const}\ TextureAnimationComponent\&)\ =\ \textcolor{keywordflow}{default};}
-\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ TextureAnimationComponent(\textcolor{keyword}{const}\ std::vector<Ref<SubTexture2D>>\&\ subTextures,\ \textcolor{keywordtype}{float}\ frameTime)}
-\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ :\ SubTextures(subTextures),\ FrameTime(frameTime)\ \{}
-\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ operator\ std::vector<Ref<SubTexture2D>>\&\ ()\ \{\ \textcolor{keywordflow}{return}\ SubTextures;\ \}}
-\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ operator\ \textcolor{keyword}{const}\ std::vector<Ref<SubTexture2D>>\&\ ()\ \textcolor{keyword}{const}\ \{\ \textcolor{keywordflow}{return}\ SubTextures;\ \}}
-\DoxyCodeLine{00137\ }
-\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ std::vector<Ref<SubTexture2D>>\&\ GetSubTextures()\ \{\ \textcolor{keywordflow}{return}\ SubTextures;\ \}}
-\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ uint32\_t\ GetCurrentFrame()\ \textcolor{keyword}{const}\ \{\ \textcolor{keywordflow}{return}\ CurrentFrame;\ \}}
-\DoxyCodeLine{00140\ }
-\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ Update(\textcolor{keywordtype}{float}\ deltaTime)\ \{}
-\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (SubTextures.empty()\ ||\ FrameTime\ <=\ 0.0f)}
-\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{00144\ }
-\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ TimeAccumulator\ +=\ deltaTime;}
-\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (TimeAccumulator\ >=\ FrameTime)\ \{}
-\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CurrentFrame\ =\ (CurrentFrame\ +\ 1)\ \%\ \textcolor{keyword}{static\_cast}<uint32\_t>(SubTextures.size());}
-\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ TimeAccumulator\ -\/=\ FrameTime;}
-\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00151\ }
-\DoxyCodeLine{00152\ }
-\DoxyCodeLine{00153\ \ \ \ \ \};}
-\DoxyCodeLine{00154\ }
-\DoxyCodeLine{00155\ \ \ \ \ \textcolor{keyword}{struct}\ CameraComponent}
-\DoxyCodeLine{00156\ \ \ \ \ \{}
-\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_scene_camera}{SceneCamera}}\ Camera;}
-\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ Primary\ =\ \textcolor{keyword}{true};}
-\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ FixedAspectRatio\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_vesper_1_1_sub_texture_component_aea283ecd27977c50e2885c1219e95840}{SubTextureComponent}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Constructor\ that\ initializes\ the\ sub-\/texture\ from\ a\ full\ texture.}}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_vesper_1_1_sub_texture_component_ada282e6e8f6e21fec5beb4d4edbb9106}{SubTextureComponent}}(\textcolor{keyword}{const}\ Ref<Texture2D>\&\ texture)}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{struct_vesper_1_1_sub_texture_component_ada282e6e8f6e21fec5beb4d4edbb9106}{SubTexture}}(\doxymbox{\hyperlink{struct_vesper_1_1_sub_texture_component_ada282e6e8f6e21fec5beb4d4edbb9106}{SubTexture2D}}::\doxymbox{\hyperlink{struct_vesper_1_1_sub_texture_component_ada282e6e8f6e21fec5beb4d4edbb9106}{CreateFromCoords}}(\doxymbox{\hyperlink{struct_vesper_1_1_sub_texture_component_ada282e6e8f6e21fec5beb4d4edbb9106}{texture}},\ \{\ 0,\ 0\ \},\ \{\ \doxymbox{\hyperlink{struct_vesper_1_1_sub_texture_component_ada282e6e8f6e21fec5beb4d4edbb9106}{texture}}-\/>\doxymbox{\hyperlink{struct_vesper_1_1_sub_texture_component_ada282e6e8f6e21fec5beb4d4edbb9106}{GetWidth}}(),\ \doxymbox{\hyperlink{struct_vesper_1_1_sub_texture_component_ada282e6e8f6e21fec5beb4d4edbb9106}{texture}}-\/>\doxymbox{\hyperlink{struct_vesper_1_1_sub_texture_component_ada282e6e8f6e21fec5beb4d4edbb9106}{GetHeight}}()\ \}))\ \{}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Constructor\ that\ initializes\ the\ sub-\/texture\ directly.}}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_vesper_1_1_sub_texture_component_ada282e6e8f6e21fec5beb4d4edbb9106}{SubTextureComponent}}(\textcolor{keyword}{const}\ Ref<SubTexture2D>\&\ subTexture)}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{struct_vesper_1_1_sub_texture_component_ada282e6e8f6e21fec5beb4d4edbb9106}{SubTexture}}(\doxymbox{\hyperlink{struct_vesper_1_1_sub_texture_component_ada282e6e8f6e21fec5beb4d4edbb9106}{subTexture}})\ \{}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Copy\ constructor.}}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{struct_vesper_1_1_sub_texture_component_ae375ea11b9b216a33fa8ac198e84a9ed}{SetTexture}}(\textcolor{keyword}{const}\ Ref<Texture2D>\&\ texture)\ \{}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ SubTexture\ =\ SubTexture2D::CreateFromCoords(texture,\ \{\ 0,\ 0\ \},\ \{\ texture-\/>GetWidth(),\ texture-\/>GetHeight()\ \});}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Sets\ the\ tiling\ factor\ for\ the\ sub-\/texture.}}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{struct_vesper_1_1_sub_texture_component_ae07fe023442ca4a14301e46ee23f1f7d}{SetTilingFactor}}(\textcolor{keyword}{const}\ glm::vec2\&\ tiling)\ \{}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ TilingFactor\ =\ tiling;}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Sets\ the\ offset\ for\ the\ sub-\/texture.}}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{struct_vesper_1_1_sub_texture_component_a1cc3f86894ae739160989d5adf085ebc}{SetOffset}}(\textcolor{keyword}{const}\ glm::vec2\&\ offset)\ \{}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ Offset\ =\ offset;}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_vesper_1_1_sub_texture_component}{operator}}\ \doxymbox{\hyperlink{struct_vesper_1_1_sub_texture_component}{Ref}}<\doxymbox{\hyperlink{struct_vesper_1_1_sub_texture_component}{SubTexture2D}}>\&\ ()\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{struct_vesper_1_1_sub_texture_component}{SubTexture}};\ \}}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_vesper_1_1_sub_texture_component}{operator}}\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_vesper_1_1_sub_texture_component}{Ref}}<\doxymbox{\hyperlink{struct_vesper_1_1_sub_texture_component}{SubTexture2D}}>\&\ ()\ \textcolor{keyword}{const}\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{struct_vesper_1_1_sub_texture_component}{SubTexture}};\ \}}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_vesper_1_1_sub_texture_component}{Ref}}<\doxymbox{\hyperlink{struct_vesper_1_1_sub_texture_component}{SubTexture2D}}>\&\ \doxymbox{\hyperlink{struct_vesper_1_1_sub_texture_component}{GetSubTexture}}()\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{struct_vesper_1_1_sub_texture_component}{SubTexture}};\ \}}
+\DoxyCodeLine{00159\ \ \ \ \ \};}
 \DoxyCodeLine{00160\ }
-\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ CameraComponent()\ =\ \textcolor{keywordflow}{default};}
-\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ CameraComponent(\textcolor{keyword}{const}\ CameraComponent\&)\ =\ \textcolor{keywordflow}{default};}
-\DoxyCodeLine{00163\ }
-\DoxyCodeLine{00164\ \ \ \ \ \};}
-\DoxyCodeLine{00165\ }
-\DoxyCodeLine{00166\ \ \ \ \ \textcolor{keyword}{class}\ \doxymbox{\hyperlink{class_vesper_1_1_scriptable_entity}{ScriptableEntity}};}
-\DoxyCodeLine{00167\ \ \ \ \ \textcolor{keyword}{class}\ \doxymbox{\hyperlink{class_vesper_1_1_timestep}{Timestep}};}
-\DoxyCodeLine{00168\ }
-\DoxyCodeLine{00169\ \ \ \ \ \textcolor{keyword}{struct}\ NativeScriptComponent}
-\DoxyCodeLine{00170\ \ \ \ \ \{}
-\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_scriptable_entity}{ScriptableEntity}}*\ Instance\ =\ \textcolor{keywordtype}{nullptr};}
-\DoxyCodeLine{00172\ }
-\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_scriptable_entity}{ScriptableEntity}}*\ (*InstantiateScript)();}
-\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ (*DestroyScript)(NativeScriptComponent*);}
-\DoxyCodeLine{00175\ }
-\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
-\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ Bind()}
-\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \ \ \ \ InstantiateScript\ =\ []()\ \{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast}<ScriptableEntity*>\ (\textcolor{keyword}{new}\ T());\ \};}
-\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \ \ \ \ DestroyScript\ =\ [](NativeScriptComponent*\ nsc)\ \{\ \textcolor{keyword}{delete}\ nsc-\/>Instance;\ nsc-\/>Instance\ =\ \textcolor{keywordtype}{nullptr};\ \};}
-\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00182\ \ \ \ \ \};}
-\DoxyCodeLine{00183\ }
-\DoxyCodeLine{00184\ \}}
+\DoxyCodeLine{00161\ \ \ \ \ \textcolor{comment}{///\ @brief\ Animates\ through\ a\ series\ of\ sub\ textures}}
+\DoxyCodeLine{00162\ \ \ \ \ \textcolor{comment}{///}}
+\DoxyCodeLine{00163\ \ \ \ \ \textcolor{comment}{///\ (can\ be\ used\ with\ full\ textures)}}
+\DoxyCodeLine{00164\ \ \ \ \ \textcolor{keyword}{struct}\ \doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component}{TextureAnimationComponent}}}
+\DoxyCodeLine{00165\ \ \ \ \ \{}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ The\ list\ of\ sub-\/textures\ for\ the\ animation.}}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component_a21542f18f8f3b9de5c167e200a7eb515}{std}}::\doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component_a21542f18f8f3b9de5c167e200a7eb515}{vector}}<\doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component_a21542f18f8f3b9de5c167e200a7eb515}{Ref}}<\doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component_a21542f18f8f3b9de5c167e200a7eb515}{SubTexture2D}}>>\ \doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component_a21542f18f8f3b9de5c167e200a7eb515}{SubTextures}};}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ The\ current\ frame\ index.}}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ uint32\_t\ \doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component_a750510c360faf4c4c509f2555d9dd60d}{CurrentFrame}}\ =\ 0;}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Time\ per\ frame\ in\ seconds.}}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component_ab80a76f7f5a5a5bdb9959262742c5869}{FrameTime}}\ =\ 0.6f;\ \textcolor{comment}{//\ Time\ per\ frame\ in\ seconds}}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Accumulated\ time\ for\ frame\ switching.}}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component_a16a0dc3f1aee3138fee0b181064d0031}{TimeAccumulator}}\ =\ 0.0f;\ \textcolor{comment}{//\ per-\/instance\ accumulator}}
+\DoxyCodeLine{00174\ }
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component_ab66bd56f2dc429e6011bcddbb03ac315}{TextureAnimationComponent}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component_afe317229f4386b384d17b0990b2ecf60}{TextureAnimationComponent}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component}{TextureAnimationComponent}}\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Constructor\ that\ initializes\ the\ sub-\/textures\ and\ frame\ time.}}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \textcolor{comment}{///}}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @param\ subTextures\ Vector\ of\ sub-\/textures\ for\ the\ animation.}}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @param\ frameTime\ Time\ per\ frame\ in\ seconds.}}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component_aadf0433d47a416bd3147f4d7cb3e80e5}{TextureAnimationComponent}}(\textcolor{keyword}{const}\ std::vector<Ref<SubTexture2D>>\&\ subTextures,\ \textcolor{keywordtype}{float}\ frameTime)}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component_aadf0433d47a416bd3147f4d7cb3e80e5}{SubTextures}}(\doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component_aadf0433d47a416bd3147f4d7cb3e80e5}{subTextures}}),\ \doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component_ab80a76f7f5a5a5bdb9959262742c5869}{FrameTime}}(frameTime)\ \{}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component}{operator}}\ \doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component}{std}}::\doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component}{vector}}<\doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component}{Ref}}<\doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component}{SubTexture2D}}>>\&\ ()\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component}{SubTextures}};\ \}}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component}{operator}}\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component}{std}}::\doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component}{vector}}<\doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component}{Ref}}<\doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component}{SubTexture2D}}>>\&\ ()\ \textcolor{keyword}{const}\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component}{SubTextures}};\ \}}
+\DoxyCodeLine{00186\ }
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component}{std}}::\doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component}{vector}}<\doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component}{Ref}}<\doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component}{SubTexture2D}}>>\&\ \doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component}{GetSubTextures}}()\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component}{SubTextures}};\ \}}
+\DoxyCodeLine{00188\ }
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Returns\ the\ index\ of\ the\ current\ frame.}}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component}{uint32\_t}}\ \doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component}{GetCurrentFrame}}()\ \textcolor{keyword}{const}\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component}{CurrentFrame}};\ \}}
+\DoxyCodeLine{00191\ }
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Updates\ the\ animation\ based\ on\ the\ elapsed\ time.}}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \textcolor{comment}{///}}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @param\ deltaTime\ The\ elapsed\ time\ since\ the\ last\ update.}}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component}{Update}}(\textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component}{deltaTime}})\ \{}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component}{SubTextures}}.\doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component}{empty}}()\ ||\ \doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component}{FrameTime}}\ <=\ 0.0f)}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00198\ }
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component}{TimeAccumulator}}\ +=\ \doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component}{deltaTime}};}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (\doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component}{TimeAccumulator}}\ >=\ \doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component}{FrameTime}})\ \{}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component}{CurrentFrame}}\ =\ (\doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component}{CurrentFrame}}\ +\ 1)\ \%\ \textcolor{keyword}{static\_cast}<\doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component}{uint32\_t}}>(\doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component}{SubTextures}}.\doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component}{size}}());}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component}{TimeAccumulator}}\ -\/=\ \doxymbox{\hyperlink{struct_vesper_1_1_texture_animation_component}{FrameTime}};}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00205\ \ \ \ \ \};}
+\DoxyCodeLine{00206\ }
+\DoxyCodeLine{00207\ \ \ \ \ \textcolor{comment}{///\ @brief\ Component\ that\ holds\ camera\ data.}}
+\DoxyCodeLine{00208\ \ \ \ \ \textcolor{keyword}{struct}\ \doxymbox{\hyperlink{struct_vesper_1_1_camera_component}{CameraComponent}}}
+\DoxyCodeLine{00209\ \ \ \ \ \{}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ The\ scene\ camera.}}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_scene_camera}{SceneCamera}}\ \doxymbox{\hyperlink{struct_vesper_1_1_camera_component_ae088ce563caf2cfe105fef3ed19af305}{Camera}};}
+\DoxyCodeLine{00212\ }
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Whether\ this\ camera\ is\ the\ primary\ camera.}}
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \textcolor{comment}{///}}
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ If\ multiple\ cameras\ exist,\ the\ primary\ camera\ for\ rendering\ will\ be\ the\ first\ one\ found\ marked\ as\ primary.}}
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{struct_vesper_1_1_camera_component_a314710621af84eb010cae49491208b86}{Primary}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00217\ }
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Whether\ the\ aspect\ ratio\ is\ fixed.}}
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{struct_vesper_1_1_camera_component_af3af61f36ac41376c70a624b7496558a}{FixedAspectRatio}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00220\ }
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_vesper_1_1_camera_component_a2d47ed24eeb14999a2242d74d612c017}{CameraComponent}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_vesper_1_1_camera_component_a3185b13486d5bc5412f95536ce1a8f98}{CameraComponent}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_vesper_1_1_camera_component}{CameraComponent}}\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00223\ }
+\DoxyCodeLine{00224\ \ \ \ \ \};}
+\DoxyCodeLine{00225\ }
+\DoxyCodeLine{00226\ \ \ \ \ \textcolor{keyword}{class}\ \doxymbox{\hyperlink{class_vesper_1_1_scriptable_entity}{ScriptableEntity}};}
+\DoxyCodeLine{00227\ \ \ \ \ \textcolor{keyword}{class}\ \doxymbox{\hyperlink{class_vesper_1_1_timestep}{Timestep}};}
+\DoxyCodeLine{00228\ }
+\DoxyCodeLine{00229\ \ \ \ \ \textcolor{comment}{///\ @brief\ Component\ that\ holds\ scripting\ data\ for\ an\ entity.}}
+\DoxyCodeLine{00230\ \ \ \ \ \textcolor{keyword}{struct}\ \doxymbox{\hyperlink{struct_vesper_1_1_native_script_component}{NativeScriptComponent}}}
+\DoxyCodeLine{00231\ \ \ \ \ \{}
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Pointer\ to\ the\ instance\ of\ the\ scriptable\ entity.}}
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_scriptable_entity}{ScriptableEntity}}*\ \doxymbox{\hyperlink{struct_vesper_1_1_native_script_component_a745bfcacb93afb4ff3e5f4ae7f0c3668}{Instance}}\ =\ \textcolor{keywordtype}{nullptr};}
+\DoxyCodeLine{00234\ }
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Function\ pointer\ to\ instantiate\ the\ script.}}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_scriptable_entity}{ScriptableEntity}}*\ (*InstantiateScript)();}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Function\ pointer\ to\ destroy\ the\ script.}}
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ (*\doxymbox{\hyperlink{struct_vesper_1_1_native_script_component_a894ee963a7341f6d432435e96d57f73f}{DestroyScript}})(\doxymbox{\hyperlink{struct_vesper_1_1_native_script_component}{NativeScriptComponent}}*);}
+\DoxyCodeLine{00239\ }
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Binds\ a\ script\ type\ to\ this\ component.}}
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \textcolor{comment}{///}}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @tparam\ T\ The\ type\ of\ the\ script\ to\ bind.}}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{struct_vesper_1_1_native_script_component_a238c55d28fd5b4b7e11762fe8664be9e}{Bind}}()}
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_vesper_1_1_native_script_component}{InstantiateScript}}\ =\ []()\ \{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast}<\doxymbox{\hyperlink{struct_vesper_1_1_native_script_component}{ScriptableEntity}}*>\ (\textcolor{keyword}{new}\ \doxymbox{\hyperlink{struct_vesper_1_1_native_script_component}{T}}());\ \};}
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_vesper_1_1_native_script_component}{DestroyScript}}\ =\ [](\doxymbox{\hyperlink{struct_vesper_1_1_native_script_component}{NativeScriptComponent}}*\ \doxymbox{\hyperlink{struct_vesper_1_1_native_script_component}{nsc}})\ \{\ \textcolor{keyword}{delete}\ \doxymbox{\hyperlink{struct_vesper_1_1_native_script_component}{nsc}}-\/>\doxymbox{\hyperlink{struct_vesper_1_1_native_script_component}{Instance}};\ \doxymbox{\hyperlink{struct_vesper_1_1_native_script_component}{nsc}}-\/>\doxymbox{\hyperlink{struct_vesper_1_1_native_script_component}{Instance}}\ =\ \textcolor{keywordtype}{nullptr};\ \};}
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00249\ \ \ \ \ \};}
+\DoxyCodeLine{00250\ }
+\DoxyCodeLine{00251\ \}}
 
 \end{DoxyCode}

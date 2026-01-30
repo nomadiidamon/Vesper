@@ -2,6 +2,11 @@
 \hypertarget{class_vesper_1_1_app_update_event}{}\label{class_vesper_1_1_app_update_event}\index{Vesper::AppUpdateEvent@{Vesper::AppUpdateEvent}}
 
 
+\doxylink{class_vesper_1_1_event}{Event} for registering application update.  
+
+
+
+
 {\ttfamily \+\#include $<$Application\+Event.\+h$>$}
 
 Inheritance diagram for Vesper::\+App\+Update\+Event:\+\begin{figure}[H]
@@ -21,22 +26,25 @@ Inheritance diagram for Vesper::\+App\+Update\+Event:\+\begin{figure}[H]
 virtual \doxymbox{\hyperlink{class_vesper_1_1_event_a516fc6585a1ca21f7d73fc4deb461ee2}{\texorpdfstring{$\sim$}{\string~}\+Event}} ()=default
 \item 
 virtual \doxymbox{\hyperlink{namespace_vesper_ada4bc37927ce22c44ea0083a224d3bb5}{Event\+Type}} \doxymbox{\hyperlink{class_vesper_1_1_event_a82499595903097f8d2a81e9b0ebfba3d}{Get\+Event\+Type}} () const =0
-\item 
+\begin{DoxyCompactList}\small\item\em Get the type of the event. \end{DoxyCompactList}\item 
 virtual const char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_vesper_1_1_event_af39d90d8ec2e84488c593c517a8e9b6e}{Get\+Name}} () const =0
-\item 
+\begin{DoxyCompactList}\small\item\em Get the name of the event. \end{DoxyCompactList}\item 
 virtual int \doxymbox{\hyperlink{class_vesper_1_1_event_a71e621bec32702d59c7e7ed82c53ac08}{Get\+Category\+Flags}} () const =0
-\item 
+\begin{DoxyCompactList}\small\item\em Get the category flags of the event. \end{DoxyCompactList}\item 
 virtual std::\+string \doxymbox{\hyperlink{class_vesper_1_1_event_aaba48fc434a2539c5ce000fda6aa7f05}{To\+String}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Convert the event to a string representation. \end{DoxyCompactList}\item 
 bool \doxymbox{\hyperlink{class_vesper_1_1_event_a02448606191e9e1cc7869bffd2cb20f7}{Is\+In\+Category}} (\doxymbox{\hyperlink{namespace_vesper_ad79da63be4419c3a218acaa990decabe}{Event\+Category}} category)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Check if the event is in a specific category. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Additional Inherited Members}
 \doxysubsection*{Public Attributes inherited from \doxymbox{\hyperlink{class_vesper_1_1_event}{Vesper::\+\+Event}}}
 \begin{DoxyCompactItemize}
 \item 
 bool \doxymbox{\hyperlink{class_vesper_1_1_event_ab6bc1a2214e615b994cff03df207a0f1}{Handled}} = false
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Indicates whether the event has been handled. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+\doxylink{class_vesper_1_1_event}{Event} for registering application update. 
 
 \label{doc-constructors}
 \Hypertarget{class_vesper_1_1_app_update_event_doc-constructors}
@@ -49,7 +57,7 @@ Vesper::\+\+App\+Update\+Event::\+\+App\+Update\+Event (\begin{DoxyParamCaption}
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00053\ \{\}}
+\DoxyCodeLine{00069\ \{\}}
 
 \end{DoxyCode}
 

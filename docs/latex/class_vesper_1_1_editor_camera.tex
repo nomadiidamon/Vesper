@@ -419,17 +419,17 @@ void Vesper::\+\+Editor\+Camera::\+\+On\+Update (\begin{DoxyParamCaption}\item[{
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00047\ \ \ \ \ \{}
-\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_vesper_1_1_input_aa8b8dff7d2b768ad79b6888fbdbf31ae}{Input::IsKeyPressed}}(\doxymbox{\hyperlink{_key_codes_8h_a4b93e6ff61f5e923e6f4f81c1385f305}{VZ\_KEY\_LEFT\_ALT}}))}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_vesper_1_1_input_aa8b8dff7d2b768ad79b6888fbdbf31ae}{Input::IsKeyPressed}}(\doxymbox{\hyperlink{namespace_vesper_1_1_key_a9d802d64a043b9c5e780fdd5b2c430ada144a9d1cdc7fa59c7a5e8666a242f256}{Key::LeftAlt}}))}
 \DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ glm::vec2\&\ mouse\{\ \doxymbox{\hyperlink{class_vesper_1_1_input_ae27af138550e8b872978fdc611947a36}{Input::GetMouseX}}(),\ \doxymbox{\hyperlink{class_vesper_1_1_input_a1ceccb5460761e6da9a92b77e0ccf4ab}{Input::GetMouseY}}()\ \};}
 \DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ glm::vec2\ delta\ =\ (mouse\ -\/\ \doxymbox{\hyperlink{class_vesper_1_1_editor_camera_a71cf62c657245c40dddd2c88157ad449}{m\_InitialMousePosition}})\ *\ 0.003f;}
 \DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_editor_camera_a71cf62c657245c40dddd2c88157ad449}{m\_InitialMousePosition}}\ =\ mouse;}
 \DoxyCodeLine{00053\ }
-\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_vesper_1_1_input_a00b5734fe7e2227aa348e56c3c71a6d2}{Input::IsMouseButtonPressed}}(\doxymbox{\hyperlink{_mouse_button_codes_8h_acec91d972561c804577c795fa47b3170}{VZ\_MOUSE\_BUTTON\_MIDDLE}}))}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_vesper_1_1_input_a00b5734fe7e2227aa348e56c3c71a6d2}{Input::IsMouseButtonPressed}}(\doxymbox{\hyperlink{namespace_vesper_1_1_mouse_a9273402fdf359e292faf8f940e5eddffa20e334db3ecdec2ddd158e962afd2ea8}{Mouse::ButtonMiddle}}))}
 \DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_editor_camera_a23f15a35230da04600e5778b3a34071b}{MousePan}}(delta);}
-\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_vesper_1_1_input_a00b5734fe7e2227aa348e56c3c71a6d2}{Input::IsMouseButtonPressed}}(\doxymbox{\hyperlink{_mouse_button_codes_8h_a6e284e74b77e0102517daa39b463cf71}{VZ\_MOUSE\_BUTTON\_LEFT}}))}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_vesper_1_1_input_a00b5734fe7e2227aa348e56c3c71a6d2}{Input::IsMouseButtonPressed}}(\doxymbox{\hyperlink{namespace_vesper_1_1_mouse_a9273402fdf359e292faf8f940e5eddffa61b9dc89f19b026b765f219b6eecebaf}{Mouse::ButtonLeft}}))}
 \DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_editor_camera_adae43f42c81d4881cb7f2ef51d7ae98f}{MouseRotate}}(delta);}
-\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_vesper_1_1_input_a00b5734fe7e2227aa348e56c3c71a6d2}{Input::IsMouseButtonPressed}}(\doxymbox{\hyperlink{_mouse_button_codes_8h_a499060e994b94c35c2b21efb7bab7d5e}{VZ\_MOUSE\_BUTTON\_RIGHT}}))}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_vesper_1_1_input_a00b5734fe7e2227aa348e56c3c71a6d2}{Input::IsMouseButtonPressed}}(\doxymbox{\hyperlink{namespace_vesper_1_1_mouse_a9273402fdf359e292faf8f940e5eddffa36dc355d5be9b54f54e03e93d84442fb}{Mouse::ButtonRight}}))}
 \DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_editor_camera_a9e8a03a0c59cac7c95cbc1c71af5fee3}{MouseZoom}}(-\/delta.y);}
 \DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{00061\ }
@@ -439,7 +439,7 @@ void Vesper::\+\+Editor\+Camera::\+\+On\+Update (\begin{DoxyParamCaption}\item[{
 \end{DoxyCode}
 
 
-References \doxymbox{\hyperlink{class_vesper_1_1_input_aa8b8dff7d2b768ad79b6888fbdbf31ae}{Vesper::\+\+Input::\+\+Is\+Key\+Pressed()}}, \doxymbox{\hyperlink{class_vesper_1_1_input_a00b5734fe7e2227aa348e56c3c71a6d2}{Vesper::\+\+Input::\+\+Is\+Mouse\+Button\+Pressed()}}, \doxymbox{\hyperlink{class_vesper_1_1_editor_camera_a9e8a03a0c59cac7c95cbc1c71af5fee3}{Mouse\+Zoom()}}, and \doxymbox{\hyperlink{class_vesper_1_1_editor_camera_a2993e98646a2eaf475cbbfcef9952283}{Update\+View()}}.
+References \doxymbox{\hyperlink{namespace_vesper_1_1_mouse_a9273402fdf359e292faf8f940e5eddffa61b9dc89f19b026b765f219b6eecebaf}{Vesper::\+\+Mouse::\+\+Button\+Left}}, \doxymbox{\hyperlink{namespace_vesper_1_1_mouse_a9273402fdf359e292faf8f940e5eddffa20e334db3ecdec2ddd158e962afd2ea8}{Vesper::\+\+Mouse::\+\+Button\+Middle}}, \doxymbox{\hyperlink{namespace_vesper_1_1_mouse_a9273402fdf359e292faf8f940e5eddffa36dc355d5be9b54f54e03e93d84442fb}{Vesper::\+\+Mouse::\+\+Button\+Right}}, \doxymbox{\hyperlink{class_vesper_1_1_input_aa8b8dff7d2b768ad79b6888fbdbf31ae}{Vesper::\+\+Input::\+\+Is\+Key\+Pressed()}}, \doxymbox{\hyperlink{class_vesper_1_1_input_a00b5734fe7e2227aa348e56c3c71a6d2}{Vesper::\+\+Input::\+\+Is\+Mouse\+Button\+Pressed()}}, \doxymbox{\hyperlink{namespace_vesper_1_1_key_a9d802d64a043b9c5e780fdd5b2c430ada144a9d1cdc7fa59c7a5e8666a242f256}{Vesper::\+\+Key::\+\+Left\+Alt}}, \doxymbox{\hyperlink{class_vesper_1_1_editor_camera_a9e8a03a0c59cac7c95cbc1c71af5fee3}{Mouse\+Zoom()}}, and \doxymbox{\hyperlink{class_vesper_1_1_editor_camera_a2993e98646a2eaf475cbbfcef9952283}{Update\+View()}}.
 
 \Hypertarget{class_vesper_1_1_editor_camera_a60ffa0a35a74a7d3b4bdc38d8668a3ea}\index{Vesper::EditorCamera@{Vesper::EditorCamera}!PanSpeed@{PanSpeed}}
 \index{PanSpeed@{PanSpeed}!Vesper::EditorCamera@{Vesper::EditorCamera}}

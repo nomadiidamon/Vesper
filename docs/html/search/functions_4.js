@@ -10,5 +10,6 @@ var searchData=
   ['endsession_7',['EndSession',['../class_vesper_1_1_instrumentor.html#a396d186614575c7b0fbf84db474d807b',1,'Vesper::Instrumentor']]],
   ['entity_8',['Entity',['../class_vesper_1_1_entity.html#a811566437acc4b63996fce6b6a80ee14',1,'Vesper::Entity::Entity()=default'],['../class_vesper_1_1_entity.html#a3611719bf2e8971af008d441b5dd8450',1,'Vesper::Entity::Entity(entt::entity handle, Scene *scene)'],['../class_vesper_1_1_entity.html#aca58c68bba3ecef491684c959f89f24f',1,'Vesper::Entity::Entity(const Entity &amp;other)=default']]],
   ['eventdispatcher_9',['EventDispatcher',['../class_vesper_1_1_event_dispatcher.html#a36333b75f87ed66846359cf13ca5c6d8',1,'Vesper::EventDispatcher']]],
-  ['exists_10',['Exists',['../class_vesper_1_1_texture_library.html#ac4d208632772655db25137f5d9f912c1',1,'Vesper::TextureLibrary::Exists()'],['../class_vesper_1_1_shader_library.html#a9111cbe1ea9c2b679c508f2b708bd9aa',1,'Vesper::ShaderLibrary::Exists()']]]
+  ['examplelayer_10',['ExampleLayer',['../class_example_layer.html#a199ad822f707990b69e998a9ed7df5bb',1,'ExampleLayer::ExampleLayer()'],['../class_example_layer.html#a199ad822f707990b69e998a9ed7df5bb',1,'ExampleLayer::ExampleLayer()']]],
+  ['exists_11',['Exists',['../class_vesper_1_1_texture_library.html#ac4d208632772655db25137f5d9f912c1',1,'Vesper::TextureLibrary::Exists()'],['../class_vesper_1_1_shader_library.html#a9111cbe1ea9c2b679c508f2b708bd9aa',1,'Vesper::ShaderLibrary::Exists()']]]
 ];

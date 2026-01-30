@@ -2,41 +2,49 @@
 \hypertarget{class_vesper_1_1_layer}{}\label{class_vesper_1_1_layer}\index{Vesper::Layer@{Vesper::Layer}}
 
 
+Represents a reusable application layer that receives lifecycle callbacks (attach, detach, update, events, render, and Im\+Gui render). Intended as a base class for concrete layers.  
+
+
+
+
 {\ttfamily \+\#include $<$Layer.\+h$>$}
 
 Inheritance diagram for Vesper::\+Layer:\+\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=3.000000cm]{class_vesper_1_1_layer}
+\includegraphics[height=1.887640cm]{class_vesper_1_1_layer}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \doxymbox{\hyperlink{class_vesper_1_1_layer_aa2fadd42504c70ef28da27b724d276c7}{Layer}} (const std::\+string \&name="{}Layer"{})
-\item 
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_vesper_1_1_layer}{Layer} with an optional name for debugging purposes. \end{DoxyCompactList}\item 
 virtual \doxymbox{\hyperlink{class_vesper_1_1_layer_abebb6b76f4d726745c9ce3f2ccce4c0e}{\texorpdfstring{$\sim$}{\string~}\+Layer}} ()
 \item 
 virtual void \doxymbox{\hyperlink{class_vesper_1_1_layer_ad7b65613ac259383e8ba08f693146cfb}{On\+Attach}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Called when the layer is attached to the application. \end{DoxyCompactList}\item 
 virtual void \doxymbox{\hyperlink{class_vesper_1_1_layer_a2da0563f0eeab4fc610c1e10206bc6cb}{On\+Detach}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Called when the layer is detached from the application. \end{DoxyCompactList}\item 
 virtual void \doxymbox{\hyperlink{class_vesper_1_1_layer_a5403125ae4cb201a6d9cbbacef0480ec}{On\+Update}} (\doxymbox{\hyperlink{class_vesper_1_1_timestep}{Timestep}} ts)
-\item 
+\begin{DoxyCompactList}\small\item\em Called every frame to update the layer with the given timestep. \end{DoxyCompactList}\item 
 virtual void \doxymbox{\hyperlink{class_vesper_1_1_layer_a158ddf9f38a429b2f9713e8741e8be07}{On\+Event}} (\doxymbox{\hyperlink{class_vesper_1_1_event}{Event}} \&event)
-\item 
+\begin{DoxyCompactList}\small\item\em Called when an event is dispatched to the layer. \end{DoxyCompactList}\item 
 virtual void \doxymbox{\hyperlink{class_vesper_1_1_layer_adf08d2acd6e08c78993139afc439ae9c}{On\+Render}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Called when the layer should render its contents. \end{DoxyCompactList}\item 
 virtual void \doxymbox{\hyperlink{class_vesper_1_1_layer_a64c4c255062db2abaf9ca79a84d417fd}{On\+Im\+Gui\+Render}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Called when the layer should render its Im\+Gui components. \end{DoxyCompactList}\item 
 const std::\+string \& \doxymbox{\hyperlink{class_vesper_1_1_layer_a2989c7f8093597b4920c06a3aad407e2}{Get\+Name}} () const
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Retrieves the name of the layer for debugging purposes. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
 std::\+string \doxymbox{\hyperlink{class_vesper_1_1_layer_ad623a46178f0cd2eff4079ee323402c3}{m\+\_\+\+Debug\+Name}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The name of the layer assigned at creation, used for debugging. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Represents a reusable application layer that receives lifecycle callbacks (attach, detach, update, events, render, and Im\+Gui render). Intended as a base class for concrete layers. 
 
 \label{doc-constructors}
 \Hypertarget{class_vesper_1_1_layer_doc-constructors}
@@ -47,6 +55,15 @@ std::\+string \doxymbox{\hyperlink{class_vesper_1_1_layer_ad623a46178f0cd2eff407
 {\footnotesize\ttfamily \label{class_vesper_1_1_layer_aa2fadd42504c70ef28da27b724d276c7} 
 Vesper::\+\+Layer::\+\+Layer (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{name}{ = {\ttfamily "{}Layer"{}}}\end{DoxyParamCaption})}
 
+
+
+Constructs a \doxylink{class_vesper_1_1_layer}{Layer} with an optional name for debugging purposes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the layer, used for debugging. \\
+\hline
+\end{DoxyParams}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00007\ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_vesper_1_1_layer_ad623a46178f0cd2eff4079ee323402c3}{m\_DebugName}}(name) }
@@ -86,8 +103,12 @@ Vesper::\+\+Layer::\+\texorpdfstring{$\sim$}{\string~}\+Layer (\begin{DoxyParamC
 const std::\+string \& Vesper::\+\+Layer::\+\+Get\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
+
+Retrieves the name of the layer for debugging purposes. 
+
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00021\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_layer_ad623a46178f0cd2eff4079ee323402c3}{m\_DebugName}};\ \}}
+\DoxyCodeLine{00045\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_layer_ad623a46178f0cd2eff4079ee323402c3}{m\_DebugName}};\ \}}
 
 \end{DoxyCode}
 \Hypertarget{class_vesper_1_1_layer_ad7b65613ac259383e8ba08f693146cfb}\index{Vesper::Layer@{Vesper::Layer}!OnAttach@{OnAttach}}
@@ -98,11 +119,15 @@ virtual void Vesper::\+\+Layer::\+\+On\+Attach (\begin{DoxyParamCaption}{}{}\end
 
 
 
-Reimplemented in \doxymbox{\hyperlink{class_vesper_1_1_editor_layer_ab3c26e6d9cada8bd70054e582578c4ec}{Vesper::\+\+Editor\+Layer}}, \doxymbox{\hyperlink{class_vesper_1_1_im_gui_layer_aeb2e5a03cd424c37478476f6c63d025b}{Vesper::\+\+Im\+Gui\+Layer}}, and \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_im_gui_layer_aec233ad0c31eac8ed225da6eb3cff5a7}{Vesper::\+\+Open\+GLIm\+Gui\+Layer}}.
+Called when the layer is attached to the application. 
+
+
+
+Reimplemented in \doxymbox{\hyperlink{class_sandbox2_d_aadf778a1239b1ad3e030174a36fba86b}{Sandbox2D}}, \doxymbox{\hyperlink{class_vesper_1_1_editor_layer_ab3c26e6d9cada8bd70054e582578c4ec}{Vesper::\+\+Editor\+Layer}}, \doxymbox{\hyperlink{class_vesper_1_1_im_gui_layer_aeb2e5a03cd424c37478476f6c63d025b}{Vesper::\+\+Im\+Gui\+Layer}}, and \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_im_gui_layer_aec233ad0c31eac8ed225da6eb3cff5a7}{Vesper::\+\+Open\+GLIm\+Gui\+Layer}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00014\ \{\};}
+\DoxyCodeLine{00023\ \{\};}
 
 \end{DoxyCode}
 
@@ -117,11 +142,15 @@ virtual void Vesper::\+\+Layer::\+\+On\+Detach (\begin{DoxyParamCaption}{}{}\end
 
 
 
-Reimplemented in \doxymbox{\hyperlink{class_vesper_1_1_editor_layer_aeea81470727bfa4afc367ea46805a3cb}{Vesper::\+\+Editor\+Layer}}, \doxymbox{\hyperlink{class_vesper_1_1_im_gui_layer_a656bc171954d83d0c8c3b273cac6ca7b}{Vesper::\+\+Im\+Gui\+Layer}}, and \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_im_gui_layer_a87f6d03be6b07a523c9ecb7a31845e07}{Vesper::\+\+Open\+GLIm\+Gui\+Layer}}.
+Called when the layer is detached from the application. 
+
+
+
+Reimplemented in \doxymbox{\hyperlink{class_sandbox2_d_a5d396907448255dfa48bf0124eeddedd}{Sandbox2D}}, \doxymbox{\hyperlink{class_vesper_1_1_editor_layer_aeea81470727bfa4afc367ea46805a3cb}{Vesper::\+\+Editor\+Layer}}, \doxymbox{\hyperlink{class_vesper_1_1_im_gui_layer_a656bc171954d83d0c8c3b273cac6ca7b}{Vesper::\+\+Im\+Gui\+Layer}}, and \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_im_gui_layer_a87f6d03be6b07a523c9ecb7a31845e07}{Vesper::\+\+Open\+GLIm\+Gui\+Layer}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00015\ \{\};}
+\DoxyCodeLine{00026\ \{\};}
 
 \end{DoxyCode}
 \Hypertarget{class_vesper_1_1_layer_a158ddf9f38a429b2f9713e8741e8be07}\index{Vesper::Layer@{Vesper::Layer}!OnEvent@{OnEvent}}
@@ -132,11 +161,20 @@ virtual void Vesper::\+\+Layer::\+\+On\+Event (\begin{DoxyParamCaption}\item[{\d
 
 
 
-Reimplemented in \doxymbox{\hyperlink{class_vesper_1_1_editor_layer_a897b3ba2fcaacf49ef89a9492986850f}{Vesper::\+\+Editor\+Layer}}, \doxymbox{\hyperlink{class_vesper_1_1_im_gui_layer_a224b66c3c8a7515b401f5b1db00978ea}{Vesper::\+\+Im\+Gui\+Layer}}, and \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_im_gui_layer_a94034e176531bb844aadb4d300507106}{Vesper::\+\+Open\+GLIm\+Gui\+Layer}}.
+Called when an event is dispatched to the layer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & The event being dispatched. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \doxymbox{\hyperlink{class_example_layer_a8f998c71dfeb68383cb5c809485815b1}{Example\+Layer}}, \doxymbox{\hyperlink{class_example_layer_a8f998c71dfeb68383cb5c809485815b1}{Example\+Layer}}, \doxymbox{\hyperlink{class_sandbox2_d_a8b513146e154e7de0c959ccc115513f9}{Sandbox2D}}, \doxymbox{\hyperlink{class_vesper_1_1_editor_layer_a897b3ba2fcaacf49ef89a9492986850f}{Vesper::\+\+Editor\+Layer}}, \doxymbox{\hyperlink{class_vesper_1_1_im_gui_layer_a224b66c3c8a7515b401f5b1db00978ea}{Vesper::\+\+Im\+Gui\+Layer}}, and \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_im_gui_layer_a94034e176531bb844aadb4d300507106}{Vesper::\+\+Open\+GLIm\+Gui\+Layer}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00017\ \{\}}
+\DoxyCodeLine{00036\ \{\}}
 
 \end{DoxyCode}
 \Hypertarget{class_vesper_1_1_layer_a64c4c255062db2abaf9ca79a84d417fd}\index{Vesper::Layer@{Vesper::Layer}!OnImGuiRender@{OnImGuiRender}}
@@ -147,11 +185,15 @@ virtual void Vesper::\+\+Layer::\+\+On\+Im\+Gui\+Render (\begin{DoxyParamCaption
 
 
 
-Reimplemented in \doxymbox{\hyperlink{class_vesper_1_1_editor_layer_af5e79508040b18e9fa455830692f6ed0}{Vesper::\+\+Editor\+Layer}}, \doxymbox{\hyperlink{class_vesper_1_1_im_gui_layer_a70973f0316b1a8bc9a6052c894170a1f}{Vesper::\+\+Im\+Gui\+Layer}}, and \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_im_gui_layer_a3a60ac5d57e0e009b776b073718e61bd}{Vesper::\+\+Open\+GLIm\+Gui\+Layer}}.
+Called when the layer should render its Im\+Gui components. 
+
+
+
+Reimplemented in \doxymbox{\hyperlink{class_example_layer_a29e9c1f5c9366b6c1469bfceba17f569}{Example\+Layer}}, \doxymbox{\hyperlink{class_example_layer_a29e9c1f5c9366b6c1469bfceba17f569}{Example\+Layer}}, \doxymbox{\hyperlink{class_sandbox2_d_aabfc3f41ef7dc962dae7d8c0bad7e484}{Sandbox2D}}, \doxymbox{\hyperlink{class_vesper_1_1_editor_layer_af5e79508040b18e9fa455830692f6ed0}{Vesper::\+\+Editor\+Layer}}, \doxymbox{\hyperlink{class_vesper_1_1_im_gui_layer_a70973f0316b1a8bc9a6052c894170a1f}{Vesper::\+\+Im\+Gui\+Layer}}, and \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_im_gui_layer_a3a60ac5d57e0e009b776b073718e61bd}{Vesper::\+\+Open\+GLIm\+Gui\+Layer}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00019\ \{\};}
+\DoxyCodeLine{00042\ \{\};}
 
 \end{DoxyCode}
 \Hypertarget{class_vesper_1_1_layer_adf08d2acd6e08c78993139afc439ae9c}\index{Vesper::Layer@{Vesper::Layer}!OnRender@{OnRender}}
@@ -161,8 +203,12 @@ Reimplemented in \doxymbox{\hyperlink{class_vesper_1_1_editor_layer_af5e79508040
 virtual void Vesper::\+\+Layer::\+\+On\+Render (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
 
 
+
+Called when the layer should render its contents. 
+
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00018\ \{\};}
+\DoxyCodeLine{00039\ \{\};}
 
 \end{DoxyCode}
 \Hypertarget{class_vesper_1_1_layer_a5403125ae4cb201a6d9cbbacef0480ec}\index{Vesper::Layer@{Vesper::Layer}!OnUpdate@{OnUpdate}}
@@ -173,11 +219,20 @@ virtual void Vesper::\+\+Layer::\+\+On\+Update (\begin{DoxyParamCaption}\item[{\
 
 
 
-Reimplemented in \doxymbox{\hyperlink{class_vesper_1_1_editor_layer_a984242ed582e7e06bcfd16bfe5de0a68}{Vesper::\+\+Editor\+Layer}}.
+Called every frame to update the layer with the given timestep. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ts} & The timestep representing the time elapsed since the last update. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \doxymbox{\hyperlink{class_example_layer_a7753e915b8fdb4b1aa1109aca4c84131}{Example\+Layer}}, \doxymbox{\hyperlink{class_example_layer_a7753e915b8fdb4b1aa1109aca4c84131}{Example\+Layer}}, \doxymbox{\hyperlink{class_sandbox2_d_abc796def0880d3ca2dde9a010c4bf70c}{Sandbox2D}}, and \doxymbox{\hyperlink{class_vesper_1_1_editor_layer_a984242ed582e7e06bcfd16bfe5de0a68}{Vesper::\+\+Editor\+Layer}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00016\ \{\};}
+\DoxyCodeLine{00031\ \{\};}
 
 \end{DoxyCode}
 
@@ -190,6 +245,10 @@ Reimplemented in \doxymbox{\hyperlink{class_vesper_1_1_editor_layer_a984242ed582
 \doxysubsubsection{\texorpdfstring{m\_DebugName}{m\_DebugName}}
 {\footnotesize\ttfamily \label{class_vesper_1_1_layer_ad623a46178f0cd2eff4079ee323402c3} 
 std::\+string Vesper::\+\+Layer::\+m\+\_\+\+Debug\+Name\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The name of the layer assigned at creation, used for debugging. 
 
 
 

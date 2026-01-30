@@ -2,6 +2,11 @@
 \hypertarget{class_vesper_1_1_layer_stack}{}\label{class_vesper_1_1_layer_stack}\index{Vesper::LayerStack@{Vesper::LayerStack}}
 
 
+Manages an ordered stack of \doxylink{class_vesper_1_1_layer}{Layer} pointers. Layers can be pushed or popped and the stack can be iterated in forward or reverse order.  
+
+
+
+
 {\ttfamily \+\#include $<$Layer\+Stack.\+h$>$}
 
 \doxysubsubsection*{Public Member Functions}
@@ -12,29 +17,32 @@
 \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_ad19fe2a97a277a4fb3827c4641317fd8}{\texorpdfstring{$\sim$}{\string~}\+Layer\+Stack}} ()
 \item 
 void \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_a56bdbb1eb43e4f1718c51f5c5752cdef}{Push\+Layer}} (\doxymbox{\hyperlink{class_vesper_1_1_layer}{Layer}} \texorpdfstring{$\ast$}{*}layer)
-\item 
+\begin{DoxyCompactList}\small\item\em Adds the layer to the stack at the position before the first overlay. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_abf19258f086ca897456a513038e52c04}{Push\+Overlay}} (\doxymbox{\hyperlink{class_vesper_1_1_layer}{Layer}} \texorpdfstring{$\ast$}{*}overlay)
-\item 
+\begin{DoxyCompactList}\small\item\em Pushes the overlay layer on top of all other layers. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_ad923292e88c1f2449bb82f28923234a4}{Pop\+Layer}} (\doxymbox{\hyperlink{class_vesper_1_1_layer}{Layer}} \texorpdfstring{$\ast$}{*}layer)
-\item 
+\begin{DoxyCompactList}\small\item\em Removes the specified layer from the stack. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_a18721a4d3abe075ecf5da87c819430b7}{Pop\+Overlay}} (\doxymbox{\hyperlink{class_vesper_1_1_layer}{Layer}} \texorpdfstring{$\ast$}{*}overlay)
-\item 
+\begin{DoxyCompactList}\small\item\em Removes the specified overlay layer from the stack. \end{DoxyCompactList}\item 
 std::\+vector$<$ \doxymbox{\hyperlink{class_vesper_1_1_layer}{Layer}} \texorpdfstring{$\ast$}{*} $>$::\+iterator \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_a5ee33180fe933e5a8467e3e2343ddc24}{begin}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Returns an iterator to the beginning of the layer stack. \end{DoxyCompactList}\item 
 std::\+vector$<$ \doxymbox{\hyperlink{class_vesper_1_1_layer}{Layer}} \texorpdfstring{$\ast$}{*} $>$::\+iterator \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_a425bad698ba5806a97a6f10c1177079a}{end}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Returns an iterator to the end of the layer stack. \end{DoxyCompactList}\item 
 std::\+vector$<$ \doxymbox{\hyperlink{class_vesper_1_1_layer}{Layer}} \texorpdfstring{$\ast$}{*} $>$::\+reverse\+\_\+iterator \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_a7b7247fb3593bb810f52e1194ad5a797}{rbegin}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Returns a reverse iterator to the beginning of the layer stack. \end{DoxyCompactList}\item 
 std::\+vector$<$ \doxymbox{\hyperlink{class_vesper_1_1_layer}{Layer}} \texorpdfstring{$\ast$}{*} $>$::\+reverse\+\_\+iterator \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_a4f61004478b6d8449a9b9bf4e70dfd03}{rend}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Returns a reverse iterator to the end of the layer stack. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 std::\+vector$<$ \doxymbox{\hyperlink{class_vesper_1_1_layer}{Layer}} \texorpdfstring{$\ast$}{*} $>$ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_a22415e6ba25b7cf484a57548b7fce01c}{m\+\_\+\+Layers}}
-\item 
+\begin{DoxyCompactList}\small\item\em Vector holding pointers to the layers in the stack. \end{DoxyCompactList}\item 
 unsigned int \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_a2722bad174bdd9e8c4bf4e8435a82df4}{m\+\_\+\+Layer\+Insert\+Index}} = 0
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Index indicating where to insert new layers (before overlays). \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Manages an ordered stack of \doxylink{class_vesper_1_1_layer}{Layer} pointers. Layers can be pushed or popped and the stack can be iterated in forward or reverse order. 
 
 \label{doc-constructors}
 \Hypertarget{class_vesper_1_1_layer_stack_doc-constructors}
@@ -80,8 +88,12 @@ Vesper::\+\+Layer\+Stack::\+\texorpdfstring{$\sim$}{\string~}\+Layer\+Stack (\be
 std::\+vector$<$ \doxymbox{\hyperlink{class_vesper_1_1_layer}{Layer}} \texorpdfstring{$\ast$}{*} $>$::\+iterator Vesper::\+\+Layer\+Stack::\+begin (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
+
+Returns an iterator to the beginning of the layer stack. 
+
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00020\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_a22415e6ba25b7cf484a57548b7fce01c}{m\_Layers}}.begin();\ \}}
+\DoxyCodeLine{00038\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_a22415e6ba25b7cf484a57548b7fce01c}{m\_Layers}}.begin();\ \}}
 
 \end{DoxyCode}
 \Hypertarget{class_vesper_1_1_layer_stack_a425bad698ba5806a97a6f10c1177079a}\index{Vesper::LayerStack@{Vesper::LayerStack}!end@{end}}
@@ -91,8 +103,12 @@ std::\+vector$<$ \doxymbox{\hyperlink{class_vesper_1_1_layer}{Layer}} \texorpdfs
 std::\+vector$<$ \doxymbox{\hyperlink{class_vesper_1_1_layer}{Layer}} \texorpdfstring{$\ast$}{*} $>$::\+iterator Vesper::\+\+Layer\+Stack::\+end (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
+
+Returns an iterator to the end of the layer stack. 
+
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00021\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_a22415e6ba25b7cf484a57548b7fce01c}{m\_Layers}}.end();\ \}}
+\DoxyCodeLine{00040\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_a22415e6ba25b7cf484a57548b7fce01c}{m\_Layers}}.end();\ \}}
 
 \end{DoxyCode}
 \Hypertarget{class_vesper_1_1_layer_stack_ad923292e88c1f2449bb82f28923234a4}\index{Vesper::LayerStack@{Vesper::LayerStack}!PopLayer@{PopLayer}}
@@ -101,6 +117,15 @@ std::\+vector$<$ \doxymbox{\hyperlink{class_vesper_1_1_layer}{Layer}} \texorpdfs
 {\footnotesize\ttfamily \label{class_vesper_1_1_layer_stack_ad923292e88c1f2449bb82f28923234a4} 
 void Vesper::\+\+Layer\+Stack::\+\+Pop\+Layer (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_vesper_1_1_layer}{Layer}} \texorpdfstring{$\ast$}{*}}]{layer}{}\end{DoxyParamCaption})}
 
+
+
+Removes the specified layer from the stack. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em layer} & Pointer to the layer to be removed. \\
+\hline
+\end{DoxyParams}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00033\ \ \ \ \ \{}
@@ -125,6 +150,15 @@ References \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_a2722bad174bdd9e8c4
 void Vesper::\+\+Layer\+Stack::\+\+Pop\+Overlay (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_vesper_1_1_layer}{Layer}} \texorpdfstring{$\ast$}{*}}]{overlay}{}\end{DoxyParamCaption})}
 
 
+
+Removes the specified overlay layer from the stack. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em overlay} & Pointer to the overlay layer to be removed. \\
+\hline
+\end{DoxyParams}
+
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00043\ \ \ \ \ \{}
 \DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
@@ -142,6 +176,15 @@ void Vesper::\+\+Layer\+Stack::\+\+Pop\+Overlay (\begin{DoxyParamCaption}\item[{
 {\footnotesize\ttfamily \label{class_vesper_1_1_layer_stack_a56bdbb1eb43e4f1718c51f5c5752cdef} 
 void Vesper::\+\+Layer\+Stack::\+\+Push\+Layer (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_vesper_1_1_layer}{Layer}} \texorpdfstring{$\ast$}{*}}]{layer}{}\end{DoxyParamCaption})}
 
+
+
+Adds the layer to the stack at the position before the first overlay. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em layer} & Pointer to the layer to be added. \\
+\hline
+\end{DoxyParams}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00020\ \ \ \ \ \{}
@@ -162,6 +205,15 @@ References \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_a2722bad174bdd9e8c4
 void Vesper::\+\+Layer\+Stack::\+\+Push\+Overlay (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_vesper_1_1_layer}{Layer}} \texorpdfstring{$\ast$}{*}}]{overlay}{}\end{DoxyParamCaption})}
 
 
+
+Pushes the overlay layer on top of all other layers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em overlay} & Pointer to the overlay layer to be added. \\
+\hline
+\end{DoxyParams}
+
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00027\ \ \ \ \ \{}
 \DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
@@ -176,8 +228,12 @@ void Vesper::\+\+Layer\+Stack::\+\+Push\+Overlay (\begin{DoxyParamCaption}\item[
 std::\+vector$<$ \doxymbox{\hyperlink{class_vesper_1_1_layer}{Layer}} \texorpdfstring{$\ast$}{*} $>$::\+reverse\+\_\+iterator Vesper::\+\+Layer\+Stack::\+rbegin (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
+
+Returns a reverse iterator to the beginning of the layer stack. 
+
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00022\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_a22415e6ba25b7cf484a57548b7fce01c}{m\_Layers}}.rbegin();\ \}}
+\DoxyCodeLine{00042\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_a22415e6ba25b7cf484a57548b7fce01c}{m\_Layers}}.rbegin();\ \}}
 
 \end{DoxyCode}
 \Hypertarget{class_vesper_1_1_layer_stack_a4f61004478b6d8449a9b9bf4e70dfd03}\index{Vesper::LayerStack@{Vesper::LayerStack}!rend@{rend}}
@@ -187,8 +243,12 @@ std::\+vector$<$ \doxymbox{\hyperlink{class_vesper_1_1_layer}{Layer}} \texorpdfs
 std::\+vector$<$ \doxymbox{\hyperlink{class_vesper_1_1_layer}{Layer}} \texorpdfstring{$\ast$}{*} $>$::\+reverse\+\_\+iterator Vesper::\+\+Layer\+Stack::\+rend (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
+
+Returns a reverse iterator to the end of the layer stack. 
+
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00023\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_a22415e6ba25b7cf484a57548b7fce01c}{m\_Layers}}.rend();\ \}}
+\DoxyCodeLine{00044\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_a22415e6ba25b7cf484a57548b7fce01c}{m\_Layers}}.rend();\ \}}
 
 \end{DoxyCode}
 
@@ -204,6 +264,10 @@ unsigned int Vesper::\+\+Layer\+Stack::\+m\+\_\+\+Layer\+Insert\+Index = 0\hspac
 
 
 
+Index indicating where to insert new layers (before overlays). 
+
+
+
 Referenced by \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_ad923292e88c1f2449bb82f28923234a4}{Pop\+Layer()}}, and \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_a56bdbb1eb43e4f1718c51f5c5752cdef}{Push\+Layer()}}.
 
 \Hypertarget{class_vesper_1_1_layer_stack_a22415e6ba25b7cf484a57548b7fce01c}\index{Vesper::LayerStack@{Vesper::LayerStack}!m\_Layers@{m\_Layers}}
@@ -211,6 +275,10 @@ Referenced by \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_ad923292e88c1f24
 \doxysubsubsection{\texorpdfstring{m\_Layers}{m\_Layers}}
 {\footnotesize\ttfamily \label{class_vesper_1_1_layer_stack_a22415e6ba25b7cf484a57548b7fce01c} 
 std::\+vector$<$\doxymbox{\hyperlink{class_vesper_1_1_layer}{Layer}}\texorpdfstring{$\ast$}{*}$>$ Vesper::\+\+Layer\+Stack::\+m\+\_\+\+Layers\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Vector holding pointers to the layers in the stack. 
 
 
 

@@ -2,6 +2,11 @@
 \hypertarget{class_vesper_1_1_window}{}\label{class_vesper_1_1_window}\index{Vesper::Window@{Vesper::Window}}
 
 
+Abstract interface representing an application window.  
+
+
+
+
 {\ttfamily \+\#include $<$Window.\+h$>$}
 
 Inheritance diagram for Vesper::\+Window:\+\begin{figure}[H]
@@ -21,25 +26,28 @@ using \doxymbox{\hyperlink{class_vesper_1_1_window_ac908c4b9b5d83ccb8bf159a44383
 virtual \doxymbox{\hyperlink{class_vesper_1_1_window_a4125c4f4f15a045803fcdda0f9e3e0ca}{\texorpdfstring{$\sim$}{\string~}\+Window}} ()
 \item 
 virtual void \doxymbox{\hyperlink{class_vesper_1_1_window_a77bc221adcd63fd89e0a122dbd606ea5}{On\+Update}} ()=0
-\item 
+\begin{DoxyCompactList}\small\item\em Called every frame to update the window. \end{DoxyCompactList}\item 
 virtual uint32\+\_\+t \doxymbox{\hyperlink{class_vesper_1_1_window_a38ba98632ee63ebacb860ca4de56772b}{Get\+Width}} () const =0
-\item 
+\begin{DoxyCompactList}\small\item\em Retrieves the width of the window. \end{DoxyCompactList}\item 
 virtual uint32\+\_\+t \doxymbox{\hyperlink{class_vesper_1_1_window_ad675d99e843b9c11cd2b8feb61c62265}{Get\+Height}} () const =0
-\item 
+\begin{DoxyCompactList}\small\item\em Retrieves the height of the window. \end{DoxyCompactList}\item 
 virtual void \doxymbox{\hyperlink{class_vesper_1_1_window_a60d3a064d370c2957b81cc5e440bb901}{Set\+Event\+Callback}} (const \doxymbox{\hyperlink{class_vesper_1_1_window_ac908c4b9b5d83ccb8bf159a443833403}{Event\+Callback\+Fn}} \&callback)=0
-\item 
+\begin{DoxyCompactList}\small\item\em Sets the callback function for window events. \end{DoxyCompactList}\item 
 virtual void \doxymbox{\hyperlink{class_vesper_1_1_window_aa04e6bda67df742c536f34c5fac5b290}{Set\+VSync}} (bool enabled)=0
-\item 
+\begin{DoxyCompactList}\small\item\em Sets whether vertical synchronization (VSync) is enabled. \end{DoxyCompactList}\item 
 virtual bool \doxymbox{\hyperlink{class_vesper_1_1_window_a9dd654cf7a07088d24667d6b8257df39}{Is\+VSync}} () const =0
-\item 
+\begin{DoxyCompactList}\small\item\em Checks if vertical synchronization (VSync) is enabled. \end{DoxyCompactList}\item 
 virtual void \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_vesper_1_1_window_a4b4b607a2bd868df1672ab69d4f09881}{Get\+Native\+Window}} () const =0
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Retrieves the native window handle. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 static \doxymbox{\hyperlink{namespace_vesper_a5425f9aaa2ee4d3761c8ce6b385e0b70}{Scope}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_window}{Window}} $>$ \doxymbox{\hyperlink{class_vesper_1_1_window_a54fb0dcbcf16390cd9f8f2ebda165523}{Create}} (const \doxymbox{\hyperlink{struct_vesper_1_1_window_props}{Window\+Props}} \&props=\doxymbox{\hyperlink{struct_vesper_1_1_window_props}{Window\+Props}}())
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Creates a window instance with the specified properties. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Abstract interface representing an application window. 
 
 \label{doc-typedef-members}
 \Hypertarget{class_vesper_1_1_window_doc-typedef-members}
@@ -63,7 +71,7 @@ virtual Vesper::\+\+Window::\+\texorpdfstring{$\sim$}{\string~}\+Window (\begin{
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00024\ \{\}}
+\DoxyCodeLine{00034\ \{\}}
 
 \end{DoxyCode}
 
@@ -77,6 +85,18 @@ virtual Vesper::\+\+Window::\+\texorpdfstring{$\sim$}{\string~}\+Window (\begin{
 {\footnotesize\ttfamily \label{class_vesper_1_1_window_a54fb0dcbcf16390cd9f8f2ebda165523} 
 \doxymbox{\hyperlink{namespace_vesper_a5425f9aaa2ee4d3761c8ce6b385e0b70}{Scope}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_window}{Window}} $>$ Vesper::\+\+Window::\+\+Create (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{struct_vesper_1_1_window_props}{Window\+Props}} \&}]{props}{ = {\ttfamily \doxymbox{\hyperlink{struct_vesper_1_1_window_props}{Window\+Props}}()}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
+
+
+Creates a window instance with the specified properties. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em props} & The properties to initialize the window with. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A scoped pointer to the created window instance. 
+\end{DoxyReturn}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00021\ \ \ \ \ \{}
@@ -92,17 +112,25 @@ virtual uint32\+\_\+t Vesper::\+\+Window::\+\+Get\+Height (\begin{DoxyParamCapti
 
 
 
+Retrieves the height of the window. 
+
+
+
 Implemented in \doxymbox{\hyperlink{class_vesper_1_1_windows_window_ab89ca1907dc2a493821fe9bf141ecd07}{Vesper::\+\+Windows\+Window}}.
 
 
 
-Referenced by \doxymbox{\hyperlink{class_vesper_1_1_im_gui_layer_ad32cb49bc5bffd27630085d5b273c5ad}{Vesper::\+\+Im\+Gui\+Layer::\+\+End()}}.
+Referenced by \doxymbox{\hyperlink{class_vesper_1_1_im_gui_layer_ad32cb49bc5bffd27630085d5b273c5ad}{Vesper::\+\+Im\+Gui\+Layer::\+\+End()}}, and \doxymbox{\hyperlink{class_sandbox2_d_abc796def0880d3ca2dde9a010c4bf70c}{Sandbox2\+D::\+\+On\+Update()}}.
 
 \Hypertarget{class_vesper_1_1_window_a4b4b607a2bd868df1672ab69d4f09881}\index{Vesper::Window@{Vesper::Window}!GetNativeWindow@{GetNativeWindow}}
 \index{GetNativeWindow@{GetNativeWindow}!Vesper::Window@{Vesper::Window}}
 \doxysubsubsection{\texorpdfstring{GetNativeWindow()}{GetNativeWindow()}}
 {\footnotesize\ttfamily \label{class_vesper_1_1_window_a4b4b607a2bd868df1672ab69d4f09881} 
 virtual void \texorpdfstring{$\ast$}{*} Vesper::\+\+Window::\+\+Get\+Native\+Window (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Retrieves the native window handle. 
 
 
 
@@ -120,17 +148,25 @@ virtual uint32\+\_\+t Vesper::\+\+Window::\+\+Get\+Width (\begin{DoxyParamCaptio
 
 
 
+Retrieves the width of the window. 
+
+
+
 Implemented in \doxymbox{\hyperlink{class_vesper_1_1_windows_window_ad3cef4871d3a311155dfe997985e5a2a}{Vesper::\+\+Windows\+Window}}.
 
 
 
-Referenced by \doxymbox{\hyperlink{class_vesper_1_1_im_gui_layer_ad32cb49bc5bffd27630085d5b273c5ad}{Vesper::\+\+Im\+Gui\+Layer::\+\+End()}}.
+Referenced by \doxymbox{\hyperlink{class_vesper_1_1_im_gui_layer_ad32cb49bc5bffd27630085d5b273c5ad}{Vesper::\+\+Im\+Gui\+Layer::\+\+End()}}, and \doxymbox{\hyperlink{class_sandbox2_d_abc796def0880d3ca2dde9a010c4bf70c}{Sandbox2\+D::\+\+On\+Update()}}.
 
 \Hypertarget{class_vesper_1_1_window_a9dd654cf7a07088d24667d6b8257df39}\index{Vesper::Window@{Vesper::Window}!IsVSync@{IsVSync}}
 \index{IsVSync@{IsVSync}!Vesper::Window@{Vesper::Window}}
 \doxysubsubsection{\texorpdfstring{IsVSync()}{IsVSync()}}
 {\footnotesize\ttfamily \label{class_vesper_1_1_window_a9dd654cf7a07088d24667d6b8257df39} 
 virtual bool Vesper::\+\+Window::\+\+Is\+VSync (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Checks if vertical synchronization (VSync) is enabled. 
 
 
 
@@ -144,6 +180,10 @@ virtual void Vesper::\+\+Window::\+\+On\+Update (\begin{DoxyParamCaption}{}{}\en
 
 
 
+Called every frame to update the window. 
+
+
+
 Implemented in \doxymbox{\hyperlink{class_vesper_1_1_windows_window_a6658a3ef114f2f3fc5c775c65e37b958}{Vesper::\+\+Windows\+Window}}.
 
 \Hypertarget{class_vesper_1_1_window_a60d3a064d370c2957b81cc5e440bb901}\index{Vesper::Window@{Vesper::Window}!SetEventCallback@{SetEventCallback}}
@@ -154,6 +194,10 @@ virtual void Vesper::\+\+Window::\+\+Set\+Event\+Callback (\begin{DoxyParamCapti
 
 
 
+Sets the callback function for window events. 
+
+
+
 Implemented in \doxymbox{\hyperlink{class_vesper_1_1_windows_window_a3481fa772c2853a5cec99498e095401d}{Vesper::\+\+Windows\+Window}}.
 
 \Hypertarget{class_vesper_1_1_window_aa04e6bda67df742c536f34c5fac5b290}\index{Vesper::Window@{Vesper::Window}!SetVSync@{SetVSync}}
@@ -161,6 +205,10 @@ Implemented in \doxymbox{\hyperlink{class_vesper_1_1_windows_window_a3481fa772c2
 \doxysubsubsection{\texorpdfstring{SetVSync()}{SetVSync()}}
 {\footnotesize\ttfamily \label{class_vesper_1_1_window_aa04e6bda67df742c536f34c5fac5b290} 
 virtual void Vesper::\+\+Window::\+\+Set\+VSync (\begin{DoxyParamCaption}\item[{bool}]{enabled}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Sets whether vertical synchronization (VSync) is enabled. 
 
 
 

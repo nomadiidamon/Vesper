@@ -18,13 +18,13 @@ Inheritance diagram for Vesper::\+Im\+Gui\+Layer:\+\begin{figure}[H]
 \doxymbox{\hyperlink{class_vesper_1_1_im_gui_layer_a1b9744b500d8e3c74c9336c9f35b019f}{\texorpdfstring{$\sim$}{\string~}\+Im\+Gui\+Layer}} ()
 \item 
 virtual void \doxymbox{\hyperlink{class_vesper_1_1_im_gui_layer_aeb2e5a03cd424c37478476f6c63d025b}{On\+Attach}} () override
-\item 
+\begin{DoxyCompactList}\small\item\em Called when the layer is attached to the application. \end{DoxyCompactList}\item 
 virtual void \doxymbox{\hyperlink{class_vesper_1_1_im_gui_layer_a656bc171954d83d0c8c3b273cac6ca7b}{On\+Detach}} () override
-\item 
+\begin{DoxyCompactList}\small\item\em Called when the layer is detached from the application. \end{DoxyCompactList}\item 
 virtual void \doxymbox{\hyperlink{class_vesper_1_1_im_gui_layer_a70973f0316b1a8bc9a6052c894170a1f}{On\+Im\+Gui\+Render}} () override
-\item 
+\begin{DoxyCompactList}\small\item\em Called when the layer should render its Im\+Gui components. \end{DoxyCompactList}\item 
 virtual void \doxymbox{\hyperlink{class_vesper_1_1_im_gui_layer_a224b66c3c8a7515b401f5b1db00978ea}{On\+Event}} (\doxymbox{\hyperlink{class_vesper_1_1_event}{Event}} \&e) override
-\item 
+\begin{DoxyCompactList}\small\item\em Called when an event is dispatched to the layer. \end{DoxyCompactList}\item 
 virtual void \doxymbox{\hyperlink{class_vesper_1_1_im_gui_layer_a3c11977ad97bff04a2f8cd92eab14032}{Begin}} ()
 \item 
 virtual void \doxymbox{\hyperlink{class_vesper_1_1_im_gui_layer_ad32cb49bc5bffd27630085d5b273c5ad}{End}} ()
@@ -37,15 +37,15 @@ virtual void \doxymbox{\hyperlink{class_vesper_1_1_im_gui_layer_a948a10fd1ec20df
 \begin{DoxyCompactItemize}
 \item 
 \doxymbox{\hyperlink{class_vesper_1_1_layer_aa2fadd42504c70ef28da27b724d276c7}{Layer}} (const std::\+string \&name="{}Layer"{})
-\item 
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_vesper_1_1_layer}{Layer} with an optional name for debugging purposes. \end{DoxyCompactList}\item 
 virtual \doxymbox{\hyperlink{class_vesper_1_1_layer_abebb6b76f4d726745c9ce3f2ccce4c0e}{\texorpdfstring{$\sim$}{\string~}\+Layer}} ()
 \item 
 virtual void \doxymbox{\hyperlink{class_vesper_1_1_layer_a5403125ae4cb201a6d9cbbacef0480ec}{On\+Update}} (\doxymbox{\hyperlink{class_vesper_1_1_timestep}{Timestep}} ts)
-\item 
+\begin{DoxyCompactList}\small\item\em Called every frame to update the layer with the given timestep. \end{DoxyCompactList}\item 
 virtual void \doxymbox{\hyperlink{class_vesper_1_1_layer_adf08d2acd6e08c78993139afc439ae9c}{On\+Render}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Called when the layer should render its contents. \end{DoxyCompactList}\item 
 const std::\+string \& \doxymbox{\hyperlink{class_vesper_1_1_layer_a2989c7f8093597b4920c06a3aad407e2}{Get\+Name}} () const
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Retrieves the name of the layer for debugging purposes. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -57,7 +57,7 @@ float \doxymbox{\hyperlink{class_vesper_1_1_im_gui_layer_aa4b07490348a4daf7af213
 \begin{DoxyCompactItemize}
 \item 
 std::\+string \doxymbox{\hyperlink{class_vesper_1_1_layer_ad623a46178f0cd2eff4079ee323402c3}{m\+\_\+\+Debug\+Name}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The name of the layer assigned at creation, used for debugging. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \label{doc-constructors}
@@ -165,6 +165,10 @@ Referenced by \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_im_gui_layer_a92b53
 {\footnotesize\ttfamily \label{class_vesper_1_1_im_gui_layer_aeb2e5a03cd424c37478476f6c63d025b} 
 void Vesper::\+\+Im\+Gui\+Layer::\+\+On\+Attach (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
+
+
+Called when the layer is attached to the application. 
+
 TODO:\+ Remove to open\+GL specific
 
 Reimplemented from \doxymbox{\hyperlink{class_vesper_1_1_layer_ad7b65613ac259383e8ba08f693146cfb}{Vesper::\+\+Layer}}.
@@ -228,6 +232,10 @@ Referenced by \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_im_gui_layer_aec233
 {\footnotesize\ttfamily \label{class_vesper_1_1_im_gui_layer_a656bc171954d83d0c8c3b273cac6ca7b} 
 void Vesper::\+\+Im\+Gui\+Layer::\+\+On\+Detach (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
+
+
+Called when the layer is detached from the application. 
+
 TODO:\+ Remove to open\+GL specific
 
 Reimplemented from \doxymbox{\hyperlink{class_vesper_1_1_layer_a2da0563f0eeab4fc610c1e10206bc6cb}{Vesper::\+\+Layer}}.
@@ -257,8 +265,17 @@ Referenced by \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_im_gui_layer_a87f6d
 \index{OnEvent@{OnEvent}!Vesper::ImGuiLayer@{Vesper::ImGuiLayer}}
 \doxysubsubsection{\texorpdfstring{OnEvent()}{OnEvent()}}
 {\footnotesize\ttfamily \label{class_vesper_1_1_im_gui_layer_a224b66c3c8a7515b401f5b1db00978ea} 
-void Vesper::\+\+Im\+Gui\+Layer::\+\+On\+Event (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_vesper_1_1_event}{Event}} \&}]{e}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+void Vesper::\+\+Im\+Gui\+Layer::\+\+On\+Event (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_vesper_1_1_event}{Event}} \&}]{event}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
+
+
+Called when an event is dispatched to the layer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & The event being dispatched. \\
+\hline
+\end{DoxyParams}
 
 
 Reimplemented from \doxymbox{\hyperlink{class_vesper_1_1_layer_a158ddf9f38a429b2f9713e8741e8be07}{Vesper::\+\+Layer}}.
@@ -291,6 +308,10 @@ Referenced by \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_im_gui_layer_a94034
 \doxysubsubsection{\texorpdfstring{OnImGuiRender()}{OnImGuiRender()}}
 {\footnotesize\ttfamily \label{class_vesper_1_1_im_gui_layer_a70973f0316b1a8bc9a6052c894170a1f} 
 void Vesper::\+\+Im\+Gui\+Layer::\+\+On\+Im\+Gui\+Render (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called when the layer should render its Im\+Gui components. 
 
 
 

@@ -98,11 +98,15 @@ $(function(){initNavTree('struct_vesper_1_1_window_props.html','','struct_vesper
 </div><!--header-->
 <div class="contents">
 
+<p>Holds the data for window configuration.  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_window_8h_source.html">Window.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a40eec76d366a9a4c52988cbfa8013cd7" id="r_a40eec76d366a9a4c52988cbfa8013cd7"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a40eec76d366a9a4c52988cbfa8013cd7">WindowProps</a> (const std::string &amp;title=&quot;Vesper Engine&quot;, uint32_t width=1600, uint32_t height=900)</td></tr>
+<tr class="memdesc:a40eec76d366a9a4c52988cbfa8013cd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor to initialize <a class="el" href="struct_vesper_1_1_window_props.html" title="Holds the data for window configuration.">WindowProps</a> with given or default values.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -110,7 +114,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:ad441a3ba7b5ae2b4a9844887978b2f06" id="r_ad441a3ba7b5ae2b4a9844887978b2f06"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#ad441a3ba7b5ae2b4a9844887978b2f06">Width</a></td></tr>
 <tr class="memitem:a025a36e522347d4d2adef58665d1bd6d" id="r_a025a36e522347d4d2adef58665d1bd6d"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#a025a36e522347d4d2adef58665d1bd6d">Height</a></td></tr>
 </table>
-<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Holds the data for window configuration. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a40eec76d366a9a4c52988cbfa8013cd7" name="a40eec76d366a9a4c52988cbfa8013cd7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a40eec76d366a9a4c52988cbfa8013cd7">&#9670;&#160;</a></span>WindowProps()</h2>
 
@@ -142,10 +148,20 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   16</span>            : <a class="code hl_variable" href="#ad62d394e84c5278bfbe42f17f47bbe9a">Title</a>(title), <a class="code hl_variable" href="#ad441a3ba7b5ae2b4a9844887978b2f06">Width</a>(width), <a class="code hl_variable" href="#a025a36e522347d4d2adef58665d1bd6d">Height</a>(height) {}</div>
-<div class="ttc" id="astruct_vesper_1_1_window_props_html_a025a36e522347d4d2adef58665d1bd6d"><div class="ttname"><a href="#a025a36e522347d4d2adef58665d1bd6d">Vesper::WindowProps::Height</a></div><div class="ttdeci">uint32_t Height</div><div class="ttdef"><b>Definition</b> Window.h:12</div></div>
-<div class="ttc" id="astruct_vesper_1_1_window_props_html_ad441a3ba7b5ae2b4a9844887978b2f06"><div class="ttname"><a href="#ad441a3ba7b5ae2b4a9844887978b2f06">Vesper::WindowProps::Width</a></div><div class="ttdeci">uint32_t Width</div><div class="ttdef"><b>Definition</b> Window.h:11</div></div>
-<div class="ttc" id="astruct_vesper_1_1_window_props_html_ad62d394e84c5278bfbe42f17f47bbe9a"><div class="ttname"><a href="#ad62d394e84c5278bfbe42f17f47bbe9a">Vesper::WindowProps::Title</a></div><div class="ttdeci">std::string Title</div><div class="ttdef"><b>Definition</b> Window.h:10</div></div>
+
+<p>Constructor to initialize <a class="el" href="struct_vesper_1_1_window_props.html" title="Holds the data for window configuration.">WindowProps</a> with given or default values. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">title</td><td>The title of the window. </td></tr>
+    <tr><td class="paramname">width</td><td>The width of the window. </td></tr>
+    <tr><td class="paramname">height</td><td>The height of the window. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">   24</span>            : <a class="code hl_variable" href="#ad62d394e84c5278bfbe42f17f47bbe9a">Title</a>(title), <a class="code hl_variable" href="#ad441a3ba7b5ae2b4a9844887978b2f06">Width</a>(width), <a class="code hl_variable" href="#a025a36e522347d4d2adef58665d1bd6d">Height</a>(height) {}</div>
+<div class="ttc" id="astruct_vesper_1_1_window_props_html_a025a36e522347d4d2adef58665d1bd6d"><div class="ttname"><a href="#a025a36e522347d4d2adef58665d1bd6d">Vesper::WindowProps::Height</a></div><div class="ttdeci">uint32_t Height</div><div class="ttdef"><b>Definition</b> Window.h:14</div></div>
+<div class="ttc" id="astruct_vesper_1_1_window_props_html_ad441a3ba7b5ae2b4a9844887978b2f06"><div class="ttname"><a href="#ad441a3ba7b5ae2b4a9844887978b2f06">Vesper::WindowProps::Width</a></div><div class="ttdeci">uint32_t Width</div><div class="ttdef"><b>Definition</b> Window.h:13</div></div>
+<div class="ttc" id="astruct_vesper_1_1_window_props_html_ad62d394e84c5278bfbe42f17f47bbe9a"><div class="ttname"><a href="#ad62d394e84c5278bfbe42f17f47bbe9a">Vesper::WindowProps::Title</a></div><div class="ttdeci">std::string Title</div><div class="ttdef"><b>Definition</b> Window.h:12</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a025a36e522347d4d2adef58665d1bd6d">Height</a>, and <a class="el" href="#ad441a3ba7b5ae2b4a9844887978b2f06">Width</a>.</p>
 

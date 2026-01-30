@@ -98,6 +98,9 @@ $(function(){initNavTree('class_vesper_1_1_layer.html','','class_vesper_1_1_laye
 </div><!--header-->
 <div class="contents">
 
+<p>Represents a reusable application layer that receives lifecycle callbacks (attach, detach, update, events, render, and ImGui render). Intended as a base class for concrete layers.  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_layer_8h_source.html">Layer.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Vesper::Layer:</div>
@@ -105,29 +108,43 @@ Inheritance diagram for Vesper::Layer:</div>
  <div class="center">
   <img src="class_vesper_1_1_layer.png" usemap="#Vesper_3A_3ALayer_map" alt=""/>
   <map id="Vesper_3A_3ALayer_map" name="Vesper_3A_3ALayer_map">
-<area href="class_vesper_1_1_editor_layer.html" alt="Vesper::EditorLayer" shape="rect" coords="0,56,170,80"/>
-<area href="class_vesper_1_1_im_gui_layer.html" alt="Vesper::ImGuiLayer" shape="rect" coords="180,56,350,80"/>
-<area href="class_vesper_1_1_open_g_l_im_gui_layer.html" alt="Vesper::OpenGLImGuiLayer" shape="rect" coords="180,112,350,136"/>
+<area href="class_example_layer.html" alt="ExampleLayer" shape="rect" coords="0,56,170,80"/>
+<area href="class_example_layer.html" alt="ExampleLayer" shape="rect" coords="180,56,350,80"/>
+<area href="class_sandbox2_d.html" alt="Sandbox2D" shape="rect" coords="360,56,530,80"/>
+<area href="class_vesper_1_1_editor_layer.html" alt="Vesper::EditorLayer" shape="rect" coords="540,56,710,80"/>
+<area href="class_vesper_1_1_im_gui_layer.html" alt="Vesper::ImGuiLayer" shape="rect" coords="720,56,890,80"/>
+<area href="class_vesper_1_1_open_g_l_im_gui_layer.html" alt="Vesper::OpenGLImGuiLayer" shape="rect" coords="720,112,890,136"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aa2fadd42504c70ef28da27b724d276c7" id="r_aa2fadd42504c70ef28da27b724d276c7"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aa2fadd42504c70ef28da27b724d276c7">Layer</a> (const std::string &amp;name=&quot;Layer&quot;)</td></tr>
+<tr class="memdesc:aa2fadd42504c70ef28da27b724d276c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="class_vesper_1_1_layer.html" title="Represents a reusable application layer that receives lifecycle callbacks (attach,...">Layer</a> with an optional name for debugging purposes.  <br /></td></tr>
 <tr class="memitem:abebb6b76f4d726745c9ce3f2ccce4c0e" id="r_abebb6b76f4d726745c9ce3f2ccce4c0e"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="#abebb6b76f4d726745c9ce3f2ccce4c0e">~Layer</a> ()</td></tr>
 <tr class="memitem:ad7b65613ac259383e8ba08f693146cfb" id="r_ad7b65613ac259383e8ba08f693146cfb"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#ad7b65613ac259383e8ba08f693146cfb">OnAttach</a> ()</td></tr>
+<tr class="memdesc:ad7b65613ac259383e8ba08f693146cfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when the layer is attached to the application.  <br /></td></tr>
 <tr class="memitem:a2da0563f0eeab4fc610c1e10206bc6cb" id="r_a2da0563f0eeab4fc610c1e10206bc6cb"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a2da0563f0eeab4fc610c1e10206bc6cb">OnDetach</a> ()</td></tr>
+<tr class="memdesc:a2da0563f0eeab4fc610c1e10206bc6cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when the layer is detached from the application.  <br /></td></tr>
 <tr class="memitem:a5403125ae4cb201a6d9cbbacef0480ec" id="r_a5403125ae4cb201a6d9cbbacef0480ec"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a5403125ae4cb201a6d9cbbacef0480ec">OnUpdate</a> (<a class="el" href="class_vesper_1_1_timestep.html">Timestep</a> ts)</td></tr>
+<tr class="memdesc:a5403125ae4cb201a6d9cbbacef0480ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called every frame to update the layer with the given timestep.  <br /></td></tr>
 <tr class="memitem:a158ddf9f38a429b2f9713e8741e8be07" id="r_a158ddf9f38a429b2f9713e8741e8be07"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a158ddf9f38a429b2f9713e8741e8be07">OnEvent</a> (<a class="el" href="class_vesper_1_1_event.html">Event</a> &amp;event)</td></tr>
+<tr class="memdesc:a158ddf9f38a429b2f9713e8741e8be07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when an event is dispatched to the layer.  <br /></td></tr>
 <tr class="memitem:adf08d2acd6e08c78993139afc439ae9c" id="r_adf08d2acd6e08c78993139afc439ae9c"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#adf08d2acd6e08c78993139afc439ae9c">OnRender</a> ()</td></tr>
+<tr class="memdesc:adf08d2acd6e08c78993139afc439ae9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when the layer should render its contents.  <br /></td></tr>
 <tr class="memitem:a64c4c255062db2abaf9ca79a84d417fd" id="r_a64c4c255062db2abaf9ca79a84d417fd"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a64c4c255062db2abaf9ca79a84d417fd">OnImGuiRender</a> ()</td></tr>
+<tr class="memdesc:a64c4c255062db2abaf9ca79a84d417fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when the layer should render its ImGui components.  <br /></td></tr>
 <tr class="memitem:a2989c7f8093597b4920c06a3aad407e2" id="r_a2989c7f8093597b4920c06a3aad407e2"><td class="memItemLeft">const std::string &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a2989c7f8093597b4920c06a3aad407e2">GetName</a> () const</td></tr>
+<tr class="memdesc:a2989c7f8093597b4920c06a3aad407e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the name of the layer for debugging purposes.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:ad623a46178f0cd2eff4079ee323402c3" id="r_ad623a46178f0cd2eff4079ee323402c3"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#ad623a46178f0cd2eff4079ee323402c3">m_DebugName</a></td></tr>
+<tr class="memdesc:ad623a46178f0cd2eff4079ee323402c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">The name of the layer assigned at creation, used for debugging.  <br /></td></tr>
 </table>
-<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Represents a reusable application layer that receives lifecycle callbacks (attach, detach, update, events, render, and ImGui render). Intended as a base class for concrete layers. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aa2fadd42504c70ef28da27b724d276c7" name="aa2fadd42504c70ef28da27b724d276c7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa2fadd42504c70ef28da27b724d276c7">&#9670;&#160;</a></span>Layer()</h2>
 
@@ -142,10 +159,18 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Constructs a <a class="el" href="class_vesper_1_1_layer.html" title="Represents a reusable application layer that receives lifecycle callbacks (attach,...">Layer</a> with an optional name for debugging purposes. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>The name of the layer, used for debugging. </td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="fragment"><div class="line"><span class="lineno">    7</span>        : <a class="code hl_variable" href="#ad623a46178f0cd2eff4079ee323402c3">m_DebugName</a>(name)</div>
 <div class="line"><span class="lineno">    8</span>    {</div>
 <div class="line"><span class="lineno">    9</span>    }</div>
-<div class="ttc" id="aclass_vesper_1_1_layer_html_ad623a46178f0cd2eff4079ee323402c3"><div class="ttname"><a href="#ad623a46178f0cd2eff4079ee323402c3">Vesper::Layer::m_DebugName</a></div><div class="ttdeci">std::string m_DebugName</div><div class="ttdef"><b>Definition</b> Layer.h:23</div></div>
+<div class="ttc" id="aclass_vesper_1_1_layer_html_ad623a46178f0cd2eff4079ee323402c3"><div class="ttname"><a href="#ad623a46178f0cd2eff4079ee323402c3">Vesper::Layer::m_DebugName</a></div><div class="ttdeci">std::string m_DebugName</div><div class="ttdoc">The name of the layer assigned at creation, used for debugging.</div><div class="ttdef"><b>Definition</b> Layer.h:49</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#aa2fadd42504c70ef28da27b724d276c7">Layer()</a>.</p>
 
@@ -203,7 +228,9 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   21</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#ad623a46178f0cd2eff4079ee323402c3">m_DebugName</a>; }</div>
+
+<p>Retrieves the name of the layer for debugging purposes. </p>
+<div class="fragment"><div class="line"><span class="lineno">   45</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#ad623a46178f0cd2eff4079ee323402c3">m_DebugName</a>; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -230,8 +257,10 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="class_vesper_1_1_editor_layer.html#ab3c26e6d9cada8bd70054e582578c4ec">Vesper::EditorLayer</a>, <a class="el" href="class_vesper_1_1_im_gui_layer.html#aeb2e5a03cd424c37478476f6c63d025b">Vesper::ImGuiLayer</a>, and <a class="el" href="class_vesper_1_1_open_g_l_im_gui_layer.html#aec233ad0c31eac8ed225da6eb3cff5a7">Vesper::OpenGLImGuiLayer</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   14</span>{};</div>
+<p>Called when the layer is attached to the application. </p>
+
+<p>Reimplemented in <a class="el" href="class_sandbox2_d.html#aadf778a1239b1ad3e030174a36fba86b">Sandbox2D</a>, <a class="el" href="class_vesper_1_1_editor_layer.html#ab3c26e6d9cada8bd70054e582578c4ec">Vesper::EditorLayer</a>, <a class="el" href="class_vesper_1_1_im_gui_layer.html#aeb2e5a03cd424c37478476f6c63d025b">Vesper::ImGuiLayer</a>, and <a class="el" href="class_vesper_1_1_open_g_l_im_gui_layer.html#aec233ad0c31eac8ed225da6eb3cff5a7">Vesper::OpenGLImGuiLayer</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   23</span>{};</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="class_vesper_1_1_application.html#ab714953686aac886f76beb76378a18d9">Vesper::Application::PushLayer()</a>, and <a class="el" href="class_vesper_1_1_application.html#ae10c674888e1ed9864c1f9b080b8af7f">Vesper::Application::PushOverlay()</a>.</p>
 
@@ -260,8 +289,10 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="class_vesper_1_1_editor_layer.html#aeea81470727bfa4afc367ea46805a3cb">Vesper::EditorLayer</a>, <a class="el" href="class_vesper_1_1_im_gui_layer.html#a656bc171954d83d0c8c3b273cac6ca7b">Vesper::ImGuiLayer</a>, and <a class="el" href="class_vesper_1_1_open_g_l_im_gui_layer.html#a87f6d03be6b07a523c9ecb7a31845e07">Vesper::OpenGLImGuiLayer</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   15</span>{};</div>
+<p>Called when the layer is detached from the application. </p>
+
+<p>Reimplemented in <a class="el" href="class_sandbox2_d.html#a5d396907448255dfa48bf0124eeddedd">Sandbox2D</a>, <a class="el" href="class_vesper_1_1_editor_layer.html#aeea81470727bfa4afc367ea46805a3cb">Vesper::EditorLayer</a>, <a class="el" href="class_vesper_1_1_im_gui_layer.html#a656bc171954d83d0c8c3b273cac6ca7b">Vesper::ImGuiLayer</a>, and <a class="el" href="class_vesper_1_1_open_g_l_im_gui_layer.html#a87f6d03be6b07a523c9ecb7a31845e07">Vesper::OpenGLImGuiLayer</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   26</span>{};</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -288,8 +319,16 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="class_vesper_1_1_editor_layer.html#a897b3ba2fcaacf49ef89a9492986850f">Vesper::EditorLayer</a>, <a class="el" href="class_vesper_1_1_im_gui_layer.html#a224b66c3c8a7515b401f5b1db00978ea">Vesper::ImGuiLayer</a>, and <a class="el" href="class_vesper_1_1_open_g_l_im_gui_layer.html#a94034e176531bb844aadb4d300507106">Vesper::OpenGLImGuiLayer</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   17</span>{}</div>
+<p>Called when an event is dispatched to the layer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">event</td><td>The event being dispatched. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented in <a class="el" href="class_example_layer.html#a8f998c71dfeb68383cb5c809485815b1">ExampleLayer</a>, <a class="el" href="class_example_layer.html#a8f998c71dfeb68383cb5c809485815b1">ExampleLayer</a>, <a class="el" href="class_sandbox2_d.html#a8b513146e154e7de0c959ccc115513f9">Sandbox2D</a>, <a class="el" href="class_vesper_1_1_editor_layer.html#a897b3ba2fcaacf49ef89a9492986850f">Vesper::EditorLayer</a>, <a class="el" href="class_vesper_1_1_im_gui_layer.html#a224b66c3c8a7515b401f5b1db00978ea">Vesper::ImGuiLayer</a>, and <a class="el" href="class_vesper_1_1_open_g_l_im_gui_layer.html#a94034e176531bb844aadb4d300507106">Vesper::OpenGLImGuiLayer</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   36</span>{}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -316,8 +355,10 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="class_vesper_1_1_editor_layer.html#af5e79508040b18e9fa455830692f6ed0">Vesper::EditorLayer</a>, <a class="el" href="class_vesper_1_1_im_gui_layer.html#a70973f0316b1a8bc9a6052c894170a1f">Vesper::ImGuiLayer</a>, and <a class="el" href="class_vesper_1_1_open_g_l_im_gui_layer.html#a3a60ac5d57e0e009b776b073718e61bd">Vesper::OpenGLImGuiLayer</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   19</span>{};</div>
+<p>Called when the layer should render its ImGui components. </p>
+
+<p>Reimplemented in <a class="el" href="class_example_layer.html#a29e9c1f5c9366b6c1469bfceba17f569">ExampleLayer</a>, <a class="el" href="class_example_layer.html#a29e9c1f5c9366b6c1469bfceba17f569">ExampleLayer</a>, <a class="el" href="class_sandbox2_d.html#aabfc3f41ef7dc962dae7d8c0bad7e484">Sandbox2D</a>, <a class="el" href="class_vesper_1_1_editor_layer.html#af5e79508040b18e9fa455830692f6ed0">Vesper::EditorLayer</a>, <a class="el" href="class_vesper_1_1_im_gui_layer.html#a70973f0316b1a8bc9a6052c894170a1f">Vesper::ImGuiLayer</a>, and <a class="el" href="class_vesper_1_1_open_g_l_im_gui_layer.html#a3a60ac5d57e0e009b776b073718e61bd">Vesper::OpenGLImGuiLayer</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   42</span>{};</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -343,7 +384,9 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   18</span>{};</div>
+
+<p>Called when the layer should render its contents. </p>
+<div class="fragment"><div class="line"><span class="lineno">   39</span>{};</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -370,8 +413,16 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="class_vesper_1_1_editor_layer.html#a984242ed582e7e06bcfd16bfe5de0a68">Vesper::EditorLayer</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   16</span>{};</div>
+<p>Called every frame to update the layer with the given timestep. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ts</td><td>The timestep representing the time elapsed since the last update. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented in <a class="el" href="class_example_layer.html#a7753e915b8fdb4b1aa1109aca4c84131">ExampleLayer</a>, <a class="el" href="class_example_layer.html#a7753e915b8fdb4b1aa1109aca4c84131">ExampleLayer</a>, <a class="el" href="class_sandbox2_d.html#abc796def0880d3ca2dde9a010c4bf70c">Sandbox2D</a>, and <a class="el" href="class_vesper_1_1_editor_layer.html#a984242ed582e7e06bcfd16bfe5de0a68">Vesper::EditorLayer</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   31</span>{};</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -395,6 +446,8 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>The name of the layer assigned at creation, used for debugging. </p>
 
 </div>
 </div>

@@ -2,6 +2,11 @@
 \hypertarget{struct_vesper_1_1_u_u_i_d}{}\label{struct_vesper_1_1_u_u_i_d}\index{Vesper::UUID@{Vesper::UUID}}
 
 
+Universally Unique Identifier.  
+
+
+
+
 {\ttfamily \+\#include $<$Components.\+h$>$}
 
 \doxysubsubsection*{Public Member Functions}
@@ -19,8 +24,13 @@
 \begin{DoxyCompactItemize}
 \item 
 std::\+string \doxymbox{\hyperlink{struct_vesper_1_1_u_u_i_d_acf02a244f181ab1706f29b21531a0ec6}{ID}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The string representation of the \doxylink{struct_vesper_1_1_u_u_i_d}{UUID}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Universally Unique Identifier. 
+
+A simple wrapper around a string representing a \doxylink{struct_vesper_1_1_u_u_i_d}{UUID}. 
 
 \label{doc-constructors}
 \Hypertarget{struct_vesper_1_1_u_u_i_d_doc-constructors}
@@ -33,7 +43,7 @@ Vesper::\+\+UUID::\+\+UUID (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00016\ \{\ \doxymbox{\hyperlink{struct_vesper_1_1_u_u_i_d_acf02a244f181ab1706f29b21531a0ec6}{ID}}\ =\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a9a3d18994aa7df05cf15657677456aab}{Random::UUID}}();\ \}}
+\DoxyCodeLine{00021\ \{\ \doxymbox{\hyperlink{struct_vesper_1_1_u_u_i_d_acf02a244f181ab1706f29b21531a0ec6}{ID}}\ =\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a9a3d18994aa7df05cf15657677456aab}{Random::UUID}}();\ \}}
 
 \end{DoxyCode}
 \Hypertarget{struct_vesper_1_1_u_u_i_d_a4bcc8c5ce8ec57f5bc8062842171ad81}\index{Vesper::UUID@{Vesper::UUID}!UUID@{UUID}}
@@ -44,8 +54,8 @@ Vesper::\+\+UUID::\+\+UUID (\begin{DoxyParamCaption}\item[{const std::\+string \
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{struct_vesper_1_1_u_u_i_d_acf02a244f181ab1706f29b21531a0ec6}{ID}}\{\ \textcolor{keywordtype}{id}\ \}\ \{}
-\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{struct_vesper_1_1_u_u_i_d_acf02a244f181ab1706f29b21531a0ec6}{ID}}\{\ \textcolor{keywordtype}{id}\ \}\ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \}}
 
 \end{DoxyCode}
 
@@ -61,7 +71,7 @@ Vesper::\+\+UUID::\+operator const std::\+string \& (\begin{DoxyParamCaption}{}{
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00021\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{struct_vesper_1_1_u_u_i_d_acf02a244f181ab1706f29b21531a0ec6}{ID}};\ \}}
+\DoxyCodeLine{00026\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{struct_vesper_1_1_u_u_i_d_acf02a244f181ab1706f29b21531a0ec6}{ID}};\ \}}
 
 \end{DoxyCode}
 \Hypertarget{struct_vesper_1_1_u_u_i_d_afcc157278319778fb813cec22850ea99}\index{Vesper::UUID@{Vesper::UUID}!operator std::string \&@{operator std::string \&}}
@@ -72,7 +82,7 @@ Vesper::\+\+UUID::\+operator std::\+string \& (\begin{DoxyParamCaption}{}{}\end{
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00020\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{struct_vesper_1_1_u_u_i_d_acf02a244f181ab1706f29b21531a0ec6}{ID}};\ \}}
+\DoxyCodeLine{00025\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{struct_vesper_1_1_u_u_i_d_acf02a244f181ab1706f29b21531a0ec6}{ID}};\ \}}
 
 \end{DoxyCode}
 
@@ -85,6 +95,10 @@ Vesper::\+\+UUID::\+operator std::\+string \& (\begin{DoxyParamCaption}{}{}\end{
 \doxysubsubsection{\texorpdfstring{ID}{ID}}
 {\footnotesize\ttfamily \label{struct_vesper_1_1_u_u_i_d_acf02a244f181ab1706f29b21531a0ec6} 
 std::\+string Vesper::\+\+UUID::\+\+ID}
+
+
+
+The string representation of the \doxylink{struct_vesper_1_1_u_u_i_d}{UUID}. 
 
 
 

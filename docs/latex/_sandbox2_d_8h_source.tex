@@ -1,0 +1,67 @@
+\doxysection{Sandbox2\+D.\+h}
+\hypertarget{_sandbox2_d_8h_source}{}\label{_sandbox2_d_8h_source}\index{Sandbox/src/Sandbox2D.h@{Sandbox/src/Sandbox2D.h}}
+\doxymbox{\hyperlink{_sandbox2_d_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{pragma}\ \textcolor{preprocessor}{once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\ \textcolor{preprocessor}{<}\textcolor{preprocessor}{Vesper}\textcolor{preprocessor}{.}\textcolor{preprocessor}{h}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\ \textcolor{preprocessor}{"{}Vesper/App/Layer.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\ \textcolor{preprocessor}{"{}Vesper/ParticleSystem/ParticleSystem.h"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{struct}\ RandomProperties;}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class}\ \doxymbox{\hyperlink{class_sandbox2_d}{Sandbox2D}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{namespace_vesper}{Vesper}}::\doxymbox{\hyperlink{class_vesper_1_1_layer}{Layer}}}
+\DoxyCodeLine{00011\ \{}
+\DoxyCodeLine{00012\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00013\ \ \ \ \ \doxymbox{\hyperlink{class_sandbox2_d_a553ef54041bf832607144395e5fd2bc8}{Sandbox2D}}();}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{virtual}\ \string~\doxymbox{\hyperlink{class_sandbox2_d_af3ebdbffb67097ab19f66b7525bf5e7b}{Sandbox2D}}();}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_sandbox2_d_aadf778a1239b1ad3e030174a36fba86b}{OnAttach}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_sandbox2_d_a5d396907448255dfa48bf0124eeddedd}{OnDetach}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_sandbox2_d_abc796def0880d3ca2dde9a010c4bf70c}{OnUpdate}}(\doxymbox{\hyperlink{namespace_vesper}{Vesper}}::\doxymbox{\hyperlink{class_vesper_1_1_timestep}{Timestep}}\ ts)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_sandbox2_d_aabfc3f41ef7dc962dae7d8c0bad7e484}{OnImGuiRender}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_sandbox2_d_a8b513146e154e7de0c959ccc115513f9}{OnEvent}}(\doxymbox{\hyperlink{namespace_vesper}{Vesper}}::\doxymbox{\hyperlink{class_vesper_1_1_event}{Event}}\&\ e)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00020\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00021\ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper}{Vesper}}::\doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_controller}{OrthographicCameraController}}\ \doxymbox{\hyperlink{class_sandbox2_d_a4ac4099e34a5fa63eaf81076aa08442b}{m\_CameraController}};}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{comment}{//\ Temp}}
+\DoxyCodeLine{00023\ \ \ \ \ \doxymbox{\hyperlink{class_sandbox2_d_af43acfad558bbf9bb082ffe7cc88c0c8}{Vesper}}::\doxymbox{\hyperlink{class_sandbox2_d_af43acfad558bbf9bb082ffe7cc88c0c8}{Ref}}<\doxymbox{\hyperlink{class_sandbox2_d_af43acfad558bbf9bb082ffe7cc88c0c8}{Vesper}}::\doxymbox{\hyperlink{class_sandbox2_d_af43acfad558bbf9bb082ffe7cc88c0c8}{VertexArray}}>\ \doxymbox{\hyperlink{class_sandbox2_d_af43acfad558bbf9bb082ffe7cc88c0c8}{m\_SquareVA}};}
+\DoxyCodeLine{00024\ \ \ \ \ \doxymbox{\hyperlink{class_sandbox2_d_a18dc4ea000c5c049140caba99163a858}{Vesper}}::\doxymbox{\hyperlink{class_sandbox2_d_a18dc4ea000c5c049140caba99163a858}{Ref}}<\doxymbox{\hyperlink{class_sandbox2_d_a18dc4ea000c5c049140caba99163a858}{Vesper}}::\doxymbox{\hyperlink{class_sandbox2_d_a18dc4ea000c5c049140caba99163a858}{Shader}}>\ \doxymbox{\hyperlink{class_sandbox2_d_a18dc4ea000c5c049140caba99163a858}{m\_FlatColorShader}};}
+\DoxyCodeLine{00025\ \ \ \ \ \doxymbox{\hyperlink{class_sandbox2_d_a628da8f5ac0412960b7230d80f9dbd2d}{Vesper}}::\doxymbox{\hyperlink{class_sandbox2_d_a628da8f5ac0412960b7230d80f9dbd2d}{Ref}}<\doxymbox{\hyperlink{class_sandbox2_d_a628da8f5ac0412960b7230d80f9dbd2d}{Vesper}}::\doxymbox{\hyperlink{class_sandbox2_d_a628da8f5ac0412960b7230d80f9dbd2d}{Texture2D}}>\ \doxymbox{\hyperlink{class_sandbox2_d_a628da8f5ac0412960b7230d80f9dbd2d}{m\_CheckerboardTexture}};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \doxymbox{\hyperlink{class_sandbox2_d_a78fdfe083f3b0df5b6008ef716cef19b}{Vesper}}::\doxymbox{\hyperlink{class_sandbox2_d_a78fdfe083f3b0df5b6008ef716cef19b}{Ref}}<\doxymbox{\hyperlink{class_sandbox2_d_a78fdfe083f3b0df5b6008ef716cef19b}{Vesper}}::\doxymbox{\hyperlink{class_sandbox2_d_a78fdfe083f3b0df5b6008ef716cef19b}{Texture2D}}>\ \doxymbox{\hyperlink{class_sandbox2_d_a78fdfe083f3b0df5b6008ef716cef19b}{m\_SpriteSheetFire}};}
+\DoxyCodeLine{00028\ \ \ \ \ \doxymbox{\hyperlink{class_sandbox2_d_a3d76b174bf85aa7b008e0d175ca1b367}{Vesper}}::\doxymbox{\hyperlink{class_sandbox2_d_a3d76b174bf85aa7b008e0d175ca1b367}{Ref}}<\doxymbox{\hyperlink{class_sandbox2_d_a3d76b174bf85aa7b008e0d175ca1b367}{Vesper}}::\doxymbox{\hyperlink{class_sandbox2_d_a3d76b174bf85aa7b008e0d175ca1b367}{Texture2D}}>\ \doxymbox{\hyperlink{class_sandbox2_d_a3d76b174bf85aa7b008e0d175ca1b367}{m\_SpriteSheetTown}};}
+\DoxyCodeLine{00029\ \ \ \ \ \doxymbox{\hyperlink{class_sandbox2_d_a75de24706ec04f6e40a917dbfad228dc}{Vesper}}::\doxymbox{\hyperlink{class_sandbox2_d_a75de24706ec04f6e40a917dbfad228dc}{Ref}}<\doxymbox{\hyperlink{class_sandbox2_d_a75de24706ec04f6e40a917dbfad228dc}{Vesper}}::\doxymbox{\hyperlink{class_sandbox2_d_a75de24706ec04f6e40a917dbfad228dc}{Texture2D}}>\ \doxymbox{\hyperlink{class_sandbox2_d_a75de24706ec04f6e40a917dbfad228dc}{m\_SpriteSheetCrystals}};}
+\DoxyCodeLine{00030\ \ \ \ \ \doxymbox{\hyperlink{class_sandbox2_d_a5c54b5ac0abe49f00bda59936842b551}{Vesper}}::\doxymbox{\hyperlink{class_sandbox2_d_a5c54b5ac0abe49f00bda59936842b551}{Ref}}<\doxymbox{\hyperlink{class_sandbox2_d_a5c54b5ac0abe49f00bda59936842b551}{Vesper}}::\doxymbox{\hyperlink{class_sandbox2_d_a5c54b5ac0abe49f00bda59936842b551}{Texture2D}}>\ \doxymbox{\hyperlink{class_sandbox2_d_a5c54b5ac0abe49f00bda59936842b551}{m\_SpriteSheetRocks}};}
+\DoxyCodeLine{00031\ \ \ \ \ \doxymbox{\hyperlink{class_sandbox2_d_ad8bf69b236bddef0cd75af9453b40064}{Vesper}}::\doxymbox{\hyperlink{class_sandbox2_d_ad8bf69b236bddef0cd75af9453b40064}{Ref}}<\doxymbox{\hyperlink{class_sandbox2_d_ad8bf69b236bddef0cd75af9453b40064}{Vesper}}::\doxymbox{\hyperlink{class_sandbox2_d_ad8bf69b236bddef0cd75af9453b40064}{Texture2D}}>\ \doxymbox{\hyperlink{class_sandbox2_d_ad8bf69b236bddef0cd75af9453b40064}{m\_SpriteSheetCursedLands}};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \doxymbox{\hyperlink{class_sandbox2_d_a97d01fd2c14ab53627aaebcc8a602928}{Vesper}}::\doxymbox{\hyperlink{class_sandbox2_d_a97d01fd2c14ab53627aaebcc8a602928}{Ref}}<\doxymbox{\hyperlink{class_sandbox2_d_a97d01fd2c14ab53627aaebcc8a602928}{Vesper}}::\doxymbox{\hyperlink{class_sandbox2_d_a97d01fd2c14ab53627aaebcc8a602928}{SubTexture2D}}>\ \doxymbox{\hyperlink{class_sandbox2_d_a97d01fd2c14ab53627aaebcc8a602928}{m\_SubTextureFire}};}
+\DoxyCodeLine{00034\ \ \ \ \ \doxymbox{\hyperlink{class_sandbox2_d_ab486d62757960a3ca08d215ad5828cdb}{Vesper}}::\doxymbox{\hyperlink{class_sandbox2_d_ab486d62757960a3ca08d215ad5828cdb}{Ref}}<\doxymbox{\hyperlink{class_sandbox2_d_ab486d62757960a3ca08d215ad5828cdb}{Vesper}}::\doxymbox{\hyperlink{class_sandbox2_d_ab486d62757960a3ca08d215ad5828cdb}{SubTexture2D}}>\ \doxymbox{\hyperlink{class_sandbox2_d_ab486d62757960a3ca08d215ad5828cdb}{m\_SubTextureTown}};}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{comment}{//Vesper::Ref<Vesper::SubTexture2D>\ m\_SubTextureCrystal;}}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{comment}{//Vesper::Ref<Vesper::SubTexture2D>\ m\_SubTextureRock;}}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{comment}{//Vesper::Ref<Vesper::SubTexture2D>\ m\_SubTexturePlant;}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{comment}{//Vesper::Ref<Vesper::Framebuffer>\ m\_Framebuffer;}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_sandbox2_d_a5c32d755f39b9898c38ab551c8721847}{m\_textureScale}}\ =\ 1.0f;}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_sandbox2_d_a15ef875e5e7708a1bd4b181a00f544fb}{m\_squareRotation}}\ =\ 25.0f;}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_sandbox2_d_aeea266d2807eb200ea956df436c66884}{m\_specialQuadRotation}}\ =\ 0.5f;}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_sandbox2_d_a49e3fc115c5fb9ad3e7daa41fdc133e0}{ParticleEmitCount}}\ =\ 100;}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_sandbox2_d_a64b3d7c87ae956b6dc0fed2a92f770c4}{scene1}}\ =\ \textcolor{keyword}{false},\ \doxymbox{\hyperlink{class_sandbox2_d_aabba7dcf25ae3aabded3b7a820356bfa}{scene2}}\ =\ \textcolor{keyword}{false},\ \doxymbox{\hyperlink{class_sandbox2_d_af9c4fc5293518484a014cae82d6de973}{scene3}}\ =\ \textcolor{keyword}{false},\ \doxymbox{\hyperlink{class_sandbox2_d_a652e56c43cf258cbf96e518bdf61213c}{scene4}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \doxymbox{\hyperlink{class_sandbox2_d_aff3d8f0fa9513e5ef73f72b338fea3dc}{glm}}::\doxymbox{\hyperlink{class_sandbox2_d_aff3d8f0fa9513e5ef73f72b338fea3dc}{vec4}}\ \doxymbox{\hyperlink{class_sandbox2_d_aff3d8f0fa9513e5ef73f72b338fea3dc}{m\_SquareColor}}\ =\ \{\ 0.2f,\ 0.3f,\ 0.8f,\ 1.0f\ \};}
+\DoxyCodeLine{00049\ \ \ \ \ \doxymbox{\hyperlink{class_sandbox2_d_a5601860180702661092275cbdb621c23}{glm}}::\doxymbox{\hyperlink{class_sandbox2_d_a5601860180702661092275cbdb621c23}{vec4}}\ \doxymbox{\hyperlink{class_sandbox2_d_a5601860180702661092275cbdb621c23}{m\_TextureTintColor1}}\ =\ \{\ 1.0f,\ 1.0f,\ 1.0f,\ 1.0f\ \};}
+\DoxyCodeLine{00050\ \ \ \ \ \doxymbox{\hyperlink{class_sandbox2_d_aa6ec49851a2ea35df5c4bbc6162ab9a3}{glm}}::\doxymbox{\hyperlink{class_sandbox2_d_aa6ec49851a2ea35df5c4bbc6162ab9a3}{vec4}}\ \doxymbox{\hyperlink{class_sandbox2_d_aa6ec49851a2ea35df5c4bbc6162ab9a3}{m\_TextureTintColor2}}\ =\ \{\ 1.0f,\ 1.0f,\ 1.0f,\ 1.0f\ \};}
+\DoxyCodeLine{00051\ \ \ \ \ \doxymbox{\hyperlink{class_sandbox2_d_aa70af86fb4d6e7ac9f004d8e493e314b}{glm}}::\doxymbox{\hyperlink{class_sandbox2_d_aa70af86fb4d6e7ac9f004d8e493e314b}{vec4}}\ \doxymbox{\hyperlink{class_sandbox2_d_aa70af86fb4d6e7ac9f004d8e493e314b}{m\_BackgroundColor}}\ =\ \{\ 0.1f,\ 0.1f,\ 0.1f,\ 1.0f\ \};}
+\DoxyCodeLine{00052\ \ \ \ \ \doxymbox{\hyperlink{class_sandbox2_d_a2f2dd3ce7d422fc2043810be2f67a305}{glm}}::\doxymbox{\hyperlink{class_sandbox2_d_a2f2dd3ce7d422fc2043810be2f67a305}{vec4}}\ \doxymbox{\hyperlink{class_sandbox2_d_a2f2dd3ce7d422fc2043810be2f67a305}{m\_ClearColor}}\ =\ \{\ 0.1f,\ 0.3f,\ 0.3f,\ 1.0f\ \};}
+\DoxyCodeLine{00053\ \ \ \ \ \doxymbox{\hyperlink{class_sandbox2_d_a4455a5f8760f3f2321c429e45724bf66}{glm}}::\doxymbox{\hyperlink{class_sandbox2_d_a4455a5f8760f3f2321c429e45724bf66}{vec4}}\ \doxymbox{\hyperlink{class_sandbox2_d_a4455a5f8760f3f2321c429e45724bf66}{m\_SpecialQuadColor}}\ =\ \{\ 0.9f,\ 0.2f,\ 0.8f,\ 1.0f\ \};}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_sandbox2_d_a26d2bb31214e80f7ab782f77f60df21a}{m\_UseSpecialQuadColor}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper}{Vesper}}::\doxymbox{\hyperlink{class_vesper_1_1_particle_system}{ParticleSystem}}\ \doxymbox{\hyperlink{class_sandbox2_d_a6423519890c9b283015a7e3bfb94cb88}{m\_ParticleSystem}};}
+\DoxyCodeLine{00057\ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper}{Vesper}}::\doxymbox{\hyperlink{namespace_vesper_struct_vesper_1_1_particle_props}{ParticleProps}}\ \doxymbox{\hyperlink{class_sandbox2_d_aaa20f735c4ddef96a5575aa3c43dd3c0}{m\_ParticleProps}};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \doxymbox{\hyperlink{class_sandbox2_d_a712da4c6c139a111af8c31aad8a31924}{std}}::\doxymbox{\hyperlink{class_sandbox2_d_a712da4c6c139a111af8c31aad8a31924}{unordered\_map}}<\textcolor{keywordtype}{char},\ \doxymbox{\hyperlink{class_sandbox2_d_a712da4c6c139a111af8c31aad8a31924}{Vesper}}::\doxymbox{\hyperlink{class_sandbox2_d_a712da4c6c139a111af8c31aad8a31924}{Ref}}<\doxymbox{\hyperlink{class_sandbox2_d_a712da4c6c139a111af8c31aad8a31924}{Vesper}}::\doxymbox{\hyperlink{class_sandbox2_d_a712da4c6c139a111af8c31aad8a31924}{SubTexture2D}}>>\doxymbox{\hyperlink{class_sandbox2_d_a712da4c6c139a111af8c31aad8a31924}{s\_TextureMap}};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \};}
+
+\end{DoxyCode}

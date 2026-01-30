@@ -8,25 +8,47 @@
 \DoxyCodeLine{00004\ }
 \DoxyCodeLine{00005\ \textcolor{keyword}{namespace}\ \doxymbox{\hyperlink{namespace_vesper}{Vesper}}\ \{}
 \DoxyCodeLine{00006\ }
-\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keyword}{class}\ \doxymbox{\hyperlink{class_vesper_1_1_scriptable_entity}{ScriptableEntity}}}
-\DoxyCodeLine{00008\ \ \ \ \ \{}
-\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \string~\doxymbox{\hyperlink{class_vesper_1_1_scriptable_entity_a787e175ce2a3811576c159b21ee6c7ce}{ScriptableEntity}}()\ \{\};}
-\DoxyCodeLine{00011\ }
-\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
-\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ T\&\ \doxymbox{\hyperlink{class_vesper_1_1_scriptable_entity_ab54a267b7a3955dc4066c1f525eb9af8}{GetComponent}}()}
-\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_scriptable_entity}{m\_Entity}}.\doxymbox{\hyperlink{class_vesper_1_1_scriptable_entity}{GetComponent}}<\doxymbox{\hyperlink{class_vesper_1_1_scriptable_entity}{T}}>();}
-\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00017\ }
-\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{protected}:}
-\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_scriptable_entity_a411673888486656cc472552c5a2f8c7c}{OnCreate}}()\ \{\}}
-\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_scriptable_entity_ab10c29408758e068dbab38765adab286}{OnDestroy}}()\ \{\}}
-\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_scriptable_entity_aebc5ec9861be990c3e5fbdce905e1639}{OnUpdate}}(\doxymbox{\hyperlink{class_vesper_1_1_timestep}{Timestep}}\ ts)\ \{\}}
-\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_entity}{Entity}}\ \doxymbox{\hyperlink{class_vesper_1_1_scriptable_entity_a83cce6f3d418e7e02578101bc95cc498}{m\_Entity}};}
-\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class}\ \doxymbox{\hyperlink{class_vesper_1_1_scriptable_entity}{Scene}};}
-\DoxyCodeLine{00025\ \ \ \ \ \};}
-\DoxyCodeLine{00026\ \}}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{comment}{///\ @brief\ Base\ class\ for\ scriptable\ entities\ within\ a\ scene.}}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{comment}{///}}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{comment}{///\ A\ ScriptableEntity\ allows\ for\ custom\ behavior\ to\ be\ defined\ for\ entities\ in\ a\ scene,\ not\ already\ provided\ as\ standardized\ components.}}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{class}\ \doxymbox{\hyperlink{class_vesper_1_1_scriptable_entity}{ScriptableEntity}}}
+\DoxyCodeLine{00011\ \ \ \ \ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \string~\doxymbox{\hyperlink{class_vesper_1_1_scriptable_entity_a787e175ce2a3811576c159b21ee6c7ce}{ScriptableEntity}}()\ \{\};}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Retrieves\ a\ reference\ to\ a\ component\ of\ type\ T\ attached\ to\ the\ entity.}}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{comment}{///}}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @tparam\ T\ The\ type\ of\ the\ component\ to\ retrieve.}}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @return\ Reference\ to\ the\ component\ of\ type\ T.}}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ Will\ assert\ if\ the\ component\ does\ not\ exist.}}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ T\&\ \doxymbox{\hyperlink{class_vesper_1_1_scriptable_entity_ab54a267b7a3955dc4066c1f525eb9af8}{GetComponent}}()}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_scriptable_entity}{m\_Entity}}.\doxymbox{\hyperlink{class_vesper_1_1_scriptable_entity}{GetComponent}}<\doxymbox{\hyperlink{class_vesper_1_1_scriptable_entity}{T}}>();}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Sets\ the\ entity\ associated\ with\ this\ scriptable\ entity.}}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{comment}{///}}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ Meant\ for\ internal\ use\ by\ the\ Scene\ class.}}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ Should\ be\ overridden\ in\ derived\ classes\ if\ additional\ setup\ is\ required\ when\ the\ entity\ is\ set.}}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_scriptable_entity_a411673888486656cc472552c5a2f8c7c}{OnCreate}}()\ \{\}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Called\ when\ the\ entity\ is\ destroyed.}}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{comment}{///}}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ Meant\ for\ internal\ use\ by\ the\ Scene\ class.}}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ Should\ be\ overridden\ in\ derived\ classes\ to\ handle\ cleanup.}}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_scriptable_entity_ab10c29408758e068dbab38765adab286}{OnDestroy}}()\ \{\}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Called\ every\ frame\ to\ update\ the\ entity.}}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{comment}{///}}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @param\ ts\ The\ timestep\ representing\ the\ time\ elapsed\ since\ the\ last\ update.}}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ Custom\ behavior\ should\ be\ implemented\ here\ in\ derived\ classes.}}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_scriptable_entity_aebc5ec9861be990c3e5fbdce905e1639}{OnUpdate}}(\doxymbox{\hyperlink{class_vesper_1_1_timestep}{Timestep}}\ ts)\ \{\}}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_entity}{Entity}}\ \doxymbox{\hyperlink{class_vesper_1_1_scriptable_entity_a83cce6f3d418e7e02578101bc95cc498}{m\_Entity}};}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class}\ \doxymbox{\hyperlink{class_vesper_1_1_scriptable_entity}{Scene}};}
+\DoxyCodeLine{00047\ \ \ \ \ \};}
+\DoxyCodeLine{00048\ \}}
 
 \end{DoxyCode}

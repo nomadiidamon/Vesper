@@ -105,7 +105,7 @@ Inheritance diagram for Vesper::EditorLayer:</div>
  <div class="center">
   <img src="class_vesper_1_1_editor_layer.png" usemap="#Vesper_3A_3AEditorLayer_map" alt=""/>
   <map id="Vesper_3A_3AEditorLayer_map" name="Vesper_3A_3AEditorLayer_map">
-<area href="class_vesper_1_1_layer.html" alt="Vesper::Layer" shape="rect" coords="0,0,125,24"/>
+<area href="class_vesper_1_1_layer.html" title="Represents a reusable application layer that receives lifecycle callbacks (attach,..." alt="Vesper::Layer" shape="rect" coords="0,0,125,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -114,15 +114,23 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a49ed151c3e1d1ad844aa8e23a4e89db4" id="r_a49ed151c3e1d1ad844aa8e23a4e89db4"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a49ed151c3e1d1ad844aa8e23a4e89db4">EditorLayer</a> ()</td></tr>
 <tr class="memitem:aeb611a90638966b560d81181a8da4f0a" id="r_aeb611a90638966b560d81181a8da4f0a"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="#aeb611a90638966b560d81181a8da4f0a">~EditorLayer</a> ()=default</td></tr>
 <tr class="memitem:ab3c26e6d9cada8bd70054e582578c4ec" id="r_ab3c26e6d9cada8bd70054e582578c4ec"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#ab3c26e6d9cada8bd70054e582578c4ec">OnAttach</a> () override</td></tr>
+<tr class="memdesc:ab3c26e6d9cada8bd70054e582578c4ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when the layer is attached to the application.  <br /></td></tr>
 <tr class="memitem:aeea81470727bfa4afc367ea46805a3cb" id="r_aeea81470727bfa4afc367ea46805a3cb"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#aeea81470727bfa4afc367ea46805a3cb">OnDetach</a> () override</td></tr>
+<tr class="memdesc:aeea81470727bfa4afc367ea46805a3cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when the layer is detached from the application.  <br /></td></tr>
 <tr class="memitem:a984242ed582e7e06bcfd16bfe5de0a68" id="r_a984242ed582e7e06bcfd16bfe5de0a68"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a984242ed582e7e06bcfd16bfe5de0a68">OnUpdate</a> (<a class="el" href="class_vesper_1_1_timestep.html">Timestep</a> ts) override</td></tr>
+<tr class="memdesc:a984242ed582e7e06bcfd16bfe5de0a68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called every frame to update the layer with the given timestep.  <br /></td></tr>
 <tr class="memitem:af5e79508040b18e9fa455830692f6ed0" id="r_af5e79508040b18e9fa455830692f6ed0"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#af5e79508040b18e9fa455830692f6ed0">OnImGuiRender</a> () override</td></tr>
+<tr class="memdesc:af5e79508040b18e9fa455830692f6ed0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when the layer should render its ImGui components.  <br /></td></tr>
 <tr class="memitem:a897b3ba2fcaacf49ef89a9492986850f" id="r_a897b3ba2fcaacf49ef89a9492986850f"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a897b3ba2fcaacf49ef89a9492986850f">OnEvent</a> (<a class="el" href="class_vesper_1_1_event.html">Event</a> &amp;e) override</td></tr>
+<tr class="memdesc:a897b3ba2fcaacf49ef89a9492986850f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when an event is dispatched to the layer.  <br /></td></tr>
 <tr class="inherit_header pub_methods_class_vesper_1_1_layer"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_vesper_1_1_layer')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="class_vesper_1_1_layer.html">Vesper::Layer</a></td></tr>
 <tr class="memitem:aa2fadd42504c70ef28da27b724d276c7 inherit pub_methods_class_vesper_1_1_layer" id="r_aa2fadd42504c70ef28da27b724d276c7"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="class_vesper_1_1_layer.html#aa2fadd42504c70ef28da27b724d276c7">Layer</a> (const std::string &amp;name=&quot;Layer&quot;)</td></tr>
+<tr class="memdesc:aa2fadd42504c70ef28da27b724d276c7 inherit pub_methods_class_vesper_1_1_layer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="class_vesper_1_1_layer.html" title="Represents a reusable application layer that receives lifecycle callbacks (attach,...">Layer</a> with an optional name for debugging purposes.  <br /></td></tr>
 <tr class="memitem:abebb6b76f4d726745c9ce3f2ccce4c0e inherit pub_methods_class_vesper_1_1_layer" id="r_abebb6b76f4d726745c9ce3f2ccce4c0e"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="class_vesper_1_1_layer.html#abebb6b76f4d726745c9ce3f2ccce4c0e">~Layer</a> ()</td></tr>
 <tr class="memitem:adf08d2acd6e08c78993139afc439ae9c inherit pub_methods_class_vesper_1_1_layer" id="r_adf08d2acd6e08c78993139afc439ae9c"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="class_vesper_1_1_layer.html#adf08d2acd6e08c78993139afc439ae9c">OnRender</a> ()</td></tr>
+<tr class="memdesc:adf08d2acd6e08c78993139afc439ae9c inherit pub_methods_class_vesper_1_1_layer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when the layer should render its contents.  <br /></td></tr>
 <tr class="memitem:a2989c7f8093597b4920c06a3aad407e2 inherit pub_methods_class_vesper_1_1_layer" id="r_a2989c7f8093597b4920c06a3aad407e2"><td class="memItemLeft">const std::string &amp;&#160;</td><td class="memItemRight"><a class="el" href="class_vesper_1_1_layer.html#a2989c7f8093597b4920c06a3aad407e2">GetName</a> () const</td></tr>
+<tr class="memdesc:a2989c7f8093597b4920c06a3aad407e2 inherit pub_methods_class_vesper_1_1_layer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the name of the layer for debugging purposes.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pri-types" class="groupheader"><a id="pri-types" name="pri-types"></a>
 Private Types</h2></td></tr>
@@ -197,6 +205,7 @@ Private Attributes</h2></td></tr>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_attribs_class_vesper_1_1_layer"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_class_vesper_1_1_layer')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Attributes inherited from <a class="el" href="class_vesper_1_1_layer.html">Vesper::Layer</a></td></tr>
 <tr class="memitem:ad623a46178f0cd2eff4079ee323402c3 inherit pro_attribs_class_vesper_1_1_layer" id="r_ad623a46178f0cd2eff4079ee323402c3"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="class_vesper_1_1_layer.html#ad623a46178f0cd2eff4079ee323402c3">m_DebugName</a></td></tr>
+<tr class="memdesc:ad623a46178f0cd2eff4079ee323402c3 inherit pro_attribs_class_vesper_1_1_layer"><td class="mdescLeft">&#160;</td><td class="mdescRight">The name of the layer assigned at creation, used for debugging.  <br /></td></tr>
 </table>
 <a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Member Enumeration Documentation</h2>
 <a id="a272c5f1c03844d263ffa0c41a54c1973" name="a272c5f1c03844d263ffa0c41a54c1973"></a>
@@ -250,7 +259,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   41</span>    }</div>
 <div class="ttc" id="a_instrumentor_8h_html_aaa03f54db70b44f8decacf111dc1109b"><div class="ttname"><a href="_instrumentor_8h.html#aaa03f54db70b44f8decacf111dc1109b">VZ_PROFILE_FUNCTION</a></div><div class="ttdeci">#define VZ_PROFILE_FUNCTION()</div><div class="ttdef"><b>Definition</b> Instrumentor.h:234</div></div>
 <div class="ttc" id="aclass_vesper_1_1_editor_layer_html_a65349cfccff36591d13ffa57e1cfecf0"><div class="ttname"><a href="#a65349cfccff36591d13ffa57e1cfecf0">Vesper::EditorLayer::m_CameraController</a></div><div class="ttdeci">OrthographicCameraController m_CameraController</div><div class="ttdef"><b>Definition</b> EditorLayer.h:53</div></div>
-<div class="ttc" id="aclass_vesper_1_1_layer_html_aa2fadd42504c70ef28da27b724d276c7"><div class="ttname"><a href="class_vesper_1_1_layer.html#aa2fadd42504c70ef28da27b724d276c7">Vesper::Layer::Layer</a></div><div class="ttdeci">Layer(const std::string &amp;name=&quot;Layer&quot;)</div><div class="ttdef"><b>Definition</b> Layer.cpp:6</div></div>
+<div class="ttc" id="aclass_vesper_1_1_layer_html_aa2fadd42504c70ef28da27b724d276c7"><div class="ttname"><a href="class_vesper_1_1_layer.html#aa2fadd42504c70ef28da27b724d276c7">Vesper::Layer::Layer</a></div><div class="ttdeci">Layer(const std::string &amp;name=&quot;Layer&quot;)</div><div class="ttdoc">Constructs a Layer with an optional name for debugging purposes.</div><div class="ttdef"><b>Definition</b> Layer.cpp:6</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a49ed151c3e1d1ad844aa8e23a4e89db4">EditorLayer()</a>.</p>
 
@@ -342,6 +351,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Called when the layer is attached to the application. </p>
 <p>TODO: move to resource manager TODO: fix pathing</p>
 <p>TODO: Get an automatic path to resource that is NOT hardcoded</p>
 
@@ -479,16 +490,16 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  178</span>                    <span class="keywordtype">float</span> speed = 5.0f;</div>
 <div class="line"><span class="lineno">  179</span> </div>
 <div class="line"><span class="lineno">  180</span> </div>
-<div class="line"><span class="lineno">  181</span>                    <span class="keywordflow">if</span> (Input::IsKeyPressed(<a class="code hl_define" href="_key_codes_8h.html#a04822076bd96101fea2cfa3b240f0c6d">VZ_KEY_A</a>))</div>
+<div class="line"><span class="lineno">  181</span>                    <span class="keywordflow">if</span> (Input::IsKeyPressed(VZ_KEY_A))</div>
 <div class="line"><span class="lineno">  182</span>                        transform[3][0] -= speed * ts;</div>
 <div class="line"><span class="lineno">  183</span> </div>
-<div class="line"><span class="lineno">  184</span>                    <span class="keywordflow">if</span> (Input::IsKeyPressed(<a class="code hl_define" href="_key_codes_8h.html#abd619d0ef3a788c7da47d49efa071302">VZ_KEY_D</a>))</div>
+<div class="line"><span class="lineno">  184</span>                    <span class="keywordflow">if</span> (Input::IsKeyPressed(VZ_KEY_D))</div>
 <div class="line"><span class="lineno">  185</span>                        transform[3][0] += speed * ts;</div>
 <div class="line"><span class="lineno">  186</span> </div>
-<div class="line"><span class="lineno">  187</span>                    <span class="keywordflow">if</span> (Input::IsKeyPressed(<a class="code hl_define" href="_key_codes_8h.html#a5b91608e76fc2d4fdbdb9ea0ef44a2e8">VZ_KEY_W</a>))</div>
+<div class="line"><span class="lineno">  187</span>                    <span class="keywordflow">if</span> (Input::IsKeyPressed(VZ_KEY_W))</div>
 <div class="line"><span class="lineno">  188</span>                        transform[3][1] += speed * ts;</div>
 <div class="line"><span class="lineno">  189</span> </div>
-<div class="line"><span class="lineno">  190</span>                    <span class="keywordflow">if</span> (Input::IsKeyPressed(<a class="code hl_define" href="_key_codes_8h.html#ad1073e2ba0b9b95c70e972c5e2fc35cc">VZ_KEY_S</a>))</div>
+<div class="line"><span class="lineno">  190</span>                    <span class="keywordflow">if</span> (Input::IsKeyPressed(VZ_KEY_S))</div>
 <div class="line"><span class="lineno">  191</span>                        transform[3][1] -= speed * ts;</div>
 <div class="line"><span class="lineno">  192</span>                }</div>
 <div class="line"><span class="lineno">  193</span> </div>
@@ -525,10 +536,6 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  225</span> </div>
 <div class="line"><span class="lineno">  226</span> </div>
 <div class="line"><span class="lineno">  227</span>    }</div>
-<div class="ttc" id="a_key_codes_8h_html_a04822076bd96101fea2cfa3b240f0c6d"><div class="ttname"><a href="_key_codes_8h.html#a04822076bd96101fea2cfa3b240f0c6d">VZ_KEY_A</a></div><div class="ttdeci">#define VZ_KEY_A</div><div class="ttdef"><b>Definition</b> KeyCodes.h:23</div></div>
-<div class="ttc" id="a_key_codes_8h_html_a5b91608e76fc2d4fdbdb9ea0ef44a2e8"><div class="ttname"><a href="_key_codes_8h.html#a5b91608e76fc2d4fdbdb9ea0ef44a2e8">VZ_KEY_W</a></div><div class="ttdeci">#define VZ_KEY_W</div><div class="ttdef"><b>Definition</b> KeyCodes.h:45</div></div>
-<div class="ttc" id="a_key_codes_8h_html_abd619d0ef3a788c7da47d49efa071302"><div class="ttname"><a href="_key_codes_8h.html#abd619d0ef3a788c7da47d49efa071302">VZ_KEY_D</a></div><div class="ttdeci">#define VZ_KEY_D</div><div class="ttdef"><b>Definition</b> KeyCodes.h:26</div></div>
-<div class="ttc" id="a_key_codes_8h_html_ad1073e2ba0b9b95c70e972c5e2fc35cc"><div class="ttname"><a href="_key_codes_8h.html#ad1073e2ba0b9b95c70e972c5e2fc35cc">VZ_KEY_S</a></div><div class="ttdeci">#define VZ_KEY_S</div><div class="ttdef"><b>Definition</b> KeyCodes.h:41</div></div>
 <div class="ttc" id="a_log_8h_html_adb5d169d80c40496a160a4fd90ebca37"><div class="ttname"><a href="_log_8h.html#adb5d169d80c40496a160a4fd90ebca37">VZ_CORE_INFO</a></div><div class="ttdeci">#define VZ_CORE_INFO(...)</div><div class="ttdef"><b>Definition</b> Log.h:25</div></div>
 <div class="ttc" id="a_log_8h_html_af9f85085b8d9825fe5d84ca485b7ee89"><div class="ttname"><a href="_log_8h.html#af9f85085b8d9825fe5d84ca485b7ee89">VZ_CORE_ERROR</a></div><div class="ttdeci">#define VZ_CORE_ERROR(...)</div><div class="ttdef"><b>Definition</b> Log.h:27</div></div>
 <div class="ttc" id="aclass_vesper_1_1_editor_layer_html_a18fd64dccdd87a73d490cc09a9590230"><div class="ttname"><a href="#a18fd64dccdd87a73d490cc09a9590230">Vesper::EditorLayer::s_TextureMap</a></div><div class="ttdeci">std::unordered_map&lt; char, Ref&lt; SubTexture2D &gt; &gt; s_TextureMap</div><div class="ttdef"><b>Definition</b> EditorLayer.h:101</div></div>
@@ -583,6 +590,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Called when the layer is detached from the application. </p>
+
 <p>Reimplemented from <a class="el" href="class_vesper_1_1_layer.html#a2da0563f0eeab4fc610c1e10206bc6cb">Vesper::Layer</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  230</span>    {</div>
 <div class="line"><span class="lineno">  231</span>        <a class="code hl_define" href="_instrumentor_8h.html#aaa03f54db70b44f8decacf111dc1109b">VZ_PROFILE_FUNCTION</a>();</div>
@@ -602,7 +611,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">void Vesper::EditorLayer::OnEvent </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_vesper_1_1_event.html">Event</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_vesper_1_1_event.html">Event</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>event</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -612,6 +621,14 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Called when an event is dispatched to the layer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">event</td><td>The event being dispatched. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Reimplemented from <a class="el" href="class_vesper_1_1_layer.html#a158ddf9f38a429b2f9713e8741e8be07">Vesper::Layer</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  658</span>    {</div>
@@ -655,6 +672,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Called when the layer should render its ImGui components. </p>
 
 <p>Reimplemented from <a class="el" href="class_vesper_1_1_layer.html#a64c4c255062db2abaf9ca79a84d417fd">Vesper::Layer</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  426</span>    {</div>
@@ -858,7 +877,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  624</span>                glm::mat4 transform = tc.GetTransform();</div>
 <div class="line"><span class="lineno">  625</span> </div>
 <div class="line"><span class="lineno">  626</span>                <span class="comment">// Snapping</span></div>
-<div class="line"><span class="lineno">  627</span>                <span class="keywordtype">bool</span> snap = <a class="code hl_function" href="class_vesper_1_1_input.html#aa8b8dff7d2b768ad79b6888fbdbf31ae">Input::IsKeyPressed</a>(<a class="code hl_define" href="_key_codes_8h.html#a1fcc0d962debdd690291581ad28168cc">VZ_KEY_LEFT_CONTROL</a>);</div>
+<div class="line"><span class="lineno">  627</span>                <span class="keywordtype">bool</span> snap = <a class="code hl_function" href="class_vesper_1_1_input.html#aa8b8dff7d2b768ad79b6888fbdbf31ae">Input::IsKeyPressed</a>(<a class="code hl_enumvalue" href="namespace_vesper_1_1_key.html#a9d802d64a043b9c5e780fdd5b2c430adaa0970ef4e94ffcdf204d63eaaacbf04a">Key::LeftControl</a>);</div>
 <div class="line"><span class="lineno">  628</span>                <span class="comment">// use the editor layer snap values</span></div>
 <div class="line"><span class="lineno">  629</span>                <span class="keywordtype">float</span> snapValue = <a class="code hl_variable" href="#a5453c57232af1ce9d3b7c49684c01f07">m_TranslationSnap</a>;</div>
 <div class="line"><span class="lineno">  630</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a3af4652525fc0d6bb2487a7bdc1629e3">m_GizmoType</a> == ImGuizmo::OPERATION::ROTATE)</div>
@@ -887,10 +906,9 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  653</span>        }</div>
 <div class="line"><span class="lineno">  654</span>        ImGui::End();</div>
 <div class="line"><span class="lineno">  655</span>    }</div>
-<div class="ttc" id="a_key_codes_8h_html_a1fcc0d962debdd690291581ad28168cc"><div class="ttname"><a href="_key_codes_8h.html#a1fcc0d962debdd690291581ad28168cc">VZ_KEY_LEFT_CONTROL</a></div><div class="ttdeci">#define VZ_KEY_LEFT_CONTROL</div><div class="ttdef"><b>Definition</b> KeyCodes.h:119</div></div>
-<div class="ttc" id="aclass_vesper_1_1_application_html_a7edbd0f4804f897c09ad869239a97ffa"><div class="ttname"><a href="class_vesper_1_1_application.html#a7edbd0f4804f897c09ad869239a97ffa">Vesper::Application::Get</a></div><div class="ttdeci">static Application &amp; Get()</div><div class="ttdef"><b>Definition</b> Application.h:52</div></div>
-<div class="ttc" id="aclass_vesper_1_1_application_html_a9b49ca5273462312ee8439ed9897bb73"><div class="ttname"><a href="class_vesper_1_1_application.html#a9b49ca5273462312ee8439ed9897bb73">Vesper::Application::GetImGuiLayer</a></div><div class="ttdeci">ImGuiLayer * GetImGuiLayer()</div><div class="ttdef"><b>Definition</b> Application.h:50</div></div>
-<div class="ttc" id="aclass_vesper_1_1_application_html_af36d1558fe1fef29468f3d58380a013b"><div class="ttname"><a href="class_vesper_1_1_application.html#af36d1558fe1fef29468f3d58380a013b">Vesper::Application::Close</a></div><div class="ttdeci">void Close()</div><div class="ttdef"><b>Definition</b> Application.cpp:55</div></div>
+<div class="ttc" id="aclass_vesper_1_1_application_html_a7edbd0f4804f897c09ad869239a97ffa"><div class="ttname"><a href="class_vesper_1_1_application.html#a7edbd0f4804f897c09ad869239a97ffa">Vesper::Application::Get</a></div><div class="ttdeci">static Application &amp; Get()</div><div class="ttdoc">Retrieves the singleton instance of the Application.</div><div class="ttdef"><b>Definition</b> Application.h:67</div></div>
+<div class="ttc" id="aclass_vesper_1_1_application_html_a9b49ca5273462312ee8439ed9897bb73"><div class="ttname"><a href="class_vesper_1_1_application.html#a9b49ca5273462312ee8439ed9897bb73">Vesper::Application::GetImGuiLayer</a></div><div class="ttdeci">ImGuiLayer * GetImGuiLayer()</div><div class="ttdoc">Retrieves the ImGui layer.</div><div class="ttdef"><b>Definition</b> Application.h:64</div></div>
+<div class="ttc" id="aclass_vesper_1_1_application_html_af36d1558fe1fef29468f3d58380a013b"><div class="ttname"><a href="class_vesper_1_1_application.html#af36d1558fe1fef29468f3d58380a013b">Vesper::Application::Close</a></div><div class="ttdeci">void Close()</div><div class="ttdoc">Closes the application.</div><div class="ttdef"><b>Definition</b> Application.cpp:55</div></div>
 <div class="ttc" id="aclass_vesper_1_1_editor_layer_html_a142fabce6f2fab34f80338ddbf989811"><div class="ttname"><a href="#a142fabce6f2fab34f80338ddbf989811">Vesper::EditorLayer::m_ViewportFocused</a></div><div class="ttdeci">bool m_ViewportFocused</div><div class="ttdef"><b>Definition</b> EditorLayer.h:44</div></div>
 <div class="ttc" id="aclass_vesper_1_1_editor_layer_html_a16b4065c9a69d7989da31c82bd014b08"><div class="ttname"><a href="#a16b4065c9a69d7989da31c82bd014b08">Vesper::EditorLayer::m_RotationSnap</a></div><div class="ttdeci">float m_RotationSnap</div><div class="ttdef"><b>Definition</b> EditorLayer.h:51</div></div>
 <div class="ttc" id="aclass_vesper_1_1_editor_layer_html_a1e12b5c24dde3a690465bf5b09c48789"><div class="ttname"><a href="#a1e12b5c24dde3a690465bf5b09c48789">Vesper::EditorLayer::OpenScene</a></div><div class="ttdeci">void OpenScene()</div><div class="ttdef"><b>Definition</b> EditorLayer.cpp:728</div></div>
@@ -909,13 +927,14 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclass_vesper_1_1_editor_layer_html_ae64e67476b25cee87b79159ff6749304"><div class="ttname"><a href="#ae64e67476b25cee87b79159ff6749304">Vesper::EditorLayer::m_ViewportHovered</a></div><div class="ttdeci">bool m_ViewportHovered</div><div class="ttdef"><b>Definition</b> EditorLayer.h:44</div></div>
 <div class="ttc" id="aclass_vesper_1_1_editor_layer_html_aff43f6a0ac05b1d7bec39dcc2a00758f"><div class="ttname"><a href="#aff43f6a0ac05b1d7bec39dcc2a00758f">Vesper::EditorLayer::ResetScene</a></div><div class="ttdeci">void ResetScene()</div><div class="ttdef"><b>Definition</b> EditorLayer.cpp:755</div></div>
 <div class="ttc" id="aclass_vesper_1_1_im_gui_layer_html_af29b651e5d35526634399ee981bccdbc"><div class="ttname"><a href="class_vesper_1_1_im_gui_layer.html#af29b651e5d35526634399ee981bccdbc">Vesper::ImGuiLayer::SetBlockEvents</a></div><div class="ttdeci">virtual void SetBlockEvents(bool block)</div><div class="ttdef"><b>Definition</b> ImGuiLayer.h:26</div></div>
-<div class="ttc" id="aclass_vesper_1_1_input_html_aa8b8dff7d2b768ad79b6888fbdbf31ae"><div class="ttname"><a href="class_vesper_1_1_input.html#aa8b8dff7d2b768ad79b6888fbdbf31ae">Vesper::Input::IsKeyPressed</a></div><div class="ttdeci">static bool IsKeyPressed(int keycode)</div><div class="ttdef"><b>Definition</b> WindowsInput.cpp:9</div></div>
+<div class="ttc" id="aclass_vesper_1_1_input_html_aa8b8dff7d2b768ad79b6888fbdbf31ae"><div class="ttname"><a href="class_vesper_1_1_input.html#aa8b8dff7d2b768ad79b6888fbdbf31ae">Vesper::Input::IsKeyPressed</a></div><div class="ttdeci">static bool IsKeyPressed(int keycode)</div><div class="ttdoc">Checks if the specified key is currently pressed.</div><div class="ttdef"><b>Definition</b> WindowsInput.cpp:9</div></div>
 <div class="ttc" id="aclass_vesper_1_1_render_command_html_a379881d538ddfd380a07a8cd90e865d0"><div class="ttname"><a href="class_vesper_1_1_render_command.html#a379881d538ddfd380a07a8cd90e865d0">Vesper::RenderCommand::SetClearColor</a></div><div class="ttdeci">static void SetClearColor(const glm::vec4 &amp;color)</div><div class="ttdef"><b>Definition</b> RenderCommand.h:21</div></div>
 <div class="ttc" id="aclass_vesper_1_1_renderer2_d_html_ac4635220719834831187e63de81046f4"><div class="ttname"><a href="class_vesper_1_1_renderer2_d.html#ac4635220719834831187e63de81046f4">Vesper::Renderer2D::GetStats</a></div><div class="ttdeci">static Statistics GetStats()</div><div class="ttdef"><b>Definition</b> Renderer2D.cpp:502</div></div>
+<div class="ttc" id="anamespace_vesper_1_1_key_html_a9d802d64a043b9c5e780fdd5b2c430adaa0970ef4e94ffcdf204d63eaaacbf04a"><div class="ttname"><a href="namespace_vesper_1_1_key.html#a9d802d64a043b9c5e780fdd5b2c430adaa0970ef4e94ffcdf204d63eaaacbf04a">Vesper::Key::LeftControl</a></div><div class="ttdeci">@ LeftControl</div><div class="ttdef"><b>Definition</b> KeyCodes.h:140</div></div>
 <div class="ttc" id="anamespace_vesper_1_1_math_html_a9afbc415ae69a15ec7a15e77922b772e"><div class="ttname"><a href="namespace_vesper_1_1_math.html#a9afbc415ae69a15ec7a15e77922b772e">Vesper::Math::DecomposeTransform</a></div><div class="ttdeci">bool DecomposeTransform(const glm::mat4 &amp;transform, glm::vec3 &amp;translation, glm::vec3 &amp;rotation, glm::vec3 &amp;scale)</div><div class="ttdef"><b>Definition</b> Math.cpp:10</div></div>
 <div class="ttc" id="anamespace_vesper_html_ab028f39b6f8287e98aa2ded73af279ee"><div class="ttname"><a href="namespace_vesper.html#ab028f39b6f8287e98aa2ded73af279ee">Vesper::DisplayVesperInfo_ImGui</a></div><div class="ttdeci">static void DisplayVesperInfo_ImGui()</div><div class="ttdef"><b>Definition</b> VesperImGui.h:7</div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="class_vesper_1_1_application.html#af36d1558fe1fef29468f3d58380a013b">Vesper::Application::Close()</a>, <a class="el" href="namespace_vesper.html#ab028f39b6f8287e98aa2ded73af279ee">Vesper::DisplayVesperInfo_ImGui()</a>, <a class="el" href="class_vesper_1_1_application.html#a7edbd0f4804f897c09ad869239a97ffa">Vesper::Application::Get()</a>, <a class="el" href="class_vesper_1_1_application.html#a9b49ca5273462312ee8439ed9897bb73">Vesper::Application::GetImGuiLayer()</a>, <a class="el" href="class_vesper_1_1_renderer2_d.html#ac4635220719834831187e63de81046f4">Vesper::Renderer2D::GetStats()</a>, <a class="el" href="class_vesper_1_1_input.html#aa8b8dff7d2b768ad79b6888fbdbf31ae">Vesper::Input::IsKeyPressed()</a>, <a class="el" href="#a3af4652525fc0d6bb2487a7bdc1629e3">m_GizmoType</a>, <a class="el" href="#a16b4065c9a69d7989da31c82bd014b08">m_RotationSnap</a>, <a class="el" href="#a516dedf41269e7003422785e9751140b">m_ScaleSnap</a>, <a class="el" href="#a5453c57232af1ce9d3b7c49684c01f07">m_TranslationSnap</a>, <a class="el" href="#a142fabce6f2fab34f80338ddbf989811">m_ViewportFocused</a>, <a class="el" href="#ae64e67476b25cee87b79159ff6749304">m_ViewportHovered</a>, <a class="el" href="#a51ce5c4b9855c748a8f6cbde9c26e627">NewScene()</a>, <a class="el" href="#a1e12b5c24dde3a690465bf5b09c48789">OpenScene()</a>, <a class="el" href="#aff43f6a0ac05b1d7bec39dcc2a00758f">ResetScene()</a>, <a class="el" href="#ac8618695e9d694723133cef7a86384ce">SaveSceneAs()</a>, <a class="el" href="#ac85853fce58190659c556dc089330f65">scene1</a>, <a class="el" href="#ae300dd76830fc8c2b414cab3467b95a2">scene2</a>, <a class="el" href="#a2f4323c7d3e284e833663e86523a36f5">scene3</a>, <a class="el" href="#a3b9d13fb60f3c304b46199e15a342dcb">scene4</a>, <a class="el" href="class_vesper_1_1_im_gui_layer.html#af29b651e5d35526634399ee981bccdbc">Vesper::ImGuiLayer::SetBlockEvents()</a>, and <a class="el" href="#ac95542b1874e7b3840537f5b86ba08f6">useEntityScene</a>.</p>
+<p class="reference">References <a class="el" href="class_vesper_1_1_application.html#af36d1558fe1fef29468f3d58380a013b">Vesper::Application::Close()</a>, <a class="el" href="namespace_vesper.html#ab028f39b6f8287e98aa2ded73af279ee">Vesper::DisplayVesperInfo_ImGui()</a>, <a class="el" href="class_vesper_1_1_application.html#a7edbd0f4804f897c09ad869239a97ffa">Vesper::Application::Get()</a>, <a class="el" href="class_vesper_1_1_application.html#a9b49ca5273462312ee8439ed9897bb73">Vesper::Application::GetImGuiLayer()</a>, <a class="el" href="class_vesper_1_1_renderer2_d.html#ac4635220719834831187e63de81046f4">Vesper::Renderer2D::GetStats()</a>, <a class="el" href="class_vesper_1_1_input.html#aa8b8dff7d2b768ad79b6888fbdbf31ae">Vesper::Input::IsKeyPressed()</a>, <a class="el" href="namespace_vesper_1_1_key.html#a9d802d64a043b9c5e780fdd5b2c430adaa0970ef4e94ffcdf204d63eaaacbf04a">Vesper::Key::LeftControl</a>, <a class="el" href="#a3af4652525fc0d6bb2487a7bdc1629e3">m_GizmoType</a>, <a class="el" href="#a16b4065c9a69d7989da31c82bd014b08">m_RotationSnap</a>, <a class="el" href="#a516dedf41269e7003422785e9751140b">m_ScaleSnap</a>, <a class="el" href="#a5453c57232af1ce9d3b7c49684c01f07">m_TranslationSnap</a>, <a class="el" href="#a142fabce6f2fab34f80338ddbf989811">m_ViewportFocused</a>, <a class="el" href="#ae64e67476b25cee87b79159ff6749304">m_ViewportHovered</a>, <a class="el" href="#a51ce5c4b9855c748a8f6cbde9c26e627">NewScene()</a>, <a class="el" href="#a1e12b5c24dde3a690465bf5b09c48789">OpenScene()</a>, <a class="el" href="#aff43f6a0ac05b1d7bec39dcc2a00758f">ResetScene()</a>, <a class="el" href="#ac8618695e9d694723133cef7a86384ce">SaveSceneAs()</a>, <a class="el" href="#ac85853fce58190659c556dc089330f65">scene1</a>, <a class="el" href="#ae300dd76830fc8c2b414cab3467b95a2">scene2</a>, <a class="el" href="#a2f4323c7d3e284e833663e86523a36f5">scene3</a>, <a class="el" href="#a3b9d13fb60f3c304b46199e15a342dcb">scene4</a>, <a class="el" href="class_vesper_1_1_im_gui_layer.html#af29b651e5d35526634399ee981bccdbc">Vesper::ImGuiLayer::SetBlockEvents()</a>, and <a class="el" href="#ac95542b1874e7b3840537f5b86ba08f6">useEntityScene</a>.</p>
 
 </div>
 </div>
@@ -946,12 +965,12 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  672</span>        <span class="keywordflow">if</span> (e.GetRepeatCount() &gt; 0)</div>
 <div class="line"><span class="lineno">  673</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><span class="lineno">  674</span> </div>
-<div class="line"><span class="lineno">  675</span>        <span class="keywordtype">bool</span> control = <a class="code hl_function" href="class_vesper_1_1_input.html#aa8b8dff7d2b768ad79b6888fbdbf31ae">Input::IsKeyPressed</a>(<a class="code hl_define" href="_key_codes_8h.html#a1fcc0d962debdd690291581ad28168cc">VZ_KEY_LEFT_CONTROL</a>) || <a class="code hl_function" href="class_vesper_1_1_input.html#aa8b8dff7d2b768ad79b6888fbdbf31ae">Input::IsKeyPressed</a>(<a class="code hl_define" href="_key_codes_8h.html#a559b28421e23a2b4df452e5bb45163a2">VZ_KEY_RIGHT_CONTROL</a>);</div>
-<div class="line"><span class="lineno">  676</span>        <span class="keywordtype">bool</span> shift = <a class="code hl_function" href="class_vesper_1_1_input.html#aa8b8dff7d2b768ad79b6888fbdbf31ae">Input::IsKeyPressed</a>(<a class="code hl_define" href="_key_codes_8h.html#a54a2264f65f6db3fc3d105189ed5b5a2">VZ_KEY_LEFT_SHIFT</a>) || <a class="code hl_function" href="class_vesper_1_1_input.html#aa8b8dff7d2b768ad79b6888fbdbf31ae">Input::IsKeyPressed</a>(<a class="code hl_define" href="_key_codes_8h.html#a922d25ae890de4322659c8fbe2cb4e90">VZ_KEY_RIGHT_SHIFT</a>);</div>
+<div class="line"><span class="lineno">  675</span>        <span class="keywordtype">bool</span> control = <a class="code hl_function" href="class_vesper_1_1_input.html#aa8b8dff7d2b768ad79b6888fbdbf31ae">Input::IsKeyPressed</a>(<a class="code hl_enumvalue" href="namespace_vesper_1_1_key.html#a9d802d64a043b9c5e780fdd5b2c430adaa0970ef4e94ffcdf204d63eaaacbf04a">Key::LeftControl</a>) || <a class="code hl_function" href="class_vesper_1_1_input.html#aa8b8dff7d2b768ad79b6888fbdbf31ae">Input::IsKeyPressed</a>(<a class="code hl_enumvalue" href="namespace_vesper_1_1_key.html#a9d802d64a043b9c5e780fdd5b2c430ada53839094cde6af3693d77358b5b04beb">Key::RightControl</a>);</div>
+<div class="line"><span class="lineno">  676</span>        <span class="keywordtype">bool</span> shift = <a class="code hl_function" href="class_vesper_1_1_input.html#aa8b8dff7d2b768ad79b6888fbdbf31ae">Input::IsKeyPressed</a>(<a class="code hl_enumvalue" href="namespace_vesper_1_1_key.html#a9d802d64a043b9c5e780fdd5b2c430ada924b1d26446211e2097064bd9ace6558">Key::LeftShift</a>) || <a class="code hl_function" href="class_vesper_1_1_input.html#aa8b8dff7d2b768ad79b6888fbdbf31ae">Input::IsKeyPressed</a>(<a class="code hl_enumvalue" href="namespace_vesper_1_1_key.html#a9d802d64a043b9c5e780fdd5b2c430ada223bb60ae2073e26b0dd52aa13da1870">Key::RightShift</a>);</div>
 <div class="line"><span class="lineno">  677</span>        <span class="keywordflow">switch</span> (e.GetKeyCode())</div>
 <div class="line"><span class="lineno">  678</span>        {</div>
 <div class="line"><span class="lineno">  679</span>            <span class="comment">// Scene Shortcuts</span></div>
-<div class="line"><span class="lineno">  680</span>        <span class="keywordflow">case</span> <a class="code hl_define" href="_key_codes_8h.html#a03b5273486ff09b80824f17828bb006e">VZ_KEY_N</a>:</div>
+<div class="line"><span class="lineno">  680</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="namespace_vesper_1_1_key.html#a9d802d64a043b9c5e780fdd5b2c430adafaa5478f6dc55ad04557f939a5bc0221">Key::N</a>:</div>
 <div class="line"><span class="lineno">  681</span> </div>
 <div class="line"><span class="lineno">  682</span>            <span class="keywordflow">if</span> (control)</div>
 <div class="line"><span class="lineno">  683</span>            {</div>
@@ -959,14 +978,14 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  685</span>            }</div>
 <div class="line"><span class="lineno">  686</span>            <span class="keywordflow">break</span>;</div>
 <div class="line"><span class="lineno">  687</span> </div>
-<div class="line"><span class="lineno">  688</span>        <span class="keywordflow">case</span> <a class="code hl_define" href="_key_codes_8h.html#adeb021bf4581a91e65e44dfc7ace8c55">VZ_KEY_O</a>:</div>
+<div class="line"><span class="lineno">  688</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="namespace_vesper_1_1_key.html#a9d802d64a043b9c5e780fdd5b2c430ada7df584f452226e59b211e6d5e4f58da2">Key::O</a>:</div>
 <div class="line"><span class="lineno">  689</span>            <span class="keywordflow">if</span> (control)</div>
 <div class="line"><span class="lineno">  690</span>            {</div>
 <div class="line"><span class="lineno">  691</span>                <a class="code hl_function" href="#a1e12b5c24dde3a690465bf5b09c48789">OpenScene</a>();</div>
 <div class="line"><span class="lineno">  692</span>            }</div>
 <div class="line"><span class="lineno">  693</span>            <span class="keywordflow">break</span>;</div>
 <div class="line"><span class="lineno">  694</span> </div>
-<div class="line"><span class="lineno">  695</span>        <span class="keywordflow">case</span> <a class="code hl_define" href="_key_codes_8h.html#ad1073e2ba0b9b95c70e972c5e2fc35cc">VZ_KEY_S</a>:</div>
+<div class="line"><span class="lineno">  695</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="namespace_vesper_1_1_key.html#a9d802d64a043b9c5e780fdd5b2c430adaffe0ea24b7b514c94d704db6c62dd8ff">Key::S</a>:</div>
 <div class="line"><span class="lineno">  696</span>            <span class="keywordflow">if</span> (control &amp;&amp; shift)</div>
 <div class="line"><span class="lineno">  697</span>            {</div>
 <div class="line"><span class="lineno">  698</span>                <a class="code hl_function" href="#ac8618695e9d694723133cef7a86384ce">SaveSceneAs</a>();</div>
@@ -975,32 +994,34 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  701</span> </div>
 <div class="line"><span class="lineno">  702</span> </div>
 <div class="line"><span class="lineno">  703</span>            <span class="comment">// Gizmo Shortcuts</span></div>
-<div class="line"><span class="lineno">  704</span>        <span class="keywordflow">case</span> <a class="code hl_define" href="_key_codes_8h.html#a3d7a7e5e621f365a3b5e1b510e3a82d3">VZ_KEY_Q</a>:</div>
+<div class="line"><span class="lineno">  704</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="namespace_vesper_1_1_key.html#a9d802d64a043b9c5e780fdd5b2c430ada5522a6a1419891cf7726a2a5937f6eb4">Key::Q</a>:</div>
 <div class="line"><span class="lineno">  705</span>            <a class="code hl_variable" href="#a3af4652525fc0d6bb2487a7bdc1629e3">m_GizmoType</a> = -1;</div>
 <div class="line"><span class="lineno">  706</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  707</span>        <span class="keywordflow">case</span> <a class="code hl_define" href="_key_codes_8h.html#a5b91608e76fc2d4fdbdb9ea0ef44a2e8">VZ_KEY_W</a>:</div>
+<div class="line"><span class="lineno">  707</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="namespace_vesper_1_1_key.html#a9d802d64a043b9c5e780fdd5b2c430adaab0d2142eeee5766db61db7a0435b777">Key::W</a>:</div>
 <div class="line"><span class="lineno">  708</span>            <a class="code hl_variable" href="#a3af4652525fc0d6bb2487a7bdc1629e3">m_GizmoType</a> = ImGuizmo::OPERATION::TRANSLATE;</div>
 <div class="line"><span class="lineno">  709</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  710</span>        <span class="keywordflow">case</span> <a class="code hl_define" href="_key_codes_8h.html#aaaa6936a23632fdc614e9e2f13137e41">VZ_KEY_E</a>:</div>
+<div class="line"><span class="lineno">  710</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="namespace_vesper_1_1_key.html#a9d802d64a043b9c5e780fdd5b2c430adabbab61e9aedf8e705e3cd12594c018f7">Key::E</a>:</div>
 <div class="line"><span class="lineno">  711</span>            <a class="code hl_variable" href="#a3af4652525fc0d6bb2487a7bdc1629e3">m_GizmoType</a> = ImGuizmo::OPERATION::ROTATE;</div>
 <div class="line"><span class="lineno">  712</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  713</span>        <span class="keywordflow">case</span> <a class="code hl_define" href="_key_codes_8h.html#ae5ea98984932b2ded54ae4aed33b4916">VZ_KEY_R</a>:</div>
+<div class="line"><span class="lineno">  713</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="namespace_vesper_1_1_key.html#a9d802d64a043b9c5e780fdd5b2c430adadfb62095c59333e13ca34d30c802639c">Key::R</a>:</div>
 <div class="line"><span class="lineno">  714</span>            <a class="code hl_variable" href="#a3af4652525fc0d6bb2487a7bdc1629e3">m_GizmoType</a> = ImGuizmo::OPERATION::SCALE;</div>
 <div class="line"><span class="lineno">  715</span>            <span class="keywordflow">break</span>;</div>
 <div class="line"><span class="lineno">  716</span>        }</div>
 <div class="line"><span class="lineno">  717</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><span class="lineno">  718</span> </div>
 <div class="line"><span class="lineno">  719</span>    }</div>
-<div class="ttc" id="a_key_codes_8h_html_a03b5273486ff09b80824f17828bb006e"><div class="ttname"><a href="_key_codes_8h.html#a03b5273486ff09b80824f17828bb006e">VZ_KEY_N</a></div><div class="ttdeci">#define VZ_KEY_N</div><div class="ttdef"><b>Definition</b> KeyCodes.h:36</div></div>
-<div class="ttc" id="a_key_codes_8h_html_a3d7a7e5e621f365a3b5e1b510e3a82d3"><div class="ttname"><a href="_key_codes_8h.html#a3d7a7e5e621f365a3b5e1b510e3a82d3">VZ_KEY_Q</a></div><div class="ttdeci">#define VZ_KEY_Q</div><div class="ttdef"><b>Definition</b> KeyCodes.h:39</div></div>
-<div class="ttc" id="a_key_codes_8h_html_a54a2264f65f6db3fc3d105189ed5b5a2"><div class="ttname"><a href="_key_codes_8h.html#a54a2264f65f6db3fc3d105189ed5b5a2">VZ_KEY_LEFT_SHIFT</a></div><div class="ttdeci">#define VZ_KEY_LEFT_SHIFT</div><div class="ttdef"><b>Definition</b> KeyCodes.h:118</div></div>
-<div class="ttc" id="a_key_codes_8h_html_a559b28421e23a2b4df452e5bb45163a2"><div class="ttname"><a href="_key_codes_8h.html#a559b28421e23a2b4df452e5bb45163a2">VZ_KEY_RIGHT_CONTROL</a></div><div class="ttdeci">#define VZ_KEY_RIGHT_CONTROL</div><div class="ttdef"><b>Definition</b> KeyCodes.h:123</div></div>
-<div class="ttc" id="a_key_codes_8h_html_a922d25ae890de4322659c8fbe2cb4e90"><div class="ttname"><a href="_key_codes_8h.html#a922d25ae890de4322659c8fbe2cb4e90">VZ_KEY_RIGHT_SHIFT</a></div><div class="ttdeci">#define VZ_KEY_RIGHT_SHIFT</div><div class="ttdef"><b>Definition</b> KeyCodes.h:122</div></div>
-<div class="ttc" id="a_key_codes_8h_html_aaaa6936a23632fdc614e9e2f13137e41"><div class="ttname"><a href="_key_codes_8h.html#aaaa6936a23632fdc614e9e2f13137e41">VZ_KEY_E</a></div><div class="ttdeci">#define VZ_KEY_E</div><div class="ttdef"><b>Definition</b> KeyCodes.h:27</div></div>
-<div class="ttc" id="a_key_codes_8h_html_adeb021bf4581a91e65e44dfc7ace8c55"><div class="ttname"><a href="_key_codes_8h.html#adeb021bf4581a91e65e44dfc7ace8c55">VZ_KEY_O</a></div><div class="ttdeci">#define VZ_KEY_O</div><div class="ttdef"><b>Definition</b> KeyCodes.h:37</div></div>
-<div class="ttc" id="a_key_codes_8h_html_ae5ea98984932b2ded54ae4aed33b4916"><div class="ttname"><a href="_key_codes_8h.html#ae5ea98984932b2ded54ae4aed33b4916">VZ_KEY_R</a></div><div class="ttdeci">#define VZ_KEY_R</div><div class="ttdef"><b>Definition</b> KeyCodes.h:40</div></div>
+<div class="ttc" id="anamespace_vesper_1_1_key_html_a9d802d64a043b9c5e780fdd5b2c430ada223bb60ae2073e26b0dd52aa13da1870"><div class="ttname"><a href="namespace_vesper_1_1_key.html#a9d802d64a043b9c5e780fdd5b2c430ada223bb60ae2073e26b0dd52aa13da1870">Vesper::Key::RightShift</a></div><div class="ttdeci">@ RightShift</div><div class="ttdef"><b>Definition</b> KeyCodes.h:143</div></div>
+<div class="ttc" id="anamespace_vesper_1_1_key_html_a9d802d64a043b9c5e780fdd5b2c430ada53839094cde6af3693d77358b5b04beb"><div class="ttname"><a href="namespace_vesper_1_1_key.html#a9d802d64a043b9c5e780fdd5b2c430ada53839094cde6af3693d77358b5b04beb">Vesper::Key::RightControl</a></div><div class="ttdeci">@ RightControl</div><div class="ttdef"><b>Definition</b> KeyCodes.h:144</div></div>
+<div class="ttc" id="anamespace_vesper_1_1_key_html_a9d802d64a043b9c5e780fdd5b2c430ada5522a6a1419891cf7726a2a5937f6eb4"><div class="ttname"><a href="namespace_vesper_1_1_key.html#a9d802d64a043b9c5e780fdd5b2c430ada5522a6a1419891cf7726a2a5937f6eb4">Vesper::Key::Q</a></div><div class="ttdeci">@ Q</div><div class="ttdef"><b>Definition</b> KeyCodes.h:54</div></div>
+<div class="ttc" id="anamespace_vesper_1_1_key_html_a9d802d64a043b9c5e780fdd5b2c430ada7df584f452226e59b211e6d5e4f58da2"><div class="ttname"><a href="namespace_vesper_1_1_key.html#a9d802d64a043b9c5e780fdd5b2c430ada7df584f452226e59b211e6d5e4f58da2">Vesper::Key::O</a></div><div class="ttdeci">@ O</div><div class="ttdef"><b>Definition</b> KeyCodes.h:52</div></div>
+<div class="ttc" id="anamespace_vesper_1_1_key_html_a9d802d64a043b9c5e780fdd5b2c430ada924b1d26446211e2097064bd9ace6558"><div class="ttname"><a href="namespace_vesper_1_1_key.html#a9d802d64a043b9c5e780fdd5b2c430ada924b1d26446211e2097064bd9ace6558">Vesper::Key::LeftShift</a></div><div class="ttdeci">@ LeftShift</div><div class="ttdef"><b>Definition</b> KeyCodes.h:139</div></div>
+<div class="ttc" id="anamespace_vesper_1_1_key_html_a9d802d64a043b9c5e780fdd5b2c430adaab0d2142eeee5766db61db7a0435b777"><div class="ttname"><a href="namespace_vesper_1_1_key.html#a9d802d64a043b9c5e780fdd5b2c430adaab0d2142eeee5766db61db7a0435b777">Vesper::Key::W</a></div><div class="ttdeci">@ W</div><div class="ttdef"><b>Definition</b> KeyCodes.h:60</div></div>
+<div class="ttc" id="anamespace_vesper_1_1_key_html_a9d802d64a043b9c5e780fdd5b2c430adabbab61e9aedf8e705e3cd12594c018f7"><div class="ttname"><a href="namespace_vesper_1_1_key.html#a9d802d64a043b9c5e780fdd5b2c430adabbab61e9aedf8e705e3cd12594c018f7">Vesper::Key::E</a></div><div class="ttdeci">@ E</div><div class="ttdef"><b>Definition</b> KeyCodes.h:42</div></div>
+<div class="ttc" id="anamespace_vesper_1_1_key_html_a9d802d64a043b9c5e780fdd5b2c430adadfb62095c59333e13ca34d30c802639c"><div class="ttname"><a href="namespace_vesper_1_1_key.html#a9d802d64a043b9c5e780fdd5b2c430adadfb62095c59333e13ca34d30c802639c">Vesper::Key::R</a></div><div class="ttdeci">@ R</div><div class="ttdef"><b>Definition</b> KeyCodes.h:55</div></div>
+<div class="ttc" id="anamespace_vesper_1_1_key_html_a9d802d64a043b9c5e780fdd5b2c430adafaa5478f6dc55ad04557f939a5bc0221"><div class="ttname"><a href="namespace_vesper_1_1_key.html#a9d802d64a043b9c5e780fdd5b2c430adafaa5478f6dc55ad04557f939a5bc0221">Vesper::Key::N</a></div><div class="ttdeci">@ N</div><div class="ttdef"><b>Definition</b> KeyCodes.h:51</div></div>
+<div class="ttc" id="anamespace_vesper_1_1_key_html_a9d802d64a043b9c5e780fdd5b2c430adaffe0ea24b7b514c94d704db6c62dd8ff"><div class="ttname"><a href="namespace_vesper_1_1_key.html#a9d802d64a043b9c5e780fdd5b2c430adaffe0ea24b7b514c94d704db6c62dd8ff">Vesper::Key::S</a></div><div class="ttdeci">@ S</div><div class="ttdef"><b>Definition</b> KeyCodes.h:56</div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="class_vesper_1_1_key_event.html#ab8b3b582c0296f0f7f24ce7a7be6996c">Vesper::KeyEvent::GetKeyCode()</a>, <a class="el" href="class_vesper_1_1_key_pressed_event.html#a50f1519ca1ef2f44e7ae6e70bd32e665">Vesper::KeyPressedEvent::GetRepeatCount()</a>, <a class="el" href="class_vesper_1_1_input.html#aa8b8dff7d2b768ad79b6888fbdbf31ae">Vesper::Input::IsKeyPressed()</a>, <a class="el" href="#a3af4652525fc0d6bb2487a7bdc1629e3">m_GizmoType</a>, <a class="el" href="#a51ce5c4b9855c748a8f6cbde9c26e627">NewScene()</a>, <a class="el" href="#a1e12b5c24dde3a690465bf5b09c48789">OpenScene()</a>, and <a class="el" href="#ac8618695e9d694723133cef7a86384ce">SaveSceneAs()</a>.</p>
+<p class="reference">References <a class="el" href="class_vesper_1_1_key_event.html#ab8b3b582c0296f0f7f24ce7a7be6996c">Vesper::KeyEvent::GetKeyCode()</a>, <a class="el" href="class_vesper_1_1_key_pressed_event.html#a50f1519ca1ef2f44e7ae6e70bd32e665">Vesper::KeyPressedEvent::GetRepeatCount()</a>, <a class="el" href="class_vesper_1_1_input.html#aa8b8dff7d2b768ad79b6888fbdbf31ae">Vesper::Input::IsKeyPressed()</a>, <a class="el" href="namespace_vesper_1_1_key.html#a9d802d64a043b9c5e780fdd5b2c430adaa0970ef4e94ffcdf204d63eaaacbf04a">Vesper::Key::LeftControl</a>, <a class="el" href="namespace_vesper_1_1_key.html#a9d802d64a043b9c5e780fdd5b2c430ada924b1d26446211e2097064bd9ace6558">Vesper::Key::LeftShift</a>, <a class="el" href="#a3af4652525fc0d6bb2487a7bdc1629e3">m_GizmoType</a>, <a class="el" href="namespace_vesper_1_1_key.html#a9d802d64a043b9c5e780fdd5b2c430adafaa5478f6dc55ad04557f939a5bc0221">Vesper::Key::N</a>, <a class="el" href="#a51ce5c4b9855c748a8f6cbde9c26e627">NewScene()</a>, <a class="el" href="namespace_vesper_1_1_key.html#a9d802d64a043b9c5e780fdd5b2c430ada7df584f452226e59b211e6d5e4f58da2">Vesper::Key::O</a>, <a class="el" href="#a1e12b5c24dde3a690465bf5b09c48789">OpenScene()</a>, <a class="el" href="namespace_vesper_1_1_key.html#a9d802d64a043b9c5e780fdd5b2c430ada5522a6a1419891cf7726a2a5937f6eb4">Vesper::Key::Q</a>, <a class="el" href="namespace_vesper_1_1_key.html#a9d802d64a043b9c5e780fdd5b2c430ada53839094cde6af3693d77358b5b04beb">Vesper::Key::RightControl</a>, <a class="el" href="namespace_vesper_1_1_key.html#a9d802d64a043b9c5e780fdd5b2c430ada223bb60ae2073e26b0dd52aa13da1870">Vesper::Key::RightShift</a>, <a class="el" href="namespace_vesper_1_1_key.html#a9d802d64a043b9c5e780fdd5b2c430adaffe0ea24b7b514c94d704db6c62dd8ff">Vesper::Key::S</a>, and <a class="el" href="#ac8618695e9d694723133cef7a86384ce">SaveSceneAs()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="#a897b3ba2fcaacf49ef89a9492986850f">OnEvent()</a>.</p>
 
@@ -1028,6 +1049,14 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Called every frame to update the layer with the given timestep. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ts</td><td>The timestep representing the time elapsed since the last update. </td></tr>
+  </table>
+  </dd>
+</dl>
 <p>C++ test code scenes</p>
 <p>TODO: get it to animate through texture sheet sub texture indices</p>
 
@@ -1178,7 +1207,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  380</span>                        }</div>
 <div class="line"><span class="lineno">  381</span>                    }</div>
 <div class="line"><span class="lineno">  382</span> </div>
-<div class="line"><span class="lineno">  383</span>                    <span class="keywordflow">if</span> (<a class="code hl_function" href="class_vesper_1_1_input.html#a00b5734fe7e2227aa348e56c3c71a6d2">Input::IsMouseButtonPressed</a>(<a class="code hl_define" href="_mouse_button_codes_8h.html#a6e284e74b77e0102517daa39b463cf71">VZ_MOUSE_BUTTON_LEFT</a>) &amp;&amp; <a class="code hl_variable" href="#ae64e67476b25cee87b79159ff6749304">m_ViewportHovered</a>)</div>
+<div class="line"><span class="lineno">  383</span>                    <span class="keywordflow">if</span> (<a class="code hl_function" href="class_vesper_1_1_input.html#a00b5734fe7e2227aa348e56c3c71a6d2">Input::IsMouseButtonPressed</a>(<a class="code hl_enumvalue" href="namespace_vesper_1_1_mouse.html#a9273402fdf359e292faf8f940e5eddffa61b9dc89f19b026b765f219b6eecebaf">Mouse::ButtonLeft</a>) &amp;&amp; <a class="code hl_variable" href="#ae64e67476b25cee87b79159ff6749304">m_ViewportHovered</a>)</div>
 <div class="line"><span class="lineno">  384</span>                    {</div>
 <div class="line"><span class="lineno">  385</span>                        ImVec2 mousePos = ImGui::GetMousePos();</div>
 <div class="line"><span class="lineno">  386</span> </div>
@@ -1223,7 +1252,6 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="a_editor_layer_8cpp_html_a3de840fdcd8a5403adfd078e6a9b9fe8"><div class="ttname"><a href="_editor_layer_8cpp.html#a3de840fdcd8a5403adfd078e6a9b9fe8">s_MapTiles</a></div><div class="ttdeci">static const char * s_MapTiles</div><div class="ttdef"><b>Definition</b> EditorLayer.cpp:14</div></div>
 <div class="ttc" id="a_editor_layer_8cpp_html_abb45b0db764b0d420e6bd9c9739837f1"><div class="ttname"><a href="_editor_layer_8cpp.html#abb45b0db764b0d420e6bd9c9739837f1">s_MapWidth</a></div><div class="ttdeci">static const uint32_t s_MapWidth</div><div class="ttdef"><b>Definition</b> EditorLayer.cpp:12</div></div>
 <div class="ttc" id="a_instrumentor_8h_html_ae2376bed374f838d0047cf753f914f31"><div class="ttname"><a href="_instrumentor_8h.html#ae2376bed374f838d0047cf753f914f31">VZ_PROFILE_SCOPE</a></div><div class="ttdeci">#define VZ_PROFILE_SCOPE(name)</div><div class="ttdef"><b>Definition</b> Instrumentor.h:233</div></div>
-<div class="ttc" id="a_mouse_button_codes_8h_html_a6e284e74b77e0102517daa39b463cf71"><div class="ttname"><a href="_mouse_button_codes_8h.html#a6e284e74b77e0102517daa39b463cf71">VZ_MOUSE_BUTTON_LEFT</a></div><div class="ttdeci">#define VZ_MOUSE_BUTTON_LEFT</div><div class="ttdef"><b>Definition</b> MouseButtonCodes.h:13</div></div>
 <div class="ttc" id="aclass_vesper_1_1_editor_layer_html_a0d5a8ef34d998cc22a018449467dc0a3"><div class="ttname"><a href="#a0d5a8ef34d998cc22a018449467dc0a3">Vesper::EditorLayer::m_SpecialQuadColor</a></div><div class="ttdeci">glm::vec4 m_SpecialQuadColor</div><div class="ttdef"><b>Definition</b> EditorLayer.h:98</div></div>
 <div class="ttc" id="aclass_vesper_1_1_editor_layer_html_a1e565d2ad061aad5c9d8d0c07d3a6178"><div class="ttname"><a href="#a1e565d2ad061aad5c9d8d0c07d3a6178">Vesper::EditorLayer::m_TextureTintColor1</a></div><div class="ttdeci">glm::vec4 m_TextureTintColor1</div><div class="ttdef"><b>Definition</b> EditorLayer.h:94</div></div>
 <div class="ttc" id="aclass_vesper_1_1_editor_layer_html_a5677514c71785bc55fd89343e2588c72"><div class="ttname"><a href="#a5677514c71785bc55fd89343e2588c72">Vesper::EditorLayer::m_SquareColor</a></div><div class="ttdeci">glm::vec4 m_SquareColor</div><div class="ttdef"><b>Definition</b> EditorLayer.h:93</div></div>
@@ -1233,7 +1261,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclass_vesper_1_1_editor_layer_html_a8c08c448ab050ebfe5d51e3e0a979bbd"><div class="ttname"><a href="#a8c08c448ab050ebfe5d51e3e0a979bbd">Vesper::EditorLayer::ParticleEmitCount</a></div><div class="ttdeci">int ParticleEmitCount</div><div class="ttdef"><b>Definition</b> EditorLayer.h:84</div></div>
 <div class="ttc" id="aclass_vesper_1_1_editor_layer_html_a9baba9f57dedf6875aa7dc40a50ce979"><div class="ttname"><a href="#a9baba9f57dedf6875aa7dc40a50ce979">Vesper::EditorLayer::m_textureScale</a></div><div class="ttdeci">float m_textureScale</div><div class="ttdef"><b>Definition</b> EditorLayer.h:81</div></div>
 <div class="ttc" id="aclass_vesper_1_1_editor_layer_html_ab11ae2b384e92d2d50a8329b7714941d"><div class="ttname"><a href="#ab11ae2b384e92d2d50a8329b7714941d">Vesper::EditorLayer::m_specialQuadRotation</a></div><div class="ttdeci">float m_specialQuadRotation</div><div class="ttdef"><b>Definition</b> EditorLayer.h:83</div></div>
-<div class="ttc" id="aclass_vesper_1_1_input_html_a00b5734fe7e2227aa348e56c3c71a6d2"><div class="ttname"><a href="class_vesper_1_1_input.html#a00b5734fe7e2227aa348e56c3c71a6d2">Vesper::Input::IsMouseButtonPressed</a></div><div class="ttdeci">static bool IsMouseButtonPressed(int button)</div><div class="ttdef"><b>Definition</b> WindowsInput.cpp:16</div></div>
+<div class="ttc" id="aclass_vesper_1_1_input_html_a00b5734fe7e2227aa348e56c3c71a6d2"><div class="ttname"><a href="class_vesper_1_1_input.html#a00b5734fe7e2227aa348e56c3c71a6d2">Vesper::Input::IsMouseButtonPressed</a></div><div class="ttdeci">static bool IsMouseButtonPressed(int button)</div><div class="ttdoc">Checks if the specified mouse button is currently pressed.</div><div class="ttdef"><b>Definition</b> WindowsInput.cpp:16</div></div>
 <div class="ttc" id="aclass_vesper_1_1_render_command_html_ad9c66d6d71de59383f6717b2b24bd1d4"><div class="ttname"><a href="class_vesper_1_1_render_command.html#ad9c66d6d71de59383f6717b2b24bd1d4">Vesper::RenderCommand::Clear</a></div><div class="ttdeci">static void Clear()</div><div class="ttdef"><b>Definition</b> RenderCommand.h:26</div></div>
 <div class="ttc" id="aclass_vesper_1_1_renderer2_d_html_a2230d61d96994b384b6ef793d1ffb506"><div class="ttname"><a href="class_vesper_1_1_renderer2_d.html#a2230d61d96994b384b6ef793d1ffb506">Vesper::Renderer2D::ResetStats</a></div><div class="ttdeci">static void ResetStats()</div><div class="ttdef"><b>Definition</b> Renderer2D.cpp:497</div></div>
 <div class="ttc" id="aclass_vesper_1_1_renderer2_d_html_a41c4aa9d715e2ea03825360305989f00"><div class="ttname"><a href="class_vesper_1_1_renderer2_d.html#a41c4aa9d715e2ea03825360305989f00">Vesper::Renderer2D::DrawQuadRotatedWithTexture</a></div><div class="ttdeci">static void DrawQuadRotatedWithTexture(const glm::mat4 &amp;transform, const Ref&lt; Texture2D &gt; &amp;texture, float tilingFactor, const glm::vec4 tintColor)</div><div class="ttdef"><b>Definition</b> Renderer2D.cpp:368</div></div>
@@ -1242,9 +1270,10 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclass_vesper_1_1_renderer2_d_html_aba269c4ba2ba99b13b47c9e71bf1f8e3"><div class="ttname"><a href="class_vesper_1_1_renderer2_d.html#aba269c4ba2ba99b13b47c9e71bf1f8e3">Vesper::Renderer2D::DrawQuad</a></div><div class="ttdeci">static void DrawQuad(const glm::mat4 &amp;transform, const glm::vec4 &amp;color)</div><div class="ttdef"><b>Definition</b> Renderer2D.cpp:180</div></div>
 <div class="ttc" id="aclass_vesper_1_1_renderer2_d_html_ac61593eac73ea6fabba060b34c987302"><div class="ttname"><a href="class_vesper_1_1_renderer2_d.html#ac61593eac73ea6fabba060b34c987302">Vesper::Renderer2D::DrawQuadRotated</a></div><div class="ttdeci">static void DrawQuadRotated(const glm::mat4 &amp;transform, const glm::vec4 &amp;color)</div><div class="ttdef"><b>Definition</b> Renderer2D.cpp:330</div></div>
 <div class="ttc" id="aclass_vesper_1_1_renderer2_d_html_afd78da6a4f0aa5af3c7f8d533bd22b49"><div class="ttname"><a href="class_vesper_1_1_renderer2_d.html#afd78da6a4f0aa5af3c7f8d533bd22b49">Vesper::Renderer2D::DrawQuadWithTexture</a></div><div class="ttdeci">static void DrawQuadWithTexture(const glm::mat4 &amp;transform, const Ref&lt; Texture2D &gt; &amp;texture, float tilingFactor, const glm::vec4 tintColor)</div><div class="ttdef"><b>Definition</b> Renderer2D.cpp:218</div></div>
+<div class="ttc" id="anamespace_vesper_1_1_mouse_html_a9273402fdf359e292faf8f940e5eddffa61b9dc89f19b026b765f219b6eecebaf"><div class="ttname"><a href="namespace_vesper_1_1_mouse.html#a9273402fdf359e292faf8f940e5eddffa61b9dc89f19b026b765f219b6eecebaf">Vesper::Mouse::ButtonLeft</a></div><div class="ttdeci">@ ButtonLeft</div><div class="ttdef"><b>Definition</b> MouseButtonCodes.h:26</div></div>
 <div class="ttc" id="anamespace_vesper_html_ad1f51d7e944b5e23b18b12cacd5f0d27"><div class="ttname"><a href="namespace_vesper.html#ad1f51d7e944b5e23b18b12cacd5f0d27">Vesper::Ref</a></div><div class="ttdeci">std::shared_ptr&lt; T &gt; Ref</div><div class="ttdef"><b>Definition</b> Defines_Macros.h:21</div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="class_vesper_1_1_render_command.html#ad9c66d6d71de59383f6717b2b24bd1d4">Vesper::RenderCommand::Clear()</a>, <a class="el" href="class_vesper_1_1_renderer2_d.html#a4a87e37fd90cb8c33c65412c141db983">Vesper::Renderer2D::EndScene()</a>, <a class="el" href="class_vesper_1_1_input.html#a00b5734fe7e2227aa348e56c3c71a6d2">Vesper::Input::IsMouseButtonPressed()</a>, <a class="el" href="#a142fabce6f2fab34f80338ddbf989811">m_ViewportFocused</a>, <a class="el" href="#ae64e67476b25cee87b79159ff6749304">m_ViewportHovered</a>, <a class="el" href="#a8c08c448ab050ebfe5d51e3e0a979bbd">ParticleEmitCount</a>, <a class="el" href="class_vesper_1_1_renderer2_d.html#a2230d61d96994b384b6ef793d1ffb506">Vesper::Renderer2D::ResetStats()</a>, <a class="el" href="_editor_layer_8cpp.html#a0b1b41864ae4ba6e2a661cbbc6e923e8">s_MapHeight</a>, <a class="el" href="_editor_layer_8cpp.html#a3de840fdcd8a5403adfd078e6a9b9fe8">s_MapTiles</a>, <a class="el" href="_editor_layer_8cpp.html#abb45b0db764b0d420e6bd9c9739837f1">s_MapWidth</a>, <a class="el" href="#ac85853fce58190659c556dc089330f65">scene1</a>, <a class="el" href="#ae300dd76830fc8c2b414cab3467b95a2">scene2</a>, <a class="el" href="#a2f4323c7d3e284e833663e86523a36f5">scene3</a>, <a class="el" href="#a3b9d13fb60f3c304b46199e15a342dcb">scene4</a>, and <a class="el" href="#ac95542b1874e7b3840537f5b86ba08f6">useEntityScene</a>.</p>
+<p class="reference">References <a class="el" href="namespace_vesper_1_1_mouse.html#a9273402fdf359e292faf8f940e5eddffa61b9dc89f19b026b765f219b6eecebaf">Vesper::Mouse::ButtonLeft</a>, <a class="el" href="class_vesper_1_1_render_command.html#ad9c66d6d71de59383f6717b2b24bd1d4">Vesper::RenderCommand::Clear()</a>, <a class="el" href="class_vesper_1_1_renderer2_d.html#a4a87e37fd90cb8c33c65412c141db983">Vesper::Renderer2D::EndScene()</a>, <a class="el" href="class_vesper_1_1_input.html#a00b5734fe7e2227aa348e56c3c71a6d2">Vesper::Input::IsMouseButtonPressed()</a>, <a class="el" href="#a142fabce6f2fab34f80338ddbf989811">m_ViewportFocused</a>, <a class="el" href="#ae64e67476b25cee87b79159ff6749304">m_ViewportHovered</a>, <a class="el" href="#a8c08c448ab050ebfe5d51e3e0a979bbd">ParticleEmitCount</a>, <a class="el" href="class_vesper_1_1_renderer2_d.html#a2230d61d96994b384b6ef793d1ffb506">Vesper::Renderer2D::ResetStats()</a>, <a class="el" href="_editor_layer_8cpp.html#a0b1b41864ae4ba6e2a661cbbc6e923e8">s_MapHeight</a>, <a class="el" href="_editor_layer_8cpp.html#a3de840fdcd8a5403adfd078e6a9b9fe8">s_MapTiles</a>, <a class="el" href="_editor_layer_8cpp.html#abb45b0db764b0d420e6bd9c9739837f1">s_MapWidth</a>, <a class="el" href="#ac85853fce58190659c556dc089330f65">scene1</a>, <a class="el" href="#ae300dd76830fc8c2b414cab3467b95a2">scene2</a>, <a class="el" href="#a2f4323c7d3e284e833663e86523a36f5">scene3</a>, <a class="el" href="#a3b9d13fb60f3c304b46199e15a342dcb">scene4</a>, and <a class="el" href="#ac95542b1874e7b3840537f5b86ba08f6">useEntityScene</a>.</p>
 
 </div>
 </div>
@@ -1284,7 +1313,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  740</span>            <a class="code hl_define" href="_log_8h.html#adb5d169d80c40496a160a4fd90ebca37">VZ_CORE_INFO</a>(<span class="stringliteral">&quot;Scene deserialized from: &quot;</span> + filePath);</div>
 <div class="line"><span class="lineno">  741</span>        }</div>
 <div class="line"><span class="lineno">  742</span>    }</div>
-<div class="ttc" id="aclass_vesper_1_1_file_dialogs_html_a30ef477107af39176c77dd554ca88f6a"><div class="ttname"><a href="class_vesper_1_1_file_dialogs.html#a30ef477107af39176c77dd554ca88f6a">Vesper::FileDialogs::OpenFile</a></div><div class="ttdeci">static std::string OpenFile(const char *filter)</div><div class="ttdef"><b>Definition</b> WindowsPlatformUtils.cpp:12</div></div>
+<div class="ttc" id="aclass_vesper_1_1_file_dialogs_html_a30ef477107af39176c77dd554ca88f6a"><div class="ttname"><a href="class_vesper_1_1_file_dialogs.html#a30ef477107af39176c77dd554ca88f6a">Vesper::FileDialogs::OpenFile</a></div><div class="ttdeci">static std::string OpenFile(const char *filter)</div><div class="ttdoc">Opens a file dialog to select a file to open.</div><div class="ttdef"><b>Definition</b> WindowsPlatformUtils.cpp:12</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="class_vesper_1_1_scene_serializer.html#a564644cba64e2a320b70a6fe6459deb3">Vesper::SceneSerializer::Deserialize()</a>.</p>
 
@@ -1354,7 +1383,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  751</span>            <a class="code hl_define" href="_log_8h.html#adb5d169d80c40496a160a4fd90ebca37">VZ_CORE_INFO</a>(<span class="stringliteral">&quot;Scene serialized to: &quot;</span> + filePath);</div>
 <div class="line"><span class="lineno">  752</span>        }</div>
 <div class="line"><span class="lineno">  753</span>    }</div>
-<div class="ttc" id="aclass_vesper_1_1_file_dialogs_html_a2929cc61038cd4dce65005ab83760607"><div class="ttname"><a href="class_vesper_1_1_file_dialogs.html#a2929cc61038cd4dce65005ab83760607">Vesper::FileDialogs::SaveFile</a></div><div class="ttdeci">static std::string SaveFile(const char *filter)</div><div class="ttdef"><b>Definition</b> WindowsPlatformUtils.cpp:29</div></div>
+<div class="ttc" id="aclass_vesper_1_1_file_dialogs_html_a2929cc61038cd4dce65005ab83760607"><div class="ttname"><a href="class_vesper_1_1_file_dialogs.html#a2929cc61038cd4dce65005ab83760607">Vesper::FileDialogs::SaveFile</a></div><div class="ttdeci">static std::string SaveFile(const char *filter)</div><div class="ttdoc">Opens a file dialog to select a location to save a file.</div><div class="ttdef"><b>Definition</b> WindowsPlatformUtils.cpp:29</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="class_vesper_1_1_scene_serializer.html#a57a8ec77960774b4d8dd1c664e9a0d4b">Vesper::SceneSerializer::Serialize()</a>.</p>
 

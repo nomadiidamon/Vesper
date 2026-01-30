@@ -98,6 +98,9 @@ $(function(){initNavTree('struct_vesper_1_1_u_u_i_d.html','','struct_vesper_1_1_
 </div><!--header-->
 <div class="contents">
 
+<p>Universally Unique Identifier.  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_components_8h_source.html">Components.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -110,8 +113,12 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:acf02a244f181ab1706f29b21531a0ec6" id="r_acf02a244f181ab1706f29b21531a0ec6"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#acf02a244f181ab1706f29b21531a0ec6">ID</a></td></tr>
+<tr class="memdesc:acf02a244f181ab1706f29b21531a0ec6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The string representation of the <a class="el" href="struct_vesper_1_1_u_u_i_d.html" title="Universally Unique Identifier.">UUID</a>.  <br /></td></tr>
 </table>
-<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Universally Unique Identifier. </p>
+<p>A simple wrapper around a string representing a <a class="el" href="struct_vesper_1_1_u_u_i_d.html" title="Universally Unique Identifier.">UUID</a>. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a5b59161dd7d5383d571ee3c8c1854f86" name="a5b59161dd7d5383d571ee3c8c1854f86"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5b59161dd7d5383d571ee3c8c1854f86">&#9670;&#160;</a></span>UUID() <span class="overload">[1/2]</span></h2>
 
@@ -134,9 +141,9 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   16</span>{ <a class="code hl_variable" href="#acf02a244f181ab1706f29b21531a0ec6">ID</a> = <a class="code hl_function" href="namespace_vesper_1_1_random.html#a9a3d18994aa7df05cf15657677456aab">Random::UUID</a>(); }</div>
+<div class="fragment"><div class="line"><span class="lineno">   21</span>{ <a class="code hl_variable" href="#acf02a244f181ab1706f29b21531a0ec6">ID</a> = <a class="code hl_function" href="namespace_vesper_1_1_random.html#a9a3d18994aa7df05cf15657677456aab">Random::UUID</a>(); }</div>
 <div class="ttc" id="anamespace_vesper_1_1_random_html_a9a3d18994aa7df05cf15657677456aab"><div class="ttname"><a href="namespace_vesper_1_1_random.html#a9a3d18994aa7df05cf15657677456aab">Vesper::Random::UUID</a></div><div class="ttdeci">std::string UUID()</div><div class="ttdef"><b>Definition</b> Random.h:66</div></div>
-<div class="ttc" id="astruct_vesper_1_1_u_u_i_d_html_acf02a244f181ab1706f29b21531a0ec6"><div class="ttname"><a href="#acf02a244f181ab1706f29b21531a0ec6">Vesper::UUID::ID</a></div><div class="ttdeci">std::string ID</div><div class="ttdef"><b>Definition</b> Components.h:15</div></div>
+<div class="ttc" id="astruct_vesper_1_1_u_u_i_d_html_acf02a244f181ab1706f29b21531a0ec6"><div class="ttname"><a href="#acf02a244f181ab1706f29b21531a0ec6">Vesper::UUID::ID</a></div><div class="ttdeci">std::string ID</div><div class="ttdoc">The string representation of the UUID.</div><div class="ttdef"><b>Definition</b> Components.h:19</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -162,8 +169,8 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   18</span>            : <a class="code hl_variable" href="#acf02a244f181ab1706f29b21531a0ec6">ID</a>{ <span class="keywordtype">id</span> } {</div>
-<div class="line"><span class="lineno">   19</span>        }</div>
+<div class="fragment"><div class="line"><span class="lineno">   23</span>            : <a class="code hl_variable" href="#acf02a244f181ab1706f29b21531a0ec6">ID</a>{ <span class="keywordtype">id</span> } {</div>
+<div class="line"><span class="lineno">   24</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -190,7 +197,7 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   21</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#acf02a244f181ab1706f29b21531a0ec6">ID</a>; }</div>
+<div class="fragment"><div class="line"><span class="lineno">   26</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#acf02a244f181ab1706f29b21531a0ec6">ID</a>; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -216,7 +223,7 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   20</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#acf02a244f181ab1706f29b21531a0ec6">ID</a>; }</div>
+<div class="fragment"><div class="line"><span class="lineno">   25</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#acf02a244f181ab1706f29b21531a0ec6">ID</a>; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -232,6 +239,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>The string representation of the <a class="el" href="struct_vesper_1_1_u_u_i_d.html" title="Universally Unique Identifier.">UUID</a>. </p>
 
 </div>
 </div>

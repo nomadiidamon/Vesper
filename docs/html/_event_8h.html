@@ -105,7 +105,9 @@ $(function(){initNavTree('_event_8h.html','',''); });
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:Vesper_3A_3AEvent" id="r_Vesper_3A_3AEvent"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_vesper_1_1_event.html">Vesper::Event</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abstract base class for all events.  <a href="class_vesper_1_1_event.html#details">More...</a><br /></td></tr>
 <tr class="memitem:Vesper_3A_3AEventDispatcher" id="r_Vesper_3A_3AEventDispatcher"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_vesper_1_1_event_dispatcher.html">Vesper::EventDispatcher</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stack-based templated event dispatcher.  <a href="class_vesper_1_1_event_dispatcher.html#details">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
@@ -115,7 +117,9 @@ Namespaces</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:a80d534fc4d69a68eefd1573fd0ac2f44" id="r_a80d534fc4d69a68eefd1573fd0ac2f44"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a80d534fc4d69a68eefd1573fd0ac2f44">EVENT_CLASS_TYPE</a>(type)</td></tr>
+<tr class="memdesc:a80d534fc4d69a68eefd1573fd0ac2f44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Macro to define event type in event subclasses.  <br /></td></tr>
 <tr class="memitem:abd52deea587a36ef619e596a0c691839" id="r_abd52deea587a36ef619e596a0c691839"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#abd52deea587a36ef619e596a0c691839">EVENT_CLASS_CATEGORY</a>(category)</td></tr>
+<tr class="memdesc:abd52deea587a36ef619e596a0c691839"><td class="mdescLeft">&#160;</td><td class="mdescRight">Macro to define event category in event subclasses.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -141,6 +145,7 @@ Enumerations</h2></td></tr>
 , <a class="el" href="namespace_vesper.html#ada4bc37927ce22c44ea0083a224d3bb5a50edb169910041bb3c06f6e8322d74c1">Vesper::MouseScrolled</a>
 <br />
  }</td></tr>
+<tr class="memdesc:ada4bc37927ce22c44ea0083a224d3bb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumeration of event types.  <a href="namespace_vesper.html#ada4bc37927ce22c44ea0083a224d3bb5">More...</a><br /></td></tr>
 <tr class="memitem:ad79da63be4419c3a218acaa990decabe" id="r_ad79da63be4419c3a218acaa990decabe"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="namespace_vesper.html#ad79da63be4419c3a218acaa990decabe">Vesper::EventCategory</a> { <br />
 &#160;&#160;<a class="el" href="namespace_vesper.html#ad79da63be4419c3a218acaa990decabea5af280140310d5b7f04b47a0c0a49f9f">Vesper::None</a> = 0
 , <a class="el" href="namespace_vesper.html#ad79da63be4419c3a218acaa990decabea528846d063c87fe2abe290ff90ee9eb3">Vesper::EventCategoryApplication</a> = BIT(0)
@@ -151,10 +156,12 @@ Enumerations</h2></td></tr>
 , <a class="el" href="namespace_vesper.html#ad79da63be4419c3a218acaa990decabea17ff2a7e3b7077c99dafe654f2b9bc34">Vesper::EventCategoryMouseButton</a> = BIT(4)
 <br />
  }</td></tr>
+<tr class="memdesc:ad79da63be4419c3a218acaa990decabe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumeration of event categories.  <a href="namespace_vesper.html#ad79da63be4419c3a218acaa990decabe">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a2ad5c87552bf4fd64385dc411970ec76" id="r_a2ad5c87552bf4fd64385dc411970ec76"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="namespace_vesper.html#a2ad5c87552bf4fd64385dc411970ec76">Vesper::format_as</a> (const <a class="el" href="class_vesper_1_1_event.html">Event</a> &amp;e)</td></tr>
+<tr class="memdesc:a2ad5c87552bf4fd64385dc411970ec76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Format an event as a string.  <br /></td></tr>
 </table>
 <a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
 <a id="abd52deea587a36ef619e596a0c691839" name="abd52deea587a36ef619e596a0c691839"></a>
@@ -173,6 +180,8 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><span class="keyword">virtual</span> <span class="keywordtype">int</span> GetCategoryFlags()<span class="keyword"> const override </span>{ <span class="keywordflow">return</span> category; }</div>
 </div><!-- fragment -->
+<p>Macro to define event category in event subclasses. </p>
+
 </div>
 </div>
 <a id="a80d534fc4d69a68eefd1573fd0ac2f44" name="a80d534fc4d69a68eefd1573fd0ac2f44"></a>
@@ -192,9 +201,11 @@ Functions</h2></td></tr>
 <b>Value:</b><div class="fragment"><div class="line"><span class="keyword">static</span> EventType GetStaticType() { <span class="keywordflow">return</span> EventType::##type; }\</div>
 <div class="line"><span class="keyword">virtual</span> EventType GetEventType()<span class="keyword"> const override </span>{ <span class="keywordflow">return</span> GetStaticType(); }\</div>
 <div class="line"><span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* GetName()<span class="keyword"> const override </span>{ <span class="keywordflow">return</span> #type; }</div>
-</div><!-- fragment --><div class="fragment"><div class="line"><span class="lineno">   27</span><span class="preprocessor">#define EVENT_CLASS_TYPE(type) static EventType GetStaticType() { return EventType::##type; }\</span></div>
-<div class="line"><span class="lineno">   28</span><span class="preprocessor">                                virtual EventType GetEventType() const override { return GetStaticType(); }\</span></div>
-<div class="line"><span class="lineno">   29</span><span class="preprocessor">                                virtual const char* GetName() const override { return #type; }</span></div>
+</div><!-- fragment -->
+<p>Macro to define event type in event subclasses. </p>
+<div class="fragment"><div class="line"><span class="lineno">   30</span><span class="preprocessor">#define EVENT_CLASS_TYPE(type) static EventType GetStaticType() { return EventType::##type; }\</span></div>
+<div class="line"><span class="lineno">   31</span><span class="preprocessor">                                virtual EventType GetEventType() const override { return GetStaticType(); }\</span></div>
+<div class="line"><span class="lineno">   32</span><span class="preprocessor">                                virtual const char* GetName() const override { return #type; }</span></div>
 </div><!-- fragment -->
 </div>
 </div>

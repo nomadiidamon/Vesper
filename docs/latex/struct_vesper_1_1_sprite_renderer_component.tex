@@ -2,6 +2,11 @@
 \hypertarget{struct_vesper_1_1_sprite_renderer_component}{}\label{struct_vesper_1_1_sprite_renderer_component}\index{Vesper::SpriteRendererComponent@{Vesper::SpriteRendererComponent}}
 
 
+Component that holds sprite rendering data.  
+
+
+
+
 {\ttfamily \+\#include $<$Components.\+h$>$}
 
 \doxysubsubsection*{Public Member Functions}
@@ -12,27 +17,30 @@
 \doxymbox{\hyperlink{struct_vesper_1_1_sprite_renderer_component_a4329a5438b2fbfc5307e01c09351ada2}{Sprite\+Renderer\+Component}} (const Sprite\+Renderer\+Component \&)=default
 \item 
 \doxymbox{\hyperlink{struct_vesper_1_1_sprite_renderer_component_adf70b8e8326c401c67c70e06b4dac563}{Sprite\+Renderer\+Component}} (const glm::\+vec4 \&color)
-\item 
+\begin{DoxyCompactList}\small\item\em Constructor that initializes the color. \end{DoxyCompactList}\item 
 \doxymbox{\hyperlink{struct_vesper_1_1_sprite_renderer_component_ad7bc4615b75c76dbee45cbc15383a9dd}{operator glm::\+vec4 \&}} ()
 \item 
 \doxymbox{\hyperlink{struct_vesper_1_1_sprite_renderer_component_a105c71b77e49c7c00b493b57c7d61108}{operator const glm::\+vec4 \&}} () const
 \item 
 glm::\+vec4 \& \doxymbox{\hyperlink{struct_vesper_1_1_sprite_renderer_component_ac0cef73b959fbf87956b0cd066bc5dfd}{Get\+Color}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Returns the color of the sprite. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 glm::\+vec4 \doxymbox{\hyperlink{struct_vesper_1_1_sprite_renderer_component_aa7e606fafd917f6b58ad3fe4d563aa0e}{Color}} \{ 1.\+0f, 1.\+0f, 1.\+0f, 1.\+0f \}
-\item 
+\begin{DoxyCompactList}\small\item\em \doxylink{namespace_vesper_1_1_color}{Color} of the sprite. \end{DoxyCompactList}\item 
 \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_texture2_d}{Texture2D}} $>$ \doxymbox{\hyperlink{struct_vesper_1_1_sprite_renderer_component_a5a57c23214bb833dda2791ee6f170f69}{Texture}} = nullptr
-\item 
+\begin{DoxyCompactList}\small\item\em \doxylink{class_vesper_1_1_texture}{Texture} of the sprite. \end{DoxyCompactList}\item 
 float \doxymbox{\hyperlink{struct_vesper_1_1_sprite_renderer_component_a4aa45da4cf21e0ed9f4246523a742a18}{Tiling\+Factor}} = 1.\+0f
-\item 
+\begin{DoxyCompactList}\small\item\em Tiling factor for the texture. \end{DoxyCompactList}\item 
 bool \doxymbox{\hyperlink{struct_vesper_1_1_sprite_renderer_component_a9881e92813bd33943511addb411d1eec}{Texture\+Enabled}} = false
-\item 
+\begin{DoxyCompactList}\small\item\em whether the texturing is enabled \end{DoxyCompactList}\item 
 bool \doxymbox{\hyperlink{struct_vesper_1_1_sprite_renderer_component_a78c4dc66ff2541f777f44da2484c137a}{Billboard}} = false
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em whether the sprite should always face the camera \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Component that holds sprite rendering data. 
 
 \label{doc-constructors}
 \Hypertarget{struct_vesper_1_1_sprite_renderer_component_doc-constructors}
@@ -56,11 +64,23 @@ Vesper::\+\+Sprite\+Renderer\+Component::\+\+Sprite\+Renderer\+Component (\begin
 Vesper::\+\+Sprite\+Renderer\+Component::\+\+Sprite\+Renderer\+Component (\begin{DoxyParamCaption}\item[{const glm::\+vec4 \&}]{color}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
+
+Constructor that initializes the color. 
+
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{struct_vesper_1_1_sprite_renderer_component_aa7e606fafd917f6b58ad3fe4d563aa0e}{Color}}(color)\ \{}
-\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{struct_vesper_1_1_sprite_renderer_component_aa7e606fafd917f6b58ad3fe4d563aa0e}{Color}}(color)\ \{}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \}}
 
 \end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{struct_vesper_1_1_sprite_renderer_component_adf70b8e8326c401c67c70e06b4dac563}{Sprite\+Renderer\+Component()}}.
+
+
+
+Referenced by \doxymbox{\hyperlink{struct_vesper_1_1_sprite_renderer_component_adf70b8e8326c401c67c70e06b4dac563}{Sprite\+Renderer\+Component()}}.
+
 
 
 \label{doc-func-members}
@@ -73,8 +93,12 @@ Vesper::\+\+Sprite\+Renderer\+Component::\+\+Sprite\+Renderer\+Component (\begin
 glm::\+vec4 \& Vesper::\+\+Sprite\+Renderer\+Component::\+\+Get\+Color (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
+
+Returns the color of the sprite. 
+
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00086\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{struct_vesper_1_1_sprite_renderer_component_aa7e606fafd917f6b58ad3fe4d563aa0e}{Color}};\ \}}
+\DoxyCodeLine{00109\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{struct_vesper_1_1_sprite_renderer_component_aa7e606fafd917f6b58ad3fe4d563aa0e}{Color}};\ \}}
 
 \end{DoxyCode}
 \Hypertarget{struct_vesper_1_1_sprite_renderer_component_a105c71b77e49c7c00b493b57c7d61108}\index{Vesper::SpriteRendererComponent@{Vesper::SpriteRendererComponent}!operator const glm::vec4 \&@{operator const glm::vec4 \&}}
@@ -85,7 +109,7 @@ Vesper::\+\+Sprite\+Renderer\+Component::\+operator const glm::\+vec4 \& (\begin
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00084\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{struct_vesper_1_1_sprite_renderer_component_aa7e606fafd917f6b58ad3fe4d563aa0e}{Color}};\ \}}
+\DoxyCodeLine{00106\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{struct_vesper_1_1_sprite_renderer_component_aa7e606fafd917f6b58ad3fe4d563aa0e}{Color}};\ \}}
 
 \end{DoxyCode}
 \Hypertarget{struct_vesper_1_1_sprite_renderer_component_ad7bc4615b75c76dbee45cbc15383a9dd}\index{Vesper::SpriteRendererComponent@{Vesper::SpriteRendererComponent}!operator glm::vec4 \&@{operator glm::vec4 \&}}
@@ -96,7 +120,7 @@ Vesper::\+\+Sprite\+Renderer\+Component::\+operator glm::\+vec4 \& (\begin{DoxyP
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00083\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{struct_vesper_1_1_sprite_renderer_component_aa7e606fafd917f6b58ad3fe4d563aa0e}{Color}};\ \}}
+\DoxyCodeLine{00105\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{struct_vesper_1_1_sprite_renderer_component_aa7e606fafd917f6b58ad3fe4d563aa0e}{Color}};\ \}}
 
 \end{DoxyCode}
 
@@ -110,15 +134,23 @@ Vesper::\+\+Sprite\+Renderer\+Component::\+operator glm::\+vec4 \& (\begin{DoxyP
 {\footnotesize\ttfamily \label{struct_vesper_1_1_sprite_renderer_component_a78c4dc66ff2541f777f44da2484c137a} 
 bool Vesper::\+\+Sprite\+Renderer\+Component::\+\+Billboard = false}
 
-\Hypertarget{struct_vesper_1_1_sprite_renderer_component_aa7e606fafd917f6b58ad3fe4d563aa0e}\index{Vesper::SpriteRendererComponent@{Vesper::SpriteRendererComponent}!Color@{Color}}
+
+
+whether the sprite should always face the camera 
+
+WIP \Hypertarget{struct_vesper_1_1_sprite_renderer_component_aa7e606fafd917f6b58ad3fe4d563aa0e}\index{Vesper::SpriteRendererComponent@{Vesper::SpriteRendererComponent}!Color@{Color}}
 \index{Color@{Color}!Vesper::SpriteRendererComponent@{Vesper::SpriteRendererComponent}}
 \doxysubsubsection{\texorpdfstring{Color}{Color}}
 {\footnotesize\ttfamily \label{struct_vesper_1_1_sprite_renderer_component_aa7e606fafd917f6b58ad3fe4d563aa0e} 
 glm::\+vec4 Vesper::\+\+Sprite\+Renderer\+Component::\+\+Color \{ 1.\+0f, 1.\+0f, 1.\+0f, 1.\+0f \}}
 
 
+
+\doxylink{namespace_vesper_1_1_color}{Color} of the sprite. 
+
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00073\ \{\ 1.0f,\ 1.0f,\ 1.0f,\ 1.0f\ \};}
+\DoxyCodeLine{00092\ \{\ 1.0f,\ 1.0f,\ 1.0f,\ 1.0f\ \};}
 
 \end{DoxyCode}
 \Hypertarget{struct_vesper_1_1_sprite_renderer_component_a5a57c23214bb833dda2791ee6f170f69}\index{Vesper::SpriteRendererComponent@{Vesper::SpriteRendererComponent}!Texture@{Texture}}
@@ -127,17 +159,29 @@ glm::\+vec4 Vesper::\+\+Sprite\+Renderer\+Component::\+\+Color \{ 1.\+0f, 1.\+0f
 {\footnotesize\ttfamily \label{struct_vesper_1_1_sprite_renderer_component_a5a57c23214bb833dda2791ee6f170f69} 
 \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$\doxymbox{\hyperlink{class_vesper_1_1_texture2_d}{Texture2D}}$>$ Vesper::\+\+Sprite\+Renderer\+Component::\+\+Texture = nullptr}
 
+
+
+\doxylink{class_vesper_1_1_texture}{Texture} of the sprite. 
+
 \Hypertarget{struct_vesper_1_1_sprite_renderer_component_a9881e92813bd33943511addb411d1eec}\index{Vesper::SpriteRendererComponent@{Vesper::SpriteRendererComponent}!TextureEnabled@{TextureEnabled}}
 \index{TextureEnabled@{TextureEnabled}!Vesper::SpriteRendererComponent@{Vesper::SpriteRendererComponent}}
 \doxysubsubsection{\texorpdfstring{TextureEnabled}{TextureEnabled}}
 {\footnotesize\ttfamily \label{struct_vesper_1_1_sprite_renderer_component_a9881e92813bd33943511addb411d1eec} 
 bool Vesper::\+\+Sprite\+Renderer\+Component::\+\+Texture\+Enabled = false}
 
+
+
+whether the texturing is enabled 
+
 \Hypertarget{struct_vesper_1_1_sprite_renderer_component_a4aa45da4cf21e0ed9f4246523a742a18}\index{Vesper::SpriteRendererComponent@{Vesper::SpriteRendererComponent}!TilingFactor@{TilingFactor}}
 \index{TilingFactor@{TilingFactor}!Vesper::SpriteRendererComponent@{Vesper::SpriteRendererComponent}}
 \doxysubsubsection{\texorpdfstring{TilingFactor}{TilingFactor}}
 {\footnotesize\ttfamily \label{struct_vesper_1_1_sprite_renderer_component_a4aa45da4cf21e0ed9f4246523a742a18} 
 float Vesper::\+\+Sprite\+Renderer\+Component::\+\+Tiling\+Factor = 1.\+0f}
+
+
+
+Tiling factor for the texture. 
 
 
 

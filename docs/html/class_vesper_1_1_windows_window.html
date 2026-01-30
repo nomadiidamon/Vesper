@@ -105,7 +105,7 @@ Inheritance diagram for Vesper::WindowsWindow:</div>
  <div class="center">
   <img src="class_vesper_1_1_windows_window.png" usemap="#Vesper_3A_3AWindowsWindow_map" alt=""/>
   <map id="Vesper_3A_3AWindowsWindow_map" name="Vesper_3A_3AWindowsWindow_map">
-<area href="class_vesper_1_1_window.html" alt="Vesper::Window" shape="rect" coords="0,0,153,24"/>
+<area href="class_vesper_1_1_window.html" title="Abstract interface representing an application window." alt="Vesper::Window" shape="rect" coords="0,0,153,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -118,12 +118,19 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a41fff320887d40f8c415f80b52ff5416" id="r_a41fff320887d40f8c415f80b52ff5416"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a41fff320887d40f8c415f80b52ff5416">WindowsWindow</a> (const <a class="el" href="struct_vesper_1_1_window_props.html">WindowProps</a> &amp;props)</td></tr>
 <tr class="memitem:a3ed6536ec09a8ffe2fa6190df334566f" id="r_a3ed6536ec09a8ffe2fa6190df334566f"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="#a3ed6536ec09a8ffe2fa6190df334566f">~WindowsWindow</a> ()</td></tr>
 <tr class="memitem:a6658a3ef114f2f3fc5c775c65e37b958" id="r_a6658a3ef114f2f3fc5c775c65e37b958"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a6658a3ef114f2f3fc5c775c65e37b958">OnUpdate</a> () override</td></tr>
+<tr class="memdesc:a6658a3ef114f2f3fc5c775c65e37b958"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called every frame to update the window.  <br /></td></tr>
 <tr class="memitem:ad3cef4871d3a311155dfe997985e5a2a" id="r_ad3cef4871d3a311155dfe997985e5a2a"><td class="memItemLeft">unsigned int&#160;</td><td class="memItemRight"><a class="el" href="#ad3cef4871d3a311155dfe997985e5a2a">GetWidth</a> () const override</td></tr>
+<tr class="memdesc:ad3cef4871d3a311155dfe997985e5a2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the width of the window.  <br /></td></tr>
 <tr class="memitem:ab89ca1907dc2a493821fe9bf141ecd07" id="r_ab89ca1907dc2a493821fe9bf141ecd07"><td class="memItemLeft">unsigned int&#160;</td><td class="memItemRight"><a class="el" href="#ab89ca1907dc2a493821fe9bf141ecd07">GetHeight</a> () const override</td></tr>
+<tr class="memdesc:ab89ca1907dc2a493821fe9bf141ecd07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the height of the window.  <br /></td></tr>
 <tr class="memitem:a3481fa772c2853a5cec99498e095401d" id="r_a3481fa772c2853a5cec99498e095401d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3481fa772c2853a5cec99498e095401d">SetEventCallback</a> (const <a class="el" href="class_vesper_1_1_window.html#ac908c4b9b5d83ccb8bf159a443833403">EventCallbackFn</a> &amp;callback) override</td></tr>
+<tr class="memdesc:a3481fa772c2853a5cec99498e095401d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the callback function for window events.  <br /></td></tr>
 <tr class="memitem:ac24a0402e8393ae2ab558a6574302217" id="r_ac24a0402e8393ae2ab558a6574302217"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac24a0402e8393ae2ab558a6574302217">SetVSync</a> (bool enabled) override</td></tr>
+<tr class="memdesc:ac24a0402e8393ae2ab558a6574302217"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets whether vertical synchronization (VSync) is enabled.  <br /></td></tr>
 <tr class="memitem:a111250e0545c201981741db703eb0b5d" id="r_a111250e0545c201981741db703eb0b5d"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a111250e0545c201981741db703eb0b5d">IsVSync</a> () const override</td></tr>
+<tr class="memdesc:a111250e0545c201981741db703eb0b5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if vertical synchronization (VSync) is enabled.  <br /></td></tr>
 <tr class="memitem:a3de8b964724d127bbe13ac88cb2dd903" id="r_a3de8b964724d127bbe13ac88cb2dd903"><td class="memItemLeft">virtual void *&#160;</td><td class="memItemRight"><a class="el" href="#a3de8b964724d127bbe13ac88cb2dd903">GetNativeWindow</a> () const override</td></tr>
+<tr class="memdesc:a3de8b964724d127bbe13ac88cb2dd903"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the native window handle.  <br /></td></tr>
 <tr class="inherit_header pub_methods_class_vesper_1_1_window"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_vesper_1_1_window')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="class_vesper_1_1_window.html">Vesper::Window</a></td></tr>
 <tr class="memitem:a4125c4f4f15a045803fcdda0f9e3e0ca inherit pub_methods_class_vesper_1_1_window" id="r_a4125c4f4f15a045803fcdda0f9e3e0ca"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="class_vesper_1_1_window.html#a4125c4f4f15a045803fcdda0f9e3e0ca">~Window</a> ()</td></tr>
 </table><table class="memberdecls">
@@ -144,6 +151,7 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:ac908c4b9b5d83ccb8bf159a443833403 inherit pub_types_class_vesper_1_1_window" id="r_ac908c4b9b5d83ccb8bf159a443833403"><td class="memItemLeft">using&#160;</td><td class="memItemRight"><a class="el" href="class_vesper_1_1_window.html#ac908c4b9b5d83ccb8bf159a443833403">EventCallbackFn</a> = std::function&lt;void(<a class="el" href="class_vesper_1_1_event.html">Event</a>&amp;)&gt;</td></tr>
 <tr class="inherit_header pub_static_methods_class_vesper_1_1_window"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_static_methods_class_vesper_1_1_window')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Static Public Member Functions inherited from <a class="el" href="class_vesper_1_1_window.html">Vesper::Window</a></td></tr>
 <tr class="memitem:a54fb0dcbcf16390cd9f8f2ebda165523 inherit pub_static_methods_class_vesper_1_1_window" id="r_a54fb0dcbcf16390cd9f8f2ebda165523"><td class="memItemLeft">static <a class="el" href="namespace_vesper.html#a5425f9aaa2ee4d3761c8ce6b385e0b70">Scope</a>&lt; <a class="el" href="class_vesper_1_1_window.html">Window</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="class_vesper_1_1_window.html#a54fb0dcbcf16390cd9f8f2ebda165523">Create</a> (const <a class="el" href="struct_vesper_1_1_window_props.html">WindowProps</a> &amp;props=<a class="el" href="struct_vesper_1_1_window_props.html">WindowProps</a>())</td></tr>
+<tr class="memdesc:a54fb0dcbcf16390cd9f8f2ebda165523 inherit pub_static_methods_class_vesper_1_1_window"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a window instance with the specified properties.  <br /></td></tr>
 </table>
 <hr/><h2 id="header-inline_5Fclasses" class="groupheader">Class Documentation</h2>
 <a name="struct_vesper_1_1_windows_window_1_1_window_data" id="struct_vesper_1_1_windows_window_1_1_window_data"></a>
@@ -274,6 +282,8 @@ Width</td>
 </table>
 </div><div class="memdoc">
 
+<p>Retrieves the height of the window. </p>
+
 <p>Implements <a class="el" href="class_vesper_1_1_window.html#ad675d99e843b9c11cd2b8feb61c62265">Vesper::Window</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   19</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a0bee44286a1747f022adc10f519eea35">m_Data</a>.Height; }</div>
 <div class="ttc" id="aclass_vesper_1_1_windows_window_html_a0bee44286a1747f022adc10f519eea35"><div class="ttname"><a href="#a0bee44286a1747f022adc10f519eea35">Vesper::WindowsWindow::m_Data</a></div><div class="ttdeci">WindowData m_Data</div><div class="ttdef"><b>Definition</b> WindowsWindow.h:40</div></div>
@@ -303,6 +313,8 @@ Width</td>
 </table>
 </div><div class="memdoc">
 
+<p>Retrieves the native window handle. </p>
+
 <p>Implements <a class="el" href="class_vesper_1_1_window.html#a4b4b607a2bd868df1672ab69d4f09881">Vesper::Window</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   25</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a7ea9e9cff8eae7150841ca71ee6be079">m_Window</a>; }</div>
 <div class="ttc" id="aclass_vesper_1_1_windows_window_html_a7ea9e9cff8eae7150841ca71ee6be079"><div class="ttname"><a href="#a7ea9e9cff8eae7150841ca71ee6be079">Vesper::WindowsWindow::m_Window</a></div><div class="ttdeci">GLFWwindow * m_Window</div><div class="ttdef"><b>Definition</b> WindowsWindow.h:30</div></div>
@@ -331,6 +343,8 @@ Width</td>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Retrieves the width of the window. </p>
 
 <p>Implements <a class="el" href="class_vesper_1_1_window.html#a38ba98632ee63ebacb860ca4de56772b">Vesper::Window</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   18</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a0bee44286a1747f022adc10f519eea35">m_Data</a>.Width; }</div>
@@ -477,7 +491,7 @@ Width</td>
 <div class="ttc" id="aclass_vesper_1_1_windows_window_html_a216342905d7c59dc562f9747fe1a097c"><div class="ttname"><a href="#a216342905d7c59dc562f9747fe1a097c">Vesper::WindowsWindow::m_Context</a></div><div class="ttdeci">GraphicsContext * m_Context</div><div class="ttdef"><b>Definition</b> WindowsWindow.h:31</div></div>
 <div class="ttc" id="aclass_vesper_1_1_windows_window_html_aa8a0bb4a38e17bc1faa47b21d7a4e133"><div class="ttname"><a href="#aa8a0bb4a38e17bc1faa47b21d7a4e133">Vesper::WindowsWindow::WindowData::Height</a></div><div class="ttdeci">unsigned int Height</div><div class="ttdef"><b>Definition</b> WindowsWindow.h:35</div></div>
 <div class="ttc" id="aclass_vesper_1_1_windows_window_html_aa8f7420cfc5b5936dd1810de7878767f"><div class="ttname"><a href="#aa8f7420cfc5b5936dd1810de7878767f">Vesper::WindowsWindow::WindowData::EventCallback</a></div><div class="ttdeci">EventCallbackFn EventCallback</div><div class="ttdef"><b>Definition</b> WindowsWindow.h:38</div></div>
-<div class="ttc" id="aclass_vesper_1_1_windows_window_html_ac24a0402e8393ae2ab558a6574302217"><div class="ttname"><a href="#ac24a0402e8393ae2ab558a6574302217">Vesper::WindowsWindow::SetVSync</a></div><div class="ttdeci">void SetVSync(bool enabled) override</div><div class="ttdef"><b>Definition</b> WindowsWindow.cpp:163</div></div>
+<div class="ttc" id="aclass_vesper_1_1_windows_window_html_ac24a0402e8393ae2ab558a6574302217"><div class="ttname"><a href="#ac24a0402e8393ae2ab558a6574302217">Vesper::WindowsWindow::SetVSync</a></div><div class="ttdeci">void SetVSync(bool enabled) override</div><div class="ttdoc">Sets whether vertical synchronization (VSync) is enabled.</div><div class="ttdef"><b>Definition</b> WindowsWindow.cpp:163</div></div>
 <div class="ttc" id="aclass_vesper_1_1_windows_window_html_struct_vesper_1_1_windows_window_1_1_window_data"><div class="ttname"><a href="#struct_vesper_1_1_windows_window_1_1_window_data">Vesper::WindowsWindow::WindowData</a></div><div class="ttdef"><b>Definition</b> WindowsWindow.h:33</div></div>
 <div class="ttc" id="anamespace_vesper_html_a21fbc2a2465c428125f50e7d7d2b63e3"><div class="ttname"><a href="namespace_vesper.html#a21fbc2a2465c428125f50e7d7d2b63e3">Vesper::s_GLFWInitialized</a></div><div class="ttdeci">static bool s_GLFWInitialized</div><div class="ttdef"><b>Definition</b> WindowsWindow.cpp:13</div></div>
 <div class="ttc" id="anamespace_vesper_html_a9cb9185654b38a202d68550a4882ae20"><div class="ttname"><a href="namespace_vesper.html#a9cb9185654b38a202d68550a4882ae20">Vesper::GLFWErrorCallback</a></div><div class="ttdeci">static void GLFWErrorCallback(int error, const char *description)</div><div class="ttdef"><b>Definition</b> WindowsWindow.cpp:15</div></div>
@@ -511,6 +525,8 @@ Width</td>
 </table>
 </div><div class="memdoc">
 
+<p>Checks if vertical synchronization (VSync) is enabled. </p>
+
 <p>Implements <a class="el" href="class_vesper_1_1_window.html#a9dd654cf7a07088d24667d6b8257df39">Vesper::Window</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  175</span>    {</div>
 <div class="line"><span class="lineno">  176</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a0bee44286a1747f022adc10f519eea35">m_Data</a>.VSync;</div>
@@ -540,6 +556,8 @@ Width</td>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Called every frame to update the window. </p>
 
 <p>Implements <a class="el" href="class_vesper_1_1_window.html#a77bc221adcd63fd89e0a122dbd606ea5">Vesper::Window</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  157</span>    {</div>
@@ -575,6 +593,8 @@ Width</td>
 </table>
 </div><div class="memdoc">
 
+<p>Sets the callback function for window events. </p>
+
 <p>Implements <a class="el" href="class_vesper_1_1_window.html#a60d3a064d370c2957b81cc5e440bb901">Vesper::Window</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   22</span>{ <a class="code hl_variable" href="#a0bee44286a1747f022adc10f519eea35">m_Data</a>.EventCallback = callback; }</div>
 </div><!-- fragment -->
@@ -602,6 +622,8 @@ Width</td>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Sets whether vertical synchronization (VSync) is enabled. </p>
 
 <p>Implements <a class="el" href="class_vesper_1_1_window.html#aa04e6bda67df742c536f34c5fac5b290">Vesper::Window</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  164</span>    {</div>

@@ -2,6 +2,11 @@
 \hypertarget{class_vesper_1_1_mouse_scrolled_event}{}\label{class_vesper_1_1_mouse_scrolled_event}\index{Vesper::MouseScrolledEvent@{Vesper::MouseScrolledEvent}}
 
 
+\doxylink{class_vesper_1_1_event}{Event} for registering mouse scroll wheel movement.  
+
+
+
+
 {\ttfamily \+\#include $<$Mouse\+Event.\+h$>$}
 
 Inheritance diagram for Vesper::\+Mouse\+Scrolled\+Event:\+\begin{figure}[H]
@@ -14,26 +19,26 @@ Inheritance diagram for Vesper::\+Mouse\+Scrolled\+Event:\+\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 \doxymbox{\hyperlink{class_vesper_1_1_mouse_scrolled_event_aa1e490679c0cb92aafce31e74c0309ff}{Mouse\+Scrolled\+Event}} (float x\+Offset, float y\+Offset)
-\item 
+\begin{DoxyCompactList}\small\item\em Construct a \doxylink{class_vesper_1_1_mouse_scrolled_event}{Mouse\+Scrolled\+Event} with the specified x and y offsets. \end{DoxyCompactList}\item 
 float \doxymbox{\hyperlink{class_vesper_1_1_mouse_scrolled_event_a91fe11538a6e415a235f2f64922dd141}{Get\+XOffset}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Get the x offset of the mouse scroll. \end{DoxyCompactList}\item 
 float \doxymbox{\hyperlink{class_vesper_1_1_mouse_scrolled_event_aabc8368c57fa904be7140c907313ca15}{Get\+YOffset}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Get the y offset of the mouse scroll. \end{DoxyCompactList}\item 
 std::\+string \doxymbox{\hyperlink{class_vesper_1_1_mouse_scrolled_event_ad1042edae967b19753014021b941f051}{To\+String}} () const override
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Convert the event to a string representation. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_vesper_1_1_event}{Vesper::\+\+Event}}}
 \begin{DoxyCompactItemize}
 \item 
 virtual \doxymbox{\hyperlink{class_vesper_1_1_event_a516fc6585a1ca21f7d73fc4deb461ee2}{\texorpdfstring{$\sim$}{\string~}\+Event}} ()=default
 \item 
 virtual \doxymbox{\hyperlink{namespace_vesper_ada4bc37927ce22c44ea0083a224d3bb5}{Event\+Type}} \doxymbox{\hyperlink{class_vesper_1_1_event_a82499595903097f8d2a81e9b0ebfba3d}{Get\+Event\+Type}} () const =0
-\item 
+\begin{DoxyCompactList}\small\item\em Get the type of the event. \end{DoxyCompactList}\item 
 virtual const char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_vesper_1_1_event_af39d90d8ec2e84488c593c517a8e9b6e}{Get\+Name}} () const =0
-\item 
+\begin{DoxyCompactList}\small\item\em Get the name of the event. \end{DoxyCompactList}\item 
 virtual int \doxymbox{\hyperlink{class_vesper_1_1_event_a71e621bec32702d59c7e7ed82c53ac08}{Get\+Category\+Flags}} () const =0
-\item 
+\begin{DoxyCompactList}\small\item\em Get the category flags of the event. \end{DoxyCompactList}\item 
 bool \doxymbox{\hyperlink{class_vesper_1_1_event_a02448606191e9e1cc7869bffd2cb20f7}{Is\+In\+Category}} (\doxymbox{\hyperlink{namespace_vesper_ad79da63be4419c3a218acaa990decabe}{Event\+Category}} category)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Check if the event is in a specific category. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -46,8 +51,11 @@ float \doxymbox{\hyperlink{class_vesper_1_1_mouse_scrolled_event_afab5212abe2b5d
 \begin{DoxyCompactItemize}
 \item 
 bool \doxymbox{\hyperlink{class_vesper_1_1_event_ab6bc1a2214e615b994cff03df207a0f1}{Handled}} = false
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Indicates whether the event has been handled. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+\doxylink{class_vesper_1_1_event}{Event} for registering mouse scroll wheel movement. 
 
 \label{doc-constructors}
 \Hypertarget{class_vesper_1_1_mouse_scrolled_event_doc-constructors}
@@ -59,9 +67,20 @@ bool \doxymbox{\hyperlink{class_vesper_1_1_event_ab6bc1a2214e615b994cff03df207a0
 Vesper::\+\+Mouse\+Scrolled\+Event::\+\+Mouse\+Scrolled\+Event (\begin{DoxyParamCaption}\item[{float}]{x\+Offset}{, }\item[{float}]{y\+Offset}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
+
+Construct a \doxylink{class_vesper_1_1_mouse_scrolled_event}{Mouse\+Scrolled\+Event} with the specified x and y offsets. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x\+Offset} & The offset of the mouse scroll in the x direction. \\
+\hline
+{\em y\+Offset} & The offset of the mouse scroll in the y direction. \\
+\hline
+\end{DoxyParams}
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_scrolled_event_a2820cd39c299ee44f177c201d4a5bb4e}{m\_XOffset}}(xOffset),\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_scrolled_event_afab5212abe2b5d20b186e28f1e75903c}{m\_YOffset}}(yOffset)\ \{}
-\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_scrolled_event_a2820cd39c299ee44f177c201d4a5bb4e}{m\_XOffset}}(xOffset),\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_scrolled_event_afab5212abe2b5d20b186e28f1e75903c}{m\_YOffset}}(yOffset)\ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \}}
 
 \end{DoxyCode}
 
@@ -80,8 +99,12 @@ References \doxymbox{\hyperlink{class_vesper_1_1_mouse_scrolled_event_a2820cd39c
 float Vesper::\+\+Mouse\+Scrolled\+Event::\+\+Get\+XOffset (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
+
+Get the x offset of the mouse scroll. 
+
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00040\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_scrolled_event_a2820cd39c299ee44f177c201d4a5bb4e}{m\_XOffset}};\ \}}
+\DoxyCodeLine{00056\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_scrolled_event_a2820cd39c299ee44f177c201d4a5bb4e}{m\_XOffset}};\ \}}
 
 \end{DoxyCode}
 
@@ -99,8 +122,12 @@ Referenced by \doxymbox{\hyperlink{class_vesper_1_1_mouse_scrolled_event_ad1042e
 float Vesper::\+\+Mouse\+Scrolled\+Event::\+\+Get\+YOffset (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
+
+Get the y offset of the mouse scroll. 
+
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00041\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_scrolled_event_afab5212abe2b5d20b186e28f1e75903c}{m\_YOffset}};\ \}}
+\DoxyCodeLine{00058\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_scrolled_event_afab5212abe2b5d20b186e28f1e75903c}{m\_YOffset}};\ \}}
 
 \end{DoxyCode}
 
@@ -119,15 +146,19 @@ std::\+string Vesper::\+\+Mouse\+Scrolled\+Event::\+\+To\+String (\begin{DoxyPar
 
 
 
+Convert the event to a string representation. 
+
+
+
 Reimplemented from \doxymbox{\hyperlink{class_vesper_1_1_event_aaba48fc434a2539c5ce000fda6aa7f05}{Vesper::\+\+Event}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ std::stringstream\ ss;}
-\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ ss\ <<\ \textcolor{stringliteral}{"{}MouseScrolledEvent:\ "{}}\ <<\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_scrolled_event_a91fe11538a6e415a235f2f64922dd141}{GetXOffset}}()\ <<\ \textcolor{stringliteral}{"{},\ "{}}\ <<\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_scrolled_event_aabc8368c57fa904be7140c907313ca15}{GetYOffset}}();}
-\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ss.str();}
-\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ std::stringstream\ ss;}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ ss\ <<\ \textcolor{stringliteral}{"{}MouseScrolledEvent:\ "{}}\ <<\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_scrolled_event_a91fe11538a6e415a235f2f64922dd141}{GetXOffset}}()\ <<\ \textcolor{stringliteral}{"{},\ "{}}\ <<\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_scrolled_event_aabc8368c57fa904be7140c907313ca15}{GetYOffset}}();}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ss.str();}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \}}
 
 \end{DoxyCode}
 

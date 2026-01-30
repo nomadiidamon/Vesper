@@ -31,13 +31,14 @@ var NAVTREE =
     [ "Build (Visual Studio 2022)", "index.html#autotoc_md4", null ],
     [ "Run the editor or sandbox", "index.html#autotoc_md5", null ],
     [ "New Project example code", "index.html#autotoc_md6", null ],
-    [ "Contributing", "index.html#autotoc_md7", null ],
-    [ "Notes / TODO", "index.html#autotoc_md8", null ],
-    [ "Licensing", "index.html#autotoc_md9", null ],
+    [ "Documentation", "index.html#autotoc_md7", null ],
+    [ "Contributing", "index.html#autotoc_md8", null ],
+    [ "Notes / TODO", "index.html#autotoc_md9", null ],
+    [ "Licensing", "index.html#autotoc_md10", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
-        [ "All", "namespacemembers.html", null ],
+        [ "All", "namespacemembers.html", "namespacemembers_dup" ],
         [ "Functions", "namespacemembers_func.html", null ],
         [ "Variables", "namespacemembers_vars.html", null ],
         [ "Typedefs", "namespacemembers_type.html", null ],
@@ -73,16 +74,15 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_application_8cpp.html",
-"_open_g_l_shader_8h.html",
-"class_vesper_1_1_editor_camera.html#ae68a318c255645e9628d0cb68657886d",
-"class_vesper_1_1_framebuffer.html#a31f13eab445119f16f84ab27beb4129f",
-"class_vesper_1_1_mouse_scrolled_event.html#afab5212abe2b5d20b186e28f1e75903c",
-"class_vesper_1_1_orthographic_camera.html#aa914afe4de2c561e477f129ece7c23f4",
-"class_vesper_1_1_renderer_a_p_i.html#a94b14a0678f90992191d78be1489d862",
-"class_vesper_1_1_sub_texture2_d.html#a224e8c4bb1be39eb457729eea81fd652",
-"functions_func_n.html",
-"struct_vesper_1_1_camera_component.html#a314710621af84eb010cae49491208b86",
-"struct_y_a_m_l_1_1convert_3_01glm_1_1vec4_01_4.html#a935e31dad7403fdefc60995d3bc8a776"
+"class_sandbox2_d.html#a78fdfe083f3b0df5b6008ef716cef19b",
+"class_vesper_1_1_editor_layer.html#a5677514c71785bc55fd89343e2588c72",
+"class_vesper_1_1_input.html#a7052afe99c8b718f66770a2af9bba7ed",
+"class_vesper_1_1_open_g_l_index_buffer.html#a48d9d7362e667f300afac07a94e0c10a",
+"class_vesper_1_1_orthographic_camera_controller.html#ad1a1c904d0d6429a1b6cad03bd9dbd1f",
+"class_vesper_1_1_scene.html#acc62d3586e8352f98d4871385112f596",
+"class_vesper_1_1_uniform_buffer.html",
+"index.html#autotoc_md5",
+"struct_vesper_1_1_native_script_component.html#ab73d2c29ae882197345ba020a267c284"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

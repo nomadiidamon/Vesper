@@ -2,6 +2,11 @@
 \hypertarget{class_vesper_1_1_input}{}\label{class_vesper_1_1_input}\index{Vesper::Input@{Vesper::Input}}
 
 
+Base input class for querying input states.  
+
+
+
+
 {\ttfamily \+\#include $<$Input.\+h$>$}
 
 \doxysubsubsection*{Public Member Functions}
@@ -15,21 +20,24 @@
 \begin{DoxyCompactItemize}
 \item 
 static bool \doxymbox{\hyperlink{class_vesper_1_1_input_aa8b8dff7d2b768ad79b6888fbdbf31ae}{Is\+Key\+Pressed}} (int keycode)
-\item 
+\begin{DoxyCompactList}\small\item\em Checks if the specified key is currently pressed. \end{DoxyCompactList}\item 
 static bool \doxymbox{\hyperlink{class_vesper_1_1_input_a00b5734fe7e2227aa348e56c3c71a6d2}{Is\+Mouse\+Button\+Pressed}} (int button)
-\item 
+\begin{DoxyCompactList}\small\item\em Checks if the specified mouse button is currently pressed. \end{DoxyCompactList}\item 
 static float \doxymbox{\hyperlink{class_vesper_1_1_input_ae27af138550e8b872978fdc611947a36}{Get\+MouseX}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Gets the current X position of the mouse cursor. \end{DoxyCompactList}\item 
 static float \doxymbox{\hyperlink{class_vesper_1_1_input_a1ceccb5460761e6da9a92b77e0ccf4ab}{Get\+MouseY}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Gets the current Y position of the mouse cursor. \end{DoxyCompactList}\item 
 static glm::\+vec2 \doxymbox{\hyperlink{class_vesper_1_1_input_a7cfb2f3a5d04a27f1d0c22b0f4e9c09f}{Get\+Mouse\+Position}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Gets the current position of the mouse cursor as a 2D vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \doxymbox{\hyperlink{class_vesper_1_1_input_a3fbe8ee3f6e757a7a0cfb6887ea05b54}{Input}} ()=default
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Base input class for querying input states. 
 
 \label{doc-constructors}
 \Hypertarget{class_vesper_1_1_input_doc-constructors}
@@ -58,6 +66,10 @@ Vesper::\+\+Input::\+\+Input (\begin{DoxyParamCaption}\item[{const Input \&}]{}{
 glm::\+vec2 Vesper::\+\+Input::\+\+Get\+Mouse\+Position (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
+
+Gets the current position of the mouse cursor as a 2D vector. 
+
+
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00024\ \ \ \ \ \{}
 \DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ window\ =\ \textcolor{keyword}{static\_cast<}GLFWwindow*\textcolor{keyword}{>}(\doxymbox{\hyperlink{class_vesper_1_1_application_a7edbd0f4804f897c09ad869239a97ffa}{Application::Get}}().\doxymbox{\hyperlink{class_vesper_1_1_application_af90f220d05b740b6b1596d915b3efab3}{GetWindow}}().\doxymbox{\hyperlink{class_vesper_1_1_window_a4b4b607a2bd868df1672ab69d4f09881}{GetNativeWindow}}());}
@@ -79,6 +91,10 @@ References \doxymbox{\hyperlink{class_vesper_1_1_application_a7edbd0f4804f897c09
 float Vesper::\+\+Input::\+\+Get\+MouseX (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
+
+Gets the current X position of the mouse cursor. 
+
+
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00033\ \ \ \ \ \{}
 \DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_input_a7cfb2f3a5d04a27f1d0c22b0f4e9c09f}{GetMousePosition}}().x;}
@@ -90,6 +106,10 @@ float Vesper::\+\+Input::\+\+Get\+MouseX (\begin{DoxyParamCaption}{}{}\end{DoxyP
 \doxysubsubsection{\texorpdfstring{GetMouseY()}{GetMouseY()}}
 {\footnotesize\ttfamily \label{class_vesper_1_1_input_a1ceccb5460761e6da9a92b77e0ccf4ab} 
 float Vesper::\+\+Input::\+\+Get\+MouseY (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Gets the current Y position of the mouse cursor. 
 
 
 \begin{DoxyCode}{0}
@@ -104,6 +124,18 @@ float Vesper::\+\+Input::\+\+Get\+MouseY (\begin{DoxyParamCaption}{}{}\end{DoxyP
 {\footnotesize\ttfamily \label{class_vesper_1_1_input_aa8b8dff7d2b768ad79b6888fbdbf31ae} 
 bool Vesper::\+\+Input::\+\+Is\+Key\+Pressed (\begin{DoxyParamCaption}\item[{int}]{keycode}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
+
+
+Checks if the specified key is currently pressed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em keycode} & The keycode of the key to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the key is pressed, false otherwise. 
+\end{DoxyReturn}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00010\ \ \ \ \ \{}
@@ -128,6 +160,18 @@ Referenced by \doxymbox{\hyperlink{class_vesper_1_1_editor_layer_af5e79508040b18
 bool Vesper::\+\+Input::\+\+Is\+Mouse\+Button\+Pressed (\begin{DoxyParamCaption}\item[{int}]{button}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
+
+Checks if the specified mouse button is currently pressed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em button} & The mouse button to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the mouse button is pressed, false otherwise. 
+\end{DoxyReturn}
+
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00017\ \ \ \ \ \{}
 \DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ window\ =\ \textcolor{keyword}{static\_cast<}GLFWwindow*\textcolor{keyword}{>}(\doxymbox{\hyperlink{class_vesper_1_1_application_a7edbd0f4804f897c09ad869239a97ffa}{Application::Get}}().\doxymbox{\hyperlink{class_vesper_1_1_application_af90f220d05b740b6b1596d915b3efab3}{GetWindow}}().\doxymbox{\hyperlink{class_vesper_1_1_window_a4b4b607a2bd868df1672ab69d4f09881}{GetNativeWindow}}());}
@@ -142,7 +186,7 @@ References \doxymbox{\hyperlink{class_vesper_1_1_application_a7edbd0f4804f897c09
 
 
 
-Referenced by \doxymbox{\hyperlink{class_vesper_1_1_editor_camera_a48c1eda32fc74bd1fa71c26e04ca9504}{Vesper::\+\+Editor\+Camera::\+\+On\+Update()}}, and \doxymbox{\hyperlink{class_vesper_1_1_editor_layer_a984242ed582e7e06bcfd16bfe5de0a68}{Vesper::\+\+Editor\+Layer::\+\+On\+Update()}}.
+Referenced by \doxymbox{\hyperlink{class_sandbox2_d_abc796def0880d3ca2dde9a010c4bf70c}{Sandbox2\+D::\+\+On\+Update()}}, \doxymbox{\hyperlink{class_vesper_1_1_editor_camera_a48c1eda32fc74bd1fa71c26e04ca9504}{Vesper::\+\+Editor\+Camera::\+\+On\+Update()}}, and \doxymbox{\hyperlink{class_vesper_1_1_editor_layer_a984242ed582e7e06bcfd16bfe5de0a68}{Vesper::\+\+Editor\+Layer::\+\+On\+Update()}}.
 
 \Hypertarget{class_vesper_1_1_input_a7052afe99c8b718f66770a2af9bba7ed}\index{Vesper::Input@{Vesper::Input}!operator=@{operator=}}
 \index{operator=@{operator=}!Vesper::Input@{Vesper::Input}}

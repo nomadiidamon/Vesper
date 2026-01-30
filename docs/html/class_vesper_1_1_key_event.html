@@ -98,6 +98,9 @@ $(function(){initNavTree('class_vesper_1_1_key_event.html','','class_vesper_1_1_
 </div><!--header-->
 <div class="contents">
 
+<p>Base class for keyboard events.  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_key_event_8h_source.html">KeyEvent.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Vesper::KeyEvent:</div>
@@ -105,27 +108,34 @@ Inheritance diagram for Vesper::KeyEvent:</div>
  <div class="center">
   <img src="class_vesper_1_1_key_event.png" usemap="#Vesper_3A_3AKeyEvent_map" alt=""/>
   <map id="Vesper_3A_3AKeyEvent_map" name="Vesper_3A_3AKeyEvent_map">
-<area href="class_vesper_1_1_event.html" alt="Vesper::Event" shape="rect" coords="175,0,340,24"/>
-<area href="class_vesper_1_1_key_pressed_event.html" alt="Vesper::KeyPressedEvent" shape="rect" coords="0,112,165,136"/>
-<area href="class_vesper_1_1_key_released_event.html" alt="Vesper::KeyReleasedEvent" shape="rect" coords="175,112,340,136"/>
-<area href="class_vesper_1_1_key_typed_event.html" alt="Vesper::KeyTypedEvent" shape="rect" coords="350,112,515,136"/>
+<area href="class_vesper_1_1_event.html" title="Abstract base class for all events." alt="Vesper::Event" shape="rect" coords="175,0,340,24"/>
+<area href="class_vesper_1_1_key_pressed_event.html" title="Event for registering key press." alt="Vesper::KeyPressedEvent" shape="rect" coords="0,112,165,136"/>
+<area href="class_vesper_1_1_key_released_event.html" title="Event for registering key release." alt="Vesper::KeyReleasedEvent" shape="rect" coords="175,112,340,136"/>
+<area href="class_vesper_1_1_key_typed_event.html" title="Event for registering key typing." alt="Vesper::KeyTypedEvent" shape="rect" coords="350,112,515,136"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ab8b3b582c0296f0f7f24ce7a7be6996c" id="r_ab8b3b582c0296f0f7f24ce7a7be6996c"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ab8b3b582c0296f0f7f24ce7a7be6996c">GetKeyCode</a> () const</td></tr>
+<tr class="memdesc:ab8b3b582c0296f0f7f24ce7a7be6996c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the key code associated with the event.  <br /></td></tr>
 <tr class="inherit_header pub_methods_class_vesper_1_1_event"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_vesper_1_1_event')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="class_vesper_1_1_event.html">Vesper::Event</a></td></tr>
 <tr class="memitem:a516fc6585a1ca21f7d73fc4deb461ee2 inherit pub_methods_class_vesper_1_1_event" id="r_a516fc6585a1ca21f7d73fc4deb461ee2"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="class_vesper_1_1_event.html#a516fc6585a1ca21f7d73fc4deb461ee2">~Event</a> ()=default</td></tr>
 <tr class="memitem:a82499595903097f8d2a81e9b0ebfba3d inherit pub_methods_class_vesper_1_1_event" id="r_a82499595903097f8d2a81e9b0ebfba3d"><td class="memItemLeft">virtual <a class="el" href="namespace_vesper.html#ada4bc37927ce22c44ea0083a224d3bb5">EventType</a>&#160;</td><td class="memItemRight"><a class="el" href="class_vesper_1_1_event.html#a82499595903097f8d2a81e9b0ebfba3d">GetEventType</a> () const =0</td></tr>
+<tr class="memdesc:a82499595903097f8d2a81e9b0ebfba3d inherit pub_methods_class_vesper_1_1_event"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the type of the event.  <br /></td></tr>
 <tr class="memitem:af39d90d8ec2e84488c593c517a8e9b6e inherit pub_methods_class_vesper_1_1_event" id="r_af39d90d8ec2e84488c593c517a8e9b6e"><td class="memItemLeft">virtual const char *&#160;</td><td class="memItemRight"><a class="el" href="class_vesper_1_1_event.html#af39d90d8ec2e84488c593c517a8e9b6e">GetName</a> () const =0</td></tr>
+<tr class="memdesc:af39d90d8ec2e84488c593c517a8e9b6e inherit pub_methods_class_vesper_1_1_event"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the name of the event.  <br /></td></tr>
 <tr class="memitem:a71e621bec32702d59c7e7ed82c53ac08 inherit pub_methods_class_vesper_1_1_event" id="r_a71e621bec32702d59c7e7ed82c53ac08"><td class="memItemLeft">virtual int&#160;</td><td class="memItemRight"><a class="el" href="class_vesper_1_1_event.html#a71e621bec32702d59c7e7ed82c53ac08">GetCategoryFlags</a> () const =0</td></tr>
+<tr class="memdesc:a71e621bec32702d59c7e7ed82c53ac08 inherit pub_methods_class_vesper_1_1_event"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the category flags of the event.  <br /></td></tr>
 <tr class="memitem:aaba48fc434a2539c5ce000fda6aa7f05 inherit pub_methods_class_vesper_1_1_event" id="r_aaba48fc434a2539c5ce000fda6aa7f05"><td class="memItemLeft">virtual std::string&#160;</td><td class="memItemRight"><a class="el" href="class_vesper_1_1_event.html#aaba48fc434a2539c5ce000fda6aa7f05">ToString</a> () const</td></tr>
+<tr class="memdesc:aaba48fc434a2539c5ce000fda6aa7f05 inherit pub_methods_class_vesper_1_1_event"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert the event to a string representation.  <br /></td></tr>
 <tr class="memitem:a02448606191e9e1cc7869bffd2cb20f7 inherit pub_methods_class_vesper_1_1_event" id="r_a02448606191e9e1cc7869bffd2cb20f7"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="class_vesper_1_1_event.html#a02448606191e9e1cc7869bffd2cb20f7">IsInCategory</a> (<a class="el" href="namespace_vesper.html#ad79da63be4419c3a218acaa990decabe">EventCategory</a> category)</td></tr>
+<tr class="memdesc:a02448606191e9e1cc7869bffd2cb20f7 inherit pub_methods_class_vesper_1_1_event"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the event is in a specific category.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:aeaa0d8bb44aab1f6f6f946635b123ef8" id="r_aeaa0d8bb44aab1f6f6f946635b123ef8"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aeaa0d8bb44aab1f6f6f946635b123ef8">KeyEvent</a> (int keycode)</td></tr>
+<tr class="memdesc:aeaa0d8bb44aab1f6f6f946635b123ef8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a <a class="el" href="class_vesper_1_1_key_event.html" title="Base class for keyboard events.">KeyEvent</a> with the specified key code.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -135,8 +145,11 @@ Protected Attributes</h2></td></tr>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_attribs_class_vesper_1_1_event"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_attribs_class_vesper_1_1_event')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Attributes inherited from <a class="el" href="class_vesper_1_1_event.html">Vesper::Event</a></td></tr>
 <tr class="memitem:ab6bc1a2214e615b994cff03df207a0f1 inherit pub_attribs_class_vesper_1_1_event" id="r_ab6bc1a2214e615b994cff03df207a0f1"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="class_vesper_1_1_event.html#ab6bc1a2214e615b994cff03df207a0f1">Handled</a> = false</td></tr>
+<tr class="memdesc:ab6bc1a2214e615b994cff03df207a0f1 inherit pub_attribs_class_vesper_1_1_event"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether the event has been handled.  <br /></td></tr>
 </table>
-<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Base class for keyboard events. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aeaa0d8bb44aab1f6f6f946635b123ef8" name="aeaa0d8bb44aab1f6f6f946635b123ef8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aeaa0d8bb44aab1f6f6f946635b123ef8">&#9670;&#160;</a></span>KeyEvent()</h2>
 
@@ -159,8 +172,16 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   16</span>            : <a class="code hl_variable" href="#a51701302ab474131751225a850bbc4ab">m_KeyCode</a>(keycode) {}</div>
-<div class="ttc" id="aclass_vesper_1_1_key_event_html_a51701302ab474131751225a850bbc4ab"><div class="ttname"><a href="#a51701302ab474131751225a850bbc4ab">Vesper::KeyEvent::m_KeyCode</a></div><div class="ttdeci">int m_KeyCode</div><div class="ttdef"><b>Definition</b> KeyEvent.h:17</div></div>
+
+<p>Construct a <a class="el" href="class_vesper_1_1_key_event.html" title="Base class for keyboard events.">KeyEvent</a> with the specified key code. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">keycode</td><td>The key code associated with the event. Restricted specific construction to derived classes. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">   26</span>            : <a class="code hl_variable" href="#a51701302ab474131751225a850bbc4ab">m_KeyCode</a>(keycode) {}</div>
+<div class="ttc" id="aclass_vesper_1_1_key_event_html_a51701302ab474131751225a850bbc4ab"><div class="ttname"><a href="#a51701302ab474131751225a850bbc4ab">Vesper::KeyEvent::m_KeyCode</a></div><div class="ttdeci">int m_KeyCode</div><div class="ttdef"><b>Definition</b> KeyEvent.h:27</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a51701302ab474131751225a850bbc4ab">m_KeyCode</a>.</p>
 
@@ -191,7 +212,9 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   12</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a51701302ab474131751225a850bbc4ab">m_KeyCode</a>; }</div>
+
+<p>Get the key code associated with the event. </p>
+<div class="fragment"><div class="line"><span class="lineno">   16</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a51701302ab474131751225a850bbc4ab">m_KeyCode</a>; }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a51701302ab474131751225a850bbc4ab">m_KeyCode</a>.</p>
 

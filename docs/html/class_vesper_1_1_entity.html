@@ -98,13 +98,18 @@ $(function(){initNavTree('class_vesper_1_1_entity.html','','class_vesper_1_1_ent
 </div><!--header-->
 <div class="contents">
 
+<p>Represents an entity in a scene.  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_entity_8h_source.html">Entity.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a811566437acc4b63996fce6b6a80ee14" id="r_a811566437acc4b63996fce6b6a80ee14"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a811566437acc4b63996fce6b6a80ee14">Entity</a> ()=default</td></tr>
 <tr class="memitem:a3611719bf2e8971af008d441b5dd8450" id="r_a3611719bf2e8971af008d441b5dd8450"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a3611719bf2e8971af008d441b5dd8450">Entity</a> (entt::entity handle, <a class="el" href="class_vesper_1_1_scene.html">Scene</a> *scene)</td></tr>
+<tr class="memdesc:a3611719bf2e8971af008d441b5dd8450"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an <a class="el" href="class_vesper_1_1_entity.html" title="Represents an entity in a scene.">Entity</a> with the given handle and scene.  <br /></td></tr>
 <tr class="memitem:aca58c68bba3ecef491684c959f89f24f" id="r_aca58c68bba3ecef491684c959f89f24f"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aca58c68bba3ecef491684c959f89f24f">Entity</a> (const Entity &amp;other)=default</td></tr>
+<tr class="memdesc:aca58c68bba3ecef491684c959f89f24f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor for <a class="el" href="class_vesper_1_1_entity.html" title="Represents an entity in a scene.">Entity</a>.  <br /></td></tr>
 <tr class="memitem:aa60cd2ba3a43760ca2d2ffbb47f377c0" id="r_aa60cd2ba3a43760ca2d2ffbb47f377c0"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
 <tr class="memitem:aa60cd2ba3a43760ca2d2ffbb47f377c0 template"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#aa60cd2ba3a43760ca2d2ffbb47f377c0">HasComponent</a> () const</td></tr>
 <tr class="memitem:a6740a10fbb70212ef62890386d3be1c2" id="r_a6740a10fbb70212ef62890386d3be1c2"><td class="memTemplParams" colspan="2">template&lt;typename T, typename... Args&gt; </td></tr>
@@ -128,9 +133,14 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a7d4febcc19ce51e05ed86fba44aa2ca0" id="r_a7d4febcc19ce51e05ed86fba44aa2ca0"><td class="memItemLeft">entt::entity&#160;</td><td class="memItemRight"><a class="el" href="#a7d4febcc19ce51e05ed86fba44aa2ca0">m_EntityID</a> {entt::null}</td></tr>
+<tr class="memdesc:a7d4febcc19ce51e05ed86fba44aa2ca0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The unique identifier of the entity within the scene.  <br /></td></tr>
 <tr class="memitem:aaa706fa22a0b7b5201081e69c8d75615" id="r_aaa706fa22a0b7b5201081e69c8d75615"><td class="memItemLeft"><a class="el" href="class_vesper_1_1_scene.html">Scene</a> *&#160;</td><td class="memItemRight"><a class="el" href="#aaa706fa22a0b7b5201081e69c8d75615">m_Scene</a> = nullptr</td></tr>
+<tr class="memdesc:aaa706fa22a0b7b5201081e69c8d75615"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the scene that contains the entity.  <br /></td></tr>
 </table>
-<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Represents an entity in a scene. </p>
+<p>Contains a handle to an entity (entt::entity) in a scene and provides methods to manipulate its components. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a811566437acc4b63996fce6b6a80ee14" name="a811566437acc4b63996fce6b6a80ee14"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a811566437acc4b63996fce6b6a80ee14">&#9670;&#160;</a></span>Entity() <span class="overload">[1/3]</span></h2>
 
@@ -174,11 +184,20 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Constructs an <a class="el" href="class_vesper_1_1_entity.html" title="Represents an entity in a scene.">Entity</a> with the given handle and scene. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handle</td><td>The handle to the entity. </td></tr>
+    <tr><td class="paramname">scene</td><td>The scene to which the entity belongs. </td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="fragment"><div class="line"><span class="lineno">    7</span>        : <a class="code hl_variable" href="#a7d4febcc19ce51e05ed86fba44aa2ca0">m_EntityID</a>(handle), <a class="code hl_variable" href="#aaa706fa22a0b7b5201081e69c8d75615">m_Scene</a>(scene)</div>
 <div class="line"><span class="lineno">    8</span>    {</div>
 <div class="line"><span class="lineno">    9</span>    }</div>
-<div class="ttc" id="aclass_vesper_1_1_entity_html_a7d4febcc19ce51e05ed86fba44aa2ca0"><div class="ttname"><a href="#a7d4febcc19ce51e05ed86fba44aa2ca0">Vesper::Entity::m_EntityID</a></div><div class="ttdeci">entt::entity m_EntityID</div><div class="ttdef"><b>Definition</b> Entity.h:80</div></div>
-<div class="ttc" id="aclass_vesper_1_1_entity_html_aaa706fa22a0b7b5201081e69c8d75615"><div class="ttname"><a href="#aaa706fa22a0b7b5201081e69c8d75615">Vesper::Entity::m_Scene</a></div><div class="ttdeci">Scene * m_Scene</div><div class="ttdef"><b>Definition</b> Entity.h:81</div></div>
+<div class="ttc" id="aclass_vesper_1_1_entity_html_a7d4febcc19ce51e05ed86fba44aa2ca0"><div class="ttname"><a href="#a7d4febcc19ce51e05ed86fba44aa2ca0">Vesper::Entity::m_EntityID</a></div><div class="ttdeci">entt::entity m_EntityID</div><div class="ttdoc">The unique identifier of the entity within the scene.</div><div class="ttdef"><b>Definition</b> Entity.h:126</div></div>
+<div class="ttc" id="aclass_vesper_1_1_entity_html_aaa706fa22a0b7b5201081e69c8d75615"><div class="ttname"><a href="#aaa706fa22a0b7b5201081e69c8d75615">Vesper::Entity::m_Scene</a></div><div class="ttdeci">Scene * m_Scene</div><div class="ttdoc">Pointer to the scene that contains the entity.</div><div class="ttdef"><b>Definition</b> Entity.h:128</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a3611719bf2e8971af008d441b5dd8450">Entity()</a>, and <a class="el" href="#aaa706fa22a0b7b5201081e69c8d75615">m_Scene</a>.</p>
 
@@ -209,6 +228,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Copy constructor for <a class="el" href="class_vesper_1_1_entity.html" title="Represents an entity in a scene.">Entity</a>. </p>
+
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
@@ -236,14 +257,30 @@ template&lt;typename T, typename... Args&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   24</span>        {</div>
-<div class="line"><span class="lineno">   25</span>            <a class="code hl_define" href="_asserts_8h.html#a3b51b77f75997760894138afc89403c9">VZ_CORE_ASSERT</a>(!<a class="code hl_function" href="#aa60cd2ba3a43760ca2d2ffbb47f377c0">HasComponent&lt;T&gt;</a>(), <span class="stringliteral">&quot;Entity already has component!&quot;</span>);</div>
-<div class="line"><span class="lineno">   26</span>            T&amp; component = <a class="code hl_variable" href="#aaa706fa22a0b7b5201081e69c8d75615">m_Scene</a>-&gt;m_Registry.emplace&lt;T&gt;(<a class="code hl_variable" href="#a7d4febcc19ce51e05ed86fba44aa2ca0">m_EntityID</a>, std::forward&lt;Args&gt;(args)...);</div>
-<div class="line"><span class="lineno">   27</span>            <a class="code hl_variable" href="#aaa706fa22a0b7b5201081e69c8d75615">m_Scene</a>-&gt;OnComponentAdded&lt;T&gt;(*<span class="keyword">this</span>, component);</div>
-<div class="line"><span class="lineno">   28</span>            <span class="keywordflow">return</span> component;</div>
-<div class="line"><span class="lineno">   29</span>        }</div>
+<p>Adds a component of type T to the entity with the provided arguments Otherwise, asserts if the entity already has the component.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type of component to add. </td></tr>
+    <tr><td class="paramname">Args</td><td>The types of arguments to forward to the component's constructor. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">args</td><td>The arguments to forward to the component's constructor. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A reference to the newly added component. </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">   46</span>        {</div>
+<div class="line"><span class="lineno">   47</span>            <a class="code hl_define" href="_asserts_8h.html#a3b51b77f75997760894138afc89403c9">VZ_CORE_ASSERT</a>(!<a class="code hl_function" href="#aa60cd2ba3a43760ca2d2ffbb47f377c0">HasComponent&lt;T&gt;</a>(), <span class="stringliteral">&quot;Entity already has component!&quot;</span>);</div>
+<div class="line"><span class="lineno">   48</span>            <a class="code hl_enumvalue" href="namespace_vesper_1_1_key.html#a9d802d64a043b9c5e780fdd5b2c430adabdb37f1a703413cdaf86760e7de9b5ba">T</a>&amp; component = <a class="code hl_variable" href="#aaa706fa22a0b7b5201081e69c8d75615">m_Scene</a>-&gt;m_Registry.emplace&lt;<a class="code hl_enumvalue" href="namespace_vesper_1_1_key.html#a9d802d64a043b9c5e780fdd5b2c430adabdb37f1a703413cdaf86760e7de9b5ba">T</a>&gt;(<a class="code hl_variable" href="#a7d4febcc19ce51e05ed86fba44aa2ca0">m_EntityID</a>, std::forward&lt;Args&gt;(args)...);</div>
+<div class="line"><span class="lineno">   49</span>            <a class="code hl_variable" href="#aaa706fa22a0b7b5201081e69c8d75615">m_Scene</a>-&gt;OnComponentAdded&lt;<a class="code hl_enumvalue" href="namespace_vesper_1_1_key.html#a9d802d64a043b9c5e780fdd5b2c430adabdb37f1a703413cdaf86760e7de9b5ba">T</a>&gt;(*<span class="keyword">this</span>, component);</div>
+<div class="line"><span class="lineno">   50</span>            <span class="keywordflow">return</span> component;</div>
+<div class="line"><span class="lineno">   51</span>        }</div>
 <div class="ttc" id="a_asserts_8h_html_a3b51b77f75997760894138afc89403c9"><div class="ttname"><a href="_asserts_8h.html#a3b51b77f75997760894138afc89403c9">VZ_CORE_ASSERT</a></div><div class="ttdeci">#define VZ_CORE_ASSERT(x,...)</div><div class="ttdef"><b>Definition</b> Asserts.h:13</div></div>
-<div class="ttc" id="aclass_vesper_1_1_entity_html_aa60cd2ba3a43760ca2d2ffbb47f377c0"><div class="ttname"><a href="#aa60cd2ba3a43760ca2d2ffbb47f377c0">Vesper::Entity::HasComponent</a></div><div class="ttdeci">bool HasComponent() const</div><div class="ttdef"><b>Definition</b> Entity.h:17</div></div>
+<div class="ttc" id="aclass_vesper_1_1_entity_html_aa60cd2ba3a43760ca2d2ffbb47f377c0"><div class="ttname"><a href="#aa60cd2ba3a43760ca2d2ffbb47f377c0">Vesper::Entity::HasComponent</a></div><div class="ttdeci">bool HasComponent() const</div><div class="ttdef"><b>Definition</b> Entity.h:33</div></div>
+<div class="ttc" id="anamespace_vesper_1_1_key_html_a9d802d64a043b9c5e780fdd5b2c430adabdb37f1a703413cdaf86760e7de9b5ba"><div class="ttname"><a href="namespace_vesper_1_1_key.html#a9d802d64a043b9c5e780fdd5b2c430adabdb37f1a703413cdaf86760e7de9b5ba">Vesper::Key::T</a></div><div class="ttdeci">@ T</div><div class="ttdef"><b>Definition</b> KeyCodes.h:57</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -271,9 +308,24 @@ template&lt;typename T, typename... Args&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   34</span>        {</div>
-<div class="line"><span class="lineno">   35</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="#aaa706fa22a0b7b5201081e69c8d75615">m_Scene</a>-&gt;m_Registry.emplace_or_replace&lt;T&gt;(<a class="code hl_variable" href="#a7d4febcc19ce51e05ed86fba44aa2ca0">m_EntityID</a>, std::forward&lt;Args&gt;(args)...);</div>
-<div class="line"><span class="lineno">   36</span>        }</div>
+<p>Adds or replaces a component of type T to the entity with the provided arguments.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type of component to add or replace. </td></tr>
+    <tr><td class="paramname">Args</td><td>The types of arguments to forward to the component's constructor. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">args</td><td>The arguments to forward to the component's constructor. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A reference to the newly added or replaced component. </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">   61</span>        {</div>
+<div class="line"><span class="lineno">   62</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="#aaa706fa22a0b7b5201081e69c8d75615">m_Scene</a>-&gt;m_Registry.emplace_or_replace&lt;<a class="code hl_enumvalue" href="namespace_vesper_1_1_key.html#a9d802d64a043b9c5e780fdd5b2c430adabdb37f1a703413cdaf86760e7de9b5ba">T</a>&gt;(<a class="code hl_variable" href="#a7d4febcc19ce51e05ed86fba44aa2ca0">m_EntityID</a>, std::forward&lt;Args&gt;(args)...);</div>
+<div class="line"><span class="lineno">   63</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -301,10 +353,18 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   40</span>        {</div>
-<div class="line"><span class="lineno">   41</span>            <a class="code hl_define" href="_asserts_8h.html#a3b51b77f75997760894138afc89403c9">VZ_CORE_ASSERT</a>(<a class="code hl_function" href="#aa60cd2ba3a43760ca2d2ffbb47f377c0">HasComponent&lt;T&gt;</a>(), <span class="stringliteral">&quot;Entity does not have component!&quot;</span>);</div>
-<div class="line"><span class="lineno">   42</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="#aaa706fa22a0b7b5201081e69c8d75615">m_Scene</a>-&gt;m_Registry.get&lt;T&gt;(<a class="code hl_variable" href="#a7d4febcc19ce51e05ed86fba44aa2ca0">m_EntityID</a>);</div>
-<div class="line"><span class="lineno">   43</span>        }</div>
+<p>Retrieves a reference to the component of type T attached to the entity if it exists. Otherwise, asserts.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type of component to retrieve. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A reference to the component. </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">   71</span>        {</div>
+<div class="line"><span class="lineno">   72</span>            <a class="code hl_define" href="_asserts_8h.html#a3b51b77f75997760894138afc89403c9">VZ_CORE_ASSERT</a>(<a class="code hl_function" href="#aa60cd2ba3a43760ca2d2ffbb47f377c0">HasComponent&lt;T&gt;</a>(), <span class="stringliteral">&quot;Entity does not have component!&quot;</span>);</div>
+<div class="line"><span class="lineno">   73</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="#aaa706fa22a0b7b5201081e69c8d75615">m_Scene</a>-&gt;m_Registry.get&lt;<a class="code hl_enumvalue" href="namespace_vesper_1_1_key.html#a9d802d64a043b9c5e780fdd5b2c430adabdb37f1a703413cdaf86760e7de9b5ba">T</a>&gt;(<a class="code hl_variable" href="#a7d4febcc19ce51e05ed86fba44aa2ca0">m_EntityID</a>);</div>
+<div class="line"><span class="lineno">   74</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -330,10 +390,12 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   63</span>        {</div>
-<div class="line"><span class="lineno">   64</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="#a12a8d4804cbd3346d175f18f6e3a5b26">GetComponent&lt;UUIDComponent&gt;</a>().ID;</div>
-<div class="line"><span class="lineno">   65</span>        }</div>
-<div class="ttc" id="aclass_vesper_1_1_entity_html_a12a8d4804cbd3346d175f18f6e3a5b26"><div class="ttname"><a href="#a12a8d4804cbd3346d175f18f6e3a5b26">Vesper::Entity::GetComponent</a></div><div class="ttdeci">T &amp; GetComponent()</div><div class="ttdef"><b>Definition</b> Entity.h:39</div></div>
+<p>Retrieves a const reference to the <a class="el" href="struct_vesper_1_1_u_u_i_d.html" title="Universally Unique Identifier.">UUID</a> of the entity.</p>
+<dl class="section return"><dt>Returns</dt><dd>A const reference to the <a class="el" href="struct_vesper_1_1_u_u_i_d.html" title="Universally Unique Identifier.">UUID</a> of the entity. </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">  105</span>        {</div>
+<div class="line"><span class="lineno">  106</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="#a12a8d4804cbd3346d175f18f6e3a5b26">GetComponent&lt;UUIDComponent&gt;</a>().ID;</div>
+<div class="line"><span class="lineno">  107</span>        }</div>
+<div class="ttc" id="aclass_vesper_1_1_entity_html_a12a8d4804cbd3346d175f18f6e3a5b26"><div class="ttname"><a href="#a12a8d4804cbd3346d175f18f6e3a5b26">Vesper::Entity::GetComponent</a></div><div class="ttdeci">T &amp; GetComponent()</div><div class="ttdef"><b>Definition</b> Entity.h:70</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -359,9 +421,11 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   68</span>        {</div>
-<div class="line"><span class="lineno">   69</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="#a12a8d4804cbd3346d175f18f6e3a5b26">GetComponent&lt;NameComponent&gt;</a>().Name;</div>
-<div class="line"><span class="lineno">   70</span>        }</div>
+<p>Retrieves a const reference to the name of the entity.</p>
+<dl class="section return"><dt>Returns</dt><dd>A const reference to the name of the entity. </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">  113</span>        {</div>
+<div class="line"><span class="lineno">  114</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="#a12a8d4804cbd3346d175f18f6e3a5b26">GetComponent&lt;NameComponent&gt;</a>().Name;</div>
+<div class="line"><span class="lineno">  115</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -389,13 +453,28 @@ template&lt;typename T, typename... Args&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   47</span>        {</div>
-<div class="line"><span class="lineno">   48</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="#aa60cd2ba3a43760ca2d2ffbb47f377c0">HasComponent&lt;T&gt;</a>())</div>
-<div class="line"><span class="lineno">   49</span>                <span class="keywordflow">return</span> <a class="code hl_function" href="#a12a8d4804cbd3346d175f18f6e3a5b26">GetComponent&lt;T&gt;</a>();</div>
-<div class="line"><span class="lineno">   50</span>            <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">   51</span>                <span class="keywordflow">return</span> <a class="code hl_function" href="#a6740a10fbb70212ef62890386d3be1c2">AddComponent&lt;T&gt;</a>(std::forward&lt;Args&gt;(args)...);</div>
-<div class="line"><span class="lineno">   52</span>        }</div>
-<div class="ttc" id="aclass_vesper_1_1_entity_html_a6740a10fbb70212ef62890386d3be1c2"><div class="ttname"><a href="#a6740a10fbb70212ef62890386d3be1c2">Vesper::Entity::AddComponent</a></div><div class="ttdeci">T &amp; AddComponent(Args &amp;&amp;... args)</div><div class="ttdef"><b>Definition</b> Entity.h:23</div></div>
+<p>Retrieves a reference to the component of type T attached to the entity if it exists. Otherwise, adds the component with the provided arguments and returns it.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type of component to add. </td></tr>
+    <tr><td class="paramname">Args</td><td>The types of arguments to forward to the component's constructor. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">args</td><td>The arguments to forward to the component's constructor. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A reference to the newly added component. </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">   84</span>        {</div>
+<div class="line"><span class="lineno">   85</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="#aa60cd2ba3a43760ca2d2ffbb47f377c0">HasComponent&lt;T&gt;</a>())</div>
+<div class="line"><span class="lineno">   86</span>                <span class="keywordflow">return</span> <a class="code hl_function" href="#a12a8d4804cbd3346d175f18f6e3a5b26">GetComponent&lt;T&gt;</a>();</div>
+<div class="line"><span class="lineno">   87</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   88</span>                <span class="keywordflow">return</span> <a class="code hl_function" href="#a6740a10fbb70212ef62890386d3be1c2">AddComponent&lt;T&gt;</a>(std::forward&lt;Args&gt;(args)...);</div>
+<div class="line"><span class="lineno">   89</span>        }</div>
+<div class="ttc" id="aclass_vesper_1_1_entity_html_a6740a10fbb70212ef62890386d3be1c2"><div class="ttname"><a href="#a6740a10fbb70212ef62890386d3be1c2">Vesper::Entity::AddComponent</a></div><div class="ttdeci">T &amp; AddComponent(Args &amp;&amp;... args)</div><div class="ttdef"><b>Definition</b> Entity.h:45</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -423,9 +502,17 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   18</span>        {</div>
-<div class="line"><span class="lineno">   19</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="#aaa706fa22a0b7b5201081e69c8d75615">m_Scene</a>-&gt;m_Registry.all_of&lt;T&gt;(<a class="code hl_variable" href="#a7d4febcc19ce51e05ed86fba44aa2ca0">m_EntityID</a>);</div>
-<div class="line"><span class="lineno">   20</span>        }</div>
+<p>Checks if the entity has a component of type T.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type of component to check for. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the entity has the component, false otherwise. </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">   34</span>        {</div>
+<div class="line"><span class="lineno">   35</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="#aaa706fa22a0b7b5201081e69c8d75615">m_Scene</a>-&gt;m_Registry.all_of&lt;<a class="code hl_enumvalue" href="namespace_vesper_1_1_key.html#a9d802d64a043b9c5e780fdd5b2c430adabdb37f1a703413cdaf86760e7de9b5ba">T</a>&gt;(<a class="code hl_variable" href="#a7d4febcc19ce51e05ed86fba44aa2ca0">m_EntityID</a>);</div>
+<div class="line"><span class="lineno">   36</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -451,7 +538,7 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   73</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a7d4febcc19ce51e05ed86fba44aa2ca0">m_EntityID</a> != entt::null; }</div>
+<div class="fragment"><div class="line"><span class="lineno">  118</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a7d4febcc19ce51e05ed86fba44aa2ca0">m_EntityID</a> != entt::null; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -477,7 +564,7 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   74</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a7d4febcc19ce51e05ed86fba44aa2ca0">m_EntityID</a>; }</div>
+<div class="fragment"><div class="line"><span class="lineno">  119</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a7d4febcc19ce51e05ed86fba44aa2ca0">m_EntityID</a>; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -503,7 +590,7 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   75</span>{ <span class="keywordflow">return</span> (uint32_t)<a class="code hl_variable" href="#a7d4febcc19ce51e05ed86fba44aa2ca0">m_EntityID</a>; }</div>
+<div class="fragment"><div class="line"><span class="lineno">  120</span>{ <span class="keywordflow">return</span> (uint32_t)<a class="code hl_variable" href="#a7d4febcc19ce51e05ed86fba44aa2ca0">m_EntityID</a>; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -529,7 +616,7 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   77</span>{   <span class="keywordflow">return</span> !(*<span class="keyword">this</span> == other);   }</div>
+<div class="fragment"><div class="line"><span class="lineno">  122</span>{   <span class="keywordflow">return</span> !(*<span class="keyword">this</span> == other);   }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -555,7 +642,7 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   76</span>{   <span class="keywordflow">return</span> <a class="code hl_variable" href="#a7d4febcc19ce51e05ed86fba44aa2ca0">m_EntityID</a> == other.m_EntityID &amp;&amp; <a class="code hl_variable" href="#aaa706fa22a0b7b5201081e69c8d75615">m_Scene</a> == other.m_Scene;  }</div>
+<div class="fragment"><div class="line"><span class="lineno">  121</span>{   <span class="keywordflow">return</span> <a class="code hl_variable" href="#a7d4febcc19ce51e05ed86fba44aa2ca0">m_EntityID</a> == other.m_EntityID &amp;&amp; <a class="code hl_variable" href="#aaa706fa22a0b7b5201081e69c8d75615">m_Scene</a> == other.m_Scene;  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -583,10 +670,17 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   56</span>        {</div>
-<div class="line"><span class="lineno">   57</span>            <a class="code hl_define" href="_asserts_8h.html#a3b51b77f75997760894138afc89403c9">VZ_CORE_ASSERT</a>(<a class="code hl_function" href="#aa60cd2ba3a43760ca2d2ffbb47f377c0">HasComponent&lt;T&gt;</a>(), <span class="stringliteral">&quot;Entity does not have component!&quot;</span>);</div>
-<div class="line"><span class="lineno">   58</span>            <a class="code hl_variable" href="#aaa706fa22a0b7b5201081e69c8d75615">m_Scene</a>-&gt;m_Registry.remove&lt;T&gt;(<a class="code hl_variable" href="#a7d4febcc19ce51e05ed86fba44aa2ca0">m_EntityID</a>);</div>
-<div class="line"><span class="lineno">   59</span>        }</div>
+<p>Removes the component of type T from the entity if it exists. Otherwise, asserts.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type of component to remove. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">   96</span>        {</div>
+<div class="line"><span class="lineno">   97</span>            <a class="code hl_define" href="_asserts_8h.html#a3b51b77f75997760894138afc89403c9">VZ_CORE_ASSERT</a>(<a class="code hl_function" href="#aa60cd2ba3a43760ca2d2ffbb47f377c0">HasComponent&lt;T&gt;</a>(), <span class="stringliteral">&quot;Entity does not have component!&quot;</span>);</div>
+<div class="line"><span class="lineno">   98</span>            <a class="code hl_variable" href="#aaa706fa22a0b7b5201081e69c8d75615">m_Scene</a>-&gt;m_Registry.remove&lt;<a class="code hl_enumvalue" href="namespace_vesper_1_1_key.html#a9d802d64a043b9c5e780fdd5b2c430adabdb37f1a703413cdaf86760e7de9b5ba">T</a>&gt;(<a class="code hl_variable" href="#a7d4febcc19ce51e05ed86fba44aa2ca0">m_EntityID</a>);</div>
+<div class="line"><span class="lineno">   99</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -610,7 +704,9 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   80</span>{entt::null};</div>
+
+<p>The unique identifier of the entity within the scene. </p>
+<div class="fragment"><div class="line"><span class="lineno">  126</span>{entt::null};</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -633,6 +729,8 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Pointer to the scene that contains the entity. </p>
 
 <p class="reference">Referenced by <a class="el" href="#a3611719bf2e8971af008d441b5dd8450">Entity()</a>.</p>
 

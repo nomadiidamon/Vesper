@@ -2,16 +2,24 @@
 \hypertarget{class_vesper_1_1_file_dialogs}{}\label{class_vesper_1_1_file_dialogs}\index{Vesper::FileDialogs@{Vesper::FileDialogs}}
 
 
+Cross-\/platform file dialog utilities.  
+
+
+
+
 {\ttfamily \+\#include $<$Platform\+Utils.\+h$>$}
 
 \doxysubsubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 static std::\+string \doxymbox{\hyperlink{class_vesper_1_1_file_dialogs_a30ef477107af39176c77dd554ca88f6a}{Open\+File}} (const char \texorpdfstring{$\ast$}{*}filter)
-\item 
+\begin{DoxyCompactList}\small\item\em Opens a file dialog to select a file to open. \end{DoxyCompactList}\item 
 static std::\+string \doxymbox{\hyperlink{class_vesper_1_1_file_dialogs_a2929cc61038cd4dce65005ab83760607}{Save\+File}} (const char \texorpdfstring{$\ast$}{*}filter)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Opens a file dialog to select a location to save a file. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Cross-\/platform file dialog utilities. 
 
 \label{doc-func-members}
 \Hypertarget{class_vesper_1_1_file_dialogs_doc-func-members}
@@ -22,6 +30,18 @@ static std::\+string \doxymbox{\hyperlink{class_vesper_1_1_file_dialogs_a2929cc6
 {\footnotesize\ttfamily \label{class_vesper_1_1_file_dialogs_a30ef477107af39176c77dd554ca88f6a} 
 std::\+string Vesper::\+\+File\+Dialogs::\+\+Open\+File (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{filter}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
+
+
+Opens a file dialog to select a file to open. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filter} & The file type filter for the dialog. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The selected file path or an empty string if cancelled. 
+\end{DoxyReturn}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
@@ -48,6 +68,18 @@ std::\+string Vesper::\+\+File\+Dialogs::\+\+Open\+File (\begin{DoxyParamCaption
 {\footnotesize\ttfamily \label{class_vesper_1_1_file_dialogs_a2929cc61038cd4dce65005ab83760607} 
 std::\+string Vesper::\+\+File\+Dialogs::\+\+Save\+File (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{filter}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
+
+
+Opens a file dialog to select a location to save a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filter} & The file type filter for the dialog. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The selected file path or an empty string if cancelled. 
+\end{DoxyReturn}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}

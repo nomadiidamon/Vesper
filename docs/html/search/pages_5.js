@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['getting_20started_20clone_20third_20party_20libs_0',['Getting started (clone + third-party libs)',['../index.html#autotoc_md3',1,'']]]
+  ['file_20header_20for_20licensing_0',['File Header for Licensing',['../index.html#autotoc_md11',1,'Fully-Modified File Header for Licensing'],['../index.html#autotoc_md12',1,'Modified File Header for Licensing']]],
+  ['for_20licensing_1',['for Licensing',['../index.html#autotoc_md11',1,'Fully-Modified File Header for Licensing'],['../index.html#autotoc_md12',1,'Modified File Header for Licensing']]],
+  ['fully_20modified_20file_20header_20for_20licensing_2',['Fully-Modified File Header for Licensing',['../index.html#autotoc_md11',1,'']]]
 ];

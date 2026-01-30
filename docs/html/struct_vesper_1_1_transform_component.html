@@ -98,6 +98,9 @@ $(function(){initNavTree('struct_vesper_1_1_transform_component.html','','struct
 </div><!--header-->
 <div class="contents">
 
+<p>Component that holds the transform of an entity.  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_components_8h_source.html">Components.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -105,15 +108,22 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7e1d047861c7441c3e72abd9439ef6c2" id="r_a7e1d047861c7441c3e72abd9439ef6c2"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a7e1d047861c7441c3e72abd9439ef6c2">TransformComponent</a> ()=default</td></tr>
 <tr class="memitem:a560e3d1e61c0692782e36f99b159863a" id="r_a560e3d1e61c0692782e36f99b159863a"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a560e3d1e61c0692782e36f99b159863a">TransformComponent</a> (const TransformComponent &amp;)=default</td></tr>
 <tr class="memitem:a286f3a1bf0af79d94f952759ff51f846" id="r_a286f3a1bf0af79d94f952759ff51f846"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a286f3a1bf0af79d94f952759ff51f846">TransformComponent</a> (const glm::vec3 &amp;translation)</td></tr>
+<tr class="memdesc:a286f3a1bf0af79d94f952759ff51f846"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor that initializes the translation with a 3D vector.  <br /></td></tr>
 <tr class="memitem:a4d0f447eac962ef277fe1180ef4a422e" id="r_a4d0f447eac962ef277fe1180ef4a422e"><td class="memItemLeft">glm::mat4&#160;</td><td class="memItemRight"><a class="el" href="#a4d0f447eac962ef277fe1180ef4a422e">GetTransform</a> () const</td></tr>
+<tr class="memdesc:a4d0f447eac962ef277fe1180ef4a422e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates and returns the transformation matrix.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:ab76e5ae40adaf47f5b9affb5ab81c0b9" id="r_ab76e5ae40adaf47f5b9affb5ab81c0b9"><td class="memItemLeft">glm::vec3&#160;</td><td class="memItemRight"><a class="el" href="#ab76e5ae40adaf47f5b9affb5ab81c0b9">Translation</a> = { 0.0f, 0.0f, 0.0f }</td></tr>
+<tr class="memdesc:ab76e5ae40adaf47f5b9affb5ab81c0b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Translation (position) vector.  <br /></td></tr>
 <tr class="memitem:afa7331f7960d639da91b9e41373f5144" id="r_afa7331f7960d639da91b9e41373f5144"><td class="memItemLeft">glm::vec3&#160;</td><td class="memItemRight"><a class="el" href="#afa7331f7960d639da91b9e41373f5144">Rotation</a> = { 0.0f, 0.0f, 0.0f }</td></tr>
+<tr class="memdesc:afa7331f7960d639da91b9e41373f5144"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rotation vector (in radians).  <br /></td></tr>
 <tr class="memitem:a4655769f7629c9ea59ff14fb4aba13d9" id="r_a4655769f7629c9ea59ff14fb4aba13d9"><td class="memItemLeft">glm::vec3&#160;</td><td class="memItemRight"><a class="el" href="#a4655769f7629c9ea59ff14fb4aba13d9">Scale</a> = { 1.0f, 1.0f, 1.0f }</td></tr>
+<tr class="memdesc:a4655769f7629c9ea59ff14fb4aba13d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scale vector.  <br /></td></tr>
 </table>
-<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Component that holds the transform of an entity. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a7e1d047861c7441c3e72abd9439ef6c2" name="a7e1d047861c7441c3e72abd9439ef6c2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7e1d047861c7441c3e72abd9439ef6c2">&#9670;&#160;</a></span>TransformComponent() <span class="overload">[1/3]</span></h2>
 
@@ -186,10 +196,16 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   58</span>            : <a class="code hl_variable" href="#ab76e5ae40adaf47f5b9affb5ab81c0b9">Translation</a>(translation) {</div>
-<div class="line"><span class="lineno">   59</span>        }</div>
-<div class="ttc" id="astruct_vesper_1_1_transform_component_html_ab76e5ae40adaf47f5b9affb5ab81c0b9"><div class="ttname"><a href="#ab76e5ae40adaf47f5b9affb5ab81c0b9">Vesper::TransformComponent::Translation</a></div><div class="ttdeci">glm::vec3 Translation</div><div class="ttdef"><b>Definition</b> Components.h:51</div></div>
+
+<p>Constructor that initializes the translation with a 3D vector. </p>
+<div class="fragment"><div class="line"><span class="lineno">   74</span>            : <a class="code hl_variable" href="#ab76e5ae40adaf47f5b9affb5ab81c0b9">Translation</a>(translation) {</div>
+<div class="line"><span class="lineno">   75</span>        }</div>
+<div class="ttc" id="astruct_vesper_1_1_transform_component_html_ab76e5ae40adaf47f5b9affb5ab81c0b9"><div class="ttname"><a href="#ab76e5ae40adaf47f5b9affb5ab81c0b9">Vesper::TransformComponent::Translation</a></div><div class="ttdeci">glm::vec3 Translation</div><div class="ttdoc">Translation (position) vector.</div><div class="ttdef"><b>Definition</b> Components.h:64</div></div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="#a286f3a1bf0af79d94f952759ff51f846">TransformComponent()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="#a286f3a1bf0af79d94f952759ff51f846">TransformComponent()</a>.</p>
+
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
@@ -215,15 +231,17 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   62</span>        {</div>
-<div class="line"><span class="lineno">   63</span>            glm::mat4 rotation = glm::toMat4(glm::quat(<a class="code hl_variable" href="#afa7331f7960d639da91b9e41373f5144">Rotation</a>));</div>
-<div class="line"><span class="lineno">   64</span> </div>
-<div class="line"><span class="lineno">   65</span>            <span class="keywordflow">return</span> glm::translate(glm::mat4(1.0f), <a class="code hl_variable" href="#ab76e5ae40adaf47f5b9affb5ab81c0b9">Translation</a>)</div>
-<div class="line"><span class="lineno">   66</span>                * rotation</div>
-<div class="line"><span class="lineno">   67</span>                * glm::scale(glm::mat4(1.0f), <a class="code hl_variable" href="#a4655769f7629c9ea59ff14fb4aba13d9">Scale</a>);</div>
-<div class="line"><span class="lineno">   68</span>        }</div>
-<div class="ttc" id="astruct_vesper_1_1_transform_component_html_a4655769f7629c9ea59ff14fb4aba13d9"><div class="ttname"><a href="#a4655769f7629c9ea59ff14fb4aba13d9">Vesper::TransformComponent::Scale</a></div><div class="ttdeci">glm::vec3 Scale</div><div class="ttdef"><b>Definition</b> Components.h:53</div></div>
-<div class="ttc" id="astruct_vesper_1_1_transform_component_html_afa7331f7960d639da91b9e41373f5144"><div class="ttname"><a href="#afa7331f7960d639da91b9e41373f5144">Vesper::TransformComponent::Rotation</a></div><div class="ttdeci">glm::vec3 Rotation</div><div class="ttdef"><b>Definition</b> Components.h:52</div></div>
+
+<p>Calculates and returns the transformation matrix. </p>
+<div class="fragment"><div class="line"><span class="lineno">   79</span>        {</div>
+<div class="line"><span class="lineno">   80</span>            glm::mat4 rotation = glm::toMat4(glm::quat(<a class="code hl_variable" href="#afa7331f7960d639da91b9e41373f5144">Rotation</a>));</div>
+<div class="line"><span class="lineno">   81</span> </div>
+<div class="line"><span class="lineno">   82</span>            <span class="keywordflow">return</span> glm::translate(glm::mat4(1.0f), <a class="code hl_variable" href="#ab76e5ae40adaf47f5b9affb5ab81c0b9">Translation</a>)</div>
+<div class="line"><span class="lineno">   83</span>                * rotation</div>
+<div class="line"><span class="lineno">   84</span>                * glm::scale(glm::mat4(1.0f), <a class="code hl_variable" href="#a4655769f7629c9ea59ff14fb4aba13d9">Scale</a>);</div>
+<div class="line"><span class="lineno">   85</span>        }</div>
+<div class="ttc" id="astruct_vesper_1_1_transform_component_html_a4655769f7629c9ea59ff14fb4aba13d9"><div class="ttname"><a href="#a4655769f7629c9ea59ff14fb4aba13d9">Vesper::TransformComponent::Scale</a></div><div class="ttdeci">glm::vec3 Scale</div><div class="ttdoc">Scale vector.</div><div class="ttdef"><b>Definition</b> Components.h:68</div></div>
+<div class="ttc" id="astruct_vesper_1_1_transform_component_html_afa7331f7960d639da91b9e41373f5144"><div class="ttname"><a href="#afa7331f7960d639da91b9e41373f5144">Vesper::TransformComponent::Rotation</a></div><div class="ttdeci">glm::vec3 Rotation</div><div class="ttdoc">Rotation vector (in radians).</div><div class="ttdef"><b>Definition</b> Components.h:66</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -239,7 +257,9 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   52</span>{ 0.0f, 0.0f, 0.0f };</div>
+
+<p>Rotation vector (in radians). </p>
+<div class="fragment"><div class="line"><span class="lineno">   66</span>{ 0.0f, 0.0f, 0.0f };</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -254,7 +274,9 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   53</span>{ 1.0f, 1.0f, 1.0f };</div>
+
+<p>Scale vector. </p>
+<div class="fragment"><div class="line"><span class="lineno">   68</span>{ 1.0f, 1.0f, 1.0f };</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -269,7 +291,9 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   51</span>{ 0.0f, 0.0f, 0.0f };</div>
+
+<p>Translation (position) vector. </p>
+<div class="fragment"><div class="line"><span class="lineno">   64</span>{ 0.0f, 0.0f, 0.0f };</div>
 </div><!-- fragment -->
 </div>
 </div>

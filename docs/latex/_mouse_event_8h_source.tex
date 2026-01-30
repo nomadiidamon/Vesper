@@ -10,101 +10,138 @@
 \DoxyCodeLine{00006\ }
 \DoxyCodeLine{00007\ \textcolor{keyword}{namespace}\ \doxymbox{\hyperlink{namespace_vesper}{Vesper}}\ \{}
 \DoxyCodeLine{00008\ }
-\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{class}\ VESPER\_API\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_moved_event}{MouseMovedEvent}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_vesper_1_1_event}{Event}}}
-\DoxyCodeLine{00010\ \ \ \ \ \{}
-\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00012\ }
-\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_mouse_moved_event_ad5a836372f9ac72a226b510e5cf92b14}{MouseMovedEvent}}(\textcolor{keywordtype}{float}\ x,\ \textcolor{keywordtype}{float}\ y)}
-\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_moved_event_a54b8481a65e4fbe5f4053d137ab724a8}{m\_MouseX}}(x),\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_moved_event_a7638e12f67f1aa78a3beb084e3642dd8}{m\_MouseY}}(y)\ \{}
-\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00016\ }
-\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_moved_event_aa68e8151dd543c43d1917a7b21484671}{GetX}}()\ \textcolor{keyword}{const}\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_moved_event_a54b8481a65e4fbe5f4053d137ab724a8}{m\_MouseX}};\ \}}
-\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_moved_event_af598ce2634633a7432d900a7ad3ab3fa}{GetY}}()\ \textcolor{keyword}{const}\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_moved_event_a7638e12f67f1aa78a3beb084e3642dd8}{m\_MouseY}};\ \}}
-\DoxyCodeLine{00019\ }
-\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_moved_event_a2ccfeb59c21f70a757921b76f21f5bee}{ToString}}()\ \textcolor{keyword}{const}\ \textcolor{keyword}{override}}
-\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ std::stringstream\ ss;}
-\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ ss\ <<\ \textcolor{stringliteral}{"{}MouseMovedEvent:\ "{}}\ <<\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_moved_event_a54b8481a65e4fbe5f4053d137ab724a8}{m\_MouseX}}\ <<\ \textcolor{stringliteral}{"{},\ "{}}\ <<\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_moved_event_a7638e12f67f1aa78a3beb084e3642dd8}{m\_MouseY}};}
-\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ss.str();}
-\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00026\ }
-\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_event_8h_a80d534fc4d69a68eefd1573fd0ac2f44}{EVENT\_CLASS\_TYPE}}(\doxymbox{\hyperlink{namespace_vesper_ada4bc37927ce22c44ea0083a224d3bb5ac2770ad109c8063ce69a3608a9a16c08}{MouseMoved}})}
-\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_event_8h_abd52deea587a36ef619e596a0c691839}{EVENT\_CLASS\_CATEGORY}}(\doxymbox{\hyperlink{namespace_vesper_ad79da63be4419c3a218acaa990decabea3c4a955f5c8263670268bd87fefc1f16}{EventCategoryMouse}}\ |\ \doxymbox{\hyperlink{namespace_vesper_ad79da63be4419c3a218acaa990decabea6c60ac482ece62549192596ebe2bd544}{EventCategoryInput}})}
-\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_moved_event_a54b8481a65e4fbe5f4053d137ab724a8}{m\_MouseX}},\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_moved_event_a7638e12f67f1aa78a3beb084e3642dd8}{m\_MouseY}};}
-\DoxyCodeLine{00031\ \ \ \ \ \};}
-\DoxyCodeLine{00032\ }
-\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{class}\ VESPER\_API\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_scrolled_event}{MouseScrolledEvent}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_vesper_1_1_event}{Event}}}
-\DoxyCodeLine{00034\ \ \ \ \ \{}
-\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_mouse_scrolled_event_aa1e490679c0cb92aafce31e74c0309ff}{MouseScrolledEvent}}(\textcolor{keywordtype}{float}\ xOffset,\ \textcolor{keywordtype}{float}\ yOffset)}
-\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_scrolled_event_a2820cd39c299ee44f177c201d4a5bb4e}{m\_XOffset}}(xOffset),\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_scrolled_event_afab5212abe2b5d20b186e28f1e75903c}{m\_YOffset}}(yOffset)\ \{}
-\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00039\ }
-\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_scrolled_event_a91fe11538a6e415a235f2f64922dd141}{GetXOffset}}()\ \textcolor{keyword}{const}\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_scrolled_event_a2820cd39c299ee44f177c201d4a5bb4e}{m\_XOffset}};\ \}}
-\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_scrolled_event_aabc8368c57fa904be7140c907313ca15}{GetYOffset}}()\ \textcolor{keyword}{const}\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_scrolled_event_afab5212abe2b5d20b186e28f1e75903c}{m\_YOffset}};\ \}}
-\DoxyCodeLine{00042\ }
-\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_scrolled_event_ad1042edae967b19753014021b941f051}{ToString}}()\ \textcolor{keyword}{const}\ \textcolor{keyword}{override}}
-\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ std::stringstream\ ss;}
-\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ ss\ <<\ \textcolor{stringliteral}{"{}MouseScrolledEvent:\ "{}}\ <<\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_scrolled_event_a91fe11538a6e415a235f2f64922dd141}{GetXOffset}}\doxymbox{\hyperlink{class_vesper_1_1_mouse_scrolled_event_a91fe11538a6e415a235f2f64922dd141}{(}}\doxymbox{\hyperlink{class_vesper_1_1_mouse_scrolled_event_a91fe11538a6e415a235f2f64922dd141}{)}}\ <<\ \textcolor{stringliteral}{"{},\ "{}}\ <<\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_scrolled_event_aabc8368c57fa904be7140c907313ca15}{GetYOffset}}\doxymbox{\hyperlink{class_vesper_1_1_mouse_scrolled_event_aabc8368c57fa904be7140c907313ca15}{(}}\doxymbox{\hyperlink{class_vesper_1_1_mouse_scrolled_event_aabc8368c57fa904be7140c907313ca15}{)}};}
-\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ss.str();}
-\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00049\ }
-\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_event_8h_a80d534fc4d69a68eefd1573fd0ac2f44}{EVENT\_CLASS\_TYPE}}(\doxymbox{\hyperlink{namespace_vesper_ada4bc37927ce22c44ea0083a224d3bb5a50edb169910041bb3c06f6e8322d74c1}{MouseScrolled}})}
-\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_event_8h_abd52deea587a36ef619e596a0c691839}{EVENT\_CLASS\_CATEGORY}}(\doxymbox{\hyperlink{namespace_vesper_ad79da63be4419c3a218acaa990decabea3c4a955f5c8263670268bd87fefc1f16}{EventCategoryMouse}}\ |\ \doxymbox{\hyperlink{namespace_vesper_ad79da63be4419c3a218acaa990decabea6c60ac482ece62549192596ebe2bd544}{EventCategoryInput}})}
-\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_scrolled_event_a2820cd39c299ee44f177c201d4a5bb4e}{m\_XOffset}},\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_scrolled_event_afab5212abe2b5d20b186e28f1e75903c}{m\_YOffset}};}
-\DoxyCodeLine{00054\ \ \ \ \ \};}
-\DoxyCodeLine{00055\ }
-\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keyword}{class}\ VESPER\_API\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event}{MouseButtonEvent}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_vesper_1_1_event}{Event}}}
-\DoxyCodeLine{00057\ \ \ \ \ \{}
-\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event_ace3614a44a91aeb7c90e14fa087d5d43}{GetMouseButton}}()\ \textcolor{keyword}{const}\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event_ac7a0d970c0a29aac9ee2643224a8daa5}{m\_Button}};\ \}}
-\DoxyCodeLine{00060\ }
-\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_event_8h_abd52deea587a36ef619e596a0c691839}{EVENT\_CLASS\_CATEGORY}}(\doxymbox{\hyperlink{namespace_vesper_ad79da63be4419c3a218acaa990decabea3c4a955f5c8263670268bd87fefc1f16}{EventCategoryMouse}}\ |\ \doxymbox{\hyperlink{namespace_vesper_ad79da63be4419c3a218acaa990decabea6c60ac482ece62549192596ebe2bd544}{EventCategoryInput}})}
-\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keyword}{protected}:}
-\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event_ada06b672494998951a14cd7888f45b50}{MouseButtonEvent}}(\textcolor{keywordtype}{int}\ button)}
-\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event_ac7a0d970c0a29aac9ee2643224a8daa5}{m\_Button}}(button)\ \{}
-\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event_ac7a0d970c0a29aac9ee2643224a8daa5}{m\_Button}};}
-\DoxyCodeLine{00067\ \ \ \ \ \};}
-\DoxyCodeLine{00068\ }
-\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keyword}{class}\ VESPER\_API\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_pressed_event}{MouseButtonPressedEvent}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event}{MouseButtonEvent}}}
-\DoxyCodeLine{00070\ \ \ \ \ \{}
-\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_pressed_event_a3924c42eeceae9390a16a2d750b4a832}{MouseButtonPressedEvent}}(\textcolor{keywordtype}{int}\ button)}
-\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event}{MouseButtonEvent}}\doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event_ada06b672494998951a14cd7888f45b50}{(}}button\doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event_ada06b672494998951a14cd7888f45b50}{)}}\ \{}
-\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00075\ }
-\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_pressed_event_a9cc088a6bc2d238bb6e4df9107cbea72}{ToString}}()\ \textcolor{keyword}{const}\ \textcolor{keyword}{override}}
-\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ std::stringstream\ ss;}
-\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ ss\ <<\ \textcolor{stringliteral}{"{}MouseButtonPressedEvent:\ "{}}\ <<\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event_ace3614a44a91aeb7c90e14fa087d5d43}{GetMouseButton}}\doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event_ace3614a44a91aeb7c90e14fa087d5d43}{(}}\doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event_ace3614a44a91aeb7c90e14fa087d5d43}{)}};}
-\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ss.str();}
-\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00082\ }
-\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_event_8h_a80d534fc4d69a68eefd1573fd0ac2f44}{EVENT\_CLASS\_TYPE}}(\doxymbox{\hyperlink{namespace_vesper_ada4bc37927ce22c44ea0083a224d3bb5a7349f643d689997b7c54bf93e4095f5c}{MouseButtonPressed}})}
-\DoxyCodeLine{00084\ \ \ \ \ \};}
-\DoxyCodeLine{00085\ }
-\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keyword}{class}\ VESPER\_API\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_released_event}{MouseButtonReleasedEvent}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event}{MouseButtonEvent}}}
-\DoxyCodeLine{00087\ \ \ \ \ \{}
-\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00089\ }
-\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_released_event_a500223a0b6aaedcaa8b881b01dabfff1}{MouseButtonReleasedEvent}}(\textcolor{keywordtype}{int}\ button)}
-\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event}{MouseButtonEvent}}\doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event_ada06b672494998951a14cd7888f45b50}{(}}button\doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event_ada06b672494998951a14cd7888f45b50}{)}}\ \{}
-\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{comment}{///\ @class\ MouseMovedEvent}}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{comment}{///\ @brief\ Event\ for\ registering\ mouse\ movement.}}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{class}\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_moved_event}{MouseMovedEvent}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_vesper_1_1_event}{Event}}}
+\DoxyCodeLine{00012\ \ \ \ \ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Construct\ a\ MouseMovedEvent\ with\ the\ specified\ x\ and\ y\ coordinates.}}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ }}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @param\ x\ The\ x\ coordinate\ of\ the\ mouse.}}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @param\ y\ The\ y\ coordinate\ of\ the\ mouse.}}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_mouse_moved_event_ad5a836372f9ac72a226b510e5cf92b14}{MouseMovedEvent}}(\textcolor{keywordtype}{float}\ x,\ \textcolor{keywordtype}{float}\ y)}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_moved_event_a54b8481a65e4fbe5f4053d137ab724a8}{m\_MouseX}}(x),\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_moved_event_a7638e12f67f1aa78a3beb084e3642dd8}{m\_MouseY}}(y)\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Get\ the\ x\ coordinate\ of\ the\ mouse.}}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_moved_event_aa68e8151dd543c43d1917a7b21484671}{GetX}}()\ \textcolor{keyword}{const}\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_moved_event_a54b8481a65e4fbe5f4053d137ab724a8}{m\_MouseX}};\ \}}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Get\ the\ y\ coordinate\ of\ the\ mouse.}}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_moved_event_af598ce2634633a7432d900a7ad3ab3fa}{GetY}}()\ \textcolor{keyword}{const}\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_moved_event_a7638e12f67f1aa78a3beb084e3642dd8}{m\_MouseY}};\ \}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Convert\ the\ event\ to\ a\ string\ representation.}}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_mouse_moved_event_a2ccfeb59c21f70a757921b76f21f5bee}{std}}::\doxymbox{\hyperlink{class_vesper_1_1_mouse_moved_event_a2ccfeb59c21f70a757921b76f21f5bee}{string}}\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_moved_event_a2ccfeb59c21f70a757921b76f21f5bee}{ToString}}()\ \textcolor{keyword}{const}\ \textcolor{keyword}{override}}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ std::stringstream\ ss;}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ ss\ <<\ \textcolor{stringliteral}{"{}MouseMovedEvent:\ "{}}\ <<\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_moved_event_a54b8481a65e4fbe5f4053d137ab724a8}{m\_MouseX}}\ <<\ \textcolor{stringliteral}{"{},\ "{}}\ <<\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_moved_event_a7638e12f67f1aa78a3beb084e3642dd8}{m\_MouseY}};}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ss.str();}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_event_8h_a80d534fc4d69a68eefd1573fd0ac2f44}{EVENT\_CLASS\_TYPE}}(\doxymbox{\hyperlink{namespace_vesper_ada4bc37927ce22c44ea0083a224d3bb5ac2770ad109c8063ce69a3608a9a16c08}{MouseMoved}})}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_event_8h_abd52deea587a36ef619e596a0c691839}{EVENT\_CLASS\_CATEGORY}}(\doxymbox{\hyperlink{namespace_vesper_ad79da63be4419c3a218acaa990decabea3c4a955f5c8263670268bd87fefc1f16}{EventCategoryMouse}}\ |\ \doxymbox{\hyperlink{namespace_vesper_ad79da63be4419c3a218acaa990decabea6c60ac482ece62549192596ebe2bd544}{EventCategoryInput}})}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_moved_event_a54b8481a65e4fbe5f4053d137ab724a8}{m\_MouseX}},\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_moved_event_a7638e12f67f1aa78a3beb084e3642dd8}{m\_MouseY}};}
+\DoxyCodeLine{00040\ \ \ \ \ \};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{comment}{///\ @class\ MouseScrolledEvent}}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{comment}{///\ @brief\ Event\ for\ registering\ mouse\ scroll\ wheel\ movement.}}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{class}\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_scrolled_event}{MouseScrolledEvent}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_vesper_1_1_event}{Event}}}
+\DoxyCodeLine{00045\ \ \ \ \ \{}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Construct\ a\ MouseScrolledEvent\ with\ the\ specified\ x\ and\ y\ offsets.}}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{comment}{///}}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @param\ xOffset\ The\ offset\ of\ the\ mouse\ scroll\ in\ the\ x\ direction.}}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @param\ yOffset\ The\ offset\ of\ the\ mouse\ scroll\ in\ the\ y\ direction.}}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_mouse_scrolled_event_aa1e490679c0cb92aafce31e74c0309ff}{MouseScrolledEvent}}(\textcolor{keywordtype}{float}\ xOffset,\ \textcolor{keywordtype}{float}\ yOffset)}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_scrolled_event_a2820cd39c299ee44f177c201d4a5bb4e}{m\_XOffset}}(xOffset),\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_scrolled_event_afab5212abe2b5d20b186e28f1e75903c}{m\_YOffset}}(yOffset)\ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Get\ the\ x\ offset\ of\ the\ mouse\ scroll.}}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_scrolled_event_a91fe11538a6e415a235f2f64922dd141}{GetXOffset}}()\ \textcolor{keyword}{const}\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_scrolled_event_a2820cd39c299ee44f177c201d4a5bb4e}{m\_XOffset}};\ \}}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Get\ the\ y\ offset\ of\ the\ mouse\ scroll.}}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_scrolled_event_aabc8368c57fa904be7140c907313ca15}{GetYOffset}}()\ \textcolor{keyword}{const}\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_scrolled_event_afab5212abe2b5d20b186e28f1e75903c}{m\_YOffset}};\ \}}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Convert\ the\ event\ to\ a\ string\ representation.}}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_mouse_scrolled_event_ad1042edae967b19753014021b941f051}{std}}::\doxymbox{\hyperlink{class_vesper_1_1_mouse_scrolled_event_ad1042edae967b19753014021b941f051}{string}}\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_scrolled_event_ad1042edae967b19753014021b941f051}{ToString}}()\ \textcolor{keyword}{const}\ \textcolor{keyword}{override}}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ std::stringstream\ ss;}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ ss\ <<\ \textcolor{stringliteral}{"{}MouseScrolledEvent:\ "{}}\ <<\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_scrolled_event_a91fe11538a6e415a235f2f64922dd141}{GetXOffset}}\doxymbox{\hyperlink{class_vesper_1_1_mouse_scrolled_event_a91fe11538a6e415a235f2f64922dd141}{(}}\doxymbox{\hyperlink{class_vesper_1_1_mouse_scrolled_event_a91fe11538a6e415a235f2f64922dd141}{)}}\ <<\ \textcolor{stringliteral}{"{},\ "{}}\ <<\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_scrolled_event_aabc8368c57fa904be7140c907313ca15}{GetYOffset}}\doxymbox{\hyperlink{class_vesper_1_1_mouse_scrolled_event_aabc8368c57fa904be7140c907313ca15}{(}}\doxymbox{\hyperlink{class_vesper_1_1_mouse_scrolled_event_aabc8368c57fa904be7140c907313ca15}{)}};}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ss.str();}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_event_8h_a80d534fc4d69a68eefd1573fd0ac2f44}{EVENT\_CLASS\_TYPE}}(\doxymbox{\hyperlink{namespace_vesper_ada4bc37927ce22c44ea0083a224d3bb5a50edb169910041bb3c06f6e8322d74c1}{MouseScrolled}})}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_event_8h_abd52deea587a36ef619e596a0c691839}{EVENT\_CLASS\_CATEGORY}}(\doxymbox{\hyperlink{namespace_vesper_ad79da63be4419c3a218acaa990decabea3c4a955f5c8263670268bd87fefc1f16}{EventCategoryMouse}}\ |\ \doxymbox{\hyperlink{namespace_vesper_ad79da63be4419c3a218acaa990decabea6c60ac482ece62549192596ebe2bd544}{EventCategoryInput}})}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_scrolled_event_a2820cd39c299ee44f177c201d4a5bb4e}{m\_XOffset}},\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_scrolled_event_afab5212abe2b5d20b186e28f1e75903c}{m\_YOffset}};}
+\DoxyCodeLine{00072\ \ \ \ \ \};}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{comment}{///\ @class\ MouseButtonEvent}}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{comment}{///\ @brief\ Base\ class\ for\ mouse\ button\ events.}}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keyword}{class}\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event}{MouseButtonEvent}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_vesper_1_1_event}{Event}}}
+\DoxyCodeLine{00077\ \ \ \ \ \{}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Get\ the\ mouse\ button\ associated\ with\ the\ event.}}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event_ace3614a44a91aeb7c90e14fa087d5d43}{GetMouseButton}}()\ \textcolor{keyword}{const}\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event_ac7a0d970c0a29aac9ee2643224a8daa5}{m\_Button}};\ \}}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_event_8h_abd52deea587a36ef619e596a0c691839}{EVENT\_CLASS\_CATEGORY}}(\doxymbox{\hyperlink{namespace_vesper_ad79da63be4419c3a218acaa990decabea3c4a955f5c8263670268bd87fefc1f16}{EventCategoryMouse}}\ |\ \doxymbox{\hyperlink{namespace_vesper_ad79da63be4419c3a218acaa990decabea6c60ac482ece62549192596ebe2bd544}{EventCategoryInput}})}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Construct\ a\ MouseButtonEvent\ with\ the\ specified\ button.}}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \textcolor{comment}{///}}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @param\ button\ The\ mouse\ button\ associated\ with\ the\ event.}}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ Restricted\ specific\ construction\ to\ derived\ classes.}}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event_ada06b672494998951a14cd7888f45b50}{MouseButtonEvent}}(\textcolor{keywordtype}{int}\ button)}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event_ac7a0d970c0a29aac9ee2643224a8daa5}{m\_Button}}(button)\ \{}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event_ac7a0d970c0a29aac9ee2643224a8daa5}{m\_Button}};}
+\DoxyCodeLine{00092\ \ \ \ \ \};}
 \DoxyCodeLine{00093\ }
-\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_released_event_a65f37698ff0f126ce6a1c063a312de13}{ToString}}()\ \textcolor{keyword}{const}\ \textcolor{keyword}{override}}
-\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ std::stringstream\ ss;}
-\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ ss\ <<\ \textcolor{stringliteral}{"{}MouseButtonReleasedEvent:\ "{}}\ <<\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event_ace3614a44a91aeb7c90e14fa087d5d43}{GetMouseButton}}\doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event_ace3614a44a91aeb7c90e14fa087d5d43}{(}}\doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event_ace3614a44a91aeb7c90e14fa087d5d43}{)}};}
-\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ss.str();}
-\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00100\ }
-\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_event_8h_a80d534fc4d69a68eefd1573fd0ac2f44}{EVENT\_CLASS\_TYPE}}(\doxymbox{\hyperlink{namespace_vesper_ada4bc37927ce22c44ea0083a224d3bb5a7584c169de594c27f00084b93186fd7c}{MouseButtonReleased}})}
-\DoxyCodeLine{00102\ \ \ \ \ \};}
-\DoxyCodeLine{00103\ }
-\DoxyCodeLine{00104\ \}}
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{comment}{///\ @class\ MouseButtonPressedEvent}}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{comment}{///\ @brief\ Event\ for\ registering\ mouse\ button\ presses.}}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keyword}{class}\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_pressed_event}{MouseButtonPressedEvent}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event}{MouseButtonEvent}}}
+\DoxyCodeLine{00097\ \ \ \ \ \{}
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Construct\ a\ MouseButtonPressedEvent\ with\ the\ specified\ button.}}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \textcolor{comment}{///}}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @param\ button\ The\ mouse\ button\ associated\ with\ the\ event.}}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_pressed_event_a3924c42eeceae9390a16a2d750b4a832}{MouseButtonPressedEvent}}(\textcolor{keywordtype}{int}\ button)}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event}{MouseButtonEvent}}\doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event_ada06b672494998951a14cd7888f45b50}{(}}button\doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event_ada06b672494998951a14cd7888f45b50}{)}}\ \{}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Convert\ the\ event\ to\ a\ string\ representation.}}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_pressed_event_a9cc088a6bc2d238bb6e4df9107cbea72}{std}}::\doxymbox{\hyperlink{class_vesper_1_1_mouse_button_pressed_event_a9cc088a6bc2d238bb6e4df9107cbea72}{string}}\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_pressed_event_a9cc088a6bc2d238bb6e4df9107cbea72}{ToString}}()\ \textcolor{keyword}{const}\ \textcolor{keyword}{override}}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ std::stringstream\ ss;}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ ss\ <<\ \textcolor{stringliteral}{"{}MouseButtonPressedEvent:\ "{}}\ <<\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event_ace3614a44a91aeb7c90e14fa087d5d43}{GetMouseButton}}\doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event_ace3614a44a91aeb7c90e14fa087d5d43}{(}}\doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event_ace3614a44a91aeb7c90e14fa087d5d43}{)}};}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ss.str();}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_event_8h_a80d534fc4d69a68eefd1573fd0ac2f44}{EVENT\_CLASS\_TYPE}}(\doxymbox{\hyperlink{namespace_vesper_ada4bc37927ce22c44ea0083a224d3bb5a7349f643d689997b7c54bf93e4095f5c}{MouseButtonPressed}})}
+\DoxyCodeLine{00115\ \ \ \ \ \};}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{comment}{///\ @class\ MouseButtonReleasedEvent}}
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{comment}{///\ @brief\ Event\ for\ registering\ mouse\ button\ releases.}}
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keyword}{class}\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_released_event}{MouseButtonReleasedEvent}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event}{MouseButtonEvent}}}
+\DoxyCodeLine{00120\ \ \ \ \ \{}
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Construct\ a\ MouseButtonReleasedEvent\ with\ the\ specified\ button.}}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \textcolor{comment}{///}}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @param\ button\ The\ mouse\ button\ associated\ with\ the\ event.}}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_released_event_a500223a0b6aaedcaa8b881b01dabfff1}{MouseButtonReleasedEvent}}(\textcolor{keywordtype}{int}\ button)}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event}{MouseButtonEvent}}\doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event_ada06b672494998951a14cd7888f45b50}{(}}button\doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event_ada06b672494998951a14cd7888f45b50}{)}}\ \{}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Convert\ the\ event\ to\ a\ string\ representation.}}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_released_event_a65f37698ff0f126ce6a1c063a312de13}{std}}::\doxymbox{\hyperlink{class_vesper_1_1_mouse_button_released_event_a65f37698ff0f126ce6a1c063a312de13}{string}}\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_released_event_a65f37698ff0f126ce6a1c063a312de13}{ToString}}()\ \textcolor{keyword}{const}\ \textcolor{keyword}{override}}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ std::stringstream\ ss;}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ ss\ <<\ \textcolor{stringliteral}{"{}MouseButtonReleasedEvent:\ "{}}\ <<\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event_ace3614a44a91aeb7c90e14fa087d5d43}{GetMouseButton}}\doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event_ace3614a44a91aeb7c90e14fa087d5d43}{(}}\doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event_ace3614a44a91aeb7c90e14fa087d5d43}{)}};}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ss.str();}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_event_8h_a80d534fc4d69a68eefd1573fd0ac2f44}{EVENT\_CLASS\_TYPE}}(\doxymbox{\hyperlink{namespace_vesper_ada4bc37927ce22c44ea0083a224d3bb5a7584c169de594c27f00084b93186fd7c}{MouseButtonReleased}})}
+\DoxyCodeLine{00139\ \ \ \ \ \};}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00141\ \}}
 
 \end{DoxyCode}

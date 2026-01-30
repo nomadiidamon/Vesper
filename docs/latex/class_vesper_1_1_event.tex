@@ -2,6 +2,11 @@
 \hypertarget{class_vesper_1_1_event}{}\label{class_vesper_1_1_event}\index{Vesper::Event@{Vesper::Event}}
 
 
+Abstract base class for all events.  
+
+
+
+
 {\ttfamily \+\#include $<$Event.\+h$>$}
 
 Inheritance diagram for Vesper::\+Event:\+\begin{figure}[H]
@@ -16,26 +21,29 @@ Inheritance diagram for Vesper::\+Event:\+\begin{figure}[H]
 virtual \doxymbox{\hyperlink{class_vesper_1_1_event_a516fc6585a1ca21f7d73fc4deb461ee2}{\texorpdfstring{$\sim$}{\string~}\+Event}} ()=default
 \item 
 virtual \doxymbox{\hyperlink{namespace_vesper_ada4bc37927ce22c44ea0083a224d3bb5}{Event\+Type}} \doxymbox{\hyperlink{class_vesper_1_1_event_a82499595903097f8d2a81e9b0ebfba3d}{Get\+Event\+Type}} () const =0
-\item 
+\begin{DoxyCompactList}\small\item\em Get the type of the event. \end{DoxyCompactList}\item 
 virtual const char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_vesper_1_1_event_af39d90d8ec2e84488c593c517a8e9b6e}{Get\+Name}} () const =0
-\item 
+\begin{DoxyCompactList}\small\item\em Get the name of the event. \end{DoxyCompactList}\item 
 virtual int \doxymbox{\hyperlink{class_vesper_1_1_event_a71e621bec32702d59c7e7ed82c53ac08}{Get\+Category\+Flags}} () const =0
-\item 
+\begin{DoxyCompactList}\small\item\em Get the category flags of the event. \end{DoxyCompactList}\item 
 virtual std::\+string \doxymbox{\hyperlink{class_vesper_1_1_event_aaba48fc434a2539c5ce000fda6aa7f05}{To\+String}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Convert the event to a string representation. \end{DoxyCompactList}\item 
 bool \doxymbox{\hyperlink{class_vesper_1_1_event_a02448606191e9e1cc7869bffd2cb20f7}{Is\+In\+Category}} (\doxymbox{\hyperlink{namespace_vesper_ad79da63be4419c3a218acaa990decabe}{Event\+Category}} category)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Check if the event is in a specific category. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 bool \doxymbox{\hyperlink{class_vesper_1_1_event_ab6bc1a2214e615b994cff03df207a0f1}{Handled}} = false
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Indicates whether the event has been handled. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
 class \doxymbox{\hyperlink{class_vesper_1_1_event_aad5f38ccd490ea17008460423f52325a}{Event\+Dispatcher}}
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Abstract base class for all events. 
 
 \label{doc-constructors}
 \Hypertarget{class_vesper_1_1_event_doc-constructors}
@@ -59,6 +67,10 @@ virtual int Vesper::\+\+Event::\+\+Get\+Category\+Flags (\begin{DoxyParamCaption
 
 
 
+Get the category flags of the event. 
+
+
+
 Referenced by \doxymbox{\hyperlink{class_vesper_1_1_event_a02448606191e9e1cc7869bffd2cb20f7}{Is\+In\+Category()}}.
 
 \Hypertarget{class_vesper_1_1_event_a82499595903097f8d2a81e9b0ebfba3d}\index{Vesper::Event@{Vesper::Event}!GetEventType@{GetEventType}}
@@ -67,11 +79,19 @@ Referenced by \doxymbox{\hyperlink{class_vesper_1_1_event_a02448606191e9e1cc7869
 {\footnotesize\ttfamily \label{class_vesper_1_1_event_a82499595903097f8d2a81e9b0ebfba3d} 
 virtual \doxymbox{\hyperlink{namespace_vesper_ada4bc37927ce22c44ea0083a224d3bb5}{Event\+Type}} Vesper::\+\+Event::\+\+Get\+Event\+Type (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
+
+
+Get the type of the event. 
+
 \Hypertarget{class_vesper_1_1_event_af39d90d8ec2e84488c593c517a8e9b6e}\index{Vesper::Event@{Vesper::Event}!GetName@{GetName}}
 \index{GetName@{GetName}!Vesper::Event@{Vesper::Event}}
 \doxysubsubsection{\texorpdfstring{GetName()}{GetName()}}
 {\footnotesize\ttfamily \label{class_vesper_1_1_event_af39d90d8ec2e84488c593c517a8e9b6e} 
 virtual const char \texorpdfstring{$\ast$}{*} Vesper::\+\+Event::\+\+Get\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the name of the event. 
 
 
 
@@ -84,10 +104,14 @@ Referenced by \doxymbox{\hyperlink{class_vesper_1_1_event_aaba48fc434a2539c5ce00
 bool Vesper::\+\+Event::\+\+Is\+In\+Category (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{namespace_vesper_ad79da63be4419c3a218acaa990decabe}{Event\+Category}}}]{category}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
+
+Check if the event is in a specific category. 
+
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_event_a71e621bec32702d59c7e7ed82c53ac08}{GetCategoryFlags}}()\ \&\ category;}
-\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_event_a71e621bec32702d59c7e7ed82c53ac08}{GetCategoryFlags}}()\ \&\ category;}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \}}
 
 \end{DoxyCode}
 
@@ -106,11 +130,15 @@ virtual std::\+string Vesper::\+\+Event::\+\+To\+String (\begin{DoxyParamCaption
 
 
 
+Convert the event to a string representation. 
+
+
+
 Reimplemented in \doxymbox{\hyperlink{class_vesper_1_1_key_pressed_event_a714614a3073492951b1b5001209d0d88}{Vesper::\+\+Key\+Pressed\+Event}}, \doxymbox{\hyperlink{class_vesper_1_1_key_released_event_a3b3a0210a59f5cb1f66dcf0494b739b9}{Vesper::\+\+Key\+Released\+Event}}, \doxymbox{\hyperlink{class_vesper_1_1_key_typed_event_a629f52af17e5e1f56e99d006191a4518}{Vesper::\+\+Key\+Typed\+Event}}, \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_pressed_event_a9cc088a6bc2d238bb6e4df9107cbea72}{Vesper::\+\+Mouse\+Button\+Pressed\+Event}}, \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_released_event_a65f37698ff0f126ce6a1c063a312de13}{Vesper::\+\+Mouse\+Button\+Released\+Event}}, \doxymbox{\hyperlink{class_vesper_1_1_mouse_moved_event_a2ccfeb59c21f70a757921b76f21f5bee}{Vesper::\+\+Mouse\+Moved\+Event}}, \doxymbox{\hyperlink{class_vesper_1_1_mouse_scrolled_event_ad1042edae967b19753014021b941f051}{Vesper::\+\+Mouse\+Scrolled\+Event}}, and \doxymbox{\hyperlink{class_vesper_1_1_window_resize_event_a68faa6be8944358148545c0f640a2962}{Vesper::\+\+Window\+Resize\+Event}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00041\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_event_af39d90d8ec2e84488c593c517a8e9b6e}{GetName}}();\ \}}
+\DoxyCodeLine{00055\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_event_af39d90d8ec2e84488c593c517a8e9b6e}{GetName}}();\ \}}
 
 \end{DoxyCode}
 
@@ -138,6 +166,10 @@ friend class Event\+Dispatcher\hspace{0.3cm}{\ttfamily [friend]}}
 \doxysubsubsection{\texorpdfstring{Handled}{Handled}}
 {\footnotesize\ttfamily \label{class_vesper_1_1_event_ab6bc1a2214e615b994cff03df207a0f1} 
 bool Vesper::\+\+Event::\+\+Handled = false}
+
+
+
+Indicates whether the event has been handled. 
 
 
 

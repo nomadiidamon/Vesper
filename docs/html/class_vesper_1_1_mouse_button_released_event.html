@@ -98,6 +98,9 @@ $(function(){initNavTree('class_vesper_1_1_mouse_button_released_event.html','',
 </div><!--header-->
 <div class="contents">
 
+<p><a class="el" href="class_vesper_1_1_event.html" title="Abstract base class for all events.">Event</a> for registering mouse button releases.  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_mouse_event_8h_source.html">MouseEvent.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Vesper::MouseButtonReleasedEvent:</div>
@@ -105,34 +108,45 @@ Inheritance diagram for Vesper::MouseButtonReleasedEvent:</div>
  <div class="center">
   <img src="class_vesper_1_1_mouse_button_released_event.png" usemap="#Vesper_3A_3AMouseButtonReleasedEvent_map" alt=""/>
   <map id="Vesper_3A_3AMouseButtonReleasedEvent_map" name="Vesper_3A_3AMouseButtonReleasedEvent_map">
-<area href="class_vesper_1_1_mouse_button_event.html" alt="Vesper::MouseButtonEvent" shape="rect" coords="0,56,216,80"/>
-<area href="class_vesper_1_1_event.html" alt="Vesper::Event" shape="rect" coords="0,0,216,24"/>
+<area href="class_vesper_1_1_mouse_button_event.html" title="Base class for mouse button events." alt="Vesper::MouseButtonEvent" shape="rect" coords="0,56,216,80"/>
+<area href="class_vesper_1_1_event.html" title="Abstract base class for all events." alt="Vesper::Event" shape="rect" coords="0,0,216,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a500223a0b6aaedcaa8b881b01dabfff1" id="r_a500223a0b6aaedcaa8b881b01dabfff1"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a500223a0b6aaedcaa8b881b01dabfff1">MouseButtonReleasedEvent</a> (int button)</td></tr>
+<tr class="memdesc:a500223a0b6aaedcaa8b881b01dabfff1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a <a class="el" href="class_vesper_1_1_mouse_button_released_event.html" title="Event for registering mouse button releases.">MouseButtonReleasedEvent</a> with the specified button.  <br /></td></tr>
 <tr class="memitem:a65f37698ff0f126ce6a1c063a312de13" id="r_a65f37698ff0f126ce6a1c063a312de13"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#a65f37698ff0f126ce6a1c063a312de13">ToString</a> () const override</td></tr>
+<tr class="memdesc:a65f37698ff0f126ce6a1c063a312de13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert the event to a string representation.  <br /></td></tr>
 <tr class="inherit_header pub_methods_class_vesper_1_1_mouse_button_event"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_vesper_1_1_mouse_button_event')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="class_vesper_1_1_mouse_button_event.html">Vesper::MouseButtonEvent</a></td></tr>
 <tr class="memitem:ace3614a44a91aeb7c90e14fa087d5d43 inherit pub_methods_class_vesper_1_1_mouse_button_event" id="r_ace3614a44a91aeb7c90e14fa087d5d43"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="class_vesper_1_1_mouse_button_event.html#ace3614a44a91aeb7c90e14fa087d5d43">GetMouseButton</a> () const</td></tr>
+<tr class="memdesc:ace3614a44a91aeb7c90e14fa087d5d43 inherit pub_methods_class_vesper_1_1_mouse_button_event"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the mouse button associated with the event.  <br /></td></tr>
 <tr class="inherit_header pub_methods_class_vesper_1_1_event"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_vesper_1_1_event')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="class_vesper_1_1_event.html">Vesper::Event</a></td></tr>
 <tr class="memitem:a516fc6585a1ca21f7d73fc4deb461ee2 inherit pub_methods_class_vesper_1_1_event" id="r_a516fc6585a1ca21f7d73fc4deb461ee2"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="class_vesper_1_1_event.html#a516fc6585a1ca21f7d73fc4deb461ee2">~Event</a> ()=default</td></tr>
 <tr class="memitem:a82499595903097f8d2a81e9b0ebfba3d inherit pub_methods_class_vesper_1_1_event" id="r_a82499595903097f8d2a81e9b0ebfba3d"><td class="memItemLeft">virtual <a class="el" href="namespace_vesper.html#ada4bc37927ce22c44ea0083a224d3bb5">EventType</a>&#160;</td><td class="memItemRight"><a class="el" href="class_vesper_1_1_event.html#a82499595903097f8d2a81e9b0ebfba3d">GetEventType</a> () const =0</td></tr>
+<tr class="memdesc:a82499595903097f8d2a81e9b0ebfba3d inherit pub_methods_class_vesper_1_1_event"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the type of the event.  <br /></td></tr>
 <tr class="memitem:af39d90d8ec2e84488c593c517a8e9b6e inherit pub_methods_class_vesper_1_1_event" id="r_af39d90d8ec2e84488c593c517a8e9b6e"><td class="memItemLeft">virtual const char *&#160;</td><td class="memItemRight"><a class="el" href="class_vesper_1_1_event.html#af39d90d8ec2e84488c593c517a8e9b6e">GetName</a> () const =0</td></tr>
+<tr class="memdesc:af39d90d8ec2e84488c593c517a8e9b6e inherit pub_methods_class_vesper_1_1_event"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the name of the event.  <br /></td></tr>
 <tr class="memitem:a71e621bec32702d59c7e7ed82c53ac08 inherit pub_methods_class_vesper_1_1_event" id="r_a71e621bec32702d59c7e7ed82c53ac08"><td class="memItemLeft">virtual int&#160;</td><td class="memItemRight"><a class="el" href="class_vesper_1_1_event.html#a71e621bec32702d59c7e7ed82c53ac08">GetCategoryFlags</a> () const =0</td></tr>
+<tr class="memdesc:a71e621bec32702d59c7e7ed82c53ac08 inherit pub_methods_class_vesper_1_1_event"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the category flags of the event.  <br /></td></tr>
 <tr class="memitem:a02448606191e9e1cc7869bffd2cb20f7 inherit pub_methods_class_vesper_1_1_event" id="r_a02448606191e9e1cc7869bffd2cb20f7"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="class_vesper_1_1_event.html#a02448606191e9e1cc7869bffd2cb20f7">IsInCategory</a> (<a class="el" href="namespace_vesper.html#ad79da63be4419c3a218acaa990decabe">EventCategory</a> category)</td></tr>
+<tr class="memdesc:a02448606191e9e1cc7869bffd2cb20f7 inherit pub_methods_class_vesper_1_1_event"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the event is in a specific category.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_attribs_class_vesper_1_1_event"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_attribs_class_vesper_1_1_event')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Attributes inherited from <a class="el" href="class_vesper_1_1_event.html">Vesper::Event</a></td></tr>
 <tr class="memitem:ab6bc1a2214e615b994cff03df207a0f1 inherit pub_attribs_class_vesper_1_1_event" id="r_ab6bc1a2214e615b994cff03df207a0f1"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="class_vesper_1_1_event.html#ab6bc1a2214e615b994cff03df207a0f1">Handled</a> = false</td></tr>
+<tr class="memdesc:ab6bc1a2214e615b994cff03df207a0f1 inherit pub_attribs_class_vesper_1_1_event"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether the event has been handled.  <br /></td></tr>
 <tr class="inherit_header pro_methods_class_vesper_1_1_mouse_button_event"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_class_vesper_1_1_mouse_button_event')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Member Functions inherited from <a class="el" href="class_vesper_1_1_mouse_button_event.html">Vesper::MouseButtonEvent</a></td></tr>
 <tr class="memitem:ada06b672494998951a14cd7888f45b50 inherit pro_methods_class_vesper_1_1_mouse_button_event" id="r_ada06b672494998951a14cd7888f45b50"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="class_vesper_1_1_mouse_button_event.html#ada06b672494998951a14cd7888f45b50">MouseButtonEvent</a> (int button)</td></tr>
+<tr class="memdesc:ada06b672494998951a14cd7888f45b50 inherit pro_methods_class_vesper_1_1_mouse_button_event"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a <a class="el" href="class_vesper_1_1_mouse_button_event.html" title="Base class for mouse button events.">MouseButtonEvent</a> with the specified button.  <br /></td></tr>
 <tr class="inherit_header pro_attribs_class_vesper_1_1_mouse_button_event"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_class_vesper_1_1_mouse_button_event')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Attributes inherited from <a class="el" href="class_vesper_1_1_mouse_button_event.html">Vesper::MouseButtonEvent</a></td></tr>
 <tr class="memitem:ac7a0d970c0a29aac9ee2643224a8daa5 inherit pro_attribs_class_vesper_1_1_mouse_button_event" id="r_ac7a0d970c0a29aac9ee2643224a8daa5"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="class_vesper_1_1_mouse_button_event.html#ac7a0d970c0a29aac9ee2643224a8daa5">m_Button</a></td></tr>
 </table>
-<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="class_vesper_1_1_event.html" title="Abstract base class for all events.">Event</a> for registering mouse button releases. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a500223a0b6aaedcaa8b881b01dabfff1" name="a500223a0b6aaedcaa8b881b01dabfff1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a500223a0b6aaedcaa8b881b01dabfff1">&#9670;&#160;</a></span>MouseButtonReleasedEvent()</h2>
 
@@ -155,9 +169,17 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   91</span>            : <a class="code hl_function" href="class_vesper_1_1_mouse_button_event.html#ada06b672494998951a14cd7888f45b50">MouseButtonEvent</a>(button) {</div>
-<div class="line"><span class="lineno">   92</span>        }</div>
-<div class="ttc" id="aclass_vesper_1_1_mouse_button_event_html_ada06b672494998951a14cd7888f45b50"><div class="ttname"><a href="class_vesper_1_1_mouse_button_event.html#ada06b672494998951a14cd7888f45b50">Vesper::MouseButtonEvent::MouseButtonEvent</a></div><div class="ttdeci">MouseButtonEvent(int button)</div><div class="ttdef"><b>Definition</b> MouseEvent.h:63</div></div>
+
+<p>Construct a <a class="el" href="class_vesper_1_1_mouse_button_released_event.html" title="Event for registering mouse button releases.">MouseButtonReleasedEvent</a> with the specified button. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">button</td><td>The mouse button associated with the event. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">  127</span>            : <a class="code hl_function" href="class_vesper_1_1_mouse_button_event.html#ada06b672494998951a14cd7888f45b50">MouseButtonEvent</a>(button) {</div>
+<div class="line"><span class="lineno">  128</span>        }</div>
+<div class="ttc" id="aclass_vesper_1_1_mouse_button_event_html_ada06b672494998951a14cd7888f45b50"><div class="ttname"><a href="class_vesper_1_1_mouse_button_event.html#ada06b672494998951a14cd7888f45b50">Vesper::MouseButtonEvent::MouseButtonEvent</a></div><div class="ttdeci">MouseButtonEvent(int button)</div><div class="ttdoc">Construct a MouseButtonEvent with the specified button.</div><div class="ttdef"><b>Definition</b> MouseEvent.h:88</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="class_vesper_1_1_mouse_button_event.html#ada06b672494998951a14cd7888f45b50">Vesper::MouseButtonEvent::MouseButtonEvent()</a>.</p>
 
@@ -187,13 +209,15 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Convert the event to a string representation. </p>
+
 <p>Reimplemented from <a class="el" href="class_vesper_1_1_event.html#aaba48fc434a2539c5ce000fda6aa7f05">Vesper::Event</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   95</span>        {</div>
-<div class="line"><span class="lineno">   96</span>            std::stringstream ss;</div>
-<div class="line"><span class="lineno">   97</span>            ss &lt;&lt; <span class="stringliteral">&quot;MouseButtonReleasedEvent: &quot;</span> &lt;&lt; <a class="code hl_function" href="class_vesper_1_1_mouse_button_event.html#ace3614a44a91aeb7c90e14fa087d5d43">GetMouseButton</a>();</div>
-<div class="line"><span class="lineno">   98</span>            <span class="keywordflow">return</span> ss.str();</div>
-<div class="line"><span class="lineno">   99</span>        }</div>
-<div class="ttc" id="aclass_vesper_1_1_mouse_button_event_html_ace3614a44a91aeb7c90e14fa087d5d43"><div class="ttname"><a href="class_vesper_1_1_mouse_button_event.html#ace3614a44a91aeb7c90e14fa087d5d43">Vesper::MouseButtonEvent::GetMouseButton</a></div><div class="ttdeci">int GetMouseButton() const</div><div class="ttdef"><b>Definition</b> MouseEvent.h:59</div></div>
+<div class="fragment"><div class="line"><span class="lineno">  132</span>        {</div>
+<div class="line"><span class="lineno">  133</span>            std::stringstream ss;</div>
+<div class="line"><span class="lineno">  134</span>            ss &lt;&lt; <span class="stringliteral">&quot;MouseButtonReleasedEvent: &quot;</span> &lt;&lt; <a class="code hl_function" href="class_vesper_1_1_mouse_button_event.html#ace3614a44a91aeb7c90e14fa087d5d43">GetMouseButton</a>();</div>
+<div class="line"><span class="lineno">  135</span>            <span class="keywordflow">return</span> ss.str();</div>
+<div class="line"><span class="lineno">  136</span>        }</div>
+<div class="ttc" id="aclass_vesper_1_1_mouse_button_event_html_ace3614a44a91aeb7c90e14fa087d5d43"><div class="ttname"><a href="class_vesper_1_1_mouse_button_event.html#ace3614a44a91aeb7c90e14fa087d5d43">Vesper::MouseButtonEvent::GetMouseButton</a></div><div class="ttdeci">int GetMouseButton() const</div><div class="ttdoc">Get the mouse button associated with the event.</div><div class="ttdef"><b>Definition</b> MouseEvent.h:80</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="class_vesper_1_1_mouse_button_event.html#ace3614a44a91aeb7c90e14fa087d5d43">Vesper::MouseButtonEvent::GetMouseButton()</a>.</p>
 

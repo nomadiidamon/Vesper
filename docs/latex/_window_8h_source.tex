@@ -10,38 +10,58 @@
 \DoxyCodeLine{00006\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\ \textcolor{preprocessor}{"{}Vesper/Events/Event.h"{}}}
 \DoxyCodeLine{00007\ }
 \DoxyCodeLine{00008\ \textcolor{keyword}{namespace}\ \doxymbox{\hyperlink{namespace_vesper}{Vesper}}\ \{}
-\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{struct}\ \doxymbox{\hyperlink{struct_vesper_1_1_window_props}{WindowProps}}\ \{}
-\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ std::string\ \doxymbox{\hyperlink{struct_vesper_1_1_window_props_ad62d394e84c5278bfbe42f17f47bbe9a}{Title}};}
-\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ uint32\_t\ \doxymbox{\hyperlink{struct_vesper_1_1_window_props_ad441a3ba7b5ae2b4a9844887978b2f06}{Width}};}
-\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ uint32\_t\ \doxymbox{\hyperlink{struct_vesper_1_1_window_props_a025a36e522347d4d2adef58665d1bd6d}{Height}};}
-\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ WindowProps(\textcolor{keyword}{const}\ std::string\&\ title\ =\ \textcolor{stringliteral}{"{}Vesper\ Engine"{}},}
-\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ width\ =\ 1600,}
-\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ height\ =\ 900)}
-\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ :\ Title(title),\ \doxymbox{\hyperlink{struct_vesper_1_1_window_props_ad441a3ba7b5ae2b4a9844887978b2f06}{Width}}(width),\ \doxymbox{\hyperlink{struct_vesper_1_1_window_props_a025a36e522347d4d2adef58665d1bd6d}{Height}}(height)\ \{\}}
-\DoxyCodeLine{00017\ \ \ \ \ \};}
-\DoxyCodeLine{00018\ }
-\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{class}\ VESPER\_API\ \doxymbox{\hyperlink{class_vesper_1_1_window}{Window}}}
-\DoxyCodeLine{00020\ \ \ \ \ \{}
-\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using}\ \doxymbox{\hyperlink{class_vesper_1_1_window}{EventCallbackFn}}\ =\ \doxymbox{\hyperlink{class_vesper_1_1_window}{std}}::\doxymbox{\hyperlink{class_vesper_1_1_window}{function}}<\textcolor{keywordtype}{void}(\doxymbox{\hyperlink{class_vesper_1_1_window}{Event}}\&)>;}
-\DoxyCodeLine{00023\ }
-\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \string~\doxymbox{\hyperlink{class_vesper_1_1_window_a4125c4f4f15a045803fcdda0f9e3e0ca}{Window}}()\ \{\}}
-\DoxyCodeLine{00025\ }
-\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_window_a77bc221adcd63fd89e0a122dbd606ea5}{OnUpdate}}()\ =\ 0;}
-\DoxyCodeLine{00027\ }
-\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ uint32\_t\ \doxymbox{\hyperlink{class_vesper_1_1_window_a38ba98632ee63ebacb860ca4de56772b}{GetWidth}}()\ \textcolor{keyword}{const}\ =\ 0;}
-\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ uint32\_t\ \doxymbox{\hyperlink{class_vesper_1_1_window_ad675d99e843b9c11cd2b8feb61c62265}{GetHeight}}()\ \textcolor{keyword}{const}\ =\ 0;}
-\DoxyCodeLine{00030\ }
-\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Window\ attributes}}
-\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_window_a60d3a064d370c2957b81cc5e440bb901}{SetEventCallback}}(\textcolor{keyword}{const}\ EventCallbackFn\&\ callback)\ =\ 0;}
-\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_window_aa04e6bda67df742c536f34c5fac5b290}{SetVSync}}(\textcolor{keywordtype}{bool}\ enabled)\ =\ 0;}
-\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_vesper_1_1_window_a9dd654cf7a07088d24667d6b8257df39}{IsVSync}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{comment}{///\ @brief\ Holds\ the\ data\ for\ window\ configuration}}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{struct}\ \doxymbox{\hyperlink{struct_vesper_1_1_window_props}{WindowProps}}\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_vesper_1_1_window_props_ad62d394e84c5278bfbe42f17f47bbe9a}{std}}::\doxymbox{\hyperlink{struct_vesper_1_1_window_props_ad62d394e84c5278bfbe42f17f47bbe9a}{string}}\ \doxymbox{\hyperlink{struct_vesper_1_1_window_props_ad62d394e84c5278bfbe42f17f47bbe9a}{Title}};}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ uint32\_t\ \doxymbox{\hyperlink{struct_vesper_1_1_window_props_ad441a3ba7b5ae2b4a9844887978b2f06}{Width}};}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ uint32\_t\ \doxymbox{\hyperlink{struct_vesper_1_1_window_props_a025a36e522347d4d2adef58665d1bd6d}{Height}};}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Constructor\ to\ initialize\ WindowProps\ with\ given\ or\ default\ values.}}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{comment}{///}}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @param\ title\ The\ title\ of\ the\ window.}}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @param\ width\ The\ width\ of\ the\ window.}}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @param\ height\ The\ height\ of\ the\ window.}}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ WindowProps(\textcolor{keyword}{const}\ std::string\&\ title\ =\ \textcolor{stringliteral}{"{}Vesper\ Engine"{}},}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ width\ =\ 1600,}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ height\ =\ 900)}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ :\ Title(title),\ \doxymbox{\hyperlink{struct_vesper_1_1_window_props_ad441a3ba7b5ae2b4a9844887978b2f06}{Width}}(width),\ \doxymbox{\hyperlink{struct_vesper_1_1_window_props_a025a36e522347d4d2adef58665d1bd6d}{Height}}(height)\ \{\}}
+\DoxyCodeLine{00025\ \ \ \ \ \};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{comment}{///\ @class\ Window}}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{comment}{///\ @brief\ Abstract\ interface\ representing\ an\ application\ window.}}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{class}\ \doxymbox{\hyperlink{class_vesper_1_1_window}{Window}}}
+\DoxyCodeLine{00030\ \ \ \ \ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using}\ \doxymbox{\hyperlink{class_vesper_1_1_window}{EventCallbackFn}}\ =\ \doxymbox{\hyperlink{class_vesper_1_1_window}{std}}::\doxymbox{\hyperlink{class_vesper_1_1_window}{function}}<\textcolor{keywordtype}{void}(\doxymbox{\hyperlink{class_vesper_1_1_window}{Event}}\&)>;}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \string~\doxymbox{\hyperlink{class_vesper_1_1_window_a4125c4f4f15a045803fcdda0f9e3e0ca}{Window}}()\ \{\}}
 \DoxyCodeLine{00035\ }
-\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}*\ \doxymbox{\hyperlink{class_vesper_1_1_window_a4b4b607a2bd868df1672ab69d4f09881}{GetNativeWindow}}()\ \textcolor{keyword}{const}\ =\ 0;}
-\DoxyCodeLine{00037\ }
-\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \doxymbox{\hyperlink{class_vesper_1_1_window_a54fb0dcbcf16390cd9f8f2ebda165523}{Scope}}<\doxymbox{\hyperlink{class_vesper_1_1_window_a54fb0dcbcf16390cd9f8f2ebda165523}{Window}}>\ \doxymbox{\hyperlink{class_vesper_1_1_window_a54fb0dcbcf16390cd9f8f2ebda165523}{Create}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_vesper_1_1_window_a54fb0dcbcf16390cd9f8f2ebda165523}{WindowProps}}\&\ \doxymbox{\hyperlink{class_vesper_1_1_window_a54fb0dcbcf16390cd9f8f2ebda165523}{props}}\ =\ \doxymbox{\hyperlink{class_vesper_1_1_window_a54fb0dcbcf16390cd9f8f2ebda165523}{WindowProps}}());}
-\DoxyCodeLine{00039\ }
-\DoxyCodeLine{00040\ \ \ \ \ \};}
-\DoxyCodeLine{00041\ \}}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Called\ every\ frame\ to\ update\ the\ window.}}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_window_a77bc221adcd63fd89e0a122dbd606ea5}{OnUpdate}}()\ =\ 0;}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Retrieves\ the\ width\ of\ the\ window.}}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ uint32\_t\ \doxymbox{\hyperlink{class_vesper_1_1_window_a38ba98632ee63ebacb860ca4de56772b}{GetWidth}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Retrieves\ the\ height\ of\ the\ window.}}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ uint32\_t\ \doxymbox{\hyperlink{class_vesper_1_1_window_ad675d99e843b9c11cd2b8feb61c62265}{GetHeight}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Sets\ the\ callback\ function\ for\ window\ events.}}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ SetEventCallback(\textcolor{keyword}{const}\ EventCallbackFn\&\ callback)\ =\ 0;}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Sets\ whether\ vertical\ synchronization\ (VSync)\ is\ enabled.}}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_window_aa04e6bda67df742c536f34c5fac5b290}{SetVSync}}(\textcolor{keywordtype}{bool}\ enabled)\ =\ 0;}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Checks\ if\ vertical\ synchronization\ (VSync)\ is\ enabled.}}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_vesper_1_1_window_a9dd654cf7a07088d24667d6b8257df39}{IsVSync}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Retrieves\ the\ native\ window\ handle.}}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}*\ \doxymbox{\hyperlink{class_vesper_1_1_window_a4b4b607a2bd868df1672ab69d4f09881}{GetNativeWindow}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Creates\ a\ window\ instance\ with\ the\ specified\ properties.}}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{comment}{///}}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @param\ props\ The\ properties\ to\ initialize\ the\ window\ with.}}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @return\ A\ scoped\ pointer\ to\ the\ created\ window\ instance.}}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \doxymbox{\hyperlink{class_vesper_1_1_window_a54fb0dcbcf16390cd9f8f2ebda165523}{Scope}}<\doxymbox{\hyperlink{class_vesper_1_1_window_a54fb0dcbcf16390cd9f8f2ebda165523}{Window}}>\ \doxymbox{\hyperlink{class_vesper_1_1_window_a54fb0dcbcf16390cd9f8f2ebda165523}{Create}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_vesper_1_1_window_a54fb0dcbcf16390cd9f8f2ebda165523}{WindowProps}}\&\ \doxymbox{\hyperlink{class_vesper_1_1_window_a54fb0dcbcf16390cd9f8f2ebda165523}{props}}\ =\ \doxymbox{\hyperlink{class_vesper_1_1_window_a54fb0dcbcf16390cd9f8f2ebda165523}{WindowProps}}());}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \};}
+\DoxyCodeLine{00061\ \}}
 
 \end{DoxyCode}

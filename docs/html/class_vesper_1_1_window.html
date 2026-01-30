@@ -98,6 +98,9 @@ $(function(){initNavTree('class_vesper_1_1_window.html','','class_vesper_1_1_win
 </div><!--header-->
 <div class="contents">
 
+<p>Abstract interface representing an application window.  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_window_8h_source.html">Window.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Vesper::Window:</div>
@@ -117,18 +120,28 @@ Public Types</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a4125c4f4f15a045803fcdda0f9e3e0ca" id="r_a4125c4f4f15a045803fcdda0f9e3e0ca"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="#a4125c4f4f15a045803fcdda0f9e3e0ca">~Window</a> ()</td></tr>
 <tr class="memitem:a77bc221adcd63fd89e0a122dbd606ea5" id="r_a77bc221adcd63fd89e0a122dbd606ea5"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a77bc221adcd63fd89e0a122dbd606ea5">OnUpdate</a> ()=0</td></tr>
+<tr class="memdesc:a77bc221adcd63fd89e0a122dbd606ea5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called every frame to update the window.  <br /></td></tr>
 <tr class="memitem:a38ba98632ee63ebacb860ca4de56772b" id="r_a38ba98632ee63ebacb860ca4de56772b"><td class="memItemLeft">virtual uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#a38ba98632ee63ebacb860ca4de56772b">GetWidth</a> () const =0</td></tr>
+<tr class="memdesc:a38ba98632ee63ebacb860ca4de56772b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the width of the window.  <br /></td></tr>
 <tr class="memitem:ad675d99e843b9c11cd2b8feb61c62265" id="r_ad675d99e843b9c11cd2b8feb61c62265"><td class="memItemLeft">virtual uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#ad675d99e843b9c11cd2b8feb61c62265">GetHeight</a> () const =0</td></tr>
+<tr class="memdesc:ad675d99e843b9c11cd2b8feb61c62265"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the height of the window.  <br /></td></tr>
 <tr class="memitem:a60d3a064d370c2957b81cc5e440bb901" id="r_a60d3a064d370c2957b81cc5e440bb901"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a60d3a064d370c2957b81cc5e440bb901">SetEventCallback</a> (const <a class="el" href="#ac908c4b9b5d83ccb8bf159a443833403">EventCallbackFn</a> &amp;callback)=0</td></tr>
+<tr class="memdesc:a60d3a064d370c2957b81cc5e440bb901"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the callback function for window events.  <br /></td></tr>
 <tr class="memitem:aa04e6bda67df742c536f34c5fac5b290" id="r_aa04e6bda67df742c536f34c5fac5b290"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#aa04e6bda67df742c536f34c5fac5b290">SetVSync</a> (bool enabled)=0</td></tr>
+<tr class="memdesc:aa04e6bda67df742c536f34c5fac5b290"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets whether vertical synchronization (VSync) is enabled.  <br /></td></tr>
 <tr class="memitem:a9dd654cf7a07088d24667d6b8257df39" id="r_a9dd654cf7a07088d24667d6b8257df39"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a9dd654cf7a07088d24667d6b8257df39">IsVSync</a> () const =0</td></tr>
+<tr class="memdesc:a9dd654cf7a07088d24667d6b8257df39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if vertical synchronization (VSync) is enabled.  <br /></td></tr>
 <tr class="memitem:a4b4b607a2bd868df1672ab69d4f09881" id="r_a4b4b607a2bd868df1672ab69d4f09881"><td class="memItemLeft">virtual void *&#160;</td><td class="memItemRight"><a class="el" href="#a4b4b607a2bd868df1672ab69d4f09881">GetNativeWindow</a> () const =0</td></tr>
+<tr class="memdesc:a4b4b607a2bd868df1672ab69d4f09881"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the native window handle.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a54fb0dcbcf16390cd9f8f2ebda165523" id="r_a54fb0dcbcf16390cd9f8f2ebda165523"><td class="memItemLeft">static <a class="el" href="namespace_vesper.html#a5425f9aaa2ee4d3761c8ce6b385e0b70">Scope</a>&lt; <a class="el" href="class_vesper_1_1_window.html">Window</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a54fb0dcbcf16390cd9f8f2ebda165523">Create</a> (const <a class="el" href="struct_vesper_1_1_window_props.html">WindowProps</a> &amp;props=<a class="el" href="struct_vesper_1_1_window_props.html">WindowProps</a>())</td></tr>
+<tr class="memdesc:a54fb0dcbcf16390cd9f8f2ebda165523"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a window instance with the specified properties.  <br /></td></tr>
 </table>
-<a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Member Typedef Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Abstract interface representing an application window. </p>
+</div><a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Member Typedef Documentation</h2>
 <a id="ac908c4b9b5d83ccb8bf159a443833403" name="ac908c4b9b5d83ccb8bf159a443833403"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac908c4b9b5d83ccb8bf159a443833403">&#9670;&#160;</a></span>EventCallbackFn</h2>
 
@@ -166,7 +179,7 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   24</span>{}</div>
+<div class="fragment"><div class="line"><span class="lineno">   34</span>{}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -193,6 +206,15 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Creates a window instance with the specified properties. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">props</td><td>The properties to initialize the window with. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A scoped pointer to the created window instance. </dd></dl>
 <div class="fragment"><div class="line"><span class="lineno">   21</span>    {</div>
 <div class="line"><span class="lineno">   22</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="namespace_vesper.html#a37fd1cd7d536a4b07dc0a734f8fde936">CreateScope&lt;WindowsWindow&gt;</a>(props);</div>
 <div class="line"><span class="lineno">   23</span>    }</div>
@@ -223,9 +245,11 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Retrieves the height of the window. </p>
+
 <p>Implemented in <a class="el" href="class_vesper_1_1_windows_window.html#ab89ca1907dc2a493821fe9bf141ecd07">Vesper::WindowsWindow</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="class_vesper_1_1_im_gui_layer.html#ad32cb49bc5bffd27630085d5b273c5ad">Vesper::ImGuiLayer::End()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="class_vesper_1_1_im_gui_layer.html#ad32cb49bc5bffd27630085d5b273c5ad">Vesper::ImGuiLayer::End()</a>, and <a class="el" href="class_sandbox2_d.html#abc796def0880d3ca2dde9a010c4bf70c">Sandbox2D::OnUpdate()</a>.</p>
 
 </div>
 </div>
@@ -251,6 +275,8 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Retrieves the native window handle. </p>
 
 <p>Implemented in <a class="el" href="class_vesper_1_1_windows_window.html#a3de8b964724d127bbe13ac88cb2dd903">Vesper::WindowsWindow</a>.</p>
 
@@ -281,9 +307,11 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Retrieves the width of the window. </p>
+
 <p>Implemented in <a class="el" href="class_vesper_1_1_windows_window.html#ad3cef4871d3a311155dfe997985e5a2a">Vesper::WindowsWindow</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="class_vesper_1_1_im_gui_layer.html#ad32cb49bc5bffd27630085d5b273c5ad">Vesper::ImGuiLayer::End()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="class_vesper_1_1_im_gui_layer.html#ad32cb49bc5bffd27630085d5b273c5ad">Vesper::ImGuiLayer::End()</a>, and <a class="el" href="class_sandbox2_d.html#abc796def0880d3ca2dde9a010c4bf70c">Sandbox2D::OnUpdate()</a>.</p>
 
 </div>
 </div>
@@ -309,6 +337,8 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Checks if vertical synchronization (VSync) is enabled. </p>
 
 <p>Implemented in <a class="el" href="class_vesper_1_1_windows_window.html#a111250e0545c201981741db703eb0b5d">Vesper::WindowsWindow</a>.</p>
 
@@ -337,6 +367,8 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Called every frame to update the window. </p>
+
 <p>Implemented in <a class="el" href="class_vesper_1_1_windows_window.html#a6658a3ef114f2f3fc5c775c65e37b958">Vesper::WindowsWindow</a>.</p>
 
 </div>
@@ -364,6 +396,8 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Sets the callback function for window events. </p>
+
 <p>Implemented in <a class="el" href="class_vesper_1_1_windows_window.html#a3481fa772c2853a5cec99498e095401d">Vesper::WindowsWindow</a>.</p>
 
 </div>
@@ -390,6 +424,8 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Sets whether vertical synchronization (VSync) is enabled. </p>
 
 <p>Implemented in <a class="el" href="class_vesper_1_1_windows_window.html#ac24a0402e8393ae2ab558a6574302217">Vesper::WindowsWindow</a>.</p>
 

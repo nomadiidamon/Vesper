@@ -26,8 +26,8 @@
 \DoxyCodeLine{00022\ }
 \DoxyCodeLine{00023\ \ \ \ \ \textcolor{comment}{///\ WIP}}
 \DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{struct}\ \doxymbox{\hyperlink{namespace_vesper_struct_vesper_1_1_application_settings}{ApplicationSettings}}\ \{}
-\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ std::string\ \doxymbox{\hyperlink{namespace_vesper_aae07ab83a36c017b0c8a2e7be6c1f622}{ApplicationName}}\ =\ \textcolor{stringliteral}{"{}Vesper\ Application"{}};}
-\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ std::string\ \doxymbox{\hyperlink{namespace_vesper_a022651e24a0f24c494c268171d6e1185}{WorkingDirectory}};}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_aae07ab83a36c017b0c8a2e7be6c1f622}{std}}::\doxymbox{\hyperlink{namespace_vesper_aae07ab83a36c017b0c8a2e7be6c1f622}{string}}\ \doxymbox{\hyperlink{namespace_vesper_aae07ab83a36c017b0c8a2e7be6c1f622}{ApplicationName}}\ =\ \textcolor{stringliteral}{"{}Vesper\ Application"{}};}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_a022651e24a0f24c494c268171d6e1185}{std}}::\doxymbox{\hyperlink{namespace_vesper_a022651e24a0f24c494c268171d6e1185}{string}}\ \doxymbox{\hyperlink{namespace_vesper_a022651e24a0f24c494c268171d6e1185}{WorkingDirectory}};}
 \DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_renderer_a_p_i}{RendererAPI}}::\doxymbox{\hyperlink{class_vesper_1_1_renderer_a_p_i_acbef8f1a2c9546387b6513640c5c7995}{API}}\ RendererAPI\ =\ \doxymbox{\hyperlink{class_vesper_1_1_renderer_a_p_i}{RendererAPI}}\doxymbox{\hyperlink{class_vesper_1_1_renderer_a_p_i_acbef8f1a2c9546387b6513640c5c7995a760716b590ee7c0adc25f434f577d8be}{::}}\doxymbox{\hyperlink{class_vesper_1_1_renderer_a_p_i_acbef8f1a2c9546387b6513640c5c7995}{API}}\doxymbox{\hyperlink{class_vesper_1_1_renderer_a_p_i_acbef8f1a2c9546387b6513640c5c7995a760716b590ee7c0adc25f434f577d8be}{::}}\doxymbox{\hyperlink{class_vesper_1_1_renderer_a_p_i_acbef8f1a2c9546387b6513640c5c7995a760716b590ee7c0adc25f434f577d8be}{OpenGL}};}
 \DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ uint32\_t\ \doxymbox{\hyperlink{namespace_vesper_a37c7f9b296cb625432b51cc341bdceb3}{Width}}\ =\ 1280;}
 \DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ uint32\_t\ \doxymbox{\hyperlink{namespace_vesper_acb36b4212448908d78bb98c032059e2f}{Height}}\ =\ 720;}
@@ -36,42 +36,68 @@
 \DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{namespace_vesper_a8cca612d7aafd0950a74094c8c130884}{EnableVSync}}\ =\ \textcolor{keyword}{false};}
 \DoxyCodeLine{00033\ \ \ \ \ \};}
 \DoxyCodeLine{00034\ }
-\DoxyCodeLine{00035\ }
-\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{class}\ \doxymbox{\hyperlink{class_vesper_1_1_application}{Application}}}
-\DoxyCodeLine{00037\ \ \ \ \ \{}
-\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_application_adb6d84492e607574848e77d5206c5567}{Application}}(\textcolor{keyword}{const}\ std::string\&\ name\ =\ \textcolor{stringliteral}{"{}"{}});}
-\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \string~\doxymbox{\hyperlink{class_vesper_1_1_application_ae112679f4b4502e15b4071eadbbbc865}{Application}}();}
-\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_application_ab3676dbe9a0e9394759ecca29c0ded04}{Run}}();}
-\DoxyCodeLine{00042\ }
-\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_application_a6b671a553ef9f81ec0394c7de71bff16}{OnEvent}}(\doxymbox{\hyperlink{class_vesper_1_1_event}{Event}}\&\ e);}
-\DoxyCodeLine{00044\ }
-\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_application_ab714953686aac886f76beb76378a18d9}{PushLayer}}(\doxymbox{\hyperlink{class_vesper_1_1_layer}{Layer}}*\ layer);}
-\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_application_ae10c674888e1ed9864c1f9b080b8af7f}{PushOverlay}}(\doxymbox{\hyperlink{class_vesper_1_1_layer}{Layer}}*\ overlay);}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{comment}{///\ @class\ Application}}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{comment}{///\ @brief\ The\ core\ application\ class\ that\ manages\ the\ main\ loop,\ window,\ layers,\ and\ event\ handling.}}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{class}\ \doxymbox{\hyperlink{class_vesper_1_1_application}{Application}}}
+\DoxyCodeLine{00038\ \ \ \ \ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Constructs\ the\ Application\ with\ the\ given\ name.}}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{comment}{///}}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @param\ name\ The\ name\ of\ the\ application.\ Defaults\ to\ an\ empty\ string.}}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ Application(\textcolor{keyword}{const}\ std::string\&\ name\ =\ \textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \string~\doxymbox{\hyperlink{class_vesper_1_1_application_ae112679f4b4502e15b4071eadbbbc865}{Application}}();}
 \DoxyCodeLine{00047\ }
-\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_application_af36d1558fe1fef29468f3d58380a013b}{Close}}();}
-\DoxyCodeLine{00049\ }
-\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_im_gui_layer}{ImGuiLayer}}*\ \doxymbox{\hyperlink{class_vesper_1_1_application_a9b49ca5273462312ee8439ed9897bb73}{GetImGuiLayer}}()\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_application_a7fba99c6534f6508ec077ad9970c9607}{m\_ImGuiLayer}};\ \}}
-\DoxyCodeLine{00051\ }
-\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \doxymbox{\hyperlink{class_vesper_1_1_application}{Application}}\&\ \doxymbox{\hyperlink{class_vesper_1_1_application_a7edbd0f4804f897c09ad869239a97ffa}{Get}}()\ \{\ \textcolor{keywordflow}{return}\ *\doxymbox{\hyperlink{class_vesper_1_1_application_a3d3850bb1b1291c36ec2cbef3c1a87ad}{s\_Instance}};\ \}}
-\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \doxymbox{\hyperlink{class_vesper_1_1_window}{Window}}\&\ \doxymbox{\hyperlink{class_vesper_1_1_application_af90f220d05b740b6b1596d915b3efab3}{GetWindow}}()\ \{\ \textcolor{keywordflow}{return}\ *m\_Window;\ \}}
-\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_vesper_1_1_application_a937a3b3566c050659dbab04320974b9e}{OnWindowClose}}(\doxymbox{\hyperlink{class_vesper_1_1_window_close_event}{WindowCloseEvent}}\&\ e);}
-\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_vesper_1_1_application_a767d42619845c71cd63b6ddd1deee009}{OnWindowResize}}(\doxymbox{\hyperlink{class_vesper_1_1_window_resize_event}{WindowResizeEvent}}\&\ e);}
-\DoxyCodeLine{00057\ }
-\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_application_ae4194db590b9cab97f767453c2d8b608}{Scope}}<\doxymbox{\hyperlink{class_vesper_1_1_application_ae4194db590b9cab97f767453c2d8b608}{Window}}>\ \doxymbox{\hyperlink{class_vesper_1_1_application_ae4194db590b9cab97f767453c2d8b608}{m\_Window}};}
-\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_im_gui_layer}{ImGuiLayer}}*\ \doxymbox{\hyperlink{class_vesper_1_1_application_a7fba99c6534f6508ec077ad9970c9607}{m\_ImGuiLayer}};}
-\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_vesper_1_1_application_a81b932f66c601f9f6e52203a867dc54b}{m\_Running}}\ =\ \textcolor{keyword}{true};}
-\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_vesper_1_1_application_ae86e31eded446d957736b5731045194f}{m\_Minimized}}\ =\ \textcolor{keyword}{false};}
-\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{LayerStack}}\ \doxymbox{\hyperlink{class_vesper_1_1_application_ade1e4bed7a88b050af5118b65e7e9fed}{m\_LayerStack}};}
-\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_vesper_1_1_application_a7174719df952644aaf2056f5f7078648}{m\_LastFrameTime}}\ =\ 0.0f;}
-\DoxyCodeLine{00064\ }
-\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \doxymbox{\hyperlink{class_vesper_1_1_application}{Application}}*\ \doxymbox{\hyperlink{class_vesper_1_1_application_a3d3850bb1b1291c36ec2cbef3c1a87ad}{s\_Instance}};}
-\DoxyCodeLine{00067\ \ \ \ \ \};}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Starts\ the\ main\ application\ loop.}}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_application_ab3676dbe9a0e9394759ecca29c0ded04}{Run}}();}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Handles\ incoming\ events\ and\ dispatches\ them\ to\ the\ appropriate\ handlers.}}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_application_a6b671a553ef9f81ec0394c7de71bff16}{OnEvent}}(\doxymbox{\hyperlink{class_vesper_1_1_event}{Event}}\&\ e);}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Adds\ a\ layer\ to\ the\ application\ layer\ stack.}}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_application_ab714953686aac886f76beb76378a18d9}{PushLayer}}(\doxymbox{\hyperlink{class_vesper_1_1_layer}{Layer}}*\ layer);}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Adds\ an\ overlay\ layer\ to\ the\ application\ layer\ stack.}}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_application_ae10c674888e1ed9864c1f9b080b8af7f}{PushOverlay}}(\doxymbox{\hyperlink{class_vesper_1_1_layer}{Layer}}*\ overlay);}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Closes\ the\ application.}}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_application_af36d1558fe1fef29468f3d58380a013b}{Close}}();}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Retrieves\ the\ ImGui\ layer.}}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_im_gui_layer}{ImGuiLayer}}*\ \doxymbox{\hyperlink{class_vesper_1_1_application_a9b49ca5273462312ee8439ed9897bb73}{GetImGuiLayer}}()\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_application_a7fba99c6534f6508ec077ad9970c9607}{m\_ImGuiLayer}};\ \}}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Retrieves\ the\ singleton\ instance\ of\ the\ Application.}}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \doxymbox{\hyperlink{class_vesper_1_1_application}{Application}}\&\ \doxymbox{\hyperlink{class_vesper_1_1_application_a7edbd0f4804f897c09ad869239a97ffa}{Get}}()\ \{\ \textcolor{keywordflow}{return}\ *\doxymbox{\hyperlink{class_vesper_1_1_application_a3d3850bb1b1291c36ec2cbef3c1a87ad}{s\_Instance}};\ \}}
 \DoxyCodeLine{00068\ }
-\DoxyCodeLine{00069\ \ \ \ \ \textcolor{comment}{//\ To\ be\ defined\ in\ CLIENT}}
-\DoxyCodeLine{00070\ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_application}{Application}}*\ \doxymbox{\hyperlink{namespace_vesper_a43e1ca989eabb42f3b23b79517ff1a65}{CreateApplication}}();}
-\DoxyCodeLine{00071\ \}}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Retrieves\ the\ application\ window.}}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \doxymbox{\hyperlink{class_vesper_1_1_window}{Window}}\&\ \doxymbox{\hyperlink{class_vesper_1_1_application_af90f220d05b740b6b1596d915b3efab3}{GetWindow}}()\ \{\ \textcolor{keywordflow}{return}\ *m\_Window;\ \}}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Event\ handler\ for\ window\ close\ events.}}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_vesper_1_1_application_a937a3b3566c050659dbab04320974b9e}{OnWindowClose}}(\doxymbox{\hyperlink{class_vesper_1_1_window_close_event}{WindowCloseEvent}}\&\ e);}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Event\ handler\ for\ window\ resize\ events.}}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_vesper_1_1_application_a767d42619845c71cd63b6ddd1deee009}{OnWindowResize}}(\doxymbox{\hyperlink{class_vesper_1_1_window_resize_event}{WindowResizeEvent}}\&\ e);}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Initializes\ the\ application.}}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_application_ae4194db590b9cab97f767453c2d8b608}{Scope}}<\doxymbox{\hyperlink{class_vesper_1_1_application_ae4194db590b9cab97f767453c2d8b608}{Window}}>\ \doxymbox{\hyperlink{class_vesper_1_1_application_ae4194db590b9cab97f767453c2d8b608}{m\_Window}};}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ ImGui\ layer\ for\ rendering\ GUI\ elements}}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_im_gui_layer}{ImGuiLayer}}*\ \doxymbox{\hyperlink{class_vesper_1_1_application_a7fba99c6534f6508ec077ad9970c9607}{m\_ImGuiLayer}};}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Flag\ indicating\ whether\ the\ application\ is\ running.}}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_vesper_1_1_application_a81b932f66c601f9f6e52203a867dc54b}{m\_Running}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Flag\ indicating\ whether\ the\ application\ is\ minimized.}}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_vesper_1_1_application_ae86e31eded446d957736b5731045194f}{m\_Minimized}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Stack\ of\ layers\ managed\ by\ the\ application.}}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{LayerStack}}\ \doxymbox{\hyperlink{class_vesper_1_1_application_ade1e4bed7a88b050af5118b65e7e9fed}{m\_LayerStack}};}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Time\ of\ the\ last\ frame,\ used\ for\ calculating\ timestep.}}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_vesper_1_1_application_a7174719df952644aaf2056f5f7078648}{m\_LastFrameTime}}\ =\ 0.0f;}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \doxymbox{\hyperlink{class_vesper_1_1_application}{Application}}*\ \doxymbox{\hyperlink{class_vesper_1_1_application_a3d3850bb1b1291c36ec2cbef3c1a87ad}{s\_Instance}};}
+\DoxyCodeLine{00093\ \ \ \ \ \};}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{comment}{//\ To\ be\ defined\ in\ CLIENT}}
+\DoxyCodeLine{00096\ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_application}{Application}}*\ \doxymbox{\hyperlink{namespace_vesper_ad515973d88dbc403525505f804b420e4}{CreateApplication}}();}
+\DoxyCodeLine{00097\ \}}
 
 \end{DoxyCode}

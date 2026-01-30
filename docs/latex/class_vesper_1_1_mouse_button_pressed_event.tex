@@ -2,6 +2,11 @@
 \hypertarget{class_vesper_1_1_mouse_button_pressed_event}{}\label{class_vesper_1_1_mouse_button_pressed_event}\index{Vesper::MouseButtonPressedEvent@{Vesper::MouseButtonPressedEvent}}
 
 
+\doxylink{class_vesper_1_1_event}{Event} for registering mouse button presses.  
+
+
+
+
 {\ttfamily \+\#include $<$Mouse\+Event.\+h$>$}
 
 Inheritance diagram for Vesper::\+Mouse\+Button\+Pressed\+Event:\+\begin{figure}[H]
@@ -14,44 +19,47 @@ Inheritance diagram for Vesper::\+Mouse\+Button\+Pressed\+Event:\+\begin{figure}
 \begin{DoxyCompactItemize}
 \item 
 \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_pressed_event_a3924c42eeceae9390a16a2d750b4a832}{Mouse\+Button\+Pressed\+Event}} (int button)
-\item 
+\begin{DoxyCompactList}\small\item\em Construct a \doxylink{class_vesper_1_1_mouse_button_pressed_event}{Mouse\+Button\+Pressed\+Event} with the specified button. \end{DoxyCompactList}\item 
 std::\+string \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_pressed_event_a9cc088a6bc2d238bb6e4df9107cbea72}{To\+String}} () const override
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Convert the event to a string representation. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event}{Vesper::\+\+Mouse\+Button\+Event}}}
 \begin{DoxyCompactItemize}
 \item 
 int \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event_ace3614a44a91aeb7c90e14fa087d5d43}{Get\+Mouse\+Button}} () const
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Get the mouse button associated with the event. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_vesper_1_1_event}{Vesper::\+\+Event}}}
 \begin{DoxyCompactItemize}
 \item 
 virtual \doxymbox{\hyperlink{class_vesper_1_1_event_a516fc6585a1ca21f7d73fc4deb461ee2}{\texorpdfstring{$\sim$}{\string~}\+Event}} ()=default
 \item 
 virtual \doxymbox{\hyperlink{namespace_vesper_ada4bc37927ce22c44ea0083a224d3bb5}{Event\+Type}} \doxymbox{\hyperlink{class_vesper_1_1_event_a82499595903097f8d2a81e9b0ebfba3d}{Get\+Event\+Type}} () const =0
-\item 
+\begin{DoxyCompactList}\small\item\em Get the type of the event. \end{DoxyCompactList}\item 
 virtual const char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_vesper_1_1_event_af39d90d8ec2e84488c593c517a8e9b6e}{Get\+Name}} () const =0
-\item 
+\begin{DoxyCompactList}\small\item\em Get the name of the event. \end{DoxyCompactList}\item 
 virtual int \doxymbox{\hyperlink{class_vesper_1_1_event_a71e621bec32702d59c7e7ed82c53ac08}{Get\+Category\+Flags}} () const =0
-\item 
+\begin{DoxyCompactList}\small\item\em Get the category flags of the event. \end{DoxyCompactList}\item 
 bool \doxymbox{\hyperlink{class_vesper_1_1_event_a02448606191e9e1cc7869bffd2cb20f7}{Is\+In\+Category}} (\doxymbox{\hyperlink{namespace_vesper_ad79da63be4419c3a218acaa990decabe}{Event\+Category}} category)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Check if the event is in a specific category. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Additional Inherited Members}
 \doxysubsection*{Public Attributes inherited from \doxymbox{\hyperlink{class_vesper_1_1_event}{Vesper::\+\+Event}}}
 \begin{DoxyCompactItemize}
 \item 
 bool \doxymbox{\hyperlink{class_vesper_1_1_event_ab6bc1a2214e615b994cff03df207a0f1}{Handled}} = false
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Indicates whether the event has been handled. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Member Functions inherited from \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event}{Vesper::\+\+Mouse\+Button\+Event}}}
 \begin{DoxyCompactItemize}
 \item 
 \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event_ada06b672494998951a14cd7888f45b50}{Mouse\+Button\+Event}} (int button)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Construct a \doxylink{class_vesper_1_1_mouse_button_event}{Mouse\+Button\+Event} with the specified button. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event}{Vesper::\+\+Mouse\+Button\+Event}}}
 \begin{DoxyCompactItemize}
 \item 
 int \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event_ac7a0d970c0a29aac9ee2643224a8daa5}{m\+\_\+\+Button}}
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+\doxylink{class_vesper_1_1_event}{Event} for registering mouse button presses. 
 
 \label{doc-constructors}
 \Hypertarget{class_vesper_1_1_mouse_button_pressed_event_doc-constructors}
@@ -63,9 +71,18 @@ int \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event_ac7a0d970c0a29aac9e
 Vesper::\+\+Mouse\+Button\+Pressed\+Event::\+\+Mouse\+Button\+Pressed\+Event (\begin{DoxyParamCaption}\item[{int}]{button}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
+
+Construct a \doxylink{class_vesper_1_1_mouse_button_pressed_event}{Mouse\+Button\+Pressed\+Event} with the specified button. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em button} & The mouse button associated with the event. \\
+\hline
+\end{DoxyParams}
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event_ada06b672494998951a14cd7888f45b50}{MouseButtonEvent}}(button)\ \{}
-\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event_ada06b672494998951a14cd7888f45b50}{MouseButtonEvent}}(button)\ \{}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \}}
 
 \end{DoxyCode}
 
@@ -85,15 +102,19 @@ std::\+string Vesper::\+\+Mouse\+Button\+Pressed\+Event::\+\+To\+String (\begin{
 
 
 
+Convert the event to a string representation. 
+
+
+
 Reimplemented from \doxymbox{\hyperlink{class_vesper_1_1_event_aaba48fc434a2539c5ce000fda6aa7f05}{Vesper::\+\+Event}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ std::stringstream\ ss;}
-\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ ss\ <<\ \textcolor{stringliteral}{"{}MouseButtonPressedEvent:\ "{}}\ <<\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event_ace3614a44a91aeb7c90e14fa087d5d43}{GetMouseButton}}();}
-\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ss.str();}
-\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ std::stringstream\ ss;}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ ss\ <<\ \textcolor{stringliteral}{"{}MouseButtonPressedEvent:\ "{}}\ <<\ \doxymbox{\hyperlink{class_vesper_1_1_mouse_button_event_ace3614a44a91aeb7c90e14fa087d5d43}{GetMouseButton}}();}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ss.str();}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \}}
 
 \end{DoxyCode}
 

@@ -98,6 +98,9 @@ $(function(){initNavTree('struct_vesper_1_1_camera_component.html','','struct_ve
 </div><!--header-->
 <div class="contents">
 
+<p>Component that holds camera data.  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_components_8h_source.html">Components.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -108,10 +111,15 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:ae088ce563caf2cfe105fef3ed19af305" id="r_ae088ce563caf2cfe105fef3ed19af305"><td class="memItemLeft"><a class="el" href="class_vesper_1_1_scene_camera.html">SceneCamera</a>&#160;</td><td class="memItemRight"><a class="el" href="#ae088ce563caf2cfe105fef3ed19af305">Camera</a></td></tr>
+<tr class="memdesc:ae088ce563caf2cfe105fef3ed19af305"><td class="mdescLeft">&#160;</td><td class="mdescRight">The scene camera.  <br /></td></tr>
 <tr class="memitem:a314710621af84eb010cae49491208b86" id="r_a314710621af84eb010cae49491208b86"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a314710621af84eb010cae49491208b86">Primary</a> = true</td></tr>
+<tr class="memdesc:a314710621af84eb010cae49491208b86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether this camera is the primary camera.  <br /></td></tr>
 <tr class="memitem:af3af61f36ac41376c70a624b7496558a" id="r_af3af61f36ac41376c70a624b7496558a"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#af3af61f36ac41376c70a624b7496558a">FixedAspectRatio</a> = false</td></tr>
+<tr class="memdesc:af3af61f36ac41376c70a624b7496558a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether the aspect ratio is fixed.  <br /></td></tr>
 </table>
-<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Component that holds camera data. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a2d47ed24eeb14999a2242d74d612c017" name="a2d47ed24eeb14999a2242d74d612c017"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2d47ed24eeb14999a2242d74d612c017">&#9670;&#160;</a></span>CameraComponent() <span class="overload">[1/2]</span></h2>
 
@@ -175,6 +183,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>The scene camera. </p>
+
 </div>
 </div>
 <a id="af3af61f36ac41376c70a624b7496558a" name="af3af61f36ac41376c70a624b7496558a"></a>
@@ -189,6 +199,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Whether the aspect ratio is fixed. </p>
+
 </div>
 </div>
 <a id="a314710621af84eb010cae49491208b86" name="a314710621af84eb010cae49491208b86"></a>
@@ -202,6 +214,9 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Whether this camera is the primary camera. </p>
+<p>If multiple cameras exist, the primary camera for rendering will be the first one found marked as primary. </p>
 
 </div>
 </div>

@@ -2,6 +2,11 @@
 \hypertarget{struct_vesper_1_1_sub_texture_component}{}\label{struct_vesper_1_1_sub_texture_component}\index{Vesper::SubTextureComponent@{Vesper::SubTextureComponent}}
 
 
+Component that holds sub-\/texture data for sprites.  
+
+
+
+
 {\ttfamily \+\#include $<$Components.\+h$>$}
 
 \doxysubsubsection*{Public Member Functions}
@@ -10,15 +15,15 @@
 \doxymbox{\hyperlink{struct_vesper_1_1_sub_texture_component_aea283ecd27977c50e2885c1219e95840}{Sub\+Texture\+Component}} ()=default
 \item 
 \doxymbox{\hyperlink{struct_vesper_1_1_sub_texture_component_ada282e6e8f6e21fec5beb4d4edbb9106}{Sub\+Texture\+Component}} (const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_texture2_d}{Texture2D}} $>$ \&texture)
-\item 
+\begin{DoxyCompactList}\small\item\em Constructor that initializes the sub-\/texture from a full texture. \end{DoxyCompactList}\item 
 \doxymbox{\hyperlink{struct_vesper_1_1_sub_texture_component_a23858ac8ae5b7dcd17101f587ea52357}{Sub\+Texture\+Component}} (const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d}{Sub\+Texture2D}} $>$ \&sub\+Texture)
-\item 
+\begin{DoxyCompactList}\small\item\em Constructor that initializes the sub-\/texture directly. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{struct_vesper_1_1_sub_texture_component_ae375ea11b9b216a33fa8ac198e84a9ed}{Set\+Texture}} (const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_texture2_d}{Texture2D}} $>$ \&texture)
-\item 
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{struct_vesper_1_1_sub_texture_component_ae07fe023442ca4a14301e46ee23f1f7d}{Set\+Tiling\+Factor}} (const glm::\+vec2 \&tiling)
-\item 
+\begin{DoxyCompactList}\small\item\em Sets the tiling factor for the sub-\/texture. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{struct_vesper_1_1_sub_texture_component_a1cc3f86894ae739160989d5adf085ebc}{Set\+Offset}} (const glm::\+vec2 \&offset)
-\item 
+\begin{DoxyCompactList}\small\item\em Sets the offset for the sub-\/texture. \end{DoxyCompactList}\item 
 \doxymbox{\hyperlink{struct_vesper_1_1_sub_texture_component_a908b2c3e44168aa2515623e72ec06f8b}{operator Ref$<$ Sub\+Texture2\+D $>$ \&}} ()
 \item 
 \doxymbox{\hyperlink{struct_vesper_1_1_sub_texture_component_a412a9d20c0a0082e1cbea6c397fb58bd}{operator const Ref$<$ Sub\+Texture2\+D $>$ \&}} () const
@@ -29,12 +34,15 @@ void \doxymbox{\hyperlink{struct_vesper_1_1_sub_texture_component_a1cc3f86894ae7
 \begin{DoxyCompactItemize}
 \item 
 \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d}{Sub\+Texture2D}} $>$ \doxymbox{\hyperlink{struct_vesper_1_1_sub_texture_component_ac1d16aab60b9c8eb56509bae122282ff}{Sub\+Texture}}
-\item 
+\begin{DoxyCompactList}\small\item\em The sub-\/texture reference. \end{DoxyCompactList}\item 
 glm::\+vec2 \doxymbox{\hyperlink{struct_vesper_1_1_sub_texture_component_ad0fae7fe876f41da5b70873bb3eb74f7}{Tiling\+Factor}} = \{ 1.\+0f, 1.\+0f \}
-\item 
+\begin{DoxyCompactList}\small\item\em Tiling factor for the sub-\/texture. \end{DoxyCompactList}\item 
 glm::\+vec2 \doxymbox{\hyperlink{struct_vesper_1_1_sub_texture_component_a49bfa08639639e1e83e0f793aae92e66}{Offset}} = \{ 0.\+0f, 0.\+0f \}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Offset for the sub-\/texture. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Component that holds sub-\/texture data for sprites. 
 
 \label{doc-constructors}
 \Hypertarget{struct_vesper_1_1_sub_texture_component_doc-constructors}
@@ -52,11 +60,23 @@ Vesper::\+\+Sub\+Texture\+Component::\+\+Sub\+Texture\+Component (\begin{DoxyPar
 Vesper::\+\+Sub\+Texture\+Component::\+\+Sub\+Texture\+Component (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_texture2_d}{Texture2D}} $>$ \&}]{texture}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
+
+Constructor that initializes the sub-\/texture from a full texture. 
+
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{struct_vesper_1_1_sub_texture_component_ac1d16aab60b9c8eb56509bae122282ff}{SubTexture}}(\doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d_acaf4be5d42185bb62a8be95c4c15bc18}{SubTexture2D::CreateFromCoords}}(texture,\ \{\ 0,\ 0\ \},\ \{\ texture-\/>GetWidth(),\ texture-\/>GetHeight()\ \}))\ \{}
-\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{struct_vesper_1_1_sub_texture_component_ac1d16aab60b9c8eb56509bae122282ff}{SubTexture}}(\doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d_acaf4be5d42185bb62a8be95c4c15bc18}{SubTexture2D::CreateFromCoords}}(texture,\ \{\ 0,\ 0\ \},\ \{\ texture-\/>GetWidth(),\ texture-\/>GetHeight()\ \}))\ \{}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \}}
 
 \end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{struct_vesper_1_1_sub_texture_component_ada282e6e8f6e21fec5beb4d4edbb9106}{Sub\+Texture\+Component()}}.
+
+
+
+Referenced by \doxymbox{\hyperlink{struct_vesper_1_1_sub_texture_component_a23858ac8ae5b7dcd17101f587ea52357}{Sub\+Texture\+Component()}}, and \doxymbox{\hyperlink{struct_vesper_1_1_sub_texture_component_ada282e6e8f6e21fec5beb4d4edbb9106}{Sub\+Texture\+Component()}}.
+
 \Hypertarget{struct_vesper_1_1_sub_texture_component_a23858ac8ae5b7dcd17101f587ea52357}\index{Vesper::SubTextureComponent@{Vesper::SubTextureComponent}!SubTextureComponent@{SubTextureComponent}}
 \index{SubTextureComponent@{SubTextureComponent}!Vesper::SubTextureComponent@{Vesper::SubTextureComponent}}
 \doxysubsubsection{\texorpdfstring{SubTextureComponent()}{SubTextureComponent()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
@@ -64,11 +84,19 @@ Vesper::\+\+Sub\+Texture\+Component::\+\+Sub\+Texture\+Component (\begin{DoxyPar
 Vesper::\+\+Sub\+Texture\+Component::\+\+Sub\+Texture\+Component (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d}{Sub\+Texture2D}} $>$ \&}]{sub\+Texture}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
+
+Constructor that initializes the sub-\/texture directly. 
+
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{struct_vesper_1_1_sub_texture_component_ac1d16aab60b9c8eb56509bae122282ff}{SubTexture}}(subTexture)\ \{}
-\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{struct_vesper_1_1_sub_texture_component_ac1d16aab60b9c8eb56509bae122282ff}{SubTexture}}(subTexture)\ \{}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \}}
 
 \end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{struct_vesper_1_1_sub_texture_component_ada282e6e8f6e21fec5beb4d4edbb9106}{Sub\+Texture\+Component()}}.
+
 
 
 \label{doc-func-members}
@@ -82,7 +110,7 @@ Vesper::\+\+Sub\+Texture\+Component::\+\+Sub\+Texture\+Component (\begin{DoxyPar
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00119\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{struct_vesper_1_1_sub_texture_component_ac1d16aab60b9c8eb56509bae122282ff}{SubTexture}};\ \}}
+\DoxyCodeLine{00158\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{struct_vesper_1_1_sub_texture_component_ac1d16aab60b9c8eb56509bae122282ff}{SubTexture}};\ \}}
 
 \end{DoxyCode}
 \Hypertarget{struct_vesper_1_1_sub_texture_component_a412a9d20c0a0082e1cbea6c397fb58bd}\index{Vesper::SubTextureComponent@{Vesper::SubTextureComponent}!operator const Ref$<$ SubTexture2D $>$ \&@{operator const Ref$<$ SubTexture2D $>$ \&}}
@@ -93,7 +121,7 @@ Vesper::\+\+Sub\+Texture\+Component::\+operator const \doxymbox{\hyperlink{names
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00118\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{struct_vesper_1_1_sub_texture_component_ac1d16aab60b9c8eb56509bae122282ff}{SubTexture}};\ \}}
+\DoxyCodeLine{00157\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{struct_vesper_1_1_sub_texture_component_ac1d16aab60b9c8eb56509bae122282ff}{SubTexture}};\ \}}
 
 \end{DoxyCode}
 \Hypertarget{struct_vesper_1_1_sub_texture_component_a908b2c3e44168aa2515623e72ec06f8b}\index{Vesper::SubTextureComponent@{Vesper::SubTextureComponent}!operator Ref$<$ SubTexture2D $>$ \&@{operator Ref$<$ SubTexture2D $>$ \&}}
@@ -104,7 +132,7 @@ Vesper::\+\+Sub\+Texture\+Component::\+operator \doxymbox{\hyperlink{namespace_v
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00117\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{struct_vesper_1_1_sub_texture_component_ac1d16aab60b9c8eb56509bae122282ff}{SubTexture}};\ \}}
+\DoxyCodeLine{00156\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{struct_vesper_1_1_sub_texture_component_ac1d16aab60b9c8eb56509bae122282ff}{SubTexture}};\ \}}
 
 \end{DoxyCode}
 \Hypertarget{struct_vesper_1_1_sub_texture_component_a1cc3f86894ae739160989d5adf085ebc}\index{Vesper::SubTextureComponent@{Vesper::SubTextureComponent}!SetOffset@{SetOffset}}
@@ -114,10 +142,14 @@ Vesper::\+\+Sub\+Texture\+Component::\+operator \doxymbox{\hyperlink{namespace_v
 void Vesper::\+\+Sub\+Texture\+Component::\+\+Set\+Offset (\begin{DoxyParamCaption}\item[{const glm::\+vec2 \&}]{offset}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
+
+Sets the offset for the sub-\/texture. 
+
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_vesper_1_1_sub_texture_component_a49bfa08639639e1e83e0f793aae92e66}{Offset}}\ =\ offset;}
-\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_vesper_1_1_sub_texture_component_a49bfa08639639e1e83e0f793aae92e66}{Offset}}\ =\ offset;}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \}}
 
 \end{DoxyCode}
 \Hypertarget{struct_vesper_1_1_sub_texture_component_ae375ea11b9b216a33fa8ac198e84a9ed}\index{Vesper::SubTextureComponent@{Vesper::SubTextureComponent}!SetTexture@{SetTexture}}
@@ -127,10 +159,14 @@ void Vesper::\+\+Sub\+Texture\+Component::\+\+Set\+Offset (\begin{DoxyParamCapti
 void Vesper::\+\+Sub\+Texture\+Component::\+\+Set\+Texture (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_texture2_d}{Texture2D}} $>$ \&}]{texture}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
+
+Copy constructor. 
+
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_vesper_1_1_sub_texture_component_ac1d16aab60b9c8eb56509bae122282ff}{SubTexture}}\ =\ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d_acaf4be5d42185bb62a8be95c4c15bc18}{SubTexture2D::CreateFromCoords}}(texture,\ \{\ 0,\ 0\ \},\ \{\ texture-\/>GetWidth(),\ texture-\/>GetHeight()\ \});}
-\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_vesper_1_1_sub_texture_component_ac1d16aab60b9c8eb56509bae122282ff}{SubTexture}}\ =\ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d_acaf4be5d42185bb62a8be95c4c15bc18}{SubTexture2D::CreateFromCoords}}(texture,\ \{\ 0,\ 0\ \},\ \{\ texture-\/>GetWidth(),\ texture-\/>GetHeight()\ \});}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \}}
 
 \end{DoxyCode}
 \Hypertarget{struct_vesper_1_1_sub_texture_component_ae07fe023442ca4a14301e46ee23f1f7d}\index{Vesper::SubTextureComponent@{Vesper::SubTextureComponent}!SetTilingFactor@{SetTilingFactor}}
@@ -140,10 +176,14 @@ void Vesper::\+\+Sub\+Texture\+Component::\+\+Set\+Texture (\begin{DoxyParamCapt
 void Vesper::\+\+Sub\+Texture\+Component::\+\+Set\+Tiling\+Factor (\begin{DoxyParamCaption}\item[{const glm::\+vec2 \&}]{tiling}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
+
+Sets the tiling factor for the sub-\/texture. 
+
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_vesper_1_1_sub_texture_component_ad0fae7fe876f41da5b70873bb3eb74f7}{TilingFactor}}\ =\ tiling;}
-\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_vesper_1_1_sub_texture_component_ad0fae7fe876f41da5b70873bb3eb74f7}{TilingFactor}}\ =\ tiling;}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \}}
 
 \end{DoxyCode}
 
@@ -158,8 +198,12 @@ void Vesper::\+\+Sub\+Texture\+Component::\+\+Set\+Tiling\+Factor (\begin{DoxyPa
 glm::\+vec2 Vesper::\+\+Sub\+Texture\+Component::\+\+Offset = \{ 0.\+0f, 0.\+0f \}}
 
 
+
+Offset for the sub-\/texture. 
+
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00096\ \{\ 0.0f,\ 0.0f\ \};}
+\DoxyCodeLine{00128\ \{\ 0.0f,\ 0.0f\ \};}
 
 \end{DoxyCode}
 \Hypertarget{struct_vesper_1_1_sub_texture_component_ac1d16aab60b9c8eb56509bae122282ff}\index{Vesper::SubTextureComponent@{Vesper::SubTextureComponent}!SubTexture@{SubTexture}}
@@ -168,6 +212,10 @@ glm::\+vec2 Vesper::\+\+Sub\+Texture\+Component::\+\+Offset = \{ 0.\+0f, 0.\+0f 
 {\footnotesize\ttfamily \label{struct_vesper_1_1_sub_texture_component_ac1d16aab60b9c8eb56509bae122282ff} 
 \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$\doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d}{Sub\+Texture2D}}$>$ Vesper::\+\+Sub\+Texture\+Component::\+\+Sub\+Texture}
 
+
+
+The sub-\/texture reference. 
+
 \Hypertarget{struct_vesper_1_1_sub_texture_component_ad0fae7fe876f41da5b70873bb3eb74f7}\index{Vesper::SubTextureComponent@{Vesper::SubTextureComponent}!TilingFactor@{TilingFactor}}
 \index{TilingFactor@{TilingFactor}!Vesper::SubTextureComponent@{Vesper::SubTextureComponent}}
 \doxysubsubsection{\texorpdfstring{TilingFactor}{TilingFactor}}
@@ -175,8 +223,12 @@ glm::\+vec2 Vesper::\+\+Sub\+Texture\+Component::\+\+Offset = \{ 0.\+0f, 0.\+0f 
 glm::\+vec2 Vesper::\+\+Sub\+Texture\+Component::\+\+Tiling\+Factor = \{ 1.\+0f, 1.\+0f \}}
 
 
+
+Tiling factor for the sub-\/texture. 
+
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00095\ \{\ 1.0f,\ 1.0f\ \};}
+\DoxyCodeLine{00126\ \{\ 1.0f,\ 1.0f\ \};}
 
 \end{DoxyCode}
 

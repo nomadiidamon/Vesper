@@ -2,6 +2,11 @@
 \hypertarget{class_vesper_1_1_key_typed_event}{}\label{class_vesper_1_1_key_typed_event}\index{Vesper::KeyTypedEvent@{Vesper::KeyTypedEvent}}
 
 
+\doxylink{class_vesper_1_1_event}{Event} for registering key typing.  
+
+
+
+
 {\ttfamily \+\#include $<$Key\+Event.\+h$>$}
 
 Inheritance diagram for Vesper::\+Key\+Typed\+Event:\+\begin{figure}[H]
@@ -14,44 +19,47 @@ Inheritance diagram for Vesper::\+Key\+Typed\+Event:\+\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 \doxymbox{\hyperlink{class_vesper_1_1_key_typed_event_a3b0658430e7cae990f527b932cbfcf99}{Key\+Typed\+Event}} (int keycode)
-\item 
+\begin{DoxyCompactList}\small\item\em Construct a \doxylink{class_vesper_1_1_key_typed_event}{Key\+Typed\+Event} with the specified key code. \end{DoxyCompactList}\item 
 std::\+string \doxymbox{\hyperlink{class_vesper_1_1_key_typed_event_a629f52af17e5e1f56e99d006191a4518}{To\+String}} () const override
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Convert the event to a string representation. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_vesper_1_1_key_event}{Vesper::\+\+Key\+Event}}}
 \begin{DoxyCompactItemize}
 \item 
 int \doxymbox{\hyperlink{class_vesper_1_1_key_event_ab8b3b582c0296f0f7f24ce7a7be6996c}{Get\+Key\+Code}} () const
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Get the key code associated with the event. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_vesper_1_1_event}{Vesper::\+\+Event}}}
 \begin{DoxyCompactItemize}
 \item 
 virtual \doxymbox{\hyperlink{class_vesper_1_1_event_a516fc6585a1ca21f7d73fc4deb461ee2}{\texorpdfstring{$\sim$}{\string~}\+Event}} ()=default
 \item 
 virtual \doxymbox{\hyperlink{namespace_vesper_ada4bc37927ce22c44ea0083a224d3bb5}{Event\+Type}} \doxymbox{\hyperlink{class_vesper_1_1_event_a82499595903097f8d2a81e9b0ebfba3d}{Get\+Event\+Type}} () const =0
-\item 
+\begin{DoxyCompactList}\small\item\em Get the type of the event. \end{DoxyCompactList}\item 
 virtual const char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_vesper_1_1_event_af39d90d8ec2e84488c593c517a8e9b6e}{Get\+Name}} () const =0
-\item 
+\begin{DoxyCompactList}\small\item\em Get the name of the event. \end{DoxyCompactList}\item 
 virtual int \doxymbox{\hyperlink{class_vesper_1_1_event_a71e621bec32702d59c7e7ed82c53ac08}{Get\+Category\+Flags}} () const =0
-\item 
+\begin{DoxyCompactList}\small\item\em Get the category flags of the event. \end{DoxyCompactList}\item 
 bool \doxymbox{\hyperlink{class_vesper_1_1_event_a02448606191e9e1cc7869bffd2cb20f7}{Is\+In\+Category}} (\doxymbox{\hyperlink{namespace_vesper_ad79da63be4419c3a218acaa990decabe}{Event\+Category}} category)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Check if the event is in a specific category. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Additional Inherited Members}
 \doxysubsection*{Public Attributes inherited from \doxymbox{\hyperlink{class_vesper_1_1_event}{Vesper::\+\+Event}}}
 \begin{DoxyCompactItemize}
 \item 
 bool \doxymbox{\hyperlink{class_vesper_1_1_event_ab6bc1a2214e615b994cff03df207a0f1}{Handled}} = false
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Indicates whether the event has been handled. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Member Functions inherited from \doxymbox{\hyperlink{class_vesper_1_1_key_event}{Vesper::\+\+Key\+Event}}}
 \begin{DoxyCompactItemize}
 \item 
 \doxymbox{\hyperlink{class_vesper_1_1_key_event_aeaa0d8bb44aab1f6f6f946635b123ef8}{Key\+Event}} (int keycode)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Construct a \doxylink{class_vesper_1_1_key_event}{Key\+Event} with the specified key code. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{class_vesper_1_1_key_event}{Vesper::\+\+Key\+Event}}}
 \begin{DoxyCompactItemize}
 \item 
 int \doxymbox{\hyperlink{class_vesper_1_1_key_event_a51701302ab474131751225a850bbc4ab}{m\+\_\+\+Key\+Code}}
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+\doxylink{class_vesper_1_1_event}{Event} for registering key typing. 
 
 \label{doc-constructors}
 \Hypertarget{class_vesper_1_1_key_typed_event_doc-constructors}
@@ -63,9 +71,18 @@ int \doxymbox{\hyperlink{class_vesper_1_1_key_event_a51701302ab474131751225a850b
 Vesper::\+\+Key\+Typed\+Event::\+\+Key\+Typed\+Event (\begin{DoxyParamCaption}\item[{int}]{keycode}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
+
+Construct a \doxylink{class_vesper_1_1_key_typed_event}{Key\+Typed\+Event} with the specified key code. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em keycode} & The key code associated with the event. \\
+\hline
+\end{DoxyParams}
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_vesper_1_1_key_event_aeaa0d8bb44aab1f6f6f946635b123ef8}{KeyEvent}}(keycode)\ \{}
-\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_vesper_1_1_key_event_aeaa0d8bb44aab1f6f6f946635b123ef8}{KeyEvent}}(keycode)\ \{}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \}}
 
 \end{DoxyCode}
 
@@ -85,15 +102,19 @@ std::\+string Vesper::\+\+Key\+Typed\+Event::\+\+To\+String (\begin{DoxyParamCap
 
 
 
+Convert the event to a string representation. 
+
+
+
 Reimplemented from \doxymbox{\hyperlink{class_vesper_1_1_event_aaba48fc434a2539c5ce000fda6aa7f05}{Vesper::\+\+Event}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ std::stringstream\ ss;}
-\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ ss\ <<\ \textcolor{stringliteral}{"{}KeyTypedEvent:\ "{}}\ <<\ \doxymbox{\hyperlink{class_vesper_1_1_key_event_a51701302ab474131751225a850bbc4ab}{m\_KeyCode}};}
-\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ss.str();}
-\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ std::stringstream\ ss;}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ ss\ <<\ \textcolor{stringliteral}{"{}KeyTypedEvent:\ "{}}\ <<\ \doxymbox{\hyperlink{class_vesper_1_1_key_event_a51701302ab474131751225a850bbc4ab}{m\_KeyCode}};}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ss.str();}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \}}
 
 \end{DoxyCode}
 

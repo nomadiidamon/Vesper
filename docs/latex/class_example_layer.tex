@@ -1,0 +1,503 @@
+\doxysection{Example\+Layer Class Reference}
+\hypertarget{class_example_layer}{}\label{class_example_layer}\index{ExampleLayer@{ExampleLayer}}
+Inheritance diagram for Example\+Layer:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_example_layer}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_example_layer_a199ad822f707990b69e998a9ed7df5bb}{Example\+Layer}} ()
+\item 
+void \doxymbox{\hyperlink{class_example_layer_a7753e915b8fdb4b1aa1109aca4c84131}{On\+Update}} (\doxymbox{\hyperlink{class_vesper_1_1_timestep}{Vesper::\+\+Timestep}} ts) override
+\begin{DoxyCompactList}\small\item\em Called every frame to update the layer with the given timestep. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_example_layer_a29e9c1f5c9366b6c1469bfceba17f569}{On\+Im\+Gui\+Render}} () override
+\begin{DoxyCompactList}\small\item\em Called when the layer should render its Im\+Gui components. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_example_layer_a8f998c71dfeb68383cb5c809485815b1}{On\+Event}} (\doxymbox{\hyperlink{class_vesper_1_1_event}{Vesper::\+\+Event}} \&e) override
+\begin{DoxyCompactList}\small\item\em Called when an event is dispatched to the layer. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_example_layer_a199ad822f707990b69e998a9ed7df5bb}{Example\+Layer}} ()
+\item 
+void \doxymbox{\hyperlink{class_example_layer_a7753e915b8fdb4b1aa1109aca4c84131}{On\+Update}} (\doxymbox{\hyperlink{class_vesper_1_1_timestep}{Vesper::\+\+Timestep}} ts) override
+\begin{DoxyCompactList}\small\item\em Called every frame to update the layer with the given timestep. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_example_layer_a29e9c1f5c9366b6c1469bfceba17f569}{On\+Im\+Gui\+Render}} () override
+\begin{DoxyCompactList}\small\item\em Called when the layer should render its Im\+Gui components. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_example_layer_a8f998c71dfeb68383cb5c809485815b1}{On\+Event}} (\doxymbox{\hyperlink{class_vesper_1_1_event}{Vesper::\+\+Event}} \&e) override
+\begin{DoxyCompactList}\small\item\em Called when an event is dispatched to the layer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_vesper_1_1_layer}{Vesper::\+\+Layer}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_vesper_1_1_layer_aa2fadd42504c70ef28da27b724d276c7}{Layer}} (const std::\+string \&name="{}Layer"{})
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_vesper_1_1_layer}{Layer} with an optional name for debugging purposes. \end{DoxyCompactList}\item 
+virtual \doxymbox{\hyperlink{class_vesper_1_1_layer_abebb6b76f4d726745c9ce3f2ccce4c0e}{\texorpdfstring{$\sim$}{\string~}\+Layer}} ()
+\item 
+virtual void \doxymbox{\hyperlink{class_vesper_1_1_layer_ad7b65613ac259383e8ba08f693146cfb}{On\+Attach}} ()
+\begin{DoxyCompactList}\small\item\em Called when the layer is attached to the application. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_vesper_1_1_layer_a2da0563f0eeab4fc610c1e10206bc6cb}{On\+Detach}} ()
+\begin{DoxyCompactList}\small\item\em Called when the layer is detached from the application. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_vesper_1_1_layer_adf08d2acd6e08c78993139afc439ae9c}{On\+Render}} ()
+\begin{DoxyCompactList}\small\item\em Called when the layer should render its contents. \end{DoxyCompactList}\item 
+const std::\+string \& \doxymbox{\hyperlink{class_vesper_1_1_layer_a2989c7f8093597b4920c06a3aad407e2}{Get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the name of the layer for debugging purposes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_vesper_1_1_shader_library}{Vesper::\+\+Shader\+Library}} \doxymbox{\hyperlink{class_example_layer_a1c5d924e8489fa2f7347f16b30d5b32f}{m\+\_\+\+Shader\+Library}}
+\item 
+\doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Vesper::\+\+Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_shader}{Vesper::\+\+Shader}} $>$ \doxymbox{\hyperlink{class_example_layer_aab27c03040e35512214a78e931eed897}{m\+\_\+\+Shader}}
+\item 
+\doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Vesper::\+\+Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_vertex_array}{Vesper::\+\+Vertex\+Array}} $>$ \doxymbox{\hyperlink{class_example_layer_a44255750e0863c5d07de6c2638b94391}{m\+\_\+\+Vertex\+Array}}
+\item 
+\doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Vesper::\+\+Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_shader}{Vesper::\+\+Shader}} $>$ \doxymbox{\hyperlink{class_example_layer_aae2331f7c50d155466624cd01054967a}{m\+\_\+\+Flat\+Color\+Shader}}
+\item 
+\doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Vesper::\+\+Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_vertex_array}{Vesper::\+\+Vertex\+Array}} $>$ \doxymbox{\hyperlink{class_example_layer_a2d8baf5dc2572444eca2a84dd5b45b8e}{m\+\_\+\+Square\+VA}}
+\item 
+\doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Vesper::\+\+Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_texture2_d}{Vesper::\+\+Texture2D}} $>$ \doxymbox{\hyperlink{class_example_layer_a036ed12cfd2b38990a3096bda88116cb}{m\+\_\+\+Texture}}
+\item 
+\doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Vesper::\+\+Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_texture2_d}{Vesper::\+\+Texture2D}} $>$ \doxymbox{\hyperlink{class_example_layer_a8fd9438eddeb9cafbd12740a1fcff6d8}{m\+\_\+\+Texture2}}
+\item 
+\doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_controller}{Vesper::\+\+Orthographic\+Camera\+Controller}} \doxymbox{\hyperlink{class_example_layer_ad29fcfa854603e6e464c62da2c732862}{m\+\_\+\+Camera\+Controller}}
+\item 
+glm::\+vec3 \doxymbox{\hyperlink{class_example_layer_a64fd6b3243c440d1c416b05a8840fa8c}{m\+\_\+\+Square\+Color}} = \{ 0.\+2f, 0.\+3f, 0.\+8f \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{class_vesper_1_1_layer}{Vesper::\+\+Layer}}}
+\begin{DoxyCompactItemize}
+\item 
+std::\+string \doxymbox{\hyperlink{class_vesper_1_1_layer_ad623a46178f0cd2eff4079ee323402c3}{m\+\_\+\+Debug\+Name}}
+\begin{DoxyCompactList}\small\item\em The name of the layer assigned at creation, used for debugging. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-constructors}
+\Hypertarget{class_example_layer_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_example_layer_a199ad822f707990b69e998a9ed7df5bb}\index{ExampleLayer@{ExampleLayer}!ExampleLayer@{ExampleLayer}}
+\index{ExampleLayer@{ExampleLayer}!ExampleLayer@{ExampleLayer}}
+\doxysubsubsection{\texorpdfstring{ExampleLayer()}{ExampleLayer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_example_layer_a199ad822f707990b69e998a9ed7df5bb} 
+Example\+Layer::\+\+Example\+Layer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_vesper_1_1_layer_aa2fadd42504c70ef28da27b724d276c7}{Layer}}(\textcolor{stringliteral}{"{}Example"{}}),\ \doxymbox{\hyperlink{class_example_layer_ad29fcfa854603e6e464c62da2c732862}{m\_CameraController}}(1280.0f\ /\ 720.0f) }
+\DoxyCodeLine{00018\ \ \ \ \ \{}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{comment}{//m\_VertexArray\ =\ Vesper::VertexArray::Create();}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ vertices[3\ *\ 7]\ =\ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ -\/0.5f,\ -\/0.5f,\ 0.0f,\ \ \ \ \ 0.8f,\ 0.2f,\ 0.8f,\ 1.0f,}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0.5f,\ -\/0.5f,\ 0.0f,\ \ \ \ \ 0.2f,\ 0.3f,\ 0.8f,\ 1.0f,}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0.0f,\ \ 0.5f,\ 0.0f,\ \ \ \ \ 0.8f,\ 0.8f,\ 0.2f,\ 1.0f,}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Vesper::Ref<Vesper::VertexBuffer>\ vertexBuffer;}}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{comment}{//vertexBuffer\ =\ (Vesper::VertexBuffer::Create(vertices,\ sizeof(vertices)));}}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Vesper::BufferLayout\ layout\ =\ \{}}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \{\ Vesper::ShaderDataType::Float3,\ "{}a\_Position"{}\ \},}}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \{\ Vesper::ShaderDataType::Float4,\ "{}a\_Color"{}\ \ \}}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\};}}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{comment}{//vertexBuffer-\/>SetLayout(layout);}}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{comment}{//m\_VertexArray-\/>AddVertexBuffer(vertexBuffer);}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{comment}{//uint32\_t\ indices[3]\ =\ \{\ 0,\ 1,\ 2\ \};}}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Vesper::Ref<Vesper::IndexBuffer>\ indexBuffer;}}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{comment}{//indexBuffer\ =\ (Vesper::IndexBuffer::Create(indices,\ sizeof(indices)\ /\ sizeof(uint32\_t)));}}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{comment}{//m\_VertexArray-\/>SetIndexBuffer(indexBuffer);}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{comment}{//m\_SquareVA\ =\ Vesper::VertexArray::Create();}}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ squareVertices[5\ *\ 4]\ =}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ -\/0.5f,\ -\/0.5f,\ 0.0f,\ \ \ \ \ 0.0f,\ 0.0f,}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0.5f,\ -\/0.5f,\ 0.0f,\ \ \ \ \ 1.0f,\ 0.0f,}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0.5f,\ \ 0.5f,\ 0.0f,\ \ \ \ \ 1.0f,\ 1.0f,}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ -\/0.5f,\ \ 0.5f,\ 0.0f,\ \ \ \ \ 0.0f,\ 1.0f}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Vesper::Ref<Vesper::VertexBuffer>\ squareVB;}}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{comment}{//squareVB\ =\ (Vesper::VertexBuffer::Create(squareVertices,\ sizeof(squareVertices)));}}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{comment}{//squareVB-\/>SetLayout(\{}}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \{\ Vesper::ShaderDataType::Float3,\ "{}a\_Position"{}\ \ \},}}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \{\ Vesper::ShaderDataType::Float2,\ "{}a\_TexCoord"{}\ \ \}}}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \});}}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{comment}{//m\_SquareVA-\/>AddVertexBuffer(squareVB);}}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{comment}{//uint32\_t\ squareIndices[6]\ =\ \{\ 0,\ 1,\ 2,\ 2,\ 3,\ 0\ \};}}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Vesper::Ref<Vesper::IndexBuffer>\ squareIB;}}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{comment}{//squareIB\ =\ (Vesper::IndexBuffer::Create(squareIndices,\ sizeof(squareIndices)\ /\ sizeof(uint32\_t)));}}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{comment}{//m\_SquareVA-\/>SetIndexBuffer(squareIB);}}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ std::string\ vertexSrc\ =\ R\textcolor{stringliteral}{"{}(}}
+\DoxyCodeLine{00070\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \#version\ 330\ core }}
+\DoxyCodeLine{00071\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \  }}
+\DoxyCodeLine{00072\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ layout(location\ =\ 0)\ in\ vec3\ a\_Position; }}
+\DoxyCodeLine{00073\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ layout(location\ =\ 1)\ in\ vec4\ a\_Color; }}
+\DoxyCodeLine{00074\ \textcolor{stringliteral}{}}
+\DoxyCodeLine{00075\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ uniform\ mat4\ u\_ViewProjection; }}
+\DoxyCodeLine{00076\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ uniform\ mat4\ u\_Transform; }}
+\DoxyCodeLine{00077\ \textcolor{stringliteral}{}}
+\DoxyCodeLine{00078\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ out\ vec3\ v\_Position; }}
+\DoxyCodeLine{00079\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ out\ vec4\ v\_Color; }}
+\DoxyCodeLine{00080\ \textcolor{stringliteral}{}}
+\DoxyCodeLine{00081\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ void\ main()}}
+\DoxyCodeLine{00082\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \{ }}
+\DoxyCodeLine{00083\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ v\_Position\ =\ a\_Position; }}
+\DoxyCodeLine{00084\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ v\_Color\ =\ a\_Color; }}
+\DoxyCodeLine{00085\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ gl\_Position\ =\ u\_ViewProjection\ *\ u\_Transform\ *\ vec4(a\_Position,\ 1.0); }}
+\DoxyCodeLine{00086\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \} }}
+\DoxyCodeLine{00087\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ )"{};}}
+\DoxyCodeLine{00088\ \textcolor{stringliteral}{}}
+\DoxyCodeLine{00089\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ std::string\ fragmentSrc\ =\ R}\textcolor{stringliteral}{"{}(}}
+\DoxyCodeLine{00090\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \#version\ 330\ core }}
+\DoxyCodeLine{00091\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \  }}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{class_example_layer_a199ad822f707990b69e998a9ed7df5bb}{Example\+Layer()}}.
+
+
+
+Referenced by \doxymbox{\hyperlink{class_example_layer_a199ad822f707990b69e998a9ed7df5bb}{Example\+Layer()}}.
+
+\Hypertarget{class_example_layer_a199ad822f707990b69e998a9ed7df5bb}\index{ExampleLayer@{ExampleLayer}!ExampleLayer@{ExampleLayer}}
+\index{ExampleLayer@{ExampleLayer}!ExampleLayer@{ExampleLayer}}
+\doxysubsubsection{\texorpdfstring{ExampleLayer()}{ExampleLayer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_example_layer_a199ad822f707990b69e998a9ed7df5bb} 
+Example\+Layer::\+\+Example\+Layer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_vesper_1_1_layer_aa2fadd42504c70ef28da27b724d276c7}{Layer}}(\textcolor{stringliteral}{"{}Example"{}}),\ \doxymbox{\hyperlink{class_example_layer_ad29fcfa854603e6e464c62da2c732862}{m\_CameraController}}(1280.0f\ /\ 720.0f) }
+\DoxyCodeLine{00018\ \ \ \ \ \{}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{comment}{//m\_VertexArray\ =\ Vesper::VertexArray::Create();}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ vertices[3\ *\ 7]\ =\ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ -\/0.5f,\ -\/0.5f,\ 0.0f,\ \ \ \ \ 0.8f,\ 0.2f,\ 0.8f,\ 1.0f,}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0.5f,\ -\/0.5f,\ 0.0f,\ \ \ \ \ 0.2f,\ 0.3f,\ 0.8f,\ 1.0f,}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0.0f,\ \ 0.5f,\ 0.0f,\ \ \ \ \ 0.8f,\ 0.8f,\ 0.2f,\ 1.0f,}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Vesper::Ref<Vesper::VertexBuffer>\ vertexBuffer;}}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{comment}{//vertexBuffer\ =\ (Vesper::VertexBuffer::Create(vertices,\ sizeof(vertices)));}}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Vesper::BufferLayout\ layout\ =\ \{}}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \{\ Vesper::ShaderDataType::Float3,\ "{}a\_Position"{}\ \},}}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \{\ Vesper::ShaderDataType::Float4,\ "{}a\_Color"{}\ \ \}}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\};}}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{comment}{//vertexBuffer-\/>SetLayout(layout);}}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{comment}{//m\_VertexArray-\/>AddVertexBuffer(vertexBuffer);}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{comment}{//uint32\_t\ indices[3]\ =\ \{\ 0,\ 1,\ 2\ \};}}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Vesper::Ref<Vesper::IndexBuffer>\ indexBuffer;}}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{comment}{//indexBuffer\ =\ (Vesper::IndexBuffer::Create(indices,\ sizeof(indices)\ /\ sizeof(uint32\_t)));}}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{comment}{//m\_VertexArray-\/>SetIndexBuffer(indexBuffer);}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{comment}{//m\_SquareVA\ =\ Vesper::VertexArray::Create();}}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ squareVertices[5\ *\ 4]\ =}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ -\/0.5f,\ -\/0.5f,\ 0.0f,\ \ \ \ \ 0.0f,\ 0.0f,}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0.5f,\ -\/0.5f,\ 0.0f,\ \ \ \ \ 1.0f,\ 0.0f,}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0.5f,\ \ 0.5f,\ 0.0f,\ \ \ \ \ 1.0f,\ 1.0f,}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ -\/0.5f,\ \ 0.5f,\ 0.0f,\ \ \ \ \ 0.0f,\ 1.0f}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Vesper::Ref<Vesper::VertexBuffer>\ squareVB;}}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{comment}{//squareVB\ =\ (Vesper::VertexBuffer::Create(squareVertices,\ sizeof(squareVertices)));}}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{comment}{//squareVB-\/>SetLayout(\{}}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \{\ Vesper::ShaderDataType::Float3,\ "{}a\_Position"{}\ \ \},}}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \{\ Vesper::ShaderDataType::Float2,\ "{}a\_TexCoord"{}\ \ \}}}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \});}}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{comment}{//m\_SquareVA-\/>AddVertexBuffer(squareVB);}}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{comment}{//uint32\_t\ squareIndices[6]\ =\ \{\ 0,\ 1,\ 2,\ 2,\ 3,\ 0\ \};}}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Vesper::Ref<Vesper::IndexBuffer>\ squareIB;}}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{comment}{//squareIB\ =\ (Vesper::IndexBuffer::Create(squareIndices,\ sizeof(squareIndices)\ /\ sizeof(uint32\_t)));}}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{comment}{//m\_SquareVA-\/>SetIndexBuffer(squareIB);}}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ std::string\ vertexSrc\ =\ R\textcolor{stringliteral}{"{}(}}
+\DoxyCodeLine{00070\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \#version\ 330\ core }}
+\DoxyCodeLine{00071\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \  }}
+\DoxyCodeLine{00072\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ layout(location\ =\ 0)\ in\ vec3\ a\_Position; }}
+\DoxyCodeLine{00073\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ layout(location\ =\ 1)\ in\ vec4\ a\_Color; }}
+\DoxyCodeLine{00074\ \textcolor{stringliteral}{}}
+\DoxyCodeLine{00075\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ uniform\ mat4\ u\_ViewProjection; }}
+\DoxyCodeLine{00076\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ uniform\ mat4\ u\_Transform; }}
+\DoxyCodeLine{00077\ \textcolor{stringliteral}{}}
+\DoxyCodeLine{00078\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ out\ vec3\ v\_Position; }}
+\DoxyCodeLine{00079\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ out\ vec4\ v\_Color; }}
+\DoxyCodeLine{00080\ \textcolor{stringliteral}{}}
+\DoxyCodeLine{00081\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ void\ main()}}
+\DoxyCodeLine{00082\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \{ }}
+\DoxyCodeLine{00083\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ v\_Position\ =\ a\_Position; }}
+\DoxyCodeLine{00084\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ v\_Color\ =\ a\_Color; }}
+\DoxyCodeLine{00085\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ gl\_Position\ =\ u\_ViewProjection\ *\ u\_Transform\ *\ vec4(a\_Position,\ 1.0); }}
+\DoxyCodeLine{00086\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \} }}
+\DoxyCodeLine{00087\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ )"{};}}
+\DoxyCodeLine{00088\ \textcolor{stringliteral}{}}
+\DoxyCodeLine{00089\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ std::string\ fragmentSrc\ =\ R}\textcolor{stringliteral}{"{}(}}
+\DoxyCodeLine{00090\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \#version\ 330\ core }}
+\DoxyCodeLine{00091\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \  }}
+
+\end{DoxyCode}
+
+
+\label{doc-func-members}
+\Hypertarget{class_example_layer_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_example_layer_a8f998c71dfeb68383cb5c809485815b1}\index{ExampleLayer@{ExampleLayer}!OnEvent@{OnEvent}}
+\index{OnEvent@{OnEvent}!ExampleLayer@{ExampleLayer}}
+\doxysubsubsection{\texorpdfstring{OnEvent()}{OnEvent()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_example_layer_a8f998c71dfeb68383cb5c809485815b1} 
+void Example\+Layer::\+\+On\+Event (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_vesper_1_1_event}{Vesper::\+\+Event}} \&}]{event}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called when an event is dispatched to the layer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & The event being dispatched. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \doxymbox{\hyperlink{class_vesper_1_1_layer_a158ddf9f38a429b2f9713e8741e8be07}{Vesper::\+\+Layer}}.
+
+\Hypertarget{class_example_layer_a8f998c71dfeb68383cb5c809485815b1}\index{ExampleLayer@{ExampleLayer}!OnEvent@{OnEvent}}
+\index{OnEvent@{OnEvent}!ExampleLayer@{ExampleLayer}}
+\doxysubsubsection{\texorpdfstring{OnEvent()}{OnEvent()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_example_layer_a8f998c71dfeb68383cb5c809485815b1} 
+void Example\+Layer::\+\+On\+Event (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_vesper_1_1_event}{Vesper::\+\+Event}} \&}]{event}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called when an event is dispatched to the layer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & The event being dispatched. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \doxymbox{\hyperlink{class_vesper_1_1_layer_a158ddf9f38a429b2f9713e8741e8be07}{Vesper::\+\+Layer}}.
+
+\Hypertarget{class_example_layer_a29e9c1f5c9366b6c1469bfceba17f569}\index{ExampleLayer@{ExampleLayer}!OnImGuiRender@{OnImGuiRender}}
+\index{OnImGuiRender@{OnImGuiRender}!ExampleLayer@{ExampleLayer}}
+\doxysubsubsection{\texorpdfstring{OnImGuiRender()}{OnImGuiRender()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_example_layer_a29e9c1f5c9366b6c1469bfceba17f569} 
+void Example\+Layer::\+\+On\+Im\+Gui\+Render (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called when the layer should render its Im\+Gui components. 
+
+
+
+Reimplemented from \doxymbox{\hyperlink{class_vesper_1_1_layer_a64c4c255062db2abaf9ca79a84d417fd}{Vesper::\+\+Layer}}.
+
+\Hypertarget{class_example_layer_a29e9c1f5c9366b6c1469bfceba17f569}\index{ExampleLayer@{ExampleLayer}!OnImGuiRender@{OnImGuiRender}}
+\index{OnImGuiRender@{OnImGuiRender}!ExampleLayer@{ExampleLayer}}
+\doxysubsubsection{\texorpdfstring{OnImGuiRender()}{OnImGuiRender()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_example_layer_a29e9c1f5c9366b6c1469bfceba17f569} 
+void Example\+Layer::\+\+On\+Im\+Gui\+Render (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called when the layer should render its Im\+Gui components. 
+
+
+
+Reimplemented from \doxymbox{\hyperlink{class_vesper_1_1_layer_a64c4c255062db2abaf9ca79a84d417fd}{Vesper::\+\+Layer}}.
+
+\Hypertarget{class_example_layer_a7753e915b8fdb4b1aa1109aca4c84131}\index{ExampleLayer@{ExampleLayer}!OnUpdate@{OnUpdate}}
+\index{OnUpdate@{OnUpdate}!ExampleLayer@{ExampleLayer}}
+\doxysubsubsection{\texorpdfstring{OnUpdate()}{OnUpdate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_example_layer_a7753e915b8fdb4b1aa1109aca4c84131} 
+void Example\+Layer::\+\+On\+Update (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_vesper_1_1_timestep}{Vesper::\+\+Timestep}}}]{ts}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called every frame to update the layer with the given timestep. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ts} & The timestep representing the time elapsed since the last update. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \doxymbox{\hyperlink{class_vesper_1_1_layer_a5403125ae4cb201a6d9cbbacef0480ec}{Vesper::\+\+Layer}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ color\ =\ vec4(v\_Position\ *\ 0.5\ +\ 0.5,\ 1.0);}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ color\ =\ v\_Color;}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ )\textcolor{stringliteral}{"{};}}
+\DoxyCodeLine{00103\ \textcolor{stringliteral}{}}
+\DoxyCodeLine{00104\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ //m\_Shader\ =\ Vesper::Shader::Create("{}}VertexPosColor\textcolor{stringliteral}{"{},\ vertexSrc,\ fragmentSrc);}}
+\DoxyCodeLine{00105\ \textcolor{stringliteral}{}}
+\DoxyCodeLine{00106\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ std::string\ blueShaderVertexSrc\ =\ R"{}}(}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \#version\ 330\ core}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ layout(location\ =\ 0)\ in\ vec3\ a\_Position;}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ uniform\ mat4\ u\_ViewProjection;}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ uniform\ mat4\ u\_Transform;}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ out\ vec3\ v\_Position;}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ main() }
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ v\_Position\ =\ a\_Position;}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ gl\_Position\ =\ u\_ViewProjection\ *\ u\_Transform\ *\ vec4(a\_Position,\ 1.0);}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ )\textcolor{stringliteral}{"{};}}
+\DoxyCodeLine{00122\ \textcolor{stringliteral}{}}
+\DoxyCodeLine{00123\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ std::string\ flatColorShaderFragmentSrc\ =\ R"{}}(}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \#version\ 330\ core}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ layout(location\ =\ 0)\ out\ vec4\ color;}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ in\ vec3\ v\_Position;}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ uniform\ vec3\ u\_Color;}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ main()}
+
+\end{DoxyCode}
+\Hypertarget{class_example_layer_a7753e915b8fdb4b1aa1109aca4c84131}\index{ExampleLayer@{ExampleLayer}!OnUpdate@{OnUpdate}}
+\index{OnUpdate@{OnUpdate}!ExampleLayer@{ExampleLayer}}
+\doxysubsubsection{\texorpdfstring{OnUpdate()}{OnUpdate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_example_layer_a7753e915b8fdb4b1aa1109aca4c84131} 
+void Example\+Layer::\+\+On\+Update (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_vesper_1_1_timestep}{Vesper::\+\+Timestep}}}]{ts}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called every frame to update the layer with the given timestep. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ts} & The timestep representing the time elapsed since the last update. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \doxymbox{\hyperlink{class_vesper_1_1_layer_a5403125ae4cb201a6d9cbbacef0480ec}{Vesper::\+\+Layer}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ color\ =\ vec4(v\_Position\ *\ 0.5\ +\ 0.5,\ 1.0);}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ color\ =\ v\_Color;}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ )\textcolor{stringliteral}{"{};}}
+\DoxyCodeLine{00103\ \textcolor{stringliteral}{}}
+\DoxyCodeLine{00104\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ //m\_Shader\ =\ Vesper::Shader::Create("{}}VertexPosColor\textcolor{stringliteral}{"{},\ vertexSrc,\ fragmentSrc);}}
+\DoxyCodeLine{00105\ \textcolor{stringliteral}{}}
+\DoxyCodeLine{00106\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ std::string\ blueShaderVertexSrc\ =\ R"{}}(}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \#version\ 330\ core}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ layout(location\ =\ 0)\ in\ vec3\ a\_Position;}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ uniform\ mat4\ u\_ViewProjection;}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ uniform\ mat4\ u\_Transform;}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ out\ vec3\ v\_Position;}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ main() }
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ v\_Position\ =\ a\_Position;}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ gl\_Position\ =\ u\_ViewProjection\ *\ u\_Transform\ *\ vec4(a\_Position,\ 1.0);}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ )\textcolor{stringliteral}{"{};}}
+\DoxyCodeLine{00122\ \textcolor{stringliteral}{}}
+\DoxyCodeLine{00123\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ std::string\ flatColorShaderFragmentSrc\ =\ R"{}}(}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \#version\ 330\ core}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ layout(location\ =\ 0)\ out\ vec4\ color;}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ in\ vec3\ v\_Position;}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ uniform\ vec3\ u\_Color;}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ main()}
+
+\end{DoxyCode}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_example_layer_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_example_layer_ad29fcfa854603e6e464c62da2c732862}\index{ExampleLayer@{ExampleLayer}!m\_CameraController@{m\_CameraController}}
+\index{m\_CameraController@{m\_CameraController}!ExampleLayer@{ExampleLayer}}
+\doxysubsubsection{\texorpdfstring{m\_CameraController}{m\_CameraController}}
+{\footnotesize\ttfamily \label{class_example_layer_ad29fcfa854603e6e464c62da2c732862} 
+\doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_controller}{Vesper::\+\+Orthographic\+Camera\+Controller}} Example\+Layer::\+m\+\_\+\+Camera\+Controller\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_example_layer_aae2331f7c50d155466624cd01054967a}\index{ExampleLayer@{ExampleLayer}!m\_FlatColorShader@{m\_FlatColorShader}}
+\index{m\_FlatColorShader@{m\_FlatColorShader}!ExampleLayer@{ExampleLayer}}
+\doxysubsubsection{\texorpdfstring{m\_FlatColorShader}{m\_FlatColorShader}}
+{\footnotesize\ttfamily \label{class_example_layer_aae2331f7c50d155466624cd01054967a} 
+\doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Vesper::\+\+Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_shader}{Vesper::\+\+Shader}} $>$ Example\+Layer::\+m\+\_\+\+Flat\+Color\+Shader\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_example_layer_aab27c03040e35512214a78e931eed897}\index{ExampleLayer@{ExampleLayer}!m\_Shader@{m\_Shader}}
+\index{m\_Shader@{m\_Shader}!ExampleLayer@{ExampleLayer}}
+\doxysubsubsection{\texorpdfstring{m\_Shader}{m\_Shader}}
+{\footnotesize\ttfamily \label{class_example_layer_aab27c03040e35512214a78e931eed897} 
+\doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Vesper::\+\+Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_shader}{Vesper::\+\+Shader}} $>$ Example\+Layer::\+m\+\_\+\+Shader\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_example_layer_a1c5d924e8489fa2f7347f16b30d5b32f}\index{ExampleLayer@{ExampleLayer}!m\_ShaderLibrary@{m\_ShaderLibrary}}
+\index{m\_ShaderLibrary@{m\_ShaderLibrary}!ExampleLayer@{ExampleLayer}}
+\doxysubsubsection{\texorpdfstring{m\_ShaderLibrary}{m\_ShaderLibrary}}
+{\footnotesize\ttfamily \label{class_example_layer_a1c5d924e8489fa2f7347f16b30d5b32f} 
+\doxymbox{\hyperlink{class_vesper_1_1_shader_library}{Vesper::\+\+Shader\+Library}} Example\+Layer::\+m\+\_\+\+Shader\+Library\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_example_layer_a64fd6b3243c440d1c416b05a8840fa8c}\index{ExampleLayer@{ExampleLayer}!m\_SquareColor@{m\_SquareColor}}
+\index{m\_SquareColor@{m\_SquareColor}!ExampleLayer@{ExampleLayer}}
+\doxysubsubsection{\texorpdfstring{m\_SquareColor}{m\_SquareColor}}
+{\footnotesize\ttfamily \label{class_example_layer_a64fd6b3243c440d1c416b05a8840fa8c} 
+glm::\+vec3 Example\+Layer::\+m\+\_\+\+Square\+Color = \{ 0.\+2f, 0.\+3f, 0.\+8f \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_example_layer_a2d8baf5dc2572444eca2a84dd5b45b8e}\index{ExampleLayer@{ExampleLayer}!m\_SquareVA@{m\_SquareVA}}
+\index{m\_SquareVA@{m\_SquareVA}!ExampleLayer@{ExampleLayer}}
+\doxysubsubsection{\texorpdfstring{m\_SquareVA}{m\_SquareVA}}
+{\footnotesize\ttfamily \label{class_example_layer_a2d8baf5dc2572444eca2a84dd5b45b8e} 
+\doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Vesper::\+\+Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_vertex_array}{Vesper::\+\+Vertex\+Array}} $>$ Example\+Layer::\+m\+\_\+\+Square\+VA\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_example_layer_a036ed12cfd2b38990a3096bda88116cb}\index{ExampleLayer@{ExampleLayer}!m\_Texture@{m\_Texture}}
+\index{m\_Texture@{m\_Texture}!ExampleLayer@{ExampleLayer}}
+\doxysubsubsection{\texorpdfstring{m\_Texture}{m\_Texture}}
+{\footnotesize\ttfamily \label{class_example_layer_a036ed12cfd2b38990a3096bda88116cb} 
+\doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Vesper::\+\+Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_texture2_d}{Vesper::\+\+Texture2D}} $>$ Example\+Layer::\+m\+\_\+\+Texture\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_example_layer_a8fd9438eddeb9cafbd12740a1fcff6d8}\index{ExampleLayer@{ExampleLayer}!m\_Texture2@{m\_Texture2}}
+\index{m\_Texture2@{m\_Texture2}!ExampleLayer@{ExampleLayer}}
+\doxysubsubsection{\texorpdfstring{m\_Texture2}{m\_Texture2}}
+{\footnotesize\ttfamily \label{class_example_layer_a8fd9438eddeb9cafbd12740a1fcff6d8} 
+\doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Vesper::\+\+Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_texture2_d}{Vesper::\+\+Texture2D}} $>$ Example\+Layer::\+m\+\_\+\+Texture2\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_example_layer_a44255750e0863c5d07de6c2638b94391}\index{ExampleLayer@{ExampleLayer}!m\_VertexArray@{m\_VertexArray}}
+\index{m\_VertexArray@{m\_VertexArray}!ExampleLayer@{ExampleLayer}}
+\doxysubsubsection{\texorpdfstring{m\_VertexArray}{m\_VertexArray}}
+{\footnotesize\ttfamily \label{class_example_layer_a44255750e0863c5d07de6c2638b94391} 
+\doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Vesper::\+\+Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_vertex_array}{Vesper::\+\+Vertex\+Array}} $>$ Example\+Layer::\+m\+\_\+\+Vertex\+Array\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+Sandbox/\+src/\+\doxymbox{\hyperlink{_sandbox_app_8cpp}{Sandbox\+App.\+cpp}}\end{DoxyCompactItemize}
