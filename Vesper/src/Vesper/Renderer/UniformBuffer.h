@@ -4,6 +4,8 @@
 
 namespace Vesper {
 
+	/// @class UniformBuffer
+	/// @brief An abstraction for a uniform buffer object (UBO).
 	class UniformBuffer
 	{
 	public:

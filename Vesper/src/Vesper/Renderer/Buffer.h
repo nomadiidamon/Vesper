@@ -2,6 +2,7 @@
 
 namespace Vesper {
 
+	/// @brief The different data types that can be used in shaders.
 	enum class ShaderDataType {
 		None = 0,
 		Float, Float2, Float3, Float4,
@@ -10,6 +11,11 @@ namespace Vesper {
 		Bool
 	};
 
+	/// @brief Returns the size in bytes of the given ShaderDataType.
+	///
+	/// @param type The ShaderDataType to get the size of.
+	/// @return The size in bytes of the ShaderDataType.
+	/// Will assert if the type is unknown.
 	static uint32_t ShaderDataTypeSize(ShaderDataType type) {
 		switch (type) {
 		case ShaderDataType::Float:		return 4;
@@ -28,20 +34,32 @@ namespace Vesper {
 		return 0;
 	}
 
-	struct BufferElement {
 
+	/// @brief Represents a single element in a buffer layout.
+	struct BufferElement {
+		/// @brief The name of the buffer element.
 		std::string Name;
+		/// @brief The data type of the buffer element.
 		ShaderDataType Type;
+		/// @brief The size in bytes of the buffer element.
 		uint32_t Size;
+		/// @brief The offset in bytes of the buffer element from the start of the buffer.
 		uint32_t Offset;
+		/// @brief Whether the buffer element is normalized.
 		bool Normalized;
 
 		BufferElement() {}
+		/// @brief Constructs a BufferElement with the given type, name, and normalization flag.
+		///
+		/// @param type The ShaderDataType of the buffer element.
+		/// @param name The name of the buffer element.
+		/// @param normalized Whether the buffer element is normalized.
 		BufferElement(ShaderDataType type, const std::string& name, bool normalized = false)
 			: Name(name), Type(type), Size(ShaderDataTypeSize(type)), Offset(0), Normalized(normalized)
 		{
 		}
 
+		/// @brief Returns the number of components in the buffer element based on its ShaderDataType.
 		uint32_t GetComponentCount() const {
 			switch (Type) {
 			case ShaderDataType::Float:		return 1;
@@ -61,10 +79,16 @@ namespace Vesper {
 		}
 	};
 
-
+	/// @class BufferLayout
+	/// @brief Represents the layout of a buffer, consisting of multiple BufferElements.
 	class BufferLayout {
 	public:
 		BufferLayout(){}
+
+		/// @brief Constructs a BufferLayout with the given list of BufferElements.
+		///
+		/// @param elements The list of BufferElements that make up the layout.
+		/// Automatically calculates offsets and stride.
 		BufferLayout(const std::initializer_list<BufferElement>& elements)
 			: m_Elements(elements), m_Stride(0)
 		{
@@ -72,7 +96,9 @@ namespace Vesper {
 		}
 
 
+		/// @brief Returns the list of BufferElements in the layout.
 		inline const std::vector<BufferElement>& GetElements() const { return m_Elements; }
+		/// @brief Returns the stride (total size in bytes) of the buffer layout.
 		inline uint32_t GetStride() const { return m_Stride; }
 
 		std::vector<BufferElement>::iterator begin() { return m_Elements.begin(); }
@@ -83,6 +109,7 @@ namespace Vesper {
 
 
 	private:
+		/// @brief Calculates the offsets and stride for the buffer layout based on its elements.
 		void CalculateOffsetsAndStride() {
 			uint32_t offset = 0;
 			m_Stride = 0;
@@ -99,6 +126,8 @@ namespace Vesper {
 	};
 
 
+	/// @class VertexBuffer
+	/// @brief Abstract base class for a vertex buffer.
 	class VertexBuffer
 	{
 	public:
@@ -117,7 +146,10 @@ namespace Vesper {
 		static Ref<VertexBuffer> Create(float* vertices, uint32_t size);
 	};
 
-	// Currently only supports uint32_t indices
+	/// @class IndexBuffer
+	/// @brief Abstract base class for an index buffer.
+	///
+	/// Currently only supports uint32_t indices
 	class IndexBuffer
 	{
 	public:

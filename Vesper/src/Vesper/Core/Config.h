@@ -1,23 +1,6 @@
 #pragma once
 
-/// DLL support
-#ifdef VZ_PLATFORM_WINDOWS
-#if VZ_DYNAMIC_LINK
-#ifdef VZ_BUILD_DLL
-#define VESPER_API __declspec(dllexport)
-#else
-#define VESPER_API __declspec(dllimport)
-#endif
-#else
-#define VESPER_API
-#endif
-#else
-#error Vesper only supports Windows!
-#endif // End of DLL support
-
-/// TODO: Implement
-/// Default Graphics API
-
+/// @todo: Implement Default Graphics API
 
 
 /// Editor Configurations
