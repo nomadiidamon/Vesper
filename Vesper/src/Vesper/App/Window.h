@@ -5,7 +5,19 @@
 #include "Vesper/Core/Base.h"
 #include "Vesper/Events/Event.h"
 
+/// @file Window.h
+/// @author Damon S. Green II
+/// @brief Defines the abstract Window class and WindowProps struct for window management.
+/// @todo Add support for different window modes (windowed, fullscreen, borderless).
 namespace Vesper {
+
+	/// WIP
+	enum class WindowMode
+	{
+		Windowed = 0,
+		Fullscreen = 1,
+		Borderless = 2
+	};
 
 	/// @brief Holds the data for window configuration
 	struct WindowProps {
@@ -26,6 +38,7 @@ namespace Vesper {
 
 	/// @class Window
 	/// @brief Abstract interface representing an application window.
+	/// @todo Add Window mode functionality
 	class Window
 	{
 	public:

@@ -1,5 +1,9 @@
 #pragma once
-// For use by Vesper applications
+
+/// @file Vesper.h
+/// @author Damon S. Green II
+/// @brief Main header file for the Vesper engine.
+/// For use by clients in Vesper applications
 
 #include "Vesper/Core/Base.h"
 
@@ -16,13 +20,13 @@
 #include "Vesper/Core/Math.h"
 
 #include "Vesper/Input/Input.h"							
-//#include "Vesper/Input/InputContext.h"				/// TODO: Input Context class
-//#include "Vesper/Input/InputAction.h"					/// TODO: Input Action class
+//#include "Vesper/Input/InputContext.h"				/// @todo Input Context class
+//#include "Vesper/Input/InputAction.h"					/// @todo Input Action class
 #include "Vesper/Input/KeyCodes.h"
 #include "Vesper/Input/MouseButtonCodes.h"
 
 /// GUI
-#include "Vesper/ImGui/ImGuiLayer.h"					/// TODO: Abstract this to OpenGL/DirectX/Vulkan etc ImGui layers
+#include "Vesper/ImGui/ImGuiLayer.h"					/// @todo Abstract this to OpenGL/DirectX/Vulkan etc ImGui layers
 
 // -- Particle System (Temporary) -------------------	/// Simple particle system for stress testing renderer
 #include "Vesper/ParticleSystem/ParticleSystem.h"		/// Temporary starter particle system
@@ -31,9 +35,15 @@
 #include "Vesper/Scene/Entity.h"
 #include "Vesper/Scene/ScriptableEntity.h"
 #include "Vesper/Scene/Components.h"
-#include "Vesper/Scene/Scene.h"							/// TODO: Give scene a System variable
-// #include "Vesper/Scene/Systems.h"					/// TODO: Systems class
-// #include "Vesper/Scene/SystemsManager.h"				/// TODO: Static SystemsManager class
+
+/// @todo Give scene a System[] variable
+#include "Vesper/Scene/Scene.h"							
+
+/// @todo Systems class
+// #include "Vesper/Scene/Systems.h"					
+
+/// @todo Static SystemsManager class
+// #include "Vesper/Scene/SystemsManager.h"				
 
 // -- Renderer-------------------
 #include "Vesper/Renderer/Renderer.h"

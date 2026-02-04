@@ -6,19 +6,15 @@
 #include "Vesper/Events/ApplicationEvent.h"
 #include "Vesper/Core/Timestep.h"
 #include "Vesper/ImGui/ImGuiLayer.h"
-
 #include "Vesper/Renderer/RendererAPI.h"
+
+/// @file Application.h
+/// @author Damon S. Green II
+/// @brief Controls the run of the Vesper Engine
+/// @todo Convert all files/classes in App directory to Vesper::App namespace (create it)
 
 namespace Vesper {
 
-
-	/// WIP
-	enum class WindowMode
-	{
-		Windowed = 0,
-		Fullscreen = 1,
-		Borderless = 2
-	};
 
 	/// WIP
 	struct ApplicationSettings {
@@ -34,6 +30,7 @@ namespace Vesper {
 
 	/// @class Application
 	/// @brief The core application class that manages the main loop, window, layers, and event handling.
+	/// @todo Update class to accept ApplicationSettings in constructor and verify its utility/use
 	class Application
 	{
 	public:
@@ -46,6 +43,9 @@ namespace Vesper {
 		virtual ~Application();
 
 		/// @brief Starts the main application loop.
+		///
+		/// @todo Add Layer rendering into the main loop
+		/// @todo Add separate threads for rendering and updating
 		void Run();
 
 		/// @brief Handles incoming events and dispatches them to the appropriate handlers.
@@ -75,7 +75,7 @@ namespace Vesper {
 		/// @brief Event handler for window resize events.
 		bool OnWindowResize(WindowResizeEvent& e);
 
-		/// @brief Initializes the application.
+		/// @brief Scoped pointer to the applications underlying window.
 		Scope<Window> m_Window;
 		/// @brief ImGui layer for rendering GUI elements
 		ImGuiLayer* m_ImGuiLayer;

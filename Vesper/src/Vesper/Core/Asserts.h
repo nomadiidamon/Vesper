@@ -1,5 +1,10 @@
 #pragma once
 
+/// @file Asserts.h
+/// @author Damon S. Green II
+/// @brief Provides assertion macros for debugging and error handling.
+
+
 /// ASSERT MACROS
 #ifdef VZ_DEBUG
 #define VZ_ENABLE_ASSERTS

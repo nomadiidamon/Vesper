@@ -5,6 +5,10 @@
 #include <glm/glm.hpp>
 #include "Vesper/Debug/Instrumentor.h"
 
+/// @file Random.h
+/// @author Damon S. Green II
+/// @brief Provides random number generation utilities.
+
 namespace Vesper {
 
 	namespace Random {

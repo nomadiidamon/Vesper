@@ -19,6 +19,10 @@
 
 #include "Vesper/Debug/Instrumentor.h"
 
+/// @file vzpch.h
+/// @author Damon S. Green II
+/// @brief Precompiled header for the Vesper engine.
+
 
 #ifdef VZ_PLATFORM_WINDOWS
 	#include <windows.h>

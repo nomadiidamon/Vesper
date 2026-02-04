@@ -3,6 +3,10 @@
 #include "vzpch.h"
 #include "Vesper/Core/Base.h"
 
+/// @file Event.h
+/// @author Damon S. Green II
+/// @brief Defines the base Event class and related enumerations and macros.
+
 namespace Vesper
 {
 	/// @brief Enumeration of event types.
@@ -26,13 +30,6 @@ namespace Vesper
 		EventCategoryMouseButton	= BIT(4)
 	};
 
-	/// @brief Macro to define event type in event subclasses.
-#define EVENT_CLASS_TYPE(type) static EventType GetStaticType() { return EventType::##type; }\
-								virtual EventType GetEventType() const override { return GetStaticType(); }\
-								virtual const char* GetName() const override { return #type; }
-
-	/// @brief Macro to define event category in event subclasses.
-#define EVENT_CLASS_CATEGORY(category) virtual int GetCategoryFlags() const override { return category; }
 
 	/// @class Event
 	/// @brief Abstract base class for all events.
