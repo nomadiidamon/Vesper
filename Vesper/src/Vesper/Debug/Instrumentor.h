@@ -1,3 +1,9 @@
+
+/// @file Instrumentor.h
+/// @author TheCherno
+/// @author Damon S. Green II
+/// @brief Provides instrumentation and profiling utilities.
+
 //Copyright © TheCherno
 //Modifications Copyright © 2025 Damon S.Green II(nomad_ii_damon)
 //

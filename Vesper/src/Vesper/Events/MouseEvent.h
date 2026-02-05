@@ -4,6 +4,10 @@
 #include "Vesper/Core/Base.h"
 #include "Vesper/Events/Event.h"
 
+/// @file MouseEvent.h
+/// @author Damon S. Green II
+/// @brief Defines mouse event classes.
+
 namespace Vesper {
 
 	/// @class MouseMovedEvent

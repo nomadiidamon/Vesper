@@ -1,9 +1,13 @@
 #pragma once
 #include <chrono>
 
+/// @file Timer.h
+/// @author Damon S. Green II
+/// @brief Declares a Timer class for measuring elapsed time.
+
 namespace Vesper
 {
-	/// TODO: Finish timer class
+	/// @todo Finish timer class
 
 
 

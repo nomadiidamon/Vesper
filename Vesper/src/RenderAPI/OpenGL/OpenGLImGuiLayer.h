@@ -10,7 +10,7 @@
 
 namespace Vesper {
 
-	class VESPER_API OpenGLImGuiLayer : public ImGuiLayer
+	class OpenGLImGuiLayer : public ImGuiLayer
 	{
 	public:
 		OpenGLImGuiLayer();

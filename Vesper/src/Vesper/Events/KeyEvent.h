@@ -4,6 +4,10 @@
 #include "Vesper/Core/Base.h"
 #include "Vesper/Events/Event.h"
 
+/// @file KeyEvent.h
+/// @author Damon S. Green II
+/// @brief Defines keyboard event classes.
+
 namespace Vesper {
 
 	/// @class KeyEvent

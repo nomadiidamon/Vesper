@@ -3,11 +3,15 @@
 #include "Vesper/Core/Base.h"
 #include "Layer.h"
 
+/// @file LayerStack.h
+/// @author Damon S. Green II
+/// @brief Defines the LayerStack class for managing a stack of application layers.
 
 namespace Vesper {
 
 	/// @class LayerStack
 	/// @brief Manages an ordered stack of Layer pointers. Layers can be pushed or popped and the stack can be iterated in forward or reverse order.
+	/// @todo Add layer priority system (maybe?)
 	class LayerStack
 	{
 	public:

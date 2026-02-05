@@ -3,6 +3,11 @@
 #include "Vesper/Core/Timestep.h"
 #include "Vesper/Events/Event.h"
 
+/// @file Layer.h
+/// @author Damon S. Green II
+/// @brief Defines the Layer class for creating reusable application layers.
+/// @todo Add layer priority system (maybe?)
+
 namespace Vesper {
 
 	/// @class Layer
@@ -14,7 +19,7 @@ namespace Vesper {
 
 		/// @brief Constructs a Layer with an optional name for debugging purposes.
 		///
-		/// @param name The name of the layer, used for debugging.
+		/// @param name The name of the layer, used for debugging, defaulted to "Layer".
 		Layer(const std::string& name = "Layer");
 
 		virtual ~Layer();
@@ -36,6 +41,9 @@ namespace Vesper {
 		virtual void OnEvent(Event& event){}
 
 		/// @brief Called when the layer should render its contents.
+		///
+		/// @note Layers are responsible for their own rendering needs.
+		/// @todo add layer rendering into the application's render loop
 		virtual void OnRender() {};
 
 		/// @brief Called when the layer should render its ImGui components.

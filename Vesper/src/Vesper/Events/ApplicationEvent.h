@@ -4,6 +4,10 @@
 #include "Vesper/Core/Base.h"
 #include "Vesper/Events/Event.h"
 
+/// @file ApplicationEvent.h
+/// @author Damon S. Green II
+/// @brief Defines application event classes.
+
 namespace Vesper {
 
 	/// @class WindowResizeEvent

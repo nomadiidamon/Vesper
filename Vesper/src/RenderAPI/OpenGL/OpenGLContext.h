@@ -5,7 +5,7 @@
 struct GLFWwindow;
 
 namespace Vesper {
-	class VESPER_API OpenGLContext : public GraphicsContext
+	class OpenGLContext : public GraphicsContext
 	{
 	public:
 		OpenGLContext(GLFWwindow* windowHandle);

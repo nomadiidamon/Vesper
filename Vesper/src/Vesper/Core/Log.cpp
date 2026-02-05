@@ -3,6 +3,11 @@
 
 #include "spdlog/sinks/stdout_color_sinks.h"
 
+/// @file Log.cpp
+/// @author Damon S. Green II
+/// @brief Implements the logging system for the Vesper engine.
+/// @see Log.h
+
 namespace Vesper {
 
 	std::shared_ptr<spdlog::logger> Log::s_CoreLogger;
