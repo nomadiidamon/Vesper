@@ -133,6 +133,7 @@ Private Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Manages an ordered stack of <a class="el" href="class_vesper_1_1_layer.html" title="Represents a reusable application layer that receives lifecycle callbacks (attach,...">Layer</a> pointers. Layers can be pushed or popped and the stack can be iterated in forward or reverse order. </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000004">Todo</a></b></dt><dd>Add layer priority system (maybe?) </dd></dl>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a01ab5d24098db960d7bac1225cbb542e" name="a01ab5d24098db960d7bac1225cbb542e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a01ab5d24098db960d7bac1225cbb542e">&#9670;&#160;</a></span>LayerStack()</h2>
@@ -174,7 +175,7 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   15</span>            <span class="keyword">delete</span> layer;</div>
 <div class="line"><span class="lineno">   16</span>        }</div>
 <div class="line"><span class="lineno">   17</span>    }</div>
-<div class="ttc" id="aclass_vesper_1_1_layer_stack_html_a22415e6ba25b7cf484a57548b7fce01c"><div class="ttname"><a href="#a22415e6ba25b7cf484a57548b7fce01c">Vesper::LayerStack::m_Layers</a></div><div class="ttdeci">std::vector&lt; Layer * &gt; m_Layers</div><div class="ttdoc">Vector holding pointers to the layers in the stack.</div><div class="ttdef"><b>Definition</b> LayerStack.h:49</div></div>
+<div class="ttc" id="aclass_vesper_1_1_layer_stack_html_a22415e6ba25b7cf484a57548b7fce01c"><div class="ttname"><a href="#a22415e6ba25b7cf484a57548b7fce01c">Vesper::LayerStack::m_Layers</a></div><div class="ttdeci">std::vector&lt; Layer * &gt; m_Layers</div><div class="ttdoc">Vector holding pointers to the layers in the stack.</div><div class="ttdef"><b>Definition</b> LayerStack.h:53</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -203,7 +204,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns an iterator to the beginning of the layer stack. </p>
-<div class="fragment"><div class="line"><span class="lineno">   38</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a22415e6ba25b7cf484a57548b7fce01c">m_Layers</a>.begin(); }</div>
+<div class="fragment"><div class="line"><span class="lineno">   42</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a22415e6ba25b7cf484a57548b7fce01c">m_Layers</a>.begin(); }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -231,7 +232,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns an iterator to the end of the layer stack. </p>
-<div class="fragment"><div class="line"><span class="lineno">   40</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a22415e6ba25b7cf484a57548b7fce01c">m_Layers</a>.end(); }</div>
+<div class="fragment"><div class="line"><span class="lineno">   44</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a22415e6ba25b7cf484a57548b7fce01c">m_Layers</a>.end(); }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -266,8 +267,8 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   39</span>            <a class="code hl_variable" href="#a2722bad174bdd9e8c4bf4e8435a82df4">m_LayerInsertIndex</a>--;</div>
 <div class="line"><span class="lineno">   40</span>        }</div>
 <div class="line"><span class="lineno">   41</span>    }</div>
-<div class="ttc" id="a_instrumentor_8h_html_aaa03f54db70b44f8decacf111dc1109b"><div class="ttname"><a href="_instrumentor_8h.html#aaa03f54db70b44f8decacf111dc1109b">VZ_PROFILE_FUNCTION</a></div><div class="ttdeci">#define VZ_PROFILE_FUNCTION()</div><div class="ttdef"><b>Definition</b> Instrumentor.h:234</div></div>
-<div class="ttc" id="aclass_vesper_1_1_layer_stack_html_a2722bad174bdd9e8c4bf4e8435a82df4"><div class="ttname"><a href="#a2722bad174bdd9e8c4bf4e8435a82df4">Vesper::LayerStack::m_LayerInsertIndex</a></div><div class="ttdeci">unsigned int m_LayerInsertIndex</div><div class="ttdoc">Index indicating where to insert new layers (before overlays).</div><div class="ttdef"><b>Definition</b> LayerStack.h:51</div></div>
+<div class="ttc" id="a_instrumentor_8h_html_aaa03f54db70b44f8decacf111dc1109b"><div class="ttname"><a href="_instrumentor_8h.html#aaa03f54db70b44f8decacf111dc1109b">VZ_PROFILE_FUNCTION</a></div><div class="ttdeci">#define VZ_PROFILE_FUNCTION()</div><div class="ttdef"><b>Definition</b> Instrumentor.h:240</div></div>
+<div class="ttc" id="aclass_vesper_1_1_layer_stack_html_a2722bad174bdd9e8c4bf4e8435a82df4"><div class="ttname"><a href="#a2722bad174bdd9e8c4bf4e8435a82df4">Vesper::LayerStack::m_LayerInsertIndex</a></div><div class="ttdeci">unsigned int m_LayerInsertIndex</div><div class="ttdoc">Index indicating where to insert new layers (before overlays).</div><div class="ttdef"><b>Definition</b> LayerStack.h:55</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a2722bad174bdd9e8c4bf4e8435a82df4">m_LayerInsertIndex</a>.</p>
 
@@ -391,7 +392,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns a reverse iterator to the beginning of the layer stack. </p>
-<div class="fragment"><div class="line"><span class="lineno">   42</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a22415e6ba25b7cf484a57548b7fce01c">m_Layers</a>.rbegin(); }</div>
+<div class="fragment"><div class="line"><span class="lineno">   46</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a22415e6ba25b7cf484a57548b7fce01c">m_Layers</a>.rbegin(); }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -419,7 +420,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns a reverse iterator to the end of the layer stack. </p>
-<div class="fragment"><div class="line"><span class="lineno">   44</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a22415e6ba25b7cf484a57548b7fce01c">m_Layers</a>.rend(); }</div>
+<div class="fragment"><div class="line"><span class="lineno">   48</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a22415e6ba25b7cf484a57548b7fce01c">m_Layers</a>.rend(); }</div>
 </div><!-- fragment -->
 </div>
 </div>

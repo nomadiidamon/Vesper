@@ -98,6 +98,9 @@ $(function(){initNavTree('class_vesper_1_1_shader.html','','class_vesper_1_1_sha
 </div><!--header-->
 <div class="contents">
 
+<p>An abstraction for a shader program.  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_shader_8h_source.html">Shader.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Vesper::Shader:</div>
@@ -113,13 +116,21 @@ Inheritance diagram for Vesper::Shader:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ab2fa132232211fe520090098a78da95a" id="r_ab2fa132232211fe520090098a78da95a"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="#ab2fa132232211fe520090098a78da95a">~Shader</a> ()=default</td></tr>
 <tr class="memitem:a644e5d528225ce469094da31fb96ed2c" id="r_a644e5d528225ce469094da31fb96ed2c"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a644e5d528225ce469094da31fb96ed2c">Bind</a> () const =0</td></tr>
+<tr class="memdesc:a644e5d528225ce469094da31fb96ed2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">connects the shader program for use.  <br /></td></tr>
 <tr class="memitem:ac167dc4c337325d8c399f4f5bb448c87" id="r_ac167dc4c337325d8c399f4f5bb448c87"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#ac167dc4c337325d8c399f4f5bb448c87">Unbind</a> () const =0</td></tr>
+<tr class="memdesc:ac167dc4c337325d8c399f4f5bb448c87"><td class="mdescLeft">&#160;</td><td class="mdescRight">disconnects the shader program.  <br /></td></tr>
 <tr class="memitem:ae054ea57db97bfd3920c513067f50f18" id="r_ae054ea57db97bfd3920c513067f50f18"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#ae054ea57db97bfd3920c513067f50f18">SetMat4</a> (const std::string &amp;name, const glm::mat4 &amp;value)=0</td></tr>
+<tr class="memdesc:ae054ea57db97bfd3920c513067f50f18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a 4x4 matrix uniform in the shader.  <br /></td></tr>
 <tr class="memitem:a840ec2776c63c940b77f55f14a946e45" id="r_a840ec2776c63c940b77f55f14a946e45"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a840ec2776c63c940b77f55f14a946e45">SetFloat4</a> (const std::string &amp;name, const glm::vec4 &amp;value)=0</td></tr>
+<tr class="memdesc:a840ec2776c63c940b77f55f14a946e45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a 4-component float vector uniform in the shader.  <br /></td></tr>
 <tr class="memitem:ad1b423de1b03aa2f8e37af728d2b29bf" id="r_ad1b423de1b03aa2f8e37af728d2b29bf"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#ad1b423de1b03aa2f8e37af728d2b29bf">SetFloat3</a> (const std::string &amp;name, const glm::vec3 &amp;value)=0</td></tr>
+<tr class="memdesc:ad1b423de1b03aa2f8e37af728d2b29bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a 3-component float vector uniform in the shader.  <br /></td></tr>
 <tr class="memitem:aef451106250c23d4ab31f5c364aa28f8" id="r_aef451106250c23d4ab31f5c364aa28f8"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#aef451106250c23d4ab31f5c364aa28f8">SetFloat</a> (const std::string &amp;name, float value)=0</td></tr>
+<tr class="memdesc:aef451106250c23d4ab31f5c364aa28f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a single float uniform in the shader.  <br /></td></tr>
 <tr class="memitem:a049a3caeb306f4877fa78065e67a3142" id="r_a049a3caeb306f4877fa78065e67a3142"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a049a3caeb306f4877fa78065e67a3142">SetInt</a> (const std::string &amp;name, int value)=0</td></tr>
+<tr class="memdesc:a049a3caeb306f4877fa78065e67a3142"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a single integer uniform in the shader.  <br /></td></tr>
 <tr class="memitem:a623f5f15253e3143161cb071122e9c48" id="r_a623f5f15253e3143161cb071122e9c48"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a623f5f15253e3143161cb071122e9c48">SetIntArray</a> (const std::string &amp;name, int *values, uint32_t count)=0</td></tr>
+<tr class="memdesc:a623f5f15253e3143161cb071122e9c48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets an array of integers uniform in the shader.  <br /></td></tr>
 <tr class="memitem:ac2195bc2090dace8c8a875ae8b402b24" id="r_ac2195bc2090dace8c8a875ae8b402b24"><td class="memItemLeft">virtual const std::string &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ac2195bc2090dace8c8a875ae8b402b24">GetName</a> () const =0</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
@@ -127,7 +138,9 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a84e4327fa98e045cc3368f476ea712d6" id="r_a84e4327fa98e045cc3368f476ea712d6"><td class="memItemLeft">static <a class="el" href="namespace_vesper.html#ad1f51d7e944b5e23b18b12cacd5f0d27">Ref</a>&lt; <a class="el" href="class_vesper_1_1_shader.html">Shader</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a84e4327fa98e045cc3368f476ea712d6">Create</a> (const std::string &amp;name, const std::string &amp;vertexSrc, const std::string &amp;fragmentSrc)</td></tr>
 <tr class="memitem:a8774af48abe3b014ef6f81fba33ad1a4" id="r_a8774af48abe3b014ef6f81fba33ad1a4"><td class="memItemLeft">static <a class="el" href="namespace_vesper.html#ad1f51d7e944b5e23b18b12cacd5f0d27">Ref</a>&lt; <a class="el" href="class_vesper_1_1_shader.html">Shader</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a8774af48abe3b014ef6f81fba33ad1a4">Create</a> (const std::string &amp;filepath)</td></tr>
 </table>
-<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>An abstraction for a shader program. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ab2fa132232211fe520090098a78da95a" name="ab2fa132232211fe520090098a78da95a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab2fa132232211fe520090098a78da95a">&#9670;&#160;</a></span>~Shader()</h2>
 
@@ -177,6 +190,8 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>connects the shader program for use. </p>
+
 <p>Implemented in <a class="el" href="class_vesper_1_1_open_g_l_shader.html#a3b693b2c8af2234d2030661f5a3fe35e">Vesper::OpenGLShader</a>.</p>
 
 </div>
@@ -212,11 +227,11 @@ Static Public Member Functions</h2></td></tr>
 <div class="line"><span class="lineno">   16</span>        <a class="code hl_define" href="_asserts_8h.html#a3b51b77f75997760894138afc89403c9">VZ_CORE_ASSERT</a>(<span class="keyword">false</span>, <span class="stringliteral">&quot;Unknown RendererAPI!&quot;</span>);</div>
 <div class="line"><span class="lineno">   17</span>        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
 <div class="line"><span class="lineno">   18</span>    }</div>
-<div class="ttc" id="a_asserts_8h_html_a3b51b77f75997760894138afc89403c9"><div class="ttname"><a href="_asserts_8h.html#a3b51b77f75997760894138afc89403c9">VZ_CORE_ASSERT</a></div><div class="ttdeci">#define VZ_CORE_ASSERT(x,...)</div><div class="ttdef"><b>Definition</b> Asserts.h:13</div></div>
-<div class="ttc" id="aclass_vesper_1_1_renderer_a_p_i_html_acbef8f1a2c9546387b6513640c5c7995a6adf97f83acf6453d4a6a4b1070f3754"><div class="ttname"><a href="class_vesper_1_1_renderer_a_p_i.html#acbef8f1a2c9546387b6513640c5c7995a6adf97f83acf6453d4a6a4b1070f3754">Vesper::RendererAPI::API::None</a></div><div class="ttdeci">@ None</div><div class="ttdef"><b>Definition</b> RendererAPI.h:12</div></div>
-<div class="ttc" id="aclass_vesper_1_1_renderer_a_p_i_html_acbef8f1a2c9546387b6513640c5c7995a760716b590ee7c0adc25f434f577d8be"><div class="ttname"><a href="class_vesper_1_1_renderer_a_p_i.html#acbef8f1a2c9546387b6513640c5c7995a760716b590ee7c0adc25f434f577d8be">Vesper::RendererAPI::API::OpenGL</a></div><div class="ttdeci">@ OpenGL</div><div class="ttdef"><b>Definition</b> RendererAPI.h:13</div></div>
-<div class="ttc" id="aclass_vesper_1_1_renderer_html_af8221f49491f130b6de7feb1b5093227"><div class="ttname"><a href="class_vesper_1_1_renderer.html#af8221f49491f130b6de7feb1b5093227">Vesper::Renderer::GetAPI</a></div><div class="ttdeci">static RendererAPI::API GetAPI()</div><div class="ttdef"><b>Definition</b> Renderer.h:23</div></div>
-<div class="ttc" id="anamespace_vesper_html_a313930b55375b2f4dd36375b56f11047"><div class="ttname"><a href="namespace_vesper.html#a313930b55375b2f4dd36375b56f11047">Vesper::CreateRef</a></div><div class="ttdeci">constexpr Ref&lt; T &gt; CreateRef(Args &amp;&amp;... args)</div><div class="ttdef"><b>Definition</b> Defines_Macros.h:23</div></div>
+<div class="ttc" id="a_asserts_8h_html_a3b51b77f75997760894138afc89403c9"><div class="ttname"><a href="_asserts_8h.html#a3b51b77f75997760894138afc89403c9">VZ_CORE_ASSERT</a></div><div class="ttdeci">#define VZ_CORE_ASSERT(x,...)</div><div class="ttdef"><b>Definition</b> Asserts.h:20</div></div>
+<div class="ttc" id="aclass_vesper_1_1_renderer_a_p_i_html_acbef8f1a2c9546387b6513640c5c7995a6adf97f83acf6453d4a6a4b1070f3754"><div class="ttname"><a href="class_vesper_1_1_renderer_a_p_i.html#acbef8f1a2c9546387b6513640c5c7995a6adf97f83acf6453d4a6a4b1070f3754">Vesper::RendererAPI::API::None</a></div><div class="ttdeci">@ None</div><div class="ttdef"><b>Definition</b> RendererAPI.h:15</div></div>
+<div class="ttc" id="aclass_vesper_1_1_renderer_a_p_i_html_acbef8f1a2c9546387b6513640c5c7995a760716b590ee7c0adc25f434f577d8be"><div class="ttname"><a href="class_vesper_1_1_renderer_a_p_i.html#acbef8f1a2c9546387b6513640c5c7995a760716b590ee7c0adc25f434f577d8be">Vesper::RendererAPI::API::OpenGL</a></div><div class="ttdeci">@ OpenGL</div><div class="ttdef"><b>Definition</b> RendererAPI.h:16</div></div>
+<div class="ttc" id="aclass_vesper_1_1_renderer_html_af8221f49491f130b6de7feb1b5093227"><div class="ttname"><a href="class_vesper_1_1_renderer.html#af8221f49491f130b6de7feb1b5093227">Vesper::Renderer::GetAPI</a></div><div class="ttdeci">static RendererAPI::API GetAPI()</div><div class="ttdoc">Retrieves the current rendering API.</div><div class="ttdef"><b>Definition</b> Renderer.h:40</div></div>
+<div class="ttc" id="anamespace_vesper_html_a313930b55375b2f4dd36375b56f11047"><div class="ttname"><a href="namespace_vesper.html#a313930b55375b2f4dd36375b56f11047">Vesper::CreateRef</a></div><div class="ttdeci">constexpr Ref&lt; T &gt; CreateRef(Args &amp;&amp;... args)</div><div class="ttdoc">Creates a Ref (shared_ptr) for the given type and constructor arguments.</div><div class="ttdef"><b>Definition</b> Defines_Macros.h:72</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="class_vesper_1_1_renderer.html#af8221f49491f130b6de7feb1b5093227">Vesper::Renderer::GetAPI()</a>, <a class="el" href="class_vesper_1_1_renderer_a_p_i.html#acbef8f1a2c9546387b6513640c5c7995a6adf97f83acf6453d4a6a4b1070f3754">Vesper::RendererAPI::None</a>, and <a class="el" href="class_vesper_1_1_renderer_a_p_i.html#acbef8f1a2c9546387b6513640c5c7995a760716b590ee7c0adc25f434f577d8be">Vesper::RendererAPI::OpenGL</a>.</p>
 
@@ -321,6 +336,8 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Sets a single float uniform in the shader. </p>
+
 <p>Implemented in <a class="el" href="class_vesper_1_1_open_g_l_shader.html#a710f6642c1ceed564b7eebae9ba9243f">Vesper::OpenGLShader</a>.</p>
 
 </div>
@@ -351,6 +368,8 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Sets a 3-component float vector uniform in the shader. </p>
 
 <p>Implemented in <a class="el" href="class_vesper_1_1_open_g_l_shader.html#a7950189b78a1c775dd779bf059c19f20">Vesper::OpenGLShader</a>.</p>
 
@@ -383,6 +402,8 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Sets a 4-component float vector uniform in the shader. </p>
+
 <p>Implemented in <a class="el" href="class_vesper_1_1_open_g_l_shader.html#a9e55fe4fba2183704f88ba90cfc98f0b">Vesper::OpenGLShader</a>.</p>
 
 </div>
@@ -413,6 +434,8 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Sets a single integer uniform in the shader. </p>
 
 <p>Implemented in <a class="el" href="class_vesper_1_1_open_g_l_shader.html#a4436d79885690690a133ac26c0ac2a7b">Vesper::OpenGLShader</a>.</p>
 
@@ -450,6 +473,8 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Sets an array of integers uniform in the shader. </p>
+
 <p>Implemented in <a class="el" href="class_vesper_1_1_open_g_l_shader.html#a1107df8d1f090ab467bbf6dc09a1e97d">Vesper::OpenGLShader</a>.</p>
 
 </div>
@@ -481,6 +506,8 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Sets a 4x4 matrix uniform in the shader. </p>
+
 <p>Implemented in <a class="el" href="class_vesper_1_1_open_g_l_shader.html#a494316a0902f35db7a34a1e3d2641756">Vesper::OpenGLShader</a>.</p>
 
 </div>
@@ -507,6 +534,8 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>disconnects the shader program. </p>
 
 <p>Implemented in <a class="el" href="class_vesper_1_1_open_g_l_shader.html#aa25276d9979c2cba91d152196996dba5">Vesper::OpenGLShader</a>.</p>
 

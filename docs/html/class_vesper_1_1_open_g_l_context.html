@@ -105,7 +105,7 @@ Inheritance diagram for Vesper::OpenGLContext:</div>
  <div class="center">
   <img src="class_vesper_1_1_open_g_l_context.png" usemap="#Vesper_3A_3AOpenGLContext_map" alt=""/>
   <map id="Vesper_3A_3AOpenGLContext_map" name="Vesper_3A_3AOpenGLContext_map">
-<area href="class_vesper_1_1_graphics_context.html" alt="Vesper::GraphicsContext" shape="rect" coords="0,0,152,24"/>
+<area href="class_vesper_1_1_graphics_context.html" title="Abstract class representing a graphics context." alt="Vesper::GraphicsContext" shape="rect" coords="0,0,152,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -114,7 +114,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5cfb7408c0e8c95ce558121ef16dc12e" id="r_a5cfb7408c0e8c95ce558121ef16dc12e"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a5cfb7408c0e8c95ce558121ef16dc12e">OpenGLContext</a> (GLFWwindow *windowHandle)</td></tr>
 <tr class="memitem:a222b679367afb98d5b4b7a56f0b833bc" id="r_a222b679367afb98d5b4b7a56f0b833bc"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="#a222b679367afb98d5b4b7a56f0b833bc">~OpenGLContext</a> ()</td></tr>
 <tr class="memitem:a1065ac4bcb2710bf216ad6ef98e73318" id="r_a1065ac4bcb2710bf216ad6ef98e73318"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a1065ac4bcb2710bf216ad6ef98e73318">Init</a> () override</td></tr>
+<tr class="memdesc:a1065ac4bcb2710bf216ad6ef98e73318"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the graphics context.  <br /></td></tr>
 <tr class="memitem:a6e2645931d1e2ffdd5e6f8130f17f80f" id="r_a6e2645931d1e2ffdd5e6f8130f17f80f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a6e2645931d1e2ffdd5e6f8130f17f80f">SwapBuffers</a> () override</td></tr>
+<tr class="memdesc:a6e2645931d1e2ffdd5e6f8130f17f80f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Swaps the front and back buffers.  <br /></td></tr>
 <tr class="inherit_header pub_methods_class_vesper_1_1_graphics_context"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_vesper_1_1_graphics_context')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="class_vesper_1_1_graphics_context.html">Vesper::GraphicsContext</a></td></tr>
 <tr class="memitem:af5f44adc2b3221b0724998f669c4ce52 inherit pub_methods_class_vesper_1_1_graphics_context" id="r_af5f44adc2b3221b0724998f669c4ce52"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="class_vesper_1_1_graphics_context.html#af5f44adc2b3221b0724998f669c4ce52">~GraphicsContext</a> ()</td></tr>
 </table><table class="memberdecls">
@@ -142,7 +144,7 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   14</span>        <a class="code hl_define" href="_asserts_8h.html#a3b51b77f75997760894138afc89403c9">VZ_CORE_ASSERT</a>(windowHandle, <span class="stringliteral">&quot;Window handle is null!&quot;</span>);</div>
 <div class="line"><span class="lineno">   15</span> </div>
 <div class="line"><span class="lineno">   16</span>    }</div>
-<div class="ttc" id="a_asserts_8h_html_a3b51b77f75997760894138afc89403c9"><div class="ttname"><a href="_asserts_8h.html#a3b51b77f75997760894138afc89403c9">VZ_CORE_ASSERT</a></div><div class="ttdeci">#define VZ_CORE_ASSERT(x,...)</div><div class="ttdef"><b>Definition</b> Asserts.h:13</div></div>
+<div class="ttc" id="a_asserts_8h_html_a3b51b77f75997760894138afc89403c9"><div class="ttname"><a href="_asserts_8h.html#a3b51b77f75997760894138afc89403c9">VZ_CORE_ASSERT</a></div><div class="ttdeci">#define VZ_CORE_ASSERT(x,...)</div><div class="ttdef"><b>Definition</b> Asserts.h:20</div></div>
 <div class="ttc" id="aclass_vesper_1_1_open_g_l_context_html_a2b94fcba4a84db55fbeeddc470902c66"><div class="ttname"><a href="#a2b94fcba4a84db55fbeeddc470902c66">Vesper::OpenGLContext::m_WindowHandle</a></div><div class="ttdeci">GLFWwindow * m_WindowHandle</div><div class="ttdef"><b>Definition</b> OpenGLContext.h:16</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a2b94fcba4a84db55fbeeddc470902c66">m_WindowHandle</a>.</p>
@@ -200,6 +202,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Initializes the graphics context. </p>
+
 <p>Implements <a class="el" href="class_vesper_1_1_graphics_context.html#a69ff1719f52df244b9980617755f57e6">Vesper::GraphicsContext</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   23</span>    {</div>
 <div class="line"><span class="lineno">   24</span>        <a class="code hl_define" href="_instrumentor_8h.html#aaa03f54db70b44f8decacf111dc1109b">VZ_PROFILE_FUNCTION</a>();</div>
@@ -221,8 +225,8 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   40</span><span class="preprocessor">#endif</span></div>
 <div class="line"><span class="lineno">   41</span> </div>
 <div class="line"><span class="lineno">   42</span>    }</div>
-<div class="ttc" id="a_instrumentor_8h_html_aaa03f54db70b44f8decacf111dc1109b"><div class="ttname"><a href="_instrumentor_8h.html#aaa03f54db70b44f8decacf111dc1109b">VZ_PROFILE_FUNCTION</a></div><div class="ttdeci">#define VZ_PROFILE_FUNCTION()</div><div class="ttdef"><b>Definition</b> Instrumentor.h:234</div></div>
-<div class="ttc" id="a_log_8h_html_adb5d169d80c40496a160a4fd90ebca37"><div class="ttname"><a href="_log_8h.html#adb5d169d80c40496a160a4fd90ebca37">VZ_CORE_INFO</a></div><div class="ttdeci">#define VZ_CORE_INFO(...)</div><div class="ttdef"><b>Definition</b> Log.h:25</div></div>
+<div class="ttc" id="a_instrumentor_8h_html_aaa03f54db70b44f8decacf111dc1109b"><div class="ttname"><a href="_instrumentor_8h.html#aaa03f54db70b44f8decacf111dc1109b">VZ_PROFILE_FUNCTION</a></div><div class="ttdeci">#define VZ_PROFILE_FUNCTION()</div><div class="ttdef"><b>Definition</b> Instrumentor.h:240</div></div>
+<div class="ttc" id="a_log_8h_html_adb5d169d80c40496a160a4fd90ebca37"><div class="ttname"><a href="_log_8h.html#adb5d169d80c40496a160a4fd90ebca37">VZ_CORE_INFO</a></div><div class="ttdeci">#define VZ_CORE_INFO(...)</div><div class="ttdoc">info: general information about application flow</div><div class="ttdef"><b>Definition</b> Log.h:37</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a2b94fcba4a84db55fbeeddc470902c66">m_WindowHandle</a>.</p>
 
@@ -250,6 +254,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Swaps the front and back buffers. </p>
 
 <p>Implements <a class="el" href="class_vesper_1_1_graphics_context.html#a91344163e3085d00661d03884cfad28a">Vesper::GraphicsContext</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   45</span>    {</div>

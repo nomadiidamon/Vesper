@@ -97,6 +97,9 @@ $(function(){initNavTree('_log_8h.html','',''); });
   <div class="headertitle"><div class="title">Log.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Declares the logging system for the <a class="el" href="namespace_vesper.html" title="TEMPORARY.">Vesper</a> engine.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="_base_8h_source.html">Base.h</a>&quot;</code><br />
 <code>#include &quot;spdlog/spdlog.h&quot;</code><br />
 <code>#include &quot;spdlog/fmt/ostr.h&quot;</code><br />
@@ -106,6 +109,7 @@ $(function(){initNavTree('_log_8h.html','',''); });
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:Vesper_3A_3ALog" id="r_Vesper_3A_3ALog"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_vesper_1_1_log.html">Vesper::Log</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A logging utility class for the <a class="el" href="namespace_vesper.html" title="TEMPORARY.">Vesper</a> engine.  <a href="class_vesper_1_1_log.html#details">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
@@ -115,17 +119,30 @@ Namespaces</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:a745dd924b08fe6cfa0156a813491ee25" id="r_a745dd924b08fe6cfa0156a813491ee25"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a745dd924b08fe6cfa0156a813491ee25">VZ_CORE_TRACE</a>(...)</td></tr>
+<tr class="memdesc:a745dd924b08fe6cfa0156a813491ee25"><td class="mdescLeft">&#160;</td><td class="mdescRight">trace: lowest level, for detailed debug information  <br /></td></tr>
 <tr class="memitem:adb5d169d80c40496a160a4fd90ebca37" id="r_adb5d169d80c40496a160a4fd90ebca37"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#adb5d169d80c40496a160a4fd90ebca37">VZ_CORE_INFO</a>(...)</td></tr>
+<tr class="memdesc:adb5d169d80c40496a160a4fd90ebca37"><td class="mdescLeft">&#160;</td><td class="mdescRight">info: general information about application flow  <br /></td></tr>
 <tr class="memitem:a8d94a9db5af5b980be1ae8e66f679d55" id="r_a8d94a9db5af5b980be1ae8e66f679d55"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a8d94a9db5af5b980be1ae8e66f679d55">VZ_CORE_WARN</a>(...)</td></tr>
+<tr class="memdesc:a8d94a9db5af5b980be1ae8e66f679d55"><td class="mdescLeft">&#160;</td><td class="mdescRight">warn: indicates a potential issue or important event  <br /></td></tr>
 <tr class="memitem:af9f85085b8d9825fe5d84ca485b7ee89" id="r_af9f85085b8d9825fe5d84ca485b7ee89"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#af9f85085b8d9825fe5d84ca485b7ee89">VZ_CORE_ERROR</a>(...)</td></tr>
+<tr class="memdesc:af9f85085b8d9825fe5d84ca485b7ee89"><td class="mdescLeft">&#160;</td><td class="mdescRight">error: indicates an error that has occurred  <br /></td></tr>
 <tr class="memitem:a21537f5b8b309c9e94001fdb9c36f47f" id="r_a21537f5b8b309c9e94001fdb9c36f47f"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a21537f5b8b309c9e94001fdb9c36f47f">VZ_CORE_FATAL</a>(...)</td></tr>
+<tr class="memdesc:a21537f5b8b309c9e94001fdb9c36f47f"><td class="mdescLeft">&#160;</td><td class="mdescRight">fatal: indicates a critical error that may cause application termination  <br /></td></tr>
 <tr class="memitem:ae46c5576d38f88e75b2b46fb88bab7fd" id="r_ae46c5576d38f88e75b2b46fb88bab7fd"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ae46c5576d38f88e75b2b46fb88bab7fd">VZ_TRACE</a>(...)</td></tr>
+<tr class="memdesc:ae46c5576d38f88e75b2b46fb88bab7fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">trace: lowest level, for detailed debug information  <br /></td></tr>
 <tr class="memitem:abea15d1ee09e7905392b7f136b1d3f65" id="r_abea15d1ee09e7905392b7f136b1d3f65"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#abea15d1ee09e7905392b7f136b1d3f65">VZ_INFO</a>(...)</td></tr>
+<tr class="memdesc:abea15d1ee09e7905392b7f136b1d3f65"><td class="mdescLeft">&#160;</td><td class="mdescRight">info: general information about application flow  <br /></td></tr>
 <tr class="memitem:a326421f6e3655b1bc966ca40b2cd3275" id="r_a326421f6e3655b1bc966ca40b2cd3275"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a326421f6e3655b1bc966ca40b2cd3275">VZ_WARN</a>(...)</td></tr>
+<tr class="memdesc:a326421f6e3655b1bc966ca40b2cd3275"><td class="mdescLeft">&#160;</td><td class="mdescRight">warn: indicates a potential issue or important event  <br /></td></tr>
 <tr class="memitem:aba13729345ff739ce84f7cacb21e6501" id="r_aba13729345ff739ce84f7cacb21e6501"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aba13729345ff739ce84f7cacb21e6501">VZ_ERROR</a>(...)</td></tr>
+<tr class="memdesc:aba13729345ff739ce84f7cacb21e6501"><td class="mdescLeft">&#160;</td><td class="mdescRight">error: indicates an error that has occurred  <br /></td></tr>
 <tr class="memitem:afdf3b2fd9a9ae161c6037e81fe0c6b3f" id="r_afdf3b2fd9a9ae161c6037e81fe0c6b3f"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#afdf3b2fd9a9ae161c6037e81fe0c6b3f">VZ_FATAL</a>(...)</td></tr>
+<tr class="memdesc:afdf3b2fd9a9ae161c6037e81fe0c6b3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">fatal: indicates a critical error that may cause application termination  <br /></td></tr>
 </table>
-<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Declares the logging system for the <a class="el" href="namespace_vesper.html" title="TEMPORARY.">Vesper</a> engine. </p>
+<dl class="section author"><dt>Author</dt><dd>Damon S. Green II </dd></dl>
+</div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
 <a id="af9f85085b8d9825fe5d84ca485b7ee89" name="af9f85085b8d9825fe5d84ca485b7ee89"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af9f85085b8d9825fe5d84ca485b7ee89">&#9670;&#160;</a></span>VZ_CORE_ERROR</h2>
 
@@ -141,8 +158,10 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><a class="code hl_function" href="class_vesper_1_1_log.html#a308072f59ab7bf4c27321ec9cc26bdf6">::Vesper::Log::GetCoreLogger</a>()-&gt;error(__VA_ARGS__)</div>
-<div class="ttc" id="aclass_vesper_1_1_log_html_a308072f59ab7bf4c27321ec9cc26bdf6"><div class="ttname"><a href="class_vesper_1_1_log.html#a308072f59ab7bf4c27321ec9cc26bdf6">Vesper::Log::GetCoreLogger</a></div><div class="ttdeci">static std::shared_ptr&lt; spdlog::logger &gt; &amp; GetCoreLogger()</div><div class="ttdef"><b>Definition</b> Log.h:13</div></div>
+<div class="ttc" id="aclass_vesper_1_1_log_html_a308072f59ab7bf4c27321ec9cc26bdf6"><div class="ttname"><a href="class_vesper_1_1_log.html#a308072f59ab7bf4c27321ec9cc26bdf6">Vesper::Log::GetCoreLogger</a></div><div class="ttdeci">static std::shared_ptr&lt; spdlog::logger &gt; &amp; GetCoreLogger()</div><div class="ttdoc">Returns the core logger instance.</div><div class="ttdef"><b>Definition</b> Log.h:23</div></div>
 </div><!-- fragment -->
+<p>error: indicates an error that has occurred </p>
+
 </div>
 </div>
 <a id="a21537f5b8b309c9e94001fdb9c36f47f" name="a21537f5b8b309c9e94001fdb9c36f47f"></a>
@@ -161,6 +180,8 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><a class="code hl_function" href="class_vesper_1_1_log.html#a308072f59ab7bf4c27321ec9cc26bdf6">::Vesper::Log::GetCoreLogger</a>()-&gt;critical(__VA_ARGS__)</div>
 </div><!-- fragment -->
+<p>fatal: indicates a critical error that may cause application termination </p>
+
 </div>
 </div>
 <a id="adb5d169d80c40496a160a4fd90ebca37" name="adb5d169d80c40496a160a4fd90ebca37"></a>
@@ -179,6 +200,8 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><a class="code hl_function" href="class_vesper_1_1_log.html#a308072f59ab7bf4c27321ec9cc26bdf6">::Vesper::Log::GetCoreLogger</a>()-&gt;info(__VA_ARGS__)</div>
 </div><!-- fragment -->
+<p>info: general information about application flow </p>
+
 </div>
 </div>
 <a id="a745dd924b08fe6cfa0156a813491ee25" name="a745dd924b08fe6cfa0156a813491ee25"></a>
@@ -197,6 +220,8 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><a class="code hl_function" href="class_vesper_1_1_log.html#a308072f59ab7bf4c27321ec9cc26bdf6">::Vesper::Log::GetCoreLogger</a>()-&gt;trace(__VA_ARGS__)</div>
 </div><!-- fragment -->
+<p>trace: lowest level, for detailed debug information </p>
+
 </div>
 </div>
 <a id="a8d94a9db5af5b980be1ae8e66f679d55" name="a8d94a9db5af5b980be1ae8e66f679d55"></a>
@@ -215,6 +240,8 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><a class="code hl_function" href="class_vesper_1_1_log.html#a308072f59ab7bf4c27321ec9cc26bdf6">::Vesper::Log::GetCoreLogger</a>()-&gt;warn(__VA_ARGS__)</div>
 </div><!-- fragment -->
+<p>warn: indicates a potential issue or important event </p>
+
 </div>
 </div>
 <a id="aba13729345ff739ce84f7cacb21e6501" name="aba13729345ff739ce84f7cacb21e6501"></a>
@@ -232,8 +259,10 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><a class="code hl_function" href="class_vesper_1_1_log.html#a34127f1a92073183577fd3b86eaec092">::Vesper::Log::GetClientLogger</a>()-&gt;error(__VA_ARGS__)</div>
-<div class="ttc" id="aclass_vesper_1_1_log_html_a34127f1a92073183577fd3b86eaec092"><div class="ttname"><a href="class_vesper_1_1_log.html#a34127f1a92073183577fd3b86eaec092">Vesper::Log::GetClientLogger</a></div><div class="ttdeci">static std::shared_ptr&lt; spdlog::logger &gt; &amp; GetClientLogger()</div><div class="ttdef"><b>Definition</b> Log.h:14</div></div>
+<div class="ttc" id="aclass_vesper_1_1_log_html_a34127f1a92073183577fd3b86eaec092"><div class="ttname"><a href="class_vesper_1_1_log.html#a34127f1a92073183577fd3b86eaec092">Vesper::Log::GetClientLogger</a></div><div class="ttdeci">static std::shared_ptr&lt; spdlog::logger &gt; &amp; GetClientLogger()</div><div class="ttdoc">Returns the client logger instance.</div><div class="ttdef"><b>Definition</b> Log.h:25</div></div>
 </div><!-- fragment -->
+<p>error: indicates an error that has occurred </p>
+
 </div>
 </div>
 <a id="afdf3b2fd9a9ae161c6037e81fe0c6b3f" name="afdf3b2fd9a9ae161c6037e81fe0c6b3f"></a>
@@ -252,6 +281,8 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><a class="code hl_function" href="class_vesper_1_1_log.html#a34127f1a92073183577fd3b86eaec092">::Vesper::Log::GetClientLogger</a>()-&gt;critical(__VA_ARGS__)</div>
 </div><!-- fragment -->
+<p>fatal: indicates a critical error that may cause application termination </p>
+
 </div>
 </div>
 <a id="abea15d1ee09e7905392b7f136b1d3f65" name="abea15d1ee09e7905392b7f136b1d3f65"></a>
@@ -270,6 +301,8 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><a class="code hl_function" href="class_vesper_1_1_log.html#a34127f1a92073183577fd3b86eaec092">::Vesper::Log::GetClientLogger</a>()-&gt;info(__VA_ARGS__)</div>
 </div><!-- fragment -->
+<p>info: general information about application flow </p>
+
 </div>
 </div>
 <a id="ae46c5576d38f88e75b2b46fb88bab7fd" name="ae46c5576d38f88e75b2b46fb88bab7fd"></a>
@@ -288,6 +321,8 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><a class="code hl_function" href="class_vesper_1_1_log.html#a34127f1a92073183577fd3b86eaec092">::Vesper::Log::GetClientLogger</a>()-&gt;trace(__VA_ARGS__)</div>
 </div><!-- fragment -->
+<p>trace: lowest level, for detailed debug information </p>
+
 </div>
 </div>
 <a id="a326421f6e3655b1bc966ca40b2cd3275" name="a326421f6e3655b1bc966ca40b2cd3275"></a>
@@ -306,6 +341,8 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><a class="code hl_function" href="class_vesper_1_1_log.html#a34127f1a92073183577fd3b86eaec092">::Vesper::Log::GetClientLogger</a>()-&gt;warn(__VA_ARGS__)</div>
 </div><!-- fragment -->
+<p>warn: indicates a potential issue or important event </p>
+
 </div>
 </div>
 </div><!-- contents -->

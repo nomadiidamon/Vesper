@@ -35,10 +35,10 @@ Vesper::\+\+Instrumentation\+Timer::\+\+Instrumentation\+Timer (\begin{DoxyParam
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_vesper_1_1_instrumentation_timer_aef10a87ac5dd8f2feb6c3849731f7749}{m\_Name}}(name),\ \doxymbox{\hyperlink{class_vesper_1_1_instrumentation_timer_a9c3cf2f5ce67cba09ea80271648dbe02}{m\_Stopped}}(\textcolor{keyword}{false}) }
-\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_instrumentation_timer_ae1ea475c61e06c0f7a420c8c063382fa}{m\_StartTimepoint}}\ =\ std::chrono::high\_resolution\_clock::now();}
-\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_vesper_1_1_instrumentation_timer_aef10a87ac5dd8f2feb6c3849731f7749}{m\_Name}}(name),\ \doxymbox{\hyperlink{class_vesper_1_1_instrumentation_timer_a9c3cf2f5ce67cba09ea80271648dbe02}{m\_Stopped}}(\textcolor{keyword}{false}) }
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_instrumentation_timer_ae1ea475c61e06c0f7a420c8c063382fa}{m\_StartTimepoint}}\ =\ std::chrono::high\_resolution\_clock::now();}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \}}
 
 \end{DoxyCode}
 \Hypertarget{class_vesper_1_1_instrumentation_timer_a4c099efe41e6177cc5287873afaa843a}\index{Vesper::InstrumentationTimer@{Vesper::InstrumentationTimer}!````~InstrumentationTimer@{\texorpdfstring{$\sim$}{\string~}InstrumentationTimer}}
@@ -49,10 +49,10 @@ Vesper::\+\+Instrumentation\+Timer::\+\texorpdfstring{$\sim$}{\string~}\+Instrum
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\doxymbox{\hyperlink{class_vesper_1_1_instrumentation_timer_a9c3cf2f5ce67cba09ea80271648dbe02}{m\_Stopped}})}
-\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_instrumentation_timer_a82fbaa34e3295e6f78511f5846dd6828}{Stop}}();}
-\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\doxymbox{\hyperlink{class_vesper_1_1_instrumentation_timer_a9c3cf2f5ce67cba09ea80271648dbe02}{m\_Stopped}})}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_instrumentation_timer_a82fbaa34e3295e6f78511f5846dd6828}{Stop}}();}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \}}
 
 \end{DoxyCode}
 
@@ -68,17 +68,17 @@ void Vesper::\+\+Instrumentation\+Timer::\+\+Stop (\begin{DoxyParamCaption}{}{}\
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ endTimepoint\ =\ std::chrono::high\_resolution\_clock::now();}
-\DoxyCodeLine{00157\ }
-\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ start\ =\ std::chrono::time\_point\_cast<std::chrono::microseconds>(\doxymbox{\hyperlink{class_vesper_1_1_instrumentation_timer_ae1ea475c61e06c0f7a420c8c063382fa}{m\_StartTimepoint}}).time\_since\_epoch().count();}
-\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ end\ =\ std::chrono::time\_point\_cast<std::chrono::microseconds>(endTimepoint).time\_since\_epoch().count();}
-\DoxyCodeLine{00160\ }
-\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ threadID\ =\ std::hash<std::thread::id>\{\}(std::this\_thread::get\_id());}
-\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_instrumentor_a43ebba932df02103a849eb617ca80114}{Instrumentor::Get}}().\doxymbox{\hyperlink{class_vesper_1_1_instrumentor_a868e96beb461ded3358a959a4aef5eda}{WriteProfile}}(\{\ \doxymbox{\hyperlink{class_vesper_1_1_instrumentation_timer_aef10a87ac5dd8f2feb6c3849731f7749}{m\_Name}},\ start,\ end,\ threadID\ \});}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ endTimepoint\ =\ std::chrono::high\_resolution\_clock::now();}
 \DoxyCodeLine{00163\ }
-\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_instrumentation_timer_a9c3cf2f5ce67cba09ea80271648dbe02}{m\_Stopped}}\ =\ \textcolor{keyword}{true};}
-\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ start\ =\ std::chrono::time\_point\_cast<std::chrono::microseconds>(\doxymbox{\hyperlink{class_vesper_1_1_instrumentation_timer_ae1ea475c61e06c0f7a420c8c063382fa}{m\_StartTimepoint}}).time\_since\_epoch().count();}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ end\ =\ std::chrono::time\_point\_cast<std::chrono::microseconds>(endTimepoint).time\_since\_epoch().count();}
+\DoxyCodeLine{00166\ }
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ threadID\ =\ std::hash<std::thread::id>\{\}(std::this\_thread::get\_id());}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_instrumentor_a43ebba932df02103a849eb617ca80114}{Instrumentor::Get}}().\doxymbox{\hyperlink{class_vesper_1_1_instrumentor_a868e96beb461ded3358a959a4aef5eda}{WriteProfile}}(\{\ \doxymbox{\hyperlink{class_vesper_1_1_instrumentation_timer_aef10a87ac5dd8f2feb6c3849731f7749}{m\_Name}},\ start,\ end,\ threadID\ \});}
+\DoxyCodeLine{00169\ }
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_instrumentation_timer_a9c3cf2f5ce67cba09ea80271648dbe02}{m\_Stopped}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \}}
 
 \end{DoxyCode}
 

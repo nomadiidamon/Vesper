@@ -145,13 +145,13 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   27</span>                                            {</div>
-<div class="line"><span class="lineno">   28</span>            <a class="code hl_define" href="_instrumentor_8h.html#aaa03f54db70b44f8decacf111dc1109b">VZ_PROFILE_FUNCTION</a>();</div>
-<div class="line"><span class="lineno">   29</span>            std::uniform_real_distribution&lt;float&gt; dist(0.0f, 1.0f);</div>
-<div class="line"><span class="lineno">   30</span>            <span class="keywordflow">return</span> dist(<a class="code hl_function" href="#a3215313b0e25d05a5df852f3a08df77b">GetRNG</a>()) &lt; trueChance;</div>
-<div class="line"><span class="lineno">   31</span>        }</div>
-<div class="ttc" id="a_instrumentor_8h_html_aaa03f54db70b44f8decacf111dc1109b"><div class="ttname"><a href="_instrumentor_8h.html#aaa03f54db70b44f8decacf111dc1109b">VZ_PROFILE_FUNCTION</a></div><div class="ttdeci">#define VZ_PROFILE_FUNCTION()</div><div class="ttdef"><b>Definition</b> Instrumentor.h:234</div></div>
-<div class="ttc" id="anamespace_vesper_1_1_random_html_a3215313b0e25d05a5df852f3a08df77b"><div class="ttname"><a href="#a3215313b0e25d05a5df852f3a08df77b">Vesper::Random::GetRNG</a></div><div class="ttdeci">std::mt19937 &amp; GetRNG()</div><div class="ttdef"><b>Definition</b> Random.h:12</div></div>
+<div class="fragment"><div class="line"><span class="lineno">   31</span>                                            {</div>
+<div class="line"><span class="lineno">   32</span>            <a class="code hl_define" href="_instrumentor_8h.html#aaa03f54db70b44f8decacf111dc1109b">VZ_PROFILE_FUNCTION</a>();</div>
+<div class="line"><span class="lineno">   33</span>            std::uniform_real_distribution&lt;float&gt; dist(0.0f, 1.0f);</div>
+<div class="line"><span class="lineno">   34</span>            <span class="keywordflow">return</span> dist(<a class="code hl_function" href="#a3215313b0e25d05a5df852f3a08df77b">GetRNG</a>()) &lt; trueChance;</div>
+<div class="line"><span class="lineno">   35</span>        }</div>
+<div class="ttc" id="a_instrumentor_8h_html_aaa03f54db70b44f8decacf111dc1109b"><div class="ttname"><a href="_instrumentor_8h.html#aaa03f54db70b44f8decacf111dc1109b">VZ_PROFILE_FUNCTION</a></div><div class="ttdeci">#define VZ_PROFILE_FUNCTION()</div><div class="ttdef"><b>Definition</b> Instrumentor.h:240</div></div>
+<div class="ttc" id="anamespace_vesper_1_1_random_html_a3215313b0e25d05a5df852f3a08df77b"><div class="ttname"><a href="#a3215313b0e25d05a5df852f3a08df77b">Vesper::Random::GetRNG</a></div><div class="ttdeci">std::mt19937 &amp; GetRNG()</div><div class="ttdef"><b>Definition</b> Random.h:16</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -177,11 +177,11 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   33</span>                                    {</div>
-<div class="line"><span class="lineno">   34</span>            <a class="code hl_define" href="_instrumentor_8h.html#aaa03f54db70b44f8decacf111dc1109b">VZ_PROFILE_FUNCTION</a>();</div>
-<div class="line"><span class="lineno">   35</span>            std::uniform_int_distribution&lt;int&gt; dist(0, 255);</div>
-<div class="line"><span class="lineno">   36</span>            <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span><span class="keyword">&gt;</span>(dist(<a class="code hl_function" href="#a3215313b0e25d05a5df852f3a08df77b">GetRNG</a>()));</div>
-<div class="line"><span class="lineno">   37</span>        }</div>
+<div class="fragment"><div class="line"><span class="lineno">   37</span>                                    {</div>
+<div class="line"><span class="lineno">   38</span>            <a class="code hl_define" href="_instrumentor_8h.html#aaa03f54db70b44f8decacf111dc1109b">VZ_PROFILE_FUNCTION</a>();</div>
+<div class="line"><span class="lineno">   39</span>            std::uniform_int_distribution&lt;int&gt; dist(0, 255);</div>
+<div class="line"><span class="lineno">   40</span>            <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span><span class="keyword">&gt;</span>(dist(<a class="code hl_function" href="#a3215313b0e25d05a5df852f3a08df77b">GetRNG</a>()));</div>
+<div class="line"><span class="lineno">   41</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -207,12 +207,14 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   72</span>                              {</div>
-<div class="line"><span class="lineno">   73</span>            <a class="code hl_define" href="_instrumentor_8h.html#aaa03f54db70b44f8decacf111dc1109b">VZ_PROFILE_FUNCTION</a>();</div>
-<div class="line"><span class="lineno">   74</span>            <span class="keyword">static</span> <span class="keyword">thread_local</span> std::uniform_real_distribution&lt;float&gt; dist(0.0f, 1.0f);</div>
-<div class="line"><span class="lineno">   75</span>            <span class="keywordflow">return</span> dist(<a class="code hl_function" href="#a3215313b0e25d05a5df852f3a08df77b">GetRNG</a>());</div>
-<div class="line"><span class="lineno">   76</span>        }</div>
+<div class="fragment"><div class="line"><span class="lineno">   76</span>                              {</div>
+<div class="line"><span class="lineno">   77</span>            <a class="code hl_define" href="_instrumentor_8h.html#aaa03f54db70b44f8decacf111dc1109b">VZ_PROFILE_FUNCTION</a>();</div>
+<div class="line"><span class="lineno">   78</span>            <span class="keyword">static</span> <span class="keyword">thread_local</span> std::uniform_real_distribution&lt;float&gt; dist(0.0f, 1.0f);</div>
+<div class="line"><span class="lineno">   79</span>            <span class="keywordflow">return</span> dist(<a class="code hl_function" href="#a3215313b0e25d05a5df852f3a08df77b">GetRNG</a>());</div>
+<div class="line"><span class="lineno">   80</span>        }</div>
 </div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="class_vesper_1_1_particle_system.html#ac5d9958ce74679d4115e9b2df4ce1412">Vesper::ParticleSystem::Emit()</a>.</p>
+
 </div>
 </div>
 <a id="aee37aeb23527ea784366d19d4d122e93" name="aee37aeb23527ea784366d19d4d122e93"></a>
@@ -237,10 +239,10 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   96</span>                                {</div>
-<div class="line"><span class="lineno">   97</span>            <span class="keywordflow">return</span> glm::vec2{ <a class="code hl_function" href="#a5fd29fe179c63f4e158098a921cc000f">Float1</a>(), <a class="code hl_function" href="#a5fd29fe179c63f4e158098a921cc000f">Float1</a>() };</div>
-<div class="line"><span class="lineno">   98</span>        }</div>
-<div class="ttc" id="anamespace_vesper_1_1_random_html_a5fd29fe179c63f4e158098a921cc000f"><div class="ttname"><a href="#a5fd29fe179c63f4e158098a921cc000f">Vesper::Random::Float1</a></div><div class="ttdeci">float Float1()</div><div class="ttdef"><b>Definition</b> Random.h:72</div></div>
+<div class="fragment"><div class="line"><span class="lineno">  100</span>                                {</div>
+<div class="line"><span class="lineno">  101</span>            <span class="keywordflow">return</span> glm::vec2{ <a class="code hl_function" href="#a5fd29fe179c63f4e158098a921cc000f">Float1</a>(), <a class="code hl_function" href="#a5fd29fe179c63f4e158098a921cc000f">Float1</a>() };</div>
+<div class="line"><span class="lineno">  102</span>        }</div>
+<div class="ttc" id="anamespace_vesper_1_1_random_html_a5fd29fe179c63f4e158098a921cc000f"><div class="ttname"><a href="#a5fd29fe179c63f4e158098a921cc000f">Vesper::Random::Float1</a></div><div class="ttdeci">float Float1()</div><div class="ttdef"><b>Definition</b> Random.h:76</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -266,9 +268,9 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  117</span>                                {</div>
-<div class="line"><span class="lineno">  118</span>            <span class="keywordflow">return</span> glm::vec3{ <a class="code hl_function" href="#a5fd29fe179c63f4e158098a921cc000f">Float1</a>(), <a class="code hl_function" href="#a5fd29fe179c63f4e158098a921cc000f">Float1</a>(), <a class="code hl_function" href="#a5fd29fe179c63f4e158098a921cc000f">Float1</a>() };</div>
-<div class="line"><span class="lineno">  119</span>        }</div>
+<div class="fragment"><div class="line"><span class="lineno">  121</span>                                {</div>
+<div class="line"><span class="lineno">  122</span>            <span class="keywordflow">return</span> glm::vec3{ <a class="code hl_function" href="#a5fd29fe179c63f4e158098a921cc000f">Float1</a>(), <a class="code hl_function" href="#a5fd29fe179c63f4e158098a921cc000f">Float1</a>(), <a class="code hl_function" href="#a5fd29fe179c63f4e158098a921cc000f">Float1</a>() };</div>
+<div class="line"><span class="lineno">  123</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -294,9 +296,9 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  137</span>                                {</div>
-<div class="line"><span class="lineno">  138</span>            <span class="keywordflow">return</span> glm::vec4{ <a class="code hl_function" href="#a5fd29fe179c63f4e158098a921cc000f">Float1</a>(), <a class="code hl_function" href="#a5fd29fe179c63f4e158098a921cc000f">Float1</a>(), <a class="code hl_function" href="#a5fd29fe179c63f4e158098a921cc000f">Float1</a>(), <a class="code hl_function" href="#a5fd29fe179c63f4e158098a921cc000f">Float1</a>() };</div>
-<div class="line"><span class="lineno">  139</span>        }</div>
+<div class="fragment"><div class="line"><span class="lineno">  141</span>                                {</div>
+<div class="line"><span class="lineno">  142</span>            <span class="keywordflow">return</span> glm::vec4{ <a class="code hl_function" href="#a5fd29fe179c63f4e158098a921cc000f">Float1</a>(), <a class="code hl_function" href="#a5fd29fe179c63f4e158098a921cc000f">Float1</a>(), <a class="code hl_function" href="#a5fd29fe179c63f4e158098a921cc000f">Float1</a>(), <a class="code hl_function" href="#a5fd29fe179c63f4e158098a921cc000f">Float1</a>() };</div>
+<div class="line"><span class="lineno">  143</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -322,11 +324,13 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   12</span>                                    {</div>
-<div class="line"><span class="lineno">   13</span>            <span class="keyword">static</span> <span class="keyword">thread_local</span> std::mt19937 rng{ std::random_device{}() };</div>
-<div class="line"><span class="lineno">   14</span>            <span class="keywordflow">return</span> rng;</div>
-<div class="line"><span class="lineno">   15</span>        }</div>
+<div class="fragment"><div class="line"><span class="lineno">   16</span>                                    {</div>
+<div class="line"><span class="lineno">   17</span>            <span class="keyword">static</span> <span class="keyword">thread_local</span> std::mt19937 rng{ std::random_device{}() };</div>
+<div class="line"><span class="lineno">   18</span>            <span class="keywordflow">return</span> rng;</div>
+<div class="line"><span class="lineno">   19</span>        }</div>
 </div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="#a626ebaec4b72e4991c9e7f3f04aaae9d">Seed()</a>.</p>
+
 </div>
 </div>
 <a id="a1251e868c3fff89a6a862c6e930c7619" name="a1251e868c3fff89a6a862c6e930c7619"></a>
@@ -351,20 +355,22 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   53</span>                                                  {</div>
-<div class="line"><span class="lineno">   54</span>            <a class="code hl_define" href="_instrumentor_8h.html#aaa03f54db70b44f8decacf111dc1109b">VZ_PROFILE_FUNCTION</a>();</div>
-<div class="line"><span class="lineno">   55</span>            <span class="keyword">const</span> <span class="keywordtype">char</span> charset[] =</div>
-<div class="line"><span class="lineno">   56</span>                <span class="stringliteral">&quot;0123456789&quot;</span></div>
-<div class="line"><span class="lineno">   57</span>                <span class="stringliteral">&quot;ABCDEF&quot;</span>;</div>
-<div class="line"><span class="lineno">   58</span>            <span class="keyword">const</span> <span class="keywordtype">size_t</span> max_index = (<span class="keyword">sizeof</span>(charset) - 1);</div>
-<div class="line"><span class="lineno">   59</span>            std::string str(length, 0);</div>
-<div class="line"><span class="lineno">   60</span>            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; length; ++i) {</div>
-<div class="line"><span class="lineno">   61</span>                str[i] = charset[<a class="code hl_function" href="#afe248f1e01c6a1cbc078179b7ae40468">UInt1</a>(<span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(max_index))];</div>
-<div class="line"><span class="lineno">   62</span>            }</div>
-<div class="line"><span class="lineno">   63</span>            <span class="keywordflow">return</span> str;</div>
-<div class="line"><span class="lineno">   64</span>        }</div>
-<div class="ttc" id="anamespace_vesper_1_1_random_html_afe248f1e01c6a1cbc078179b7ae40468"><div class="ttname"><a href="#afe248f1e01c6a1cbc078179b7ae40468">Vesper::Random::UInt1</a></div><div class="ttdeci">uint32_t UInt1(uint32_t max)</div><div class="ttdef"><b>Definition</b> Random.h:21</div></div>
+<div class="fragment"><div class="line"><span class="lineno">   57</span>                                                  {</div>
+<div class="line"><span class="lineno">   58</span>            <a class="code hl_define" href="_instrumentor_8h.html#aaa03f54db70b44f8decacf111dc1109b">VZ_PROFILE_FUNCTION</a>();</div>
+<div class="line"><span class="lineno">   59</span>            <span class="keyword">const</span> <span class="keywordtype">char</span> charset[] =</div>
+<div class="line"><span class="lineno">   60</span>                <span class="stringliteral">&quot;0123456789&quot;</span></div>
+<div class="line"><span class="lineno">   61</span>                <span class="stringliteral">&quot;ABCDEF&quot;</span>;</div>
+<div class="line"><span class="lineno">   62</span>            <span class="keyword">const</span> <span class="keywordtype">size_t</span> max_index = (<span class="keyword">sizeof</span>(charset) - 1);</div>
+<div class="line"><span class="lineno">   63</span>            std::string str(length, 0);</div>
+<div class="line"><span class="lineno">   64</span>            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; length; ++i) {</div>
+<div class="line"><span class="lineno">   65</span>                str[i] = charset[<a class="code hl_function" href="#afe248f1e01c6a1cbc078179b7ae40468">UInt1</a>(<span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(max_index))];</div>
+<div class="line"><span class="lineno">   66</span>            }</div>
+<div class="line"><span class="lineno">   67</span>            <span class="keywordflow">return</span> str;</div>
+<div class="line"><span class="lineno">   68</span>        }</div>
+<div class="ttc" id="anamespace_vesper_1_1_random_html_afe248f1e01c6a1cbc078179b7ae40468"><div class="ttname"><a href="#afe248f1e01c6a1cbc078179b7ae40468">Vesper::Random::UInt1</a></div><div class="ttdeci">uint32_t UInt1(uint32_t max)</div><div class="ttdef"><b>Definition</b> Random.h:25</div></div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="#afe248f1e01c6a1cbc078179b7ae40468">UInt1()</a>.</p>
+
 </div>
 </div>
 <a id="a6d25f85e1a2bb3637497925f7cdb737e" name="a6d25f85e1a2bb3637497925f7cdb737e"></a>
@@ -393,12 +399,12 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   80</span>                                                   {</div>
-<div class="line"><span class="lineno">   81</span>            <a class="code hl_define" href="_instrumentor_8h.html#aaa03f54db70b44f8decacf111dc1109b">VZ_PROFILE_FUNCTION</a>();</div>
-<div class="line"><span class="lineno">   82</span>            <span class="keywordflow">if</span> (min &gt; max) std::swap(min, max);</div>
-<div class="line"><span class="lineno">   83</span>            std::uniform_real_distribution&lt;float&gt; dist(min, max);</div>
-<div class="line"><span class="lineno">   84</span>            <span class="keywordflow">return</span> dist(<a class="code hl_function" href="#a3215313b0e25d05a5df852f3a08df77b">GetRNG</a>());</div>
-<div class="line"><span class="lineno">   85</span>        }</div>
+<div class="fragment"><div class="line"><span class="lineno">   84</span>                                                   {</div>
+<div class="line"><span class="lineno">   85</span>            <a class="code hl_define" href="_instrumentor_8h.html#aaa03f54db70b44f8decacf111dc1109b">VZ_PROFILE_FUNCTION</a>();</div>
+<div class="line"><span class="lineno">   86</span>            <span class="keywordflow">if</span> (min &gt; max) std::swap(min, max);</div>
+<div class="line"><span class="lineno">   87</span>            std::uniform_real_distribution&lt;float&gt; dist(min, max);</div>
+<div class="line"><span class="lineno">   88</span>            <span class="keywordflow">return</span> dist(<a class="code hl_function" href="#a3215313b0e25d05a5df852f3a08df77b">GetRNG</a>());</div>
+<div class="line"><span class="lineno">   89</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -428,12 +434,12 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   88</span>                                                             {</div>
-<div class="line"><span class="lineno">   89</span>            <span class="keywordflow">if</span> (min &gt; max) std::swap(min, max);</div>
-<div class="line"><span class="lineno">   90</span>            <span class="keywordtype">float</span> upper = std::nextafter(max, std::numeric_limits&lt;float&gt;::infinity());</div>
-<div class="line"><span class="lineno">   91</span>            std::uniform_real_distribution&lt;float&gt; dist(min, upper);</div>
-<div class="line"><span class="lineno">   92</span>            <span class="keywordflow">return</span> dist(<a class="code hl_function" href="#a3215313b0e25d05a5df852f3a08df77b">GetRNG</a>());</div>
-<div class="line"><span class="lineno">   93</span>        }</div>
+<div class="fragment"><div class="line"><span class="lineno">   92</span>                                                             {</div>
+<div class="line"><span class="lineno">   93</span>            <span class="keywordflow">if</span> (min &gt; max) std::swap(min, max);</div>
+<div class="line"><span class="lineno">   94</span>            <span class="keywordtype">float</span> upper = std::nextafter(max, std::numeric_limits&lt;float&gt;::infinity());</div>
+<div class="line"><span class="lineno">   95</span>            std::uniform_real_distribution&lt;float&gt; dist(min, upper);</div>
+<div class="line"><span class="lineno">   96</span>            <span class="keywordflow">return</span> dist(<a class="code hl_function" href="#a3215313b0e25d05a5df852f3a08df77b">GetRNG</a>());</div>
+<div class="line"><span class="lineno">   97</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -463,10 +469,10 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  111</span>                                                                                 {</div>
-<div class="line"><span class="lineno">  112</span>            <span class="keywordflow">return</span> glm::vec2{ <a class="code hl_function" href="#a6d25f85e1a2bb3637497925f7cdb737e">RangeF1</a>(minRange.x, maxRange.x), <a class="code hl_function" href="#a6d25f85e1a2bb3637497925f7cdb737e">RangeF1</a>(minRange.y, maxRange.y) };</div>
-<div class="line"><span class="lineno">  113</span>        }</div>
-<div class="ttc" id="anamespace_vesper_1_1_random_html_a6d25f85e1a2bb3637497925f7cdb737e"><div class="ttname"><a href="#a6d25f85e1a2bb3637497925f7cdb737e">Vesper::Random::RangeF1</a></div><div class="ttdeci">float RangeF1(float min, float max)</div><div class="ttdef"><b>Definition</b> Random.h:80</div></div>
+<div class="fragment"><div class="line"><span class="lineno">  115</span>                                                                                 {</div>
+<div class="line"><span class="lineno">  116</span>            <span class="keywordflow">return</span> glm::vec2{ <a class="code hl_function" href="#a6d25f85e1a2bb3637497925f7cdb737e">RangeF1</a>(minRange.x, maxRange.x), <a class="code hl_function" href="#a6d25f85e1a2bb3637497925f7cdb737e">RangeF1</a>(minRange.y, maxRange.y) };</div>
+<div class="line"><span class="lineno">  117</span>        }</div>
+<div class="ttc" id="anamespace_vesper_1_1_random_html_a6d25f85e1a2bb3637497925f7cdb737e"><div class="ttname"><a href="#a6d25f85e1a2bb3637497925f7cdb737e">Vesper::Random::RangeF1</a></div><div class="ttdeci">float RangeF1(float min, float max)</div><div class="ttdef"><b>Definition</b> Random.h:84</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -496,9 +502,9 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  101</span>                                                     {</div>
-<div class="line"><span class="lineno">  102</span>            <span class="keywordflow">return</span> glm::vec2{ <a class="code hl_function" href="#a6d25f85e1a2bb3637497925f7cdb737e">RangeF1</a>(min, max), <a class="code hl_function" href="#a6d25f85e1a2bb3637497925f7cdb737e">RangeF1</a>(min, max) };</div>
-<div class="line"><span class="lineno">  103</span>        }</div>
+<div class="fragment"><div class="line"><span class="lineno">  105</span>                                                     {</div>
+<div class="line"><span class="lineno">  106</span>            <span class="keywordflow">return</span> glm::vec2{ <a class="code hl_function" href="#a6d25f85e1a2bb3637497925f7cdb737e">RangeF1</a>(min, max), <a class="code hl_function" href="#a6d25f85e1a2bb3637497925f7cdb737e">RangeF1</a>(min, max) };</div>
+<div class="line"><span class="lineno">  107</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -538,9 +544,9 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  106</span>                                                                               {</div>
-<div class="line"><span class="lineno">  107</span>            <span class="keywordflow">return</span> glm::vec2{ <a class="code hl_function" href="#a6d25f85e1a2bb3637497925f7cdb737e">RangeF1</a>(min1, max1), <a class="code hl_function" href="#a6d25f85e1a2bb3637497925f7cdb737e">RangeF1</a>(min2, max2) };</div>
-<div class="line"><span class="lineno">  108</span>        }</div>
+<div class="fragment"><div class="line"><span class="lineno">  110</span>                                                                               {</div>
+<div class="line"><span class="lineno">  111</span>            <span class="keywordflow">return</span> glm::vec2{ <a class="code hl_function" href="#a6d25f85e1a2bb3637497925f7cdb737e">RangeF1</a>(min1, max1), <a class="code hl_function" href="#a6d25f85e1a2bb3637497925f7cdb737e">RangeF1</a>(min2, max2) };</div>
+<div class="line"><span class="lineno">  112</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -575,9 +581,9 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  132</span>                                                                                                    {</div>
-<div class="line"><span class="lineno">  133</span>            <span class="keywordflow">return</span> glm::vec3{ <a class="code hl_function" href="#a6d25f85e1a2bb3637497925f7cdb737e">RangeF1</a>(range1.x, range1.y), <a class="code hl_function" href="#a6d25f85e1a2bb3637497925f7cdb737e">RangeF1</a>(range2.x, range2.y), <a class="code hl_function" href="#a6d25f85e1a2bb3637497925f7cdb737e">RangeF1</a>(range3.x, range3.y) };</div>
-<div class="line"><span class="lineno">  134</span>        }</div>
+<div class="fragment"><div class="line"><span class="lineno">  136</span>                                                                                                    {</div>
+<div class="line"><span class="lineno">  137</span>            <span class="keywordflow">return</span> glm::vec3{ <a class="code hl_function" href="#a6d25f85e1a2bb3637497925f7cdb737e">RangeF1</a>(range1.x, range1.y), <a class="code hl_function" href="#a6d25f85e1a2bb3637497925f7cdb737e">RangeF1</a>(range2.x, range2.y), <a class="code hl_function" href="#a6d25f85e1a2bb3637497925f7cdb737e">RangeF1</a>(range3.x, range3.y) };</div>
+<div class="line"><span class="lineno">  138</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -607,9 +613,9 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  122</span>                                                     {</div>
-<div class="line"><span class="lineno">  123</span>            <span class="keywordflow">return</span> glm::vec3{ <a class="code hl_function" href="#a6d25f85e1a2bb3637497925f7cdb737e">RangeF1</a>(min, max), <a class="code hl_function" href="#a6d25f85e1a2bb3637497925f7cdb737e">RangeF1</a>(min, max), <a class="code hl_function" href="#a6d25f85e1a2bb3637497925f7cdb737e">RangeF1</a>(min, max) };</div>
-<div class="line"><span class="lineno">  124</span>        }</div>
+<div class="fragment"><div class="line"><span class="lineno">  126</span>                                                     {</div>
+<div class="line"><span class="lineno">  127</span>            <span class="keywordflow">return</span> glm::vec3{ <a class="code hl_function" href="#a6d25f85e1a2bb3637497925f7cdb737e">RangeF1</a>(min, max), <a class="code hl_function" href="#a6d25f85e1a2bb3637497925f7cdb737e">RangeF1</a>(min, max), <a class="code hl_function" href="#a6d25f85e1a2bb3637497925f7cdb737e">RangeF1</a>(min, max) };</div>
+<div class="line"><span class="lineno">  128</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -659,9 +665,9 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  127</span>                                                                                                       {</div>
-<div class="line"><span class="lineno">  128</span>            <span class="keywordflow">return</span> glm::vec3{ <a class="code hl_function" href="#a6d25f85e1a2bb3637497925f7cdb737e">RangeF1</a>(min1, max1), <a class="code hl_function" href="#a6d25f85e1a2bb3637497925f7cdb737e">RangeF1</a>(min2, max2), <a class="code hl_function" href="#a6d25f85e1a2bb3637497925f7cdb737e">RangeF1</a>(min3, max3) };</div>
-<div class="line"><span class="lineno">  129</span>        }</div>
+<div class="fragment"><div class="line"><span class="lineno">  131</span>                                                                                                       {</div>
+<div class="line"><span class="lineno">  132</span>            <span class="keywordflow">return</span> glm::vec3{ <a class="code hl_function" href="#a6d25f85e1a2bb3637497925f7cdb737e">RangeF1</a>(min1, max1), <a class="code hl_function" href="#a6d25f85e1a2bb3637497925f7cdb737e">RangeF1</a>(min2, max2), <a class="code hl_function" href="#a6d25f85e1a2bb3637497925f7cdb737e">RangeF1</a>(min3, max3) };</div>
+<div class="line"><span class="lineno">  133</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -691,9 +697,9 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  142</span>                                                     {</div>
-<div class="line"><span class="lineno">  143</span>            <span class="keywordflow">return</span> glm::vec4{ <a class="code hl_function" href="#a6d25f85e1a2bb3637497925f7cdb737e">RangeF1</a>(min, max), <a class="code hl_function" href="#a6d25f85e1a2bb3637497925f7cdb737e">RangeF1</a>(min, max), <a class="code hl_function" href="#a6d25f85e1a2bb3637497925f7cdb737e">RangeF1</a>(min, max), <a class="code hl_function" href="#a6d25f85e1a2bb3637497925f7cdb737e">RangeF1</a>(min, max) };</div>
-<div class="line"><span class="lineno">  144</span>        }</div>
+<div class="fragment"><div class="line"><span class="lineno">  146</span>                                                     {</div>
+<div class="line"><span class="lineno">  147</span>            <span class="keywordflow">return</span> glm::vec4{ <a class="code hl_function" href="#a6d25f85e1a2bb3637497925f7cdb737e">RangeF1</a>(min, max), <a class="code hl_function" href="#a6d25f85e1a2bb3637497925f7cdb737e">RangeF1</a>(min, max), <a class="code hl_function" href="#a6d25f85e1a2bb3637497925f7cdb737e">RangeF1</a>(min, max), <a class="code hl_function" href="#a6d25f85e1a2bb3637497925f7cdb737e">RangeF1</a>(min, max) };</div>
+<div class="line"><span class="lineno">  148</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -719,10 +725,12 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   17</span>                                        {</div>
-<div class="line"><span class="lineno">   18</span>            <a class="code hl_function" href="#a3215313b0e25d05a5df852f3a08df77b">GetRNG</a>().seed(seed);</div>
-<div class="line"><span class="lineno">   19</span>        }</div>
+<div class="fragment"><div class="line"><span class="lineno">   21</span>                                        {</div>
+<div class="line"><span class="lineno">   22</span>            <a class="code hl_function" href="#a3215313b0e25d05a5df852f3a08df77b">GetRNG</a>().seed(seed);</div>
+<div class="line"><span class="lineno">   23</span>        }</div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="#a3215313b0e25d05a5df852f3a08df77b">GetRNG()</a>.</p>
+
 </div>
 </div>
 <a id="afaa6ca62b88d5a4a4563b3c5d618b098" name="afaa6ca62b88d5a4a4563b3c5d618b098"></a>
@@ -747,20 +755,22 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   39</span>                                               {</div>
-<div class="line"><span class="lineno">   40</span>            <a class="code hl_define" href="_instrumentor_8h.html#aaa03f54db70b44f8decacf111dc1109b">VZ_PROFILE_FUNCTION</a>();</div>
-<div class="line"><span class="lineno">   41</span>            <span class="keyword">const</span> <span class="keywordtype">char</span> charset[] =</div>
-<div class="line"><span class="lineno">   42</span>                <span class="stringliteral">&quot;0123456789&quot;</span></div>
-<div class="line"><span class="lineno">   43</span>                <span class="stringliteral">&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;</span></div>
-<div class="line"><span class="lineno">   44</span>                <span class="stringliteral">&quot;abcdefghijklmnopqrstuvwxyz&quot;</span>;</div>
-<div class="line"><span class="lineno">   45</span>            <span class="keyword">const</span> <span class="keywordtype">size_t</span> max_index = (<span class="keyword">sizeof</span>(charset) - 1);</div>
-<div class="line"><span class="lineno">   46</span>            std::string str(length, 0);</div>
-<div class="line"><span class="lineno">   47</span>            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; length; ++i) {</div>
-<div class="line"><span class="lineno">   48</span>                str[i] = charset[<a class="code hl_function" href="#afe248f1e01c6a1cbc078179b7ae40468">UInt1</a>(<span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(max_index))];</div>
-<div class="line"><span class="lineno">   49</span>            }</div>
-<div class="line"><span class="lineno">   50</span>            <span class="keywordflow">return</span> str;</div>
-<div class="line"><span class="lineno">   51</span>        }</div>
+<div class="fragment"><div class="line"><span class="lineno">   43</span>                                               {</div>
+<div class="line"><span class="lineno">   44</span>            <a class="code hl_define" href="_instrumentor_8h.html#aaa03f54db70b44f8decacf111dc1109b">VZ_PROFILE_FUNCTION</a>();</div>
+<div class="line"><span class="lineno">   45</span>            <span class="keyword">const</span> <span class="keywordtype">char</span> charset[] =</div>
+<div class="line"><span class="lineno">   46</span>                <span class="stringliteral">&quot;0123456789&quot;</span></div>
+<div class="line"><span class="lineno">   47</span>                <span class="stringliteral">&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;</span></div>
+<div class="line"><span class="lineno">   48</span>                <span class="stringliteral">&quot;abcdefghijklmnopqrstuvwxyz&quot;</span>;</div>
+<div class="line"><span class="lineno">   49</span>            <span class="keyword">const</span> <span class="keywordtype">size_t</span> max_index = (<span class="keyword">sizeof</span>(charset) - 1);</div>
+<div class="line"><span class="lineno">   50</span>            std::string str(length, 0);</div>
+<div class="line"><span class="lineno">   51</span>            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; length; ++i) {</div>
+<div class="line"><span class="lineno">   52</span>                str[i] = charset[<a class="code hl_function" href="#afe248f1e01c6a1cbc078179b7ae40468">UInt1</a>(<span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(max_index))];</div>
+<div class="line"><span class="lineno">   53</span>            }</div>
+<div class="line"><span class="lineno">   54</span>            <span class="keywordflow">return</span> str;</div>
+<div class="line"><span class="lineno">   55</span>        }</div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="#afe248f1e01c6a1cbc078179b7ae40468">UInt1()</a>.</p>
+
 </div>
 </div>
 <a id="afe248f1e01c6a1cbc078179b7ae40468" name="afe248f1e01c6a1cbc078179b7ae40468"></a>
@@ -785,12 +795,14 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   21</span>                                            {</div>
-<div class="line"><span class="lineno">   22</span>            <a class="code hl_define" href="_instrumentor_8h.html#aaa03f54db70b44f8decacf111dc1109b">VZ_PROFILE_FUNCTION</a>();</div>
-<div class="line"><span class="lineno">   23</span>            std::uniform_int_distribution&lt;uint32_t&gt; dist(0, max - 1);</div>
-<div class="line"><span class="lineno">   24</span>            <span class="keywordflow">return</span> dist(<a class="code hl_function" href="#a3215313b0e25d05a5df852f3a08df77b">GetRNG</a>());</div>
-<div class="line"><span class="lineno">   25</span>        }</div>
+<div class="fragment"><div class="line"><span class="lineno">   25</span>                                            {</div>
+<div class="line"><span class="lineno">   26</span>            <a class="code hl_define" href="_instrumentor_8h.html#aaa03f54db70b44f8decacf111dc1109b">VZ_PROFILE_FUNCTION</a>();</div>
+<div class="line"><span class="lineno">   27</span>            std::uniform_int_distribution&lt;uint32_t&gt; dist(0, max - 1);</div>
+<div class="line"><span class="lineno">   28</span>            <span class="keywordflow">return</span> dist(<a class="code hl_function" href="#a3215313b0e25d05a5df852f3a08df77b">GetRNG</a>());</div>
+<div class="line"><span class="lineno">   29</span>        }</div>
 </div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="#a1251e868c3fff89a6a862c6e930c7619">HexString()</a>, and <a class="el" href="#afaa6ca62b88d5a4a4563b3c5d618b098">String()</a>.</p>
+
 </div>
 </div>
 <a id="a9a3d18994aa7df05cf15657677456aab" name="a9a3d18994aa7df05cf15657677456aab"></a>
@@ -815,11 +827,11 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   66</span>                                {</div>
-<div class="line"><span class="lineno">   67</span>            <a class="code hl_define" href="_instrumentor_8h.html#aaa03f54db70b44f8decacf111dc1109b">VZ_PROFILE_FUNCTION</a>();</div>
-<div class="line"><span class="lineno">   68</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="#a1251e868c3fff89a6a862c6e930c7619">HexString</a>(8) + <span class="stringliteral">&quot;-&quot;</span> + <a class="code hl_function" href="#a1251e868c3fff89a6a862c6e930c7619">HexString</a>(4) + <span class="stringliteral">&quot;-&quot;</span> + <a class="code hl_function" href="#a1251e868c3fff89a6a862c6e930c7619">HexString</a>(4) + <span class="stringliteral">&quot;-&quot;</span> + <a class="code hl_function" href="#a1251e868c3fff89a6a862c6e930c7619">HexString</a>(4) + <span class="stringliteral">&quot;-&quot;</span> + <a class="code hl_function" href="#a1251e868c3fff89a6a862c6e930c7619">HexString</a>(12);</div>
-<div class="line"><span class="lineno">   69</span>        }</div>
-<div class="ttc" id="anamespace_vesper_1_1_random_html_a1251e868c3fff89a6a862c6e930c7619"><div class="ttname"><a href="#a1251e868c3fff89a6a862c6e930c7619">Vesper::Random::HexString</a></div><div class="ttdeci">std::string HexString(size_t length)</div><div class="ttdef"><b>Definition</b> Random.h:53</div></div>
+<div class="fragment"><div class="line"><span class="lineno">   70</span>                                {</div>
+<div class="line"><span class="lineno">   71</span>            <a class="code hl_define" href="_instrumentor_8h.html#aaa03f54db70b44f8decacf111dc1109b">VZ_PROFILE_FUNCTION</a>();</div>
+<div class="line"><span class="lineno">   72</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="#a1251e868c3fff89a6a862c6e930c7619">HexString</a>(8) + <span class="stringliteral">&quot;-&quot;</span> + <a class="code hl_function" href="#a1251e868c3fff89a6a862c6e930c7619">HexString</a>(4) + <span class="stringliteral">&quot;-&quot;</span> + <a class="code hl_function" href="#a1251e868c3fff89a6a862c6e930c7619">HexString</a>(4) + <span class="stringliteral">&quot;-&quot;</span> + <a class="code hl_function" href="#a1251e868c3fff89a6a862c6e930c7619">HexString</a>(4) + <span class="stringliteral">&quot;-&quot;</span> + <a class="code hl_function" href="#a1251e868c3fff89a6a862c6e930c7619">HexString</a>(12);</div>
+<div class="line"><span class="lineno">   73</span>        }</div>
+<div class="ttc" id="anamespace_vesper_1_1_random_html_a1251e868c3fff89a6a862c6e930c7619"><div class="ttname"><a href="#a1251e868c3fff89a6a862c6e930c7619">Vesper::Random::HexString</a></div><div class="ttdeci">std::string HexString(size_t length)</div><div class="ttdef"><b>Definition</b> Random.h:57</div></div>
 </div><!-- fragment -->
 </div>
 </div>

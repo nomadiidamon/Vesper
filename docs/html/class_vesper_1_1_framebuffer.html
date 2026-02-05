@@ -98,6 +98,9 @@ $(function(){initNavTree('class_vesper_1_1_framebuffer.html','','class_vesper_1_
 </div><!--header-->
 <div class="contents">
 
+<p>Abstract class representing a framebuffer.  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_framebuffer_8h_source.html">Framebuffer.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Vesper::Framebuffer:</div>
@@ -115,14 +118,20 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9c97f1a6047676e9c7090bfe019ffdbf" id="r_a9c97f1a6047676e9c7090bfe019ffdbf"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a9c97f1a6047676e9c7090bfe019ffdbf">Bind</a> ()=0</td></tr>
 <tr class="memitem:a31f13eab445119f16f84ab27beb4129f" id="r_a31f13eab445119f16f84ab27beb4129f"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a31f13eab445119f16f84ab27beb4129f">Unbind</a> ()=0</td></tr>
 <tr class="memitem:ac044c05641dd4bef0dd2396ef871fd6b" id="r_ac044c05641dd4bef0dd2396ef871fd6b"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#ac044c05641dd4bef0dd2396ef871fd6b">Resize</a> (uint32_t width, uint32_t height)=0</td></tr>
+<tr class="memdesc:ac044c05641dd4bef0dd2396ef871fd6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resizes the framebuffer to the given width and height.  <br /></td></tr>
 <tr class="memitem:aead3b53b3984d4924e06407afb39ee5a" id="r_aead3b53b3984d4924e06407afb39ee5a"><td class="memItemLeft">virtual uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#aead3b53b3984d4924e06407afb39ee5a">GetColorAttachmentRendererID</a> () const =0</td></tr>
+<tr class="memdesc:aead3b53b3984d4924e06407afb39ee5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the renderer ID of the color attachment texture.  <br /></td></tr>
 <tr class="memitem:af502dfc1bdbd1e350dba372f09916b85" id="r_af502dfc1bdbd1e350dba372f09916b85"><td class="memItemLeft">virtual const <a class="el" href="namespace_vesper.html#struct_vesper_1_1_framebuffer_specification">FramebufferSpecification</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#af502dfc1bdbd1e350dba372f09916b85">GetSpecification</a> () const =0</td></tr>
+<tr class="memdesc:af502dfc1bdbd1e350dba372f09916b85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the specification used to create the framebuffer.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a3069ed2e67841720922623fe18d14fcb" id="r_a3069ed2e67841720922623fe18d14fcb"><td class="memItemLeft">static <a class="el" href="namespace_vesper.html#ad1f51d7e944b5e23b18b12cacd5f0d27">Ref</a>&lt; <a class="el" href="class_vesper_1_1_framebuffer.html">Framebuffer</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a3069ed2e67841720922623fe18d14fcb">Create</a> (const <a class="el" href="namespace_vesper.html#struct_vesper_1_1_framebuffer_specification">FramebufferSpecification</a> &amp;spec)</td></tr>
+<tr class="memdesc:a3069ed2e67841720922623fe18d14fcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a framebuffer with the given specification.  <br /></td></tr>
 </table>
-<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Abstract class representing a framebuffer. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a842eded46aaac94c8403e923fdaa2dda" name="a842eded46aaac94c8403e923fdaa2dda"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a842eded46aaac94c8403e923fdaa2dda">&#9670;&#160;</a></span>~Framebuffer()</h2>
 
@@ -198,6 +207,15 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Creates a framebuffer with the given specification. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">spec</td><td>The specification for the framebuffer. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A reference-counted pointer to the created framebuffer. </dd></dl>
 <div class="fragment"><div class="line"><span class="lineno">   10</span>    {</div>
 <div class="line"><span class="lineno">   11</span>        <span class="keywordflow">switch</span> (<a class="code hl_function" href="class_vesper_1_1_renderer.html#af8221f49491f130b6de7feb1b5093227">Renderer::GetAPI</a>())</div>
 <div class="line"><span class="lineno">   12</span>        {</div>
@@ -208,11 +226,11 @@ Static Public Member Functions</h2></td></tr>
 <div class="line"><span class="lineno">   17</span>        <a class="code hl_define" href="_asserts_8h.html#a3b51b77f75997760894138afc89403c9">VZ_CORE_ASSERT</a>(<span class="keyword">false</span>, <span class="stringliteral">&quot;Unknown RendererAPI!&quot;</span>);</div>
 <div class="line"><span class="lineno">   18</span>        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
 <div class="line"><span class="lineno">   19</span>    }</div>
-<div class="ttc" id="a_asserts_8h_html_a3b51b77f75997760894138afc89403c9"><div class="ttname"><a href="_asserts_8h.html#a3b51b77f75997760894138afc89403c9">VZ_CORE_ASSERT</a></div><div class="ttdeci">#define VZ_CORE_ASSERT(x,...)</div><div class="ttdef"><b>Definition</b> Asserts.h:13</div></div>
-<div class="ttc" id="aclass_vesper_1_1_renderer_a_p_i_html_acbef8f1a2c9546387b6513640c5c7995a6adf97f83acf6453d4a6a4b1070f3754"><div class="ttname"><a href="class_vesper_1_1_renderer_a_p_i.html#acbef8f1a2c9546387b6513640c5c7995a6adf97f83acf6453d4a6a4b1070f3754">Vesper::RendererAPI::API::None</a></div><div class="ttdeci">@ None</div><div class="ttdef"><b>Definition</b> RendererAPI.h:12</div></div>
-<div class="ttc" id="aclass_vesper_1_1_renderer_a_p_i_html_acbef8f1a2c9546387b6513640c5c7995a760716b590ee7c0adc25f434f577d8be"><div class="ttname"><a href="class_vesper_1_1_renderer_a_p_i.html#acbef8f1a2c9546387b6513640c5c7995a760716b590ee7c0adc25f434f577d8be">Vesper::RendererAPI::API::OpenGL</a></div><div class="ttdeci">@ OpenGL</div><div class="ttdef"><b>Definition</b> RendererAPI.h:13</div></div>
-<div class="ttc" id="aclass_vesper_1_1_renderer_html_af8221f49491f130b6de7feb1b5093227"><div class="ttname"><a href="class_vesper_1_1_renderer.html#af8221f49491f130b6de7feb1b5093227">Vesper::Renderer::GetAPI</a></div><div class="ttdeci">static RendererAPI::API GetAPI()</div><div class="ttdef"><b>Definition</b> Renderer.h:23</div></div>
-<div class="ttc" id="anamespace_vesper_html_a313930b55375b2f4dd36375b56f11047"><div class="ttname"><a href="namespace_vesper.html#a313930b55375b2f4dd36375b56f11047">Vesper::CreateRef</a></div><div class="ttdeci">constexpr Ref&lt; T &gt; CreateRef(Args &amp;&amp;... args)</div><div class="ttdef"><b>Definition</b> Defines_Macros.h:23</div></div>
+<div class="ttc" id="a_asserts_8h_html_a3b51b77f75997760894138afc89403c9"><div class="ttname"><a href="_asserts_8h.html#a3b51b77f75997760894138afc89403c9">VZ_CORE_ASSERT</a></div><div class="ttdeci">#define VZ_CORE_ASSERT(x,...)</div><div class="ttdef"><b>Definition</b> Asserts.h:20</div></div>
+<div class="ttc" id="aclass_vesper_1_1_renderer_a_p_i_html_acbef8f1a2c9546387b6513640c5c7995a6adf97f83acf6453d4a6a4b1070f3754"><div class="ttname"><a href="class_vesper_1_1_renderer_a_p_i.html#acbef8f1a2c9546387b6513640c5c7995a6adf97f83acf6453d4a6a4b1070f3754">Vesper::RendererAPI::API::None</a></div><div class="ttdeci">@ None</div><div class="ttdef"><b>Definition</b> RendererAPI.h:15</div></div>
+<div class="ttc" id="aclass_vesper_1_1_renderer_a_p_i_html_acbef8f1a2c9546387b6513640c5c7995a760716b590ee7c0adc25f434f577d8be"><div class="ttname"><a href="class_vesper_1_1_renderer_a_p_i.html#acbef8f1a2c9546387b6513640c5c7995a760716b590ee7c0adc25f434f577d8be">Vesper::RendererAPI::API::OpenGL</a></div><div class="ttdeci">@ OpenGL</div><div class="ttdef"><b>Definition</b> RendererAPI.h:16</div></div>
+<div class="ttc" id="aclass_vesper_1_1_renderer_html_af8221f49491f130b6de7feb1b5093227"><div class="ttname"><a href="class_vesper_1_1_renderer.html#af8221f49491f130b6de7feb1b5093227">Vesper::Renderer::GetAPI</a></div><div class="ttdeci">static RendererAPI::API GetAPI()</div><div class="ttdoc">Retrieves the current rendering API.</div><div class="ttdef"><b>Definition</b> Renderer.h:40</div></div>
+<div class="ttc" id="anamespace_vesper_html_a313930b55375b2f4dd36375b56f11047"><div class="ttname"><a href="namespace_vesper.html#a313930b55375b2f4dd36375b56f11047">Vesper::CreateRef</a></div><div class="ttdeci">constexpr Ref&lt; T &gt; CreateRef(Args &amp;&amp;... args)</div><div class="ttdoc">Creates a Ref (shared_ptr) for the given type and constructor arguments.</div><div class="ttdef"><b>Definition</b> Defines_Macros.h:72</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="class_vesper_1_1_renderer.html#af8221f49491f130b6de7feb1b5093227">Vesper::Renderer::GetAPI()</a>, <a class="el" href="class_vesper_1_1_renderer_a_p_i.html#acbef8f1a2c9546387b6513640c5c7995a6adf97f83acf6453d4a6a4b1070f3754">Vesper::RendererAPI::None</a>, and <a class="el" href="class_vesper_1_1_renderer_a_p_i.html#acbef8f1a2c9546387b6513640c5c7995a760716b590ee7c0adc25f434f577d8be">Vesper::RendererAPI::OpenGL</a>.</p>
 
@@ -241,6 +259,8 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Returns the renderer ID of the color attachment texture. </p>
+
 <p>Implemented in <a class="el" href="class_vesper_1_1_open_g_l_framebuffer.html#aa44f56c058cf1066862a18836b4d96a9">Vesper::OpenGLFramebuffer</a>.</p>
 
 </div>
@@ -267,6 +287,8 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Returns the specification used to create the framebuffer. </p>
 
 <p>Implemented in <a class="el" href="class_vesper_1_1_open_g_l_framebuffer.html#a947bc2bd16638f5d2fc44b4ef4801ebd">Vesper::OpenGLFramebuffer</a>.</p>
 
@@ -298,6 +320,8 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Resizes the framebuffer to the given width and height. </p>
 
 <p>Implemented in <a class="el" href="class_vesper_1_1_open_g_l_framebuffer.html#a39204ebd459e2cd7ba8a0363f4f03d6f">Vesper::OpenGLFramebuffer</a>.</p>
 

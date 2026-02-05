@@ -2,30 +2,38 @@
 \hypertarget{class_vesper_1_1_sub_texture2_d}{}\label{class_vesper_1_1_sub_texture2_d}\index{Vesper::SubTexture2D@{Vesper::SubTexture2D}}
 
 
+Represents a sub-\/region of a 2D texture, useful for sprite sheets.  
+
+
+
+
 {\ttfamily \+\#include $<$Sub\+Texture2\+D.\+h$>$}
 
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d_a69eaedd3ad73c51df02e75f9895102df}{Sub\+Texture2D}} (const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_texture2_d}{Texture2D}} $>$ \&texture, const glm::\+vec2 \&min, const glm::\+vec2 \&max)
-\item 
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_vesper_1_1_sub_texture2_d}{Sub\+Texture2D} from the given texture and texture coordinates. \end{DoxyCompactList}\item 
 const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_texture2_d}{Texture2D}} $>$ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d_a4f660d4b031fd84e4208a0c1c999ea58}{Get\+Texture}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Returns the underlying texture of the sub-\/texture. \end{DoxyCompactList}\item 
 glm::\+vec2 \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d_aa07f55a33383360161371fb7c78f196f}{Get\+Tex\+Coords}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Returns the texture coordinates of the sub-\/texture. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 static \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d_a69eaedd3ad73c51df02e75f9895102df}{Sub\+Texture2D}} $>$ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d_acaf4be5d42185bb62a8be95c4c15bc18}{Create\+From\+Coords}} (const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_texture2_d}{Texture2D}} $>$ \&texture, const glm::\+vec2 \&coords, const glm::\+vec2 \&cell\+Size, const glm::\+vec2 \&sprite\+Size=\{1, 1\})
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Creates a \doxylink{class_vesper_1_1_sub_texture2_d}{Sub\+Texture2D} from a grid of cells within the given texture. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_texture2_d}{Texture2D}} $>$ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d_a224e8c4bb1be39eb457729eea81fd652}{m\+\_\+\+Texture}}
-\item 
+\begin{DoxyCompactList}\small\item\em The underlying texture of the sub-\/texture. \end{DoxyCompactList}\item 
 glm::\+vec2 \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d_ac727b38ab6373c82ff5ac0ed800a4a1b}{m\+\_\+\+Tex\+Coords}} \+[4]\+
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The texture coordinates of the sub-\/texture. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Represents a sub-\/region of a 2D texture, useful for sprite sheets. 
 
 \label{doc-constructors}
 \Hypertarget{class_vesper_1_1_sub_texture2_d_doc-constructors}
@@ -36,6 +44,19 @@ glm::\+vec2 \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d_ac727b38ab6373c
 {\footnotesize\ttfamily \label{class_vesper_1_1_sub_texture2_d_a69eaedd3ad73c51df02e75f9895102df} 
 Vesper::\+\+Sub\+Texture2\+D::\+\+Sub\+Texture2D (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_texture2_d}{Texture2D}} $>$ \&}]{texture}{, }\item[{const glm::\+vec2 \&}]{min}{, }\item[{const glm::\+vec2 \&}]{max}{}\end{DoxyParamCaption})}
 
+
+
+Constructs a \doxylink{class_vesper_1_1_sub_texture2_d}{Sub\+Texture2D} from the given texture and texture coordinates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em texture} & The texture from which the sub-\/texture is derived. \\
+\hline
+{\em min} & The minimum texture coordinates (bottom-\/left). \\
+\hline
+{\em max} & The maximum texture coordinates (top-\/right). \\
+\hline
+\end{DoxyParams}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d_a224e8c4bb1be39eb457729eea81fd652}{m\_Texture}}(texture) }
@@ -67,6 +88,21 @@ Referenced by \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d_a69eaedd3ad73
 \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d_a69eaedd3ad73c51df02e75f9895102df}{Sub\+Texture2D}} $>$ Vesper::\+\+Sub\+Texture2\+D::\+\+Create\+From\+Coords (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_texture2_d}{Texture2D}} $>$ \&}]{texture}{, }\item[{const glm::\+vec2 \&}]{coords}{, }\item[{const glm::\+vec2 \&}]{cell\+Size}{, }\item[{const glm::\+vec2 \&}]{sprite\+Size}{ = {\ttfamily \{1,~1\}}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
+
+Creates a \doxylink{class_vesper_1_1_sub_texture2_d}{Sub\+Texture2D} from a grid of cells within the given texture. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em texture} & The texture from which the sub-\/texture is derived. \\
+\hline
+{\em coords} & The coordinates of the cell in the grid. \\
+\hline
+{\em cell\+Size} & The size of each cell in the grid. \\
+\hline
+{\em sprite\+Size} & The size of the sprite in cells (default is 1x1). \\
+\hline
+\end{DoxyParams}
+
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00018\ \ \ \ \ \{}
 \DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ glm::vec2\ min\ =\ \{\ (coords.x\ *\ cellSize.x)\ /\ texture-\/>GetWidth(),\ (coords.y\ *\ cellSize.y)\ /\ texture-\/>GetHeight()\ \};}
@@ -83,8 +119,12 @@ Referenced by \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d_a69eaedd3ad73
 glm::\+vec2 \texorpdfstring{$\ast$}{*} Vesper::\+\+Sub\+Texture2\+D::\+\+Get\+Tex\+Coords (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
+
+Returns the texture coordinates of the sub-\/texture. 
+
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00016\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d_ac727b38ab6373c82ff5ac0ed800a4a1b}{m\_TexCoords}};\ \}}
+\DoxyCodeLine{00025\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d_ac727b38ab6373c82ff5ac0ed800a4a1b}{m\_TexCoords}};\ \}}
 
 \end{DoxyCode}
 \Hypertarget{class_vesper_1_1_sub_texture2_d_a4f660d4b031fd84e4208a0c1c999ea58}\index{Vesper::SubTexture2D@{Vesper::SubTexture2D}!GetTexture@{GetTexture}}
@@ -94,8 +134,12 @@ glm::\+vec2 \texorpdfstring{$\ast$}{*} Vesper::\+\+Sub\+Texture2\+D::\+\+Get\+Te
 const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_texture2_d}{Texture2D}} $>$ Vesper::\+\+Sub\+Texture2\+D::\+\+Get\+Texture (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
+
+Returns the underlying texture of the sub-\/texture. 
+
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00015\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d_a224e8c4bb1be39eb457729eea81fd652}{m\_Texture}};\ \}}
+\DoxyCodeLine{00023\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d_a224e8c4bb1be39eb457729eea81fd652}{m\_Texture}};\ \}}
 
 \end{DoxyCode}
 
@@ -109,11 +153,19 @@ const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{R
 {\footnotesize\ttfamily \label{class_vesper_1_1_sub_texture2_d_ac727b38ab6373c82ff5ac0ed800a4a1b} 
 glm::\+vec2 Vesper::\+\+Sub\+Texture2\+D::\+m\+\_\+\+Tex\+Coords\+[4]\+\hspace{0.3cm}{\ttfamily [private]}}
 
+
+
+The texture coordinates of the sub-\/texture. 
+
 \Hypertarget{class_vesper_1_1_sub_texture2_d_a224e8c4bb1be39eb457729eea81fd652}\index{Vesper::SubTexture2D@{Vesper::SubTexture2D}!m\_Texture@{m\_Texture}}
 \index{m\_Texture@{m\_Texture}!Vesper::SubTexture2D@{Vesper::SubTexture2D}}
 \doxysubsubsection{\texorpdfstring{m\_Texture}{m\_Texture}}
 {\footnotesize\ttfamily \label{class_vesper_1_1_sub_texture2_d_a224e8c4bb1be39eb457729eea81fd652} 
 \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$\doxymbox{\hyperlink{class_vesper_1_1_texture2_d}{Texture2D}}$>$ Vesper::\+\+Sub\+Texture2\+D::\+m\+\_\+\+Texture\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The underlying texture of the sub-\/texture. 
 
 
 

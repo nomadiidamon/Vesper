@@ -7,55 +7,59 @@
 \DoxyCodeLine{00003\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\ \textcolor{preprocessor}{"{}Vesper/Core/Base.h"{}}}
 \DoxyCodeLine{00004\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\ \doxymbox{\hyperlink{_layer_8h}{"{}Layer.h"{}}}}
 \DoxyCodeLine{00005\ }
-\DoxyCodeLine{00006\ }
-\DoxyCodeLine{00007\ \textcolor{keyword}{namespace}\ \doxymbox{\hyperlink{namespace_vesper}{Vesper}}\ \{}
-\DoxyCodeLine{00008\ }
-\DoxyCodeLine{00009\ \ \ \ \ \textcolor{comment}{///\ @class\ LayerStack}}
-\DoxyCodeLine{00010\ \ \ \ \ \textcolor{comment}{///\ @brief\ Manages\ an\ ordered\ stack\ of\ Layer\ pointers.\ Layers\ can\ be\ pushed\ or\ popped\ and\ the\ stack\ can\ be\ iterated\ in\ forward\ or\ reverse\ order.}}
-\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{class}\ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{LayerStack}}}
-\DoxyCodeLine{00012\ \ \ \ \ \{}
-\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_a01ab5d24098db960d7bac1225cbb542e}{LayerStack}}();}
-\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \string~\doxymbox{\hyperlink{class_vesper_1_1_layer_stack_ad19fe2a97a277a4fb3827c4641317fd8}{LayerStack}}();}
-\DoxyCodeLine{00016\ }
-\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Adds\ the\ layer\ to\ the\ stack\ at\ the\ position\ before\ the\ first\ overlay.}}
-\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ }}
-\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @param\ layer\ Pointer\ to\ the\ layer\ to\ be\ added.}}
-\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_a56bdbb1eb43e4f1718c51f5c5752cdef}{PushLayer}}(\doxymbox{\hyperlink{class_vesper_1_1_layer}{Layer}}*\ layer);}
-\DoxyCodeLine{00021\ }
-\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Pushes\ the\ overlay\ layer\ on\ top\ of\ all\ other\ layers.}}
-\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ }}
-\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @param\ overlay\ Pointer\ to\ the\ overlay\ layer\ to\ be\ added.}}
-\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_abf19258f086ca897456a513038e52c04}{PushOverlay}}(\doxymbox{\hyperlink{class_vesper_1_1_layer}{Layer}}*\ overlay);}
-\DoxyCodeLine{00026\ }
-\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Removes\ the\ specified\ layer\ from\ the\ stack.}}
-\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ }}
-\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @param\ layer\ Pointer\ to\ the\ layer\ to\ be\ removed.}}
-\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_ad923292e88c1f2449bb82f28923234a4}{PopLayer}}(\doxymbox{\hyperlink{class_vesper_1_1_layer}{Layer}}*\ layer);}
-\DoxyCodeLine{00031\ }
-\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Removes\ the\ specified\ overlay\ layer\ from\ the\ stack.}}
-\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{comment}{///}}
-\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @param\ overlay\ Pointer\ to\ the\ overlay\ layer\ to\ be\ removed.}}
-\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_a18721a4d3abe075ecf5da87c819430b7}{PopOverlay}}(\doxymbox{\hyperlink{class_vesper_1_1_layer}{Layer}}*\ overlay);}
-\DoxyCodeLine{00036\ }
-\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Returns\ an\ iterator\ to\ the\ beginning\ of\ the\ layer\ stack.}}
-\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ std::vector<Layer*>::iterator\ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{begin}}()\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{m\_Layers}}.\doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{begin}}();\ \}}
-\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Returns\ an\ iterator\ to\ the\ end\ of\ the\ layer\ stack.}}
-\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{std}}::\doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{vector}}<\doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{Layer}}*>::\doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{iterator}}\ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{end}}()\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{m\_Layers}}.\doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{end}}();\ \}}
-\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Returns\ a\ reverse\ iterator\ to\ the\ beginning\ of\ the\ layer\ stack.}}
-\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{std}}::\doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{vector}}<\doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{Layer}}*>::\doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{reverse\_iterator}}\ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{rbegin}}()\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{m\_Layers}}.\doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{rbegin}}();\ \}}
-\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Returns\ a\ reverse\ iterator\ to\ the\ end\ of\ the\ layer\ stack.}}
-\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{std}}::\doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{vector}}<\doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{Layer}}*>::\doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{reverse\_iterator}}\ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{rend}}()\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{m\_Layers}}.\doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{rend}}();\ \}}
-\DoxyCodeLine{00045\ }
-\DoxyCodeLine{00046\ }
-\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Vector\ holding\ pointers\ to\ the\ layers\ in\ the\ stack.}}
-\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{std}}::\doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{vector}}<\doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{Layer}}*>\ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{m\_Layers}};}
-\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Index\ indicating\ where\ to\ insert\ new\ layers\ (before\ overlays).}}
-\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_a2722bad174bdd9e8c4bf4e8435a82df4}{m\_LayerInsertIndex}}\ =\ 0;}
-\DoxyCodeLine{00052\ \ \ \ \ \};}
-\DoxyCodeLine{00053\ }
-\DoxyCodeLine{00054\ }
-\DoxyCodeLine{00055\ \}}
+\DoxyCodeLine{00006\ \textcolor{comment}{///\ @file\ LayerStack.h}}
+\DoxyCodeLine{00007\ \textcolor{comment}{///\ @author\ Damon\ S.\ Green\ II}}
+\DoxyCodeLine{00008\ \textcolor{comment}{///\ @brief\ Defines\ the\ LayerStack\ class\ for\ managing\ a\ stack\ of\ application\ layers.}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{namespace}\ \doxymbox{\hyperlink{namespace_vesper}{Vesper}}\ \{}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{comment}{///\ @class\ LayerStack}}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{comment}{///\ @brief\ Manages\ an\ ordered\ stack\ of\ Layer\ pointers.\ Layers\ can\ be\ pushed\ or\ popped\ and\ the\ stack\ can\ be\ iterated\ in\ forward\ or\ reverse\ order.}}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{comment}{///\ @todo\ Add\ layer\ priority\ system\ (maybe?)}}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{class}\ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{LayerStack}}}
+\DoxyCodeLine{00016\ \ \ \ \ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_a01ab5d24098db960d7bac1225cbb542e}{LayerStack}}();}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \string~\doxymbox{\hyperlink{class_vesper_1_1_layer_stack_ad19fe2a97a277a4fb3827c4641317fd8}{LayerStack}}();}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Adds\ the\ layer\ to\ the\ stack\ at\ the\ position\ before\ the\ first\ overlay.}}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ }}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @param\ layer\ Pointer\ to\ the\ layer\ to\ be\ added.}}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_a56bdbb1eb43e4f1718c51f5c5752cdef}{PushLayer}}(\doxymbox{\hyperlink{class_vesper_1_1_layer}{Layer}}*\ layer);}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Pushes\ the\ overlay\ layer\ on\ top\ of\ all\ other\ layers.}}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ }}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @param\ overlay\ Pointer\ to\ the\ overlay\ layer\ to\ be\ added.}}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_abf19258f086ca897456a513038e52c04}{PushOverlay}}(\doxymbox{\hyperlink{class_vesper_1_1_layer}{Layer}}*\ overlay);}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Removes\ the\ specified\ layer\ from\ the\ stack.}}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ }}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @param\ layer\ Pointer\ to\ the\ layer\ to\ be\ removed.}}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_ad923292e88c1f2449bb82f28923234a4}{PopLayer}}(\doxymbox{\hyperlink{class_vesper_1_1_layer}{Layer}}*\ layer);}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Removes\ the\ specified\ overlay\ layer\ from\ the\ stack.}}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{comment}{///}}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @param\ overlay\ Pointer\ to\ the\ overlay\ layer\ to\ be\ removed.}}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_a18721a4d3abe075ecf5da87c819430b7}{PopOverlay}}(\doxymbox{\hyperlink{class_vesper_1_1_layer}{Layer}}*\ overlay);}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Returns\ an\ iterator\ to\ the\ beginning\ of\ the\ layer\ stack.}}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ std::vector<Layer*>::iterator\ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{begin}}()\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{m\_Layers}}.\doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{begin}}();\ \}}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Returns\ an\ iterator\ to\ the\ end\ of\ the\ layer\ stack.}}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{std}}::\doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{vector}}<\doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{Layer}}*>::\doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{iterator}}\ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{end}}()\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{m\_Layers}}.\doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{end}}();\ \}}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Returns\ a\ reverse\ iterator\ to\ the\ beginning\ of\ the\ layer\ stack.}}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{std}}::\doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{vector}}<\doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{Layer}}*>::\doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{reverse\_iterator}}\ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{rbegin}}()\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{m\_Layers}}.\doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{rbegin}}();\ \}}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Returns\ a\ reverse\ iterator\ to\ the\ end\ of\ the\ layer\ stack.}}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{std}}::\doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{vector}}<\doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{Layer}}*>::\doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{reverse\_iterator}}\ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{rend}}()\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{m\_Layers}}.\doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{rend}}();\ \}}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Vector\ holding\ pointers\ to\ the\ layers\ in\ the\ stack.}}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{std}}::\doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{vector}}<\doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{Layer}}*>\ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{m\_Layers}};}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Index\ indicating\ where\ to\ insert\ new\ layers\ (before\ overlays).}}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_a2722bad174bdd9e8c4bf4e8435a82df4}{m\_LayerInsertIndex}}\ =\ 0;}
+\DoxyCodeLine{00056\ \ \ \ \ \};}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \}}
 
 \end{DoxyCode}

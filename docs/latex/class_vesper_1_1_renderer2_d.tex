@@ -2,72 +2,77 @@
 \hypertarget{class_vesper_1_1_renderer2_d}{}\label{class_vesper_1_1_renderer2_d}\index{Vesper::Renderer2D@{Vesper::Renderer2D}}
 
 
+A 2D renderer for drawing quads and sprites.  
+
+
+
+
 {\ttfamily \+\#include $<$Renderer2\+D.\+h$>$}
 
 \doxysubsubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
 struct \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_1_1_statistics}{Statistics}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em 2D \doxylink{class_vesper_1_1_renderer}{Renderer} \doxylink{struct_vesper_1_1_renderer2_d_1_1_statistics}{Statistics} \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 static void \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a4fbfb5a17dac37385dfcf13a0f457ff5}{Init}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Initializes the 2D renderer. \end{DoxyCompactList}\item 
 static void \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a65dbf36aef449ad46517ae5d760b691d}{Shutdown}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Shuts down the 2D renderer. \end{DoxyCompactList}\item 
 static void \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a4a98381667b8b785eb03cea1e07de574}{Begin\+Scene}} (const \doxymbox{\hyperlink{class_vesper_1_1_camera}{Camera}} \&camera, const glm::\+mat4 \&transform)
-\item 
+\begin{DoxyCompactList}\small\item\em Begins a new scene with the given camera and transform. \end{DoxyCompactList}\item 
 static void \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a479365533b0aeb53f190646381961d22}{Begin\+Scene}} (const \doxymbox{\hyperlink{class_vesper_1_1_editor_camera}{Editor\+Camera}} \&camera)
-\item 
+\begin{DoxyCompactList}\small\item\em Begins a new scene with the given editor camera. \end{DoxyCompactList}\item 
 static void \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a3aebe8bf1533bb51aad7e67d62714886}{Begin\+Scene}} (const \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera}{Orthographic\+Camera}} \&camera)
-\item 
+\begin{DoxyCompactList}\small\item\em Begins a new scene with the given orthographic camera. \end{DoxyCompactList}\item 
 static void \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a4a87e37fd90cb8c33c65412c141db983}{End\+Scene}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Ends the current scene. \end{DoxyCompactList}\item 
 static void \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_ac79b4f772e92e9cc5489b7ed0bb9b659}{Flush}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Flushes the current batch of rendering commands. \end{DoxyCompactList}\item 
 static void \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_aba269c4ba2ba99b13b47c9e71bf1f8e3}{Draw\+Quad}} (const glm::\+mat4 \&transform, const glm::\+vec4 \&color)
-\item 
+\begin{DoxyCompactList}\small\item\em Draws a colored quad with the given transform and color. \end{DoxyCompactList}\item 
 static void \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a88290cf166d88ce46040b9ce87b1b5b3}{Draw\+Quad}} (const glm::\+vec2 \&position, const glm::\+vec2 \&size, const glm::\+vec4 \&color)
-\item 
+\begin{DoxyCompactList}\small\item\em Draws a colored quad at the specified position and size. \end{DoxyCompactList}\item 
 static void \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a62423c4f36192a9d71a3da2c1933de59}{Draw\+Quad}} (const glm::\+vec3 \&position, const glm::\+vec2 \&size, const glm::\+vec4 \&color)
-\item 
+\begin{DoxyCompactList}\small\item\em Draws a colored quad at the specified position and size. \end{DoxyCompactList}\item 
 static void \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_afd78da6a4f0aa5af3c7f8d533bd22b49}{Draw\+Quad\+With\+Texture}} (const glm::\+mat4 \&transform, const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_texture2_d}{Texture2D}} $>$ \&texture, float tiling\+Factor, const glm::\+vec4 tint\+Color)
-\item 
+\begin{DoxyCompactList}\small\item\em Draws a textured quad with the given transform, texture, tiling factor, and tint color. \end{DoxyCompactList}\item 
 static void \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a359b7c453c967b9c28117cea83e65281}{Draw\+Quad\+With\+Texture}} (const glm::\+vec2 \&position, const glm::\+vec2 \&size, const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_texture2_d}{Texture2D}} $>$ \&texture, float tiling\+Factor, const glm::\+vec4 tint\+Color)
-\item 
+\begin{DoxyCompactList}\small\item\em Draws a textured quad at the specified position and size. \end{DoxyCompactList}\item 
 static void \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_aa5eb19c474de115cb5d55857eb88d581}{Draw\+Quad\+With\+Texture}} (const glm::\+vec3 \&position, const glm::\+vec2 \&size, const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_texture2_d}{Texture2D}} $>$ \&texture, float tiling\+Factor, const glm::\+vec4 tint\+Color)
-\item 
+\begin{DoxyCompactList}\small\item\em Draws a textured quad at the specified position and size. \end{DoxyCompactList}\item 
 static void \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a273c91ba7abef4d2a99640bf98a4a7d4}{Draw\+Quad\+With\+Texture}} (const glm::\+mat4 \&transform, const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d}{Sub\+Texture2D}} $>$ \&subtexture, float tiling\+Factor, const glm::\+vec4 tint\+Color)
-\item 
+\begin{DoxyCompactList}\small\item\em Draws a textured quad with the given transform, subtexture, tiling factor, and tint color. \end{DoxyCompactList}\item 
 static void \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a794ce83b342f15f7ff59eaf285e92527}{Draw\+Quad\+With\+Texture}} (const glm::\+vec2 \&position, const glm::\+vec2 \&size, const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d}{Sub\+Texture2D}} $>$ \&subtexture, float tiling\+Factor, const glm::\+vec4 tint\+Color)
-\item 
+\begin{DoxyCompactList}\small\item\em Draws a textured quad at the specified position and size. \end{DoxyCompactList}\item 
 static void \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_af825e94b34dd71c4f4d43b1639941a83}{Draw\+Quad\+With\+Texture}} (const glm::\+vec3 \&position, const glm::\+vec2 \&size, const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d}{Sub\+Texture2D}} $>$ \&subtexture, float tiling\+Factor, const glm::\+vec4 tint\+Color)
-\item 
+\begin{DoxyCompactList}\small\item\em Draws a textured quad at the specified position and size. \end{DoxyCompactList}\item 
 static void \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_ac61593eac73ea6fabba060b34c987302}{Draw\+Quad\+Rotated}} (const glm::\+mat4 \&transform, const glm::\+vec4 \&color)
-\item 
+\begin{DoxyCompactList}\small\item\em Draws a rotated colored quad with the given transform and color. \end{DoxyCompactList}\item 
 static void \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a5c7a044d0a34e1b20a2e9a727324ddf6}{Draw\+Quad\+Rotated}} (const glm::\+vec2 \&position, const glm::\+vec2 \&size, float rotation\+Rads, const glm::\+vec4 \&color)
-\item 
+\begin{DoxyCompactList}\small\item\em Draws a rotated colored quad at the specified position, size, and rotation. \end{DoxyCompactList}\item 
 static void \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a1f19d6d7bad01a20033c6815e988e0e4}{Draw\+Quad\+Rotated}} (const glm::\+vec3 \&position, const glm::\+vec2 \&size, float rotation\+Rads, const glm::\+vec4 \&color)
-\item 
+\begin{DoxyCompactList}\small\item\em Draws a rotated colored quad at the specified position, size, and rotation. \end{DoxyCompactList}\item 
 static void \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a41c4aa9d715e2ea03825360305989f00}{Draw\+Quad\+Rotated\+With\+Texture}} (const glm::\+mat4 \&transform, const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_texture2_d}{Texture2D}} $>$ \&texture, float tiling\+Factor, const glm::\+vec4 tint\+Color)
-\item 
+\begin{DoxyCompactList}\small\item\em Draws a rotated textured quad with the given transform, texture, tiling factor, and tint color. \end{DoxyCompactList}\item 
 static void \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a5cfa9c13c16ae674f23ffe57a07459c9}{Draw\+Quad\+Rotated\+With\+Texture}} (const glm::\+vec2 \&position, const glm::\+vec2 \&size, const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_texture2_d}{Texture2D}} $>$ \&texture, float rotation\+Rads, float tiling\+Factor, const glm::\+vec4 tint\+Color)
-\item 
+\begin{DoxyCompactList}\small\item\em Draws a rotated textured quad at the specified position, size, and rotation. \end{DoxyCompactList}\item 
 static void \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a41010ec0dd6156a465b7af3c7d741f81}{Draw\+Quad\+Rotated\+With\+Texture}} (const glm::\+vec3 \&position, const glm::\+vec2 \&size, const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_texture2_d}{Texture2D}} $>$ \&texture, float rotation\+Rads, float tiling\+Factor, const glm::\+vec4 tint\+Color)
-\item 
+\begin{DoxyCompactList}\small\item\em Draws a rotated textured quad at the specified position, size, and rotation. \end{DoxyCompactList}\item 
 static void \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_ac4b8d7d28d6384f102cb0f7690ccc391}{Draw\+Quad\+Rotated\+With\+Texture}} (const glm::\+mat4 \&transform, const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d}{Sub\+Texture2D}} $>$ \&subtexture, float tiling\+Factor, const glm::\+vec4 tint\+Color)
-\item 
+\begin{DoxyCompactList}\small\item\em Draws a rotated textured quad with the given transform, subtexture, tiling factor, and tint color. \end{DoxyCompactList}\item 
 static void \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a948c3bda38fc07f5d698813ece11deeb}{Draw\+Quad\+Rotated\+With\+Texture}} (const glm::\+vec2 \&position, const glm::\+vec2 \&size, const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d}{Sub\+Texture2D}} $>$ \&subtexture, float rotation\+Rads, float tiling\+Factor, const glm::\+vec4 tint\+Color)
-\item 
+\begin{DoxyCompactList}\small\item\em Draws a rotated textured quad at the specified position, size, and rotation. \end{DoxyCompactList}\item 
 static void \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_ae20126c4ac68e46f6a07d0bce2a953db}{Draw\+Quad\+Rotated\+With\+Texture}} (const glm::\+vec3 \&position, const glm::\+vec2 \&size, const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d}{Sub\+Texture2D}} $>$ \&subtexture, float rotation\+Rads, float tiling\+Factor, const glm::\+vec4 tint\+Color)
-\item 
+\begin{DoxyCompactList}\small\item\em Draws a rotated textured quad at the specified position, size, and rotation. \end{DoxyCompactList}\item 
 static \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_texture2_d}{Texture2D}} $>$ \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a1a66d8f166230f172c5f523d092d00f8}{Get\+White\+Texture}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Returns a reference to the default white texture that allows for coloring. \end{DoxyCompactList}\item 
 static void \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a2230d61d96994b384b6ef793d1ffb506}{Reset\+Stats}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Resets the rendering statistics. \end{DoxyCompactList}\item 
 static \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_1_1_statistics}{Statistics}} \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_ac4635220719834831187e63de81046f4}{Get\+Stats}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Retrieves the current rendering statistics. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Static Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -76,6 +81,9 @@ static void \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a0199e67d6224f8abb
 static void \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_aa7d684bfdac8fe7ea5c5b4317d9a6874}{Start\+Batch}} ()
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+A 2D renderer for drawing quads and sprites. 
 
 \label{doc-func-members}
 \Hypertarget{class_vesper_1_1_renderer2_d_doc-func-members}
@@ -86,6 +94,17 @@ static void \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_aa7d684bfdac8fe7ea
 {\footnotesize\ttfamily \label{class_vesper_1_1_renderer2_d_a4a98381667b8b785eb03cea1e07de574} 
 void Vesper::\+\+Renderer2\+D::\+\+Begin\+Scene (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_vesper_1_1_camera}{Camera}} \&}]{camera}{, }\item[{const glm::\+mat4 \&}]{transform}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
+
+
+Begins a new scene with the given camera and transform. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em camera} & The camera to use for the scene. \\
+\hline
+{\em transform} & The transform matrix for the camera. \\
+\hline
+\end{DoxyParams}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00124\ \ \ \ \ \{}
@@ -114,6 +133,15 @@ References \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_ae97e7dd79a5a
 void Vesper::\+\+Renderer2\+D::\+\+Begin\+Scene (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_vesper_1_1_editor_camera}{Editor\+Camera}} \&}]{camera}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
+
+Begins a new scene with the given editor camera. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em camera} & The editor camera to use for the scene. \\
+\hline
+\end{DoxyParams}
+
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00139\ \ \ \ \ \{}
 \DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
@@ -140,6 +168,17 @@ Referenced by \doxymbox{\hyperlink{class_vesper_1_1_scene_acb757303df319af60095a
 void Vesper::\+\+Renderer2\+D::\+\+Begin\+Scene (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera}{Orthographic\+Camera}} \&}]{camera}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
+
+Begins a new scene with the given orthographic camera. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em camera} & The orthographic camera to use for the scene. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{Todo}
+\item[\doxymbox{\hyperlink{todo__todo000003}{Todo}}]Remove once we have a proper scene system \end{DoxyRefDesc}
+
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00149\ \ \ \ \ \{}
 \DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
@@ -163,6 +202,17 @@ References \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_ae97e7dd79a5a
 {\footnotesize\ttfamily \label{class_vesper_1_1_renderer2_d_aba269c4ba2ba99b13b47c9e71bf1f8e3} 
 void Vesper::\+\+Renderer2\+D::\+\+Draw\+Quad (\begin{DoxyParamCaption}\item[{const glm::\+mat4 \&}]{transform}{, }\item[{const glm::\+vec4 \&}]{color}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
+
+
+Draws a colored quad with the given transform and color. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em transform} & The transform matrix for the quad. \\
+\hline
+{\em color} & The color of the quad. \\
+\hline
+\end{DoxyParams}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00181\ \ \ \ \ \{}
@@ -204,6 +254,19 @@ References \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a0199e67d6224f8abb4
 void Vesper::\+\+Renderer2\+D::\+\+Draw\+Quad (\begin{DoxyParamCaption}\item[{const glm::\+vec2 \&}]{position}{, }\item[{const glm::\+vec2 \&}]{size}{, }\item[{const glm::\+vec4 \&}]{color}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
+
+Draws a colored quad at the specified position and size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & The position of the quad in 2D space. \\
+\hline
+{\em size} & The size of the quad. \\
+\hline
+{\em color} & The color of the quad. \\
+\hline
+\end{DoxyParams}
+
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00208\ \ \ \ \ \{}
 \DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_aba269c4ba2ba99b13b47c9e71bf1f8e3}{DrawQuad}}(\{\ position.x,\ position.y,\ 0.0f\ \},\ size,\ color);}
@@ -216,6 +279,19 @@ void Vesper::\+\+Renderer2\+D::\+\+Draw\+Quad (\begin{DoxyParamCaption}\item[{co
 {\footnotesize\ttfamily \label{class_vesper_1_1_renderer2_d_a62423c4f36192a9d71a3da2c1933de59} 
 void Vesper::\+\+Renderer2\+D::\+\+Draw\+Quad (\begin{DoxyParamCaption}\item[{const glm::\+vec3 \&}]{position}{, }\item[{const glm::\+vec2 \&}]{size}{, }\item[{const glm::\+vec4 \&}]{color}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
+
+
+Draws a colored quad at the specified position and size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & The position of the quad in 3D space. \\
+\hline
+{\em size} & The size of the quad. \\
+\hline
+{\em color} & The color of the quad. \\
+\hline
+\end{DoxyParams}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00212\ \ \ \ \ \{}
@@ -231,6 +307,17 @@ void Vesper::\+\+Renderer2\+D::\+\+Draw\+Quad (\begin{DoxyParamCaption}\item[{co
 {\footnotesize\ttfamily \label{class_vesper_1_1_renderer2_d_ac61593eac73ea6fabba060b34c987302} 
 void Vesper::\+\+Renderer2\+D::\+\+Draw\+Quad\+Rotated (\begin{DoxyParamCaption}\item[{const glm::\+mat4 \&}]{transform}{, }\item[{const glm::\+vec4 \&}]{color}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
+
+
+Draws a rotated colored quad with the given transform and color. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em transform} & The transform matrix for the quad. \\
+\hline
+{\em color} & The color of the quad. \\
+\hline
+\end{DoxyParams}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00331\ \ \ \ \ \{}
@@ -271,6 +358,21 @@ References \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a0199e67d6224f8abb4
 void Vesper::\+\+Renderer2\+D::\+\+Draw\+Quad\+Rotated (\begin{DoxyParamCaption}\item[{const glm::\+vec2 \&}]{position}{, }\item[{const glm::\+vec2 \&}]{size}{, }\item[{float}]{rotation\+Rads}{, }\item[{const glm::\+vec4 \&}]{color}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
+
+Draws a rotated colored quad at the specified position, size, and rotation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & The position of the quad in 2D space. \\
+\hline
+{\em size} & The size of the quad. \\
+\hline
+{\em rotation\+Rads} & The rotation of the quad in radians. \\
+\hline
+{\em color} & The color of the quad. \\
+\hline
+\end{DoxyParams}
+
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00357\ \ \ \ \ \{}
 \DoxyCodeLine{00358\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_ac61593eac73ea6fabba060b34c987302}{DrawQuadRotated}}(\{\ position.x,\ position.y,\ 0.0f\ \},\ size,\ rotationRads,\ color);}
@@ -283,6 +385,21 @@ void Vesper::\+\+Renderer2\+D::\+\+Draw\+Quad\+Rotated (\begin{DoxyParamCaption}
 {\footnotesize\ttfamily \label{class_vesper_1_1_renderer2_d_a1f19d6d7bad01a20033c6815e988e0e4} 
 void Vesper::\+\+Renderer2\+D::\+\+Draw\+Quad\+Rotated (\begin{DoxyParamCaption}\item[{const glm::\+vec3 \&}]{position}{, }\item[{const glm::\+vec2 \&}]{size}{, }\item[{float}]{rotation\+Rads}{, }\item[{const glm::\+vec4 \&}]{color}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
+
+
+Draws a rotated colored quad at the specified position, size, and rotation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & The position of the quad in 3D space. \\
+\hline
+{\em size} & The size of the quad. \\
+\hline
+{\em rotation\+Rads} & The rotation of the quad in radians. \\
+\hline
+{\em color} & The color of the quad. \\
+\hline
+\end{DoxyParams}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00361\ \ \ \ \ \{}
@@ -299,6 +416,21 @@ void Vesper::\+\+Renderer2\+D::\+\+Draw\+Quad\+Rotated (\begin{DoxyParamCaption}
 {\footnotesize\ttfamily \label{class_vesper_1_1_renderer2_d_ac4b8d7d28d6384f102cb0f7690ccc391} 
 void Vesper::\+\+Renderer2\+D::\+\+Draw\+Quad\+Rotated\+With\+Texture (\begin{DoxyParamCaption}\item[{const glm::\+mat4 \&}]{transform}{, }\item[{const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d}{Sub\+Texture2D}} $>$ \&}]{subtexture}{, }\item[{float}]{tiling\+Factor}{, }\item[{const glm::\+vec4}]{tint\+Color}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
+
+
+Draws a rotated textured quad with the given transform, subtexture, tiling factor, and tint color. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em transform} & The transform matrix for the quad. \\
+\hline
+{\em subtexture} & The subtexture to apply to the quad. \\
+\hline
+{\em tiling\+Factor} & The tiling factor for the texture. \\
+\hline
+{\em tint\+Color} & The tint color to apply to the texture. \\
+\hline
+\end{DoxyParams}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00423\ \ \ \ \ \{}
@@ -350,6 +482,21 @@ References \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a0199e67d6224f8abb4
 {\footnotesize\ttfamily \label{class_vesper_1_1_renderer2_d_a41c4aa9d715e2ea03825360305989f00} 
 void Vesper::\+\+Renderer2\+D::\+\+Draw\+Quad\+Rotated\+With\+Texture (\begin{DoxyParamCaption}\item[{const glm::\+mat4 \&}]{transform}{, }\item[{const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_texture2_d}{Texture2D}} $>$ \&}]{texture}{, }\item[{float}]{tiling\+Factor}{, }\item[{const glm::\+vec4}]{tint\+Color}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
+
+
+Draws a rotated textured quad with the given transform, texture, tiling factor, and tint color. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em transform} & The transform matrix for the quad. \\
+\hline
+{\em texture} & The texture to apply to the quad. \\
+\hline
+{\em tiling\+Factor} & The tiling factor for the texture. \\
+\hline
+{\em tint\+Color} & The tint color to apply to the texture. \\
+\hline
+\end{DoxyParams}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00369\ \ \ \ \ \{}
@@ -405,6 +552,25 @@ References \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a0199e67d6224f8abb4
 void Vesper::\+\+Renderer2\+D::\+\+Draw\+Quad\+Rotated\+With\+Texture (\begin{DoxyParamCaption}\item[{const glm::\+vec2 \&}]{position}{, }\item[{const glm::\+vec2 \&}]{size}{, }\item[{const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d}{Sub\+Texture2D}} $>$ \&}]{subtexture}{, }\item[{float}]{rotation\+Rads}{, }\item[{float}]{tiling\+Factor}{, }\item[{const glm::\+vec4}]{tint\+Color}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
+
+Draws a rotated textured quad at the specified position, size, and rotation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & The position of the quad in 2D space. \\
+\hline
+{\em size} & The size of the quad. \\
+\hline
+{\em rotation\+Rads} & The rotation of the quad in radians. \\
+\hline
+{\em subtexture} & The subtexture to apply to the quad. \\
+\hline
+{\em tiling\+Factor} & The tiling factor for the texture. \\
+\hline
+{\em tint\+Color} & The tint color to apply to the texture. \\
+\hline
+\end{DoxyParams}
+
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00461\ \ \ \ \ \{}
 \DoxyCodeLine{00462\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a41c4aa9d715e2ea03825360305989f00}{DrawQuadRotatedWithTexture}}(\{\ position.x,\ position.y,\ 0.0f\ \},\ size,\ subtexture,\ rotationRads,\ tilingFactor,\ tintColor);}
@@ -418,6 +584,25 @@ void Vesper::\+\+Renderer2\+D::\+\+Draw\+Quad\+Rotated\+With\+Texture (\begin{Do
 void Vesper::\+\+Renderer2\+D::\+\+Draw\+Quad\+Rotated\+With\+Texture (\begin{DoxyParamCaption}\item[{const glm::\+vec2 \&}]{position}{, }\item[{const glm::\+vec2 \&}]{size}{, }\item[{const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_texture2_d}{Texture2D}} $>$ \&}]{texture}{, }\item[{float}]{rotation\+Rads}{, }\item[{float}]{tiling\+Factor}{, }\item[{const glm::\+vec4}]{tint\+Color}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
+
+Draws a rotated textured quad at the specified position, size, and rotation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & The position of the quad in 2D space. \\
+\hline
+{\em size} & The size of the quad. \\
+\hline
+{\em rotation\+Rads} & The rotation of the quad in radians. \\
+\hline
+{\em texture} & The texture to apply to the quad. \\
+\hline
+{\em tiling\+Factor} & The tiling factor for the texture. \\
+\hline
+{\em tint\+Color} & The tint color to apply to the texture. \\
+\hline
+\end{DoxyParams}
+
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00410\ \ \ \ \ \{}
 \DoxyCodeLine{00411\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a41c4aa9d715e2ea03825360305989f00}{DrawQuadRotatedWithTexture}}(\{\ position.x,\ position.y,\ 0.0f\ \},\ size,\ texture,\ rotationRads,\ tilingFactor,\ tintColor);}
@@ -430,6 +615,25 @@ void Vesper::\+\+Renderer2\+D::\+\+Draw\+Quad\+Rotated\+With\+Texture (\begin{Do
 {\footnotesize\ttfamily \label{class_vesper_1_1_renderer2_d_ae20126c4ac68e46f6a07d0bce2a953db} 
 void Vesper::\+\+Renderer2\+D::\+\+Draw\+Quad\+Rotated\+With\+Texture (\begin{DoxyParamCaption}\item[{const glm::\+vec3 \&}]{position}{, }\item[{const glm::\+vec2 \&}]{size}{, }\item[{const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d}{Sub\+Texture2D}} $>$ \&}]{subtexture}{, }\item[{float}]{rotation\+Rads}{, }\item[{float}]{tiling\+Factor}{, }\item[{const glm::\+vec4}]{tint\+Color}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
+
+
+Draws a rotated textured quad at the specified position, size, and rotation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & The position of the quad in 3D space. \\
+\hline
+{\em size} & The size of the quad. \\
+\hline
+{\em rotation\+Rads} & The rotation of the quad in radians. \\
+\hline
+{\em subtexture} & The subtexture to apply to the quad. \\
+\hline
+{\em tiling\+Factor} & The tiling factor for the texture. \\
+\hline
+{\em tint\+Color} & The tint color to apply to the texture. \\
+\hline
+\end{DoxyParams}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00465\ \ \ \ \ \{}
@@ -450,6 +654,25 @@ void Vesper::\+\+Renderer2\+D::\+\+Draw\+Quad\+Rotated\+With\+Texture (\begin{Do
 void Vesper::\+\+Renderer2\+D::\+\+Draw\+Quad\+Rotated\+With\+Texture (\begin{DoxyParamCaption}\item[{const glm::\+vec3 \&}]{position}{, }\item[{const glm::\+vec2 \&}]{size}{, }\item[{const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_texture2_d}{Texture2D}} $>$ \&}]{texture}{, }\item[{float}]{rotation\+Rads}{, }\item[{float}]{tiling\+Factor}{, }\item[{const glm::\+vec4}]{tint\+Color}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
+
+Draws a rotated textured quad at the specified position, size, and rotation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & The position of the quad in 3D space. \\
+\hline
+{\em size} & The size of the quad. \\
+\hline
+{\em rotation\+Rads} & The rotation of the quad in radians. \\
+\hline
+{\em texture} & The texture to apply to the quad. \\
+\hline
+{\em tiling\+Factor} & The tiling factor for the texture. \\
+\hline
+{\em tint\+Color} & The tint color to apply to the texture. \\
+\hline
+\end{DoxyParams}
+
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00414\ \ \ \ \ \{}
 \DoxyCodeLine{00415\ \ \ \ \ \ \ \ \ glm::mat4\ transform\ =\ glm::translate(glm::mat4(1.0f),\ position)}
@@ -466,6 +689,21 @@ void Vesper::\+\+Renderer2\+D::\+\+Draw\+Quad\+Rotated\+With\+Texture (\begin{Do
 {\footnotesize\ttfamily \label{class_vesper_1_1_renderer2_d_a273c91ba7abef4d2a99640bf98a4a7d4} 
 void Vesper::\+\+Renderer2\+D::\+\+Draw\+Quad\+With\+Texture (\begin{DoxyParamCaption}\item[{const glm::\+mat4 \&}]{transform}{, }\item[{const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d}{Sub\+Texture2D}} $>$ \&}]{subtexture}{, }\item[{float}]{tiling\+Factor}{, }\item[{const glm::\+vec4}]{tint\+Color}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
+
+
+Draws a textured quad with the given transform, subtexture, tiling factor, and tint color. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em transform} & The transform matrix for the quad. \\
+\hline
+{\em subtexture} & The subtexture to apply to the quad. \\
+\hline
+{\em tiling\+Factor} & The tiling factor for the texture. \\
+\hline
+{\em tint\+Color} & The tint color to apply to the texture. \\
+\hline
+\end{DoxyParams}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00275\ \ \ \ \ \{}
@@ -524,6 +762,21 @@ References \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a0199e67d6224f8abb4
 void Vesper::\+\+Renderer2\+D::\+\+Draw\+Quad\+With\+Texture (\begin{DoxyParamCaption}\item[{const glm::\+mat4 \&}]{transform}{, }\item[{const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_texture2_d}{Texture2D}} $>$ \&}]{texture}{, }\item[{float}]{tiling\+Factor}{, }\item[{const glm::\+vec4}]{tint\+Color}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
+
+Draws a textured quad with the given transform, texture, tiling factor, and tint color. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em transform} & The transform matrix for the quad. \\
+\hline
+{\em texture} & The texture to apply to the quad. \\
+\hline
+{\em tiling\+Factor} & The tiling factor for the texture. \\
+\hline
+{\em tint\+Color} & The tint color to apply to the texture. \\
+\hline
+\end{DoxyParams}
+
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00219\ \ \ \ \ \{}
 \DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
@@ -581,6 +834,23 @@ References \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a0199e67d6224f8abb4
 void Vesper::\+\+Renderer2\+D::\+\+Draw\+Quad\+With\+Texture (\begin{DoxyParamCaption}\item[{const glm::\+vec2 \&}]{position}{, }\item[{const glm::\+vec2 \&}]{size}{, }\item[{const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d}{Sub\+Texture2D}} $>$ \&}]{subtexture}{, }\item[{float}]{tiling\+Factor}{, }\item[{const glm::\+vec4}]{tint\+Color}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
+
+Draws a textured quad at the specified position and size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & The position of the quad in 2D space. \\
+\hline
+{\em size} & The size of the quad. \\
+\hline
+{\em subtexture} & The subtexture to apply to the quad. \\
+\hline
+{\em tiling\+Factor} & The tiling factor for the texture. \\
+\hline
+{\em tint\+Color} & The tint color to apply to the texture. \\
+\hline
+\end{DoxyParams}
+
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00319\ \ \ \ \ \{}
 \DoxyCodeLine{00320\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_afd78da6a4f0aa5af3c7f8d533bd22b49}{DrawQuadWithTexture}}(\{\ position.x,\ position.y,\ 0.0f\ \},\ size,\ subtexture,\ tilingFactor,\ tintColor);}
@@ -594,6 +864,23 @@ void Vesper::\+\+Renderer2\+D::\+\+Draw\+Quad\+With\+Texture (\begin{DoxyParamCa
 void Vesper::\+\+Renderer2\+D::\+\+Draw\+Quad\+With\+Texture (\begin{DoxyParamCaption}\item[{const glm::\+vec2 \&}]{position}{, }\item[{const glm::\+vec2 \&}]{size}{, }\item[{const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_texture2_d}{Texture2D}} $>$ \&}]{texture}{, }\item[{float}]{tiling\+Factor}{, }\item[{const glm::\+vec4}]{tint\+Color}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
+
+Draws a textured quad at the specified position and size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & The position of the quad in 2D space. \\
+\hline
+{\em size} & The size of the quad. \\
+\hline
+{\em texture} & The texture to apply to the quad. \\
+\hline
+{\em tiling\+Factor} & The tiling factor for the texture. \\
+\hline
+{\em tint\+Color} & The tint color to apply to the texture. \\
+\hline
+\end{DoxyParams}
+
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00263\ \ \ \ \ \{}
 \DoxyCodeLine{00264\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_afd78da6a4f0aa5af3c7f8d533bd22b49}{DrawQuadWithTexture}}(\{\ position.x,\ position.y,\ 0.0f\ \},\ size,\ texture,\ tilingFactor,\ tintColor);}
@@ -606,6 +893,23 @@ void Vesper::\+\+Renderer2\+D::\+\+Draw\+Quad\+With\+Texture (\begin{DoxyParamCa
 {\footnotesize\ttfamily \label{class_vesper_1_1_renderer2_d_af825e94b34dd71c4f4d43b1639941a83} 
 void Vesper::\+\+Renderer2\+D::\+\+Draw\+Quad\+With\+Texture (\begin{DoxyParamCaption}\item[{const glm::\+vec3 \&}]{position}{, }\item[{const glm::\+vec2 \&}]{size}{, }\item[{const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d}{Sub\+Texture2D}} $>$ \&}]{subtexture}{, }\item[{float}]{tiling\+Factor}{, }\item[{const glm::\+vec4}]{tint\+Color}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
+
+
+Draws a textured quad at the specified position and size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & The position of the quad in 3D space. \\
+\hline
+{\em size} & The size of the quad. \\
+\hline
+{\em subtexture} & The subtexture to apply to the quad. \\
+\hline
+{\em tiling\+Factor} & The tiling factor for the texture. \\
+\hline
+{\em tint\+Color} & The tint color to apply to the texture. \\
+\hline
+\end{DoxyParams}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00323\ \ \ \ \ \{}
@@ -623,6 +927,23 @@ void Vesper::\+\+Renderer2\+D::\+\+Draw\+Quad\+With\+Texture (\begin{DoxyParamCa
 void Vesper::\+\+Renderer2\+D::\+\+Draw\+Quad\+With\+Texture (\begin{DoxyParamCaption}\item[{const glm::\+vec3 \&}]{position}{, }\item[{const glm::\+vec2 \&}]{size}{, }\item[{const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_texture2_d}{Texture2D}} $>$ \&}]{texture}{, }\item[{float}]{tiling\+Factor}{, }\item[{const glm::\+vec4}]{tint\+Color}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
+
+Draws a textured quad at the specified position and size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & The position of the quad in 3D space. \\
+\hline
+{\em size} & The size of the quad. \\
+\hline
+{\em texture} & The texture to apply to the quad. \\
+\hline
+{\em tiling\+Factor} & The tiling factor for the texture. \\
+\hline
+{\em tint\+Color} & The tint color to apply to the texture. \\
+\hline
+\end{DoxyParams}
+
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00267\ \ \ \ \ \{}
 \DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
@@ -637,6 +958,10 @@ void Vesper::\+\+Renderer2\+D::\+\+Draw\+Quad\+With\+Texture (\begin{DoxyParamCa
 \doxysubsubsection{\texorpdfstring{EndScene()}{EndScene()}}
 {\footnotesize\ttfamily \label{class_vesper_1_1_renderer2_d_a4a87e37fd90cb8c33c65412c141db983} 
 void Vesper::\+\+Renderer2\+D::\+\+End\+Scene (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Ends the current scene. 
 
 
 \begin{DoxyCode}{0}
@@ -655,13 +980,17 @@ References \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_ac79b4f772e92e9cc54
 
 
 
-Referenced by \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a0199e67d6224f8abb4e2f31123a5ca9c}{Flush\+And\+Reset()}}, \doxymbox{\hyperlink{class_sandbox2_d_abc796def0880d3ca2dde9a010c4bf70c}{Sandbox2\+D::\+\+On\+Update()}}, \doxymbox{\hyperlink{class_vesper_1_1_editor_layer_a984242ed582e7e06bcfd16bfe5de0a68}{Vesper::\+\+Editor\+Layer::\+\+On\+Update()}}, \doxymbox{\hyperlink{class_vesper_1_1_scene_acb757303df319af60095ae9a4354e440}{Vesper::\+\+Scene::\+\+On\+Update\+Editor()}}, and \doxymbox{\hyperlink{class_vesper_1_1_scene_a7a44a8fc07bf9c8ec2b08229a51441c6}{Vesper::\+\+Scene::\+\+On\+Update\+Runtime()}}.
+Referenced by \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a0199e67d6224f8abb4e2f31123a5ca9c}{Flush\+And\+Reset()}}, \doxymbox{\hyperlink{class_vesper_1_1_editor_layer_a984242ed582e7e06bcfd16bfe5de0a68}{Vesper::\+\+Editor\+Layer::\+\+On\+Update()}}, \doxymbox{\hyperlink{class_vesper_1_1_scene_acb757303df319af60095ae9a4354e440}{Vesper::\+\+Scene::\+\+On\+Update\+Editor()}}, and \doxymbox{\hyperlink{class_vesper_1_1_scene_a7a44a8fc07bf9c8ec2b08229a51441c6}{Vesper::\+\+Scene::\+\+On\+Update\+Runtime()}}.
 
 \Hypertarget{class_vesper_1_1_renderer2_d_ac79b4f772e92e9cc5489b7ed0bb9b659}\index{Vesper::Renderer2D@{Vesper::Renderer2D}!Flush@{Flush}}
 \index{Flush@{Flush}!Vesper::Renderer2D@{Vesper::Renderer2D}}
 \doxysubsubsection{\texorpdfstring{Flush()}{Flush()}}
 {\footnotesize\ttfamily \label{class_vesper_1_1_renderer2_d_ac79b4f772e92e9cc5489b7ed0bb9b659} 
 void Vesper::\+\+Renderer2\+D::\+\+Flush (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Flushes the current batch of rendering commands. 
 
 
 \begin{DoxyCode}{0}
@@ -715,6 +1044,10 @@ Referenced by \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_aba269c4ba2ba99b
 \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_1_1_statistics}{Renderer2\+D::\+\+Statistics}} Vesper::\+\+Renderer2\+D::\+\+Get\+Stats (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
+
+Retrieves the current rendering statistics. 
+
+
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00503\ \ \ \ \ \{}
 \DoxyCodeLine{00504\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a5a87f280fe2dbd18d48967e3097a2fb1}{Stats}};}
@@ -727,13 +1060,17 @@ References \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b
 
 
 
-Referenced by \doxymbox{\hyperlink{class_sandbox2_d_aabfc3f41ef7dc962dae7d8c0bad7e484}{Sandbox2\+D::\+\+On\+Im\+Gui\+Render()}}, and \doxymbox{\hyperlink{class_vesper_1_1_editor_layer_af5e79508040b18e9fa455830692f6ed0}{Vesper::\+\+Editor\+Layer::\+\+On\+Im\+Gui\+Render()}}.
+Referenced by \doxymbox{\hyperlink{class_vesper_1_1_editor_layer_af5e79508040b18e9fa455830692f6ed0}{Vesper::\+\+Editor\+Layer::\+\+On\+Im\+Gui\+Render()}}.
 
 \Hypertarget{class_vesper_1_1_renderer2_d_a1a66d8f166230f172c5f523d092d00f8}\index{Vesper::Renderer2D@{Vesper::Renderer2D}!GetWhiteTexture@{GetWhiteTexture}}
 \index{GetWhiteTexture@{GetWhiteTexture}!Vesper::Renderer2D@{Vesper::Renderer2D}}
 \doxysubsubsection{\texorpdfstring{GetWhiteTexture()}{GetWhiteTexture()}}
 {\footnotesize\ttfamily \label{class_vesper_1_1_renderer2_d_a1a66d8f166230f172c5f523d092d00f8} 
 \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_texture2_d}{Texture2D}} $>$ Vesper::\+\+Renderer2\+D::\+\+Get\+White\+Texture (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns a reference to the default white texture that allows for coloring. 
 
 
 \begin{DoxyCode}{0}
@@ -751,6 +1088,10 @@ References \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b
 \doxysubsubsection{\texorpdfstring{Init()}{Init()}}
 {\footnotesize\ttfamily \label{class_vesper_1_1_renderer2_d_a4fbfb5a17dac37385dfcf13a0f457ff5} 
 void Vesper::\+\+Renderer2\+D::\+\+Init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Initializes the 2D renderer. 
 
 
 \begin{DoxyCode}{0}
@@ -830,6 +1171,10 @@ Referenced by \doxymbox{\hyperlink{class_vesper_1_1_renderer_af44c320528448c97bd
 void Vesper::\+\+Renderer2\+D::\+\+Reset\+Stats (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
+
+Resets the rendering statistics. 
+
+
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00498\ \ \ \ \ \{}
 \DoxyCodeLine{00499\ \ \ \ \ \ \ \ \ memset(\&\doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b9e}{s\_Data}}.\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data_a5a87f280fe2dbd18d48967e3097a2fb1}{Stats}},\ 0,\ \textcolor{keyword}{sizeof}(\doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_1_1_statistics}{Statistics}}));}
@@ -842,13 +1187,17 @@ References \doxymbox{\hyperlink{namespace_vesper_ad2f902efea82e021110343529be81b
 
 
 
-Referenced by \doxymbox{\hyperlink{class_sandbox2_d_abc796def0880d3ca2dde9a010c4bf70c}{Sandbox2\+D::\+\+On\+Update()}}, and \doxymbox{\hyperlink{class_vesper_1_1_editor_layer_a984242ed582e7e06bcfd16bfe5de0a68}{Vesper::\+\+Editor\+Layer::\+\+On\+Update()}}.
+Referenced by \doxymbox{\hyperlink{class_vesper_1_1_editor_layer_a984242ed582e7e06bcfd16bfe5de0a68}{Vesper::\+\+Editor\+Layer::\+\+On\+Update()}}.
 
 \Hypertarget{class_vesper_1_1_renderer2_d_a65dbf36aef449ad46517ae5d760b691d}\index{Vesper::Renderer2D@{Vesper::Renderer2D}!Shutdown@{Shutdown}}
 \index{Shutdown@{Shutdown}!Vesper::Renderer2D@{Vesper::Renderer2D}}
 \doxysubsubsection{\texorpdfstring{Shutdown()}{Shutdown()}}
 {\footnotesize\ttfamily \label{class_vesper_1_1_renderer2_d_a65dbf36aef449ad46517ae5d760b691d} 
 void Vesper::\+\+Renderer2\+D::\+\+Shutdown (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Shuts down the 2D renderer. 
 
 
 \begin{DoxyCode}{0}

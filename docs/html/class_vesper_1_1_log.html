@@ -98,20 +98,29 @@ $(function(){initNavTree('class_vesper_1_1_log.html','','class_vesper_1_1_log-me
 </div><!--header-->
 <div class="contents">
 
+<p>A logging utility class for the <a class="el" href="namespace_vesper.html" title="TEMPORARY.">Vesper</a> engine.  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_log_8h_source.html">Log.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a4c1b91828cac87abd1afcce965000395" id="r_a4c1b91828cac87abd1afcce965000395"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a4c1b91828cac87abd1afcce965000395">Init</a> ()</td></tr>
+<tr class="memdesc:a4c1b91828cac87abd1afcce965000395"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the logging system.  <br /></td></tr>
 <tr class="memitem:a308072f59ab7bf4c27321ec9cc26bdf6" id="r_a308072f59ab7bf4c27321ec9cc26bdf6"><td class="memItemLeft">static std::shared_ptr&lt; spdlog::logger &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a308072f59ab7bf4c27321ec9cc26bdf6">GetCoreLogger</a> ()</td></tr>
+<tr class="memdesc:a308072f59ab7bf4c27321ec9cc26bdf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the core logger instance.  <br /></td></tr>
 <tr class="memitem:a34127f1a92073183577fd3b86eaec092" id="r_a34127f1a92073183577fd3b86eaec092"><td class="memItemLeft">static std::shared_ptr&lt; spdlog::logger &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a34127f1a92073183577fd3b86eaec092">GetClientLogger</a> ()</td></tr>
+<tr class="memdesc:a34127f1a92073183577fd3b86eaec092"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the client logger instance.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pri-static-attribs" class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
 Static Private Attributes</h2></td></tr>
 <tr class="memitem:a0580b2964a32543c920a89e34155d908" id="r_a0580b2964a32543c920a89e34155d908"><td class="memItemLeft">static std::shared_ptr&lt; spdlog::logger &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a0580b2964a32543c920a89e34155d908">s_CoreLogger</a></td></tr>
 <tr class="memitem:a243a822c10e4dcb6ff78b4fecf3b286a" id="r_a243a822c10e4dcb6ff78b4fecf3b286a"><td class="memItemLeft">static std::shared_ptr&lt; spdlog::logger &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a243a822c10e4dcb6ff78b4fecf3b286a">s_ClientLogger</a></td></tr>
 </table>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A logging utility class for the <a class="el" href="namespace_vesper.html" title="TEMPORARY.">Vesper</a> engine. </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000014">Todo</a></b></dt><dd>Rethink logging flow with Macros and possibly implement different loggers for different modules. </dd></dl>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a34127f1a92073183577fd3b86eaec092" name="a34127f1a92073183577fd3b86eaec092"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a34127f1a92073183577fd3b86eaec092">&#9670;&#160;</a></span>GetClientLogger()</h2>
 
@@ -134,8 +143,10 @@ Static Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   14</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a243a822c10e4dcb6ff78b4fecf3b286a">s_ClientLogger</a>; }</div>
-<div class="ttc" id="aclass_vesper_1_1_log_html_a243a822c10e4dcb6ff78b4fecf3b286a"><div class="ttname"><a href="#a243a822c10e4dcb6ff78b4fecf3b286a">Vesper::Log::s_ClientLogger</a></div><div class="ttdeci">static std::shared_ptr&lt; spdlog::logger &gt; s_ClientLogger</div><div class="ttdef"><b>Definition</b> Log.h:17</div></div>
+
+<p>Returns the client logger instance. </p>
+<div class="fragment"><div class="line"><span class="lineno">   25</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a243a822c10e4dcb6ff78b4fecf3b286a">s_ClientLogger</a>; }</div>
+<div class="ttc" id="aclass_vesper_1_1_log_html_a243a822c10e4dcb6ff78b4fecf3b286a"><div class="ttname"><a href="#a243a822c10e4dcb6ff78b4fecf3b286a">Vesper::Log::s_ClientLogger</a></div><div class="ttdeci">static std::shared_ptr&lt; spdlog::logger &gt; s_ClientLogger</div><div class="ttdef"><b>Definition</b> Log.h:28</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -161,8 +172,10 @@ Static Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   13</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a0580b2964a32543c920a89e34155d908">s_CoreLogger</a>; }</div>
-<div class="ttc" id="aclass_vesper_1_1_log_html_a0580b2964a32543c920a89e34155d908"><div class="ttname"><a href="#a0580b2964a32543c920a89e34155d908">Vesper::Log::s_CoreLogger</a></div><div class="ttdeci">static std::shared_ptr&lt; spdlog::logger &gt; s_CoreLogger</div><div class="ttdef"><b>Definition</b> Log.h:16</div></div>
+
+<p>Returns the core logger instance. </p>
+<div class="fragment"><div class="line"><span class="lineno">   23</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a0580b2964a32543c920a89e34155d908">s_CoreLogger</a>; }</div>
+<div class="ttc" id="aclass_vesper_1_1_log_html_a0580b2964a32543c920a89e34155d908"><div class="ttname"><a href="#a0580b2964a32543c920a89e34155d908">Vesper::Log::s_CoreLogger</a></div><div class="ttdeci">static std::shared_ptr&lt; spdlog::logger &gt; s_CoreLogger</div><div class="ttdef"><b>Definition</b> Log.h:27</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -188,14 +201,16 @@ Static Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   12</span>    {</div>
-<div class="line"><span class="lineno">   13</span>        spdlog::set_pattern(<span class="stringliteral">&quot;%^[%T] %n: %v%$&quot;</span>);</div>
-<div class="line"><span class="lineno">   14</span>        <a class="code hl_variable" href="#a0580b2964a32543c920a89e34155d908">s_CoreLogger</a> = spdlog::stdout_color_mt(<span class="stringliteral">&quot;VESPER&quot;</span>);</div>
-<div class="line"><span class="lineno">   15</span>        <a class="code hl_variable" href="#a0580b2964a32543c920a89e34155d908">s_CoreLogger</a>-&gt;set_level(spdlog::level::trace);</div>
-<div class="line"><span class="lineno">   16</span> </div>
-<div class="line"><span class="lineno">   17</span>        <a class="code hl_variable" href="#a243a822c10e4dcb6ff78b4fecf3b286a">s_ClientLogger</a> = spdlog::stdout_color_mt(<span class="stringliteral">&quot;APP&quot;</span>);</div>
-<div class="line"><span class="lineno">   18</span>        <a class="code hl_variable" href="#a243a822c10e4dcb6ff78b4fecf3b286a">s_ClientLogger</a>-&gt;set_level(spdlog::level::trace);</div>
-<div class="line"><span class="lineno">   19</span>    }</div>
+
+<p>Initializes the logging system. </p>
+<div class="fragment"><div class="line"><span class="lineno">   17</span>    {</div>
+<div class="line"><span class="lineno">   18</span>        spdlog::set_pattern(<span class="stringliteral">&quot;%^[%T] %n: %v%$&quot;</span>);</div>
+<div class="line"><span class="lineno">   19</span>        <a class="code hl_variable" href="#a0580b2964a32543c920a89e34155d908">s_CoreLogger</a> = spdlog::stdout_color_mt(<span class="stringliteral">&quot;VESPER&quot;</span>);</div>
+<div class="line"><span class="lineno">   20</span>        <a class="code hl_variable" href="#a0580b2964a32543c920a89e34155d908">s_CoreLogger</a>-&gt;set_level(spdlog::level::trace);</div>
+<div class="line"><span class="lineno">   21</span> </div>
+<div class="line"><span class="lineno">   22</span>        <a class="code hl_variable" href="#a243a822c10e4dcb6ff78b4fecf3b286a">s_ClientLogger</a> = spdlog::stdout_color_mt(<span class="stringliteral">&quot;APP&quot;</span>);</div>
+<div class="line"><span class="lineno">   23</span>        <a class="code hl_variable" href="#a243a822c10e4dcb6ff78b4fecf3b286a">s_ClientLogger</a>-&gt;set_level(spdlog::level::trace);</div>
+<div class="line"><span class="lineno">   24</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>

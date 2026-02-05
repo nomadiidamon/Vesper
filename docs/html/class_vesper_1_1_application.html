@@ -108,10 +108,8 @@ Inheritance diagram for Vesper::Application:</div>
  <div class="center">
   <img src="class_vesper_1_1_application.png" usemap="#Vesper_3A_3AApplication_map" alt=""/>
   <map id="Vesper_3A_3AApplication_map" name="Vesper_3A_3AApplication_map">
-<area href="class_sandbox_app.html" alt="SandboxApp" shape="rect" coords="0,56,133,80"/>
-<area href="class_sandbox_app.html" alt="SandboxApp" shape="rect" coords="143,56,276,80"/>
-<area href="class_vesper_1_1_vesper_editor.html" alt="Vesper::VesperEditor" shape="rect" coords="286,56,419,80"/>
-<area href="class_vesper_1_1_vesper_editor.html" alt="Vesper::VesperEditor" shape="rect" coords="429,56,562,80"/>
+<area href="class_vesper_1_1_vesper_editor.html" alt="Vesper::VesperEditor" shape="rect" coords="0,56,133,80"/>
+<area href="class_vesper_1_1_vesper_editor.html" alt="Vesper::VesperEditor" shape="rect" coords="143,56,276,80"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -150,7 +148,7 @@ Private Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:ae4194db590b9cab97f767453c2d8b608" id="r_ae4194db590b9cab97f767453c2d8b608"><td class="memItemLeft"><a class="el" href="namespace_vesper.html#a5425f9aaa2ee4d3761c8ce6b385e0b70">Scope</a>&lt; <a class="el" href="class_vesper_1_1_window.html">Window</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ae4194db590b9cab97f767453c2d8b608">m_Window</a></td></tr>
-<tr class="memdesc:ae4194db590b9cab97f767453c2d8b608"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the application.  <br /></td></tr>
+<tr class="memdesc:ae4194db590b9cab97f767453c2d8b608"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scoped pointer to the applications underlying window.  <br /></td></tr>
 <tr class="memitem:a7fba99c6534f6508ec077ad9970c9607" id="r_a7fba99c6534f6508ec077ad9970c9607"><td class="memItemLeft"><a class="el" href="class_vesper_1_1_im_gui_layer.html">ImGuiLayer</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a7fba99c6534f6508ec077ad9970c9607">m_ImGuiLayer</a></td></tr>
 <tr class="memdesc:a7fba99c6534f6508ec077ad9970c9607"><td class="mdescLeft">&#160;</td><td class="mdescRight">ImGui layer for rendering GUI elements.  <br /></td></tr>
 <tr class="memitem:a81b932f66c601f9f6e52203a867dc54b" id="r_a81b932f66c601f9f6e52203a867dc54b"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a81b932f66c601f9f6e52203a867dc54b">m_Running</a> = true</td></tr>
@@ -168,6 +166,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The core application class that manages the main loop, window, layers, and event handling. </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000006">Todo</a></b></dt><dd>Update class to accept <a class="el" href="namespace_vesper.html#struct_vesper_1_1_application_settings" title="WIP.">ApplicationSettings</a> in constructor and verify its utility/use </dd></dl>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="adb6d84492e607574848e77d5206c5567" name="adb6d84492e607574848e77d5206c5567"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adb6d84492e607574848e77d5206c5567">&#9670;&#160;</a></span>Application()</h2>
@@ -209,15 +208,15 @@ Static Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   33</span>        <a class="code hl_function" href="#ae10c674888e1ed9864c1f9b080b8af7f">PushOverlay</a>(<a class="code hl_variable" href="#a7fba99c6534f6508ec077ad9970c9607">m_ImGuiLayer</a>);</div>
 <div class="line"><span class="lineno">   34</span> </div>
 <div class="line"><span class="lineno">   35</span>    }</div>
-<div class="ttc" id="a_asserts_8h_html_a3b51b77f75997760894138afc89403c9"><div class="ttname"><a href="_asserts_8h.html#a3b51b77f75997760894138afc89403c9">VZ_CORE_ASSERT</a></div><div class="ttdeci">#define VZ_CORE_ASSERT(x,...)</div><div class="ttdef"><b>Definition</b> Asserts.h:13</div></div>
-<div class="ttc" id="a_defines___macros_8h_html_a2290aac021a7119e86af0aa6d962a226"><div class="ttname"><a href="_defines___macros_8h.html#a2290aac021a7119e86af0aa6d962a226">BIND_EVENT_FN</a></div><div class="ttdeci">#define BIND_EVENT_FN(x)</div><div class="ttdef"><b>Definition</b> Defines_Macros.h:6</div></div>
-<div class="ttc" id="a_instrumentor_8h_html_aaa03f54db70b44f8decacf111dc1109b"><div class="ttname"><a href="_instrumentor_8h.html#aaa03f54db70b44f8decacf111dc1109b">VZ_PROFILE_FUNCTION</a></div><div class="ttdeci">#define VZ_PROFILE_FUNCTION()</div><div class="ttdef"><b>Definition</b> Instrumentor.h:234</div></div>
+<div class="ttc" id="a_asserts_8h_html_a3b51b77f75997760894138afc89403c9"><div class="ttname"><a href="_asserts_8h.html#a3b51b77f75997760894138afc89403c9">VZ_CORE_ASSERT</a></div><div class="ttdeci">#define VZ_CORE_ASSERT(x,...)</div><div class="ttdef"><b>Definition</b> Asserts.h:20</div></div>
+<div class="ttc" id="a_defines___macros_8h_html_a2290aac021a7119e86af0aa6d962a226"><div class="ttname"><a href="_defines___macros_8h.html#a2290aac021a7119e86af0aa6d962a226">BIND_EVENT_FN</a></div><div class="ttdeci">#define BIND_EVENT_FN(x)</div><div class="ttdoc">Binds the given member function of the Application class as an event handler.</div><div class="ttdef"><b>Definition</b> Defines_Macros.h:21</div></div>
+<div class="ttc" id="a_instrumentor_8h_html_aaa03f54db70b44f8decacf111dc1109b"><div class="ttname"><a href="_instrumentor_8h.html#aaa03f54db70b44f8decacf111dc1109b">VZ_PROFILE_FUNCTION</a></div><div class="ttdeci">#define VZ_PROFILE_FUNCTION()</div><div class="ttdef"><b>Definition</b> Instrumentor.h:240</div></div>
 <div class="ttc" id="aclass_vesper_1_1_application_html_a3d3850bb1b1291c36ec2cbef3c1a87ad"><div class="ttname"><a href="#a3d3850bb1b1291c36ec2cbef3c1a87ad">Vesper::Application::s_Instance</a></div><div class="ttdeci">static Application * s_Instance</div><div class="ttdef"><b>Definition</b> Application.h:92</div></div>
 <div class="ttc" id="aclass_vesper_1_1_application_html_a6b671a553ef9f81ec0394c7de71bff16"><div class="ttname"><a href="#a6b671a553ef9f81ec0394c7de71bff16">Vesper::Application::OnEvent</a></div><div class="ttdeci">void OnEvent(Event &amp;e)</div><div class="ttdoc">Handles incoming events and dispatches them to the appropriate handlers.</div><div class="ttdef"><b>Definition</b> Application.cpp:60</div></div>
 <div class="ttc" id="aclass_vesper_1_1_application_html_a7fba99c6534f6508ec077ad9970c9607"><div class="ttname"><a href="#a7fba99c6534f6508ec077ad9970c9607">Vesper::Application::m_ImGuiLayer</a></div><div class="ttdeci">ImGuiLayer * m_ImGuiLayer</div><div class="ttdoc">ImGui layer for rendering GUI elements.</div><div class="ttdef"><b>Definition</b> Application.h:81</div></div>
 <div class="ttc" id="aclass_vesper_1_1_application_html_ae10c674888e1ed9864c1f9b080b8af7f"><div class="ttname"><a href="#ae10c674888e1ed9864c1f9b080b8af7f">Vesper::Application::PushOverlay</a></div><div class="ttdeci">void PushOverlay(Layer *overlay)</div><div class="ttdoc">Adds an overlay layer to the application layer stack.</div><div class="ttdef"><b>Definition</b> Application.cpp:48</div></div>
-<div class="ttc" id="aclass_vesper_1_1_application_html_ae4194db590b9cab97f767453c2d8b608"><div class="ttname"><a href="#ae4194db590b9cab97f767453c2d8b608">Vesper::Application::m_Window</a></div><div class="ttdeci">Scope&lt; Window &gt; m_Window</div><div class="ttdoc">Initializes the application.</div><div class="ttdef"><b>Definition</b> Application.h:79</div></div>
-<div class="ttc" id="aclass_vesper_1_1_renderer_html_af44c320528448c97bdb376d77abfc38f"><div class="ttname"><a href="class_vesper_1_1_renderer.html#af44c320528448c97bdb376d77abfc38f">Vesper::Renderer::Init</a></div><div class="ttdeci">static void Init()</div><div class="ttdef"><b>Definition</b> Renderer.cpp:12</div></div>
+<div class="ttc" id="aclass_vesper_1_1_application_html_ae4194db590b9cab97f767453c2d8b608"><div class="ttname"><a href="#ae4194db590b9cab97f767453c2d8b608">Vesper::Application::m_Window</a></div><div class="ttdeci">Scope&lt; Window &gt; m_Window</div><div class="ttdoc">Scoped pointer to the applications underlying window.</div><div class="ttdef"><b>Definition</b> Application.h:79</div></div>
+<div class="ttc" id="aclass_vesper_1_1_renderer_html_af44c320528448c97bdb376d77abfc38f"><div class="ttname"><a href="class_vesper_1_1_renderer.html#af44c320528448c97bdb376d77abfc38f">Vesper::Renderer::Init</a></div><div class="ttdeci">static void Init()</div><div class="ttdoc">Initializes the renderer.</div><div class="ttdef"><b>Definition</b> Renderer.cpp:13</div></div>
 <div class="ttc" id="aclass_vesper_1_1_window_html_a54fb0dcbcf16390cd9f8f2ebda165523"><div class="ttname"><a href="class_vesper_1_1_window.html#a54fb0dcbcf16390cd9f8f2ebda165523">Vesper::Window::Create</a></div><div class="ttdeci">static Scope&lt; Window &gt; Create(const WindowProps &amp;props=WindowProps())</div><div class="ttdoc">Creates a window instance with the specified properties.</div><div class="ttdef"><b>Definition</b> WindowsWindow.cpp:20</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="class_vesper_1_1_im_gui_layer.html#a30146f3b83ef1a2fb4eeb3e80f633111">Vesper::ImGuiLayer::ImGuiLayer()</a>, <a class="el" href="class_vesper_1_1_renderer.html#af44c320528448c97bdb376d77abfc38f">Vesper::Renderer::Init()</a>, <a class="el" href="#a7fba99c6534f6508ec077ad9970c9607">m_ImGuiLayer</a>, <a class="el" href="#ae10c674888e1ed9864c1f9b080b8af7f">PushOverlay()</a>, and <a class="el" href="#a3d3850bb1b1291c36ec2cbef3c1a87ad">s_Instance</a>.</p>
@@ -307,7 +306,7 @@ Static Private Attributes</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a3d3850bb1b1291c36ec2cbef3c1a87ad">s_Instance</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="class_vesper_1_1_im_gui_layer.html#ad32cb49bc5bffd27630085d5b273c5ad">Vesper::ImGuiLayer::End()</a>, <a class="el" href="class_vesper_1_1_input.html#a7cfb2f3a5d04a27f1d0c22b0f4e9c09f">Vesper::Input::GetMousePosition()</a>, <a class="el" href="class_vesper_1_1_input.html#aa8b8dff7d2b768ad79b6888fbdbf31ae">Vesper::Input::IsKeyPressed()</a>, <a class="el" href="class_vesper_1_1_input.html#a00b5734fe7e2227aa348e56c3c71a6d2">Vesper::Input::IsMouseButtonPressed()</a>, <a class="el" href="class_vesper_1_1_im_gui_layer.html#aeb2e5a03cd424c37478476f6c63d025b">Vesper::ImGuiLayer::OnAttach()</a>, <a class="el" href="class_vesper_1_1_editor_layer.html#af5e79508040b18e9fa455830692f6ed0">Vesper::EditorLayer::OnImGuiRender()</a>, and <a class="el" href="class_sandbox2_d.html#abc796def0880d3ca2dde9a010c4bf70c">Sandbox2D::OnUpdate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="class_vesper_1_1_im_gui_layer.html#ad32cb49bc5bffd27630085d5b273c5ad">Vesper::ImGuiLayer::End()</a>, <a class="el" href="class_vesper_1_1_input.html#a7cfb2f3a5d04a27f1d0c22b0f4e9c09f">Vesper::Input::GetMousePosition()</a>, <a class="el" href="class_vesper_1_1_input.html#aa8b8dff7d2b768ad79b6888fbdbf31ae">Vesper::Input::IsKeyPressed()</a>, <a class="el" href="class_vesper_1_1_input.html#a00b5734fe7e2227aa348e56c3c71a6d2">Vesper::Input::IsMouseButtonPressed()</a>, <a class="el" href="class_vesper_1_1_im_gui_layer.html#aeb2e5a03cd424c37478476f6c63d025b">Vesper::ImGuiLayer::OnAttach()</a>, and <a class="el" href="class_vesper_1_1_editor_layer.html#af5e79508040b18e9fa455830692f6ed0">Vesper::EditorLayer::OnImGuiRender()</a>.</p>
 
 </div>
 </div>
@@ -369,7 +368,7 @@ Static Private Attributes</h2></td></tr>
 <p>Retrieves the application window. </p>
 <div class="fragment"><div class="line"><span class="lineno">   70</span>{ <span class="keywordflow">return</span> *<a class="code hl_variable" href="#ae4194db590b9cab97f767453c2d8b608">m_Window</a>; }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="class_vesper_1_1_im_gui_layer.html#ad32cb49bc5bffd27630085d5b273c5ad">Vesper::ImGuiLayer::End()</a>, <a class="el" href="class_vesper_1_1_input.html#a7cfb2f3a5d04a27f1d0c22b0f4e9c09f">Vesper::Input::GetMousePosition()</a>, <a class="el" href="class_vesper_1_1_input.html#aa8b8dff7d2b768ad79b6888fbdbf31ae">Vesper::Input::IsKeyPressed()</a>, <a class="el" href="class_vesper_1_1_input.html#a00b5734fe7e2227aa348e56c3c71a6d2">Vesper::Input::IsMouseButtonPressed()</a>, and <a class="el" href="class_sandbox2_d.html#abc796def0880d3ca2dde9a010c4bf70c">Sandbox2D::OnUpdate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="class_vesper_1_1_im_gui_layer.html#ad32cb49bc5bffd27630085d5b273c5ad">Vesper::ImGuiLayer::End()</a>, <a class="el" href="class_vesper_1_1_input.html#a7cfb2f3a5d04a27f1d0c22b0f4e9c09f">Vesper::Input::GetMousePosition()</a>, <a class="el" href="class_vesper_1_1_input.html#aa8b8dff7d2b768ad79b6888fbdbf31ae">Vesper::Input::IsKeyPressed()</a>, and <a class="el" href="class_vesper_1_1_input.html#a00b5734fe7e2227aa348e56c3c71a6d2">Vesper::Input::IsMouseButtonPressed()</a>.</p>
 
 </div>
 </div>
@@ -484,7 +483,7 @@ Static Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  129</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><span class="lineno">  130</span>    }</div>
 <div class="ttc" id="aclass_vesper_1_1_application_html_ae86e31eded446d957736b5731045194f"><div class="ttname"><a href="#ae86e31eded446d957736b5731045194f">Vesper::Application::m_Minimized</a></div><div class="ttdeci">bool m_Minimized</div><div class="ttdoc">Flag indicating whether the application is minimized.</div><div class="ttdef"><b>Definition</b> Application.h:85</div></div>
-<div class="ttc" id="aclass_vesper_1_1_renderer_html_a5b83c5f87093d2ec01b48f394710911a"><div class="ttname"><a href="class_vesper_1_1_renderer.html#a5b83c5f87093d2ec01b48f394710911a">Vesper::Renderer::OnWindowResize</a></div><div class="ttdeci">static void OnWindowResize(uint32_t width, uint32_t height)</div><div class="ttdef"><b>Definition</b> Renderer.cpp:20</div></div>
+<div class="ttc" id="aclass_vesper_1_1_renderer_html_a5b83c5f87093d2ec01b48f394710911a"><div class="ttname"><a href="class_vesper_1_1_renderer.html#a5b83c5f87093d2ec01b48f394710911a">Vesper::Renderer::OnWindowResize</a></div><div class="ttdeci">static void OnWindowResize(uint32_t width, uint32_t height)</div><div class="ttdoc">Handles window resize events by resizing the viewport.</div><div class="ttdef"><b>Definition</b> Renderer.cpp:21</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="class_vesper_1_1_window_resize_event.html#a2e1f24a30dfdeb6ae0d83b5e2f00658b">Vesper::WindowResizeEvent::GetHeight()</a>, <a class="el" href="class_vesper_1_1_window_resize_event.html#a9923219babc6305000146a653e04c211">Vesper::WindowResizeEvent::GetWidth()</a>, <a class="el" href="#ae86e31eded446d957736b5731045194f">m_Minimized</a>, and <a class="el" href="class_vesper_1_1_renderer.html#a5b83c5f87093d2ec01b48f394710911a">Vesper::Renderer::OnWindowResize()</a>.</p>
 
@@ -516,7 +515,7 @@ Static Private Attributes</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="class_vesper_1_1_layer.html#ad7b65613ac259383e8ba08f693146cfb">Vesper::Layer::OnAttach()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="class_sandbox_app.html#a3daabbf68fe91bfc7e58f88907909222">SandboxApp::SandboxApp()</a>, and <a class="el" href="class_vesper_1_1_vesper_editor.html#a1a4a2b911669866b7123e1d1536870fb">Vesper::VesperEditor::VesperEditor()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="class_vesper_1_1_vesper_editor.html#a1a4a2b911669866b7123e1d1536870fb">Vesper::VesperEditor::VesperEditor()</a>.</p>
 
 </div>
 </div>
@@ -564,6 +563,9 @@ Static Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Starts the main application loop. </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000007">Todo</a></b></dt><dd><p class="startdd">Add <a class="el" href="class_vesper_1_1_layer.html" title="Represents a reusable application layer that receives lifecycle callbacks (attach,...">Layer</a> rendering into the main loop </p>
+<p class="enddd">Add separate threads for rendering and updating </p>
+</dd></dl>
 <div class="fragment"><div class="line"><span class="lineno">   78</span>    {</div>
 <div class="line"><span class="lineno">   79</span>        <a class="code hl_define" href="_instrumentor_8h.html#aaa03f54db70b44f8decacf111dc1109b">VZ_PROFILE_FUNCTION</a>();</div>
 <div class="line"><span class="lineno">   80</span>        <span class="keywordflow">while</span> (<a class="code hl_variable" href="#a81b932f66c601f9f6e52203a867dc54b">m_Running</a>)</div>
@@ -596,7 +598,7 @@ Static Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  107</span>            }</div>
 <div class="line"><span class="lineno">  108</span>        };</div>
 <div class="line"><span class="lineno">  109</span>    }</div>
-<div class="ttc" id="a_instrumentor_8h_html_ae2376bed374f838d0047cf753f914f31"><div class="ttname"><a href="_instrumentor_8h.html#ae2376bed374f838d0047cf753f914f31">VZ_PROFILE_SCOPE</a></div><div class="ttdeci">#define VZ_PROFILE_SCOPE(name)</div><div class="ttdef"><b>Definition</b> Instrumentor.h:233</div></div>
+<div class="ttc" id="a_instrumentor_8h_html_ae2376bed374f838d0047cf753f914f31"><div class="ttname"><a href="_instrumentor_8h.html#ae2376bed374f838d0047cf753f914f31">VZ_PROFILE_SCOPE</a></div><div class="ttdeci">#define VZ_PROFILE_SCOPE(name)</div><div class="ttdef"><b>Definition</b> Instrumentor.h:239</div></div>
 <div class="ttc" id="aclass_vesper_1_1_application_html_a7174719df952644aaf2056f5f7078648"><div class="ttname"><a href="#a7174719df952644aaf2056f5f7078648">Vesper::Application::m_LastFrameTime</a></div><div class="ttdeci">float m_LastFrameTime</div><div class="ttdoc">Time of the last frame, used for calculating timestep.</div><div class="ttdef"><b>Definition</b> Application.h:89</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="class_vesper_1_1_im_gui_layer.html#a3c11977ad97bff04a2f8cd92eab14032">Vesper::ImGuiLayer::Begin()</a>, <a class="el" href="class_vesper_1_1_im_gui_layer.html#ad32cb49bc5bffd27630085d5b273c5ad">Vesper::ImGuiLayer::End()</a>, <a class="el" href="#a7fba99c6534f6508ec077ad9970c9607">m_ImGuiLayer</a>, <a class="el" href="#a7174719df952644aaf2056f5f7078648">m_LastFrameTime</a>, <a class="el" href="#ae86e31eded446d957736b5731045194f">m_Minimized</a>, and <a class="el" href="#a81b932f66c601f9f6e52203a867dc54b">m_Running</a>.</p>
@@ -752,7 +754,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Initializes the application. </p>
+<p>Scoped pointer to the applications underlying window. </p>
 
 </div>
 </div>

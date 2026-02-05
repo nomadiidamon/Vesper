@@ -173,8 +173,8 @@
 
 boxfont setfont
 1 boundaspect scale
-(Vesper::OpenGLVertexArray) cw
-(Vesper::VertexArray) cw
+(Vesper::OpenGLFramebuffer) cw
+(Vesper::Framebuffer) cw
 /boxwidth boxwidth marginwidth 2 mul add def
 /xspacing boxwidth distx add def
 /yspacing boxheight disty add def
@@ -186,8 +186,8 @@ boundx scalefactor div boundy scalefactor div scale
 
 % ----- classes -----
 
- (Vesper::OpenGLVertexArray) 0.000000 0.000000 box
- (Vesper::VertexArray) 0.000000 1.000000 box
+ (Vesper::OpenGLFramebuffer) 0.000000 0.000000 box
+ (Vesper::Framebuffer) 0.000000 1.000000 box
 
 % ----- relations -----
 

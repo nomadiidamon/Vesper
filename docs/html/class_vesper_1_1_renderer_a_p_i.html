@@ -98,6 +98,9 @@ $(function(){initNavTree('class_vesper_1_1_renderer_a_p_i.html','','class_vesper
 </div><!--header-->
 <div class="contents">
 
+<p>An abstract class defining the interface for a rendering <a class="el" href="#acbef8f1a2c9546387b6513640c5c7995" title="API.">API</a>.  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_renderer_a_p_i_8h_source.html">RendererAPI.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Vesper::RendererAPI:</div>
@@ -105,7 +108,7 @@ Inheritance diagram for Vesper::RendererAPI:</div>
  <div class="center">
   <img src="class_vesper_1_1_renderer_a_p_i.png" usemap="#Vesper_3A_3ARendererAPI_map" alt=""/>
   <map id="Vesper_3A_3ARendererAPI_map" name="Vesper_3A_3ARendererAPI_map">
-<area href="class_vesper_1_1_open_g_l_renderer_a_p_i.html" alt="Vesper::OpenGLRendererAPI" shape="rect" coords="0,56,179,80"/>
+<area href="class_vesper_1_1_open_g_l_renderer_a_p_i.html" title="An implementation of the RendererAPI for OpenGL." alt="Vesper::OpenGLRendererAPI" shape="rect" coords="0,56,179,80"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -114,25 +117,34 @@ Public Types</h2></td></tr>
 <tr class="memitem:acbef8f1a2c9546387b6513640c5c7995" id="r_acbef8f1a2c9546387b6513640c5c7995"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#acbef8f1a2c9546387b6513640c5c7995">API</a> { <a class="el" href="#acbef8f1a2c9546387b6513640c5c7995a6adf97f83acf6453d4a6a4b1070f3754">None</a> = 0
 , <a class="el" href="#acbef8f1a2c9546387b6513640c5c7995a760716b590ee7c0adc25f434f577d8be">OpenGL</a> = 1
  }</td></tr>
+<tr class="memdesc:acbef8f1a2c9546387b6513640c5c7995"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="#acbef8f1a2c9546387b6513640c5c7995" title="API.">API</a>.  <a href="#acbef8f1a2c9546387b6513640c5c7995">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ac8274fc3a9452c6b74248a91ec9af59b" id="r_ac8274fc3a9452c6b74248a91ec9af59b"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="#ac8274fc3a9452c6b74248a91ec9af59b">~RendererAPI</a> ()=default</td></tr>
 <tr class="memitem:a94b14a0678f90992191d78be1489d862" id="r_a94b14a0678f90992191d78be1489d862"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a94b14a0678f90992191d78be1489d862">Init</a> ()=0</td></tr>
+<tr class="memdesc:a94b14a0678f90992191d78be1489d862"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the rendering <a class="el" href="#acbef8f1a2c9546387b6513640c5c7995" title="API.">API</a>.  <br /></td></tr>
 <tr class="memitem:a59233e76e3a9e127ae9b01129864c5df" id="r_a59233e76e3a9e127ae9b01129864c5df"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a59233e76e3a9e127ae9b01129864c5df">SetViewport</a> (uint32_t x, uint32_t y, uint32_t width, uint32_t height)=0</td></tr>
+<tr class="memdesc:a59233e76e3a9e127ae9b01129864c5df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the viewport dimensions.  <br /></td></tr>
 <tr class="memitem:a77ea425a4252e8777e315b980a8e876a" id="r_a77ea425a4252e8777e315b980a8e876a"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a77ea425a4252e8777e315b980a8e876a">SetClearColor</a> (const glm::vec4 &amp;color)=0</td></tr>
+<tr class="memdesc:a77ea425a4252e8777e315b980a8e876a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the clear color for the rendering <a class="el" href="#acbef8f1a2c9546387b6513640c5c7995" title="API.">API</a>.  <br /></td></tr>
 <tr class="memitem:a8e633cb5d429ef82bf82a97f75f08352" id="r_a8e633cb5d429ef82bf82a97f75f08352"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a8e633cb5d429ef82bf82a97f75f08352">Clear</a> ()=0</td></tr>
+<tr class="memdesc:a8e633cb5d429ef82bf82a97f75f08352"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears the rendering buffers.  <br /></td></tr>
 <tr class="memitem:a1e510c012bf161bd73429c428492ddfe" id="r_a1e510c012bf161bd73429c428492ddfe"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a1e510c012bf161bd73429c428492ddfe">DrawIndexed</a> (const <a class="el" href="namespace_vesper.html#ad1f51d7e944b5e23b18b12cacd5f0d27">Ref</a>&lt; <a class="el" href="class_vesper_1_1_vertex_array.html">VertexArray</a> &gt; &amp;vertexArray, uint32_t indexCount=0)=0</td></tr>
+<tr class="memdesc:a1e510c012bf161bd73429c428492ddfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws indexed geometry using the provided vertex array.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:ad6aac6c7aa5c6ed6d5148bdc227fbc16" id="r_ad6aac6c7aa5c6ed6d5148bdc227fbc16"><td class="memItemLeft">static <a class="el" href="#acbef8f1a2c9546387b6513640c5c7995">API</a>&#160;</td><td class="memItemRight"><a class="el" href="#ad6aac6c7aa5c6ed6d5148bdc227fbc16">GetAPI</a> ()</td></tr>
+<tr class="memdesc:ad6aac6c7aa5c6ed6d5148bdc227fbc16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current rendering <a class="el" href="#acbef8f1a2c9546387b6513640c5c7995" title="API.">API</a>.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pri-static-attribs" class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
 Static Private Attributes</h2></td></tr>
 <tr class="memitem:a14de516dbca6803aa4dc9f743be3635e" id="r_a14de516dbca6803aa4dc9f743be3635e"><td class="memItemLeft">static <a class="el" href="#acbef8f1a2c9546387b6513640c5c7995">API</a>&#160;</td><td class="memItemRight"><a class="el" href="#a14de516dbca6803aa4dc9f743be3635e">s_API</a> = <a class="el" href="#acbef8f1a2c9546387b6513640c5c7995a760716b590ee7c0adc25f434f577d8be">RendererAPI::API::OpenGL</a></td></tr>
 </table>
-<a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Member Enumeration Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>An abstract class defining the interface for a rendering <a class="el" href="#acbef8f1a2c9546387b6513640c5c7995" title="API.">API</a>. </p>
+</div><a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Member Enumeration Documentation</h2>
 <a id="acbef8f1a2c9546387b6513640c5c7995" name="acbef8f1a2c9546387b6513640c5c7995"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acbef8f1a2c9546387b6513640c5c7995">&#9670;&#160;</a></span>API</h2>
 
@@ -152,15 +164,17 @@ Static Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p><a class="el" href="#acbef8f1a2c9546387b6513640c5c7995" title="API.">API</a>. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="acbef8f1a2c9546387b6513640c5c7995a6adf97f83acf6453d4a6a4b1070f3754" name="acbef8f1a2c9546387b6513640c5c7995a6adf97f83acf6453d4a6a4b1070f3754"></a>None&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="acbef8f1a2c9546387b6513640c5c7995a760716b590ee7c0adc25f434f577d8be" name="acbef8f1a2c9546387b6513640c5c7995a760716b590ee7c0adc25f434f577d8be"></a>OpenGL&#160;</td><td class="fielddoc"></td></tr>
 </table>
-<div class="fragment"><div class="line"><span class="lineno">   11</span>                       {</div>
-<div class="line"><span class="lineno">   12</span>            <a class="code hl_enumvalue" href="namespace_vesper.html#ad79da63be4419c3a218acaa990decabea5af280140310d5b7f04b47a0c0a49f9f">None</a> = 0,</div>
-<div class="line"><span class="lineno">   13</span>            OpenGL = 1,</div>
-<div class="line"><span class="lineno">   14</span>        };</div>
-<div class="ttc" id="anamespace_vesper_html_ad79da63be4419c3a218acaa990decabea5af280140310d5b7f04b47a0c0a49f9f"><div class="ttname"><a href="namespace_vesper.html#ad79da63be4419c3a218acaa990decabea5af280140310d5b7f04b47a0c0a49f9f">Vesper::None</a></div><div class="ttdeci">@ None</div><div class="ttdef"><b>Definition</b> Event.h:21</div></div>
+<div class="fragment"><div class="line"><span class="lineno">   14</span>                       {</div>
+<div class="line"><span class="lineno">   15</span>            <a class="code hl_enumvalue" href="namespace_vesper.html#ad79da63be4419c3a218acaa990decabea5af280140310d5b7f04b47a0c0a49f9f">None</a> = 0,</div>
+<div class="line"><span class="lineno">   16</span>            OpenGL = 1,</div>
+<div class="line"><span class="lineno">   17</span>        };</div>
+<div class="ttc" id="anamespace_vesper_html_ad79da63be4419c3a218acaa990decabea5af280140310d5b7f04b47a0c0a49f9f"><div class="ttname"><a href="namespace_vesper.html#ad79da63be4419c3a218acaa990decabea5af280140310d5b7f04b47a0c0a49f9f">Vesper::None</a></div><div class="ttdeci">@ None</div><div class="ttdef"><b>Definition</b> Event.h:25</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -214,6 +228,8 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Clears the rendering buffers. </p>
+
 <p>Implemented in <a class="el" href="class_vesper_1_1_open_g_l_renderer_a_p_i.html#ac09d1fd8859e2bfe3ed4b3d766028390">Vesper::OpenGLRendererAPI</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="class_vesper_1_1_render_command.html#ad9c66d6d71de59383f6717b2b24bd1d4">Vesper::RenderCommand::Clear()</a>.</p>
@@ -247,6 +263,8 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Draws indexed geometry using the provided vertex array. </p>
+
 <p>Implemented in <a class="el" href="class_vesper_1_1_open_g_l_renderer_a_p_i.html#aa4e2df971cce39def4fde8c540f5b255">Vesper::OpenGLRendererAPI</a>.</p>
 
 </div>
@@ -273,8 +291,10 @@ Static Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   25</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a14de516dbca6803aa4dc9f743be3635e">s_API</a>; }</div>
-<div class="ttc" id="aclass_vesper_1_1_renderer_a_p_i_html_a14de516dbca6803aa4dc9f743be3635e"><div class="ttname"><a href="#a14de516dbca6803aa4dc9f743be3635e">Vesper::RendererAPI::s_API</a></div><div class="ttdeci">static API s_API</div><div class="ttdef"><b>Definition</b> RendererAPI.h:27</div></div>
+
+<p>Returns the current rendering <a class="el" href="#acbef8f1a2c9546387b6513640c5c7995" title="API.">API</a>. </p>
+<div class="fragment"><div class="line"><span class="lineno">   34</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a14de516dbca6803aa4dc9f743be3635e">s_API</a>; }</div>
+<div class="ttc" id="aclass_vesper_1_1_renderer_a_p_i_html_a14de516dbca6803aa4dc9f743be3635e"><div class="ttname"><a href="#a14de516dbca6803aa4dc9f743be3635e">Vesper::RendererAPI::s_API</a></div><div class="ttdeci">static API s_API</div><div class="ttdef"><b>Definition</b> RendererAPI.h:36</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a14de516dbca6803aa4dc9f743be3635e">s_API</a>.</p>
 
@@ -305,6 +325,8 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Initializes the rendering <a class="el" href="#acbef8f1a2c9546387b6513640c5c7995" title="API.">API</a>. </p>
+
 <p>Implemented in <a class="el" href="class_vesper_1_1_open_g_l_renderer_a_p_i.html#a0a5d34c4c9277ce6c939d479be08231f">Vesper::OpenGLRendererAPI</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="class_vesper_1_1_render_command.html#aedc33f5de25202004b79a4fa0e090919">Vesper::RenderCommand::Init()</a>.</p>
@@ -333,6 +355,8 @@ Static Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Sets the clear color for the rendering <a class="el" href="#acbef8f1a2c9546387b6513640c5c7995" title="API.">API</a>. </p>
 
 <p>Implemented in <a class="el" href="class_vesper_1_1_open_g_l_renderer_a_p_i.html#a726d977f8a6de4b97c4c5c715f78e701">Vesper::OpenGLRendererAPI</a>.</p>
 
@@ -374,6 +398,8 @@ Static Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Sets the viewport dimensions. </p>
 
 <p>Implemented in <a class="el" href="class_vesper_1_1_open_g_l_renderer_a_p_i.html#a72b5690fec9e67b74768ac4a3495ce7b">Vesper::OpenGLRendererAPI</a>.</p>
 

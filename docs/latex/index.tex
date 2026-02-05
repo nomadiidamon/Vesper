@@ -1,7 +1,7 @@
 \chapter{Vesper }
 \hypertarget{index}{}\label{index}\index{Vesper@{Vesper}}
-\label{index_md__r_e_a_d_m_e}%
-\Hypertarget{index_md__r_e_a_d_m_e}%
+\label{index_md_docs_2_r_e_a_d_m_e}%
+\Hypertarget{index_md_docs_2_r_e_a_d_m_e}%
 
 
 \doxylink{namespace_vesper}{Vesper} is a lightweight 2D/\+3D engine and editor inspired by The\+Cherno\textquotesingle{}s Game Engine Architecture series for the Hazel engine. ~\newline
@@ -19,12 +19,10 @@ But rather an application to create a range of visual effects and particle syste
 
 \begin{DoxyItemize}
 \item Language:\+ C++17
-\item Primary IDE:\+ Visual Studio 2022
-\item Platforms:\+ Windows (Visual Studio solution \& VCXPROJ files provided)
+\item Platforms:\+ Windows
 \begin{DoxyItemize}
 \item Planned:\+ Linux, mac\+OS
 \end{DoxyItemize}
-\item Build system:\+ Premake5
 \item Third-\/party libraries:\+
 \begin{DoxyItemize}
 \item entt (entity-\/component system)
@@ -43,58 +41,7 @@ But rather an application to create a range of visual effects and particle syste
 \item Input and event handling
 \item Starter particle system and instrumentation
 \end{DoxyItemize}
-\end{DoxyItemize}\hypertarget{index_autotoc_md2}{}\doxysection{\texorpdfstring{Repository layout (high level)}{Repository layout (high level)}}\label{index_autotoc_md2}
-
-\begin{DoxyItemize}
-\item {\ttfamily Vesper/\+} — Engine source (core, renderer, scene, editor integration)
-\begin{DoxyItemize}
-\item {\ttfamily src/\+\+Vesper} — engine code
-\item {\ttfamily vendor/\+} — third-\/party libs (GLFW, Glad, Im\+Gui)
-\end{DoxyItemize}
-\item {\ttfamily Vesper-\/\+Editor/\+} — Editor build that hosts engine in an editor UI
-\item {\ttfamily Sandbox/\+} — Example application(s) that use the engine
-\item {\ttfamily \doxylink{_r_e_a_d_m_e_8md}{README.\+md}}, {\ttfamily LICENSE-\/\+Hazel\+\_\+\+Apache2.\+txt} — repo metadata and licensing
-\end{DoxyItemize}
-
-Notable engine files:\+
-\begin{DoxyItemize}
-\item {\ttfamily \doxylink{_vesper_8h}{Vesper/\+src/\+\+Vesper.\+h}} — single include for engine public API
-\item {\ttfamily Vesper/\+src/\+\+Vesper/\+\+Scene/\+\texorpdfstring{$\ast$}{*}} — Scene, Entity, Components, Camera
-\item {\ttfamily Vesper-\/\+Editor/\+src/\+\+Editor\+Layer.\texorpdfstring{$\ast$}{*}} — Editor integration layer and UI panels
-\end{DoxyItemize}\hypertarget{index_autotoc_md3}{}\doxysection{\texorpdfstring{Getting started (clone + third-\/party libs)}{Getting started (clone + third-\/party libs)}}\label{index_autotoc_md3}
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{git\ clone\ -\/-\/recursive\ https://github.com/nomadiidamon/Vesper\ <desiredLocation>}
-
-\end{DoxyCode}
-\hypertarget{index_autotoc_md4}{}\doxysection{\texorpdfstring{Build (Visual Studio 2022)}{Build (Visual Studio 2022)}}\label{index_autotoc_md4}
-
-\begin{DoxyEnumerate}
-\item Run the \textquotesingle{}Win-\/\+Gen\+Projects.\+bat\textquotesingle{} script from the repository root \textquotesingle{}Vesper/\+scripts/\+\+Win-\/\+Gen\+Projects.\+bat\textquotesingle{} to generate the Visual Studio solution file ({\ttfamily .sln}).
-\begin{DoxyItemize}
-\item This runs Premake5 which is located in \textquotesingle{}Vesper/\+\+Vendor/\+bin/\+premake\textquotesingle{}.
-\end{DoxyItemize}
-\item Open the solution in Visual Studio 2022.
-\item Select the desired configuration (e.\+g. {\ttfamily Debug} or {\ttfamily Release}) and platform ({\ttfamily x64}).
-\item Right-\/click the project you want to run ({\ttfamily Vesper-\/\+Editor} or {\ttfamily Sandbox}) and choose {\bfseries{Set as Startup Project}}.
-\item Build and run (F5).
-\end{DoxyEnumerate}
-
-Troubleshooting:\+
-\begin{DoxyItemize}
-\item Ensure the Windows SDK and Visual C++ toolset for VS2022 are installed.
-\item If include or linker errors appear, confirm vendor project builds (GLFW, Glad, Im\+Gui, etc.) and that project dependencies are set correctly.
-\item For unresolved externals, confirm platform (x86/\+x64) consistency across projects.
-\end{DoxyItemize}\hypertarget{index_autotoc_md5}{}\doxysection{\texorpdfstring{Run the editor or sandbox}{Run the editor or sandbox}}\label{index_autotoc_md5}
-
-\begin{DoxyItemize}
-\item Start the editor by launching the {\ttfamily Vesper-\/\+Editor} startup project.
-\item Use the {\ttfamily Sandbox} project to iterate small demos that use the engine API.
-\begin{DoxyItemize}
-\item Modify or add new demo source files in the {\ttfamily Sandbox/\+src} folder.
-\end{DoxyItemize}
-\item Create new projects that link against the \doxylink{namespace_vesper}{Vesper} engine.
-\end{DoxyItemize}\hypertarget{index_autotoc_md6}{}\doxysection{\texorpdfstring{New Project example code}{New Project example code}}\label{index_autotoc_md6}
+\end{DoxyItemize}\hypertarget{index_autotoc_md2}{}\doxysection{\texorpdfstring{New Project example code}{New Project example code}}\label{index_autotoc_md2}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\textcolor{preprocessor}{\#include\ <\doxymbox{\hyperlink{_vesper_8h}{Vesper.h}}>}}
@@ -102,15 +49,15 @@ Troubleshooting:\+
 \DoxyCodeLine{}
 \DoxyCodeLine{\textcolor{preprocessor}{\#include\ "{}imgui/imgui.h"{}}}
 \DoxyCodeLine{}
-\DoxyCodeLine{\textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_example_layer}{ExampleLayer}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_vesper_1_1_layer}{Vesper::Layer}}}
+\DoxyCodeLine{\textcolor{keyword}{class\ }ExampleLayer\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_vesper_1_1_layer}{Vesper::Layer}}}
 \DoxyCodeLine{\{}
 \DoxyCodeLine{\textcolor{keyword}{public}:}
-\DoxyCodeLine{\ \ \ \ \doxymbox{\hyperlink{class_example_layer_a199ad822f707990b69e998a9ed7df5bb}{ExampleLayer}}()}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_vesper_1_1_layer_aa2fadd42504c70ef28da27b724d276c7}{Layer}}(\textcolor{stringliteral}{"{}ExampleLayer"{}})}
+\DoxyCodeLine{\ \ \ \ ExampleLayer()}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ :\ Layer(\textcolor{stringliteral}{"{}ExampleLayer"{}})}
 \DoxyCodeLine{\ \ \ \ \{}
 \DoxyCodeLine{\ \ \ \ \}}
 \DoxyCodeLine{}
-\DoxyCodeLine{\ \ \ \ \doxymbox{\hyperlink{class_example_layer_a199ad822f707990b69e998a9ed7df5bb}{\string~ExampleLayer}}()\ \textcolor{keyword}{override}\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{\ \ \ \ \string~ExampleLayer()\ \textcolor{keyword}{override}\ =\ \textcolor{keywordflow}{default};}
 \DoxyCodeLine{}
 \DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Called\ once\ when\ the\ layer\ is\ attached\ to\ the\ layer\ stack}}
 \DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_layer_ad7b65613ac259383e8ba08f693146cfb}{OnAttach}}()\textcolor{keyword}{\ override\ }\{\}}
@@ -119,17 +66,17 @@ Troubleshooting:\+
 \DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_layer_a2da0563f0eeab4fc610c1e10206bc6cb}{OnDetach}}()\textcolor{keyword}{\ override\ }\{\}}
 \DoxyCodeLine{}
 \DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Called\ every\ frame\ with\ the\ frame\ time}}
-\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_example_layer_a7753e915b8fdb4b1aa1109aca4c84131}{OnUpdate}}(Vesper::Timestep\ ts)\textcolor{keyword}{\ override\ }\{\}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_layer_a5403125ae4cb201a6d9cbbacef0480ec}{OnUpdate}}(Vesper::Timestep\ ts)\textcolor{keyword}{\ override\ }\{\}}
 \DoxyCodeLine{}
 \DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Render\ ImGui\ UI\ for\ this\ layer\ (optional)}}
-\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_example_layer_a29e9c1f5c9366b6c1469bfceba17f569}{OnImGuiRender}}()\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_layer_a64c4c255062db2abaf9ca79a84d417fd}{OnImGuiRender}}()\textcolor{keyword}{\ override\ }\{}
 \DoxyCodeLine{\ \ \ \ \ \ \ \ ImGui::Begin(\textcolor{stringliteral}{"{}Example\ Layer"{}});}
 \DoxyCodeLine{\ \ \ \ \ \ \ \ ImGui::Text(\textcolor{stringliteral}{"{}Hello\ from\ ExampleLayer!"{}});}
 \DoxyCodeLine{\ \ \ \ \ \ \ \ ImGui::End();}
 \DoxyCodeLine{\ \ \ \ \}}
 \DoxyCodeLine{}
 \DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Receive\ events\ (keyboard/mouse/window/etc.)}}
-\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_example_layer_a8f998c71dfeb68383cb5c809485815b1}{OnEvent}}(Vesper::Event\&\ e)\textcolor{keyword}{\ override\ }\{\}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_layer_a158ddf9f38a429b2f9713e8741e8be07}{OnEvent}}(Vesper::Event\&\ e)\textcolor{keyword}{\ override\ }\{\}}
 \DoxyCodeLine{\};}
 \DoxyCodeLine{}
 \DoxyCodeLine{\textcolor{keyword}{class\ }YourAppNameHere\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_vesper_1_1_application}{Vesper::Application}}}
@@ -143,33 +90,9 @@ Troubleshooting:\+
 \DoxyCodeLine{\ \ \ \ \string~YourAppNameHere()\ \{\ \ \ \ \}}
 \DoxyCodeLine{\};}
 \DoxyCodeLine{}
-\DoxyCodeLine{\doxymbox{\hyperlink{class_vesper_1_1_application}{Vesper::Application}}*\ \doxymbox{\hyperlink{namespace_vesper_ad515973d88dbc403525505f804b420e4}{Vesper::CreateApplication}}()\ \{}
+\DoxyCodeLine{\doxymbox{\hyperlink{class_vesper_1_1_application}{Vesper::Application}}*\ \doxymbox{\hyperlink{namespace_vesper_a43e1ca989eabb42f3b23b79517ff1a65}{Vesper::CreateApplication}}()\ \{}
 \DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ YourAppNameHere();}
 \DoxyCodeLine{\}}
 
 \end{DoxyCode}
-\hypertarget{index_autotoc_md7}{}\doxysection{\texorpdfstring{Documentation}{Documentation}}\label{index_autotoc_md7}
-Documentation for this project was auto generated using Doxygen version 1.\+16.\+1 and can be found at the following:\+ \href{https://nomadiidamon.github.io/Vesper/}{\texttt{https:\+/\+/\+nomadiidamon.\+github.\+io/\+\+Vesper/\+}}\hypertarget{index_autotoc_md8}{}\doxysection{\texorpdfstring{Contributing}{Contributing}}\label{index_autotoc_md8}
-Please open issues or pull requests.\hypertarget{index_autotoc_md9}{}\doxysection{\texorpdfstring{Notes /\+ TODO}{Notes /\+ TODO}}\label{index_autotoc_md9}
-
-\begin{DoxyItemize}
-\item Pin third-\/party dependency versions and document them.
-\item Add a {\ttfamily CONTRIBUTING.\+md} with coding standards, branch workflow, and required checks (formatting, tests).
-\end{DoxyItemize}\hypertarget{index_autotoc_md10}{}\doxysection{\texorpdfstring{Licensing}{Licensing}}\label{index_autotoc_md10}
-\begin{quote}
-{\bfseries{License status:\+}} Proprietary (subject to change) \end{quote}
-
-
-\doxylink{namespace_vesper}{Vesper} itself is not {\bfseries{currently}} released under any specific license and is provided as-\/is. Copyright © 2025 by Damon S. Green II (nomad\+\_\+ii\+\_\+damon). All rights reserved unless otherwise stated.
-
-This project contains code derived from the Hazel Engine by The\+Cherno, licensed under the Apache License 2.\+0, obtained through public tutorialization and source code access.
-
-Original Hazel code and derivative works thereof are licensed under the Apache License 2.\+0. Other original code in this repository is Copyright © 2025 Damon S. Green II (nomad\+\_\+ii\+\_\+damon).
-
-See the LICENSE file for details.\hypertarget{index_autotoc_md11}{}\doxysubsubsection{\texorpdfstring{Fully-\/\+Modified File Header for Licensing}{Fully-\/\+Modified File Header for Licensing}}\label{index_autotoc_md11}
-Copyright © The\+Cherno Modifications Copyright © 2025 Damon S. Green II (nomad\+\_\+ii\+\_\+damon)
-
-Licensed under the Apache License, Version 2.\+0 (the "{}\+License"{}); you may not use this file except in compliance with the License. You may obtain a copy of the License at \begin{DoxyVerb}[Apache](http://www.apache.org/licenses/LICENSE-2.0)
-\end{DoxyVerb}
-\hypertarget{index_autotoc_md12}{}\doxysubsubsection{\texorpdfstring{Modified File Header for Licensing}{Modified File Header for Licensing}}\label{index_autotoc_md12}
-Based on Hazel Engine (Apache 2.\+0) Modified by Damon S. Green II, 2025 
+ 

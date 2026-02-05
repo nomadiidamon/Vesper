@@ -98,24 +98,35 @@ $(function(){initNavTree('class_vesper_1_1_sub_texture2_d.html','','class_vesper
 </div><!--header-->
 <div class="contents">
 
+<p>Represents a sub-region of a 2D texture, useful for sprite sheets.  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_sub_texture2_d_8h_source.html">SubTexture2D.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a69eaedd3ad73c51df02e75f9895102df" id="r_a69eaedd3ad73c51df02e75f9895102df"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a69eaedd3ad73c51df02e75f9895102df">SubTexture2D</a> (const <a class="el" href="namespace_vesper.html#ad1f51d7e944b5e23b18b12cacd5f0d27">Ref</a>&lt; <a class="el" href="class_vesper_1_1_texture2_d.html">Texture2D</a> &gt; &amp;texture, const glm::vec2 &amp;min, const glm::vec2 &amp;max)</td></tr>
+<tr class="memdesc:a69eaedd3ad73c51df02e75f9895102df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="class_vesper_1_1_sub_texture2_d.html" title="Represents a sub-region of a 2D texture, useful for sprite sheets.">SubTexture2D</a> from the given texture and texture coordinates.  <br /></td></tr>
 <tr class="memitem:a4f660d4b031fd84e4208a0c1c999ea58" id="r_a4f660d4b031fd84e4208a0c1c999ea58"><td class="memItemLeft">const <a class="el" href="namespace_vesper.html#ad1f51d7e944b5e23b18b12cacd5f0d27">Ref</a>&lt; <a class="el" href="class_vesper_1_1_texture2_d.html">Texture2D</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a4f660d4b031fd84e4208a0c1c999ea58">GetTexture</a> ()</td></tr>
+<tr class="memdesc:a4f660d4b031fd84e4208a0c1c999ea58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the underlying texture of the sub-texture.  <br /></td></tr>
 <tr class="memitem:aa07f55a33383360161371fb7c78f196f" id="r_aa07f55a33383360161371fb7c78f196f"><td class="memItemLeft">glm::vec2 *&#160;</td><td class="memItemRight"><a class="el" href="#aa07f55a33383360161371fb7c78f196f">GetTexCoords</a> ()</td></tr>
+<tr class="memdesc:aa07f55a33383360161371fb7c78f196f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the texture coordinates of the sub-texture.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:acaf4be5d42185bb62a8be95c4c15bc18" id="r_acaf4be5d42185bb62a8be95c4c15bc18"><td class="memItemLeft">static <a class="el" href="namespace_vesper.html#ad1f51d7e944b5e23b18b12cacd5f0d27">Ref</a>&lt; <a class="el" href="#a69eaedd3ad73c51df02e75f9895102df">SubTexture2D</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#acaf4be5d42185bb62a8be95c4c15bc18">CreateFromCoords</a> (const <a class="el" href="namespace_vesper.html#ad1f51d7e944b5e23b18b12cacd5f0d27">Ref</a>&lt; <a class="el" href="class_vesper_1_1_texture2_d.html">Texture2D</a> &gt; &amp;texture, const glm::vec2 &amp;coords, const glm::vec2 &amp;cellSize, const glm::vec2 &amp;spriteSize={1, 1})</td></tr>
+<tr class="memdesc:acaf4be5d42185bb62a8be95c4c15bc18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="class_vesper_1_1_sub_texture2_d.html" title="Represents a sub-region of a 2D texture, useful for sprite sheets.">SubTexture2D</a> from a grid of cells within the given texture.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a224e8c4bb1be39eb457729eea81fd652" id="r_a224e8c4bb1be39eb457729eea81fd652"><td class="memItemLeft"><a class="el" href="namespace_vesper.html#ad1f51d7e944b5e23b18b12cacd5f0d27">Ref</a>&lt; <a class="el" href="class_vesper_1_1_texture2_d.html">Texture2D</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a224e8c4bb1be39eb457729eea81fd652">m_Texture</a></td></tr>
+<tr class="memdesc:a224e8c4bb1be39eb457729eea81fd652"><td class="mdescLeft">&#160;</td><td class="mdescRight">The underlying texture of the sub-texture.  <br /></td></tr>
 <tr class="memitem:ac727b38ab6373c82ff5ac0ed800a4a1b" id="r_ac727b38ab6373c82ff5ac0ed800a4a1b"><td class="memItemLeft">glm::vec2&#160;</td><td class="memItemRight"><a class="el" href="#ac727b38ab6373c82ff5ac0ed800a4a1b">m_TexCoords</a> [4]</td></tr>
+<tr class="memdesc:ac727b38ab6373c82ff5ac0ed800a4a1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The texture coordinates of the sub-texture.  <br /></td></tr>
 </table>
-<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Represents a sub-region of a 2D texture, useful for sprite sheets. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a69eaedd3ad73c51df02e75f9895102df" name="a69eaedd3ad73c51df02e75f9895102df"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a69eaedd3ad73c51df02e75f9895102df">&#9670;&#160;</a></span>SubTexture2D()</h2>
 
@@ -139,6 +150,16 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Constructs a <a class="el" href="class_vesper_1_1_sub_texture2_d.html" title="Represents a sub-region of a 2D texture, useful for sprite sheets.">SubTexture2D</a> from the given texture and texture coordinates. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">texture</td><td>The texture from which the sub-texture is derived. </td></tr>
+    <tr><td class="paramname">min</td><td>The minimum texture coordinates (bottom-left). </td></tr>
+    <tr><td class="paramname">max</td><td>The maximum texture coordinates (top-right). </td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="fragment"><div class="line"><span class="lineno">    9</span>        : <a class="code hl_variable" href="#a224e8c4bb1be39eb457729eea81fd652">m_Texture</a>(texture)</div>
 <div class="line"><span class="lineno">   10</span>    {</div>
 <div class="line"><span class="lineno">   11</span>        <a class="code hl_variable" href="#ac727b38ab6373c82ff5ac0ed800a4a1b">m_TexCoords</a>[0] = { min.x, min.y };</div>
@@ -146,8 +167,8 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   13</span>        <a class="code hl_variable" href="#ac727b38ab6373c82ff5ac0ed800a4a1b">m_TexCoords</a>[2] = { max.x, max.y };</div>
 <div class="line"><span class="lineno">   14</span>        <a class="code hl_variable" href="#ac727b38ab6373c82ff5ac0ed800a4a1b">m_TexCoords</a>[3] = { min.x, max.y };</div>
 <div class="line"><span class="lineno">   15</span>    }</div>
-<div class="ttc" id="aclass_vesper_1_1_sub_texture2_d_html_a224e8c4bb1be39eb457729eea81fd652"><div class="ttname"><a href="#a224e8c4bb1be39eb457729eea81fd652">Vesper::SubTexture2D::m_Texture</a></div><div class="ttdeci">Ref&lt; Texture2D &gt; m_Texture</div><div class="ttdef"><b>Definition</b> SubTexture2D.h:20</div></div>
-<div class="ttc" id="aclass_vesper_1_1_sub_texture2_d_html_ac727b38ab6373c82ff5ac0ed800a4a1b"><div class="ttname"><a href="#ac727b38ab6373c82ff5ac0ed800a4a1b">Vesper::SubTexture2D::m_TexCoords</a></div><div class="ttdeci">glm::vec2 m_TexCoords[4]</div><div class="ttdef"><b>Definition</b> SubTexture2D.h:21</div></div>
+<div class="ttc" id="aclass_vesper_1_1_sub_texture2_d_html_a224e8c4bb1be39eb457729eea81fd652"><div class="ttname"><a href="#a224e8c4bb1be39eb457729eea81fd652">Vesper::SubTexture2D::m_Texture</a></div><div class="ttdeci">Ref&lt; Texture2D &gt; m_Texture</div><div class="ttdoc">The underlying texture of the sub-texture.</div><div class="ttdef"><b>Definition</b> SubTexture2D.h:36</div></div>
+<div class="ttc" id="aclass_vesper_1_1_sub_texture2_d_html_ac727b38ab6373c82ff5ac0ed800a4a1b"><div class="ttname"><a href="#ac727b38ab6373c82ff5ac0ed800a4a1b">Vesper::SubTexture2D::m_TexCoords</a></div><div class="ttdeci">glm::vec2 m_TexCoords[4]</div><div class="ttdoc">The texture coordinates of the sub-texture.</div><div class="ttdef"><b>Definition</b> SubTexture2D.h:38</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a69eaedd3ad73c51df02e75f9895102df">SubTexture2D()</a>.</p>
 
@@ -192,13 +213,24 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Creates a <a class="el" href="class_vesper_1_1_sub_texture2_d.html" title="Represents a sub-region of a 2D texture, useful for sprite sheets.">SubTexture2D</a> from a grid of cells within the given texture. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">texture</td><td>The texture from which the sub-texture is derived. </td></tr>
+    <tr><td class="paramname">coords</td><td>The coordinates of the cell in the grid. </td></tr>
+    <tr><td class="paramname">cellSize</td><td>The size of each cell in the grid. </td></tr>
+    <tr><td class="paramname">spriteSize</td><td>The size of the sprite in cells (default is 1x1). </td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="fragment"><div class="line"><span class="lineno">   18</span>    {</div>
 <div class="line"><span class="lineno">   19</span>        glm::vec2 min = { (coords.x * cellSize.x) / texture-&gt;GetWidth(), (coords.y * cellSize.y) / texture-&gt;GetHeight() };</div>
 <div class="line"><span class="lineno">   20</span>        glm::vec2 max = { ((coords.x + spriteSize.x) * cellSize.x) / texture-&gt;GetWidth(), ((coords.y + spriteSize.y) * cellSize.y) / texture-&gt;GetHeight() };</div>
 <div class="line"><span class="lineno">   21</span> </div>
 <div class="line"><span class="lineno">   22</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="namespace_vesper.html#a313930b55375b2f4dd36375b56f11047">CreateRef&lt;SubTexture2D&gt;</a>(texture, min, max);</div>
 <div class="line"><span class="lineno">   23</span>    }</div>
-<div class="ttc" id="anamespace_vesper_html_a313930b55375b2f4dd36375b56f11047"><div class="ttname"><a href="namespace_vesper.html#a313930b55375b2f4dd36375b56f11047">Vesper::CreateRef</a></div><div class="ttdeci">constexpr Ref&lt; T &gt; CreateRef(Args &amp;&amp;... args)</div><div class="ttdef"><b>Definition</b> Defines_Macros.h:23</div></div>
+<div class="ttc" id="anamespace_vesper_html_a313930b55375b2f4dd36375b56f11047"><div class="ttname"><a href="namespace_vesper.html#a313930b55375b2f4dd36375b56f11047">Vesper::CreateRef</a></div><div class="ttdeci">constexpr Ref&lt; T &gt; CreateRef(Args &amp;&amp;... args)</div><div class="ttdoc">Creates a Ref (shared_ptr) for the given type and constructor arguments.</div><div class="ttdef"><b>Definition</b> Defines_Macros.h:72</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -224,7 +256,9 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   16</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#ac727b38ab6373c82ff5ac0ed800a4a1b">m_TexCoords</a>; }</div>
+
+<p>Returns the texture coordinates of the sub-texture. </p>
+<div class="fragment"><div class="line"><span class="lineno">   25</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#ac727b38ab6373c82ff5ac0ed800a4a1b">m_TexCoords</a>; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -250,7 +284,9 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   15</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a224e8c4bb1be39eb457729eea81fd652">m_Texture</a>; }</div>
+
+<p>Returns the underlying texture of the sub-texture. </p>
+<div class="fragment"><div class="line"><span class="lineno">   23</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a224e8c4bb1be39eb457729eea81fd652">m_Texture</a>; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -275,6 +311,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>The texture coordinates of the sub-texture. </p>
+
 </div>
 </div>
 <a id="a224e8c4bb1be39eb457729eea81fd652" name="a224e8c4bb1be39eb457729eea81fd652"></a>
@@ -296,6 +334,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>The underlying texture of the sub-texture. </p>
 
 </div>
 </div>

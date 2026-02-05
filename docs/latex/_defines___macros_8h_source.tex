@@ -3,32 +3,81 @@
 \doxymbox{\hyperlink{_defines___macros_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{pragma}\ \textcolor{preprocessor}{once}}
-\DoxyCodeLine{00002\ }
-\DoxyCodeLine{00003\ \textcolor{comment}{///\ DEFINES}}
-\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{BIT}\textcolor{preprocessor}{(}\textcolor{preprocessor}{x}\textcolor{preprocessor}{)}\ \textcolor{preprocessor}{(}1\ \textcolor{preprocessor}{<<}\ \textcolor{preprocessor}{x}\textcolor{preprocessor}{)}}
-\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{VZ\_BIND\_EVENT\_FN}\textcolor{preprocessor}{(}\textcolor{preprocessor}{fn}\textcolor{preprocessor}{)}\ \textcolor{preprocessor}{[}\textcolor{keyword}{this}\textcolor{preprocessor}{]}\textcolor{preprocessor}{(}\textcolor{keyword}{auto}\textcolor{preprocessor}{\&\&}\textcolor{preprocessor}{...}\ \textcolor{preprocessor}{args}\textcolor{preprocessor}{)}\ \textcolor{preprocessor}{-\/>}\ \textcolor{keyword}{decltype}\textcolor{preprocessor}{(}\textcolor{keyword}{auto}\textcolor{preprocessor}{)}\ \textcolor{preprocessor}{\{}\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{this}\textcolor{preprocessor}{-\/>}\textcolor{preprocessor}{fn}\textcolor{preprocessor}{(}\textcolor{preprocessor}{std}\textcolor{preprocessor}{::}\textcolor{preprocessor}{forward}\textcolor{preprocessor}{<}\textcolor{keyword}{decltype}\textcolor{preprocessor}{(}\textcolor{preprocessor}{args}\textcolor{preprocessor}{)}\textcolor{preprocessor}{>}\textcolor{preprocessor}{(}\textcolor{preprocessor}{args}\textcolor{preprocessor}{)}\textcolor{preprocessor}{...}\textcolor{preprocessor}{)}\textcolor{preprocessor}{;}\ \textcolor{preprocessor}{\}}}
-\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{BIND\_EVENT\_FN}\textcolor{preprocessor}{(}\textcolor{preprocessor}{x}\textcolor{preprocessor}{)}\ \textcolor{preprocessor}{std}\textcolor{preprocessor}{::}\textcolor{preprocessor}{bind}\textcolor{preprocessor}{(}\textcolor{preprocessor}{\&}\textcolor{preprocessor}{Application}\textcolor{preprocessor}{::}\textcolor{preprocessor}{x}\textcolor{preprocessor}{,}\ \textcolor{keyword}{this}\textcolor{preprocessor}{,}\ \textcolor{preprocessor}{std}\textcolor{preprocessor}{::}\textcolor{preprocessor}{placeholders}\textcolor{preprocessor}{::}\textcolor{preprocessor}{\_1}\textcolor{preprocessor}{)}}
-\DoxyCodeLine{00007\ }
-\DoxyCodeLine{00008\ }
-\DoxyCodeLine{00009\ \textcolor{comment}{///\ TYPE\ ALIASES}}
-\DoxyCodeLine{00010\ \textcolor{keyword}{namespace}\ \doxymbox{\hyperlink{namespace_vesper}{Vesper}}}
-\DoxyCodeLine{00011\ \{}
-\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ \doxymbox{\hyperlink{namespace_vesper}{T}}>}
-\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{using}\ \doxymbox{\hyperlink{namespace_vesper}{Scope}}\ =\ \doxymbox{\hyperlink{namespace_vesper}{std}}::\doxymbox{\hyperlink{namespace_vesper}{unique\_ptr}}<\doxymbox{\hyperlink{namespace_vesper}{T}}>;}
-\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}...\ Args>}
-\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{constexpr}\ \doxymbox{\hyperlink{namespace_vesper_a37fd1cd7d536a4b07dc0a734f8fde936}{Scope}}<\doxymbox{\hyperlink{namespace_vesper_a37fd1cd7d536a4b07dc0a734f8fde936}{T}}>\ \doxymbox{\hyperlink{namespace_vesper_a37fd1cd7d536a4b07dc0a734f8fde936}{CreateScope}}(\doxymbox{\hyperlink{namespace_vesper_a37fd1cd7d536a4b07dc0a734f8fde936}{Args}}\&\&...\ \doxymbox{\hyperlink{namespace_vesper_a37fd1cd7d536a4b07dc0a734f8fde936}{args}})}
-\DoxyCodeLine{00016\ \ \ \ \ \{}
-\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::make\_unique<T>(std::forward<Args>(args)...);}
-\DoxyCodeLine{00018\ \ \ \ \ \}}
-\DoxyCodeLine{00019\ }
-\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
-\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{using}\ \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}\ =\ std::shared\_ptr<T>;}
-\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}...\ Args>}
-\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{constexpr}\ \doxymbox{\hyperlink{namespace_vesper_a313930b55375b2f4dd36375b56f11047}{Ref}}<\doxymbox{\hyperlink{namespace_vesper_a313930b55375b2f4dd36375b56f11047}{T}}>\ \doxymbox{\hyperlink{namespace_vesper_a313930b55375b2f4dd36375b56f11047}{CreateRef}}(\doxymbox{\hyperlink{namespace_vesper_a313930b55375b2f4dd36375b56f11047}{Args}}\&\&...\ \doxymbox{\hyperlink{namespace_vesper_a313930b55375b2f4dd36375b56f11047}{args}})}
-\DoxyCodeLine{00024\ \ \ \ \ \{}
-\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::make\_shared<T>(std::forward<Args>(args)...);}
-\DoxyCodeLine{00026\ \ \ \ \ \}}
-\DoxyCodeLine{00027\ }
-\DoxyCodeLine{00028\ \}}
+\DoxyCodeLine{00002\ \textcolor{comment}{///\ @file\ Defines\_Macros.h}}
+\DoxyCodeLine{00003\ \textcolor{comment}{///\ @author\ Damon\ S.\ Green\ II}}
+\DoxyCodeLine{00004\ \textcolor{comment}{///\ @brief\ Provides\ commonly\ used\ macros\ along\ with\ project\ wide\ typedefs.}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{///\ @brief\ Macro\ to\ shift\ 1\ by\ x\ positions\ to\ create\ a\ bitmask.}}
+\DoxyCodeLine{00008\ \textcolor{comment}{///\ @param\ x\ The\ number\ of\ positions\ to\ shift.}}
+\DoxyCodeLine{00009\ \textcolor{comment}{///\ @return\ The\ resulting\ bitmask.}}
+\DoxyCodeLine{00010\ \textcolor{comment}{///\ @note\ This\ macro\ is\ typically\ used\ for\ defining\ event\ categories.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{///\ @warning\ Be\ cautious\ when\ using\ this\ macro\ with\ values\ greater\ than\ or\ equal\ to\ the\ number\ of\ bits\ in\ an\ integer,\ as\ it\ may\ lead\ to\ undefined\ behavior.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{///\ @attention\ This\ macro\ is\ not\ type-\/safe;\ consider\ using\ constexpr\ functions\ or\ enum\ classes\ for\ better\ type\ safety.}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{BIT}\textcolor{preprocessor}{(}\textcolor{preprocessor}{x}\textcolor{preprocessor}{)}\ \textcolor{preprocessor}{(}1\ \textcolor{preprocessor}{<<}\ \textcolor{preprocessor}{x}\textcolor{preprocessor}{)}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{comment}{///\ @brief\ Binds\ a\ member\ function\ as\ an\ event\ handler.}}
+\DoxyCodeLine{00016\ \textcolor{comment}{///\ @param\ fn\ The\ member\ function\ to\ bind.}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{VZ\_BIND\_EVENT\_FN}\textcolor{preprocessor}{(}\textcolor{preprocessor}{fn}\textcolor{preprocessor}{)}\ \textcolor{preprocessor}{[}\textcolor{keyword}{this}\textcolor{preprocessor}{]}\textcolor{preprocessor}{(}\textcolor{keyword}{auto}\textcolor{preprocessor}{\&\&}\textcolor{preprocessor}{...}\ \textcolor{preprocessor}{args}\textcolor{preprocessor}{)}\ \textcolor{preprocessor}{-\/>}\ \textcolor{keyword}{decltype}\textcolor{preprocessor}{(}\textcolor{keyword}{auto}\textcolor{preprocessor}{)}\ \textcolor{preprocessor}{\{}\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{this}\textcolor{preprocessor}{-\/>}\textcolor{preprocessor}{fn}\textcolor{preprocessor}{(}\textcolor{preprocessor}{std}\textcolor{preprocessor}{::}\textcolor{preprocessor}{forward}\textcolor{preprocessor}{<}\textcolor{keyword}{decltype}\textcolor{preprocessor}{(}\textcolor{preprocessor}{args}\textcolor{preprocessor}{)}\textcolor{preprocessor}{>}\textcolor{preprocessor}{(}\textcolor{preprocessor}{args}\textcolor{preprocessor}{)}\textcolor{preprocessor}{...}\textcolor{preprocessor}{)}\textcolor{preprocessor}{;}\ \textcolor{preprocessor}{\}}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{comment}{///\ @brief\ Binds\ the\ given\ member\ function\ of\ the\ Application\ class\ as\ an\ event\ handler.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{///\ @param\ x\ The\ member\ function\ to\ bind.}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{BIND\_EVENT\_FN}\textcolor{preprocessor}{(}\textcolor{preprocessor}{x}\textcolor{preprocessor}{)}\ \textcolor{preprocessor}{std}\textcolor{preprocessor}{::}\textcolor{preprocessor}{bind}\textcolor{preprocessor}{(}\textcolor{preprocessor}{\&}\textcolor{preprocessor}{Application}\textcolor{preprocessor}{::}\textcolor{preprocessor}{x}\textcolor{preprocessor}{,}\ \textcolor{keyword}{this}\textcolor{preprocessor}{,}\ \textcolor{preprocessor}{std}\textcolor{preprocessor}{::}\textcolor{preprocessor}{placeholders}\textcolor{preprocessor}{::}\textcolor{preprocessor}{\_1}\textcolor{preprocessor}{)}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{comment}{///\ @brief\ Macro\ to\ define\ event\ type\ in\ event\ subclasses.}}
+\DoxyCodeLine{00024\ \textcolor{comment}{///\ @param\ type\ The\ event\ type\ to\ define.}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{EVENT\_CLASS\_TYPE}\textcolor{preprocessor}{(}\textcolor{preprocessor}{type}\textcolor{preprocessor}{)}\ \textcolor{keyword}{static}\ \textcolor{preprocessor}{EventType}\ \textcolor{preprocessor}{GetStaticType}\textcolor{preprocessor}{(}\textcolor{preprocessor}{)}\ \textcolor{preprocessor}{\{}\ \textcolor{keywordflow}{return}\ \textcolor{preprocessor}{EventType}\textcolor{preprocessor}{::}\textcolor{preprocessor}{\#\#}\textcolor{preprocessor}{type}\textcolor{preprocessor}{;}\ \textcolor{preprocessor}{\}}}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{preprocessor}{EventType}\ \textcolor{preprocessor}{GetEventType}\textcolor{preprocessor}{(}\textcolor{preprocessor}{)}\ \textcolor{keyword}{const}\ \textcolor{preprocessor}{override}\ \textcolor{preprocessor}{\{}\ \textcolor{keywordflow}{return}\ \textcolor{preprocessor}{GetStaticType}\textcolor{preprocessor}{(}\textcolor{preprocessor}{)}\textcolor{preprocessor}{;}\ \textcolor{preprocessor}{\}}}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\textcolor{preprocessor}{*}\ \textcolor{preprocessor}{GetName}\textcolor{preprocessor}{(}\textcolor{preprocessor}{)}\ \textcolor{keyword}{const}\ \textcolor{preprocessor}{override}\ \textcolor{preprocessor}{\{}\ \textcolor{keywordflow}{return}\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{type}\textcolor{preprocessor}{;}\ \textcolor{preprocessor}{\}}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{comment}{///\ @brief\ Macro\ to\ define\ event\ category\ in\ event\ subclasses.}}
+\DoxyCodeLine{00030\ \textcolor{comment}{///\ @param\ category\ The\ event\ category\ to\ define.}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{EVENT\_CLASS\_CATEGORY}\textcolor{preprocessor}{(}\textcolor{preprocessor}{category}\textcolor{preprocessor}{)}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ \textcolor{preprocessor}{GetCategoryFlags}\textcolor{preprocessor}{(}\textcolor{preprocessor}{)}\ \textcolor{keyword}{const}\ \textcolor{preprocessor}{override}\ \textcolor{preprocessor}{\{}\ \textcolor{keywordflow}{return}\ \textcolor{preprocessor}{category}\textcolor{preprocessor}{;}\ \textcolor{preprocessor}{\}}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{comment}{///\ @namespace\ Vesper}}
+\DoxyCodeLine{00035\ \textcolor{comment}{///\ @brief\ The\ main\ namespace\ for\ the\ Vesper\ engine.}}
+\DoxyCodeLine{00036\ \textcolor{keyword}{namespace}\ \doxymbox{\hyperlink{namespace_vesper}{Vesper}}}
+\DoxyCodeLine{00037\ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{comment}{///\ @brief\ A\ smart\ pointer\ type\ representing\ exclusive\ ownership\ of\ an\ object.}}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{comment}{///}}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{comment}{///\ @tparam\ T\ The\ type\ of\ object\ to\ manage.}}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{comment}{///\ @note\ This\ is\ an\ alias\ for\ std::unique\_ptr.}}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ \doxymbox{\hyperlink{namespace_vesper}{T}}>}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{using}\ \doxymbox{\hyperlink{namespace_vesper}{Scope}}\ =\ \doxymbox{\hyperlink{namespace_vesper}{std}}::\doxymbox{\hyperlink{namespace_vesper}{unique\_ptr}}<\doxymbox{\hyperlink{namespace_vesper}{T}}>;}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{comment}{///\ @brief\ Creates\ a\ Scope\ (unique\_ptr)\ for\ the\ given\ type\ and\ constructor\ arguments.}}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{comment}{///}}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{comment}{///\ @tparam\ T\ The\ type\ of\ object\ to\ create.}}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{comment}{///\ @tparam\ Args\ The\ types\ of\ constructor\ arguments.}}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{comment}{///\ @param\ args\ The\ constructor\ arguments.}}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{comment}{///\ @return\ A\ Scope\ (unique\_ptr)\ managing\ the\ created\ object.}}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}...\ Args>}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{constexpr}\ \doxymbox{\hyperlink{namespace_vesper_a37fd1cd7d536a4b07dc0a734f8fde936}{Scope}}<\doxymbox{\hyperlink{namespace_vesper_a37fd1cd7d536a4b07dc0a734f8fde936}{T}}>\ \doxymbox{\hyperlink{namespace_vesper_a37fd1cd7d536a4b07dc0a734f8fde936}{CreateScope}}(\doxymbox{\hyperlink{namespace_vesper_a37fd1cd7d536a4b07dc0a734f8fde936}{Args}}\&\&...\ \doxymbox{\hyperlink{namespace_vesper_a37fd1cd7d536a4b07dc0a734f8fde936}{args}})}
+\DoxyCodeLine{00053\ \ \ \ \ \{}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::make\_unique<T>(std::forward<Args>(args)...);}
+\DoxyCodeLine{00055\ \ \ \ \ \}}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{comment}{///\ @brief\ A\ smart\ pointer\ type\ representing\ shared\ ownership\ of\ an\ object.}}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{comment}{///}}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{comment}{///\ @tparam\ T\ The\ type\ of\ object\ to\ manage.}}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{comment}{///\ @note\ This\ is\ an\ alias\ for\ std::shared\_ptr.}}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keyword}{using}\ Ref\ =\ std::shared\_ptr<T>;}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{comment}{///\ @brief\ Creates\ a\ Ref\ (shared\_ptr)\ for\ the\ given\ type\ and\ constructor\ arguments.}}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{comment}{///}}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{comment}{///\ @tparam\ T\ The\ type\ of\ object\ to\ create.}}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{comment}{///\ @tparam\ Args\ The\ types\ of\ constructor\ arguments.}}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{comment}{///\ @param\ args\ The\ constructor\ arguments.}}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{comment}{///\ @return\ A\ Ref\ (shared\_ptr)\ managing\ the\ created\ object.}}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}...\ Args>}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keyword}{constexpr}\ \doxymbox{\hyperlink{namespace_vesper_a313930b55375b2f4dd36375b56f11047}{Ref}}<\doxymbox{\hyperlink{namespace_vesper_a313930b55375b2f4dd36375b56f11047}{T}}>\ \doxymbox{\hyperlink{namespace_vesper_a313930b55375b2f4dd36375b56f11047}{CreateRef}}(\doxymbox{\hyperlink{namespace_vesper_a313930b55375b2f4dd36375b56f11047}{Args}}\&\&...\ \doxymbox{\hyperlink{namespace_vesper_a313930b55375b2f4dd36375b56f11047}{args}})}
+\DoxyCodeLine{00073\ \ \ \ \ \{}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::make\_shared<T>(std::forward<Args>(args)...);}
+\DoxyCodeLine{00075\ \ \ \ \ \}}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \}}
 
 \end{DoxyCode}

@@ -2,6 +2,11 @@
 \hypertarget{class_vesper_1_1_texture2_d}{}\label{class_vesper_1_1_texture2_d}\index{Vesper::Texture2D@{Vesper::Texture2D}}
 
 
+An abstraction for a 2D texture.  
+
+
+
+
 {\ttfamily \+\#include $<$Texture.\+h$>$}
 
 Inheritance diagram for Vesper::\+Texture2D:\+\begin{figure}[H]
@@ -24,20 +29,23 @@ static \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{
 virtual \doxymbox{\hyperlink{class_vesper_1_1_texture_abaee8793ab274eb12e797affb8bb5406}{\texorpdfstring{$\sim$}{\string~}\+Texture}} ()=default
 \item 
 virtual uint32\+\_\+t \doxymbox{\hyperlink{class_vesper_1_1_texture_a7e31e9571857dded8570e2c102235d4c}{Get\+Width}} () const =0
-\item 
+\begin{DoxyCompactList}\small\item\em Returns the width of the texture. \end{DoxyCompactList}\item 
 virtual uint32\+\_\+t \doxymbox{\hyperlink{class_vesper_1_1_texture_a9b506f28915ef764c52b23897606628b}{Get\+Height}} () const =0
-\item 
+\begin{DoxyCompactList}\small\item\em Returns the height of the texture. \end{DoxyCompactList}\item 
 virtual uint32\+\_\+t \doxymbox{\hyperlink{class_vesper_1_1_texture_aac3791b93ab26cf8c8df7ae02c6cc8d3}{Get\+Renderer\+ID}} () const =0
-\item 
+\begin{DoxyCompactList}\small\item\em Returns the renderer ID of the texture. \end{DoxyCompactList}\item 
 virtual void \doxymbox{\hyperlink{class_vesper_1_1_texture_aecdaafa875ff2ce3e3972f4c42b23194}{Bind}} (uint32\+\_\+t slot=0) const =0
-\item 
+\begin{DoxyCompactList}\small\item\em Binds the texture to the specified slot for use. \end{DoxyCompactList}\item 
 virtual void \doxymbox{\hyperlink{class_vesper_1_1_texture_aae25563a473b10ba3cea4d82310d734a}{Set\+Data}} (void \texorpdfstring{$\ast$}{*}data, uint32\+\_\+t size)=0
-\item 
+\begin{DoxyCompactList}\small\item\em Sets the data of the texture. \end{DoxyCompactList}\item 
 virtual bool \doxymbox{\hyperlink{class_vesper_1_1_texture_a82a2ccb871e737e685589ab0dbd35a34}{operator==}} (const \doxymbox{\hyperlink{class_vesper_1_1_texture2_d}{Texture2D}} \&other) const =0
 \item 
 virtual std::\+string \doxymbox{\hyperlink{class_vesper_1_1_texture_a8b5e8ba4dc3e4cec52810b22dab26dd7}{Get\+Name}} () const =0
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+An abstraction for a 2D texture. 
 
 \label{doc-func-members}
 \Hypertarget{class_vesper_1_1_texture2_d_doc-func-members}

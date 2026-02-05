@@ -1,5 +1,10 @@
 \doxysection{Vesper/\+src/\+\+Vesper/\+\+Core/\+\+Defines\+\_\+\+Macros.h File Reference}
 \hypertarget{_defines___macros_8h}{}\label{_defines___macros_8h}\index{Vesper/src/Vesper/Core/Defines\_Macros.h@{Vesper/src/Vesper/Core/Defines\_Macros.h}}
+
+
+Provides commonly used macros along with project wide typedefs.  
+
+
 \doxysubsubsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
@@ -9,25 +14,37 @@ namespace \doxymbox{\hyperlink{namespace_vesper}{Vesper}}
 \begin{DoxyCompactItemize}
 \item 
 \+\#define \doxymbox{\hyperlink{_defines___macros_8h_ad27cc17b25bb93134368d5eb21126eae}{BIT}}(x)
-\begin{DoxyCompactList}\small\item\em DEFINES. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Macro to shift 1 by x positions to create a bitmask. \end{DoxyCompactList}\item 
 \+\#define \doxymbox{\hyperlink{_defines___macros_8h_a699202bb2b05ef9058c10a8fc9829294}{VZ\+\_\+\+BIND\+\_\+\+EVENT\+\_\+\+FN}}(fn)
-\item 
+\begin{DoxyCompactList}\small\item\em Binds a member function as an event handler. \end{DoxyCompactList}\item 
 \+\#define \doxymbox{\hyperlink{_defines___macros_8h_a2290aac021a7119e86af0aa6d962a226}{BIND\+\_\+\+EVENT\+\_\+\+FN}}(x)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Binds the given member function of the Application class as an event handler. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{_defines___macros_8h_a80d534fc4d69a68eefd1573fd0ac2f44}{EVENT\+\_\+\+CLASS\+\_\+\+TYPE}}(type)
+\begin{DoxyCompactList}\small\item\em Macro to define event type in event subclasses. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{_defines___macros_8h_abd52deea587a36ef619e596a0c691839}{EVENT\+\_\+\+CLASS\+\_\+\+CATEGORY}}(category)
+\begin{DoxyCompactList}\small\item\em Macro to define event category in event subclasses. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
 {\footnotesize template$<$typename T$>$ }\\using \doxymbox{\hyperlink{namespace_vesper_a5425f9aaa2ee4d3761c8ce6b385e0b70}{Vesper::\+\+Scope}} = std::\+unique\+\_\+ptr$<$T$>$
-\item 
+\begin{DoxyCompactList}\small\item\em A smart pointer type representing exclusive ownership of an object. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename T$>$ }\\using \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Vesper::\+\+Ref}} = std::\+shared\+\_\+ptr$<$T$>$
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em A smart pointer type representing shared ownership of an object. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 {\footnotesize template$<$typename T, typename... Args$>$ }\\constexpr \doxymbox{\hyperlink{namespace_vesper_a5425f9aaa2ee4d3761c8ce6b385e0b70}{Scope}}$<$ T $>$ \doxymbox{\hyperlink{namespace_vesper_a37fd1cd7d536a4b07dc0a734f8fde936}{Vesper::\+\+Create\+Scope}} (Args \&\&... args)
-\item 
+\begin{DoxyCompactList}\small\item\em Creates a \doxylink{namespace_vesper_a5425f9aaa2ee4d3761c8ce6b385e0b70}{Scope} (unique\+\_\+ptr) for the given type and constructor arguments. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename T, typename... Args$>$ }\\constexpr \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ T $>$ \doxymbox{\hyperlink{namespace_vesper_a313930b55375b2f4dd36375b56f11047}{Vesper::\+\+Create\+Ref}} (Args \&\&... args)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Creates a \doxylink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref} (shared\+\_\+ptr) for the given type and constructor arguments. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Provides commonly used macros along with project wide typedefs. 
+
+\begin{DoxyAuthor}{Author}
+Damon S. Green II 
+\end{DoxyAuthor}
 
 
 \label{doc-define-members}
@@ -44,6 +61,15 @@ namespace \doxymbox{\hyperlink{namespace_vesper}{Vesper}}
 \DoxyCodeLine{std::bind(\&Application::x,\ \textcolor{keyword}{this},\ std::placeholders::\_1)}
 
 \end{DoxyCode}
+
+
+Binds the given member function of the Application class as an event handler. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The member function to bind. \\
+\hline
+\end{DoxyParams}
 \Hypertarget{_defines___macros_8h_ad27cc17b25bb93134368d5eb21126eae}\index{Defines\_Macros.h@{Defines\_Macros.h}!BIT@{BIT}}
 \index{BIT@{BIT}!Defines\_Macros.h@{Defines\_Macros.h}}
 \doxysubsubsection{\texorpdfstring{BIT}{BIT}}
@@ -57,8 +83,74 @@ namespace \doxymbox{\hyperlink{namespace_vesper}{Vesper}}
 \end{DoxyCode}
 
 
-DEFINES. 
+Macro to shift 1 by x positions to create a bitmask. 
 
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The number of positions to shift. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The resulting bitmask. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This macro is typically used for defining event categories. 
+\end{DoxyNote}
+\begin{DoxyWarning}{Warning}
+Be cautious when using this macro with values greater than or equal to the number of bits in an integer, as it may lead to undefined behavior. 
+\end{DoxyWarning}
+\begin{DoxyAttention}{Attention}
+This macro is not type-\/safe; consider using constexpr functions or enum classes for better type safety. 
+\end{DoxyAttention}
+\Hypertarget{_defines___macros_8h_abd52deea587a36ef619e596a0c691839}\index{Defines\_Macros.h@{Defines\_Macros.h}!EVENT\_CLASS\_CATEGORY@{EVENT\_CLASS\_CATEGORY}}
+\index{EVENT\_CLASS\_CATEGORY@{EVENT\_CLASS\_CATEGORY}!Defines\_Macros.h@{Defines\_Macros.h}}
+\doxysubsubsection{\texorpdfstring{EVENT\_CLASS\_CATEGORY}{EVENT\_CLASS\_CATEGORY}}
+{\footnotesize\ttfamily \label{_defines___macros_8h_abd52deea587a36ef619e596a0c691839} 
+\+\#define EVENT\+\_\+\+CLASS\+\_\+\+CATEGORY(\begin{DoxyParamCaption}\item[{}]{category}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ GetCategoryFlags()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ category;\ \}}
+
+\end{DoxyCode}
+
+
+Macro to define event category in event subclasses. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em category} & The event category to define. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_defines___macros_8h_a80d534fc4d69a68eefd1573fd0ac2f44}\index{Defines\_Macros.h@{Defines\_Macros.h}!EVENT\_CLASS\_TYPE@{EVENT\_CLASS\_TYPE}}
+\index{EVENT\_CLASS\_TYPE@{EVENT\_CLASS\_TYPE}!Defines\_Macros.h@{Defines\_Macros.h}}
+\doxysubsubsection{\texorpdfstring{EVENT\_CLASS\_TYPE}{EVENT\_CLASS\_TYPE}}
+{\footnotesize\ttfamily \label{_defines___macros_8h_a80d534fc4d69a68eefd1573fd0ac2f44} 
+\+\#define EVENT\+\_\+\+CLASS\+\_\+\+TYPE(\begin{DoxyParamCaption}\item[{}]{type}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{static}\ EventType\ GetStaticType()\ \{\ \textcolor{keywordflow}{return}\ EventType::\#\#type;\ \}\(\backslash\)}
+\DoxyCodeLine{\textcolor{keyword}{virtual}\ EventType\ GetEventType()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ GetStaticType();\ \}\(\backslash\)}
+\DoxyCodeLine{\textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ GetName()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ \#type;\ \}}
+
+\end{DoxyCode}
+
+
+Macro to define event type in event subclasses. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & The event type to define. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#define\ EVENT\_CLASS\_TYPE(type)\ static\ EventType\ GetStaticType()\ \{\ return\ EventType::\#\#type;\ \}\(\backslash\) }}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ virtual\ EventType\ GetEventType()\ const\ override\ \{\ return\ GetStaticType();\ \}\(\backslash\) }}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ virtual\ const\ char*\ GetName()\ const\ override\ \{\ return\ \#type;\ \} }}
+
+\end{DoxyCode}
 \Hypertarget{_defines___macros_8h_a699202bb2b05ef9058c10a8fc9829294}\index{Defines\_Macros.h@{Defines\_Macros.h}!VZ\_BIND\_EVENT\_FN@{VZ\_BIND\_EVENT\_FN}}
 \index{VZ\_BIND\_EVENT\_FN@{VZ\_BIND\_EVENT\_FN}!Defines\_Macros.h@{Defines\_Macros.h}}
 \doxysubsubsection{\texorpdfstring{VZ\_BIND\_EVENT\_FN}{VZ\_BIND\_EVENT\_FN}}
@@ -70,3 +162,12 @@ DEFINES.
 \DoxyCodeLine{[\textcolor{keyword}{this}](\textcolor{keyword}{auto}\&\&...\ args)\ -\/>\ \textcolor{keyword}{decltype}(\textcolor{keyword}{auto})\ \{\ \textcolor{keywordflow}{return}\ this-\/>fn(std::forward<\textcolor{keyword}{decltype}(args)>(args)...);\ \}}
 
 \end{DoxyCode}
+
+
+Binds a member function as an event handler. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fn} & The member function to bind. \\
+\hline
+\end{DoxyParams}

@@ -26,15 +26,8 @@ var NAVTREE =
 [
   [ "Vesper", "index.html", [
     [ "Quick overview", "index.html#autotoc_md1", null ],
-    [ "Repository layout (high level)", "index.html#autotoc_md2", null ],
-    [ "Getting started (clone + third-party libs)", "index.html#autotoc_md3", null ],
-    [ "Build (Visual Studio 2022)", "index.html#autotoc_md4", null ],
-    [ "Run the editor or sandbox", "index.html#autotoc_md5", null ],
-    [ "New Project example code", "index.html#autotoc_md6", null ],
-    [ "Documentation", "index.html#autotoc_md7", null ],
-    [ "Contributing", "index.html#autotoc_md8", null ],
-    [ "Notes / TODO", "index.html#autotoc_md9", null ],
-    [ "Licensing", "index.html#autotoc_md10", null ],
+    [ "New Project example code", "index.html#autotoc_md2", null ],
+    [ "Todo List", "todo.html", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
@@ -74,15 +67,15 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_application_8cpp.html",
-"class_sandbox2_d.html#a78fdfe083f3b0df5b6008ef716cef19b",
-"class_vesper_1_1_editor_layer.html#a5677514c71785bc55fd89343e2588c72",
-"class_vesper_1_1_input.html#a7052afe99c8b718f66770a2af9bba7ed",
-"class_vesper_1_1_open_g_l_index_buffer.html#a48d9d7362e667f300afac07a94e0c10a",
-"class_vesper_1_1_orthographic_camera_controller.html#ad1a1c904d0d6429a1b6cad03bd9dbd1f",
-"class_vesper_1_1_scene.html#acc62d3586e8352f98d4871385112f596",
-"class_vesper_1_1_uniform_buffer.html",
-"index.html#autotoc_md5",
-"struct_vesper_1_1_native_script_component.html#ab73d2c29ae882197345ba020a267c284"
+"class_vesper_1_1_application.html#ae4194db590b9cab97f767453c2d8b608",
+"class_vesper_1_1_editor_layer.html#ae64e67476b25cee87b79159ff6749304",
+"class_vesper_1_1_key_released_event.html",
+"class_vesper_1_1_open_g_l_shader.html#ae96dbed8d97eac3b50196d669ab367c6",
+"class_vesper_1_1_particle_system.html#af730c1029248d1e90076e753718969c2",
+"class_vesper_1_1_scene_camera.html#ab41a6102906cca54d2ced298c0bdba62",
+"class_vesper_1_1_window.html#a9dd654cf7a07088d24667d6b8257df39",
+"namespace_vesper.html#ada4bc37927ce22c44ea0083a224d3bb5a6adf97f83acf6453d4a6a4b1070f3754",
+"struct_vesper_1_1_sprite_renderer_component.html#a5a57c23214bb833dda2791ee6f170f69"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

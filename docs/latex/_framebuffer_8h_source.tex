@@ -8,32 +8,44 @@
 \DoxyCodeLine{00004\ \textcolor{keyword}{namespace}\ \doxymbox{\hyperlink{namespace_vesper}{Vesper}}\ \{}
 \DoxyCodeLine{00005\ }
 \DoxyCodeLine{00006\ }
-\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keyword}{struct}\ \doxymbox{\hyperlink{namespace_vesper_struct_vesper_1_1_framebuffer_specification}{FramebufferSpecification}}}
-\DoxyCodeLine{00008\ \ \ \ \ \{}
-\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ uint32\_t\ \doxymbox{\hyperlink{namespace_vesper_a7d2b5bb823ad476d99ca5806af032b34}{Width}},\ \doxymbox{\hyperlink{namespace_vesper_a6de1e96de655e22017c9acf96c52904d}{Height}};}
-\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ FramebufferFormat\ Format\ =\ FramebufferFormat::RGBA8;}}
-\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ uint32\_t\ \doxymbox{\hyperlink{namespace_vesper_a4e390f2ebfb44f5175f3daf2b3f850ec}{Samples}}\ =\ 1;}
-\DoxyCodeLine{00012\ }
-\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{namespace_vesper_a742501fac0cb6199c3f8d4719c14e7cd}{SwapChainTarget}}\ =\ \textcolor{keyword}{false};}
-\DoxyCodeLine{00014\ \ \ \ \ \};}
-\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{comment}{///\ @brief\ Specification\ for\ creating\ a\ Framebuffer.}}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keyword}{struct}\ \doxymbox{\hyperlink{namespace_vesper_struct_vesper_1_1_framebuffer_specification}{FramebufferSpecification}}}
+\DoxyCodeLine{00009\ \ \ \ \ \{}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ uint32\_t\ \doxymbox{\hyperlink{namespace_vesper_a7d2b5bb823ad476d99ca5806af032b34}{Width}},\ \doxymbox{\hyperlink{namespace_vesper_a6de1e96de655e22017c9acf96c52904d}{Height}};}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ FramebufferFormat\ Format\ =\ FramebufferFormat::RGBA8;}}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ uint32\_t\ \doxymbox{\hyperlink{namespace_vesper_a4e390f2ebfb44f5175f3daf2b3f850ec}{Samples}}\ =\ 1;}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{namespace_vesper_a742501fac0cb6199c3f8d4719c14e7cd}{SwapChainTarget}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00015\ \ \ \ \ \};}
 \DoxyCodeLine{00016\ }
-\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{class}\ \doxymbox{\hyperlink{class_vesper_1_1_framebuffer}{Framebuffer}}}
-\DoxyCodeLine{00018\ \ \ \ \ \{}
-\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \string~\doxymbox{\hyperlink{class_vesper_1_1_framebuffer_a842eded46aaac94c8403e923fdaa2dda}{Framebuffer}}()\ =\ \textcolor{keywordflow}{default};}
-\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_framebuffer_a9c97f1a6047676e9c7090bfe019ffdbf}{Bind}}()\ =\ 0;}
-\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_framebuffer_a31f13eab445119f16f84ab27beb4129f}{Unbind}}()\ =\ 0;}
-\DoxyCodeLine{00023\ }
-\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_framebuffer_ac044c05641dd4bef0dd2396ef871fd6b}{Resize}}(uint32\_t\ width,\ uint32\_t\ height)\ =\ 0;}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{comment}{///\ @class\ Framebuffer}}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{comment}{///\ @brief\ Abstract\ class\ representing\ a\ framebuffer.}}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{class}\ \doxymbox{\hyperlink{class_vesper_1_1_framebuffer}{Framebuffer}}}
+\DoxyCodeLine{00021\ \ \ \ \ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \string~\doxymbox{\hyperlink{class_vesper_1_1_framebuffer_a842eded46aaac94c8403e923fdaa2dda}{Framebuffer}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00024\ }
 \DoxyCodeLine{00025\ }
-\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ uint32\_t\ \doxymbox{\hyperlink{class_vesper_1_1_framebuffer_aead3b53b3984d4924e06407afb39ee5a}{GetColorAttachmentRendererID}}()\ \textcolor{keyword}{const}\ =\ 0;}
-\DoxyCodeLine{00027\ }
-\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{namespace_vesper_struct_vesper_1_1_framebuffer_specification}{FramebufferSpecification}}\&\ \doxymbox{\hyperlink{class_vesper_1_1_framebuffer_af502dfc1bdbd1e350dba372f09916b85}{GetSpecification}}()\ \textcolor{keyword}{const}\ =\ 0;}
-\DoxyCodeLine{00029\ }
-\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \doxymbox{\hyperlink{class_vesper_1_1_framebuffer_a3069ed2e67841720922623fe18d14fcb}{Ref}}<\doxymbox{\hyperlink{class_vesper_1_1_framebuffer_a3069ed2e67841720922623fe18d14fcb}{Framebuffer}}>\ \doxymbox{\hyperlink{class_vesper_1_1_framebuffer_a3069ed2e67841720922623fe18d14fcb}{Create}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_vesper_1_1_framebuffer_a3069ed2e67841720922623fe18d14fcb}{FramebufferSpecification}}\&\ \doxymbox{\hyperlink{class_vesper_1_1_framebuffer_a3069ed2e67841720922623fe18d14fcb}{spec}});}
-\DoxyCodeLine{00031\ \ \ \ \ \};}
-\DoxyCodeLine{00032\ }
-\DoxyCodeLine{00033\ \}}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_framebuffer_a9c97f1a6047676e9c7090bfe019ffdbf}{Bind}}()\ =\ 0;}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_framebuffer_a31f13eab445119f16f84ab27beb4129f}{Unbind}}()\ =\ 0;}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Resizes\ the\ framebuffer\ to\ the\ given\ width\ and\ height.}}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_framebuffer_ac044c05641dd4bef0dd2396ef871fd6b}{Resize}}(uint32\_t\ width,\ uint32\_t\ height)\ =\ 0;}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Returns\ the\ renderer\ ID\ of\ the\ color\ attachment\ texture.}}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ uint32\_t\ \doxymbox{\hyperlink{class_vesper_1_1_framebuffer_aead3b53b3984d4924e06407afb39ee5a}{GetColorAttachmentRendererID}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Returns\ the\ specification\ used\ to\ create\ the\ framebuffer.}}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{namespace_vesper_struct_vesper_1_1_framebuffer_specification}{FramebufferSpecification}}\&\ \doxymbox{\hyperlink{class_vesper_1_1_framebuffer_af502dfc1bdbd1e350dba372f09916b85}{GetSpecification}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Creates\ a\ framebuffer\ with\ the\ given\ specification.}}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{comment}{///}}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @param\ spec\ The\ specification\ for\ the\ framebuffer.}}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @return\ A\ reference-\/counted\ pointer\ to\ the\ created\ framebuffer.}}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \doxymbox{\hyperlink{class_vesper_1_1_framebuffer_a3069ed2e67841720922623fe18d14fcb}{Ref}}<\doxymbox{\hyperlink{class_vesper_1_1_framebuffer_a3069ed2e67841720922623fe18d14fcb}{Framebuffer}}>\ \doxymbox{\hyperlink{class_vesper_1_1_framebuffer_a3069ed2e67841720922623fe18d14fcb}{Create}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_vesper_1_1_framebuffer_a3069ed2e67841720922623fe18d14fcb}{FramebufferSpecification}}\&\ \doxymbox{\hyperlink{class_vesper_1_1_framebuffer_a3069ed2e67841720922623fe18d14fcb}{spec}});}
+\DoxyCodeLine{00043\ \ \ \ \ \};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \}}
 
 \end{DoxyCode}

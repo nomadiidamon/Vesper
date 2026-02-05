@@ -182,10 +182,10 @@ Additional Inherited Members</h2></td></tr>
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><span class="lineno">   52</span>            : <a class="code hl_variable" href="#a2820cd39c299ee44f177c201d4a5bb4e">m_XOffset</a>(xOffset), <a class="code hl_variable" href="#afab5212abe2b5d20b186e28f1e75903c">m_YOffset</a>(yOffset) {</div>
-<div class="line"><span class="lineno">   53</span>        }</div>
-<div class="ttc" id="aclass_vesper_1_1_mouse_scrolled_event_html_a2820cd39c299ee44f177c201d4a5bb4e"><div class="ttname"><a href="#a2820cd39c299ee44f177c201d4a5bb4e">Vesper::MouseScrolledEvent::m_XOffset</a></div><div class="ttdeci">float m_XOffset</div><div class="ttdef"><b>Definition</b> MouseEvent.h:71</div></div>
-<div class="ttc" id="aclass_vesper_1_1_mouse_scrolled_event_html_afab5212abe2b5d20b186e28f1e75903c"><div class="ttname"><a href="#afab5212abe2b5d20b186e28f1e75903c">Vesper::MouseScrolledEvent::m_YOffset</a></div><div class="ttdeci">float m_YOffset</div><div class="ttdef"><b>Definition</b> MouseEvent.h:71</div></div>
+<div class="fragment"><div class="line"><span class="lineno">   56</span>            : <a class="code hl_variable" href="#a2820cd39c299ee44f177c201d4a5bb4e">m_XOffset</a>(xOffset), <a class="code hl_variable" href="#afab5212abe2b5d20b186e28f1e75903c">m_YOffset</a>(yOffset) {</div>
+<div class="line"><span class="lineno">   57</span>        }</div>
+<div class="ttc" id="aclass_vesper_1_1_mouse_scrolled_event_html_a2820cd39c299ee44f177c201d4a5bb4e"><div class="ttname"><a href="#a2820cd39c299ee44f177c201d4a5bb4e">Vesper::MouseScrolledEvent::m_XOffset</a></div><div class="ttdeci">float m_XOffset</div><div class="ttdef"><b>Definition</b> MouseEvent.h:75</div></div>
+<div class="ttc" id="aclass_vesper_1_1_mouse_scrolled_event_html_afab5212abe2b5d20b186e28f1e75903c"><div class="ttname"><a href="#afab5212abe2b5d20b186e28f1e75903c">Vesper::MouseScrolledEvent::m_YOffset</a></div><div class="ttdeci">float m_YOffset</div><div class="ttdef"><b>Definition</b> MouseEvent.h:75</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a2820cd39c299ee44f177c201d4a5bb4e">m_XOffset</a>, and <a class="el" href="#afab5212abe2b5d20b186e28f1e75903c">m_YOffset</a>.</p>
 
@@ -216,7 +216,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get the x offset of the mouse scroll. </p>
-<div class="fragment"><div class="line"><span class="lineno">   56</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a2820cd39c299ee44f177c201d4a5bb4e">m_XOffset</a>; }</div>
+<div class="fragment"><div class="line"><span class="lineno">   60</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a2820cd39c299ee44f177c201d4a5bb4e">m_XOffset</a>; }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a2820cd39c299ee44f177c201d4a5bb4e">m_XOffset</a>.</p>
 
@@ -248,7 +248,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get the y offset of the mouse scroll. </p>
-<div class="fragment"><div class="line"><span class="lineno">   58</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#afab5212abe2b5d20b186e28f1e75903c">m_YOffset</a>; }</div>
+<div class="fragment"><div class="line"><span class="lineno">   62</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#afab5212abe2b5d20b186e28f1e75903c">m_YOffset</a>; }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#afab5212abe2b5d20b186e28f1e75903c">m_YOffset</a>.</p>
 
@@ -282,13 +282,13 @@ Additional Inherited Members</h2></td></tr>
 <p>Convert the event to a string representation. </p>
 
 <p>Reimplemented from <a class="el" href="class_vesper_1_1_event.html#aaba48fc434a2539c5ce000fda6aa7f05">Vesper::Event</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   62</span>        {</div>
-<div class="line"><span class="lineno">   63</span>            std::stringstream ss;</div>
-<div class="line"><span class="lineno">   64</span>            ss &lt;&lt; <span class="stringliteral">&quot;MouseScrolledEvent: &quot;</span> &lt;&lt; <a class="code hl_function" href="#a91fe11538a6e415a235f2f64922dd141">GetXOffset</a>() &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; <a class="code hl_function" href="#aabc8368c57fa904be7140c907313ca15">GetYOffset</a>();</div>
-<div class="line"><span class="lineno">   65</span>            <span class="keywordflow">return</span> ss.str();</div>
-<div class="line"><span class="lineno">   66</span>        }</div>
-<div class="ttc" id="aclass_vesper_1_1_mouse_scrolled_event_html_a91fe11538a6e415a235f2f64922dd141"><div class="ttname"><a href="#a91fe11538a6e415a235f2f64922dd141">Vesper::MouseScrolledEvent::GetXOffset</a></div><div class="ttdeci">float GetXOffset() const</div><div class="ttdoc">Get the x offset of the mouse scroll.</div><div class="ttdef"><b>Definition</b> MouseEvent.h:56</div></div>
-<div class="ttc" id="aclass_vesper_1_1_mouse_scrolled_event_html_aabc8368c57fa904be7140c907313ca15"><div class="ttname"><a href="#aabc8368c57fa904be7140c907313ca15">Vesper::MouseScrolledEvent::GetYOffset</a></div><div class="ttdeci">float GetYOffset() const</div><div class="ttdoc">Get the y offset of the mouse scroll.</div><div class="ttdef"><b>Definition</b> MouseEvent.h:58</div></div>
+<div class="fragment"><div class="line"><span class="lineno">   66</span>        {</div>
+<div class="line"><span class="lineno">   67</span>            std::stringstream ss;</div>
+<div class="line"><span class="lineno">   68</span>            ss &lt;&lt; <span class="stringliteral">&quot;MouseScrolledEvent: &quot;</span> &lt;&lt; <a class="code hl_function" href="#a91fe11538a6e415a235f2f64922dd141">GetXOffset</a>() &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; <a class="code hl_function" href="#aabc8368c57fa904be7140c907313ca15">GetYOffset</a>();</div>
+<div class="line"><span class="lineno">   69</span>            <span class="keywordflow">return</span> ss.str();</div>
+<div class="line"><span class="lineno">   70</span>        }</div>
+<div class="ttc" id="aclass_vesper_1_1_mouse_scrolled_event_html_a91fe11538a6e415a235f2f64922dd141"><div class="ttname"><a href="#a91fe11538a6e415a235f2f64922dd141">Vesper::MouseScrolledEvent::GetXOffset</a></div><div class="ttdeci">float GetXOffset() const</div><div class="ttdoc">Get the x offset of the mouse scroll.</div><div class="ttdef"><b>Definition</b> MouseEvent.h:60</div></div>
+<div class="ttc" id="aclass_vesper_1_1_mouse_scrolled_event_html_aabc8368c57fa904be7140c907313ca15"><div class="ttname"><a href="#aabc8368c57fa904be7140c907313ca15">Vesper::MouseScrolledEvent::GetYOffset</a></div><div class="ttdeci">float GetYOffset() const</div><div class="ttdoc">Get the y offset of the mouse scroll.</div><div class="ttdef"><b>Definition</b> MouseEvent.h:62</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a91fe11538a6e415a235f2f64922dd141">GetXOffset()</a>, and <a class="el" href="#aabc8368c57fa904be7140c907313ca15">GetYOffset()</a>.</p>
 

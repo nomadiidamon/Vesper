@@ -1,5 +1,10 @@
 \doxysection{Vesper/\+src/\+\+Vesper/\+\+Debug/\+\+Instrumentor.h File Reference}
 \hypertarget{_instrumentor_8h}{}\label{_instrumentor_8h}\index{Vesper/src/Vesper/Debug/Instrumentor.h@{Vesper/src/Vesper/Debug/Instrumentor.h}}
+
+
+Provides instrumentation and profiling utilities.  
+
+
 {\ttfamily \+\#include "{}Vesper/\+\+Core/\+\+Log.\+h"{}}\newline
 {\ttfamily \+\#include $<$algorithm$>$}\newline
 {\ttfamily \+\#include $<$chrono$>$}\newline
@@ -58,6 +63,16 @@ using \doxymbox{\hyperlink{namespace_vesper_a60bb5e07d142d5fcc3b5d0b0ce6db7bc}{V
 \item 
 {\footnotesize template$<$size\+\_\+t N, size\+\_\+t K$>$ }\\constexpr auto \doxymbox{\hyperlink{namespace_instrumentor_utils_ae15d8cc9cf5564f45a9731202fd5c2ff}{Instrumentor\+Utils::\+\+Cleanup\+Output\+String}} (const char(\&expr)\+[N]\+, const char(\&remove)\+[K]\+)
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Provides instrumentation and profiling utilities. 
+
+\begin{DoxyAuthor}{Author}
+The\+Cherno 
+
+Damon S. Green II 
+\end{DoxyAuthor}
 
 
 \doxysubsection{Class Documentation}
@@ -203,7 +218,7 @@ Data\+[N]\+&
 \end{DoxyCode}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00230\ \textcolor{preprocessor}{\ \ \ \ \#define\ VZ\_PROFILE\_SCOPE\_LINE2(name,\ line)\ constexpr\ auto\ fixedName\#\#line\ =\ InstrumentorUtils::CleanupOutputString(name,\ "{}\_\_cdecl\ "{});\(\backslash\) }}
-\DoxyCodeLine{00231\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ::Vesper::InstrumentationTimer\ timer\#\#line(fixedName\#\#line.Data) }}
+\DoxyCodeLine{00236\ \textcolor{preprocessor}{\ \ \ \ \#define\ VZ\_PROFILE\_SCOPE\_LINE2(name,\ line)\ constexpr\ auto\ fixedName\#\#line\ =\ InstrumentorUtils::CleanupOutputString(name,\ "{}\_\_cdecl\ "{});\(\backslash\) }}
+\DoxyCodeLine{00237\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ::Vesper::InstrumentationTimer\ timer\#\#line(fixedName\#\#line.Data) }}
 
 \end{DoxyCode}

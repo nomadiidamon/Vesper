@@ -20,15 +20,15 @@ Inheritance diagram for Vesper::\+Open\+GLTexture2D:\+\begin{figure}[H]
 virtual \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_a2b50bb0dd855af770c8c553d67fac950}{\texorpdfstring{$\sim$}{\string~}\+Open\+GLTexture2D}} ()
 \item 
 virtual uint32\+\_\+t \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_a14ae2c519883d7bc717012747bb680b4}{Get\+Width}} () const override
-\item 
+\begin{DoxyCompactList}\small\item\em Returns the width of the texture. \end{DoxyCompactList}\item 
 virtual uint32\+\_\+t \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_a7627f84deef1848edc0497593306b2a0}{Get\+Height}} () const override
-\item 
+\begin{DoxyCompactList}\small\item\em Returns the height of the texture. \end{DoxyCompactList}\item 
 virtual uint32\+\_\+t \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_ac5ddebcc387031e1de00e93e798b36f5}{Get\+Renderer\+ID}} () const override
-\item 
+\begin{DoxyCompactList}\small\item\em Returns the renderer ID of the texture. \end{DoxyCompactList}\item 
 virtual void \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_aaec316e5c4cdf11660404a63cf4321bc}{Bind}} (uint32\+\_\+t slot) const override
-\item 
+\begin{DoxyCompactList}\small\item\em Binds the texture to the specified slot for use. \end{DoxyCompactList}\item 
 virtual void \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_a476e425bff252714dcdb9bb5f47f473a}{Set\+Data}} (void \texorpdfstring{$\ast$}{*}data, uint32\+\_\+t size) override
-\item 
+\begin{DoxyCompactList}\small\item\em Sets the data of the texture. \end{DoxyCompactList}\item 
 virtual bool \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_ab8c23762c0545ac54e21e29c54144069}{operator==}} (const \doxymbox{\hyperlink{class_vesper_1_1_texture2_d}{Texture2D}} \&other) const override
 \item 
 virtual std::\+string \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_ac47bf8ec9b0cb47dabad48730ece2a7a}{Get\+Name}} () const override
@@ -190,6 +190,10 @@ void Vesper::\+\+Open\+GLTexture2\+D::\+\+Bind (\begin{DoxyParamCaption}\item[{u
 
 
 
+Binds the texture to the specified slot for use. 
+
+
+
 Implements \doxymbox{\hyperlink{class_vesper_1_1_texture_aecdaafa875ff2ce3e3972f4c42b23194}{Vesper::\+\+Texture}}.
 
 
@@ -209,6 +213,10 @@ References \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_a8703bf29c3
 \doxysubsubsection{\texorpdfstring{GetHeight()}{GetHeight()}}
 {\footnotesize\ttfamily \label{class_vesper_1_1_open_g_l_texture2_d_a7627f84deef1848edc0497593306b2a0} 
 virtual uint32\+\_\+t Vesper::\+\+Open\+GLTexture2\+D::\+\+Get\+Height (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the height of the texture. 
 
 
 
@@ -254,6 +262,10 @@ virtual uint32\+\_\+t Vesper::\+\+Open\+GLTexture2\+D::\+\+Get\+Renderer\+ID (\b
 
 
 
+Returns the renderer ID of the texture. 
+
+
+
 Implements \doxymbox{\hyperlink{class_vesper_1_1_texture_aac3791b93ab26cf8c8df7ae02c6cc8d3}{Vesper::\+\+Texture}}.
 
 
@@ -270,6 +282,10 @@ References \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_a8703bf29c3
 \doxysubsubsection{\texorpdfstring{GetWidth()}{GetWidth()}}
 {\footnotesize\ttfamily \label{class_vesper_1_1_open_g_l_texture2_d_a14ae2c519883d7bc717012747bb680b4} 
 virtual uint32\+\_\+t Vesper::\+\+Open\+GLTexture2\+D::\+\+Get\+Width (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the width of the texture. 
 
 
 
@@ -311,6 +327,17 @@ References \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d_a8703bf29c3
 {\footnotesize\ttfamily \label{class_vesper_1_1_open_g_l_texture2_d_a476e425bff252714dcdb9bb5f47f473a} 
 void Vesper::\+\+Open\+GLTexture2\+D::\+\+Set\+Data (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{data}{, }\item[{uint32\+\_\+t}]{size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
+
+
+Sets the data of the texture. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Pointer to the data to be set. \\
+\hline
+{\em size} & Size of the data in bytes. \\
+\hline
+\end{DoxyParams}
 
 
 Implements \doxymbox{\hyperlink{class_vesper_1_1_texture_aae25563a473b10ba3cea4d82310d734a}{Vesper::\+\+Texture}}.

@@ -98,6 +98,9 @@ $(function(){initNavTree('_defines___macros_8h.html','',''); });
 </div><!--header-->
 <div class="contents">
 
+<p>Provides commonly used macros along with project wide typedefs.  
+<a href="#details">More...</a></p>
+
 <p><a href="_defines___macros_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
@@ -108,25 +111,38 @@ Namespaces</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:ad27cc17b25bb93134368d5eb21126eae" id="r_ad27cc17b25bb93134368d5eb21126eae"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ad27cc17b25bb93134368d5eb21126eae">BIT</a>(x)</td></tr>
-<tr class="memdesc:ad27cc17b25bb93134368d5eb21126eae"><td class="mdescLeft">&#160;</td><td class="mdescRight">DEFINES.  <br /></td></tr>
+<tr class="memdesc:ad27cc17b25bb93134368d5eb21126eae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Macro to shift 1 by x positions to create a bitmask.  <br /></td></tr>
 <tr class="memitem:a699202bb2b05ef9058c10a8fc9829294" id="r_a699202bb2b05ef9058c10a8fc9829294"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a699202bb2b05ef9058c10a8fc9829294">VZ_BIND_EVENT_FN</a>(fn)</td></tr>
+<tr class="memdesc:a699202bb2b05ef9058c10a8fc9829294"><td class="mdescLeft">&#160;</td><td class="mdescRight">Binds a member function as an event handler.  <br /></td></tr>
 <tr class="memitem:a2290aac021a7119e86af0aa6d962a226" id="r_a2290aac021a7119e86af0aa6d962a226"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a2290aac021a7119e86af0aa6d962a226">BIND_EVENT_FN</a>(x)</td></tr>
+<tr class="memdesc:a2290aac021a7119e86af0aa6d962a226"><td class="mdescLeft">&#160;</td><td class="mdescRight">Binds the given member function of the Application class as an event handler.  <br /></td></tr>
+<tr class="memitem:a80d534fc4d69a68eefd1573fd0ac2f44" id="r_a80d534fc4d69a68eefd1573fd0ac2f44"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a80d534fc4d69a68eefd1573fd0ac2f44">EVENT_CLASS_TYPE</a>(type)</td></tr>
+<tr class="memdesc:a80d534fc4d69a68eefd1573fd0ac2f44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Macro to define event type in event subclasses.  <br /></td></tr>
+<tr class="memitem:abd52deea587a36ef619e596a0c691839" id="r_abd52deea587a36ef619e596a0c691839"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#abd52deea587a36ef619e596a0c691839">EVENT_CLASS_CATEGORY</a>(category)</td></tr>
+<tr class="memdesc:abd52deea587a36ef619e596a0c691839"><td class="mdescLeft">&#160;</td><td class="mdescRight">Macro to define event category in event subclasses.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
 <tr class="memitem:a5425f9aaa2ee4d3761c8ce6b385e0b70" id="r_a5425f9aaa2ee4d3761c8ce6b385e0b70"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
 <tr class="memitem:a5425f9aaa2ee4d3761c8ce6b385e0b70 template"><td class="memItemLeft">using&#160;</td><td class="memItemRight"><a class="el" href="namespace_vesper.html#a5425f9aaa2ee4d3761c8ce6b385e0b70">Vesper::Scope</a> = std::unique_ptr&lt;T&gt;</td></tr>
+<tr class="memdesc:a5425f9aaa2ee4d3761c8ce6b385e0b70"><td class="mdescLeft">&#160;</td><td class="mdescRight">A smart pointer type representing exclusive ownership of an object.  <br /></td></tr>
 <tr class="memitem:ad1f51d7e944b5e23b18b12cacd5f0d27" id="r_ad1f51d7e944b5e23b18b12cacd5f0d27"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
 <tr class="memitem:ad1f51d7e944b5e23b18b12cacd5f0d27 template"><td class="memItemLeft">using&#160;</td><td class="memItemRight"><a class="el" href="namespace_vesper.html#ad1f51d7e944b5e23b18b12cacd5f0d27">Vesper::Ref</a> = std::shared_ptr&lt;T&gt;</td></tr>
+<tr class="memdesc:ad1f51d7e944b5e23b18b12cacd5f0d27"><td class="mdescLeft">&#160;</td><td class="mdescRight">A smart pointer type representing shared ownership of an object.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a37fd1cd7d536a4b07dc0a734f8fde936" id="r_a37fd1cd7d536a4b07dc0a734f8fde936"><td class="memTemplParams" colspan="2">template&lt;typename T, typename... Args&gt; </td></tr>
 <tr class="memitem:a37fd1cd7d536a4b07dc0a734f8fde936 template"><td class="memItemLeft">constexpr <a class="el" href="namespace_vesper.html#a5425f9aaa2ee4d3761c8ce6b385e0b70">Scope</a>&lt; T &gt;&#160;</td><td class="memItemRight"><a class="el" href="namespace_vesper.html#a37fd1cd7d536a4b07dc0a734f8fde936">Vesper::CreateScope</a> (Args &amp;&amp;... args)</td></tr>
+<tr class="memdesc:a37fd1cd7d536a4b07dc0a734f8fde936"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="namespace_vesper.html#a5425f9aaa2ee4d3761c8ce6b385e0b70" title="A smart pointer type representing exclusive ownership of an object.">Scope</a> (unique_ptr) for the given type and constructor arguments.  <br /></td></tr>
 <tr class="memitem:a313930b55375b2f4dd36375b56f11047" id="r_a313930b55375b2f4dd36375b56f11047"><td class="memTemplParams" colspan="2">template&lt;typename T, typename... Args&gt; </td></tr>
 <tr class="memitem:a313930b55375b2f4dd36375b56f11047 template"><td class="memItemLeft">constexpr <a class="el" href="namespace_vesper.html#ad1f51d7e944b5e23b18b12cacd5f0d27">Ref</a>&lt; T &gt;&#160;</td><td class="memItemRight"><a class="el" href="namespace_vesper.html#a313930b55375b2f4dd36375b56f11047">Vesper::CreateRef</a> (Args &amp;&amp;... args)</td></tr>
+<tr class="memdesc:a313930b55375b2f4dd36375b56f11047"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="namespace_vesper.html#ad1f51d7e944b5e23b18b12cacd5f0d27" title="A smart pointer type representing shared ownership of an object.">Ref</a> (shared_ptr) for the given type and constructor arguments.  <br /></td></tr>
 </table>
-<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Provides commonly used macros along with project wide typedefs. </p>
+<dl class="section author"><dt>Author</dt><dd>Damon S. Green II </dd></dl>
+</div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
 <a id="a2290aac021a7119e86af0aa6d962a226" name="a2290aac021a7119e86af0aa6d962a226"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2290aac021a7119e86af0aa6d962a226">&#9670;&#160;</a></span>BIND_EVENT_FN</h2>
 
@@ -143,6 +159,14 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">std::bind(&amp;Application::x, <span class="keyword">this</span>, std::placeholders::_1)</div>
 </div><!-- fragment -->
+<p>Binds the given member function of the Application class as an event handler. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>The member function to bind. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="ad27cc17b25bb93134368d5eb21126eae" name="ad27cc17b25bb93134368d5eb21126eae"></a>
@@ -161,8 +185,75 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">(1 &lt;&lt; x)</div>
 </div><!-- fragment -->
-<p>DEFINES. </p>
+<p>Macro to shift 1 by x positions to create a bitmask. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>The number of positions to shift. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The resulting bitmask. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This macro is typically used for defining event categories. </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Be cautious when using this macro with values greater than or equal to the number of bits in an integer, as it may lead to undefined behavior. </dd></dl>
+<dl class="section attention"><dt>Attention</dt><dd>This macro is not type-safe; consider using constexpr functions or enum classes for better type safety. </dd></dl>
 
+</div>
+</div>
+<a id="abd52deea587a36ef619e596a0c691839" name="abd52deea587a36ef619e596a0c691839"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd52deea587a36ef619e596a0c691839">&#9670;&#160;</a></span>EVENT_CLASS_CATEGORY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EVENT_CLASS_CATEGORY</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>category</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">virtual</span> <span class="keywordtype">int</span> GetCategoryFlags()<span class="keyword"> const override </span>{ <span class="keywordflow">return</span> category; }</div>
+</div><!-- fragment -->
+<p>Macro to define event category in event subclasses. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">category</td><td>The event category to define. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a80d534fc4d69a68eefd1573fd0ac2f44" name="a80d534fc4d69a68eefd1573fd0ac2f44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80d534fc4d69a68eefd1573fd0ac2f44">&#9670;&#160;</a></span>EVENT_CLASS_TYPE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EVENT_CLASS_TYPE</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>type</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">static</span> EventType GetStaticType() { <span class="keywordflow">return</span> EventType::##type; }\</div>
+<div class="line"><span class="keyword">virtual</span> EventType GetEventType()<span class="keyword"> const override </span>{ <span class="keywordflow">return</span> GetStaticType(); }\</div>
+<div class="line"><span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* GetName()<span class="keyword"> const override </span>{ <span class="keywordflow">return</span> #type; }</div>
+</div><!-- fragment -->
+<p>Macro to define event type in event subclasses. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>The event type to define. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">   25</span><span class="preprocessor">#define EVENT_CLASS_TYPE(type) static EventType GetStaticType() { return EventType::##type; }\</span></div>
+<div class="line"><span class="lineno">   26</span><span class="preprocessor">                                virtual EventType GetEventType() const override { return GetStaticType(); }\</span></div>
+<div class="line"><span class="lineno">   27</span><span class="preprocessor">                                virtual const char* GetName() const override { return #type; }</span></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a699202bb2b05ef9058c10a8fc9829294" name="a699202bb2b05ef9058c10a8fc9829294"></a>
@@ -181,6 +272,14 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">[<span class="keyword">this</span>](<span class="keyword">auto</span>&amp;&amp;... args) -&gt; <span class="keyword">decltype</span>(<span class="keyword">auto</span>) { <span class="keywordflow">return</span> this-&gt;fn(std::forward&lt;<span class="keyword">decltype</span>(args)&gt;(args)...); }</div>
 </div><!-- fragment -->
+<p>Binds a member function as an event handler. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fn</td><td>The member function to bind. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 </div><!-- contents -->

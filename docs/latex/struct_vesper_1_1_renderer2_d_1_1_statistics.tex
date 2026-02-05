@@ -2,23 +2,31 @@
 \hypertarget{struct_vesper_1_1_renderer2_d_1_1_statistics}{}\label{struct_vesper_1_1_renderer2_d_1_1_statistics}\index{Vesper::Renderer2D::Statistics@{Vesper::Renderer2D::Statistics}}
 
 
+2D \doxylink{class_vesper_1_1_renderer}{Renderer} \doxylink{struct_vesper_1_1_renderer2_d_1_1_statistics}{Statistics}  
+
+
+
+
 {\ttfamily \+\#include $<$Renderer2\+D.\+h$>$}
 
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 uint32\+\_\+t \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_1_1_statistics_a95453daa25d3333001a9a3f161b71818}{Get\+Total\+Vertex\+Count}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Calculates the total number of vertices drawn. \end{DoxyCompactList}\item 
 uint32\+\_\+t \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_1_1_statistics_ad6cec520adab3c60ab10d07bb513f642}{Get\+Total\+Index\+Count}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Calculates the total number of indices drawn. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 uint32\+\_\+t \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_1_1_statistics_a20255a808e6f6b8fcab59fbfc11bf673}{Draw\+Calls}} = 0
-\item 
+\begin{DoxyCompactList}\small\item\em The number of draw calls being made. \end{DoxyCompactList}\item 
 uint32\+\_\+t \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_1_1_statistics_af20c33069cfb4a0cccd5550dc977d9ba}{Quad\+Count}} = 0
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The number of quads being drawn. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+2D \doxylink{class_vesper_1_1_renderer}{Renderer} \doxylink{struct_vesper_1_1_renderer2_d_1_1_statistics}{Statistics} 
 
 \label{doc-func-members}
 \Hypertarget{struct_vesper_1_1_renderer2_d_1_1_statistics_doc-func-members}
@@ -30,8 +38,12 @@ uint32\+\_\+t \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_1_1_statistics_
 uint32\+\_\+t Vesper::\+\+Renderer2\+D::\+\+Statistics::\+\+Get\+Total\+Index\+Count (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
+
+Calculates the total number of indices drawn. 
+
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00061\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_1_1_statistics_af20c33069cfb4a0cccd5550dc977d9ba}{QuadCount}}\ *\ 6;\ \}}
+\DoxyCodeLine{00213\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_1_1_statistics_af20c33069cfb4a0cccd5550dc977d9ba}{QuadCount}}\ *\ 6;\ \}}
 
 \end{DoxyCode}
 
@@ -45,8 +57,12 @@ References \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_1_1_statistics_af2
 uint32\+\_\+t Vesper::\+\+Renderer2\+D::\+\+Statistics::\+\+Get\+Total\+Vertex\+Count (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
+
+Calculates the total number of vertices drawn. 
+
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00060\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_1_1_statistics_af20c33069cfb4a0cccd5550dc977d9ba}{QuadCount}}\ *\ 4;\ \}}
+\DoxyCodeLine{00211\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_1_1_statistics_af20c33069cfb4a0cccd5550dc977d9ba}{QuadCount}}\ *\ 4;\ \}}
 
 \end{DoxyCode}
 
@@ -66,6 +82,10 @@ uint32\+\_\+t Vesper::\+\+Renderer2\+D::\+\+Statistics::\+\+Draw\+Calls = 0}
 
 
 
+The number of draw calls being made. 
+
+
+
 Referenced by \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_ac79b4f772e92e9cc5489b7ed0bb9b659}{Vesper::\+\+Renderer2\+D::\+\+Flush()}}.
 
 \Hypertarget{struct_vesper_1_1_renderer2_d_1_1_statistics_af20c33069cfb4a0cccd5550dc977d9ba}\index{Vesper::Renderer2D::Statistics@{Vesper::Renderer2D::Statistics}!QuadCount@{QuadCount}}
@@ -73,6 +93,10 @@ Referenced by \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_ac79b4f772e92e9c
 \doxysubsubsection{\texorpdfstring{QuadCount}{QuadCount}}
 {\footnotesize\ttfamily \label{struct_vesper_1_1_renderer2_d_1_1_statistics_af20c33069cfb4a0cccd5550dc977d9ba} 
 uint32\+\_\+t Vesper::\+\+Renderer2\+D::\+\+Statistics::\+\+Quad\+Count = 0}
+
+
+
+The number of quads being drawn. 
 
 
 

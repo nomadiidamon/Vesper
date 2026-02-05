@@ -2,6 +2,11 @@
 \hypertarget{class_vesper_1_1_vertex_array}{}\label{class_vesper_1_1_vertex_array}\index{Vesper::VertexArray@{Vesper::VertexArray}}
 
 
+An abstraction for a vertex array object (VAO).  
+
+
+
+
 {\ttfamily \+\#include $<$Vertex\+Array.\+h$>$}
 
 Inheritance diagram for Vesper::\+Vertex\+Array:\+\begin{figure}[H]
@@ -20,9 +25,9 @@ virtual void \doxymbox{\hyperlink{class_vesper_1_1_vertex_array_abc8d889a21e9a0a
 virtual void \doxymbox{\hyperlink{class_vesper_1_1_vertex_array_aac8a15a9a16b4638c0c524d2681c2a90}{Unbind}} () const =0
 \item 
 virtual void \doxymbox{\hyperlink{class_vesper_1_1_vertex_array_a5c4844a43907bf52a6cdf7069cbf1f26}{Add\+Vertex\+Buffer}} (const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_vertex_buffer}{Vertex\+Buffer}} $>$ \&vertex\+Buffer)=0
-\item 
+\begin{DoxyCompactList}\small\item\em Adds a vertex buffer to the vertex array. \end{DoxyCompactList}\item 
 virtual void \doxymbox{\hyperlink{class_vesper_1_1_vertex_array_a093ac7a48c3973e2d61eaca7cc6e3065}{Set\+Index\+Buffer}} (const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_index_buffer}{Index\+Buffer}} $>$ \&index\+Buffer)=0
-\item 
+\begin{DoxyCompactList}\small\item\em Sets the index buffer for the vertex array. \end{DoxyCompactList}\item 
 virtual const std::\+vector$<$ \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_vertex_buffer}{Vertex\+Buffer}} $>$ $>$ \& \doxymbox{\hyperlink{class_vesper_1_1_vertex_array_a2cecd36d47591571c5b1538b5bf2ce05}{Get\+Vertex\+Buffers}} ()=0
 \item 
 virtual const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_index_buffer}{Index\+Buffer}} $>$ \& \doxymbox{\hyperlink{class_vesper_1_1_vertex_array_a7fac7a46407a4da90e079c834b13653d}{Get\+Index\+Buffer}} () const =0
@@ -33,6 +38,9 @@ virtual const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5
 static \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_vertex_array}{Vertex\+Array}} $>$ \doxymbox{\hyperlink{class_vesper_1_1_vertex_array_a4adc907aa59d48b933f0aa639f3b9988}{Create}} ()
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+An abstraction for a vertex array object (VAO). 
 
 \label{doc-constructors}
 \Hypertarget{class_vesper_1_1_vertex_array_doc-constructors}
@@ -45,7 +53,7 @@ virtual Vesper::\+\+Vertex\+Array::\+\texorpdfstring{$\sim$}{\string~}\+Vertex\+
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00012\ \{\}}
+\DoxyCodeLine{00013\ \{\}}
 
 \end{DoxyCode}
 
@@ -58,6 +66,10 @@ virtual Vesper::\+\+Vertex\+Array::\+\texorpdfstring{$\sim$}{\string~}\+Vertex\+
 \doxysubsubsection{\texorpdfstring{AddVertexBuffer()}{AddVertexBuffer()}}
 {\footnotesize\ttfamily \label{class_vesper_1_1_vertex_array_a5c4844a43907bf52a6cdf7069cbf1f26} 
 virtual void Vesper::\+\+Vertex\+Array::\+\+Add\+Vertex\+Buffer (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_vertex_buffer}{Vertex\+Buffer}} $>$ \&}]{vertex\+Buffer}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Adds a vertex buffer to the vertex array. 
 
 
 
@@ -121,6 +133,10 @@ Implemented in \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_vertex_array_aa7a3
 \doxysubsubsection{\texorpdfstring{SetIndexBuffer()}{SetIndexBuffer()}}
 {\footnotesize\ttfamily \label{class_vesper_1_1_vertex_array_a093ac7a48c3973e2d61eaca7cc6e3065} 
 virtual void Vesper::\+\+Vertex\+Array::\+\+Set\+Index\+Buffer (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_index_buffer}{Index\+Buffer}} $>$ \&}]{index\+Buffer}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Sets the index buffer for the vertex array. 
 
 
 

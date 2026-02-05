@@ -98,49 +98,83 @@ $(function(){initNavTree('class_vesper_1_1_renderer2_d.html','','class_vesper_1_
 </div><!--header-->
 <div class="contents">
 
+<p>A 2D renderer for drawing quads and sprites.  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_renderer2_d_8h_source.html">Renderer2D.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:Statistics" id="r_Statistics"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_vesper_1_1_renderer2_d_1_1_statistics.html">Statistics</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">2D <a class="el" href="class_vesper_1_1_renderer.html" title="The main renderer class responsible for managing rendering operations.">Renderer</a> <a class="el" href="struct_vesper_1_1_renderer2_d_1_1_statistics.html" title="2D Renderer Statistics">Statistics</a>  <a href="struct_vesper_1_1_renderer2_d_1_1_statistics.html#details">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a4fbfb5a17dac37385dfcf13a0f457ff5" id="r_a4fbfb5a17dac37385dfcf13a0f457ff5"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a4fbfb5a17dac37385dfcf13a0f457ff5">Init</a> ()</td></tr>
+<tr class="memdesc:a4fbfb5a17dac37385dfcf13a0f457ff5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the 2D renderer.  <br /></td></tr>
 <tr class="memitem:a65dbf36aef449ad46517ae5d760b691d" id="r_a65dbf36aef449ad46517ae5d760b691d"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a65dbf36aef449ad46517ae5d760b691d">Shutdown</a> ()</td></tr>
+<tr class="memdesc:a65dbf36aef449ad46517ae5d760b691d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shuts down the 2D renderer.  <br /></td></tr>
 <tr class="memitem:a4a98381667b8b785eb03cea1e07de574" id="r_a4a98381667b8b785eb03cea1e07de574"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a4a98381667b8b785eb03cea1e07de574">BeginScene</a> (const <a class="el" href="class_vesper_1_1_camera.html">Camera</a> &amp;camera, const glm::mat4 &amp;transform)</td></tr>
+<tr class="memdesc:a4a98381667b8b785eb03cea1e07de574"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begins a new scene with the given camera and transform.  <br /></td></tr>
 <tr class="memitem:a479365533b0aeb53f190646381961d22" id="r_a479365533b0aeb53f190646381961d22"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a479365533b0aeb53f190646381961d22">BeginScene</a> (const <a class="el" href="class_vesper_1_1_editor_camera.html">EditorCamera</a> &amp;camera)</td></tr>
+<tr class="memdesc:a479365533b0aeb53f190646381961d22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begins a new scene with the given editor camera.  <br /></td></tr>
 <tr class="memitem:a3aebe8bf1533bb51aad7e67d62714886" id="r_a3aebe8bf1533bb51aad7e67d62714886"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a3aebe8bf1533bb51aad7e67d62714886">BeginScene</a> (const <a class="el" href="class_vesper_1_1_orthographic_camera.html">OrthographicCamera</a> &amp;camera)</td></tr>
+<tr class="memdesc:a3aebe8bf1533bb51aad7e67d62714886"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begins a new scene with the given orthographic camera.  <br /></td></tr>
 <tr class="memitem:a4a87e37fd90cb8c33c65412c141db983" id="r_a4a87e37fd90cb8c33c65412c141db983"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a4a87e37fd90cb8c33c65412c141db983">EndScene</a> ()</td></tr>
+<tr class="memdesc:a4a87e37fd90cb8c33c65412c141db983"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ends the current scene.  <br /></td></tr>
 <tr class="memitem:ac79b4f772e92e9cc5489b7ed0bb9b659" id="r_ac79b4f772e92e9cc5489b7ed0bb9b659"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#ac79b4f772e92e9cc5489b7ed0bb9b659">Flush</a> ()</td></tr>
+<tr class="memdesc:ac79b4f772e92e9cc5489b7ed0bb9b659"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flushes the current batch of rendering commands.  <br /></td></tr>
 <tr class="memitem:aba269c4ba2ba99b13b47c9e71bf1f8e3" id="r_aba269c4ba2ba99b13b47c9e71bf1f8e3"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#aba269c4ba2ba99b13b47c9e71bf1f8e3">DrawQuad</a> (const glm::mat4 &amp;transform, const glm::vec4 &amp;color)</td></tr>
+<tr class="memdesc:aba269c4ba2ba99b13b47c9e71bf1f8e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a colored quad with the given transform and color.  <br /></td></tr>
 <tr class="memitem:a88290cf166d88ce46040b9ce87b1b5b3" id="r_a88290cf166d88ce46040b9ce87b1b5b3"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a88290cf166d88ce46040b9ce87b1b5b3">DrawQuad</a> (const glm::vec2 &amp;position, const glm::vec2 &amp;size, const glm::vec4 &amp;color)</td></tr>
+<tr class="memdesc:a88290cf166d88ce46040b9ce87b1b5b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a colored quad at the specified position and size.  <br /></td></tr>
 <tr class="memitem:a62423c4f36192a9d71a3da2c1933de59" id="r_a62423c4f36192a9d71a3da2c1933de59"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a62423c4f36192a9d71a3da2c1933de59">DrawQuad</a> (const glm::vec3 &amp;position, const glm::vec2 &amp;size, const glm::vec4 &amp;color)</td></tr>
+<tr class="memdesc:a62423c4f36192a9d71a3da2c1933de59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a colored quad at the specified position and size.  <br /></td></tr>
 <tr class="memitem:afd78da6a4f0aa5af3c7f8d533bd22b49" id="r_afd78da6a4f0aa5af3c7f8d533bd22b49"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#afd78da6a4f0aa5af3c7f8d533bd22b49">DrawQuadWithTexture</a> (const glm::mat4 &amp;transform, const <a class="el" href="namespace_vesper.html#ad1f51d7e944b5e23b18b12cacd5f0d27">Ref</a>&lt; <a class="el" href="class_vesper_1_1_texture2_d.html">Texture2D</a> &gt; &amp;texture, float tilingFactor, const glm::vec4 tintColor)</td></tr>
+<tr class="memdesc:afd78da6a4f0aa5af3c7f8d533bd22b49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a textured quad with the given transform, texture, tiling factor, and tint color.  <br /></td></tr>
 <tr class="memitem:a359b7c453c967b9c28117cea83e65281" id="r_a359b7c453c967b9c28117cea83e65281"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a359b7c453c967b9c28117cea83e65281">DrawQuadWithTexture</a> (const glm::vec2 &amp;position, const glm::vec2 &amp;size, const <a class="el" href="namespace_vesper.html#ad1f51d7e944b5e23b18b12cacd5f0d27">Ref</a>&lt; <a class="el" href="class_vesper_1_1_texture2_d.html">Texture2D</a> &gt; &amp;texture, float tilingFactor, const glm::vec4 tintColor)</td></tr>
+<tr class="memdesc:a359b7c453c967b9c28117cea83e65281"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a textured quad at the specified position and size.  <br /></td></tr>
 <tr class="memitem:aa5eb19c474de115cb5d55857eb88d581" id="r_aa5eb19c474de115cb5d55857eb88d581"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#aa5eb19c474de115cb5d55857eb88d581">DrawQuadWithTexture</a> (const glm::vec3 &amp;position, const glm::vec2 &amp;size, const <a class="el" href="namespace_vesper.html#ad1f51d7e944b5e23b18b12cacd5f0d27">Ref</a>&lt; <a class="el" href="class_vesper_1_1_texture2_d.html">Texture2D</a> &gt; &amp;texture, float tilingFactor, const glm::vec4 tintColor)</td></tr>
+<tr class="memdesc:aa5eb19c474de115cb5d55857eb88d581"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a textured quad at the specified position and size.  <br /></td></tr>
 <tr class="memitem:a273c91ba7abef4d2a99640bf98a4a7d4" id="r_a273c91ba7abef4d2a99640bf98a4a7d4"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a273c91ba7abef4d2a99640bf98a4a7d4">DrawQuadWithTexture</a> (const glm::mat4 &amp;transform, const <a class="el" href="namespace_vesper.html#ad1f51d7e944b5e23b18b12cacd5f0d27">Ref</a>&lt; <a class="el" href="class_vesper_1_1_sub_texture2_d.html">SubTexture2D</a> &gt; &amp;subtexture, float tilingFactor, const glm::vec4 tintColor)</td></tr>
+<tr class="memdesc:a273c91ba7abef4d2a99640bf98a4a7d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a textured quad with the given transform, subtexture, tiling factor, and tint color.  <br /></td></tr>
 <tr class="memitem:a794ce83b342f15f7ff59eaf285e92527" id="r_a794ce83b342f15f7ff59eaf285e92527"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a794ce83b342f15f7ff59eaf285e92527">DrawQuadWithTexture</a> (const glm::vec2 &amp;position, const glm::vec2 &amp;size, const <a class="el" href="namespace_vesper.html#ad1f51d7e944b5e23b18b12cacd5f0d27">Ref</a>&lt; <a class="el" href="class_vesper_1_1_sub_texture2_d.html">SubTexture2D</a> &gt; &amp;subtexture, float tilingFactor, const glm::vec4 tintColor)</td></tr>
+<tr class="memdesc:a794ce83b342f15f7ff59eaf285e92527"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a textured quad at the specified position and size.  <br /></td></tr>
 <tr class="memitem:af825e94b34dd71c4f4d43b1639941a83" id="r_af825e94b34dd71c4f4d43b1639941a83"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#af825e94b34dd71c4f4d43b1639941a83">DrawQuadWithTexture</a> (const glm::vec3 &amp;position, const glm::vec2 &amp;size, const <a class="el" href="namespace_vesper.html#ad1f51d7e944b5e23b18b12cacd5f0d27">Ref</a>&lt; <a class="el" href="class_vesper_1_1_sub_texture2_d.html">SubTexture2D</a> &gt; &amp;subtexture, float tilingFactor, const glm::vec4 tintColor)</td></tr>
+<tr class="memdesc:af825e94b34dd71c4f4d43b1639941a83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a textured quad at the specified position and size.  <br /></td></tr>
 <tr class="memitem:ac61593eac73ea6fabba060b34c987302" id="r_ac61593eac73ea6fabba060b34c987302"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#ac61593eac73ea6fabba060b34c987302">DrawQuadRotated</a> (const glm::mat4 &amp;transform, const glm::vec4 &amp;color)</td></tr>
+<tr class="memdesc:ac61593eac73ea6fabba060b34c987302"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a rotated colored quad with the given transform and color.  <br /></td></tr>
 <tr class="memitem:a5c7a044d0a34e1b20a2e9a727324ddf6" id="r_a5c7a044d0a34e1b20a2e9a727324ddf6"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a5c7a044d0a34e1b20a2e9a727324ddf6">DrawQuadRotated</a> (const glm::vec2 &amp;position, const glm::vec2 &amp;size, float rotationRads, const glm::vec4 &amp;color)</td></tr>
+<tr class="memdesc:a5c7a044d0a34e1b20a2e9a727324ddf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a rotated colored quad at the specified position, size, and rotation.  <br /></td></tr>
 <tr class="memitem:a1f19d6d7bad01a20033c6815e988e0e4" id="r_a1f19d6d7bad01a20033c6815e988e0e4"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a1f19d6d7bad01a20033c6815e988e0e4">DrawQuadRotated</a> (const glm::vec3 &amp;position, const glm::vec2 &amp;size, float rotationRads, const glm::vec4 &amp;color)</td></tr>
+<tr class="memdesc:a1f19d6d7bad01a20033c6815e988e0e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a rotated colored quad at the specified position, size, and rotation.  <br /></td></tr>
 <tr class="memitem:a41c4aa9d715e2ea03825360305989f00" id="r_a41c4aa9d715e2ea03825360305989f00"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a41c4aa9d715e2ea03825360305989f00">DrawQuadRotatedWithTexture</a> (const glm::mat4 &amp;transform, const <a class="el" href="namespace_vesper.html#ad1f51d7e944b5e23b18b12cacd5f0d27">Ref</a>&lt; <a class="el" href="class_vesper_1_1_texture2_d.html">Texture2D</a> &gt; &amp;texture, float tilingFactor, const glm::vec4 tintColor)</td></tr>
+<tr class="memdesc:a41c4aa9d715e2ea03825360305989f00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a rotated textured quad with the given transform, texture, tiling factor, and tint color.  <br /></td></tr>
 <tr class="memitem:a5cfa9c13c16ae674f23ffe57a07459c9" id="r_a5cfa9c13c16ae674f23ffe57a07459c9"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a5cfa9c13c16ae674f23ffe57a07459c9">DrawQuadRotatedWithTexture</a> (const glm::vec2 &amp;position, const glm::vec2 &amp;size, const <a class="el" href="namespace_vesper.html#ad1f51d7e944b5e23b18b12cacd5f0d27">Ref</a>&lt; <a class="el" href="class_vesper_1_1_texture2_d.html">Texture2D</a> &gt; &amp;texture, float rotationRads, float tilingFactor, const glm::vec4 tintColor)</td></tr>
+<tr class="memdesc:a5cfa9c13c16ae674f23ffe57a07459c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a rotated textured quad at the specified position, size, and rotation.  <br /></td></tr>
 <tr class="memitem:a41010ec0dd6156a465b7af3c7d741f81" id="r_a41010ec0dd6156a465b7af3c7d741f81"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a41010ec0dd6156a465b7af3c7d741f81">DrawQuadRotatedWithTexture</a> (const glm::vec3 &amp;position, const glm::vec2 &amp;size, const <a class="el" href="namespace_vesper.html#ad1f51d7e944b5e23b18b12cacd5f0d27">Ref</a>&lt; <a class="el" href="class_vesper_1_1_texture2_d.html">Texture2D</a> &gt; &amp;texture, float rotationRads, float tilingFactor, const glm::vec4 tintColor)</td></tr>
+<tr class="memdesc:a41010ec0dd6156a465b7af3c7d741f81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a rotated textured quad at the specified position, size, and rotation.  <br /></td></tr>
 <tr class="memitem:ac4b8d7d28d6384f102cb0f7690ccc391" id="r_ac4b8d7d28d6384f102cb0f7690ccc391"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#ac4b8d7d28d6384f102cb0f7690ccc391">DrawQuadRotatedWithTexture</a> (const glm::mat4 &amp;transform, const <a class="el" href="namespace_vesper.html#ad1f51d7e944b5e23b18b12cacd5f0d27">Ref</a>&lt; <a class="el" href="class_vesper_1_1_sub_texture2_d.html">SubTexture2D</a> &gt; &amp;subtexture, float tilingFactor, const glm::vec4 tintColor)</td></tr>
+<tr class="memdesc:ac4b8d7d28d6384f102cb0f7690ccc391"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a rotated textured quad with the given transform, subtexture, tiling factor, and tint color.  <br /></td></tr>
 <tr class="memitem:a948c3bda38fc07f5d698813ece11deeb" id="r_a948c3bda38fc07f5d698813ece11deeb"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a948c3bda38fc07f5d698813ece11deeb">DrawQuadRotatedWithTexture</a> (const glm::vec2 &amp;position, const glm::vec2 &amp;size, const <a class="el" href="namespace_vesper.html#ad1f51d7e944b5e23b18b12cacd5f0d27">Ref</a>&lt; <a class="el" href="class_vesper_1_1_sub_texture2_d.html">SubTexture2D</a> &gt; &amp;subtexture, float rotationRads, float tilingFactor, const glm::vec4 tintColor)</td></tr>
+<tr class="memdesc:a948c3bda38fc07f5d698813ece11deeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a rotated textured quad at the specified position, size, and rotation.  <br /></td></tr>
 <tr class="memitem:ae20126c4ac68e46f6a07d0bce2a953db" id="r_ae20126c4ac68e46f6a07d0bce2a953db"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#ae20126c4ac68e46f6a07d0bce2a953db">DrawQuadRotatedWithTexture</a> (const glm::vec3 &amp;position, const glm::vec2 &amp;size, const <a class="el" href="namespace_vesper.html#ad1f51d7e944b5e23b18b12cacd5f0d27">Ref</a>&lt; <a class="el" href="class_vesper_1_1_sub_texture2_d.html">SubTexture2D</a> &gt; &amp;subtexture, float rotationRads, float tilingFactor, const glm::vec4 tintColor)</td></tr>
+<tr class="memdesc:ae20126c4ac68e46f6a07d0bce2a953db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a rotated textured quad at the specified position, size, and rotation.  <br /></td></tr>
 <tr class="memitem:a1a66d8f166230f172c5f523d092d00f8" id="r_a1a66d8f166230f172c5f523d092d00f8"><td class="memItemLeft">static <a class="el" href="namespace_vesper.html#ad1f51d7e944b5e23b18b12cacd5f0d27">Ref</a>&lt; <a class="el" href="class_vesper_1_1_texture2_d.html">Texture2D</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a1a66d8f166230f172c5f523d092d00f8">GetWhiteTexture</a> ()</td></tr>
+<tr class="memdesc:a1a66d8f166230f172c5f523d092d00f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to the default white texture that allows for coloring.  <br /></td></tr>
 <tr class="memitem:a2230d61d96994b384b6ef793d1ffb506" id="r_a2230d61d96994b384b6ef793d1ffb506"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a2230d61d96994b384b6ef793d1ffb506">ResetStats</a> ()</td></tr>
+<tr class="memdesc:a2230d61d96994b384b6ef793d1ffb506"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets the rendering statistics.  <br /></td></tr>
 <tr class="memitem:ac4635220719834831187e63de81046f4" id="r_ac4635220719834831187e63de81046f4"><td class="memItemLeft">static <a class="el" href="struct_vesper_1_1_renderer2_d_1_1_statistics.html">Statistics</a>&#160;</td><td class="memItemRight"><a class="el" href="#ac4635220719834831187e63de81046f4">GetStats</a> ()</td></tr>
+<tr class="memdesc:ac4635220719834831187e63de81046f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the current rendering statistics.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pri-static-methods" class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
 Static Private Member Functions</h2></td></tr>
 <tr class="memitem:a0199e67d6224f8abb4e2f31123a5ca9c" id="r_a0199e67d6224f8abb4e2f31123a5ca9c"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a0199e67d6224f8abb4e2f31123a5ca9c">FlushAndReset</a> ()</td></tr>
 <tr class="memitem:aa7d684bfdac8fe7ea5c5b4317d9a6874" id="r_aa7d684bfdac8fe7ea5c5b4317d9a6874"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#aa7d684bfdac8fe7ea5c5b4317d9a6874">StartBatch</a> ()</td></tr>
 </table>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A 2D renderer for drawing quads and sprites. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a4a98381667b8b785eb03cea1e07de574" name="a4a98381667b8b785eb03cea1e07de574"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4a98381667b8b785eb03cea1e07de574">&#9670;&#160;</a></span>BeginScene() <span class="overload">[1/3]</span></h2>
 
@@ -167,6 +201,15 @@ Static Private Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Begins a new scene with the given camera and transform. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">camera</td><td>The camera to use for the scene. </td></tr>
+    <tr><td class="paramname">transform</td><td>The transform matrix for the camera. </td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="fragment"><div class="line"><span class="lineno">  124</span>    {</div>
 <div class="line"><span class="lineno">  125</span>        <a class="code hl_define" href="_instrumentor_8h.html#aaa03f54db70b44f8decacf111dc1109b">VZ_PROFILE_FUNCTION</a>();</div>
 <div class="line"><span class="lineno">  126</span> </div>
@@ -180,7 +223,7 @@ Static Private Member Functions</h2></td></tr>
 <div class="line"><span class="lineno">  134</span> </div>
 <div class="line"><span class="lineno">  135</span>        <a class="code hl_variable" href="namespace_vesper.html#ad2f902efea82e021110343529be81b9e">s_Data</a>.<a class="code hl_variable" href="struct_vesper_1_1_renderer2_d_data.html#af34f7bd465efbe72b736be474c0386ec">TextureSlotIndex</a> = 1;</div>
 <div class="line"><span class="lineno">  136</span>    }</div>
-<div class="ttc" id="a_instrumentor_8h_html_aaa03f54db70b44f8decacf111dc1109b"><div class="ttname"><a href="_instrumentor_8h.html#aaa03f54db70b44f8decacf111dc1109b">VZ_PROFILE_FUNCTION</a></div><div class="ttdeci">#define VZ_PROFILE_FUNCTION()</div><div class="ttdef"><b>Definition</b> Instrumentor.h:234</div></div>
+<div class="ttc" id="a_instrumentor_8h_html_aaa03f54db70b44f8decacf111dc1109b"><div class="ttname"><a href="_instrumentor_8h.html#aaa03f54db70b44f8decacf111dc1109b">VZ_PROFILE_FUNCTION</a></div><div class="ttdeci">#define VZ_PROFILE_FUNCTION()</div><div class="ttdef"><b>Definition</b> Instrumentor.h:240</div></div>
 <div class="ttc" id="anamespace_vesper_html_ad2f902efea82e021110343529be81b9e"><div class="ttname"><a href="namespace_vesper.html#ad2f902efea82e021110343529be81b9e">Vesper::s_Data</a></div><div class="ttdeci">static Renderer2DData s_Data</div><div class="ttdef"><b>Definition</b> Renderer2D.cpp:52</div></div>
 <div class="ttc" id="astruct_vesper_1_1_renderer2_d_data_html_a1eac9ac0db96f9d4c4c4075ebe1341aa"><div class="ttname"><a href="struct_vesper_1_1_renderer2_d_data.html#a1eac9ac0db96f9d4c4c4075ebe1341aa">Vesper::Renderer2DData::TextureShader</a></div><div class="ttdeci">Ref&lt; Shader &gt; TextureShader</div><div class="ttdef"><b>Definition</b> Renderer2D.cpp:30</div></div>
 <div class="ttc" id="astruct_vesper_1_1_renderer2_d_data_html_a9009d2cc897dd8411e577b8ed8c662d2"><div class="ttname"><a href="struct_vesper_1_1_renderer2_d_data.html#a9009d2cc897dd8411e577b8ed8c662d2">Vesper::Renderer2DData::QuadVertexBufferPtr</a></div><div class="ttdeci">QuadVertex * QuadVertexBufferPtr</div><div class="ttdef"><b>Definition</b> Renderer2D.cpp:35</div></div>
@@ -214,6 +257,14 @@ Static Private Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Begins a new scene with the given editor camera. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">camera</td><td>The editor camera to use for the scene. </td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="fragment"><div class="line"><span class="lineno">  139</span>    {</div>
 <div class="line"><span class="lineno">  140</span>        <a class="code hl_define" href="_instrumentor_8h.html#aaa03f54db70b44f8decacf111dc1109b">VZ_PROFILE_FUNCTION</a>();</div>
 <div class="line"><span class="lineno">  141</span> </div>
@@ -252,6 +303,15 @@ Static Private Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Begins a new scene with the given orthographic camera. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">camera</td><td>The orthographic camera to use for the scene. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000003">Todo</a></b></dt><dd>Remove once we have a proper scene system </dd></dl>
 <div class="fragment"><div class="line"><span class="lineno">  149</span>    {</div>
 <div class="line"><span class="lineno">  150</span>        <a class="code hl_define" href="_instrumentor_8h.html#aaa03f54db70b44f8decacf111dc1109b">VZ_PROFILE_FUNCTION</a>();</div>
 <div class="line"><span class="lineno">  151</span>        <a class="code hl_variable" href="namespace_vesper.html#ad2f902efea82e021110343529be81b9e">s_Data</a>.<a class="code hl_variable" href="struct_vesper_1_1_renderer2_d_data.html#a1eac9ac0db96f9d4c4c4075ebe1341aa">TextureShader</a>-&gt;Bind();</div>
@@ -293,6 +353,15 @@ Static Private Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Draws a colored quad with the given transform and color. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">transform</td><td>The transform matrix for the quad. </td></tr>
+    <tr><td class="paramname">color</td><td>The color of the quad. </td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="fragment"><div class="line"><span class="lineno">  181</span>    {</div>
 <div class="line"><span class="lineno">  182</span>        <a class="code hl_define" href="_instrumentor_8h.html#aaa03f54db70b44f8decacf111dc1109b">VZ_PROFILE_FUNCTION</a>();</div>
 <div class="line"><span class="lineno">  183</span>        <span class="keyword">constexpr</span> <span class="keywordtype">size_t</span> quadVertexCount = 4;</div>
@@ -325,7 +394,7 @@ Static Private Member Functions</h2></td></tr>
 <div class="ttc" id="anamespace_vesper_html_a4ea11ea49e0e5da6aec7dde16d09bca6"><div class="ttname"><a href="namespace_vesper.html#a4ea11ea49e0e5da6aec7dde16d09bca6">Vesper::QuadVertex::Position</a></div><div class="ttdeci">glm::vec3 Position</div><div class="ttdef"><b>Definition</b> Renderer2D.cpp:14</div></div>
 <div class="ttc" id="anamespace_vesper_html_a666486ba9101ef7d901d8c3991c13d53"><div class="ttname"><a href="namespace_vesper.html#a666486ba9101ef7d901d8c3991c13d53">Vesper::QuadVertex::TilingFactor</a></div><div class="ttdeci">float TilingFactor</div><div class="ttdef"><b>Definition</b> Renderer2D.cpp:18</div></div>
 <div class="ttc" id="anamespace_vesper_html_a8f813cf5df6c8f6fff941e2e4761e2de"><div class="ttname"><a href="namespace_vesper.html#a8f813cf5df6c8f6fff941e2e4761e2de">Vesper::QuadVertex::TexIndex</a></div><div class="ttdeci">float TexIndex</div><div class="ttdef"><b>Definition</b> Renderer2D.cpp:17</div></div>
-<div class="ttc" id="astruct_vesper_1_1_renderer2_d_1_1_statistics_html_af20c33069cfb4a0cccd5550dc977d9ba"><div class="ttname"><a href="struct_vesper_1_1_renderer2_d_1_1_statistics.html#af20c33069cfb4a0cccd5550dc977d9ba">Vesper::Renderer2D::Statistics::QuadCount</a></div><div class="ttdeci">uint32_t QuadCount</div><div class="ttdef"><b>Definition</b> Renderer2D.h:59</div></div>
+<div class="ttc" id="astruct_vesper_1_1_renderer2_d_1_1_statistics_html_af20c33069cfb4a0cccd5550dc977d9ba"><div class="ttname"><a href="struct_vesper_1_1_renderer2_d_1_1_statistics.html#af20c33069cfb4a0cccd5550dc977d9ba">Vesper::Renderer2D::Statistics::QuadCount</a></div><div class="ttdeci">uint32_t QuadCount</div><div class="ttdoc">The number of quads being drawn.</div><div class="ttdef"><b>Definition</b> Renderer2D.h:209</div></div>
 <div class="ttc" id="astruct_vesper_1_1_renderer2_d_data_html_a150558bfc80d43d8a1ffdb1a2e6868f0"><div class="ttname"><a href="struct_vesper_1_1_renderer2_d_data.html#a150558bfc80d43d8a1ffdb1a2e6868f0">Vesper::Renderer2DData::MaxIndices</a></div><div class="ttdeci">static const uint32_t MaxIndices</div><div class="ttdef"><b>Definition</b> Renderer2D.cpp:25</div></div>
 <div class="ttc" id="astruct_vesper_1_1_renderer2_d_data_html_a5a87f280fe2dbd18d48967e3097a2fb1"><div class="ttname"><a href="struct_vesper_1_1_renderer2_d_data.html#a5a87f280fe2dbd18d48967e3097a2fb1">Vesper::Renderer2DData::Stats</a></div><div class="ttdeci">Renderer2D::Statistics Stats</div><div class="ttdef"><b>Definition</b> Renderer2D.cpp:41</div></div>
 <div class="ttc" id="astruct_vesper_1_1_renderer2_d_data_html_acd48255e4cfeaf82352818560f497b4c"><div class="ttname"><a href="struct_vesper_1_1_renderer2_d_data.html#acd48255e4cfeaf82352818560f497b4c">Vesper::Renderer2DData::QuadVertexPositions</a></div><div class="ttdeci">glm::vec4 QuadVertexPositions[4]</div><div class="ttdef"><b>Definition</b> Renderer2D.cpp:40</div></div>
@@ -365,10 +434,20 @@ Static Private Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Draws a colored quad at the specified position and size. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>The position of the quad in 2D space. </td></tr>
+    <tr><td class="paramname">size</td><td>The size of the quad. </td></tr>
+    <tr><td class="paramname">color</td><td>The color of the quad. </td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="fragment"><div class="line"><span class="lineno">  208</span>    {</div>
 <div class="line"><span class="lineno">  209</span>        <a class="code hl_function" href="#aba269c4ba2ba99b13b47c9e71bf1f8e3">DrawQuad</a>({ position.x, position.y, 0.0f }, size, color);</div>
 <div class="line"><span class="lineno">  210</span>    }</div>
-<div class="ttc" id="aclass_vesper_1_1_renderer2_d_html_aba269c4ba2ba99b13b47c9e71bf1f8e3"><div class="ttname"><a href="#aba269c4ba2ba99b13b47c9e71bf1f8e3">Vesper::Renderer2D::DrawQuad</a></div><div class="ttdeci">static void DrawQuad(const glm::mat4 &amp;transform, const glm::vec4 &amp;color)</div><div class="ttdef"><b>Definition</b> Renderer2D.cpp:180</div></div>
+<div class="ttc" id="aclass_vesper_1_1_renderer2_d_html_aba269c4ba2ba99b13b47c9e71bf1f8e3"><div class="ttname"><a href="#aba269c4ba2ba99b13b47c9e71bf1f8e3">Vesper::Renderer2D::DrawQuad</a></div><div class="ttdeci">static void DrawQuad(const glm::mat4 &amp;transform, const glm::vec4 &amp;color)</div><div class="ttdoc">Draws a colored quad with the given transform and color.</div><div class="ttdef"><b>Definition</b> Renderer2D.cpp:180</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -403,6 +482,16 @@ Static Private Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Draws a colored quad at the specified position and size. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>The position of the quad in 3D space. </td></tr>
+    <tr><td class="paramname">size</td><td>The size of the quad. </td></tr>
+    <tr><td class="paramname">color</td><td>The color of the quad. </td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="fragment"><div class="line"><span class="lineno">  212</span>    {</div>
 <div class="line"><span class="lineno">  213</span>        glm::mat4 transform = glm::translate(glm::mat4(1.0f), position) * glm::scale(glm::mat4(1.0f), { size.x, size.y, 1.0f });</div>
 <div class="line"><span class="lineno">  214</span>        <a class="code hl_function" href="#aba269c4ba2ba99b13b47c9e71bf1f8e3">DrawQuad</a>(transform, color);</div>
@@ -437,6 +526,15 @@ Static Private Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Draws a rotated colored quad with the given transform and color. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">transform</td><td>The transform matrix for the quad. </td></tr>
+    <tr><td class="paramname">color</td><td>The color of the quad. </td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="fragment"><div class="line"><span class="lineno">  331</span>    {</div>
 <div class="line"><span class="lineno">  332</span>        <a class="code hl_define" href="_instrumentor_8h.html#aaa03f54db70b44f8decacf111dc1109b">VZ_PROFILE_FUNCTION</a>();</div>
 <div class="line"><span class="lineno">  333</span>        <span class="keyword">constexpr</span> <span class="keywordtype">size_t</span> quadVertexCount = 4;</div>
@@ -503,10 +601,21 @@ Static Private Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Draws a rotated colored quad at the specified position, size, and rotation. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>The position of the quad in 2D space. </td></tr>
+    <tr><td class="paramname">size</td><td>The size of the quad. </td></tr>
+    <tr><td class="paramname">rotationRads</td><td>The rotation of the quad in radians. </td></tr>
+    <tr><td class="paramname">color</td><td>The color of the quad. </td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="fragment"><div class="line"><span class="lineno">  357</span>    {</div>
 <div class="line"><span class="lineno">  358</span>        <a class="code hl_function" href="#ac61593eac73ea6fabba060b34c987302">DrawQuadRotated</a>({ position.x, position.y, 0.0f }, size, rotationRads, color);</div>
 <div class="line"><span class="lineno">  359</span>    }</div>
-<div class="ttc" id="aclass_vesper_1_1_renderer2_d_html_ac61593eac73ea6fabba060b34c987302"><div class="ttname"><a href="#ac61593eac73ea6fabba060b34c987302">Vesper::Renderer2D::DrawQuadRotated</a></div><div class="ttdeci">static void DrawQuadRotated(const glm::mat4 &amp;transform, const glm::vec4 &amp;color)</div><div class="ttdef"><b>Definition</b> Renderer2D.cpp:330</div></div>
+<div class="ttc" id="aclass_vesper_1_1_renderer2_d_html_ac61593eac73ea6fabba060b34c987302"><div class="ttname"><a href="#ac61593eac73ea6fabba060b34c987302">Vesper::Renderer2D::DrawQuadRotated</a></div><div class="ttdeci">static void DrawQuadRotated(const glm::mat4 &amp;transform, const glm::vec4 &amp;color)</div><div class="ttdoc">Draws a rotated colored quad with the given transform and color.</div><div class="ttdef"><b>Definition</b> Renderer2D.cpp:330</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -546,6 +655,17 @@ Static Private Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Draws a rotated colored quad at the specified position, size, and rotation. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>The position of the quad in 3D space. </td></tr>
+    <tr><td class="paramname">size</td><td>The size of the quad. </td></tr>
+    <tr><td class="paramname">rotationRads</td><td>The rotation of the quad in radians. </td></tr>
+    <tr><td class="paramname">color</td><td>The color of the quad. </td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="fragment"><div class="line"><span class="lineno">  361</span>    {</div>
 <div class="line"><span class="lineno">  362</span>        glm::mat4 transform = glm::translate(glm::mat4(1.0f), position)</div>
 <div class="line"><span class="lineno">  363</span>            * glm::rotate(glm::mat4(1.0f), rotationRads, { 0.0f, 0.0f, 1.0f })</div>
@@ -591,6 +711,17 @@ Static Private Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Draws a rotated textured quad with the given transform, subtexture, tiling factor, and tint color. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">transform</td><td>The transform matrix for the quad. </td></tr>
+    <tr><td class="paramname">subtexture</td><td>The subtexture to apply to the quad. </td></tr>
+    <tr><td class="paramname">tilingFactor</td><td>The tiling factor for the texture. </td></tr>
+    <tr><td class="paramname">tintColor</td><td>The tint color to apply to the texture. </td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="fragment"><div class="line"><span class="lineno">  423</span>    {</div>
 <div class="line"><span class="lineno">  424</span>        <a class="code hl_define" href="_instrumentor_8h.html#aaa03f54db70b44f8decacf111dc1109b">VZ_PROFILE_FUNCTION</a>();</div>
 <div class="line"><span class="lineno">  425</span>        <span class="keyword">constexpr</span> <span class="keywordtype">size_t</span> quadVertexCount = 4;</div>
@@ -628,7 +759,7 @@ Static Private Member Functions</h2></td></tr>
 <div class="line"><span class="lineno">  457</span>        <a class="code hl_variable" href="namespace_vesper.html#ad2f902efea82e021110343529be81b9e">s_Data</a>.<a class="code hl_variable" href="struct_vesper_1_1_renderer2_d_data.html#a5a87f280fe2dbd18d48967e3097a2fb1">Stats</a>.<a class="code hl_variable" href="struct_vesper_1_1_renderer2_d_1_1_statistics.html#af20c33069cfb4a0cccd5550dc977d9ba">QuadCount</a>++;</div>
 <div class="line"><span class="lineno">  458</span> </div>
 <div class="line"><span class="lineno">  459</span>    }</div>
-<div class="ttc" id="anamespace_vesper_html_ad1f51d7e944b5e23b18b12cacd5f0d27"><div class="ttname"><a href="namespace_vesper.html#ad1f51d7e944b5e23b18b12cacd5f0d27">Vesper::Ref</a></div><div class="ttdeci">std::shared_ptr&lt; T &gt; Ref</div><div class="ttdef"><b>Definition</b> Defines_Macros.h:21</div></div>
+<div class="ttc" id="anamespace_vesper_html_ad1f51d7e944b5e23b18b12cacd5f0d27"><div class="ttname"><a href="namespace_vesper.html#ad1f51d7e944b5e23b18b12cacd5f0d27">Vesper::Ref</a></div><div class="ttdeci">std::shared_ptr&lt; T &gt; Ref</div><div class="ttdoc">A smart pointer type representing shared ownership of an object.</div><div class="ttdef"><b>Definition</b> Defines_Macros.h:63</div></div>
 <div class="ttc" id="astruct_vesper_1_1_renderer2_d_data_html_a7e9955cf146619db9a4ca23541f5499a"><div class="ttname"><a href="struct_vesper_1_1_renderer2_d_data.html#a7e9955cf146619db9a4ca23541f5499a">Vesper::Renderer2DData::MaxTextureSlots</a></div><div class="ttdeci">static const uint32_t MaxTextureSlots</div><div class="ttdef"><b>Definition</b> Renderer2D.cpp:26</div></div>
 <div class="ttc" id="astruct_vesper_1_1_renderer2_d_data_html_ae338adbaa3fea2a290e473183372254d"><div class="ttname"><a href="struct_vesper_1_1_renderer2_d_data.html#ae338adbaa3fea2a290e473183372254d">Vesper::Renderer2DData::TextureSlots</a></div><div class="ttdeci">std::array&lt; Ref&lt; Texture2D &gt;, MaxTextureSlots &gt; TextureSlots</div><div class="ttdef"><b>Definition</b> Renderer2D.cpp:37</div></div>
 </div><!-- fragment -->
@@ -672,6 +803,17 @@ Static Private Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Draws a rotated textured quad with the given transform, texture, tiling factor, and tint color. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">transform</td><td>The transform matrix for the quad. </td></tr>
+    <tr><td class="paramname">texture</td><td>The texture to apply to the quad. </td></tr>
+    <tr><td class="paramname">tilingFactor</td><td>The tiling factor for the texture. </td></tr>
+    <tr><td class="paramname">tintColor</td><td>The tint color to apply to the texture. </td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="fragment"><div class="line"><span class="lineno">  369</span>    {</div>
 <div class="line"><span class="lineno">  370</span>        <a class="code hl_define" href="_instrumentor_8h.html#aaa03f54db70b44f8decacf111dc1109b">VZ_PROFILE_FUNCTION</a>();</div>
 <div class="line"><span class="lineno">  371</span>        <span class="keyword">constexpr</span> <span class="keywordtype">size_t</span> quadVertexCount = 4;</div>
@@ -763,10 +905,23 @@ Static Private Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Draws a rotated textured quad at the specified position, size, and rotation. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>The position of the quad in 2D space. </td></tr>
+    <tr><td class="paramname">size</td><td>The size of the quad. </td></tr>
+    <tr><td class="paramname">rotationRads</td><td>The rotation of the quad in radians. </td></tr>
+    <tr><td class="paramname">subtexture</td><td>The subtexture to apply to the quad. </td></tr>
+    <tr><td class="paramname">tilingFactor</td><td>The tiling factor for the texture. </td></tr>
+    <tr><td class="paramname">tintColor</td><td>The tint color to apply to the texture. </td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="fragment"><div class="line"><span class="lineno">  461</span>    {</div>
 <div class="line"><span class="lineno">  462</span>        <a class="code hl_function" href="#a41c4aa9d715e2ea03825360305989f00">DrawQuadRotatedWithTexture</a>({ position.x, position.y, 0.0f }, size, subtexture, rotationRads, tilingFactor, tintColor);</div>
 <div class="line"><span class="lineno">  463</span>    }</div>
-<div class="ttc" id="aclass_vesper_1_1_renderer2_d_html_a41c4aa9d715e2ea03825360305989f00"><div class="ttname"><a href="#a41c4aa9d715e2ea03825360305989f00">Vesper::Renderer2D::DrawQuadRotatedWithTexture</a></div><div class="ttdeci">static void DrawQuadRotatedWithTexture(const glm::mat4 &amp;transform, const Ref&lt; Texture2D &gt; &amp;texture, float tilingFactor, const glm::vec4 tintColor)</div><div class="ttdef"><b>Definition</b> Renderer2D.cpp:368</div></div>
+<div class="ttc" id="aclass_vesper_1_1_renderer2_d_html_a41c4aa9d715e2ea03825360305989f00"><div class="ttname"><a href="#a41c4aa9d715e2ea03825360305989f00">Vesper::Renderer2D::DrawQuadRotatedWithTexture</a></div><div class="ttdeci">static void DrawQuadRotatedWithTexture(const glm::mat4 &amp;transform, const Ref&lt; Texture2D &gt; &amp;texture, float tilingFactor, const glm::vec4 tintColor)</div><div class="ttdoc">Draws a rotated textured quad with the given transform, texture, tiling factor, and tint color.</div><div class="ttdef"><b>Definition</b> Renderer2D.cpp:368</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -816,6 +971,19 @@ Static Private Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Draws a rotated textured quad at the specified position, size, and rotation. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>The position of the quad in 2D space. </td></tr>
+    <tr><td class="paramname">size</td><td>The size of the quad. </td></tr>
+    <tr><td class="paramname">rotationRads</td><td>The rotation of the quad in radians. </td></tr>
+    <tr><td class="paramname">texture</td><td>The texture to apply to the quad. </td></tr>
+    <tr><td class="paramname">tilingFactor</td><td>The tiling factor for the texture. </td></tr>
+    <tr><td class="paramname">tintColor</td><td>The tint color to apply to the texture. </td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="fragment"><div class="line"><span class="lineno">  410</span>    {</div>
 <div class="line"><span class="lineno">  411</span>        <a class="code hl_function" href="#a41c4aa9d715e2ea03825360305989f00">DrawQuadRotatedWithTexture</a>({ position.x, position.y, 0.0f }, size, texture, rotationRads, tilingFactor, tintColor);</div>
 <div class="line"><span class="lineno">  412</span>    }</div>
@@ -868,6 +1036,19 @@ Static Private Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Draws a rotated textured quad at the specified position, size, and rotation. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>The position of the quad in 3D space. </td></tr>
+    <tr><td class="paramname">size</td><td>The size of the quad. </td></tr>
+    <tr><td class="paramname">rotationRads</td><td>The rotation of the quad in radians. </td></tr>
+    <tr><td class="paramname">subtexture</td><td>The subtexture to apply to the quad. </td></tr>
+    <tr><td class="paramname">tilingFactor</td><td>The tiling factor for the texture. </td></tr>
+    <tr><td class="paramname">tintColor</td><td>The tint color to apply to the texture. </td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="fragment"><div class="line"><span class="lineno">  465</span>    {</div>
 <div class="line"><span class="lineno">  466</span>        <a class="code hl_define" href="_instrumentor_8h.html#aaa03f54db70b44f8decacf111dc1109b">VZ_PROFILE_FUNCTION</a>();</div>
 <div class="line"><span class="lineno">  467</span> </div>
@@ -926,6 +1107,19 @@ Static Private Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Draws a rotated textured quad at the specified position, size, and rotation. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>The position of the quad in 3D space. </td></tr>
+    <tr><td class="paramname">size</td><td>The size of the quad. </td></tr>
+    <tr><td class="paramname">rotationRads</td><td>The rotation of the quad in radians. </td></tr>
+    <tr><td class="paramname">texture</td><td>The texture to apply to the quad. </td></tr>
+    <tr><td class="paramname">tilingFactor</td><td>The tiling factor for the texture. </td></tr>
+    <tr><td class="paramname">tintColor</td><td>The tint color to apply to the texture. </td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="fragment"><div class="line"><span class="lineno">  414</span>    {</div>
 <div class="line"><span class="lineno">  415</span>        glm::mat4 transform = glm::translate(glm::mat4(1.0f), position)</div>
 <div class="line"><span class="lineno">  416</span>            * glm::rotate(glm::mat4(1.0f), rotationRads, { 0.0f, 0.0f, 1.0f })</div>
@@ -972,6 +1166,17 @@ Static Private Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Draws a textured quad with the given transform, subtexture, tiling factor, and tint color. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">transform</td><td>The transform matrix for the quad. </td></tr>
+    <tr><td class="paramname">subtexture</td><td>The subtexture to apply to the quad. </td></tr>
+    <tr><td class="paramname">tilingFactor</td><td>The tiling factor for the texture. </td></tr>
+    <tr><td class="paramname">tintColor</td><td>The tint color to apply to the texture. </td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="fragment"><div class="line"><span class="lineno">  275</span>    {</div>
 <div class="line"><span class="lineno">  276</span>        <a class="code hl_define" href="_instrumentor_8h.html#aaa03f54db70b44f8decacf111dc1109b">VZ_PROFILE_FUNCTION</a>();</div>
 <div class="line"><span class="lineno">  277</span> </div>
@@ -1056,6 +1261,17 @@ Static Private Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Draws a textured quad with the given transform, texture, tiling factor, and tint color. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">transform</td><td>The transform matrix for the quad. </td></tr>
+    <tr><td class="paramname">texture</td><td>The texture to apply to the quad. </td></tr>
+    <tr><td class="paramname">tilingFactor</td><td>The tiling factor for the texture. </td></tr>
+    <tr><td class="paramname">tintColor</td><td>The tint color to apply to the texture. </td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="fragment"><div class="line"><span class="lineno">  219</span>    {</div>
 <div class="line"><span class="lineno">  220</span>        <a class="code hl_define" href="_instrumentor_8h.html#aaa03f54db70b44f8decacf111dc1109b">VZ_PROFILE_FUNCTION</a>();</div>
 <div class="line"><span class="lineno">  221</span>        <span class="keyword">constexpr</span> <span class="keywordtype">size_t</span> quadVertexCount = 4;</div>
@@ -1145,10 +1361,22 @@ Static Private Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Draws a textured quad at the specified position and size. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>The position of the quad in 2D space. </td></tr>
+    <tr><td class="paramname">size</td><td>The size of the quad. </td></tr>
+    <tr><td class="paramname">subtexture</td><td>The subtexture to apply to the quad. </td></tr>
+    <tr><td class="paramname">tilingFactor</td><td>The tiling factor for the texture. </td></tr>
+    <tr><td class="paramname">tintColor</td><td>The tint color to apply to the texture. </td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="fragment"><div class="line"><span class="lineno">  319</span>    {</div>
 <div class="line"><span class="lineno">  320</span>        <a class="code hl_function" href="#afd78da6a4f0aa5af3c7f8d533bd22b49">DrawQuadWithTexture</a>({ position.x, position.y, 0.0f }, size, subtexture, tilingFactor, tintColor);</div>
 <div class="line"><span class="lineno">  321</span>    }</div>
-<div class="ttc" id="aclass_vesper_1_1_renderer2_d_html_afd78da6a4f0aa5af3c7f8d533bd22b49"><div class="ttname"><a href="#afd78da6a4f0aa5af3c7f8d533bd22b49">Vesper::Renderer2D::DrawQuadWithTexture</a></div><div class="ttdeci">static void DrawQuadWithTexture(const glm::mat4 &amp;transform, const Ref&lt; Texture2D &gt; &amp;texture, float tilingFactor, const glm::vec4 tintColor)</div><div class="ttdef"><b>Definition</b> Renderer2D.cpp:218</div></div>
+<div class="ttc" id="aclass_vesper_1_1_renderer2_d_html_afd78da6a4f0aa5af3c7f8d533bd22b49"><div class="ttname"><a href="#afd78da6a4f0aa5af3c7f8d533bd22b49">Vesper::Renderer2D::DrawQuadWithTexture</a></div><div class="ttdeci">static void DrawQuadWithTexture(const glm::mat4 &amp;transform, const Ref&lt; Texture2D &gt; &amp;texture, float tilingFactor, const glm::vec4 tintColor)</div><div class="ttdoc">Draws a textured quad with the given transform, texture, tiling factor, and tint color.</div><div class="ttdef"><b>Definition</b> Renderer2D.cpp:218</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1193,6 +1421,18 @@ Static Private Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Draws a textured quad at the specified position and size. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>The position of the quad in 2D space. </td></tr>
+    <tr><td class="paramname">size</td><td>The size of the quad. </td></tr>
+    <tr><td class="paramname">texture</td><td>The texture to apply to the quad. </td></tr>
+    <tr><td class="paramname">tilingFactor</td><td>The tiling factor for the texture. </td></tr>
+    <tr><td class="paramname">tintColor</td><td>The tint color to apply to the texture. </td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="fragment"><div class="line"><span class="lineno">  263</span>    {</div>
 <div class="line"><span class="lineno">  264</span>        <a class="code hl_function" href="#afd78da6a4f0aa5af3c7f8d533bd22b49">DrawQuadWithTexture</a>({ position.x, position.y, 0.0f }, size, texture, tilingFactor, tintColor);</div>
 <div class="line"><span class="lineno">  265</span>    }</div>
@@ -1240,6 +1480,18 @@ Static Private Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Draws a textured quad at the specified position and size. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>The position of the quad in 3D space. </td></tr>
+    <tr><td class="paramname">size</td><td>The size of the quad. </td></tr>
+    <tr><td class="paramname">subtexture</td><td>The subtexture to apply to the quad. </td></tr>
+    <tr><td class="paramname">tilingFactor</td><td>The tiling factor for the texture. </td></tr>
+    <tr><td class="paramname">tintColor</td><td>The tint color to apply to the texture. </td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="fragment"><div class="line"><span class="lineno">  323</span>    {</div>
 <div class="line"><span class="lineno">  324</span>        <a class="code hl_define" href="_instrumentor_8h.html#aaa03f54db70b44f8decacf111dc1109b">VZ_PROFILE_FUNCTION</a>();</div>
 <div class="line"><span class="lineno">  325</span> </div>
@@ -1290,6 +1542,18 @@ Static Private Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Draws a textured quad at the specified position and size. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>The position of the quad in 3D space. </td></tr>
+    <tr><td class="paramname">size</td><td>The size of the quad. </td></tr>
+    <tr><td class="paramname">texture</td><td>The texture to apply to the quad. </td></tr>
+    <tr><td class="paramname">tilingFactor</td><td>The tiling factor for the texture. </td></tr>
+    <tr><td class="paramname">tintColor</td><td>The tint color to apply to the texture. </td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="fragment"><div class="line"><span class="lineno">  267</span>    {</div>
 <div class="line"><span class="lineno">  268</span>        <a class="code hl_define" href="_instrumentor_8h.html#aaa03f54db70b44f8decacf111dc1109b">VZ_PROFILE_FUNCTION</a>();</div>
 <div class="line"><span class="lineno">  269</span> </div>
@@ -1321,6 +1585,8 @@ Static Private Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Ends the current scene. </p>
 <div class="fragment"><div class="line"><span class="lineno">  161</span>    {</div>
 <div class="line"><span class="lineno">  162</span>        <a class="code hl_define" href="_instrumentor_8h.html#aaa03f54db70b44f8decacf111dc1109b">VZ_PROFILE_FUNCTION</a>();</div>
 <div class="line"><span class="lineno">  163</span>        uint32_t dataSize = (uint32_t)((uint8_t*)<a class="code hl_variable" href="namespace_vesper.html#ad2f902efea82e021110343529be81b9e">s_Data</a>.<a class="code hl_variable" href="struct_vesper_1_1_renderer2_d_data.html#a9009d2cc897dd8411e577b8ed8c662d2">QuadVertexBufferPtr</a> - (uint8_t*)<a class="code hl_variable" href="namespace_vesper.html#ad2f902efea82e021110343529be81b9e">s_Data</a>.<a class="code hl_variable" href="struct_vesper_1_1_renderer2_d_data.html#ae10b87e5915f94cdf8133e2c7c309095">QuadVertexBufferBase</a>);</div>
@@ -1328,12 +1594,12 @@ Static Private Member Functions</h2></td></tr>
 <div class="line"><span class="lineno">  165</span>        <a class="code hl_variable" href="namespace_vesper.html#ad2f902efea82e021110343529be81b9e">s_Data</a>.<a class="code hl_variable" href="struct_vesper_1_1_renderer2_d_data.html#a993274a6da46ea2cfcaa8825f419c9d8">QuadVertexBuffer</a>-&gt;SetData(<a class="code hl_variable" href="namespace_vesper.html#ad2f902efea82e021110343529be81b9e">s_Data</a>.<a class="code hl_variable" href="struct_vesper_1_1_renderer2_d_data.html#ae10b87e5915f94cdf8133e2c7c309095">QuadVertexBufferBase</a>, dataSize);</div>
 <div class="line"><span class="lineno">  166</span>        <a class="code hl_function" href="#ac79b4f772e92e9cc5489b7ed0bb9b659">Flush</a>();</div>
 <div class="line"><span class="lineno">  167</span>    }</div>
-<div class="ttc" id="aclass_vesper_1_1_renderer2_d_html_ac79b4f772e92e9cc5489b7ed0bb9b659"><div class="ttname"><a href="#ac79b4f772e92e9cc5489b7ed0bb9b659">Vesper::Renderer2D::Flush</a></div><div class="ttdeci">static void Flush()</div><div class="ttdef"><b>Definition</b> Renderer2D.cpp:169</div></div>
+<div class="ttc" id="aclass_vesper_1_1_renderer2_d_html_ac79b4f772e92e9cc5489b7ed0bb9b659"><div class="ttname"><a href="#ac79b4f772e92e9cc5489b7ed0bb9b659">Vesper::Renderer2D::Flush</a></div><div class="ttdeci">static void Flush()</div><div class="ttdoc">Flushes the current batch of rendering commands.</div><div class="ttdef"><b>Definition</b> Renderer2D.cpp:169</div></div>
 <div class="ttc" id="astruct_vesper_1_1_renderer2_d_data_html_a993274a6da46ea2cfcaa8825f419c9d8"><div class="ttname"><a href="struct_vesper_1_1_renderer2_d_data.html#a993274a6da46ea2cfcaa8825f419c9d8">Vesper::Renderer2DData::QuadVertexBuffer</a></div><div class="ttdeci">Ref&lt; VertexBuffer &gt; QuadVertexBuffer</div><div class="ttdef"><b>Definition</b> Renderer2D.cpp:29</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#ac79b4f772e92e9cc5489b7ed0bb9b659">Flush()</a>, <a class="el" href="struct_vesper_1_1_renderer2_d_data.html#ae10b87e5915f94cdf8133e2c7c309095">Vesper::Renderer2DData::QuadVertexBufferBase</a>, <a class="el" href="struct_vesper_1_1_renderer2_d_data.html#a9009d2cc897dd8411e577b8ed8c662d2">Vesper::Renderer2DData::QuadVertexBufferPtr</a>, and <a class="el" href="namespace_vesper.html#ad2f902efea82e021110343529be81b9e">Vesper::s_Data</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="#a0199e67d6224f8abb4e2f31123a5ca9c">FlushAndReset()</a>, <a class="el" href="class_sandbox2_d.html#abc796def0880d3ca2dde9a010c4bf70c">Sandbox2D::OnUpdate()</a>, <a class="el" href="class_vesper_1_1_editor_layer.html#a984242ed582e7e06bcfd16bfe5de0a68">Vesper::EditorLayer::OnUpdate()</a>, <a class="el" href="class_vesper_1_1_scene.html#acb757303df319af60095ae9a4354e440">Vesper::Scene::OnUpdateEditor()</a>, and <a class="el" href="class_vesper_1_1_scene.html#a7a44a8fc07bf9c8ec2b08229a51441c6">Vesper::Scene::OnUpdateRuntime()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="#a0199e67d6224f8abb4e2f31123a5ca9c">FlushAndReset()</a>, <a class="el" href="class_vesper_1_1_editor_layer.html#a984242ed582e7e06bcfd16bfe5de0a68">Vesper::EditorLayer::OnUpdate()</a>, <a class="el" href="class_vesper_1_1_scene.html#acb757303df319af60095ae9a4354e440">Vesper::Scene::OnUpdateEditor()</a>, and <a class="el" href="class_vesper_1_1_scene.html#a7a44a8fc07bf9c8ec2b08229a51441c6">Vesper::Scene::OnUpdateRuntime()</a>.</p>
 
 </div>
 </div>
@@ -1359,6 +1625,8 @@ Static Private Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Flushes the current batch of rendering commands. </p>
 <div class="fragment"><div class="line"><span class="lineno">  170</span>    {</div>
 <div class="line"><span class="lineno">  171</span>        <a class="code hl_define" href="_instrumentor_8h.html#aaa03f54db70b44f8decacf111dc1109b">VZ_PROFILE_FUNCTION</a>();</div>
 <div class="line"><span class="lineno">  172</span>        <span class="comment">// Bind textures</span></div>
@@ -1368,8 +1636,8 @@ Static Private Member Functions</h2></td></tr>
 <div class="line"><span class="lineno">  176</span>        <a class="code hl_function" href="class_vesper_1_1_render_command.html#ae7d3374adebb2f37f3e74a10e04d405e">RenderCommand::DrawIndexed</a>(<a class="code hl_variable" href="namespace_vesper.html#ad2f902efea82e021110343529be81b9e">s_Data</a>.<a class="code hl_variable" href="struct_vesper_1_1_renderer2_d_data.html#a5fef659637993c506a34623b54e7aa22">QuadVertexArray</a>, <a class="code hl_variable" href="namespace_vesper.html#ad2f902efea82e021110343529be81b9e">s_Data</a>.<a class="code hl_variable" href="struct_vesper_1_1_renderer2_d_data.html#ae97e7dd79a5a2250191f042fab689343">QuadIndexCount</a>);</div>
 <div class="line"><span class="lineno">  177</span>        <a class="code hl_variable" href="namespace_vesper.html#ad2f902efea82e021110343529be81b9e">s_Data</a>.<a class="code hl_variable" href="struct_vesper_1_1_renderer2_d_data.html#a5a87f280fe2dbd18d48967e3097a2fb1">Stats</a>.<a class="code hl_variable" href="struct_vesper_1_1_renderer2_d_1_1_statistics.html#a20255a808e6f6b8fcab59fbfc11bf673">DrawCalls</a>++;</div>
 <div class="line"><span class="lineno">  178</span>    }</div>
-<div class="ttc" id="aclass_vesper_1_1_render_command_html_ae7d3374adebb2f37f3e74a10e04d405e"><div class="ttname"><a href="class_vesper_1_1_render_command.html#ae7d3374adebb2f37f3e74a10e04d405e">Vesper::RenderCommand::DrawIndexed</a></div><div class="ttdeci">static void DrawIndexed(const Ref&lt; VertexArray &gt; &amp;vertexArray, uint32_t indexCount=0)</div><div class="ttdef"><b>Definition</b> RenderCommand.h:31</div></div>
-<div class="ttc" id="astruct_vesper_1_1_renderer2_d_1_1_statistics_html_a20255a808e6f6b8fcab59fbfc11bf673"><div class="ttname"><a href="struct_vesper_1_1_renderer2_d_1_1_statistics.html#a20255a808e6f6b8fcab59fbfc11bf673">Vesper::Renderer2D::Statistics::DrawCalls</a></div><div class="ttdeci">uint32_t DrawCalls</div><div class="ttdef"><b>Definition</b> Renderer2D.h:58</div></div>
+<div class="ttc" id="aclass_vesper_1_1_render_command_html_ae7d3374adebb2f37f3e74a10e04d405e"><div class="ttname"><a href="class_vesper_1_1_render_command.html#ae7d3374adebb2f37f3e74a10e04d405e">Vesper::RenderCommand::DrawIndexed</a></div><div class="ttdeci">static void DrawIndexed(const Ref&lt; VertexArray &gt; &amp;vertexArray, uint32_t indexCount=0)</div><div class="ttdoc">Draws indexed geometry using the specified vertex array and index count.</div><div class="ttdef"><b>Definition</b> RenderCommand.h:38</div></div>
+<div class="ttc" id="astruct_vesper_1_1_renderer2_d_1_1_statistics_html_a20255a808e6f6b8fcab59fbfc11bf673"><div class="ttname"><a href="struct_vesper_1_1_renderer2_d_1_1_statistics.html#a20255a808e6f6b8fcab59fbfc11bf673">Vesper::Renderer2D::Statistics::DrawCalls</a></div><div class="ttdeci">uint32_t DrawCalls</div><div class="ttdoc">The number of draw calls being made.</div><div class="ttdef"><b>Definition</b> Renderer2D.h:207</div></div>
 <div class="ttc" id="astruct_vesper_1_1_renderer2_d_data_html_a5fef659637993c506a34623b54e7aa22"><div class="ttname"><a href="struct_vesper_1_1_renderer2_d_data.html#a5fef659637993c506a34623b54e7aa22">Vesper::Renderer2DData::QuadVertexArray</a></div><div class="ttdeci">Ref&lt; VertexArray &gt; QuadVertexArray</div><div class="ttdef"><b>Definition</b> Renderer2D.cpp:28</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="struct_vesper_1_1_renderer2_d_1_1_statistics.html#a20255a808e6f6b8fcab59fbfc11bf673">Vesper::Renderer2D::Statistics::DrawCalls</a>, <a class="el" href="struct_vesper_1_1_renderer2_d_data.html#ae97e7dd79a5a2250191f042fab689343">Vesper::Renderer2DData::QuadIndexCount</a>, <a class="el" href="namespace_vesper.html#ad2f902efea82e021110343529be81b9e">Vesper::s_Data</a>, <a class="el" href="struct_vesper_1_1_renderer2_d_data.html#a5a87f280fe2dbd18d48967e3097a2fb1">Vesper::Renderer2DData::Stats</a>, and <a class="el" href="struct_vesper_1_1_renderer2_d_data.html#af34f7bd465efbe72b736be474c0386ec">Vesper::Renderer2DData::TextureSlotIndex</a>.</p>
@@ -1406,7 +1674,7 @@ Static Private Member Functions</h2></td></tr>
 <div class="line"><span class="lineno">  511</span>        <a class="code hl_variable" href="namespace_vesper.html#ad2f902efea82e021110343529be81b9e">s_Data</a>.<a class="code hl_variable" href="struct_vesper_1_1_renderer2_d_data.html#a9009d2cc897dd8411e577b8ed8c662d2">QuadVertexBufferPtr</a> = <a class="code hl_variable" href="namespace_vesper.html#ad2f902efea82e021110343529be81b9e">s_Data</a>.<a class="code hl_variable" href="struct_vesper_1_1_renderer2_d_data.html#ae10b87e5915f94cdf8133e2c7c309095">QuadVertexBufferBase</a>;</div>
 <div class="line"><span class="lineno">  512</span>        <a class="code hl_variable" href="namespace_vesper.html#ad2f902efea82e021110343529be81b9e">s_Data</a>.<a class="code hl_variable" href="struct_vesper_1_1_renderer2_d_data.html#af34f7bd465efbe72b736be474c0386ec">TextureSlotIndex</a> = 1;</div>
 <div class="line"><span class="lineno">  513</span>    }</div>
-<div class="ttc" id="aclass_vesper_1_1_renderer2_d_html_a4a87e37fd90cb8c33c65412c141db983"><div class="ttname"><a href="#a4a87e37fd90cb8c33c65412c141db983">Vesper::Renderer2D::EndScene</a></div><div class="ttdeci">static void EndScene()</div><div class="ttdef"><b>Definition</b> Renderer2D.cpp:160</div></div>
+<div class="ttc" id="aclass_vesper_1_1_renderer2_d_html_a4a87e37fd90cb8c33c65412c141db983"><div class="ttname"><a href="#a4a87e37fd90cb8c33c65412c141db983">Vesper::Renderer2D::EndScene</a></div><div class="ttdeci">static void EndScene()</div><div class="ttdoc">Ends the current scene.</div><div class="ttdef"><b>Definition</b> Renderer2D.cpp:160</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a4a87e37fd90cb8c33c65412c141db983">EndScene()</a>, <a class="el" href="struct_vesper_1_1_renderer2_d_data.html#ae97e7dd79a5a2250191f042fab689343">Vesper::Renderer2DData::QuadIndexCount</a>, <a class="el" href="struct_vesper_1_1_renderer2_d_data.html#ae10b87e5915f94cdf8133e2c7c309095">Vesper::Renderer2DData::QuadVertexBufferBase</a>, <a class="el" href="struct_vesper_1_1_renderer2_d_data.html#a9009d2cc897dd8411e577b8ed8c662d2">Vesper::Renderer2DData::QuadVertexBufferPtr</a>, <a class="el" href="namespace_vesper.html#ad2f902efea82e021110343529be81b9e">Vesper::s_Data</a>, and <a class="el" href="struct_vesper_1_1_renderer2_d_data.html#af34f7bd465efbe72b736be474c0386ec">Vesper::Renderer2DData::TextureSlotIndex</a>.</p>
 
@@ -1436,13 +1704,15 @@ Static Private Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Retrieves the current rendering statistics. </p>
 <div class="fragment"><div class="line"><span class="lineno">  503</span>    {</div>
 <div class="line"><span class="lineno">  504</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="namespace_vesper.html#ad2f902efea82e021110343529be81b9e">s_Data</a>.<a class="code hl_variable" href="struct_vesper_1_1_renderer2_d_data.html#a5a87f280fe2dbd18d48967e3097a2fb1">Stats</a>;</div>
 <div class="line"><span class="lineno">  505</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="namespace_vesper.html#ad2f902efea82e021110343529be81b9e">Vesper::s_Data</a>, and <a class="el" href="struct_vesper_1_1_renderer2_d_data.html#a5a87f280fe2dbd18d48967e3097a2fb1">Vesper::Renderer2DData::Stats</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="class_sandbox2_d.html#aabfc3f41ef7dc962dae7d8c0bad7e484">Sandbox2D::OnImGuiRender()</a>, and <a class="el" href="class_vesper_1_1_editor_layer.html#af5e79508040b18e9fa455830692f6ed0">Vesper::EditorLayer::OnImGuiRender()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="class_vesper_1_1_editor_layer.html#af5e79508040b18e9fa455830692f6ed0">Vesper::EditorLayer::OnImGuiRender()</a>.</p>
 
 </div>
 </div>
@@ -1468,6 +1738,8 @@ Static Private Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Returns a reference to the default white texture that allows for coloring. </p>
 <div class="fragment"><div class="line"><span class="lineno">  493</span>    {</div>
 <div class="line"><span class="lineno">  494</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="namespace_vesper.html#ad2f902efea82e021110343529be81b9e">s_Data</a>.<a class="code hl_variable" href="struct_vesper_1_1_renderer2_d_data.html#a56735598d907904bb8f954ee343f1210">WhiteTexture</a>;</div>
 <div class="line"><span class="lineno">  495</span>    }</div>
@@ -1499,6 +1771,8 @@ Static Private Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Initializes the 2D renderer. </p>
 <div class="fragment"><div class="line"><span class="lineno">   56</span>    {</div>
 <div class="line"><span class="lineno">   57</span>        <a class="code hl_define" href="_instrumentor_8h.html#aaa03f54db70b44f8decacf111dc1109b">VZ_PROFILE_FUNCTION</a>();</div>
 <div class="line"><span class="lineno">   58</span> </div>
@@ -1563,10 +1837,10 @@ Static Private Member Functions</h2></td></tr>
 <div class="ttc" id="aclass_vesper_1_1_texture2_d_html_ac7a064af2d05049e13f237ae2a508f22"><div class="ttname"><a href="class_vesper_1_1_texture2_d.html#ac7a064af2d05049e13f237ae2a508f22">Vesper::Texture2D::Create</a></div><div class="ttdeci">static Ref&lt; Texture2D &gt; Create(uint32_t width, uint32_t height)</div><div class="ttdef"><b>Definition</b> Texture.cpp:10</div></div>
 <div class="ttc" id="aclass_vesper_1_1_vertex_array_html_a4adc907aa59d48b933f0aa639f3b9988"><div class="ttname"><a href="class_vesper_1_1_vertex_array.html#a4adc907aa59d48b933f0aa639f3b9988">Vesper::VertexArray::Create</a></div><div class="ttdeci">static Ref&lt; VertexArray &gt; Create()</div><div class="ttdef"><b>Definition</b> VertexArray.cpp:7</div></div>
 <div class="ttc" id="aclass_vesper_1_1_vertex_buffer_html_aebb8c3b5192529237b59c79a98f18a55"><div class="ttname"><a href="class_vesper_1_1_vertex_buffer.html#aebb8c3b5192529237b59c79a98f18a55">Vesper::VertexBuffer::Create</a></div><div class="ttdeci">static Ref&lt; VertexBuffer &gt; Create(uint32_t size)</div><div class="ttdef"><b>Definition</b> Buffer.cpp:11</div></div>
-<div class="ttc" id="anamespace_vesper_html_af97d3e5c1fb6c279c1b31b887687a131a22ae0e2b89e5e3d477f988cc36d3272b"><div class="ttname"><a href="namespace_vesper.html#af97d3e5c1fb6c279c1b31b887687a131a22ae0e2b89e5e3d477f988cc36d3272b">Vesper::ShaderDataType::Float</a></div><div class="ttdeci">@ Float</div><div class="ttdef"><b>Definition</b> Buffer.h:7</div></div>
-<div class="ttc" id="anamespace_vesper_html_af97d3e5c1fb6c279c1b31b887687a131a33116adc6690289da9b82ea736864eeb"><div class="ttname"><a href="namespace_vesper.html#af97d3e5c1fb6c279c1b31b887687a131a33116adc6690289da9b82ea736864eeb">Vesper::ShaderDataType::Float4</a></div><div class="ttdeci">@ Float4</div><div class="ttdef"><b>Definition</b> Buffer.h:7</div></div>
-<div class="ttc" id="anamespace_vesper_html_af97d3e5c1fb6c279c1b31b887687a131a6694430a2b471b5d2de071f2ef1fdc57"><div class="ttname"><a href="namespace_vesper.html#af97d3e5c1fb6c279c1b31b887687a131a6694430a2b471b5d2de071f2ef1fdc57">Vesper::ShaderDataType::Float2</a></div><div class="ttdeci">@ Float2</div><div class="ttdef"><b>Definition</b> Buffer.h:7</div></div>
-<div class="ttc" id="anamespace_vesper_html_af97d3e5c1fb6c279c1b31b887687a131a8a8a1d211464d4bdee46db3c75bfa121"><div class="ttname"><a href="namespace_vesper.html#af97d3e5c1fb6c279c1b31b887687a131a8a8a1d211464d4bdee46db3c75bfa121">Vesper::ShaderDataType::Float3</a></div><div class="ttdeci">@ Float3</div><div class="ttdef"><b>Definition</b> Buffer.h:7</div></div>
+<div class="ttc" id="anamespace_vesper_html_af97d3e5c1fb6c279c1b31b887687a131a22ae0e2b89e5e3d477f988cc36d3272b"><div class="ttname"><a href="namespace_vesper.html#af97d3e5c1fb6c279c1b31b887687a131a22ae0e2b89e5e3d477f988cc36d3272b">Vesper::ShaderDataType::Float</a></div><div class="ttdeci">@ Float</div><div class="ttdef"><b>Definition</b> Buffer.h:8</div></div>
+<div class="ttc" id="anamespace_vesper_html_af97d3e5c1fb6c279c1b31b887687a131a33116adc6690289da9b82ea736864eeb"><div class="ttname"><a href="namespace_vesper.html#af97d3e5c1fb6c279c1b31b887687a131a33116adc6690289da9b82ea736864eeb">Vesper::ShaderDataType::Float4</a></div><div class="ttdeci">@ Float4</div><div class="ttdef"><b>Definition</b> Buffer.h:8</div></div>
+<div class="ttc" id="anamespace_vesper_html_af97d3e5c1fb6c279c1b31b887687a131a6694430a2b471b5d2de071f2ef1fdc57"><div class="ttname"><a href="namespace_vesper.html#af97d3e5c1fb6c279c1b31b887687a131a6694430a2b471b5d2de071f2ef1fdc57">Vesper::ShaderDataType::Float2</a></div><div class="ttdeci">@ Float2</div><div class="ttdef"><b>Definition</b> Buffer.h:8</div></div>
+<div class="ttc" id="anamespace_vesper_html_af97d3e5c1fb6c279c1b31b887687a131a8a8a1d211464d4bdee46db3c75bfa121"><div class="ttname"><a href="namespace_vesper.html#af97d3e5c1fb6c279c1b31b887687a131a8a8a1d211464d4bdee46db3c75bfa121">Vesper::ShaderDataType::Float3</a></div><div class="ttdeci">@ Float3</div><div class="ttdef"><b>Definition</b> Buffer.h:8</div></div>
 <div class="ttc" id="astruct_vesper_1_1_renderer2_d_data_html_a12d7aaf001a5f0a0830cb1d1de6aa242"><div class="ttname"><a href="struct_vesper_1_1_renderer2_d_data.html#a12d7aaf001a5f0a0830cb1d1de6aa242">Vesper::Renderer2DData::MaxVertices</a></div><div class="ttdeci">static const uint32_t MaxVertices</div><div class="ttdef"><b>Definition</b> Renderer2D.cpp:24</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="namespace_vesper.html#af97d3e5c1fb6c279c1b31b887687a131a22ae0e2b89e5e3d477f988cc36d3272b">Vesper::Float</a>, <a class="el" href="namespace_vesper.html#af97d3e5c1fb6c279c1b31b887687a131a6694430a2b471b5d2de071f2ef1fdc57">Vesper::Float2</a>, <a class="el" href="namespace_vesper.html#af97d3e5c1fb6c279c1b31b887687a131a8a8a1d211464d4bdee46db3c75bfa121">Vesper::Float3</a>, <a class="el" href="namespace_vesper.html#af97d3e5c1fb6c279c1b31b887687a131a33116adc6690289da9b82ea736864eeb">Vesper::Float4</a>, <a class="el" href="struct_vesper_1_1_renderer2_d_data.html#a150558bfc80d43d8a1ffdb1a2e6868f0">Vesper::Renderer2DData::MaxIndices</a>, <a class="el" href="struct_vesper_1_1_renderer2_d_data.html#a7e9955cf146619db9a4ca23541f5499a">Vesper::Renderer2DData::MaxTextureSlots</a>, <a class="el" href="struct_vesper_1_1_renderer2_d_data.html#a12d7aaf001a5f0a0830cb1d1de6aa242">Vesper::Renderer2DData::MaxVertices</a>, <a class="el" href="struct_vesper_1_1_renderer2_d_data.html#ae10b87e5915f94cdf8133e2c7c309095">Vesper::Renderer2DData::QuadVertexBufferBase</a>, and <a class="el" href="namespace_vesper.html#ad2f902efea82e021110343529be81b9e">Vesper::s_Data</a>.</p>
@@ -1597,14 +1871,16 @@ Static Private Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Resets the rendering statistics. </p>
 <div class="fragment"><div class="line"><span class="lineno">  498</span>    {</div>
 <div class="line"><span class="lineno">  499</span>        memset(&amp;<a class="code hl_variable" href="namespace_vesper.html#ad2f902efea82e021110343529be81b9e">s_Data</a>.<a class="code hl_variable" href="struct_vesper_1_1_renderer2_d_data.html#a5a87f280fe2dbd18d48967e3097a2fb1">Stats</a>, 0, <span class="keyword">sizeof</span>(<a class="code hl_struct" href="struct_vesper_1_1_renderer2_d_1_1_statistics.html">Statistics</a>));</div>
 <div class="line"><span class="lineno">  500</span>    }</div>
-<div class="ttc" id="astruct_vesper_1_1_renderer2_d_1_1_statistics_html"><div class="ttname"><a href="struct_vesper_1_1_renderer2_d_1_1_statistics.html">Vesper::Renderer2D::Statistics</a></div><div class="ttdef"><b>Definition</b> Renderer2D.h:57</div></div>
+<div class="ttc" id="astruct_vesper_1_1_renderer2_d_1_1_statistics_html"><div class="ttname"><a href="struct_vesper_1_1_renderer2_d_1_1_statistics.html">Vesper::Renderer2D::Statistics</a></div><div class="ttdoc">2D Renderer Statistics</div><div class="ttdef"><b>Definition</b> Renderer2D.h:205</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="namespace_vesper.html#ad2f902efea82e021110343529be81b9e">Vesper::s_Data</a>, and <a class="el" href="struct_vesper_1_1_renderer2_d_data.html#a5a87f280fe2dbd18d48967e3097a2fb1">Vesper::Renderer2DData::Stats</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="class_sandbox2_d.html#abc796def0880d3ca2dde9a010c4bf70c">Sandbox2D::OnUpdate()</a>, and <a class="el" href="class_vesper_1_1_editor_layer.html#a984242ed582e7e06bcfd16bfe5de0a68">Vesper::EditorLayer::OnUpdate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="class_vesper_1_1_editor_layer.html#a984242ed582e7e06bcfd16bfe5de0a68">Vesper::EditorLayer::OnUpdate()</a>.</p>
 
 </div>
 </div>
@@ -1630,6 +1906,8 @@ Static Private Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Shuts down the 2D renderer. </p>
 <div class="fragment"><div class="line"><span class="lineno">  117</span>    {</div>
 <div class="line"><span class="lineno">  118</span>        <a class="code hl_define" href="_instrumentor_8h.html#aaa03f54db70b44f8decacf111dc1109b">VZ_PROFILE_FUNCTION</a>();</div>
 <div class="line"><span class="lineno">  119</span> </div>

@@ -2,45 +2,53 @@
 \hypertarget{class_vesper_1_1_renderer}{}\label{class_vesper_1_1_renderer}\index{Vesper::Renderer@{Vesper::Renderer}}
 
 
+The main renderer class responsible for managing rendering operations.  
+
+
+
+
 {\ttfamily \+\#include $<$Renderer.\+h$>$}
 
 \doxysubsubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
 struct \doxymbox{\hyperlink{class_vesper_1_1_renderer_struct_vesper_1_1_renderer_1_1_scene_data}{Scene\+Data}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_vesper_1_1_scene}{Scene} data structure containing view-\/projection matrix.  \doxymbox{\hyperlink{class_vesper_1_1_renderer_struct_vesper_1_1_renderer_1_1_scene_data}{More...}}\end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 static void \doxymbox{\hyperlink{class_vesper_1_1_renderer_af44c320528448c97bdb376d77abfc38f}{Init}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Initializes the renderer. \end{DoxyCompactList}\item 
 static void \doxymbox{\hyperlink{class_vesper_1_1_renderer_a5b83c5f87093d2ec01b48f394710911a}{On\+Window\+Resize}} (uint32\+\_\+t width, uint32\+\_\+t height)
-\item 
+\begin{DoxyCompactList}\small\item\em Handles window resize events by resizing the viewport. \end{DoxyCompactList}\item 
 static void \doxymbox{\hyperlink{class_vesper_1_1_renderer_af694e28df0649ed7a578db1b66ca2dc2}{Begin\+Scene}} (\doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera}{Orthographic\+Camera}} \&camera)
-\item 
+\begin{DoxyCompactList}\small\item\em Begins a new scene with the given orthographic camera. \end{DoxyCompactList}\item 
 static void \doxymbox{\hyperlink{class_vesper_1_1_renderer_af292ee3e0d31cf60326d7d0d3c78e3c3}{End\+Scene}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Ends the current scene. \end{DoxyCompactList}\item 
 static void \doxymbox{\hyperlink{class_vesper_1_1_renderer_a35eb1025f99fcb30a9389024fcb0394f}{Submit}} (const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_shader}{Shader}} $>$ \&shader, const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_vertex_array}{Vertex\+Array}} $>$ \&vertex\+Array, const glm::\+mat4 \&transform=glm::\+mat4(1.\+0f))
-\item 
+\begin{DoxyCompactList}\small\item\em Submits a draw call with the specified shader, vertex array, and transform. \end{DoxyCompactList}\item 
 static \doxymbox{\hyperlink{class_vesper_1_1_renderer_a_p_i_acbef8f1a2c9546387b6513640c5c7995}{Renderer\+API::\+\+API}} \doxymbox{\hyperlink{class_vesper_1_1_renderer_af8221f49491f130b6de7feb1b5093227}{Get\+API}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Retrieves the current rendering API. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Static Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 static \doxymbox{\hyperlink{class_vesper_1_1_renderer_struct_vesper_1_1_renderer_1_1_scene_data}{Scene\+Data}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_vesper_1_1_renderer_a17756a062227bd9025f81d13b482dece}{s\+\_\+\+Scene\+Data}} = new \doxymbox{\hyperlink{class_vesper_1_1_renderer_struct_vesper_1_1_renderer_1_1_scene_data}{Renderer::\+\+Scene\+Data}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Pointer to the current scene data. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+The main renderer class responsible for managing rendering operations. 
 
 \doxysubsection{Class Documentation}
 \index{Vesper::Renderer::SceneData@{Vesper::Renderer::SceneData}}
 \label{struct_vesper_1_1_renderer_1_1_scene_data}
 \Hypertarget{class_vesper_1_1_renderer_struct_vesper_1_1_renderer_1_1_scene_data}
 \doxysubsubsection{struct Vesper::\+Renderer::\+Scene\+Data}
-\begin{DoxyFields}{Class Members}
+\doxylink{class_vesper_1_1_scene}{Scene} data structure containing view-\/projection matrix. \begin{DoxyFields}{Class Members}
 \doxymbox{\Hypertarget{class_vesper_1_1_renderer_af847dbebe6695a66c2ca92a9f6019518}\label{class_vesper_1_1_renderer_af847dbebe6695a66c2ca92a9f6019518}} 
 mat4&
 ViewProjectionMatrix&
-\\
+The combined view-\/projection matrix for the scene. \\
 \hline
 
 \end{DoxyFields}
@@ -56,11 +64,22 @@ ViewProjectionMatrix&
 void Vesper::\+\+Renderer::\+\+Begin\+Scene (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera}{Orthographic\+Camera}} \&}]{camera}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
+
+Begins a new scene with the given orthographic camera. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em camera} & The orthographic camera defining the view and projection for the scene. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{Todo}
+\item[\doxymbox{\hyperlink{todo__todo000008}{Todo}}]Support for other camera types. \end{DoxyRefDesc}
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00027\ \ \ \ \ \{}
-\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
-\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_renderer_a17756a062227bd9025f81d13b482dece}{s\_SceneData}}-\/>ViewProjectionMatrix\ =\ camera.GetViewProjectionMatrix();}
-\DoxyCodeLine{00030\ \ \ \ \ \}}
+\DoxyCodeLine{00028\ \ \ \ \ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_renderer_a17756a062227bd9025f81d13b482dece}{s\_SceneData}}-\/>ViewProjectionMatrix\ =\ camera.GetViewProjectionMatrix();}
+\DoxyCodeLine{00031\ \ \ \ \ \}}
 
 \end{DoxyCode}
 
@@ -74,11 +93,18 @@ References \doxymbox{\hyperlink{class_vesper_1_1_renderer_a17756a062227bd9025f81
 void Vesper::\+\+Renderer::\+\+End\+Scene (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
+
+Ends the current scene. 
+
+\begin{DoxyNote}{Note}
+Currently does nothing as scene closure is automatic, but could be useful for a render interface 
+\end{DoxyNote}
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00033\ \ \ \ \ \{}
-\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
-\DoxyCodeLine{00035\ }
-\DoxyCodeLine{00036\ \ \ \ \ \}}
+\DoxyCodeLine{00034\ \ \ \ \ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \}}
 
 \end{DoxyCode}
 \Hypertarget{class_vesper_1_1_renderer_af8221f49491f130b6de7feb1b5093227}\index{Vesper::Renderer@{Vesper::Renderer}!GetAPI@{GetAPI}}
@@ -88,8 +114,12 @@ void Vesper::\+\+Renderer::\+\+End\+Scene (\begin{DoxyParamCaption}{}{}\end{Doxy
 \doxymbox{\hyperlink{class_vesper_1_1_renderer_a_p_i_acbef8f1a2c9546387b6513640c5c7995}{Renderer\+API::\+\+API}} Vesper::\+\+Renderer::\+\+Get\+API (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
 
 
+
+Retrieves the current rendering API. 
+
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00023\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_renderer_a_p_i_ad6aac6c7aa5c6ed6d5148bdc227fbc16}{RendererAPI::GetAPI}}();\ \}}
+\DoxyCodeLine{00040\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_renderer_a_p_i_ad6aac6c7aa5c6ed6d5148bdc227fbc16}{RendererAPI::GetAPI}}();\ \}}
 
 \end{DoxyCode}
 
@@ -107,13 +137,20 @@ Referenced by \doxymbox{\hyperlink{class_vesper_1_1_framebuffer_a3069ed2e6784172
 void Vesper::\+\+Renderer::\+\+Init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
+
+Initializes the renderer. 
+
+\begin{DoxyNote}{Note}
+This initializes both the \doxylink{class_vesper_1_1_render_command}{Render\+Command} and \doxylink{class_vesper_1_1_renderer2_d}{Renderer2D} systems. 
+\end{DoxyNote}
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00013\ \ \ \ \ \{}
-\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
-\DoxyCodeLine{00015\ }
-\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_render_command_aedc33f5de25202004b79a4fa0e090919}{RenderCommand::Init}}();}
-\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a4fbfb5a17dac37385dfcf13a0f457ff5}{Renderer2D::Init}}();}
-\DoxyCodeLine{00018\ \ \ \ \ \}}
+\DoxyCodeLine{00014\ \ \ \ \ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_render_command_aedc33f5de25202004b79a4fa0e090919}{RenderCommand::Init}}();}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d_a4fbfb5a17dac37385dfcf13a0f457ff5}{Renderer2D::Init}}();}
+\DoxyCodeLine{00019\ \ \ \ \ \}}
 
 \end{DoxyCode}
 
@@ -131,11 +168,15 @@ Referenced by \doxymbox{\hyperlink{class_vesper_1_1_application_adb6d84492e60757
 void Vesper::\+\+Renderer::\+\+On\+Window\+Resize (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{width}{, }\item[{uint32\+\_\+t}]{height}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
+
+Handles window resize events by resizing the viewport. 
+
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00021\ \ \ \ \ \{}
-\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
-\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_render_command_a7f5374c89d005bc06c173211f51624f5}{RenderCommand::SetViewport}}(0,\ 0,\ width,\ height);}
-\DoxyCodeLine{00024\ \ \ \ \ \}}
+\DoxyCodeLine{00022\ \ \ \ \ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_render_command_a7f5374c89d005bc06c173211f51624f5}{RenderCommand::SetViewport}}(0,\ 0,\ width,\ height);}
+\DoxyCodeLine{00025\ \ \ \ \ \}}
 
 \end{DoxyCode}
 
@@ -153,16 +194,31 @@ Referenced by \doxymbox{\hyperlink{class_vesper_1_1_application_a767d42619845c71
 void Vesper::\+\+Renderer::\+\+Submit (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_shader}{Shader}} $>$ \&}]{shader}{, }\item[{const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_vertex_array}{Vertex\+Array}} $>$ \&}]{vertex\+Array}{, }\item[{const glm::\+mat4 \&}]{transform}{ = {\ttfamily glm:\+:\+mat4(1.0f)}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
+
+Submits a draw call with the specified shader, vertex array, and transform. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em shader} & The shader to use for rendering. \\
+\hline
+{\em vertex\+Array} & The vertex array to draw. \\
+\hline
+{\em transform} & The transformation matrix to apply. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{Todo}
+\item[\doxymbox{\hyperlink{todo__todo000009}{Todo}}]Set up a command list to encapsulate this for draw order control \end{DoxyRefDesc}
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00039\ \ \ \ \ \{}
-\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
-\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ shader-\/>Bind();}
-\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ std::dynamic\_pointer\_cast<OpenGLShader>(shader)-\/>UploadUniformMat4(\textcolor{stringliteral}{"{}u\_ViewProjection"{}},\ \doxymbox{\hyperlink{class_vesper_1_1_renderer_a17756a062227bd9025f81d13b482dece}{s\_SceneData}}-\/>ViewProjectionMatrix);}
-\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ std::dynamic\_pointer\_cast<OpenGLShader>(shader)-\/>UploadUniformMat4(\textcolor{stringliteral}{"{}u\_Transform"{}},\ transform);}
-\DoxyCodeLine{00044\ }
-\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ vertexArray-\/>Bind();}
-\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_render_command_ae7d3374adebb2f37f3e74a10e04d405e}{RenderCommand::DrawIndexed}}(vertexArray);}
-\DoxyCodeLine{00047\ \ \ \ \ \}}
+\DoxyCodeLine{00040\ \ \ \ \ \{}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ shader-\/>Bind();}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ std::dynamic\_pointer\_cast<OpenGLShader>(shader)-\/>UploadUniformMat4(\textcolor{stringliteral}{"{}u\_ViewProjection"{}},\ \doxymbox{\hyperlink{class_vesper_1_1_renderer_a17756a062227bd9025f81d13b482dece}{s\_SceneData}}-\/>ViewProjectionMatrix);}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ std::dynamic\_pointer\_cast<OpenGLShader>(shader)-\/>UploadUniformMat4(\textcolor{stringliteral}{"{}u\_Transform"{}},\ transform);}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ vertexArray-\/>Bind();}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_render_command_ae7d3374adebb2f37f3e74a10e04d405e}{RenderCommand::DrawIndexed}}(vertexArray);}
+\DoxyCodeLine{00048\ \ \ \ \ \}}
 
 \end{DoxyCode}
 
@@ -179,6 +235,10 @@ References \doxymbox{\hyperlink{class_vesper_1_1_renderer_a17756a062227bd9025f81
 \doxysubsubsection{\texorpdfstring{s\_SceneData}{s\_SceneData}}
 {\footnotesize\ttfamily \label{class_vesper_1_1_renderer_a17756a062227bd9025f81d13b482dece} 
 \doxymbox{\hyperlink{class_vesper_1_1_renderer_struct_vesper_1_1_renderer_1_1_scene_data}{Renderer::\+\+Scene\+Data}} \texorpdfstring{$\ast$}{*} Vesper::\+\+Renderer::\+s\+\_\+\+Scene\+Data = new \doxymbox{\hyperlink{class_vesper_1_1_renderer_struct_vesper_1_1_renderer_1_1_scene_data}{Renderer::\+\+Scene\+Data}}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Pointer to the current scene data. 
 
 
 

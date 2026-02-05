@@ -98,6 +98,9 @@ $(function(){initNavTree('class_vesper_1_1_texture2_d.html','','class_vesper_1_1
 </div><!--header-->
 <div class="contents">
 
+<p>An abstraction for a 2D texture.  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_texture_8h_source.html">Texture.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Vesper::Texture2D:</div>
@@ -105,7 +108,7 @@ Inheritance diagram for Vesper::Texture2D:</div>
  <div class="center">
   <img src="class_vesper_1_1_texture2_d.png" usemap="#Vesper_3A_3ATexture2D_map" alt=""/>
   <map id="Vesper_3A_3ATexture2D_map" name="Vesper_3A_3ATexture2D_map">
-<area href="class_vesper_1_1_texture.html" alt="Vesper::Texture" shape="rect" coords="0,0,164,24"/>
+<area href="class_vesper_1_1_texture.html" title="An abstraction for a texture." alt="Vesper::Texture" shape="rect" coords="0,0,164,24"/>
 <area href="class_vesper_1_1_open_g_l_texture2_d.html" alt="Vesper::OpenGLTexture2D" shape="rect" coords="0,112,164,136"/>
   </map>
 </div></div>
@@ -120,14 +123,21 @@ Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_methods_class_vesper_1_1_texture"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_vesper_1_1_texture')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="class_vesper_1_1_texture.html">Vesper::Texture</a></td></tr>
 <tr class="memitem:abaee8793ab274eb12e797affb8bb5406 inherit pub_methods_class_vesper_1_1_texture" id="r_abaee8793ab274eb12e797affb8bb5406"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="class_vesper_1_1_texture.html#abaee8793ab274eb12e797affb8bb5406">~Texture</a> ()=default</td></tr>
 <tr class="memitem:a7e31e9571857dded8570e2c102235d4c inherit pub_methods_class_vesper_1_1_texture" id="r_a7e31e9571857dded8570e2c102235d4c"><td class="memItemLeft">virtual uint32_t&#160;</td><td class="memItemRight"><a class="el" href="class_vesper_1_1_texture.html#a7e31e9571857dded8570e2c102235d4c">GetWidth</a> () const =0</td></tr>
+<tr class="memdesc:a7e31e9571857dded8570e2c102235d4c inherit pub_methods_class_vesper_1_1_texture"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the width of the texture.  <br /></td></tr>
 <tr class="memitem:a9b506f28915ef764c52b23897606628b inherit pub_methods_class_vesper_1_1_texture" id="r_a9b506f28915ef764c52b23897606628b"><td class="memItemLeft">virtual uint32_t&#160;</td><td class="memItemRight"><a class="el" href="class_vesper_1_1_texture.html#a9b506f28915ef764c52b23897606628b">GetHeight</a> () const =0</td></tr>
+<tr class="memdesc:a9b506f28915ef764c52b23897606628b inherit pub_methods_class_vesper_1_1_texture"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the height of the texture.  <br /></td></tr>
 <tr class="memitem:aac3791b93ab26cf8c8df7ae02c6cc8d3 inherit pub_methods_class_vesper_1_1_texture" id="r_aac3791b93ab26cf8c8df7ae02c6cc8d3"><td class="memItemLeft">virtual uint32_t&#160;</td><td class="memItemRight"><a class="el" href="class_vesper_1_1_texture.html#aac3791b93ab26cf8c8df7ae02c6cc8d3">GetRendererID</a> () const =0</td></tr>
+<tr class="memdesc:aac3791b93ab26cf8c8df7ae02c6cc8d3 inherit pub_methods_class_vesper_1_1_texture"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the renderer ID of the texture.  <br /></td></tr>
 <tr class="memitem:aecdaafa875ff2ce3e3972f4c42b23194 inherit pub_methods_class_vesper_1_1_texture" id="r_aecdaafa875ff2ce3e3972f4c42b23194"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="class_vesper_1_1_texture.html#aecdaafa875ff2ce3e3972f4c42b23194">Bind</a> (uint32_t slot=0) const =0</td></tr>
+<tr class="memdesc:aecdaafa875ff2ce3e3972f4c42b23194 inherit pub_methods_class_vesper_1_1_texture"><td class="mdescLeft">&#160;</td><td class="mdescRight">Binds the texture to the specified slot for use.  <br /></td></tr>
 <tr class="memitem:aae25563a473b10ba3cea4d82310d734a inherit pub_methods_class_vesper_1_1_texture" id="r_aae25563a473b10ba3cea4d82310d734a"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="class_vesper_1_1_texture.html#aae25563a473b10ba3cea4d82310d734a">SetData</a> (void *data, uint32_t size)=0</td></tr>
+<tr class="memdesc:aae25563a473b10ba3cea4d82310d734a inherit pub_methods_class_vesper_1_1_texture"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the data of the texture.  <br /></td></tr>
 <tr class="memitem:a82a2ccb871e737e685589ab0dbd35a34 inherit pub_methods_class_vesper_1_1_texture" id="r_a82a2ccb871e737e685589ab0dbd35a34"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="class_vesper_1_1_texture.html#a82a2ccb871e737e685589ab0dbd35a34">operator==</a> (const <a class="el" href="class_vesper_1_1_texture2_d.html">Texture2D</a> &amp;other) const =0</td></tr>
 <tr class="memitem:a8b5e8ba4dc3e4cec52810b22dab26dd7 inherit pub_methods_class_vesper_1_1_texture" id="r_a8b5e8ba4dc3e4cec52810b22dab26dd7"><td class="memItemLeft">virtual std::string&#160;</td><td class="memItemRight"><a class="el" href="class_vesper_1_1_texture.html#a8b5e8ba4dc3e4cec52810b22dab26dd7">GetName</a> () const =0</td></tr>
 </table>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>An abstraction for a 2D texture. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a8a1697b19fa2ebcd26fb387b2adaa0f7" name="a8a1697b19fa2ebcd26fb387b2adaa0f7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8a1697b19fa2ebcd26fb387b2adaa0f7">&#9670;&#160;</a></span>Create() <span class="overload">[1/2]</span></h2>
 
@@ -159,11 +169,11 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   28</span>        <a class="code hl_define" href="_asserts_8h.html#a3b51b77f75997760894138afc89403c9">VZ_CORE_ASSERT</a>(<span class="keyword">false</span>, <span class="stringliteral">&quot;Unknown RendererAPI!&quot;</span>);</div>
 <div class="line"><span class="lineno">   29</span>        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
 <div class="line"><span class="lineno">   30</span>    }</div>
-<div class="ttc" id="a_asserts_8h_html_a3b51b77f75997760894138afc89403c9"><div class="ttname"><a href="_asserts_8h.html#a3b51b77f75997760894138afc89403c9">VZ_CORE_ASSERT</a></div><div class="ttdeci">#define VZ_CORE_ASSERT(x,...)</div><div class="ttdef"><b>Definition</b> Asserts.h:13</div></div>
-<div class="ttc" id="aclass_vesper_1_1_renderer_a_p_i_html_acbef8f1a2c9546387b6513640c5c7995a6adf97f83acf6453d4a6a4b1070f3754"><div class="ttname"><a href="class_vesper_1_1_renderer_a_p_i.html#acbef8f1a2c9546387b6513640c5c7995a6adf97f83acf6453d4a6a4b1070f3754">Vesper::RendererAPI::API::None</a></div><div class="ttdeci">@ None</div><div class="ttdef"><b>Definition</b> RendererAPI.h:12</div></div>
-<div class="ttc" id="aclass_vesper_1_1_renderer_a_p_i_html_acbef8f1a2c9546387b6513640c5c7995a760716b590ee7c0adc25f434f577d8be"><div class="ttname"><a href="class_vesper_1_1_renderer_a_p_i.html#acbef8f1a2c9546387b6513640c5c7995a760716b590ee7c0adc25f434f577d8be">Vesper::RendererAPI::API::OpenGL</a></div><div class="ttdeci">@ OpenGL</div><div class="ttdef"><b>Definition</b> RendererAPI.h:13</div></div>
-<div class="ttc" id="aclass_vesper_1_1_renderer_html_af8221f49491f130b6de7feb1b5093227"><div class="ttname"><a href="class_vesper_1_1_renderer.html#af8221f49491f130b6de7feb1b5093227">Vesper::Renderer::GetAPI</a></div><div class="ttdeci">static RendererAPI::API GetAPI()</div><div class="ttdef"><b>Definition</b> Renderer.h:23</div></div>
-<div class="ttc" id="anamespace_vesper_html_a313930b55375b2f4dd36375b56f11047"><div class="ttname"><a href="namespace_vesper.html#a313930b55375b2f4dd36375b56f11047">Vesper::CreateRef</a></div><div class="ttdeci">constexpr Ref&lt; T &gt; CreateRef(Args &amp;&amp;... args)</div><div class="ttdef"><b>Definition</b> Defines_Macros.h:23</div></div>
+<div class="ttc" id="a_asserts_8h_html_a3b51b77f75997760894138afc89403c9"><div class="ttname"><a href="_asserts_8h.html#a3b51b77f75997760894138afc89403c9">VZ_CORE_ASSERT</a></div><div class="ttdeci">#define VZ_CORE_ASSERT(x,...)</div><div class="ttdef"><b>Definition</b> Asserts.h:20</div></div>
+<div class="ttc" id="aclass_vesper_1_1_renderer_a_p_i_html_acbef8f1a2c9546387b6513640c5c7995a6adf97f83acf6453d4a6a4b1070f3754"><div class="ttname"><a href="class_vesper_1_1_renderer_a_p_i.html#acbef8f1a2c9546387b6513640c5c7995a6adf97f83acf6453d4a6a4b1070f3754">Vesper::RendererAPI::API::None</a></div><div class="ttdeci">@ None</div><div class="ttdef"><b>Definition</b> RendererAPI.h:15</div></div>
+<div class="ttc" id="aclass_vesper_1_1_renderer_a_p_i_html_acbef8f1a2c9546387b6513640c5c7995a760716b590ee7c0adc25f434f577d8be"><div class="ttname"><a href="class_vesper_1_1_renderer_a_p_i.html#acbef8f1a2c9546387b6513640c5c7995a760716b590ee7c0adc25f434f577d8be">Vesper::RendererAPI::API::OpenGL</a></div><div class="ttdeci">@ OpenGL</div><div class="ttdef"><b>Definition</b> RendererAPI.h:16</div></div>
+<div class="ttc" id="aclass_vesper_1_1_renderer_html_af8221f49491f130b6de7feb1b5093227"><div class="ttname"><a href="class_vesper_1_1_renderer.html#af8221f49491f130b6de7feb1b5093227">Vesper::Renderer::GetAPI</a></div><div class="ttdeci">static RendererAPI::API GetAPI()</div><div class="ttdoc">Retrieves the current rendering API.</div><div class="ttdef"><b>Definition</b> Renderer.h:40</div></div>
+<div class="ttc" id="anamespace_vesper_html_a313930b55375b2f4dd36375b56f11047"><div class="ttname"><a href="namespace_vesper.html#a313930b55375b2f4dd36375b56f11047">Vesper::CreateRef</a></div><div class="ttdeci">constexpr Ref&lt; T &gt; CreateRef(Args &amp;&amp;... args)</div><div class="ttdoc">Creates a Ref (shared_ptr) for the given type and constructor arguments.</div><div class="ttdef"><b>Definition</b> Defines_Macros.h:72</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="class_vesper_1_1_renderer.html#af8221f49491f130b6de7feb1b5093227">Vesper::Renderer::GetAPI()</a>, <a class="el" href="class_vesper_1_1_renderer_a_p_i.html#acbef8f1a2c9546387b6513640c5c7995a6adf97f83acf6453d4a6a4b1070f3754">Vesper::RendererAPI::None</a>, and <a class="el" href="class_vesper_1_1_renderer_a_p_i.html#acbef8f1a2c9546387b6513640c5c7995a760716b590ee7c0adc25f434f577d8be">Vesper::RendererAPI::OpenGL</a>.</p>
 

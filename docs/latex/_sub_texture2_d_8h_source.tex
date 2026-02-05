@@ -11,20 +11,37 @@
 \DoxyCodeLine{00007\ }
 \DoxyCodeLine{00008\ \textcolor{keyword}{namespace}\ \doxymbox{\hyperlink{namespace_vesper}{Vesper}}\ \{}
 \DoxyCodeLine{00009\ }
-\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{class}\ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d}{SubTexture2D}}}
-\DoxyCodeLine{00011\ \ \ \ \ \{}
-\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d_a69eaedd3ad73c51df02e75f9895102df}{SubTexture2D}}(\textcolor{keyword}{const}\ Ref<Texture2D>\&\ texture,\ \textcolor{keyword}{const}\ glm::vec2\&\ min,\ \textcolor{keyword}{const}\ glm::vec2\&\ max);}
-\DoxyCodeLine{00014\ }
-\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d_a4f660d4b031fd84e4208a0c1c999ea58}{Ref}}<\doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d_a4f660d4b031fd84e4208a0c1c999ea58}{Texture2D}}>\ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d_a4f660d4b031fd84e4208a0c1c999ea58}{GetTexture}}()\ \{\ \textcolor{keywordflow}{return}\ m\_Texture;\ \}}
-\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d_aa07f55a33383360161371fb7c78f196f}{glm}}::\doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d_aa07f55a33383360161371fb7c78f196f}{vec2}}*\ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d_aa07f55a33383360161371fb7c78f196f}{GetTexCoords}}()\ \{\ \textcolor{keywordflow}{return}\ m\_TexCoords;\ \}}
-\DoxyCodeLine{00017\ }
-\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d_acaf4be5d42185bb62a8be95c4c15bc18}{Ref}}<\doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d_acaf4be5d42185bb62a8be95c4c15bc18}{SubTexture2D}}>\ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d_acaf4be5d42185bb62a8be95c4c15bc18}{CreateFromCoords}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d_acaf4be5d42185bb62a8be95c4c15bc18}{Ref}}<\doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d_acaf4be5d42185bb62a8be95c4c15bc18}{Texture2D}}>\&\ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d_acaf4be5d42185bb62a8be95c4c15bc18}{texture}},\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d_acaf4be5d42185bb62a8be95c4c15bc18}{glm}}::\doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d_acaf4be5d42185bb62a8be95c4c15bc18}{vec2}}\&\ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d_acaf4be5d42185bb62a8be95c4c15bc18}{coords}},\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d_acaf4be5d42185bb62a8be95c4c15bc18}{glm}}::\doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d_acaf4be5d42185bb62a8be95c4c15bc18}{vec2}}\&\ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d_acaf4be5d42185bb62a8be95c4c15bc18}{cellSize}},\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d_acaf4be5d42185bb62a8be95c4c15bc18}{glm}}::\doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d_acaf4be5d42185bb62a8be95c4c15bc18}{vec2}}\&\ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d_acaf4be5d42185bb62a8be95c4c15bc18}{spriteSize}}\ =\ \{1,\ 1\});}
-\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d_a224e8c4bb1be39eb457729eea81fd652}{Ref}}<\doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d_a224e8c4bb1be39eb457729eea81fd652}{Texture2D}}>\ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d_a224e8c4bb1be39eb457729eea81fd652}{m\_Texture}};}
-\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d}{glm}}::\doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d}{vec2}}\ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d}{m\_TexCoords}}[4];}
-\DoxyCodeLine{00022\ \ \ \ \ \};}
-\DoxyCodeLine{00023\ }
-\DoxyCodeLine{00024\ \}}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{comment}{///\ @class\ SubTexture2D}}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{comment}{///\ @brief\ Represents\ a\ sub-\/region\ of\ a\ 2D\ texture,\ useful\ for\ sprite\ sheets.}}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{class}\ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d}{SubTexture2D}}}
+\DoxyCodeLine{00013\ \ \ \ \ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Constructs\ a\ SubTexture2D\ from\ the\ given\ texture\ and\ texture\ coordinates.}}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{comment}{///}}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @param\ texture\ The\ texture\ from\ which\ the\ sub-\/texture\ is\ derived.}}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @param\ min\ The\ minimum\ texture\ coordinates\ (bottom-\/left).}}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @param\ max\ The\ maximum\ texture\ coordinates\ (top-\/right).}}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d_a69eaedd3ad73c51df02e75f9895102df}{SubTexture2D}}(\textcolor{keyword}{const}\ Ref<Texture2D>\&\ texture,\ \textcolor{keyword}{const}\ glm::vec2\&\ min,\ \textcolor{keyword}{const}\ glm::vec2\&\ max);}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Returns\ the\ underlying\ texture\ of\ the\ sub-\/texture.}}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d_a4f660d4b031fd84e4208a0c1c999ea58}{Ref}}<\doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d_a4f660d4b031fd84e4208a0c1c999ea58}{Texture2D}}>\ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d_a4f660d4b031fd84e4208a0c1c999ea58}{GetTexture}}()\ \{\ \textcolor{keywordflow}{return}\ m\_Texture;\ \}}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Returns\ the\ texture\ coordinates\ of\ the\ sub-\/texture.}}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d_aa07f55a33383360161371fb7c78f196f}{glm}}::\doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d_aa07f55a33383360161371fb7c78f196f}{vec2}}*\ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d_aa07f55a33383360161371fb7c78f196f}{GetTexCoords}}()\ \{\ \textcolor{keywordflow}{return}\ m\_TexCoords;\ \}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Creates\ a\ SubTexture2D\ from\ a\ grid\ of\ cells\ within\ the\ given\ texture.}}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{comment}{///}}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @param\ texture\ The\ texture\ from\ which\ the\ sub-\/texture\ is\ derived.}}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @param\ coords\ The\ coordinates\ of\ the\ cell\ in\ the\ grid.}}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @param\ cellSize\ The\ size\ of\ each\ cell\ in\ the\ grid.}}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @param\ spriteSize\ The\ size\ of\ the\ sprite\ in\ cells\ (default\ is\ 1x1).}}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d_acaf4be5d42185bb62a8be95c4c15bc18}{Ref}}<\doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d_acaf4be5d42185bb62a8be95c4c15bc18}{SubTexture2D}}>\ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d_acaf4be5d42185bb62a8be95c4c15bc18}{CreateFromCoords}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d_acaf4be5d42185bb62a8be95c4c15bc18}{Ref}}<\doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d_acaf4be5d42185bb62a8be95c4c15bc18}{Texture2D}}>\&\ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d_acaf4be5d42185bb62a8be95c4c15bc18}{texture}},\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d_acaf4be5d42185bb62a8be95c4c15bc18}{glm}}::\doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d_acaf4be5d42185bb62a8be95c4c15bc18}{vec2}}\&\ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d_acaf4be5d42185bb62a8be95c4c15bc18}{coords}},\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d_acaf4be5d42185bb62a8be95c4c15bc18}{glm}}::\doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d_acaf4be5d42185bb62a8be95c4c15bc18}{vec2}}\&\ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d_acaf4be5d42185bb62a8be95c4c15bc18}{cellSize}},\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d_acaf4be5d42185bb62a8be95c4c15bc18}{glm}}::\doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d_acaf4be5d42185bb62a8be95c4c15bc18}{vec2}}\&\ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d_acaf4be5d42185bb62a8be95c4c15bc18}{spriteSize}}\ =\ \{1,\ 1\});}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ The\ underlying\ texture\ of\ the\ sub-\/texture.}}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d_a224e8c4bb1be39eb457729eea81fd652}{Ref}}<\doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d_a224e8c4bb1be39eb457729eea81fd652}{Texture2D}}>\ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d_a224e8c4bb1be39eb457729eea81fd652}{m\_Texture}};}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ The\ texture\ coordinates\ of\ the\ sub-\/texture.}}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d}{glm}}::\doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d}{vec2}}\ \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d}{m\_TexCoords}}[4];}
+\DoxyCodeLine{00039\ \ \ \ \ \};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \}}
 
 \end{DoxyCode}

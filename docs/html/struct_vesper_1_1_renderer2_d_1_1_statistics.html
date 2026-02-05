@@ -98,19 +98,28 @@ $(function(){initNavTree('struct_vesper_1_1_renderer2_d_1_1_statistics.html','',
 </div><!--header-->
 <div class="contents">
 
+<p>2D <a class="el" href="class_vesper_1_1_renderer.html" title="The main renderer class responsible for managing rendering operations.">Renderer</a> <a class="el" href="struct_vesper_1_1_renderer2_d_1_1_statistics.html" title="2D Renderer Statistics">Statistics</a>  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_renderer2_d_8h_source.html">Renderer2D.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a95453daa25d3333001a9a3f161b71818" id="r_a95453daa25d3333001a9a3f161b71818"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#a95453daa25d3333001a9a3f161b71818">GetTotalVertexCount</a> ()</td></tr>
+<tr class="memdesc:a95453daa25d3333001a9a3f161b71818"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the total number of vertices drawn.  <br /></td></tr>
 <tr class="memitem:ad6cec520adab3c60ab10d07bb513f642" id="r_ad6cec520adab3c60ab10d07bb513f642"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#ad6cec520adab3c60ab10d07bb513f642">GetTotalIndexCount</a> ()</td></tr>
+<tr class="memdesc:ad6cec520adab3c60ab10d07bb513f642"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the total number of indices drawn.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a20255a808e6f6b8fcab59fbfc11bf673" id="r_a20255a808e6f6b8fcab59fbfc11bf673"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#a20255a808e6f6b8fcab59fbfc11bf673">DrawCalls</a> = 0</td></tr>
+<tr class="memdesc:a20255a808e6f6b8fcab59fbfc11bf673"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of draw calls being made.  <br /></td></tr>
 <tr class="memitem:af20c33069cfb4a0cccd5550dc977d9ba" id="r_af20c33069cfb4a0cccd5550dc977d9ba"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#af20c33069cfb4a0cccd5550dc977d9ba">QuadCount</a> = 0</td></tr>
+<tr class="memdesc:af20c33069cfb4a0cccd5550dc977d9ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of quads being drawn.  <br /></td></tr>
 </table>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>2D <a class="el" href="class_vesper_1_1_renderer.html" title="The main renderer class responsible for managing rendering operations.">Renderer</a> <a class="el" href="struct_vesper_1_1_renderer2_d_1_1_statistics.html" title="2D Renderer Statistics">Statistics</a> </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="ad6cec520adab3c60ab10d07bb513f642" name="ad6cec520adab3c60ab10d07bb513f642"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad6cec520adab3c60ab10d07bb513f642">&#9670;&#160;</a></span>GetTotalIndexCount()</h2>
 
@@ -133,8 +142,10 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   61</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#af20c33069cfb4a0cccd5550dc977d9ba">QuadCount</a> * 6; }</div>
-<div class="ttc" id="astruct_vesper_1_1_renderer2_d_1_1_statistics_html_af20c33069cfb4a0cccd5550dc977d9ba"><div class="ttname"><a href="#af20c33069cfb4a0cccd5550dc977d9ba">Vesper::Renderer2D::Statistics::QuadCount</a></div><div class="ttdeci">uint32_t QuadCount</div><div class="ttdef"><b>Definition</b> Renderer2D.h:59</div></div>
+
+<p>Calculates the total number of indices drawn. </p>
+<div class="fragment"><div class="line"><span class="lineno">  213</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#af20c33069cfb4a0cccd5550dc977d9ba">QuadCount</a> * 6; }</div>
+<div class="ttc" id="astruct_vesper_1_1_renderer2_d_1_1_statistics_html_af20c33069cfb4a0cccd5550dc977d9ba"><div class="ttname"><a href="#af20c33069cfb4a0cccd5550dc977d9ba">Vesper::Renderer2D::Statistics::QuadCount</a></div><div class="ttdeci">uint32_t QuadCount</div><div class="ttdoc">The number of quads being drawn.</div><div class="ttdef"><b>Definition</b> Renderer2D.h:209</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#af20c33069cfb4a0cccd5550dc977d9ba">QuadCount</a>.</p>
 
@@ -162,7 +173,9 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   60</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#af20c33069cfb4a0cccd5550dc977d9ba">QuadCount</a> * 4; }</div>
+
+<p>Calculates the total number of vertices drawn. </p>
+<div class="fragment"><div class="line"><span class="lineno">  211</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#af20c33069cfb4a0cccd5550dc977d9ba">QuadCount</a> * 4; }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#af20c33069cfb4a0cccd5550dc977d9ba">QuadCount</a>.</p>
 
@@ -181,6 +194,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>The number of draw calls being made. </p>
+
 <p class="reference">Referenced by <a class="el" href="class_vesper_1_1_renderer2_d.html#ac79b4f772e92e9cc5489b7ed0bb9b659">Vesper::Renderer2D::Flush()</a>.</p>
 
 </div>
@@ -196,6 +211,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>The number of quads being drawn. </p>
 
 <p class="reference">Referenced by <a class="el" href="class_vesper_1_1_renderer2_d.html#aba269c4ba2ba99b13b47c9e71bf1f8e3">Vesper::Renderer2D::DrawQuad()</a>, <a class="el" href="class_vesper_1_1_renderer2_d.html#ac61593eac73ea6fabba060b34c987302">Vesper::Renderer2D::DrawQuadRotated()</a>, <a class="el" href="class_vesper_1_1_renderer2_d.html#ac4b8d7d28d6384f102cb0f7690ccc391">Vesper::Renderer2D::DrawQuadRotatedWithTexture()</a>, <a class="el" href="class_vesper_1_1_renderer2_d.html#a41c4aa9d715e2ea03825360305989f00">Vesper::Renderer2D::DrawQuadRotatedWithTexture()</a>, <a class="el" href="class_vesper_1_1_renderer2_d.html#a273c91ba7abef4d2a99640bf98a4a7d4">Vesper::Renderer2D::DrawQuadWithTexture()</a>, <a class="el" href="class_vesper_1_1_renderer2_d.html#afd78da6a4f0aa5af3c7f8d533bd22b49">Vesper::Renderer2D::DrawQuadWithTexture()</a>, <a class="el" href="#ad6cec520adab3c60ab10d07bb513f642">GetTotalIndexCount()</a>, and <a class="el" href="#a95453daa25d3333001a9a3f161b71818">GetTotalVertexCount()</a>.</p>
 

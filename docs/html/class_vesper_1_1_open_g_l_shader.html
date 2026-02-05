@@ -105,7 +105,7 @@ Inheritance diagram for Vesper::OpenGLShader:</div>
  <div class="center">
   <img src="class_vesper_1_1_open_g_l_shader.png" usemap="#Vesper_3A_3AOpenGLShader_map" alt=""/>
   <map id="Vesper_3A_3AOpenGLShader_map" name="Vesper_3A_3AOpenGLShader_map">
-<area href="class_vesper_1_1_shader.html" alt="Vesper::Shader" shape="rect" coords="0,0,147,24"/>
+<area href="class_vesper_1_1_shader.html" title="An abstraction for a shader program." alt="Vesper::Shader" shape="rect" coords="0,0,147,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -115,13 +115,21 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0cf12300af60a83a733dc4e38b3772f8" id="r_a0cf12300af60a83a733dc4e38b3772f8"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a0cf12300af60a83a733dc4e38b3772f8">OpenGLShader</a> (const std::string &amp;name, const std::string &amp;vertexSrc, const std::string &amp;fragmentSrc)</td></tr>
 <tr class="memitem:a01b3f7907f53e97c71ade1d2ba245233" id="r_a01b3f7907f53e97c71ade1d2ba245233"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a01b3f7907f53e97c71ade1d2ba245233">~OpenGLShader</a> ()</td></tr>
 <tr class="memitem:a3b693b2c8af2234d2030661f5a3fe35e" id="r_a3b693b2c8af2234d2030661f5a3fe35e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3b693b2c8af2234d2030661f5a3fe35e">Bind</a> () const override</td></tr>
+<tr class="memdesc:a3b693b2c8af2234d2030661f5a3fe35e"><td class="mdescLeft">&#160;</td><td class="mdescRight">connects the shader program for use.  <br /></td></tr>
 <tr class="memitem:aa25276d9979c2cba91d152196996dba5" id="r_aa25276d9979c2cba91d152196996dba5"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa25276d9979c2cba91d152196996dba5">Unbind</a> () const override</td></tr>
+<tr class="memdesc:aa25276d9979c2cba91d152196996dba5"><td class="mdescLeft">&#160;</td><td class="mdescRight">disconnects the shader program.  <br /></td></tr>
 <tr class="memitem:a494316a0902f35db7a34a1e3d2641756" id="r_a494316a0902f35db7a34a1e3d2641756"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a494316a0902f35db7a34a1e3d2641756">SetMat4</a> (const std::string &amp;name, const glm::mat4 &amp;value) override</td></tr>
+<tr class="memdesc:a494316a0902f35db7a34a1e3d2641756"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a 4x4 matrix uniform in the shader.  <br /></td></tr>
 <tr class="memitem:a9e55fe4fba2183704f88ba90cfc98f0b" id="r_a9e55fe4fba2183704f88ba90cfc98f0b"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a9e55fe4fba2183704f88ba90cfc98f0b">SetFloat4</a> (const std::string &amp;name, const glm::vec4 &amp;value) override</td></tr>
+<tr class="memdesc:a9e55fe4fba2183704f88ba90cfc98f0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a 4-component float vector uniform in the shader.  <br /></td></tr>
 <tr class="memitem:a7950189b78a1c775dd779bf059c19f20" id="r_a7950189b78a1c775dd779bf059c19f20"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a7950189b78a1c775dd779bf059c19f20">SetFloat3</a> (const std::string &amp;name, const glm::vec3 &amp;value) override</td></tr>
+<tr class="memdesc:a7950189b78a1c775dd779bf059c19f20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a 3-component float vector uniform in the shader.  <br /></td></tr>
 <tr class="memitem:a710f6642c1ceed564b7eebae9ba9243f" id="r_a710f6642c1ceed564b7eebae9ba9243f"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a710f6642c1ceed564b7eebae9ba9243f">SetFloat</a> (const std::string &amp;name, float value) override</td></tr>
+<tr class="memdesc:a710f6642c1ceed564b7eebae9ba9243f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a single float uniform in the shader.  <br /></td></tr>
 <tr class="memitem:a4436d79885690690a133ac26c0ac2a7b" id="r_a4436d79885690690a133ac26c0ac2a7b"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a4436d79885690690a133ac26c0ac2a7b">SetInt</a> (const std::string &amp;name, int value) override</td></tr>
+<tr class="memdesc:a4436d79885690690a133ac26c0ac2a7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a single integer uniform in the shader.  <br /></td></tr>
 <tr class="memitem:a1107df8d1f090ab467bbf6dc09a1e97d" id="r_a1107df8d1f090ab467bbf6dc09a1e97d"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a1107df8d1f090ab467bbf6dc09a1e97d">SetIntArray</a> (const std::string &amp;name, int *values, uint32_t count) override</td></tr>
+<tr class="memdesc:a1107df8d1f090ab467bbf6dc09a1e97d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets an array of integers uniform in the shader.  <br /></td></tr>
 <tr class="memitem:a085d5321d4d6e432b5c642217a38f3d7" id="r_a085d5321d4d6e432b5c642217a38f3d7"><td class="memItemLeft">virtual const std::string &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a085d5321d4d6e432b5c642217a38f3d7">GetName</a> () const override</td></tr>
 <tr class="memitem:ad7e845977ac15ccf7a8d3b30a6d2f73e" id="r_ad7e845977ac15ccf7a8d3b30a6d2f73e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ad7e845977ac15ccf7a8d3b30a6d2f73e">UploadUniformMat4</a> (const std::string &amp;name, const glm::mat4 &amp;matrix)</td></tr>
 <tr class="memitem:a3ea5cb1306fbb051e53ad8a90f829fc5" id="r_a3ea5cb1306fbb051e53ad8a90f829fc5"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3ea5cb1306fbb051e53ad8a90f829fc5">UploadUniformMat3</a> (const std::string &amp;name, const glm::mat3 &amp;matrix)</td></tr>
@@ -178,7 +186,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   32</span>        <span class="keyword">auto</span> count = lastDot == std::string::npos ? filepath.size() - lastSlash : lastDot - lastSlash;</div>
 <div class="line"><span class="lineno">   33</span>        <a class="code hl_variable" href="#af72ebdffb81343a89923546de1c14533">m_Name</a> = filepath.substr(lastSlash, count);</div>
 <div class="line"><span class="lineno">   34</span>    }</div>
-<div class="ttc" id="a_instrumentor_8h_html_aaa03f54db70b44f8decacf111dc1109b"><div class="ttname"><a href="_instrumentor_8h.html#aaa03f54db70b44f8decacf111dc1109b">VZ_PROFILE_FUNCTION</a></div><div class="ttdeci">#define VZ_PROFILE_FUNCTION()</div><div class="ttdef"><b>Definition</b> Instrumentor.h:234</div></div>
+<div class="ttc" id="a_instrumentor_8h_html_aaa03f54db70b44f8decacf111dc1109b"><div class="ttname"><a href="_instrumentor_8h.html#aaa03f54db70b44f8decacf111dc1109b">VZ_PROFILE_FUNCTION</a></div><div class="ttdeci">#define VZ_PROFILE_FUNCTION()</div><div class="ttdef"><b>Definition</b> Instrumentor.h:240</div></div>
 <div class="ttc" id="aclass_vesper_1_1_open_g_l_shader_html_a41e426802fde5fc86cbcbfcddc99fe5e"><div class="ttname"><a href="#a41e426802fde5fc86cbcbfcddc99fe5e">Vesper::OpenGLShader::Compile</a></div><div class="ttdeci">void Compile(std::unordered_map&lt; GLenum, std::string &gt; &amp;shaderSources)</div><div class="ttdef"><b>Definition</b> OpenGLShader.cpp:98</div></div>
 <div class="ttc" id="aclass_vesper_1_1_open_g_l_shader_html_ae96dbed8d97eac3b50196d669ab367c6"><div class="ttname"><a href="#ae96dbed8d97eac3b50196d669ab367c6">Vesper::OpenGLShader::ReadFile</a></div><div class="ttdeci">std::string ReadFile(const std::string &amp;filepath)</div><div class="ttdef"><b>Definition</b> OpenGLShader.cpp:52</div></div>
 <div class="ttc" id="aclass_vesper_1_1_open_g_l_shader_html_af65646fc56ffbbf961067d79062c4e40"><div class="ttname"><a href="#af65646fc56ffbbf961067d79062c4e40">Vesper::OpenGLShader::PreProcess</a></div><div class="ttdeci">std::unordered_map&lt; GLenum, std::string &gt; PreProcess(const std::string &amp;source)</div><div class="ttdef"><b>Definition</b> OpenGLShader.cpp:72</div></div>
@@ -271,6 +279,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>connects the shader program for use. </p>
 
 <p>Implements <a class="el" href="class_vesper_1_1_shader.html#a644e5d528225ce469094da31fb96ed2c">Vesper::Shader</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  176</span>    {</div>
@@ -379,8 +389,8 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  171</span>        <a class="code hl_variable" href="#a930b794994b6cc8990d5e450d6c3cfed">m_RendererID</a> = program;</div>
 <div class="line"><span class="lineno">  172</span> </div>
 <div class="line"><span class="lineno">  173</span>    }</div>
-<div class="ttc" id="a_asserts_8h_html_a3b51b77f75997760894138afc89403c9"><div class="ttname"><a href="_asserts_8h.html#a3b51b77f75997760894138afc89403c9">VZ_CORE_ASSERT</a></div><div class="ttdeci">#define VZ_CORE_ASSERT(x,...)</div><div class="ttdef"><b>Definition</b> Asserts.h:13</div></div>
-<div class="ttc" id="a_log_8h_html_af9f85085b8d9825fe5d84ca485b7ee89"><div class="ttname"><a href="_log_8h.html#af9f85085b8d9825fe5d84ca485b7ee89">VZ_CORE_ERROR</a></div><div class="ttdeci">#define VZ_CORE_ERROR(...)</div><div class="ttdef"><b>Definition</b> Log.h:27</div></div>
+<div class="ttc" id="a_asserts_8h_html_a3b51b77f75997760894138afc89403c9"><div class="ttname"><a href="_asserts_8h.html#a3b51b77f75997760894138afc89403c9">VZ_CORE_ASSERT</a></div><div class="ttdeci">#define VZ_CORE_ASSERT(x,...)</div><div class="ttdef"><b>Definition</b> Asserts.h:20</div></div>
+<div class="ttc" id="a_log_8h_html_af9f85085b8d9825fe5d84ca485b7ee89"><div class="ttname"><a href="_log_8h.html#af9f85085b8d9825fe5d84ca485b7ee89">VZ_CORE_ERROR</a></div><div class="ttdeci">#define VZ_CORE_ERROR(...)</div><div class="ttdoc">error: indicates an error that has occurred</div><div class="ttdef"><b>Definition</b> Log.h:41</div></div>
 <div class="ttc" id="a_open_g_l_shader_8h_html_a7efd7809e1632cdae75603fd1fee61c0"><div class="ttname"><a href="_open_g_l_shader_8h.html#a7efd7809e1632cdae75603fd1fee61c0">GLenum</a></div><div class="ttdeci">unsigned int GLenum</div><div class="ttdef"><b>Definition</b> OpenGLShader.h:7</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a930b794994b6cc8990d5e450d6c3cfed">m_RendererID</a>.</p>
@@ -535,6 +545,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Sets a single float uniform in the shader. </p>
+
 <p>Implements <a class="el" href="class_vesper_1_1_shader.html#aef451106250c23d4ab31f5c364aa28f8">Vesper::Shader</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  201</span>    {</div>
 <div class="line"><span class="lineno">  202</span>        <a class="code hl_define" href="_instrumentor_8h.html#aaa03f54db70b44f8decacf111dc1109b">VZ_PROFILE_FUNCTION</a>();</div>
@@ -573,6 +585,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Sets a 3-component float vector uniform in the shader. </p>
+
 <p>Implements <a class="el" href="class_vesper_1_1_shader.html#ad1b423de1b03aa2f8e37af728d2b29bf">Vesper::Shader</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  195</span>    {</div>
 <div class="line"><span class="lineno">  196</span>        <a class="code hl_define" href="_instrumentor_8h.html#aaa03f54db70b44f8decacf111dc1109b">VZ_PROFILE_FUNCTION</a>();</div>
@@ -609,6 +623,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Sets a 4-component float vector uniform in the shader. </p>
+
 <p>Implements <a class="el" href="class_vesper_1_1_shader.html#a840ec2776c63c940b77f55f14a946e45">Vesper::Shader</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  189</span>    {</div>
 <div class="line"><span class="lineno">  190</span>        <a class="code hl_define" href="_instrumentor_8h.html#aaa03f54db70b44f8decacf111dc1109b">VZ_PROFILE_FUNCTION</a>();</div>
@@ -644,6 +660,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Sets a single integer uniform in the shader. </p>
 
 <p>Implements <a class="el" href="class_vesper_1_1_shader.html#a049a3caeb306f4877fa78065e67a3142">Vesper::Shader</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  207</span>    {</div>
@@ -688,6 +706,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Sets an array of integers uniform in the shader. </p>
+
 <p>Implements <a class="el" href="class_vesper_1_1_shader.html#a623f5f15253e3143161cb071122e9c48">Vesper::Shader</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  213</span>    {</div>
 <div class="line"><span class="lineno">  214</span>        <a class="code hl_define" href="_instrumentor_8h.html#aaa03f54db70b44f8decacf111dc1109b">VZ_PROFILE_FUNCTION</a>();</div>
@@ -724,6 +744,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Sets a 4x4 matrix uniform in the shader. </p>
+
 <p>Implements <a class="el" href="class_vesper_1_1_shader.html#ae054ea57db97bfd3920c513067f50f18">Vesper::Shader</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  220</span>    {</div>
 <div class="line"><span class="lineno">  221</span>        <a class="code hl_define" href="_instrumentor_8h.html#aaa03f54db70b44f8decacf111dc1109b">VZ_PROFILE_FUNCTION</a>();</div>
@@ -755,6 +777,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>disconnects the shader program. </p>
 
 <p>Implements <a class="el" href="class_vesper_1_1_shader.html#ac167dc4c337325d8c399f4f5bb448c87">Vesper::Shader</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  182</span>    {</div>

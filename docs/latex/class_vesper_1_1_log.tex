@@ -2,17 +2,22 @@
 \hypertarget{class_vesper_1_1_log}{}\label{class_vesper_1_1_log}\index{Vesper::Log@{Vesper::Log}}
 
 
+A logging utility class for the \doxylink{namespace_vesper}{Vesper} engine.  
+
+
+
+
 {\ttfamily \+\#include $<$Log.\+h$>$}
 
 \doxysubsubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 static void \doxymbox{\hyperlink{class_vesper_1_1_log_a4c1b91828cac87abd1afcce965000395}{Init}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Initializes the logging system. \end{DoxyCompactList}\item 
 static std::\+shared\+\_\+ptr$<$ spdlog::\+logger $>$ \& \doxymbox{\hyperlink{class_vesper_1_1_log_a308072f59ab7bf4c27321ec9cc26bdf6}{Get\+Core\+Logger}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Returns the core logger instance. \end{DoxyCompactList}\item 
 static std::\+shared\+\_\+ptr$<$ spdlog::\+logger $>$ \& \doxymbox{\hyperlink{class_vesper_1_1_log_a34127f1a92073183577fd3b86eaec092}{Get\+Client\+Logger}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Returns the client logger instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Static Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -20,6 +25,13 @@ static std::\+shared\+\_\+ptr$<$ spdlog::\+logger $>$ \doxymbox{\hyperlink{class
 \item 
 static std::\+shared\+\_\+ptr$<$ spdlog::\+logger $>$ \doxymbox{\hyperlink{class_vesper_1_1_log_a243a822c10e4dcb6ff78b4fecf3b286a}{s\+\_\+\+Client\+Logger}}
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A logging utility class for the \doxylink{namespace_vesper}{Vesper} engine. 
+
+\begin{DoxyRefDesc}{Todo}
+\item[\doxymbox{\hyperlink{todo__todo000014}{Todo}}]Rethink logging flow with Macros and possibly implement different loggers for different modules. \end{DoxyRefDesc}
 
 
 \label{doc-func-members}
@@ -32,8 +44,12 @@ static std::\+shared\+\_\+ptr$<$ spdlog::\+logger $>$ \doxymbox{\hyperlink{class
 std::\+shared\+\_\+ptr$<$ spdlog::\+logger $>$ \& Vesper::\+\+Log::\+\+Get\+Client\+Logger (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
 
 
+
+Returns the client logger instance. 
+
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00014\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_log_a243a822c10e4dcb6ff78b4fecf3b286a}{s\_ClientLogger}};\ \}}
+\DoxyCodeLine{00025\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_log_a243a822c10e4dcb6ff78b4fecf3b286a}{s\_ClientLogger}};\ \}}
 
 \end{DoxyCode}
 \Hypertarget{class_vesper_1_1_log_a308072f59ab7bf4c27321ec9cc26bdf6}\index{Vesper::Log@{Vesper::Log}!GetCoreLogger@{GetCoreLogger}}
@@ -43,8 +59,12 @@ std::\+shared\+\_\+ptr$<$ spdlog::\+logger $>$ \& Vesper::\+\+Log::\+\+Get\+Clie
 std::\+shared\+\_\+ptr$<$ spdlog::\+logger $>$ \& Vesper::\+\+Log::\+\+Get\+Core\+Logger (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
 
 
+
+Returns the core logger instance. 
+
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00013\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_log_a0580b2964a32543c920a89e34155d908}{s\_CoreLogger}};\ \}}
+\DoxyCodeLine{00023\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_log_a0580b2964a32543c920a89e34155d908}{s\_CoreLogger}};\ \}}
 
 \end{DoxyCode}
 \Hypertarget{class_vesper_1_1_log_a4c1b91828cac87abd1afcce965000395}\index{Vesper::Log@{Vesper::Log}!Init@{Init}}
@@ -54,15 +74,19 @@ std::\+shared\+\_\+ptr$<$ spdlog::\+logger $>$ \& Vesper::\+\+Log::\+\+Get\+Core
 void Vesper::\+\+Log::\+\+Init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
+
+Initializes the logging system. 
+
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00012\ \ \ \ \ \{}
-\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ spdlog::set\_pattern(\textcolor{stringliteral}{"{}\%\string^[\%T]\ \%n:\ \%v\%\$"{}});}
-\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_log_a0580b2964a32543c920a89e34155d908}{s\_CoreLogger}}\ =\ spdlog::stdout\_color\_mt(\textcolor{stringliteral}{"{}VESPER"{}});}
-\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_log_a0580b2964a32543c920a89e34155d908}{s\_CoreLogger}}-\/>set\_level(spdlog::level::trace);}
-\DoxyCodeLine{00016\ }
-\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_log_a243a822c10e4dcb6ff78b4fecf3b286a}{s\_ClientLogger}}\ =\ spdlog::stdout\_color\_mt(\textcolor{stringliteral}{"{}APP"{}});}
-\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_log_a243a822c10e4dcb6ff78b4fecf3b286a}{s\_ClientLogger}}-\/>set\_level(spdlog::level::trace);}
-\DoxyCodeLine{00019\ \ \ \ \ \}}
+\DoxyCodeLine{00017\ \ \ \ \ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ spdlog::set\_pattern(\textcolor{stringliteral}{"{}\%\string^[\%T]\ \%n:\ \%v\%\$"{}});}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_log_a0580b2964a32543c920a89e34155d908}{s\_CoreLogger}}\ =\ spdlog::stdout\_color\_mt(\textcolor{stringliteral}{"{}VESPER"{}});}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_log_a0580b2964a32543c920a89e34155d908}{s\_CoreLogger}}-\/>set\_level(spdlog::level::trace);}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_log_a243a822c10e4dcb6ff78b4fecf3b286a}{s\_ClientLogger}}\ =\ spdlog::stdout\_color\_mt(\textcolor{stringliteral}{"{}APP"{}});}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_log_a243a822c10e4dcb6ff78b4fecf3b286a}{s\_ClientLogger}}-\/>set\_level(spdlog::level::trace);}
+\DoxyCodeLine{00024\ \ \ \ \ \}}
 
 \end{DoxyCode}
 

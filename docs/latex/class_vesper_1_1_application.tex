@@ -12,7 +12,7 @@ The core application class that manages the main loop, window, layers, and event
 Inheritance diagram for Vesper::\+Application:\+\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=1.985816cm]{class_vesper_1_1_application}
+\includegraphics[height=2.000000cm]{class_vesper_1_1_application}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Public Member Functions}
@@ -52,7 +52,7 @@ bool \doxymbox{\hyperlink{class_vesper_1_1_application_a767d42619845c71cd63b6ddd
 \begin{DoxyCompactItemize}
 \item 
 \doxymbox{\hyperlink{namespace_vesper_a5425f9aaa2ee4d3761c8ce6b385e0b70}{Scope}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_window}{Window}} $>$ \doxymbox{\hyperlink{class_vesper_1_1_application_ae4194db590b9cab97f767453c2d8b608}{m\+\_\+\+Window}}
-\begin{DoxyCompactList}\small\item\em Initializes the application. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Scoped pointer to the applications underlying window. \end{DoxyCompactList}\item 
 \doxymbox{\hyperlink{class_vesper_1_1_im_gui_layer}{Im\+Gui\+Layer}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_vesper_1_1_application_a7fba99c6534f6508ec077ad9970c9607}{m\+\_\+\+Im\+Gui\+Layer}}
 \begin{DoxyCompactList}\small\item\em Im\+Gui layer for rendering GUI elements. \end{DoxyCompactList}\item 
 bool \doxymbox{\hyperlink{class_vesper_1_1_application_a81b932f66c601f9f6e52203a867dc54b}{m\+\_\+\+Running}} = true
@@ -72,6 +72,10 @@ static \doxymbox{\hyperlink{class_vesper_1_1_application_adb6d84492e607574848e77
 
 \doxysubsection{Detailed Description}
 The core application class that manages the main loop, window, layers, and event handling. 
+
+\begin{DoxyRefDesc}{Todo}
+\item[\doxymbox{\hyperlink{todo__todo000006}{Todo}}]Update class to accept \doxylink{namespace_vesper_struct_vesper_1_1_application_settings}{Application\+Settings} in constructor and verify its utility/\+use \end{DoxyRefDesc}
+
 
 \label{doc-constructors}
 \Hypertarget{class_vesper_1_1_application_doc-constructors}
@@ -180,7 +184,7 @@ References \doxymbox{\hyperlink{class_vesper_1_1_application_a3d3850bb1b1291c36e
 
 
 
-Referenced by \doxymbox{\hyperlink{class_vesper_1_1_im_gui_layer_ad32cb49bc5bffd27630085d5b273c5ad}{Vesper::\+\+Im\+Gui\+Layer::\+\+End()}}, \doxymbox{\hyperlink{class_vesper_1_1_input_a7cfb2f3a5d04a27f1d0c22b0f4e9c09f}{Vesper::\+\+Input::\+\+Get\+Mouse\+Position()}}, \doxymbox{\hyperlink{class_vesper_1_1_input_aa8b8dff7d2b768ad79b6888fbdbf31ae}{Vesper::\+\+Input::\+\+Is\+Key\+Pressed()}}, \doxymbox{\hyperlink{class_vesper_1_1_input_a00b5734fe7e2227aa348e56c3c71a6d2}{Vesper::\+\+Input::\+\+Is\+Mouse\+Button\+Pressed()}}, \doxymbox{\hyperlink{class_vesper_1_1_im_gui_layer_aeb2e5a03cd424c37478476f6c63d025b}{Vesper::\+\+Im\+Gui\+Layer::\+\+On\+Attach()}}, \doxymbox{\hyperlink{class_vesper_1_1_editor_layer_af5e79508040b18e9fa455830692f6ed0}{Vesper::\+\+Editor\+Layer::\+\+On\+Im\+Gui\+Render()}}, and \doxymbox{\hyperlink{class_sandbox2_d_abc796def0880d3ca2dde9a010c4bf70c}{Sandbox2\+D::\+\+On\+Update()}}.
+Referenced by \doxymbox{\hyperlink{class_vesper_1_1_im_gui_layer_ad32cb49bc5bffd27630085d5b273c5ad}{Vesper::\+\+Im\+Gui\+Layer::\+\+End()}}, \doxymbox{\hyperlink{class_vesper_1_1_input_a7cfb2f3a5d04a27f1d0c22b0f4e9c09f}{Vesper::\+\+Input::\+\+Get\+Mouse\+Position()}}, \doxymbox{\hyperlink{class_vesper_1_1_input_aa8b8dff7d2b768ad79b6888fbdbf31ae}{Vesper::\+\+Input::\+\+Is\+Key\+Pressed()}}, \doxymbox{\hyperlink{class_vesper_1_1_input_a00b5734fe7e2227aa348e56c3c71a6d2}{Vesper::\+\+Input::\+\+Is\+Mouse\+Button\+Pressed()}}, \doxymbox{\hyperlink{class_vesper_1_1_im_gui_layer_aeb2e5a03cd424c37478476f6c63d025b}{Vesper::\+\+Im\+Gui\+Layer::\+\+On\+Attach()}}, and \doxymbox{\hyperlink{class_vesper_1_1_editor_layer_af5e79508040b18e9fa455830692f6ed0}{Vesper::\+\+Editor\+Layer::\+\+On\+Im\+Gui\+Render()}}.
 
 \Hypertarget{class_vesper_1_1_application_a9b49ca5273462312ee8439ed9897bb73}\index{Vesper::Application@{Vesper::Application}!GetImGuiLayer@{GetImGuiLayer}}
 \index{GetImGuiLayer@{GetImGuiLayer}!Vesper::Application@{Vesper::Application}}
@@ -222,7 +226,7 @@ Retrieves the application window.
 \end{DoxyCode}
 
 
-Referenced by \doxymbox{\hyperlink{class_vesper_1_1_im_gui_layer_ad32cb49bc5bffd27630085d5b273c5ad}{Vesper::\+\+Im\+Gui\+Layer::\+\+End()}}, \doxymbox{\hyperlink{class_vesper_1_1_input_a7cfb2f3a5d04a27f1d0c22b0f4e9c09f}{Vesper::\+\+Input::\+\+Get\+Mouse\+Position()}}, \doxymbox{\hyperlink{class_vesper_1_1_input_aa8b8dff7d2b768ad79b6888fbdbf31ae}{Vesper::\+\+Input::\+\+Is\+Key\+Pressed()}}, \doxymbox{\hyperlink{class_vesper_1_1_input_a00b5734fe7e2227aa348e56c3c71a6d2}{Vesper::\+\+Input::\+\+Is\+Mouse\+Button\+Pressed()}}, and \doxymbox{\hyperlink{class_sandbox2_d_abc796def0880d3ca2dde9a010c4bf70c}{Sandbox2\+D::\+\+On\+Update()}}.
+Referenced by \doxymbox{\hyperlink{class_vesper_1_1_im_gui_layer_ad32cb49bc5bffd27630085d5b273c5ad}{Vesper::\+\+Im\+Gui\+Layer::\+\+End()}}, \doxymbox{\hyperlink{class_vesper_1_1_input_a7cfb2f3a5d04a27f1d0c22b0f4e9c09f}{Vesper::\+\+Input::\+\+Get\+Mouse\+Position()}}, \doxymbox{\hyperlink{class_vesper_1_1_input_aa8b8dff7d2b768ad79b6888fbdbf31ae}{Vesper::\+\+Input::\+\+Is\+Key\+Pressed()}}, and \doxymbox{\hyperlink{class_vesper_1_1_input_a00b5734fe7e2227aa348e56c3c71a6d2}{Vesper::\+\+Input::\+\+Is\+Mouse\+Button\+Pressed()}}.
 
 \Hypertarget{class_vesper_1_1_application_a6b671a553ef9f81ec0394c7de71bff16}\index{Vesper::Application@{Vesper::Application}!OnEvent@{OnEvent}}
 \index{OnEvent@{OnEvent}!Vesper::Application@{Vesper::Application}}
@@ -342,7 +346,7 @@ References \doxymbox{\hyperlink{class_vesper_1_1_layer_ad7b65613ac259383e8ba08f6
 
 
 
-Referenced by \doxymbox{\hyperlink{class_sandbox_app_a3daabbf68fe91bfc7e58f88907909222}{Sandbox\+App::\+\+Sandbox\+App()}}, and \doxymbox{\hyperlink{class_vesper_1_1_vesper_editor_a1a4a2b911669866b7123e1d1536870fb}{Vesper::\+\+Vesper\+Editor::\+\+Vesper\+Editor()}}.
+Referenced by \doxymbox{\hyperlink{class_vesper_1_1_vesper_editor_a1a4a2b911669866b7123e1d1536870fb}{Vesper::\+\+Vesper\+Editor::\+\+Vesper\+Editor()}}.
 
 \Hypertarget{class_vesper_1_1_application_ae10c674888e1ed9864c1f9b080b8af7f}\index{Vesper::Application@{Vesper::Application}!PushOverlay@{PushOverlay}}
 \index{PushOverlay@{PushOverlay}!Vesper::Application@{Vesper::Application}}
@@ -381,6 +385,10 @@ void Vesper::\+\+Application::\+\+Run (\begin{DoxyParamCaption}{}{}\end{DoxyPara
 
 Starts the main application loop. 
 
+\begin{DoxyRefDesc}{Todo}
+\item[\doxymbox{\hyperlink{todo__todo000007}{Todo}}]Add \doxylink{class_vesper_1_1_layer}{Layer} rendering into the main loop 
+
+Add separate threads for rendering and updating \end{DoxyRefDesc}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00078\ \ \ \ \ \{}
@@ -500,7 +508,7 @@ Referenced by \doxymbox{\hyperlink{class_vesper_1_1_application_af36d1558fe1fef2
 
 
 
-Initializes the application. 
+Scoped pointer to the applications underlying window. 
 
 \Hypertarget{class_vesper_1_1_application_a3d3850bb1b1291c36ec2cbef3c1a87ad}\index{Vesper::Application@{Vesper::Application}!s\_Instance@{s\_Instance}}
 \index{s\_Instance@{s\_Instance}!Vesper::Application@{Vesper::Application}}

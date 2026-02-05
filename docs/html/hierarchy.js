@@ -1,8 +1,6 @@
 var hierarchy =
 [
     [ "Vesper::Application", "class_vesper_1_1_application.html", [
-      [ "SandboxApp", "class_sandbox_app.html", null ],
-      [ "SandboxApp", "class_sandbox_app.html", null ],
       [ "Vesper::VesperEditor", "class_vesper_1_1_vesper_editor.html", null ],
       [ "Vesper::VesperEditor", "class_vesper_1_1_vesper_editor.html", null ]
     ] ],
@@ -56,9 +54,6 @@ var hierarchy =
     [ "Vesper::InstrumentationTimer", "class_vesper_1_1_instrumentation_timer.html", null ],
     [ "Vesper::Instrumentor", "class_vesper_1_1_instrumentor.html", null ],
     [ "Vesper::Layer", "class_vesper_1_1_layer.html", [
-      [ "ExampleLayer", "class_example_layer.html", null ],
-      [ "ExampleLayer", "class_example_layer.html", null ],
-      [ "Sandbox2D", "class_sandbox2_d.html", null ],
       [ "Vesper::EditorLayer", "class_vesper_1_1_editor_layer.html", null ],
       [ "Vesper::ImGuiLayer", "class_vesper_1_1_im_gui_layer.html", [
         [ "Vesper::OpenGLImGuiLayer", "class_vesper_1_1_open_g_l_im_gui_layer.html", null ]

@@ -2,29 +2,37 @@
 \hypertarget{class_vesper_1_1_shader_library}{}\label{class_vesper_1_1_shader_library}\index{Vesper::ShaderLibrary@{Vesper::ShaderLibrary}}
 
 
+A library for managing and storing shaders.  
+
+
+
+
 {\ttfamily \+\#include $<$Shader.\+h$>$}
 
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \doxymbox{\hyperlink{class_vesper_1_1_shader_library_a78adaeb8fdfcfbe4eb5d89a2a4ab6357}{Add}} (const std::\+string \&name, const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_shader}{Shader}} $>$ \&shader)
-\item 
+\begin{DoxyCompactList}\small\item\em Adds a shader to the library with the specified name. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{class_vesper_1_1_shader_library_a320a69d730dfe5e6597653d9c8e51ab1}{Add}} (const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_shader}{Shader}} $>$ \&shader)
-\item 
+\begin{DoxyCompactList}\small\item\em Adds a shader to the library using its own name. \end{DoxyCompactList}\item 
 \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_shader}{Shader}} $>$ \doxymbox{\hyperlink{class_vesper_1_1_shader_library_ae0c2a332608f5d1de47e21e0dac51364}{Load}} (const std::\+string \&filepath)
-\item 
+\begin{DoxyCompactList}\small\item\em Loads a shader from the specified filepath and adds it to the library. \end{DoxyCompactList}\item 
 \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_shader}{Shader}} $>$ \doxymbox{\hyperlink{class_vesper_1_1_shader_library_a082bfe7049d11e3729a6c5cb16d72d62}{Load}} (const std::\+string \&name, const std::\+string \&filepath)
-\item 
+\begin{DoxyCompactList}\small\item\em Loads a shader from the specified filepath and adds it to the library with the given name. \end{DoxyCompactList}\item 
 \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_shader}{Shader}} $>$ \doxymbox{\hyperlink{class_vesper_1_1_shader_library_a382c538baab1ec777907522fbf98413f}{Get}} (const std::\+string \&name)
-\item 
+\begin{DoxyCompactList}\small\item\em Retrieves a shader from the library by name. \end{DoxyCompactList}\item 
 bool \doxymbox{\hyperlink{class_vesper_1_1_shader_library_a9111cbe1ea9c2b679c508f2b708bd9aa}{Exists}} (const std::\+string \&name) const
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Checks if a shader with the specified name exists in the library. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 std::\+unordered\+\_\+map$<$ std::\+string, \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_shader}{Shader}} $>$ $>$ \doxymbox{\hyperlink{class_vesper_1_1_shader_library_acb1a8bdb429bd9fa1554f3f549330b91}{m\+\_\+\+Shaders}}
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+A library for managing and storing shaders. 
 
 \label{doc-func-members}
 \Hypertarget{class_vesper_1_1_shader_library_doc-func-members}
@@ -34,6 +42,10 @@ std::\+unordered\+\_\+map$<$ std::\+string, \doxymbox{\hyperlink{namespace_vespe
 \doxysubsubsection{\texorpdfstring{Add()}{Add()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily \label{class_vesper_1_1_shader_library_a320a69d730dfe5e6597653d9c8e51ab1} 
 void Vesper::\+\+Shader\+Library::\+\+Add (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_shader}{Shader}} $>$ \&}]{shader}{}\end{DoxyParamCaption})}
+
+
+
+Adds a shader to the library using its own name. 
 
 
 \begin{DoxyCode}{0}
@@ -51,6 +63,10 @@ void Vesper::\+\+Shader\+Library::\+\+Add (\begin{DoxyParamCaption}\item[{const 
 void Vesper::\+\+Shader\+Library::\+\+Add (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{name}{, }\item[{const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_shader}{Shader}} $>$ \&}]{shader}{}\end{DoxyParamCaption})}
 
 
+
+Adds a shader to the library with the specified name. 
+
+
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00032\ \ \ \ \ \{}
 \DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_instrumentor_8h_aaa03f54db70b44f8decacf111dc1109b}{VZ\_PROFILE\_FUNCTION}}();}
@@ -64,6 +80,10 @@ void Vesper::\+\+Shader\+Library::\+\+Add (\begin{DoxyParamCaption}\item[{const 
 \doxysubsubsection{\texorpdfstring{Exists()}{Exists()}}
 {\footnotesize\ttfamily \label{class_vesper_1_1_shader_library_a9111cbe1ea9c2b679c508f2b708bd9aa} 
 bool Vesper::\+\+Shader\+Library::\+\+Exists (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{name}{}\end{DoxyParamCaption}) const}
+
+
+
+Checks if a shader with the specified name exists in the library. 
 
 
 \begin{DoxyCode}{0}
@@ -80,6 +100,10 @@ bool Vesper::\+\+Shader\+Library::\+\+Exists (\begin{DoxyParamCaption}\item[{con
 \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Vesper::\+\+Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_shader}{Vesper::\+\+Shader}} $>$ Vesper::\+\+Shader\+Library::\+\+Get (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{name}{}\end{DoxyParamCaption})}
 
 
+
+Retrieves a shader from the library by name. 
+
+
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00062\ \ \ \ \ \{}
 \DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_asserts_8h_a3b51b77f75997760894138afc89403c9}{VZ\_CORE\_ASSERT}}(\doxymbox{\hyperlink{class_vesper_1_1_shader_library_a9111cbe1ea9c2b679c508f2b708bd9aa}{Exists}}(name),\ \textcolor{stringliteral}{"{}Shader\ not\ found!"{}});}
@@ -92,6 +116,10 @@ bool Vesper::\+\+Shader\+Library::\+\+Exists (\begin{DoxyParamCaption}\item[{con
 \doxysubsubsection{\texorpdfstring{Load()}{Load()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily \label{class_vesper_1_1_shader_library_ae0c2a332608f5d1de47e21e0dac51364} 
 \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Vesper::\+\+Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_shader}{Vesper::\+\+Shader}} $>$ Vesper::\+\+Shader\+Library::\+\+Load (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{filepath}{}\end{DoxyParamCaption})}
+
+
+
+Loads a shader from the specified filepath and adds it to the library. 
 
 
 \begin{DoxyCode}{0}
@@ -108,6 +136,10 @@ bool Vesper::\+\+Shader\+Library::\+\+Exists (\begin{DoxyParamCaption}\item[{con
 \doxysubsubsection{\texorpdfstring{Load()}{Load()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily \label{class_vesper_1_1_shader_library_a082bfe7049d11e3729a6c5cb16d72d62} 
 \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Vesper::\+\+Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_shader}{Vesper::\+\+Shader}} $>$ Vesper::\+\+Shader\+Library::\+\+Load (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{name}{, }\item[{const std::\+string \&}]{filepath}{}\end{DoxyParamCaption})}
+
+
+
+Loads a shader from the specified filepath and adds it to the library with the given name. 
 
 
 \begin{DoxyCode}{0}

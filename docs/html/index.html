@@ -97,7 +97,7 @@ $(function(){initNavTree('index.html','',''); });
   <div class="headertitle"><div class="title"><a class="el" href="namespace_vesper.html" title="TEMPORARY.">Vesper</a> </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="md__r_e_a_d_m_e"></a></p>
+<div class="textblock"><p><a class="anchor" id="md_docs_2_r_e_a_d_m_e"></a></p>
 <p><a class="el" href="namespace_vesper.html" title="TEMPORARY.">Vesper</a> is a lightweight 2D/3D engine and editor inspired by TheCherno's Game Engine Architecture series for the Hazel engine. <br  />
  It provides a renderer, scene &amp; entity system, editor UI, input handling, and utilities to build simple games and interactive applications in C++ (C++17).</p>
 <p>It is generally usable as an easily modifiable base line for creating graphics and software applications.</p>
@@ -110,12 +110,10 @@ $(function(){initNavTree('index.html','',''); });
 Quick overview</h1>
 <ul>
 <li>Language: C++17</li>
-<li>Primary IDE: Visual Studio 2022</li>
-<li>Platforms: Windows (Visual Studio solution &amp; VCXPROJ files provided)<ul>
+<li>Platforms: Windows<ul>
 <li>Planned: Linux, macOS</li>
 </ul>
 </li>
-<li>Build system: Premake5</li>
 <li>Third-party libraries:<ul>
 <li>entt (entity-component system)</li>
 <li>Glad (OpenGL function loading)</li>
@@ -136,68 +134,21 @@ Quick overview</h1>
 </li>
 </ul>
 <h1 class="doxsection"><a class="anchor" id="autotoc_md2"></a>
-Repository layout (high level)</h1>
-<ul>
-<li><span class="tt">Vesper/</span> — Engine source (core, renderer, scene, editor integration)<ul>
-<li><span class="tt">src/Vesper</span> — engine code</li>
-<li><span class="tt">vendor/</span> — third-party libs (GLFW, Glad, ImGui)</li>
-</ul>
-</li>
-<li><span class="tt">Vesper-Editor/</span> — Editor build that hosts engine in an editor UI</li>
-<li><span class="tt">Sandbox/</span> — Example application(s) that use the engine</li>
-<li><span class="tt"><a class="el" href="_r_e_a_d_m_e_8md.html">README.md</a></span>, <span class="tt">LICENSE-Hazel_Apache2.txt</span> — repo metadata and licensing</li>
-</ul>
-<p>Notable engine files:</p><ul>
-<li><span class="tt"><a class="el" href="_vesper_8h.html">Vesper/src/Vesper.h</a></span> — single include for engine public API</li>
-<li><span class="tt">Vesper/src/Vesper/Scene/*</span> — Scene, Entity, Components, Camera</li>
-<li><span class="tt">Vesper-Editor/src/EditorLayer.*</span> — Editor integration layer and UI panels</li>
-</ul>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md3"></a>
-Getting started (clone + third-party libs)</h1>
-<div class="fragment"><div class="line">git clone --recursive https://github.com/nomadiidamon/Vesper &lt;desiredLocation&gt;</div>
-</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md4"></a>
-Build (Visual Studio 2022)</h1>
-<ol type="1">
-<li>Run the 'Win-GenProjects.bat' script from the repository root 'Vesper/scripts/Win-GenProjects.bat' to generate the Visual Studio solution file (<span class="tt">.sln</span>).<ul>
-<li>This runs Premake5 which is located in 'Vesper/Vendor/bin/premake'.</li>
-</ul>
-</li>
-<li>Open the solution in Visual Studio 2022.</li>
-<li>Select the desired configuration (e.g. <span class="tt">Debug</span> or <span class="tt">Release</span>) and platform (<span class="tt">x64</span>).</li>
-<li>Right-click the project you want to run (<span class="tt">Vesper-Editor</span> or <span class="tt">Sandbox</span>) and choose <b>Set as Startup Project</b>.</li>
-<li>Build and run (F5).</li>
-</ol>
-<p>Troubleshooting:</p><ul>
-<li>Ensure the Windows SDK and Visual C++ toolset for VS2022 are installed.</li>
-<li>If include or linker errors appear, confirm vendor project builds (GLFW, Glad, ImGui, etc.) and that project dependencies are set correctly.</li>
-<li>For unresolved externals, confirm platform (x86/x64) consistency across projects.</li>
-</ul>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md5"></a>
-Run the editor or sandbox</h1>
-<ul>
-<li>Start the editor by launching the <span class="tt">Vesper-Editor</span> startup project.</li>
-<li>Use the <span class="tt">Sandbox</span> project to iterate small demos that use the engine API.<ul>
-<li>Modify or add new demo source files in the <span class="tt">Sandbox/src</span> folder.</li>
-</ul>
-</li>
-<li>Create new projects that link against the <a class="el" href="namespace_vesper.html" title="TEMPORARY.">Vesper</a> engine.</li>
-</ul>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md6"></a>
 New Project example code</h1>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="_vesper_8h.html">Vesper.h</a>&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;Vesper/Core/EntryPoint.h&gt;</span> <span class="comment">// can only be included in one source file</span></div>
 <div class="line"> </div>
 <div class="line"><span class="preprocessor">#include &quot;imgui/imgui.h&quot;</span></div>
 <div class="line"> </div>
-<div class="line"><span class="keyword">class </span><a class="code hl_class" href="class_example_layer.html">ExampleLayer</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_vesper_1_1_layer.html">Vesper::Layer</a></div>
+<div class="line"><span class="keyword">class </span>ExampleLayer : <span class="keyword">public</span> <a class="code hl_class" href="class_vesper_1_1_layer.html">Vesper::Layer</a></div>
 <div class="line">{</div>
 <div class="line"><span class="keyword">public</span>:</div>
-<div class="line">    <a class="code hl_function" href="class_example_layer.html#a199ad822f707990b69e998a9ed7df5bb">ExampleLayer</a>()</div>
-<div class="line">        : <a class="code hl_function" href="class_vesper_1_1_layer.html#aa2fadd42504c70ef28da27b724d276c7">Layer</a>(<span class="stringliteral">&quot;ExampleLayer&quot;</span>)</div>
+<div class="line">    ExampleLayer()</div>
+<div class="line">        : Layer(<span class="stringliteral">&quot;ExampleLayer&quot;</span>)</div>
 <div class="line">    {</div>
 <div class="line">    }</div>
 <div class="line"> </div>
-<div class="line">    <a class="code hl_class" href="class_example_layer.html">~ExampleLayer</a>() <span class="keyword">override</span> = <span class="keywordflow">default</span>;</div>
+<div class="line">    ~ExampleLayer() <span class="keyword">override</span> = <span class="keywordflow">default</span>;</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// Called once when the layer is attached to the layer stack</span></div>
 <div class="line">    <span class="keywordtype">void</span> <a class="code hl_function" href="class_vesper_1_1_layer.html#ad7b65613ac259383e8ba08f693146cfb">OnAttach</a>()<span class="keyword"> override </span>{}</div>
@@ -206,17 +157,17 @@ New Project example code</h1>
 <div class="line">    <span class="keywordtype">void</span> <a class="code hl_function" href="class_vesper_1_1_layer.html#a2da0563f0eeab4fc610c1e10206bc6cb">OnDetach</a>()<span class="keyword"> override </span>{}</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// Called every frame with the frame time</span></div>
-<div class="line">    <span class="keywordtype">void</span> <a class="code hl_function" href="class_example_layer.html#a7753e915b8fdb4b1aa1109aca4c84131">OnUpdate</a>(Vesper::Timestep ts)<span class="keyword"> override </span>{}</div>
+<div class="line">    <span class="keywordtype">void</span> <a class="code hl_function" href="class_vesper_1_1_layer.html#a5403125ae4cb201a6d9cbbacef0480ec">OnUpdate</a>(Vesper::Timestep ts)<span class="keyword"> override </span>{}</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// Render ImGui UI for this layer (optional)</span></div>
-<div class="line">    <span class="keywordtype">void</span> <a class="code hl_function" href="class_example_layer.html#a29e9c1f5c9366b6c1469bfceba17f569">OnImGuiRender</a>()<span class="keyword"> override </span>{</div>
+<div class="line">    <span class="keywordtype">void</span> <a class="code hl_function" href="class_vesper_1_1_layer.html#a64c4c255062db2abaf9ca79a84d417fd">OnImGuiRender</a>()<span class="keyword"> override </span>{</div>
 <div class="line">        ImGui::Begin(<span class="stringliteral">&quot;Example Layer&quot;</span>);</div>
 <div class="line">        ImGui::Text(<span class="stringliteral">&quot;Hello from ExampleLayer!&quot;</span>);</div>
 <div class="line">        ImGui::End();</div>
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// Receive events (keyboard/mouse/window/etc.)</span></div>
-<div class="line">    <span class="keywordtype">void</span> <a class="code hl_function" href="class_example_layer.html#a8f998c71dfeb68383cb5c809485815b1">OnEvent</a>(Vesper::Event&amp; e)<span class="keyword"> override </span>{}</div>
+<div class="line">    <span class="keywordtype">void</span> <a class="code hl_function" href="class_vesper_1_1_layer.html#a158ddf9f38a429b2f9713e8741e8be07">OnEvent</a>(Vesper::Event&amp; e)<span class="keyword"> override </span>{}</div>
 <div class="line">};</div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">class </span>YourAppNameHere : <span class="keyword">public</span> <a class="code hl_class" href="class_vesper_1_1_application.html">Vesper::Application</a></div>
@@ -230,51 +181,20 @@ New Project example code</h1>
 <div class="line">    ~YourAppNameHere() {    }</div>
 <div class="line">};</div>
 <div class="line"> </div>
-<div class="line"><a class="code hl_class" href="class_vesper_1_1_application.html">Vesper::Application</a>* <a class="code hl_function" href="namespace_vesper.html#ad515973d88dbc403525505f804b420e4">Vesper::CreateApplication</a>() {</div>
+<div class="line"><a class="code hl_class" href="class_vesper_1_1_application.html">Vesper::Application</a>* <a class="code hl_function" href="namespace_vesper.html#a43e1ca989eabb42f3b23b79517ff1a65">Vesper::CreateApplication</a>() {</div>
 <div class="line">    <span class="keywordflow">return</span> <span class="keyword">new</span> YourAppNameHere();</div>
 <div class="line">}</div>
-<div class="ttc" id="a_vesper_8h_html"><div class="ttname"><a href="_vesper_8h.html">Vesper.h</a></div></div>
-<div class="ttc" id="aclass_example_layer_html"><div class="ttname"><a href="class_example_layer.html">ExampleLayer</a></div><div class="ttdef"><b>Definition</b> SandboxApp.cpp:14</div></div>
-<div class="ttc" id="aclass_example_layer_html_a199ad822f707990b69e998a9ed7df5bb"><div class="ttname"><a href="class_example_layer.html#a199ad822f707990b69e998a9ed7df5bb">ExampleLayer::ExampleLayer</a></div><div class="ttdeci">ExampleLayer()</div><div class="ttdef"><b>Definition</b> SandboxApp.cpp:16</div></div>
-<div class="ttc" id="aclass_example_layer_html_a29e9c1f5c9366b6c1469bfceba17f569"><div class="ttname"><a href="class_example_layer.html#a29e9c1f5c9366b6c1469bfceba17f569">ExampleLayer::OnImGuiRender</a></div><div class="ttdeci">void OnImGuiRender() override</div><div class="ttdoc">Called when the layer should render its ImGui components.</div><div class="ttdef"><b>Definition</b> SandboxApp.cpp:134</div></div>
-<div class="ttc" id="aclass_example_layer_html_a7753e915b8fdb4b1aa1109aca4c84131"><div class="ttname"><a href="class_example_layer.html#a7753e915b8fdb4b1aa1109aca4c84131">ExampleLayer::OnUpdate</a></div><div class="ttdeci">void OnUpdate(Vesper::Timestep ts) override</div><div class="ttdoc">Called every frame to update the layer with the given timestep.</div><div class="ttdef"><b>Definition</b> SandboxApp.cpp:93</div></div>
-<div class="ttc" id="aclass_example_layer_html_a8f998c71dfeb68383cb5c809485815b1"><div class="ttname"><a href="class_example_layer.html#a8f998c71dfeb68383cb5c809485815b1">ExampleLayer::OnEvent</a></div><div class="ttdeci">void OnEvent(Vesper::Event &amp;e) override</div><div class="ttdoc">Called when an event is dispatched to the layer.</div><div class="ttdef"><b>Definition</b> SandboxApp.cpp:138</div></div>
-<div class="ttc" id="aclass_vesper_1_1_application_html"><div class="ttname"><a href="class_vesper_1_1_application.html">Vesper::Application</a></div><div class="ttdoc">The core application class that manages the main loop, window, layers, and event handling.</div><div class="ttdef"><b>Definition</b> Application.h:38</div></div>
+<div class="ttc" id="a_vesper_8h_html"><div class="ttname"><a href="_vesper_8h.html">Vesper.h</a></div><div class="ttdoc">Main header file for the Vesper engine. For use by clients in Vesper applications.</div></div>
+<div class="ttc" id="aclass_vesper_1_1_application_html"><div class="ttname"><a href="class_vesper_1_1_application.html">Vesper::Application</a></div><div class="ttdoc">The core application class that manages the main loop, window, layers, and event handling.</div><div class="ttdef"><b>Definition</b> Application.h:35</div></div>
 <div class="ttc" id="aclass_vesper_1_1_application_html_ab714953686aac886f76beb76378a18d9"><div class="ttname"><a href="class_vesper_1_1_application.html#ab714953686aac886f76beb76378a18d9">Vesper::Application::PushLayer</a></div><div class="ttdeci">void PushLayer(Layer *layer)</div><div class="ttdoc">Adds a layer to the application layer stack.</div><div class="ttdef"><b>Definition</b> Application.cpp:41</div></div>
-<div class="ttc" id="aclass_vesper_1_1_layer_html"><div class="ttname"><a href="class_vesper_1_1_layer.html">Vesper::Layer</a></div><div class="ttdoc">Represents a reusable application layer that receives lifecycle callbacks (attach,...</div><div class="ttdef"><b>Definition</b> Layer.h:12</div></div>
-<div class="ttc" id="aclass_vesper_1_1_layer_html_a2da0563f0eeab4fc610c1e10206bc6cb"><div class="ttname"><a href="class_vesper_1_1_layer.html#a2da0563f0eeab4fc610c1e10206bc6cb">Vesper::Layer::OnDetach</a></div><div class="ttdeci">virtual void OnDetach()</div><div class="ttdoc">Called when the layer is detached from the application.</div><div class="ttdef"><b>Definition</b> Layer.h:26</div></div>
-<div class="ttc" id="aclass_vesper_1_1_layer_html_aa2fadd42504c70ef28da27b724d276c7"><div class="ttname"><a href="class_vesper_1_1_layer.html#aa2fadd42504c70ef28da27b724d276c7">Vesper::Layer::Layer</a></div><div class="ttdeci">Layer(const std::string &amp;name=&quot;Layer&quot;)</div><div class="ttdoc">Constructs a Layer with an optional name for debugging purposes.</div><div class="ttdef"><b>Definition</b> Layer.cpp:6</div></div>
-<div class="ttc" id="aclass_vesper_1_1_layer_html_ad7b65613ac259383e8ba08f693146cfb"><div class="ttname"><a href="class_vesper_1_1_layer.html#ad7b65613ac259383e8ba08f693146cfb">Vesper::Layer::OnAttach</a></div><div class="ttdeci">virtual void OnAttach()</div><div class="ttdoc">Called when the layer is attached to the application.</div><div class="ttdef"><b>Definition</b> Layer.h:23</div></div>
-<div class="ttc" id="anamespace_vesper_html_ad515973d88dbc403525505f804b420e4"><div class="ttname"><a href="namespace_vesper.html#ad515973d88dbc403525505f804b420e4">Vesper::CreateApplication</a></div><div class="ttdeci">Application * CreateApplication()</div><div class="ttdef"><b>Definition</b> VesperEditorApp.cpp:23</div></div>
-</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md7"></a>
-Documentation</h1>
-<p>Documentation for this project was auto generated using Doxygen version 1.16.1 and can be found at the following: <a href="https://nomadiidamon.github.io/Vesper/">https://nomadiidamon.github.io/Vesper/</a></p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md8"></a>
-Contributing</h1>
-<p>Please open issues or pull requests.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md9"></a>
-Notes / TODO</h1>
-<ul>
-<li>Pin third-party dependency versions and document them.</li>
-<li>Add a <span class="tt">CONTRIBUTING.md</span> with coding standards, branch workflow, and required checks (formatting, tests).</li>
-</ul>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md10"></a>
-Licensing</h1>
-<blockquote class="doxtable">
-<p><b>License status:</b> Proprietary (subject to change) </p>
-</blockquote>
-<p><a class="el" href="namespace_vesper.html" title="TEMPORARY.">Vesper</a> itself is not <b>currently</b> released under any specific license and is provided as-is. Copyright © 2025 by Damon S. Green II (nomad_ii_damon). All rights reserved unless otherwise stated.</p>
-<p>This project contains code derived from the Hazel Engine by TheCherno, licensed under the Apache License 2.0, obtained through public tutorialization and source code access.</p>
-<p>Original Hazel code and derivative works thereof are licensed under the Apache License 2.0. Other original code in this repository is Copyright © 2025 Damon S. Green II (nomad_ii_damon).</p>
-<p>See the LICENSE file for details.</p>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md11"></a>
-Fully-Modified File Header for Licensing</h3>
-<p>Copyright © TheCherno Modifications Copyright © 2025 Damon S. Green II (nomad_ii_damon)</p>
-<p>Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at </p><pre class="fragment">[Apache](http://www.apache.org/licenses/LICENSE-2.0)
-</pre><h3 class="doxsection"><a class="anchor" id="autotoc_md12"></a>
-Modified File Header for Licensing</h3>
-<p>Based on Hazel Engine (Apache 2.0) Modified by Damon S. Green II, 2025 </p>
-</div></div><!-- PageDoc -->
+<div class="ttc" id="aclass_vesper_1_1_layer_html"><div class="ttname"><a href="class_vesper_1_1_layer.html">Vesper::Layer</a></div><div class="ttdoc">Represents a reusable application layer that receives lifecycle callbacks (attach,...</div><div class="ttdef"><b>Definition</b> Layer.h:17</div></div>
+<div class="ttc" id="aclass_vesper_1_1_layer_html_a158ddf9f38a429b2f9713e8741e8be07"><div class="ttname"><a href="class_vesper_1_1_layer.html#a158ddf9f38a429b2f9713e8741e8be07">Vesper::Layer::OnEvent</a></div><div class="ttdeci">virtual void OnEvent(Event &amp;event)</div><div class="ttdoc">Called when an event is dispatched to the layer.</div><div class="ttdef"><b>Definition</b> Layer.h:41</div></div>
+<div class="ttc" id="aclass_vesper_1_1_layer_html_a2da0563f0eeab4fc610c1e10206bc6cb"><div class="ttname"><a href="class_vesper_1_1_layer.html#a2da0563f0eeab4fc610c1e10206bc6cb">Vesper::Layer::OnDetach</a></div><div class="ttdeci">virtual void OnDetach()</div><div class="ttdoc">Called when the layer is detached from the application.</div><div class="ttdef"><b>Definition</b> Layer.h:31</div></div>
+<div class="ttc" id="aclass_vesper_1_1_layer_html_a5403125ae4cb201a6d9cbbacef0480ec"><div class="ttname"><a href="class_vesper_1_1_layer.html#a5403125ae4cb201a6d9cbbacef0480ec">Vesper::Layer::OnUpdate</a></div><div class="ttdeci">virtual void OnUpdate(Timestep ts)</div><div class="ttdoc">Called every frame to update the layer with the given timestep.</div><div class="ttdef"><b>Definition</b> Layer.h:36</div></div>
+<div class="ttc" id="aclass_vesper_1_1_layer_html_a64c4c255062db2abaf9ca79a84d417fd"><div class="ttname"><a href="class_vesper_1_1_layer.html#a64c4c255062db2abaf9ca79a84d417fd">Vesper::Layer::OnImGuiRender</a></div><div class="ttdeci">virtual void OnImGuiRender()</div><div class="ttdoc">Called when the layer should render its ImGui components.</div><div class="ttdef"><b>Definition</b> Layer.h:50</div></div>
+<div class="ttc" id="aclass_vesper_1_1_layer_html_ad7b65613ac259383e8ba08f693146cfb"><div class="ttname"><a href="class_vesper_1_1_layer.html#ad7b65613ac259383e8ba08f693146cfb">Vesper::Layer::OnAttach</a></div><div class="ttdeci">virtual void OnAttach()</div><div class="ttdoc">Called when the layer is attached to the application.</div><div class="ttdef"><b>Definition</b> Layer.h:28</div></div>
+<div class="ttc" id="anamespace_vesper_html_a43e1ca989eabb42f3b23b79517ff1a65"><div class="ttname"><a href="namespace_vesper.html#a43e1ca989eabb42f3b23b79517ff1a65">Vesper::CreateApplication</a></div><div class="ttdeci">Application * CreateApplication()</div><div class="ttdef"><b>Definition</b> VesperEditorApp.cpp:23</div></div>
+</div><!-- fragment --> </div></div><!-- PageDoc -->
 <a href="doxygen_crawl.html"></a>
 </div><!-- contents -->
 </div><!-- doc-content -->

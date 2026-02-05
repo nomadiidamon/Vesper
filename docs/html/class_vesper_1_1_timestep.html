@@ -98,20 +98,28 @@ $(function(){initNavTree('class_vesper_1_1_timestep.html','','class_vesper_1_1_t
 </div><!--header-->
 <div class="contents">
 
+<p>Represents a time step in seconds.  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_timestep_8h_source.html">Timestep.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:afbfdbce6130b3424fa1e9ca9380f5deb" id="r_afbfdbce6130b3424fa1e9ca9380f5deb"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#afbfdbce6130b3424fa1e9ca9380f5deb">Timestep</a> (float time=0.0f)</td></tr>
+<tr class="memdesc:afbfdbce6130b3424fa1e9ca9380f5deb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="class_vesper_1_1_timestep.html" title="Represents a time step in seconds.">Timestep</a> with the given time in seconds.  <br /></td></tr>
 <tr class="memitem:acc683cc85fe71c046d960338246e6230" id="r_acc683cc85fe71c046d960338246e6230"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#acc683cc85fe71c046d960338246e6230">operator float</a> () const</td></tr>
 <tr class="memitem:a1b5404f799b4cea11f9eff1edf896ca8" id="r_a1b5404f799b4cea11f9eff1edf896ca8"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a1b5404f799b4cea11f9eff1edf896ca8">GetSeconds</a> () const</td></tr>
+<tr class="memdesc:a1b5404f799b4cea11f9eff1edf896ca8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the time in seconds.  <br /></td></tr>
 <tr class="memitem:a94a22799ee7fa19be376af7c2891f3e1" id="r_a94a22799ee7fa19be376af7c2891f3e1"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a94a22799ee7fa19be376af7c2891f3e1">GetMilliseconds</a> () const</td></tr>
+<tr class="memdesc:a94a22799ee7fa19be376af7c2891f3e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the time in milliseconds.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a8f4c2ca8332134c5c303d67be9bf1d2f" id="r_a8f4c2ca8332134c5c303d67be9bf1d2f"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a8f4c2ca8332134c5c303d67be9bf1d2f">m_Time</a></td></tr>
 </table>
-<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Represents a time step in seconds. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="afbfdbce6130b3424fa1e9ca9380f5deb" name="afbfdbce6130b3424fa1e9ca9380f5deb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afbfdbce6130b3424fa1e9ca9380f5deb">&#9670;&#160;</a></span>Timestep()</h2>
 
@@ -134,10 +142,18 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">    9</span>            : <a class="code hl_variable" href="#a8f4c2ca8332134c5c303d67be9bf1d2f">m_Time</a>(time) </div>
-<div class="line"><span class="lineno">   10</span>        {</div>
-<div class="line"><span class="lineno">   11</span>        }</div>
-<div class="ttc" id="aclass_vesper_1_1_timestep_html_a8f4c2ca8332134c5c303d67be9bf1d2f"><div class="ttname"><a href="#a8f4c2ca8332134c5c303d67be9bf1d2f">Vesper::Timestep::m_Time</a></div><div class="ttdeci">float m_Time</div><div class="ttdef"><b>Definition</b> Timestep.h:17</div></div>
+
+<p>Constructs a <a class="el" href="class_vesper_1_1_timestep.html" title="Represents a time step in seconds.">Timestep</a> with the given time in seconds. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">time</td><td>The time in seconds. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">   19</span>            : <a class="code hl_variable" href="#a8f4c2ca8332134c5c303d67be9bf1d2f">m_Time</a>(time) </div>
+<div class="line"><span class="lineno">   20</span>        {</div>
+<div class="line"><span class="lineno">   21</span>        }</div>
+<div class="ttc" id="aclass_vesper_1_1_timestep_html_a8f4c2ca8332134c5c303d67be9bf1d2f"><div class="ttname"><a href="#a8f4c2ca8332134c5c303d67be9bf1d2f">Vesper::Timestep::m_Time</a></div><div class="ttdeci">float m_Time</div><div class="ttdef"><b>Definition</b> Timestep.h:30</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a8f4c2ca8332134c5c303d67be9bf1d2f">m_Time</a>.</p>
 
@@ -166,7 +182,9 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   15</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a8f4c2ca8332134c5c303d67be9bf1d2f">m_Time</a> * 1000.0f; }</div>
+
+<p>Returns the time in milliseconds. </p>
+<div class="fragment"><div class="line"><span class="lineno">   28</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a8f4c2ca8332134c5c303d67be9bf1d2f">m_Time</a> * 1000.0f; }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a8f4c2ca8332134c5c303d67be9bf1d2f">m_Time</a>.</p>
 
@@ -194,7 +212,9 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   14</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a8f4c2ca8332134c5c303d67be9bf1d2f">m_Time</a>; }</div>
+
+<p>Returns the time in seconds. </p>
+<div class="fragment"><div class="line"><span class="lineno">   26</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a8f4c2ca8332134c5c303d67be9bf1d2f">m_Time</a>; }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a8f4c2ca8332134c5c303d67be9bf1d2f">m_Time</a>.</p>
 
@@ -222,7 +242,7 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   13</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a8f4c2ca8332134c5c303d67be9bf1d2f">m_Time</a>; }</div>
+<div class="fragment"><div class="line"><span class="lineno">   23</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a8f4c2ca8332134c5c303d67be9bf1d2f">m_Time</a>; }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a8f4c2ca8332134c5c303d67be9bf1d2f">m_Time</a>.</p>
 

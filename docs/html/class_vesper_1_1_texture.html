@@ -98,6 +98,9 @@ $(function(){initNavTree('class_vesper_1_1_texture.html','','class_vesper_1_1_te
 </div><!--header-->
 <div class="contents">
 
+<p>An abstraction for a texture.  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_texture_8h_source.html">Texture.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Vesper::Texture:</div>
@@ -105,7 +108,7 @@ Inheritance diagram for Vesper::Texture:</div>
  <div class="center">
   <img src="class_vesper_1_1_texture.png" usemap="#Vesper_3A_3ATexture_map" alt=""/>
   <map id="Vesper_3A_3ATexture_map" name="Vesper_3A_3ATexture_map">
-<area href="class_vesper_1_1_texture2_d.html" alt="Vesper::Texture2D" shape="rect" coords="0,56,164,80"/>
+<area href="class_vesper_1_1_texture2_d.html" title="An abstraction for a 2D texture." alt="Vesper::Texture2D" shape="rect" coords="0,56,164,80"/>
 <area href="class_vesper_1_1_open_g_l_texture2_d.html" alt="Vesper::OpenGLTexture2D" shape="rect" coords="0,112,164,136"/>
   </map>
 </div></div>
@@ -114,14 +117,21 @@ Inheritance diagram for Vesper::Texture:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:abaee8793ab274eb12e797affb8bb5406" id="r_abaee8793ab274eb12e797affb8bb5406"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="#abaee8793ab274eb12e797affb8bb5406">~Texture</a> ()=default</td></tr>
 <tr class="memitem:a7e31e9571857dded8570e2c102235d4c" id="r_a7e31e9571857dded8570e2c102235d4c"><td class="memItemLeft">virtual uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#a7e31e9571857dded8570e2c102235d4c">GetWidth</a> () const =0</td></tr>
+<tr class="memdesc:a7e31e9571857dded8570e2c102235d4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the width of the texture.  <br /></td></tr>
 <tr class="memitem:a9b506f28915ef764c52b23897606628b" id="r_a9b506f28915ef764c52b23897606628b"><td class="memItemLeft">virtual uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#a9b506f28915ef764c52b23897606628b">GetHeight</a> () const =0</td></tr>
+<tr class="memdesc:a9b506f28915ef764c52b23897606628b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the height of the texture.  <br /></td></tr>
 <tr class="memitem:aac3791b93ab26cf8c8df7ae02c6cc8d3" id="r_aac3791b93ab26cf8c8df7ae02c6cc8d3"><td class="memItemLeft">virtual uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#aac3791b93ab26cf8c8df7ae02c6cc8d3">GetRendererID</a> () const =0</td></tr>
+<tr class="memdesc:aac3791b93ab26cf8c8df7ae02c6cc8d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the renderer ID of the texture.  <br /></td></tr>
 <tr class="memitem:aecdaafa875ff2ce3e3972f4c42b23194" id="r_aecdaafa875ff2ce3e3972f4c42b23194"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#aecdaafa875ff2ce3e3972f4c42b23194">Bind</a> (uint32_t slot=0) const =0</td></tr>
+<tr class="memdesc:aecdaafa875ff2ce3e3972f4c42b23194"><td class="mdescLeft">&#160;</td><td class="mdescRight">Binds the texture to the specified slot for use.  <br /></td></tr>
 <tr class="memitem:aae25563a473b10ba3cea4d82310d734a" id="r_aae25563a473b10ba3cea4d82310d734a"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#aae25563a473b10ba3cea4d82310d734a">SetData</a> (void *data, uint32_t size)=0</td></tr>
+<tr class="memdesc:aae25563a473b10ba3cea4d82310d734a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the data of the texture.  <br /></td></tr>
 <tr class="memitem:a82a2ccb871e737e685589ab0dbd35a34" id="r_a82a2ccb871e737e685589ab0dbd35a34"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a82a2ccb871e737e685589ab0dbd35a34">operator==</a> (const <a class="el" href="class_vesper_1_1_texture2_d.html">Texture2D</a> &amp;other) const =0</td></tr>
 <tr class="memitem:a8b5e8ba4dc3e4cec52810b22dab26dd7" id="r_a8b5e8ba4dc3e4cec52810b22dab26dd7"><td class="memItemLeft">virtual std::string&#160;</td><td class="memItemRight"><a class="el" href="#a8b5e8ba4dc3e4cec52810b22dab26dd7">GetName</a> () const =0</td></tr>
 </table>
-<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>An abstraction for a texture. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="abaee8793ab274eb12e797affb8bb5406" name="abaee8793ab274eb12e797affb8bb5406"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abaee8793ab274eb12e797affb8bb5406">&#9670;&#160;</a></span>~Texture()</h2>
 
@@ -171,6 +181,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Binds the texture to the specified slot for use. </p>
+
 <p>Implemented in <a class="el" href="class_vesper_1_1_open_g_l_texture2_d.html#aaec316e5c4cdf11660404a63cf4321bc">Vesper::OpenGLTexture2D</a>.</p>
 
 </div>
@@ -197,6 +209,8 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Returns the height of the texture. </p>
 
 <p>Implemented in <a class="el" href="class_vesper_1_1_open_g_l_texture2_d.html#a7627f84deef1848edc0497593306b2a0">Vesper::OpenGLTexture2D</a>.</p>
 
@@ -252,6 +266,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Returns the renderer ID of the texture. </p>
+
 <p>Implemented in <a class="el" href="class_vesper_1_1_open_g_l_texture2_d.html#ac5ddebcc387031e1de00e93e798b36f5">Vesper::OpenGLTexture2D</a>.</p>
 
 </div>
@@ -278,6 +294,8 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Returns the width of the texture. </p>
 
 <p>Implemented in <a class="el" href="class_vesper_1_1_open_g_l_texture2_d.html#a14ae2c519883d7bc717012747bb680b4">Vesper::OpenGLTexture2D</a>.</p>
 
@@ -336,6 +354,15 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Sets the data of the texture. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>Pointer to the data to be set. </td></tr>
+    <tr><td class="paramname">size</td><td>Size of the data in bytes. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Implemented in <a class="el" href="class_vesper_1_1_open_g_l_texture2_d.html#a476e425bff252714dcdb9bb5f47f473a">Vesper::OpenGLTexture2D</a>.</p>
 

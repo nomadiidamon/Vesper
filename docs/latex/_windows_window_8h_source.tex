@@ -23,7 +23,7 @@
 \DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_vesper_1_1_windows_window_ab89ca1907dc2a493821fe9bf141ecd07}{GetHeight}}()\ \textcolor{keyword}{const}\ \textcolor{keyword}{override}\ \{\ \textcolor{keywordflow}{return}\ m\_Data.Height;\ \}}
 \DoxyCodeLine{00020\ }
 \DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Window\ attributes}}
-\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_windows_window_a3481fa772c2853a5cec99498e095401d}{SetEventCallback}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_vesper_1_1_window_ac908c4b9b5d83ccb8bf159a443833403}{EventCallbackFn}}\&\ callback)\ \textcolor{keyword}{override}\ \{\ m\_Data.EventCallback\ =\ callback;\ \}}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_windows_window_a3481fa772c2853a5cec99498e095401d}{SetEventCallback}}(\textcolor{keyword}{const}\ EventCallbackFn\&\ callback)\ \textcolor{keyword}{override}\ \{\ m\_Data.EventCallback\ =\ callback;\ \}}
 \DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_windows_window_ac24a0402e8393ae2ab558a6574302217}{SetVSync}}(\textcolor{keywordtype}{bool}\ enabled)\ \textcolor{keyword}{override};}
 \DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_vesper_1_1_windows_window_a111250e0545c201981741db703eb0b5d}{IsVSync}}()\ \textcolor{keyword}{const}\ \textcolor{keyword}{override};}
 \DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}*\ \doxymbox{\hyperlink{class_vesper_1_1_windows_window_a3de8b964724d127bbe13ac88cb2dd903}{GetNativeWindow}}()\ \textcolor{keyword}{const}\ \textcolor{keyword}{override}\ \{\ \textcolor{keywordflow}{return}\ m\_Window;\ \}}
@@ -39,7 +39,7 @@
 \DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_vesper_1_1_windows_window_ac79337a2dfac2e3aef4df0e1672d1046}{Width}},\ \doxymbox{\hyperlink{class_vesper_1_1_windows_window_aa8a0bb4a38e17bc1faa47b21d7a4e133}{Height}};}
 \DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_vesper_1_1_windows_window_aadb4da6a2081499c11d79e70c5627aee}{VSync}};}
 \DoxyCodeLine{00037\ }
-\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_window_ac908c4b9b5d83ccb8bf159a443833403}{EventCallbackFn}}\ \doxymbox{\hyperlink{class_vesper_1_1_windows_window_aa8f7420cfc5b5936dd1810de7878767f}{EventCallback}};}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ EventCallbackFn\ \doxymbox{\hyperlink{class_vesper_1_1_windows_window_aa8f7420cfc5b5936dd1810de7878767f}{EventCallback}};}
 \DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \};}
 \DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_windows_window_struct_vesper_1_1_windows_window_1_1_window_data}{WindowData}}\ \doxymbox{\hyperlink{class_vesper_1_1_windows_window_a0bee44286a1747f022adc10f519eea35}{m\_Data}};}
 \DoxyCodeLine{00041\ \ \ \ \ \};}

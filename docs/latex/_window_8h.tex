@@ -1,5 +1,10 @@
 \doxysection{Vesper/\+src/\+\+Vesper/\+\+App/\+\+Window.h File Reference}
 \hypertarget{_window_8h}{}\label{_window_8h}\index{Vesper/src/Vesper/App/Window.h@{Vesper/src/Vesper/App/Window.h}}
+
+
+Defines the abstract Window class and Window\+Props struct for window management.  
+
+
 {\ttfamily \+\#include "{}vzpch.\+h"{}}\newline
 {\ttfamily \+\#include "{}Vesper/\+\+Core/\+\+Base.\+h"{}}\newline
 {\ttfamily \+\#include "{}Vesper/\+\+Events/\+\+Event.\+h"{}}\newline
@@ -15,3 +20,21 @@ class \doxymbox{\hyperlink{class_vesper_1_1_window}{Vesper::\+\+Window}}
 \item 
 namespace \doxymbox{\hyperlink{namespace_vesper}{Vesper}}
 \begin{DoxyCompactList}\small\item\em TEMPORARY. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \doxymbox{\hyperlink{namespace_vesper_a5302ff07d23533d2da0500a894dca563}{Vesper::\+\+Window\+Mode}} \{ \doxymbox{\hyperlink{namespace_vesper_a5302ff07d23533d2da0500a894dca563ab13311ab51c4c34757f67f26580018dd}{Vesper::\+\+Windowed}} = 0
+, \doxymbox{\hyperlink{namespace_vesper_a5302ff07d23533d2da0500a894dca563a0829ea6734059d66e6bf87096b215dc1}{Vesper::\+\+Fullscreen}} = 1
+, \doxymbox{\hyperlink{namespace_vesper_a5302ff07d23533d2da0500a894dca563a78f0192ac55eba33ee88d026452952e5}{Vesper::\+\+Borderless}} = 2
+ \}
+\begin{DoxyCompactList}\small\item\em WIP. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Defines the abstract Window class and Window\+Props struct for window management. 
+
+\begin{DoxyAuthor}{Author}
+Damon S. Green II 
+\end{DoxyAuthor}
+\begin{DoxyRefDesc}{Todo}
+\item[\doxymbox{\hyperlink{todo__todo000017}{Todo}}]Add support for different window modes (windowed, fullscreen, borderless). \end{DoxyRefDesc}

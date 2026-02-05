@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['getting_20started_20clone_20third_20party_20libs_0',['Getting started (clone + third-party libs)',['../index.html#autotoc_md3',1,'']]]
+  ['quick_20overview_0',['Quick overview',['../index.html#autotoc_md1',1,'']]]
 ];

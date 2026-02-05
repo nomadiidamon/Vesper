@@ -2,27 +2,35 @@
 \hypertarget{class_vesper_1_1_render_command}{}\label{class_vesper_1_1_render_command}\index{Vesper::RenderCommand@{Vesper::RenderCommand}}
 
 
+A static class that provides an interface for issuing rendering commands.  
+
+
+
+
 {\ttfamily \+\#include $<$Render\+Command.\+h$>$}
 
 \doxysubsubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 static void \doxymbox{\hyperlink{class_vesper_1_1_render_command_aedc33f5de25202004b79a4fa0e090919}{Init}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Initializes the rendering API. \end{DoxyCompactList}\item 
 static void \doxymbox{\hyperlink{class_vesper_1_1_render_command_a7f5374c89d005bc06c173211f51624f5}{Set\+Viewport}} (uint32\+\_\+t x, uint32\+\_\+t y, uint32\+\_\+t width, uint32\+\_\+t height)
-\item 
+\begin{DoxyCompactList}\small\item\em Sets the viewport dimensions for the renderer. \end{DoxyCompactList}\item 
 static void \doxymbox{\hyperlink{class_vesper_1_1_render_command_a379881d538ddfd380a07a8cd90e865d0}{Set\+Clear\+Color}} (const glm::\+vec4 \&color)
-\item 
+\begin{DoxyCompactList}\small\item\em Sets the clear color for the renderer. \end{DoxyCompactList}\item 
 static void \doxymbox{\hyperlink{class_vesper_1_1_render_command_ad9c66d6d71de59383f6717b2b24bd1d4}{Clear}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Clears the rendering buffers. \end{DoxyCompactList}\item 
 static void \doxymbox{\hyperlink{class_vesper_1_1_render_command_ae7d3374adebb2f37f3e74a10e04d405e}{Draw\+Indexed}} (const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_vertex_array}{Vertex\+Array}} $>$ \&vertex\+Array, uint32\+\_\+t index\+Count=0)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Draws indexed geometry using the specified vertex array and index count. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Static Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 static \doxymbox{\hyperlink{class_vesper_1_1_renderer_a_p_i}{Renderer\+API}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_vesper_1_1_render_command_a54dfe3ddeb02c1f4daa0ca2801456ebd}{s\+\_\+\+Renderer\+API}} = new \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_renderer_a_p_i}{Open\+GLRenderer\+API}}()
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+A static class that provides an interface for issuing rendering commands. 
 
 \label{doc-func-members}
 \Hypertarget{class_vesper_1_1_render_command_doc-func-members}
@@ -34,10 +42,14 @@ static \doxymbox{\hyperlink{class_vesper_1_1_renderer_a_p_i}{Renderer\+API}} \te
 void Vesper::\+\+Render\+Command::\+\+Clear (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
 
 
+
+Clears the rendering buffers. 
+
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_render_command_a54dfe3ddeb02c1f4daa0ca2801456ebd}{s\_RendererAPI}}-\/>Clear();}
-\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_render_command_a54dfe3ddeb02c1f4daa0ca2801456ebd}{s\_RendererAPI}}-\/>Clear();}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \}}
 
 \end{DoxyCode}
 
@@ -46,7 +58,7 @@ References \doxymbox{\hyperlink{class_vesper_1_1_renderer_a_p_i_a8e633cb5d429ef8
 
 
 
-Referenced by \doxymbox{\hyperlink{class_sandbox2_d_abc796def0880d3ca2dde9a010c4bf70c}{Sandbox2\+D::\+\+On\+Update()}}, and \doxymbox{\hyperlink{class_vesper_1_1_editor_layer_a984242ed582e7e06bcfd16bfe5de0a68}{Vesper::\+\+Editor\+Layer::\+\+On\+Update()}}.
+Referenced by \doxymbox{\hyperlink{class_vesper_1_1_editor_layer_a984242ed582e7e06bcfd16bfe5de0a68}{Vesper::\+\+Editor\+Layer::\+\+On\+Update()}}.
 
 \Hypertarget{class_vesper_1_1_render_command_ae7d3374adebb2f37f3e74a10e04d405e}\index{Vesper::RenderCommand@{Vesper::RenderCommand}!DrawIndexed@{DrawIndexed}}
 \index{DrawIndexed@{DrawIndexed}!Vesper::RenderCommand@{Vesper::RenderCommand}}
@@ -55,10 +67,14 @@ Referenced by \doxymbox{\hyperlink{class_sandbox2_d_abc796def0880d3ca2dde9a010c4
 void Vesper::\+\+Render\+Command::\+\+Draw\+Indexed (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_vertex_array}{Vertex\+Array}} $>$ \&}]{vertex\+Array}{, }\item[{uint32\+\_\+t}]{index\+Count}{ = {\ttfamily 0}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
 
 
+
+Draws indexed geometry using the specified vertex array and index count. 
+
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_render_command_a54dfe3ddeb02c1f4daa0ca2801456ebd}{s\_RendererAPI}}-\/>DrawIndexed(vertexArray,\ indexCount);}
-\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_render_command_a54dfe3ddeb02c1f4daa0ca2801456ebd}{s\_RendererAPI}}-\/>DrawIndexed(vertexArray,\ indexCount);}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \}}
 
 \end{DoxyCode}
 
@@ -72,10 +88,14 @@ References \doxymbox{\hyperlink{class_vesper_1_1_render_command_a54dfe3ddeb02c1f
 void Vesper::\+\+Render\+Command::\+\+Init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
 
 
+
+Initializes the rendering API. 
+
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_render_command_a54dfe3ddeb02c1f4daa0ca2801456ebd}{s\_RendererAPI}}-\/>Init();}
-\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_render_command_a54dfe3ddeb02c1f4daa0ca2801456ebd}{s\_RendererAPI}}-\/>Init();}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \}}
 
 \end{DoxyCode}
 
@@ -93,10 +113,14 @@ Referenced by \doxymbox{\hyperlink{class_vesper_1_1_renderer_af44c320528448c97bd
 void Vesper::\+\+Render\+Command::\+\+Set\+Clear\+Color (\begin{DoxyParamCaption}\item[{const glm::\+vec4 \&}]{color}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
 
 
+
+Sets the clear color for the renderer. 
+
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_render_command_a54dfe3ddeb02c1f4daa0ca2801456ebd}{s\_RendererAPI}}-\/>SetClearColor(color);}
-\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_render_command_a54dfe3ddeb02c1f4daa0ca2801456ebd}{s\_RendererAPI}}-\/>SetClearColor(color);}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \}}
 
 \end{DoxyCode}
 
@@ -110,10 +134,14 @@ References \doxymbox{\hyperlink{class_vesper_1_1_render_command_a54dfe3ddeb02c1f
 void Vesper::\+\+Render\+Command::\+\+Set\+Viewport (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{x}{, }\item[{uint32\+\_\+t}]{y}{, }\item[{uint32\+\_\+t}]{width}{, }\item[{uint32\+\_\+t}]{height}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
 
 
+
+Sets the viewport dimensions for the renderer. 
+
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_render_command_a54dfe3ddeb02c1f4daa0ca2801456ebd}{s\_RendererAPI}}-\/>SetViewport(x,\ y,\ width,\ height);}
-\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_render_command_a54dfe3ddeb02c1f4daa0ca2801456ebd}{s\_RendererAPI}}-\/>SetViewport(x,\ y,\ width,\ height);}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \}}
 
 \end{DoxyCode}
 

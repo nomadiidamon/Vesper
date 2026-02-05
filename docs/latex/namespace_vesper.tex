@@ -15,7 +15,7 @@ namespace \doxymbox{\hyperlink{namespace_vesper_1_1_key}{Key}}
 namespace \doxymbox{\hyperlink{namespace_vesper_1_1_random}{Random}}
 \item 
 namespace \doxymbox{\hyperlink{namespace_vesper_1_1_color}{Color}}
-\item 
+\begin{DoxyCompactList}\small\item\em Provides commonly used colors and color manipulation functions. \end{DoxyCompactList}\item 
 namespace \doxymbox{\hyperlink{namespace_vesper_1_1_mouse}{Mouse}}
 \begin{DoxyCompactList}\small\item\em Namespace for mouse button codes. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Classes}
@@ -61,26 +61,18 @@ class \doxymbox{\hyperlink{class_vesper_1_1_key_released_event}{Key\+Released\+E
 \begin{DoxyCompactList}\small\item\em \doxylink{class_vesper_1_1_event}{Event} for registering key release. \end{DoxyCompactList}\item 
 class \doxymbox{\hyperlink{class_vesper_1_1_key_typed_event}{Key\+Typed\+Event}}
 \begin{DoxyCompactList}\small\item\em \doxylink{class_vesper_1_1_event}{Event} for registering key typing. \end{DoxyCompactList}\item 
-class \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_vertex_buffer}{Open\+GLVertex\+Buffer}}
-\item 
-class \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_index_buffer}{Open\+GLIndex\+Buffer}}
-\item 
 class \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_context}{Open\+GLContext}}
 \item 
 class \doxymbox{\hyperlink{class_vesper_1_1_graphics_context}{Graphics\+Context}}
-\item 
+\begin{DoxyCompactList}\small\item\em Abstract class representing a graphics context. \end{DoxyCompactList}\item 
 class \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_framebuffer}{Open\+GLFramebuffer}}
 \item 
 class \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_im_gui_layer}{Open\+GLIm\+Gui\+Layer}}
 \item 
-class \doxymbox{\hyperlink{class_vesper_1_1_im_gui_layer}{Im\+Gui\+Layer}}
-\item 
-class \doxymbox{\hyperlink{class_vesper_1_1_layer}{Layer}}
-\begin{DoxyCompactList}\small\item\em Represents a reusable application layer that receives lifecycle callbacks (attach, detach, update, events, render, and Im\+Gui render). Intended as a base class for concrete layers. \end{DoxyCompactList}\item 
 class \doxymbox{\hyperlink{class_vesper_1_1_renderer_a_p_i}{Renderer\+API}}
-\item 
+\begin{DoxyCompactList}\small\item\em An abstract class defining the interface for a rendering \doxylink{class_vesper_1_1_renderer_a_p_i_acbef8f1a2c9546387b6513640c5c7995}{API}. \end{DoxyCompactList}\item 
 class \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_renderer_a_p_i}{Open\+GLRenderer\+API}}
-\item 
+\begin{DoxyCompactList}\small\item\em An implementation of the \doxylink{class_vesper_1_1_renderer_a_p_i}{Renderer\+API} for Open\+GL. \end{DoxyCompactList}\item 
 class \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_shader}{Open\+GLShader}}
 \item 
 class \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_texture2_d}{Open\+GLTexture2D}}
@@ -89,12 +81,42 @@ class \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_uniform_buffer}{Open\+GLUni
 \item 
 class \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_vertex_array}{Open\+GLVertex\+Array}}
 \item 
-struct \doxymbox{\hyperlink{struct_vesper_1_1_window_props}{Window\+Props}}
-\begin{DoxyCompactList}\small\item\em Holds the data for window configuration. \end{DoxyCompactList}\item 
-class \doxymbox{\hyperlink{class_vesper_1_1_window}{Window}}
-\begin{DoxyCompactList}\small\item\em Abstract interface representing an application window. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_vesper_1_1_layer}{Layer}}
+\begin{DoxyCompactList}\small\item\em Represents a reusable application layer that receives lifecycle callbacks (attach, detach, update, events, render, and Im\+Gui render). Intended as a base class for concrete layers. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{Layer\+Stack}}
+\begin{DoxyCompactList}\small\item\em Manages an ordered stack of \doxylink{class_vesper_1_1_layer}{Layer} pointers. Layers can be pushed or popped and the stack can be iterated in forward or reverse order. \end{DoxyCompactList}\item 
 class \doxymbox{\hyperlink{class_vesper_1_1_log}{Log}}
+\begin{DoxyCompactList}\small\item\em A logging utility class for the \doxylink{namespace_vesper}{Vesper} engine. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_vesper_1_1_im_gui_layer}{Im\+Gui\+Layer}}
 \item 
+struct \doxymbox{\hyperlink{namespace_vesper_struct_vesper_1_1_particle_props}{Particle\+Props}}
+\item 
+class \doxymbox{\hyperlink{class_vesper_1_1_particle_system}{Particle\+System}}
+\item 
+class \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d}{Renderer2D}}
+\begin{DoxyCompactList}\small\item\em A 2D renderer for drawing quads and sprites. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera}{Orthographic\+Camera}}
+\item 
+struct \doxymbox{\hyperlink{struct_vesper_1_1_buffer_element}{Buffer\+Element}}
+\begin{DoxyCompactList}\small\item\em Represents a single element in a buffer layout. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_vesper_1_1_buffer_layout}{Buffer\+Layout}}
+\begin{DoxyCompactList}\small\item\em Represents the layout of a buffer, consisting of multiple Buffer\+Elements. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_vesper_1_1_vertex_buffer}{Vertex\+Buffer}}
+\begin{DoxyCompactList}\small\item\em Abstract base class for a vertex buffer. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_vesper_1_1_index_buffer}{Index\+Buffer}}
+\begin{DoxyCompactList}\small\item\em Abstract base class for an index buffer. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_vertex_buffer}{Open\+GLVertex\+Buffer}}
+\item 
+class \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_index_buffer}{Open\+GLIndex\+Buffer}}
+\item 
+class \doxymbox{\hyperlink{class_vesper_1_1_editor_camera}{Editor\+Camera}}
+\item 
+struct \doxymbox{\hyperlink{namespace_vesper_struct_vesper_1_1_framebuffer_specification}{Framebuffer\+Specification}}
+\begin{DoxyCompactList}\small\item\em Specification for creating a \doxylink{class_vesper_1_1_framebuffer}{Framebuffer}.  \doxymbox{\hyperlink{namespace_vesper_struct_vesper_1_1_framebuffer_specification}{More...}}\end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_vesper_1_1_framebuffer}{Framebuffer}}
+\begin{DoxyCompactList}\small\item\em Abstract class representing a framebuffer. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_vesper_1_1_renderer}{Renderer}}
+\begin{DoxyCompactList}\small\item\em The main renderer class responsible for managing rendering operations. \end{DoxyCompactList}\item 
 struct \doxymbox{\hyperlink{namespace_vesper_struct_vesper_1_1_profile_result}{Profile\+Result}}
 \item 
 struct \doxymbox{\hyperlink{namespace_vesper_struct_vesper_1_1_instrumentation_session}{Instrumentation\+Session}}
@@ -103,47 +125,53 @@ class \doxymbox{\hyperlink{class_vesper_1_1_instrumentor}{Instrumentor}}
 \item 
 class \doxymbox{\hyperlink{class_vesper_1_1_instrumentation_timer}{Instrumentation\+Timer}}
 \item 
-class \doxymbox{\hyperlink{class_vesper_1_1_timestep}{Timestep}}
-\item 
-class \doxymbox{\hyperlink{class_vesper_1_1_event}{Event}}
-\begin{DoxyCompactList}\small\item\em Abstract base class for all events. \end{DoxyCompactList}\item 
-class \doxymbox{\hyperlink{class_vesper_1_1_event_dispatcher}{Event\+Dispatcher}}
-\begin{DoxyCompactList}\small\item\em Stack-\/based templated event dispatcher. \end{DoxyCompactList}\item 
-class \doxymbox{\hyperlink{class_vesper_1_1_layer_stack}{Layer\+Stack}}
-\begin{DoxyCompactList}\small\item\em Manages an ordered stack of \doxylink{class_vesper_1_1_layer}{Layer} pointers. Layers can be pushed or popped and the stack can be iterated in forward or reverse order. \end{DoxyCompactList}\item 
-class \doxymbox{\hyperlink{class_vesper_1_1_vertex_array}{Vertex\+Array}}
-\item 
-struct \doxymbox{\hyperlink{namespace_vesper_struct_vesper_1_1_particle_props}{Particle\+Props}}
-\item 
-class \doxymbox{\hyperlink{class_vesper_1_1_particle_system}{Particle\+System}}
-\item 
-class \doxymbox{\hyperlink{class_vesper_1_1_renderer2_d}{Renderer2D}}
-\item 
-class \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera}{Orthographic\+Camera}}
-\item 
-struct \doxymbox{\hyperlink{struct_vesper_1_1_buffer_element}{Buffer\+Element}}
-\item 
-class \doxymbox{\hyperlink{class_vesper_1_1_buffer_layout}{Buffer\+Layout}}
-\item 
-class \doxymbox{\hyperlink{class_vesper_1_1_vertex_buffer}{Vertex\+Buffer}}
-\item 
-class \doxymbox{\hyperlink{class_vesper_1_1_index_buffer}{Index\+Buffer}}
-\item 
-class \doxymbox{\hyperlink{class_vesper_1_1_editor_camera}{Editor\+Camera}}
-\item 
-struct \doxymbox{\hyperlink{namespace_vesper_struct_vesper_1_1_framebuffer_specification}{Framebuffer\+Specification}}
-\item 
-class \doxymbox{\hyperlink{class_vesper_1_1_framebuffer}{Framebuffer}}
-\item 
-class \doxymbox{\hyperlink{class_vesper_1_1_renderer}{Renderer}}
-\item 
 struct \doxymbox{\hyperlink{struct_vesper_1_1_orthographic_camera_bounds}{Orthographic\+Camera\+Bounds}}
 \item 
 class \doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera_controller}{Orthographic\+Camera\+Controller}}
 \item 
+class \doxymbox{\hyperlink{class_vesper_1_1_render_command}{Render\+Command}}
+\begin{DoxyCompactList}\small\item\em A static class that provides an interface for issuing rendering commands. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_vesper_1_1_shader}{Shader}}
+\begin{DoxyCompactList}\small\item\em An abstraction for a shader program. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_vesper_1_1_shader_library}{Shader\+Library}}
+\begin{DoxyCompactList}\small\item\em A library for managing and storing shaders. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_vesper_1_1_texture}{Texture}}
+\begin{DoxyCompactList}\small\item\em An abstraction for a texture. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_vesper_1_1_texture2_d}{Texture2D}}
+\begin{DoxyCompactList}\small\item\em An abstraction for a 2D texture. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_vesper_1_1_texture_library}{Texture\+Library}}
+\begin{DoxyCompactList}\small\item\em A library for managing and storing textures. \end{DoxyCompactList}\item 
 class \doxymbox{\hyperlink{class_vesper_1_1_sub_texture2_d}{Sub\+Texture2D}}
-\item 
+\begin{DoxyCompactList}\small\item\em Represents a sub-\/region of a 2D texture, useful for sprite sheets. \end{DoxyCompactList}\item 
 class \doxymbox{\hyperlink{class_vesper_1_1_camera}{Camera}}
+\item 
+class \doxymbox{\hyperlink{class_vesper_1_1_timestep}{Timestep}}
+\begin{DoxyCompactList}\small\item\em Represents a time step in seconds. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_vesper_1_1_event}{Event}}
+\begin{DoxyCompactList}\small\item\em Abstract base class for all events. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_vesper_1_1_event_dispatcher}{Event\+Dispatcher}}
+\begin{DoxyCompactList}\small\item\em Stack-\/based templated event dispatcher. \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{namespace_vesper_struct_vesper_1_1_quad_vertex}{Quad\+Vertex}}
+\item 
+struct \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data}{Renderer2\+DData}}
+\item 
+class \doxymbox{\hyperlink{class_vesper_1_1_uniform_buffer}{Uniform\+Buffer}}
+\begin{DoxyCompactList}\small\item\em An abstraction for a uniform buffer object (UBO). \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_vesper_1_1_vertex_array}{Vertex\+Array}}
+\begin{DoxyCompactList}\small\item\em An abstraction for a vertex array object (VAO). \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_vesper_1_1_entity}{Entity}}
+\begin{DoxyCompactList}\small\item\em Represents an entity in a scene. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_vesper_1_1_scene}{Scene}}
+\item 
+class \doxymbox{\hyperlink{class_vesper_1_1_scriptable_entity}{Scriptable\+Entity}}
+\begin{DoxyCompactList}\small\item\em Base class for scriptable entities within a scene. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_vesper_1_1_scene_camera}{Scene\+Camera}}
+\item 
+class \doxymbox{\hyperlink{class_vesper_1_1_editor_layer}{Editor\+Layer}}
+\item 
+class \doxymbox{\hyperlink{class_vesper_1_1_scene_serializer}{Scene\+Serializer}}
+\item 
+class \doxymbox{\hyperlink{class_vesper_1_1_scene_hierarchy_panel}{Scene\+Hierarchy\+Panel}}
 \item 
 struct \doxymbox{\hyperlink{struct_vesper_1_1_u_u_i_d}{UUID}}
 \begin{DoxyCompactList}\small\item\em Universally Unique Identifier. \end{DoxyCompactList}\item 
@@ -163,61 +191,45 @@ struct \doxymbox{\hyperlink{struct_vesper_1_1_camera_component}{Camera\+Componen
 \begin{DoxyCompactList}\small\item\em Component that holds camera data. \end{DoxyCompactList}\item 
 struct \doxymbox{\hyperlink{struct_vesper_1_1_native_script_component}{Native\+Script\+Component}}
 \begin{DoxyCompactList}\small\item\em Component that holds scripting data for an entity. \end{DoxyCompactList}\item 
-struct \doxymbox{\hyperlink{namespace_vesper_struct_vesper_1_1_quad_vertex}{Quad\+Vertex}}
-\item 
-struct \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data}{Renderer2\+DData}}
-\item 
-class \doxymbox{\hyperlink{class_vesper_1_1_texture}{Texture}}
-\item 
-class \doxymbox{\hyperlink{class_vesper_1_1_texture2_d}{Texture2D}}
-\item 
-class \doxymbox{\hyperlink{class_vesper_1_1_texture_library}{Texture\+Library}}
-\item 
-class \doxymbox{\hyperlink{class_vesper_1_1_render_command}{Render\+Command}}
-\item 
-class \doxymbox{\hyperlink{class_vesper_1_1_shader}{Shader}}
-\item 
-class \doxymbox{\hyperlink{class_vesper_1_1_shader_library}{Shader\+Library}}
-\item 
-class \doxymbox{\hyperlink{class_vesper_1_1_uniform_buffer}{Uniform\+Buffer}}
-\item 
-class \doxymbox{\hyperlink{class_vesper_1_1_entity}{Entity}}
-\begin{DoxyCompactList}\small\item\em Represents an entity in a scene. \end{DoxyCompactList}\item 
-class \doxymbox{\hyperlink{class_vesper_1_1_scene}{Scene}}
-\item 
-class \doxymbox{\hyperlink{class_vesper_1_1_scriptable_entity}{Scriptable\+Entity}}
-\begin{DoxyCompactList}\small\item\em Base class for scriptable entities within a scene. \end{DoxyCompactList}\item 
-class \doxymbox{\hyperlink{class_vesper_1_1_editor_layer}{Editor\+Layer}}
-\item 
-class \doxymbox{\hyperlink{class_vesper_1_1_scene_serializer}{Scene\+Serializer}}
-\item 
-class \doxymbox{\hyperlink{class_vesper_1_1_scene_hierarchy_panel}{Scene\+Hierarchy\+Panel}}
-\item 
-class \doxymbox{\hyperlink{class_vesper_1_1_scene_camera}{Scene\+Camera}}
-\item 
 class \doxymbox{\hyperlink{class_vesper_1_1_vesper_editor}{Vesper\+Editor}}
-\end{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{struct_vesper_1_1_window_props}{Window\+Props}}
+\begin{DoxyCompactList}\small\item\em Holds the data for window configuration. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_vesper_1_1_window}{Window}}
+\begin{DoxyCompactList}\small\item\em Abstract interface representing an application window. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
 using \doxymbox{\hyperlink{namespace_vesper_a60bb5e07d142d5fcc3b5d0b0ce6db7bc}{Floating\+Point\+Microseconds}} = std::\+chrono::\+duration$<$double, std::\+micro$>$
 \item 
-{\footnotesize template$<$typename T$>$ }\\using \doxymbox{\hyperlink{namespace_vesper_a5425f9aaa2ee4d3761c8ce6b385e0b70}{Scope}} = std::\+unique\+\_\+ptr$<$T$>$
-\item 
-{\footnotesize template$<$typename T$>$ }\\using \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}} = std::\+shared\+\_\+ptr$<$T$>$
-\item 
 using \doxymbox{\hyperlink{namespace_vesper_aa833b92e9e5938b3ae0f6481a9a21bc7}{Key\+Code}} = uint16\+\_\+t
 \begin{DoxyCompactList}\small\item\em Alias for keyboard key code type. \end{DoxyCompactList}\item 
 using \doxymbox{\hyperlink{namespace_vesper_a4846689fe9c6b05a019db677a629f0d6}{Mouse\+Code}} = uint8\+\_\+t
-\begin{DoxyCompactList}\small\item\em Alias for mouse button code type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Alias for mouse button code type. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T$>$ }\\using \doxymbox{\hyperlink{namespace_vesper_a5425f9aaa2ee4d3761c8ce6b385e0b70}{Scope}} = std::\+unique\+\_\+ptr$<$T$>$
+\begin{DoxyCompactList}\small\item\em A smart pointer type representing exclusive ownership of an object. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T$>$ }\\using \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}} = std::\+shared\+\_\+ptr$<$T$>$
+\begin{DoxyCompactList}\small\item\em A smart pointer type representing shared ownership of an object. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Enumerations}
 \begin{DoxyCompactItemize}
 \item 
-enum class \doxymbox{\hyperlink{namespace_vesper_a5302ff07d23533d2da0500a894dca563}{Window\+Mode}} \{ \doxymbox{\hyperlink{namespace_vesper_a5302ff07d23533d2da0500a894dca563ab13311ab51c4c34757f67f26580018dd}{Windowed}} = 0
-, \doxymbox{\hyperlink{namespace_vesper_a5302ff07d23533d2da0500a894dca563a0829ea6734059d66e6bf87096b215dc1}{Fullscreen}} = 1
-, \doxymbox{\hyperlink{namespace_vesper_a5302ff07d23533d2da0500a894dca563a78f0192ac55eba33ee88d026452952e5}{Borderless}} = 2
+enum class \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131}{Shader\+Data\+Type}} \{ \newline
+\doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a6adf97f83acf6453d4a6a4b1070f3754}{None}} = 0
+, \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a22ae0e2b89e5e3d477f988cc36d3272b}{Float}}
+, \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a6694430a2b471b5d2de071f2ef1fdc57}{Float2}}
+, \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a8a8a1d211464d4bdee46db3c75bfa121}{Float3}}
+, \newline
+\doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a33116adc6690289da9b82ea736864eeb}{Float4}}
+, \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a2495a7d9c1fab19af6441abbfed823e1}{Mat3}}
+, \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a80f7408b0a5b5d78c26adae9f6f420f9}{Mat4}}
+, \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a1686a6c336b71b36d77354cea19a8b52}{Int}}
+, \newline
+\doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a4c6bc90f2bbdf35523e29c414a57bad3}{Int2}}
+, \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a56bf1b0e694b442bf4145a04b82ea943}{Int3}}
+, \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a1a44f12c3427b3e11c171d09632bad8d}{Int4}}
+, \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131ac26f15e86e3de4c398a8273272aba034}{Bool}}
  \}
-\begin{DoxyCompactList}\small\item\em WIP. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em The different data types that can be used in shaders. \end{DoxyCompactList}\item 
 enum class \doxymbox{\hyperlink{namespace_vesper_ada4bc37927ce22c44ea0083a224d3bb5}{Event\+Type}} \{ \newline
 \doxymbox{\hyperlink{namespace_vesper_ada4bc37927ce22c44ea0083a224d3bb5a6adf97f83acf6453d4a6a4b1070f3754}{None}} = 0
 , \doxymbox{\hyperlink{namespace_vesper_ada4bc37927ce22c44ea0083a224d3bb5ac984201d37197ab297a14d19efee4b07}{Window\+Close}}
@@ -250,27 +262,15 @@ enum \doxymbox{\hyperlink{namespace_vesper_ad79da63be4419c3a218acaa990decabe}{Ev
 , \doxymbox{\hyperlink{namespace_vesper_ad79da63be4419c3a218acaa990decabea17ff2a7e3b7077c99dafe654f2b9bc34}{Event\+Category\+Mouse\+Button}} = BIT(4)
  \}
 \begin{DoxyCompactList}\small\item\em Enumeration of event categories. \end{DoxyCompactList}\item 
-enum class \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131}{Shader\+Data\+Type}} \{ \newline
-\doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a6adf97f83acf6453d4a6a4b1070f3754}{None}} = 0
-, \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a22ae0e2b89e5e3d477f988cc36d3272b}{Float}}
-, \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a6694430a2b471b5d2de071f2ef1fdc57}{Float2}}
-, \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a8a8a1d211464d4bdee46db3c75bfa121}{Float3}}
-, \newline
-\doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a33116adc6690289da9b82ea736864eeb}{Float4}}
-, \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a2495a7d9c1fab19af6441abbfed823e1}{Mat3}}
-, \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a80f7408b0a5b5d78c26adae9f6f420f9}{Mat4}}
-, \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a1686a6c336b71b36d77354cea19a8b52}{Int}}
-, \newline
-\doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a4c6bc90f2bbdf35523e29c414a57bad3}{Int2}}
-, \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a56bf1b0e694b442bf4145a04b82ea943}{Int3}}
-, \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a1a44f12c3427b3e11c171d09632bad8d}{Int4}}
-, \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131ac26f15e86e3de4c398a8273272aba034}{Bool}}
+enum class \doxymbox{\hyperlink{namespace_vesper_a5302ff07d23533d2da0500a894dca563}{Window\+Mode}} \{ \doxymbox{\hyperlink{namespace_vesper_a5302ff07d23533d2da0500a894dca563ab13311ab51c4c34757f67f26580018dd}{Windowed}} = 0
+, \doxymbox{\hyperlink{namespace_vesper_a5302ff07d23533d2da0500a894dca563a0829ea6734059d66e6bf87096b215dc1}{Fullscreen}} = 1
+, \doxymbox{\hyperlink{namespace_vesper_a5302ff07d23533d2da0500a894dca563a78f0192ac55eba33ee88d026452952e5}{Borderless}} = 2
  \}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em WIP. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\doxymbox{\hyperlink{class_vesper_1_1_application}{Application}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{namespace_vesper_ad515973d88dbc403525505f804b420e4}{Create\+Application}} ()
+\doxymbox{\hyperlink{class_vesper_1_1_application}{Application}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{namespace_vesper_a43e1ca989eabb42f3b23b79517ff1a65}{Create\+Application}} ()
 \item 
 static void \doxymbox{\hyperlink{namespace_vesper_a9cb9185654b38a202d68550a4882ae20}{GLFWError\+Callback}} (int error, const char \texorpdfstring{$\ast$}{*}description)
 \item 
@@ -278,14 +278,10 @@ static \doxymbox{\hyperlink{_open_g_l_shader_8h_a7efd7809e1632cdae75603fd1fee61c
 \item 
 static \doxymbox{\hyperlink{_open_g_l_shader_8h_a7efd7809e1632cdae75603fd1fee61c0}{GLenum}} \doxymbox{\hyperlink{namespace_vesper_a3b863974b045f8b32fbb4993fea391a2}{Shader\+Data\+Type\+To\+Open\+GLBase\+Type}} (\doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131}{Shader\+Data\+Type}} type)
 \item 
+static uint32\+\_\+t \doxymbox{\hyperlink{namespace_vesper_ab245b1fa9d90c8fe2aa90c41a588c29e}{Shader\+Data\+Type\+Size}} (\doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131}{Shader\+Data\+Type}} type)
+\begin{DoxyCompactList}\small\item\em Returns the size in bytes of the given \doxylink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131}{Shader\+Data\+Type}. \end{DoxyCompactList}\item 
 std::\+string \doxymbox{\hyperlink{namespace_vesper_a2ad5c87552bf4fd64385dc411970ec76}{format\+\_\+as}} (const \doxymbox{\hyperlink{class_vesper_1_1_event}{Event}} \&e)
 \begin{DoxyCompactList}\small\item\em Format an event as a string. \end{DoxyCompactList}\item 
-static uint32\+\_\+t \doxymbox{\hyperlink{namespace_vesper_ab245b1fa9d90c8fe2aa90c41a588c29e}{Shader\+Data\+Type\+Size}} (\doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131}{Shader\+Data\+Type}} type)
-\item 
-{\footnotesize template$<$typename T, typename... Args$>$ }\\constexpr \doxymbox{\hyperlink{namespace_vesper_a5425f9aaa2ee4d3761c8ce6b385e0b70}{Scope}}$<$ T $>$ \doxymbox{\hyperlink{namespace_vesper_a37fd1cd7d536a4b07dc0a734f8fde936}{Create\+Scope}} (Args \&\&... args)
-\item 
-{\footnotesize template$<$typename T, typename... Args$>$ }\\constexpr \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ T $>$ \doxymbox{\hyperlink{namespace_vesper_a313930b55375b2f4dd36375b56f11047}{Create\+Ref}} (Args \&\&... args)
-\item 
 static void \doxymbox{\hyperlink{namespace_vesper_afd6defdd6d228a26a11631a007bb7a07}{Serialize\+Entity}} (YAML::\+\+Emitter \&out, \doxymbox{\hyperlink{class_vesper_1_1_entity}{Entity}} entity)
 \item 
 static void \doxymbox{\hyperlink{namespace_vesper_ab028f39b6f8287e98aa2ded73af279ee}{Display\+Vesper\+Info\+\_\+\+Im\+Gui}} ()
@@ -297,7 +293,11 @@ static void \doxymbox{\hyperlink{namespace_vesper_a307a86619e213fd2b7fc5cd7907f7
 static void \doxymbox{\hyperlink{namespace_vesper_a5b378fa4a38ee15aeea839d74c1c979e}{Sub\+Texture\+Edit}} (const std::\+string \&label, \doxymbox{\hyperlink{struct_vesper_1_1_sub_texture_component}{Sub\+Texture\+Component}} \&sub\+Texture)
 \item 
 {\footnotesize template$<$typename T, typename UIFunction$>$ }\\static void \doxymbox{\hyperlink{namespace_vesper_abd5876954c1f53f2a12d42767b09d3f6}{Draw\+Component}} (const std::\+string \&name, \doxymbox{\hyperlink{class_vesper_1_1_entity}{Entity}} entity, UIFunction ui\+Function)
-\end{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T, typename... Args$>$ }\\constexpr \doxymbox{\hyperlink{namespace_vesper_a5425f9aaa2ee4d3761c8ce6b385e0b70}{Scope}}$<$ T $>$ \doxymbox{\hyperlink{namespace_vesper_a37fd1cd7d536a4b07dc0a734f8fde936}{Create\+Scope}} (Args \&\&... args)
+\begin{DoxyCompactList}\small\item\em Creates a \doxylink{namespace_vesper_a5425f9aaa2ee4d3761c8ce6b385e0b70}{Scope} (unique\+\_\+ptr) for the given type and constructor arguments. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T, typename... Args$>$ }\\constexpr \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ T $>$ \doxymbox{\hyperlink{namespace_vesper_a313930b55375b2f4dd36375b56f11047}{Create\+Ref}} (Args \&\&... args)
+\begin{DoxyCompactList}\small\item\em Creates a \doxylink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref} (shared\+\_\+ptr) for the given type and constructor arguments. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
@@ -312,11 +312,19 @@ static \doxymbox{\hyperlink{struct_vesper_1_1_renderer2_d_data}{Renderer2\+DData
 \doxysubsection{Detailed Description}
 TEMPORARY. 
 
-TYPE ALIASES.
+The main namespace for the \doxylink{namespace_vesper}{Vesper} engine.
 
 Temporary.
 
-TODO:\+ Abstract this to Open\+GL/\+\+Direct\+X/\+\+Vulkan etc Im\+Gui layers. 
+TODO:\+ Abstract this to Open\+GL/\+\+Direct\+X/\+\+Vulkan etc Im\+Gui layers.
+
+\begin{DoxyRefDesc}{Todo}
+\item[\doxymbox{\hyperlink{todo__todo000015}{Todo}}]Temporary \end{DoxyRefDesc}
+
+
+\begin{DoxyRefDesc}{Todo}
+\item[\doxymbox{\hyperlink{todo__todo000021}{Todo}}]Temporary \end{DoxyRefDesc}
+
 
 \doxysubsection{Class Documentation}
 \index{Vesper::ApplicationSettings@{Vesper::ApplicationSettings}}
@@ -369,48 +377,6 @@ Width = 1280&
 \doxymbox{\Hypertarget{namespace_vesper_a022651e24a0f24c494c268171d6e1185}\label{namespace_vesper_a022651e24a0f24c494c268171d6e1185}} 
 string&
 WorkingDirectory&
-\\
-\hline
-
-\end{DoxyFields}
-\index{Vesper::ProfileResult@{Vesper::ProfileResult}}
-\label{struct_vesper_1_1_profile_result}
-\Hypertarget{namespace_vesper_struct_vesper_1_1_profile_result}
-\doxysubsubsection{struct Vesper::\+Profile\+Result}
-\begin{DoxyFields}{Class Members}
-\doxymbox{\Hypertarget{namespace_vesper_ae73da7a2e69c2ae90069c0f2063da162}\label{namespace_vesper_ae73da7a2e69c2ae90069c0f2063da162}} 
-long long&
-End&
-\\
-\hline
-
-\doxymbox{\Hypertarget{namespace_vesper_a53f86c360af0fb068e6de1778d732aa9}\label{namespace_vesper_a53f86c360af0fb068e6de1778d732aa9}} 
-string&
-Name&
-\\
-\hline
-
-\doxymbox{\Hypertarget{namespace_vesper_ab68fdb0acd48f29f27a306fb51a2a5e4}\label{namespace_vesper_ab68fdb0acd48f29f27a306fb51a2a5e4}} 
-long long&
-Start&
-\\
-\hline
-
-\doxymbox{\Hypertarget{namespace_vesper_aea0f113bfe4467c4ad661b1648b759c3}\label{namespace_vesper_aea0f113bfe4467c4ad661b1648b759c3}} 
-uint32\_t&
-ThreadID&
-\\
-\hline
-
-\end{DoxyFields}
-\index{Vesper::InstrumentationSession@{Vesper::InstrumentationSession}}
-\label{struct_vesper_1_1_instrumentation_session}
-\Hypertarget{namespace_vesper_struct_vesper_1_1_instrumentation_session}
-\doxysubsubsection{struct Vesper::\+Instrumentation\+Session}
-\begin{DoxyFields}{Class Members}
-\doxymbox{\Hypertarget{namespace_vesper_a9aea845bcb154f66f84398a10e599884}\label{namespace_vesper_a9aea845bcb154f66f84398a10e599884}} 
-string&
-Name&
 \\
 \hline
 
@@ -497,7 +463,7 @@ VelocityVariation = \{ 0.0f, 0.0f, 0.0f \}&
 \label{struct_vesper_1_1_framebuffer_specification}
 \Hypertarget{namespace_vesper_struct_vesper_1_1_framebuffer_specification}
 \doxysubsubsection{struct Vesper::\+Framebuffer\+Specification}
-\begin{DoxyFields}{Class Members}
+Specification for creating a \doxylink{class_vesper_1_1_framebuffer}{Framebuffer}. \begin{DoxyFields}{Class Members}
 \doxymbox{\Hypertarget{namespace_vesper_a6de1e96de655e22017c9acf96c52904d}\label{namespace_vesper_a6de1e96de655e22017c9acf96c52904d}} 
 uint32\_t&
 Height&
@@ -519,6 +485,48 @@ SwapChainTarget = false&
 \doxymbox{\Hypertarget{namespace_vesper_a7d2b5bb823ad476d99ca5806af032b34}\label{namespace_vesper_a7d2b5bb823ad476d99ca5806af032b34}} 
 uint32\_t&
 Width&
+\\
+\hline
+
+\end{DoxyFields}
+\index{Vesper::ProfileResult@{Vesper::ProfileResult}}
+\label{struct_vesper_1_1_profile_result}
+\Hypertarget{namespace_vesper_struct_vesper_1_1_profile_result}
+\doxysubsubsection{struct Vesper::\+Profile\+Result}
+\begin{DoxyFields}{Class Members}
+\doxymbox{\Hypertarget{namespace_vesper_ae73da7a2e69c2ae90069c0f2063da162}\label{namespace_vesper_ae73da7a2e69c2ae90069c0f2063da162}} 
+long long&
+End&
+\\
+\hline
+
+\doxymbox{\Hypertarget{namespace_vesper_a53f86c360af0fb068e6de1778d732aa9}\label{namespace_vesper_a53f86c360af0fb068e6de1778d732aa9}} 
+string&
+Name&
+\\
+\hline
+
+\doxymbox{\Hypertarget{namespace_vesper_ab68fdb0acd48f29f27a306fb51a2a5e4}\label{namespace_vesper_ab68fdb0acd48f29f27a306fb51a2a5e4}} 
+long long&
+Start&
+\\
+\hline
+
+\doxymbox{\Hypertarget{namespace_vesper_aea0f113bfe4467c4ad661b1648b759c3}\label{namespace_vesper_aea0f113bfe4467c4ad661b1648b759c3}} 
+uint32\_t&
+ThreadID&
+\\
+\hline
+
+\end{DoxyFields}
+\index{Vesper::InstrumentationSession@{Vesper::InstrumentationSession}}
+\label{struct_vesper_1_1_instrumentation_session}
+\Hypertarget{namespace_vesper_struct_vesper_1_1_instrumentation_session}
+\doxysubsubsection{struct Vesper::\+Instrumentation\+Session}
+\begin{DoxyFields}{Class Members}
+\doxymbox{\Hypertarget{namespace_vesper_a9aea845bcb154f66f84398a10e599884}\label{namespace_vesper_a9aea845bcb154f66f84398a10e599884}} 
+string&
+Name&
 \\
 \hline
 
@@ -597,6 +605,18 @@ Alias for mouse button code type.
 template$<$typename T$>$ \\
 using \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Vesper::\+\+Ref}} = std::\+shared\+\_\+ptr$<$T$>$}
 
+
+
+A smart pointer type representing shared ownership of an object. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of object to manage. \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyNote}{Note}
+This is an alias for std::\+shared\+\_\+ptr. 
+\end{DoxyNote}
 \Hypertarget{namespace_vesper_a5425f9aaa2ee4d3761c8ce6b385e0b70}\index{Vesper@{Vesper}!Scope@{Scope}}
 \index{Scope@{Scope}!Vesper@{Vesper}}
 \doxysubsubsection{\texorpdfstring{Scope}{Scope}}
@@ -604,6 +624,18 @@ using \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{V
 template$<$typename T$>$ \\
 using \doxymbox{\hyperlink{namespace_vesper_a5425f9aaa2ee4d3761c8ce6b385e0b70}{Vesper::\+\+Scope}} = std::\+unique\+\_\+ptr$<$T$>$}
 
+
+
+A smart pointer type representing exclusive ownership of an object. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of object to manage. \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyNote}{Note}
+This is an alias for std::\+unique\+\_\+ptr. 
+\end{DoxyNote}
 
 
 \label{doc-enum-members}
@@ -659,14 +691,14 @@ Event\+Category\+Mouse\+Button&\\
 \end{DoxyEnumFields}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00020\ \ \ \ \ \{}
-\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad79da63be4419c3a218acaa990decabea5af280140310d5b7f04b47a0c0a49f9f}{None}}\ =\ 0,}
-\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad79da63be4419c3a218acaa990decabea528846d063c87fe2abe290ff90ee9eb3}{EventCategoryApplication}}\ \ \ \ =\ \doxymbox{\hyperlink{_defines___macros_8h_ad27cc17b25bb93134368d5eb21126eae}{BIT}}(0),}
-\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad79da63be4419c3a218acaa990decabea6c60ac482ece62549192596ebe2bd544}{EventCategoryInput}}\ \ \ \ \ \ \ \ \ \ =\ \doxymbox{\hyperlink{_defines___macros_8h_ad27cc17b25bb93134368d5eb21126eae}{BIT}}(1),}
-\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad79da63be4419c3a218acaa990decabeaba0edbd952a5de7d6182c0f379dd86e5}{EventCategoryKeyboard}}\ \ \ \ \ \ \ =\ \doxymbox{\hyperlink{_defines___macros_8h_ad27cc17b25bb93134368d5eb21126eae}{BIT}}(2),}
-\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad79da63be4419c3a218acaa990decabea3c4a955f5c8263670268bd87fefc1f16}{EventCategoryMouse}}\ \ \ \ \ \ \ \ \ \ =\ \doxymbox{\hyperlink{_defines___macros_8h_ad27cc17b25bb93134368d5eb21126eae}{BIT}}(3),}
-\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad79da63be4419c3a218acaa990decabea17ff2a7e3b7077c99dafe654f2b9bc34}{EventCategoryMouseButton}}\ \ \ \ =\ \doxymbox{\hyperlink{_defines___macros_8h_ad27cc17b25bb93134368d5eb21126eae}{BIT}}(4)}
-\DoxyCodeLine{00027\ \ \ \ \ \};}
+\DoxyCodeLine{00024\ \ \ \ \ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad79da63be4419c3a218acaa990decabea5af280140310d5b7f04b47a0c0a49f9f}{None}}\ =\ 0,}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad79da63be4419c3a218acaa990decabea528846d063c87fe2abe290ff90ee9eb3}{EventCategoryApplication}}\ \ \ \ =\ \doxymbox{\hyperlink{_defines___macros_8h_ad27cc17b25bb93134368d5eb21126eae}{BIT}}(0),}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad79da63be4419c3a218acaa990decabea6c60ac482ece62549192596ebe2bd544}{EventCategoryInput}}\ \ \ \ \ \ \ \ \ \ =\ \doxymbox{\hyperlink{_defines___macros_8h_ad27cc17b25bb93134368d5eb21126eae}{BIT}}(1),}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad79da63be4419c3a218acaa990decabeaba0edbd952a5de7d6182c0f379dd86e5}{EventCategoryKeyboard}}\ \ \ \ \ \ \ =\ \doxymbox{\hyperlink{_defines___macros_8h_ad27cc17b25bb93134368d5eb21126eae}{BIT}}(2),}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad79da63be4419c3a218acaa990decabea3c4a955f5c8263670268bd87fefc1f16}{EventCategoryMouse}}\ \ \ \ \ \ \ \ \ \ =\ \doxymbox{\hyperlink{_defines___macros_8h_ad27cc17b25bb93134368d5eb21126eae}{BIT}}(3),}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad79da63be4419c3a218acaa990decabea17ff2a7e3b7077c99dafe654f2b9bc34}{EventCategoryMouseButton}}\ \ \ \ =\ \doxymbox{\hyperlink{_defines___macros_8h_ad27cc17b25bb93134368d5eb21126eae}{BIT}}(4)}
+\DoxyCodeLine{00031\ \ \ \ \ \};}
 
 \end{DoxyCode}
 \Hypertarget{namespace_vesper_ada4bc37927ce22c44ea0083a224d3bb5}\index{Vesper@{Vesper}!EventType@{EventType}}
@@ -779,13 +811,13 @@ Mouse\+Scrolled&\\
 \end{DoxyEnumFields}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00010\ \ \ \ \ \{}
-\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad79da63be4419c3a218acaa990decabea5af280140310d5b7f04b47a0c0a49f9f}{None}}\ =\ 0,}
-\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ada4bc37927ce22c44ea0083a224d3bb5ac984201d37197ab297a14d19efee4b07}{WindowClose}},\ \doxymbox{\hyperlink{namespace_vesper_ada4bc37927ce22c44ea0083a224d3bb5a9f8f27bff2915738c4fe1b970e12f89c}{WindowResize}},\ \doxymbox{\hyperlink{namespace_vesper_ada4bc37927ce22c44ea0083a224d3bb5a1c68d5453b28d52622bf5486a5fd95ca}{WindowFocus}},\ \doxymbox{\hyperlink{namespace_vesper_ada4bc37927ce22c44ea0083a224d3bb5a1c2119b9d61e623975f13f1029f1d97c}{WindowLostFocus}},\ \doxymbox{\hyperlink{namespace_vesper_ada4bc37927ce22c44ea0083a224d3bb5ab94473d9dfc85f8fdbf5cb3b1d992bda}{WindowMoved}},}
-\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ada4bc37927ce22c44ea0083a224d3bb5a559b408d45669603dbac61cd15984f13}{AppTick}},\ \doxymbox{\hyperlink{namespace_vesper_ada4bc37927ce22c44ea0083a224d3bb5ac177abb86f28dea426f2e3409e14bcda}{AppUpdate}},\ \doxymbox{\hyperlink{namespace_vesper_ada4bc37927ce22c44ea0083a224d3bb5a4b2eb3c601042333ac1c0565ff58e3d6}{AppRender}},}
-\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ada4bc37927ce22c44ea0083a224d3bb5ac17e6984c1e5a887a49831beadee6bca}{KeyPressed}},\ \doxymbox{\hyperlink{namespace_vesper_ada4bc37927ce22c44ea0083a224d3bb5a4a77f07c8ad223b71ab4ce78a63841ab}{KeyReleased}},\ \doxymbox{\hyperlink{namespace_vesper_ada4bc37927ce22c44ea0083a224d3bb5a9afbfd35b289eb4fc7f1bc148d7b422e}{KeyTyped}},}
-\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ada4bc37927ce22c44ea0083a224d3bb5a7349f643d689997b7c54bf93e4095f5c}{MouseButtonPressed}},\ \doxymbox{\hyperlink{namespace_vesper_ada4bc37927ce22c44ea0083a224d3bb5a7584c169de594c27f00084b93186fd7c}{MouseButtonReleased}},\ \doxymbox{\hyperlink{namespace_vesper_ada4bc37927ce22c44ea0083a224d3bb5ac2770ad109c8063ce69a3608a9a16c08}{MouseMoved}},\ \doxymbox{\hyperlink{namespace_vesper_ada4bc37927ce22c44ea0083a224d3bb5a50edb169910041bb3c06f6e8322d74c1}{MouseScrolled}}}
-\DoxyCodeLine{00016\ \ \ \ \ \};}
+\DoxyCodeLine{00014\ \ \ \ \ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad79da63be4419c3a218acaa990decabea5af280140310d5b7f04b47a0c0a49f9f}{None}}\ =\ 0,}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ada4bc37927ce22c44ea0083a224d3bb5ac984201d37197ab297a14d19efee4b07}{WindowClose}},\ \doxymbox{\hyperlink{namespace_vesper_ada4bc37927ce22c44ea0083a224d3bb5a9f8f27bff2915738c4fe1b970e12f89c}{WindowResize}},\ \doxymbox{\hyperlink{namespace_vesper_ada4bc37927ce22c44ea0083a224d3bb5a1c68d5453b28d52622bf5486a5fd95ca}{WindowFocus}},\ \doxymbox{\hyperlink{namespace_vesper_ada4bc37927ce22c44ea0083a224d3bb5a1c2119b9d61e623975f13f1029f1d97c}{WindowLostFocus}},\ \doxymbox{\hyperlink{namespace_vesper_ada4bc37927ce22c44ea0083a224d3bb5ab94473d9dfc85f8fdbf5cb3b1d992bda}{WindowMoved}},}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ada4bc37927ce22c44ea0083a224d3bb5a559b408d45669603dbac61cd15984f13}{AppTick}},\ \doxymbox{\hyperlink{namespace_vesper_ada4bc37927ce22c44ea0083a224d3bb5ac177abb86f28dea426f2e3409e14bcda}{AppUpdate}},\ \doxymbox{\hyperlink{namespace_vesper_ada4bc37927ce22c44ea0083a224d3bb5a4b2eb3c601042333ac1c0565ff58e3d6}{AppRender}},}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ada4bc37927ce22c44ea0083a224d3bb5ac17e6984c1e5a887a49831beadee6bca}{KeyPressed}},\ \doxymbox{\hyperlink{namespace_vesper_ada4bc37927ce22c44ea0083a224d3bb5a4a77f07c8ad223b71ab4ce78a63841ab}{KeyReleased}},\ \doxymbox{\hyperlink{namespace_vesper_ada4bc37927ce22c44ea0083a224d3bb5a9afbfd35b289eb4fc7f1bc148d7b422e}{KeyTyped}},}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ada4bc37927ce22c44ea0083a224d3bb5a7349f643d689997b7c54bf93e4095f5c}{MouseButtonPressed}},\ \doxymbox{\hyperlink{namespace_vesper_ada4bc37927ce22c44ea0083a224d3bb5a7584c169de594c27f00084b93186fd7c}{MouseButtonReleased}},\ \doxymbox{\hyperlink{namespace_vesper_ada4bc37927ce22c44ea0083a224d3bb5ac2770ad109c8063ce69a3608a9a16c08}{MouseMoved}},\ \doxymbox{\hyperlink{namespace_vesper_ada4bc37927ce22c44ea0083a224d3bb5a50edb169910041bb3c06f6e8322d74c1}{MouseScrolled}}}
+\DoxyCodeLine{00020\ \ \ \ \ \};}
 
 \end{DoxyCode}
 \Hypertarget{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131}\index{Vesper@{Vesper}!ShaderDataType@{ShaderDataType}}
@@ -793,6 +825,10 @@ Mouse\+Scrolled&\\
 \doxysubsubsection{\texorpdfstring{ShaderDataType}{ShaderDataType}}
 {\footnotesize\ttfamily \label{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131} 
 enum class \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131}{Vesper::\+\+Shader\+Data\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+The different data types that can be used in shaders. 
 
 \begin{DoxyEnumFields}[2]{Enumerator}
 \raisebox{\heightof{T}}[0pt][0pt]{\index{None@{None}!Vesper@{Vesper}}
@@ -870,13 +906,13 @@ Bool&\\
 \end{DoxyEnumFields}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00005\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00006\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad79da63be4419c3a218acaa990decabea5af280140310d5b7f04b47a0c0a49f9f}{None}}\ =\ 0,}
-\DoxyCodeLine{00007\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a22ae0e2b89e5e3d477f988cc36d3272b}{Float}},\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_aee37aeb23527ea784366d19d4d122e93}{Float2}},\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a03b6467e00b4461a9c5800c855ae8805}{Float3}},\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a5481415221e1c3522bae7da1281c27c1}{Float4}},}
-\DoxyCodeLine{00008\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a2495a7d9c1fab19af6441abbfed823e1}{Mat3}},\ \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a80f7408b0a5b5d78c26adae9f6f420f9}{Mat4}},}
-\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a1686a6c336b71b36d77354cea19a8b52}{Int}},\ \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a4c6bc90f2bbdf35523e29c414a57bad3}{Int2}},\ \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a56bf1b0e694b442bf4145a04b82ea943}{Int3}},\ \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a1a44f12c3427b3e11c171d09632bad8d}{Int4}},}
-\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131ac26f15e86e3de4c398a8273272aba034}{Bool}}}
-\DoxyCodeLine{00011\ \ \ \ \ \};}
+\DoxyCodeLine{00006\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00007\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_ad79da63be4419c3a218acaa990decabea5af280140310d5b7f04b47a0c0a49f9f}{None}}\ =\ 0,}
+\DoxyCodeLine{00008\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a22ae0e2b89e5e3d477f988cc36d3272b}{Float}},\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_aee37aeb23527ea784366d19d4d122e93}{Float2}},\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a03b6467e00b4461a9c5800c855ae8805}{Float3}},\ \doxymbox{\hyperlink{namespace_vesper_1_1_random_a5481415221e1c3522bae7da1281c27c1}{Float4}},}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a2495a7d9c1fab19af6441abbfed823e1}{Mat3}},\ \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a80f7408b0a5b5d78c26adae9f6f420f9}{Mat4}},}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a1686a6c336b71b36d77354cea19a8b52}{Int}},\ \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a4c6bc90f2bbdf35523e29c414a57bad3}{Int2}},\ \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a56bf1b0e694b442bf4145a04b82ea943}{Int3}},\ \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a1a44f12c3427b3e11c171d09632bad8d}{Int4}},}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131ac26f15e86e3de4c398a8273272aba034}{Bool}}}
+\DoxyCodeLine{00012\ \ \ \ \ \};}
 
 \end{DoxyCode}
 \Hypertarget{namespace_vesper_a5302ff07d23533d2da0500a894dca563}\index{Vesper@{Vesper}!WindowMode@{WindowMode}}
@@ -911,11 +947,11 @@ Borderless&\\
 \end{DoxyEnumFields}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00017\ \ \ \ \ \{}
-\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_a5302ff07d23533d2da0500a894dca563ab13311ab51c4c34757f67f26580018dd}{Windowed}}\ =\ 0,}
-\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_a5302ff07d23533d2da0500a894dca563a0829ea6734059d66e6bf87096b215dc1}{Fullscreen}}\ =\ 1,}
-\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_a5302ff07d23533d2da0500a894dca563a78f0192ac55eba33ee88d026452952e5}{Borderless}}\ =\ 2}
-\DoxyCodeLine{00021\ \ \ \ \ \};}
+\DoxyCodeLine{00016\ \ \ \ \ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_a5302ff07d23533d2da0500a894dca563ab13311ab51c4c34757f67f26580018dd}{Windowed}}\ =\ 0,}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_a5302ff07d23533d2da0500a894dca563a0829ea6734059d66e6bf87096b215dc1}{Fullscreen}}\ =\ 1,}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_vesper_a5302ff07d23533d2da0500a894dca563a78f0192ac55eba33ee88d026452952e5}{Borderless}}\ =\ 2}
+\DoxyCodeLine{00020\ \ \ \ \ \};}
 
 \end{DoxyCode}
 
@@ -923,11 +959,11 @@ Borderless&\\
 \label{doc-func-members}
 \Hypertarget{namespace_vesper_doc-func-members}
 \doxysubsection{Function Documentation}
-\Hypertarget{namespace_vesper_ad515973d88dbc403525505f804b420e4}\index{Vesper@{Vesper}!CreateApplication@{CreateApplication}}
+\Hypertarget{namespace_vesper_a43e1ca989eabb42f3b23b79517ff1a65}\index{Vesper@{Vesper}!CreateApplication@{CreateApplication}}
 \index{CreateApplication@{CreateApplication}!Vesper@{Vesper}}
 \doxysubsubsection{\texorpdfstring{CreateApplication()}{CreateApplication()}}
-{\footnotesize\ttfamily \label{namespace_vesper_ad515973d88dbc403525505f804b420e4} 
-\doxymbox{\hyperlink{class_vesper_1_1_application}{Vesper::\+\+Application}} \texorpdfstring{$\ast$}{*} Vesper::\+\+Create\+Application (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{namespace_vesper_a43e1ca989eabb42f3b23b79517ff1a65} 
+\doxymbox{\hyperlink{class_vesper_1_1_application}{Application}} \texorpdfstring{$\ast$}{*} Vesper::\+\+Create\+Application (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 
 \begin{DoxyCode}{0}
@@ -948,10 +984,29 @@ template$<$typename T, typename... Args$>$ \\
 \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ T $>$ Vesper::\+\+Create\+Ref (\begin{DoxyParamCaption}\item[{Args \&\&...}]{args}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
 
 
+
+Creates a \doxylink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref} (shared\+\_\+ptr) for the given type and constructor arguments. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of object to create. \\
+\hline
+{\em Args} & The types of constructor arguments. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em args} & The constructor arguments. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A \doxylink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref} (shared\+\_\+ptr) managing the created object. 
+\end{DoxyReturn}
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00024\ \ \ \ \ \{}
-\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::make\_shared<T>(std::forward<Args>(args)...);}
-\DoxyCodeLine{00026\ \ \ \ \ \}}
+\DoxyCodeLine{00073\ \ \ \ \ \{}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::make\_shared<T>(std::forward<Args>(args)...);}
+\DoxyCodeLine{00075\ \ \ \ \ \}}
 
 \end{DoxyCode}
 \Hypertarget{namespace_vesper_a37fd1cd7d536a4b07dc0a734f8fde936}\index{Vesper@{Vesper}!CreateScope@{CreateScope}}
@@ -962,10 +1017,29 @@ template$<$typename T, typename... Args$>$ \\
 \doxymbox{\hyperlink{namespace_vesper_a5425f9aaa2ee4d3761c8ce6b385e0b70}{Scope}}$<$ T $>$ Vesper::\+\+Create\+Scope (\begin{DoxyParamCaption}\item[{Args \&\&...}]{args}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
 
 
+
+Creates a \doxylink{namespace_vesper_a5425f9aaa2ee4d3761c8ce6b385e0b70}{Scope} (unique\+\_\+ptr) for the given type and constructor arguments. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of object to create. \\
+\hline
+{\em Args} & The types of constructor arguments. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em args} & The constructor arguments. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A \doxylink{namespace_vesper_a5425f9aaa2ee4d3761c8ce6b385e0b70}{Scope} (unique\+\_\+ptr) managing the created object. 
+\end{DoxyReturn}
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00016\ \ \ \ \ \{}
-\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::make\_unique<T>(std::forward<Args>(args)...);}
-\DoxyCodeLine{00018\ \ \ \ \ \}}
+\DoxyCodeLine{00053\ \ \ \ \ \{}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::make\_unique<T>(std::forward<Args>(args)...);}
+\DoxyCodeLine{00055\ \ \ \ \ \}}
 
 \end{DoxyCode}
 \Hypertarget{namespace_vesper_ab028f39b6f8287e98aa2ded73af279ee}\index{Vesper@{Vesper}!DisplayVesperInfo\_ImGui@{DisplayVesperInfo\_ImGui}}
@@ -1053,7 +1127,7 @@ void Vesper::\+\+Display\+Vesper\+Info\+\_\+\+Im\+Gui (\begin{DoxyParamCaption}{
 \end{DoxyCode}
 
 
-Referenced by \doxymbox{\hyperlink{class_sandbox2_d_aabfc3f41ef7dc962dae7d8c0bad7e484}{Sandbox2\+D::\+\+On\+Im\+Gui\+Render()}}, and \doxymbox{\hyperlink{class_vesper_1_1_editor_layer_af5e79508040b18e9fa455830692f6ed0}{Vesper::\+\+Editor\+Layer::\+\+On\+Im\+Gui\+Render()}}.
+Referenced by \doxymbox{\hyperlink{class_vesper_1_1_editor_layer_af5e79508040b18e9fa455830692f6ed0}{Vesper::\+\+Editor\+Layer::\+\+On\+Im\+Gui\+Render()}}.
 
 \Hypertarget{namespace_vesper_abd5876954c1f53f2a12d42767b09d3f6}\index{Vesper@{Vesper}!DrawComponent@{DrawComponent}}
 \index{DrawComponent@{DrawComponent}!Vesper@{Vesper}}
@@ -1274,9 +1348,9 @@ Format an event as a string.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00108\ \ \ \ \ \{}
-\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ e.\doxymbox{\hyperlink{class_vesper_1_1_event_aaba48fc434a2539c5ce000fda6aa7f05}{ToString}}();}
-\DoxyCodeLine{00110\ \ \ \ \ \}}
+\DoxyCodeLine{00105\ \ \ \ \ \{}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ e.\doxymbox{\hyperlink{class_vesper_1_1_event_aaba48fc434a2539c5ce000fda6aa7f05}{ToString}}();}
+\DoxyCodeLine{00107\ \ \ \ \ \}}
 
 \end{DoxyCode}
 \Hypertarget{namespace_vesper_a9cb9185654b38a202d68550a4882ae20}\index{Vesper@{Vesper}!GLFWErrorCallback@{GLFWErrorCallback}}
@@ -1370,24 +1444,36 @@ void Vesper::\+\+Serialize\+Entity (\begin{DoxyParamCaption}\item[{YAML::\+\+Emi
 uint32\+\_\+t Vesper::\+\+Shader\+Data\+Type\+Size (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131}{Shader\+Data\+Type}}}]{type}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
+
+Returns the size in bytes of the given \doxylink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131}{Shader\+Data\+Type}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & The \doxylink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131}{Shader\+Data\+Type} to get the size of. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The size in bytes of the \doxylink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131}{Shader\+Data\+Type}. Will assert if the type is unknown. 
+\end{DoxyReturn}
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (type)\ \{}
-\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a22ae0e2b89e5e3d477f988cc36d3272b}{ShaderDataType::Float}}:\ \ \ \ \ \textcolor{keywordflow}{return}\ 4;}
-\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a6694430a2b471b5d2de071f2ef1fdc57}{ShaderDataType::Float2}}:\ \ \ \ \textcolor{keywordflow}{return}\ 4\ *\ 2;}
-\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a8a8a1d211464d4bdee46db3c75bfa121}{ShaderDataType::Float3}}:\ \ \ \ \textcolor{keywordflow}{return}\ 4\ *\ 3;}
-\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a33116adc6690289da9b82ea736864eeb}{ShaderDataType::Float4}}:\ \ \ \ \textcolor{keywordflow}{return}\ 4\ *\ 4;}
-\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a2495a7d9c1fab19af6441abbfed823e1}{ShaderDataType::Mat3}}:\ \ \ \ \ \ \textcolor{keywordflow}{return}\ 4\ *\ 3\ *\ 3;}
-\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a80f7408b0a5b5d78c26adae9f6f420f9}{ShaderDataType::Mat4}}:\ \ \ \ \ \ \textcolor{keywordflow}{return}\ 4\ *\ 4\ *\ 4;}
-\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a1686a6c336b71b36d77354cea19a8b52}{ShaderDataType::Int}}:\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 4;}
-\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a4c6bc90f2bbdf35523e29c414a57bad3}{ShaderDataType::Int2}}:\ \ \ \ \ \ \textcolor{keywordflow}{return}\ 4\ *\ 2;}
-\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a56bf1b0e694b442bf4145a04b82ea943}{ShaderDataType::Int3}}:\ \ \ \ \ \ \textcolor{keywordflow}{return}\ 4\ *\ 3;}
-\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a1a44f12c3427b3e11c171d09632bad8d}{ShaderDataType::Int4}}:\ \ \ \ \ \ \textcolor{keywordflow}{return}\ 4\ *\ 4;}
-\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131ac26f15e86e3de4c398a8273272aba034}{ShaderDataType::Bool}}:\ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
-\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_asserts_8h_a3b51b77f75997760894138afc89403c9}{VZ\_CORE\_ASSERT}}(\textcolor{keyword}{false},\ \textcolor{stringliteral}{"{}Unknown\ ShaderDataType!"{}});}
-\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
-\DoxyCodeLine{00029\ \ \ \ \ \}}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (type)\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a22ae0e2b89e5e3d477f988cc36d3272b}{ShaderDataType::Float}}:\ \ \ \ \ \textcolor{keywordflow}{return}\ 4;}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a6694430a2b471b5d2de071f2ef1fdc57}{ShaderDataType::Float2}}:\ \ \ \ \textcolor{keywordflow}{return}\ 4\ *\ 2;}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a8a8a1d211464d4bdee46db3c75bfa121}{ShaderDataType::Float3}}:\ \ \ \ \textcolor{keywordflow}{return}\ 4\ *\ 3;}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a33116adc6690289da9b82ea736864eeb}{ShaderDataType::Float4}}:\ \ \ \ \textcolor{keywordflow}{return}\ 4\ *\ 4;}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a2495a7d9c1fab19af6441abbfed823e1}{ShaderDataType::Mat3}}:\ \ \ \ \ \ \textcolor{keywordflow}{return}\ 4\ *\ 3\ *\ 3;}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a80f7408b0a5b5d78c26adae9f6f420f9}{ShaderDataType::Mat4}}:\ \ \ \ \ \ \textcolor{keywordflow}{return}\ 4\ *\ 4\ *\ 4;}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a1686a6c336b71b36d77354cea19a8b52}{ShaderDataType::Int}}:\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 4;}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a4c6bc90f2bbdf35523e29c414a57bad3}{ShaderDataType::Int2}}:\ \ \ \ \ \ \textcolor{keywordflow}{return}\ 4\ *\ 2;}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a56bf1b0e694b442bf4145a04b82ea943}{ShaderDataType::Int3}}:\ \ \ \ \ \ \textcolor{keywordflow}{return}\ 4\ *\ 3;}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a1a44f12c3427b3e11c171d09632bad8d}{ShaderDataType::Int4}}:\ \ \ \ \ \ \textcolor{keywordflow}{return}\ 4\ *\ 4;}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131ac26f15e86e3de4c398a8273272aba034}{ShaderDataType::Bool}}:\ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_asserts_8h_a3b51b77f75997760894138afc89403c9}{VZ\_CORE\_ASSERT}}(\textcolor{keyword}{false},\ \textcolor{stringliteral}{"{}Unknown\ ShaderDataType!"{}});}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00035\ \ \ \ \ \}}
 
 \end{DoxyCode}
 

@@ -10,30 +10,50 @@
 \DoxyCodeLine{00006\ }
 \DoxyCodeLine{00007\ \textcolor{keyword}{namespace}\ \doxymbox{\hyperlink{namespace_vesper}{Vesper}}\ \{}
 \DoxyCodeLine{00008\ }
-\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{class}\ \doxymbox{\hyperlink{class_vesper_1_1_renderer}{Renderer}}\ \{}
-\DoxyCodeLine{00010\ }
-\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{comment}{///\ @class\ Renderer}}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{comment}{///\ @brief\ The\ main\ renderer\ class\ responsible\ for\ managing\ rendering\ operations.}}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{class}\ \doxymbox{\hyperlink{class_vesper_1_1_renderer}{Renderer}}\ \{}
 \DoxyCodeLine{00012\ }
-\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_renderer_af44c320528448c97bdb376d77abfc38f}{Init}}();}
-\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_renderer_a5b83c5f87093d2ec01b48f394710911a}{OnWindowResize}}(uint32\_t\ width,\ uint32\_t\ height);}
-\DoxyCodeLine{00015\ }
-\DoxyCodeLine{00016\ }
-\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_renderer_af694e28df0649ed7a578db1b66ca2dc2}{BeginScene}}(\doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera}{OrthographicCamera}}\&\ camera);}
-\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_renderer_af292ee3e0d31cf60326d7d0d3c78e3c3}{EndScene}}();}
-\DoxyCodeLine{00019\ }
-\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_renderer_a35eb1025f99fcb30a9389024fcb0394f}{Submit}}(\textcolor{keyword}{const}\ Ref<Shader>\&\ shader,\ \textcolor{keyword}{const}\ Ref<VertexArray>\&\ vertexArray,\ \textcolor{keyword}{const}\ glm::mat4\&\ transform\ =\ \doxymbox{\hyperlink{class_vesper_1_1_renderer_a35eb1025f99fcb30a9389024fcb0394f}{glm}}::\doxymbox{\hyperlink{class_vesper_1_1_renderer_a35eb1025f99fcb30a9389024fcb0394f}{mat4}}(1.0f));}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Initializes\ the\ renderer.}}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @note\ This\ initializes\ both\ the\ RenderCommand\ and\ Renderer2D\ systems.}}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_renderer_af44c320528448c97bdb376d77abfc38f}{Init}}();}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Handles\ window\ resize\ events\ by\ resizing\ the\ viewport.}}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_renderer_a5b83c5f87093d2ec01b48f394710911a}{OnWindowResize}}(uint32\_t\ width,\ uint32\_t\ height);}
 \DoxyCodeLine{00021\ }
-\DoxyCodeLine{00022\ }
-\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \doxymbox{\hyperlink{class_vesper_1_1_renderer_a_p_i}{RendererAPI}}::\doxymbox{\hyperlink{class_vesper_1_1_renderer_a_p_i_acbef8f1a2c9546387b6513640c5c7995}{API}}\ \doxymbox{\hyperlink{class_vesper_1_1_renderer_af8221f49491f130b6de7feb1b5093227}{GetAPI}}()\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_renderer_a_p_i}{RendererAPI}}\doxymbox{\hyperlink{class_vesper_1_1_renderer_a_p_i_ad6aac6c7aa5c6ed6d5148bdc227fbc16}{::}}\doxymbox{\hyperlink{class_vesper_1_1_renderer_a_p_i_ad6aac6c7aa5c6ed6d5148bdc227fbc16}{GetAPI}}\doxymbox{\hyperlink{class_vesper_1_1_renderer_a_p_i_ad6aac6c7aa5c6ed6d5148bdc227fbc16}{(}}\doxymbox{\hyperlink{class_vesper_1_1_renderer_a_p_i_ad6aac6c7aa5c6ed6d5148bdc227fbc16}{)}};\ \}}
-\DoxyCodeLine{00024\ }
-\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct}\ \doxymbox{\hyperlink{class_vesper_1_1_renderer_struct_vesper_1_1_renderer_1_1_scene_data}{SceneData}}\ \{}
-\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_renderer_af847dbebe6695a66c2ca92a9f6019518}{glm}}::\doxymbox{\hyperlink{class_vesper_1_1_renderer_af847dbebe6695a66c2ca92a9f6019518}{mat4}}\ \doxymbox{\hyperlink{class_vesper_1_1_renderer_af847dbebe6695a66c2ca92a9f6019518}{ViewProjectionMatrix}};}
-\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \};}
-\DoxyCodeLine{00029\ }
-\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \doxymbox{\hyperlink{class_vesper_1_1_renderer_struct_vesper_1_1_renderer_1_1_scene_data}{SceneData}}*\ \doxymbox{\hyperlink{class_vesper_1_1_renderer_a17756a062227bd9025f81d13b482dece}{s\_SceneData}};}
-\DoxyCodeLine{00031\ }
-\DoxyCodeLine{00032\ \ \ \ \ \};}
-\DoxyCodeLine{00033\ \}}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Begins\ a\ new\ scene\ with\ the\ given\ orthographic\ camera.}}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @param\ camera\ The\ orthographic\ camera\ defining\ the\ view\ and\ projection\ for\ the\ scene.}}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @todo\ Support\ for\ other\ camera\ types.}}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_renderer_af694e28df0649ed7a578db1b66ca2dc2}{BeginScene}}(\doxymbox{\hyperlink{class_vesper_1_1_orthographic_camera}{OrthographicCamera}}\&\ camera);}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Ends\ the\ current\ scene.}}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @note\ Currently\ does\ nothing\ as\ scene\ closure\ is\ automatic,\ but\ could\ be\ useful\ for\ a\ render\ interface}}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_renderer_af292ee3e0d31cf60326d7d0d3c78e3c3}{EndScene}}();}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Submits\ a\ draw\ call\ with\ the\ specified\ shader,\ vertex\ array,\ and\ transform.}}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{comment}{///}}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @param\ shader\ The\ shader\ to\ use\ for\ rendering.}}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @param\ vertexArray\ The\ vertex\ array\ to\ draw.}}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @param\ transform\ The\ transformation\ matrix\ to\ apply.}}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @todo\ Set\ up\ a\ command\ list\ to\ encapsulate\ this\ for\ draw\ order\ control}}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_vesper_1_1_renderer_a35eb1025f99fcb30a9389024fcb0394f}{Submit}}(\textcolor{keyword}{const}\ Ref<Shader>\&\ shader,\ \textcolor{keyword}{const}\ Ref<VertexArray>\&\ vertexArray,\ \textcolor{keyword}{const}\ glm::mat4\&\ transform\ =\ \doxymbox{\hyperlink{class_vesper_1_1_renderer_a35eb1025f99fcb30a9389024fcb0394f}{glm}}::\doxymbox{\hyperlink{class_vesper_1_1_renderer_a35eb1025f99fcb30a9389024fcb0394f}{mat4}}(1.0f));}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Retrieves\ the\ current\ rendering\ API.}}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \doxymbox{\hyperlink{class_vesper_1_1_renderer_a_p_i}{RendererAPI}}::\doxymbox{\hyperlink{class_vesper_1_1_renderer_a_p_i_acbef8f1a2c9546387b6513640c5c7995}{API}}\ \doxymbox{\hyperlink{class_vesper_1_1_renderer_af8221f49491f130b6de7feb1b5093227}{GetAPI}}()\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_renderer_a_p_i}{RendererAPI}}\doxymbox{\hyperlink{class_vesper_1_1_renderer_a_p_i_ad6aac6c7aa5c6ed6d5148bdc227fbc16}{::}}\doxymbox{\hyperlink{class_vesper_1_1_renderer_a_p_i_ad6aac6c7aa5c6ed6d5148bdc227fbc16}{GetAPI}}\doxymbox{\hyperlink{class_vesper_1_1_renderer_a_p_i_ad6aac6c7aa5c6ed6d5148bdc227fbc16}{(}}\doxymbox{\hyperlink{class_vesper_1_1_renderer_a_p_i_ad6aac6c7aa5c6ed6d5148bdc227fbc16}{)}};\ \}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Scene\ data\ structure\ containing\ view-\/projection\ matrix.}}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct}\ \doxymbox{\hyperlink{class_vesper_1_1_renderer_struct_vesper_1_1_renderer_1_1_scene_data}{SceneData}}\ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ The\ combined\ view-\/projection\ matrix\ for\ the\ scene.}}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_renderer_af847dbebe6695a66c2ca92a9f6019518}{glm}}::\doxymbox{\hyperlink{class_vesper_1_1_renderer_af847dbebe6695a66c2ca92a9f6019518}{mat4}}\ \doxymbox{\hyperlink{class_vesper_1_1_renderer_af847dbebe6695a66c2ca92a9f6019518}{ViewProjectionMatrix}};}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Pointer\ to\ the\ current\ scene\ data.}}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \doxymbox{\hyperlink{class_vesper_1_1_renderer_struct_vesper_1_1_renderer_1_1_scene_data}{SceneData}}*\ \doxymbox{\hyperlink{class_vesper_1_1_renderer_a17756a062227bd9025f81d13b482dece}{s\_SceneData}};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \};}
+\DoxyCodeLine{00053\ \}}
 
 \end{DoxyCode}

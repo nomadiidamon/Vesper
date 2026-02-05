@@ -98,26 +98,39 @@ $(function(){initNavTree('class_vesper_1_1_renderer.html','','class_vesper_1_1_r
 </div><!--header-->
 <div class="contents">
 
+<p>The main renderer class responsible for managing rendering operations.  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_renderer_8h_source.html">Renderer.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:SceneData_5Fstruct_5Fvesper_5F1_5F1_5Frenderer_5F1_5F1_5Fscene_5Fdata" id="r_SceneData_5Fstruct_5Fvesper_5F1_5F1_5Frenderer_5F1_5F1_5Fscene_5Fdata"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="#struct_vesper_1_1_renderer_1_1_scene_data">SceneData</a></td></tr>
+<tr class="memdesc:struct_vesper_1_1_renderer_1_1_scene_data"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_vesper_1_1_scene.html">Scene</a> data structure containing view-projection matrix.  <a href="#struct_vesper_1_1_renderer_1_1_scene_data">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:af44c320528448c97bdb376d77abfc38f" id="r_af44c320528448c97bdb376d77abfc38f"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#af44c320528448c97bdb376d77abfc38f">Init</a> ()</td></tr>
+<tr class="memdesc:af44c320528448c97bdb376d77abfc38f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the renderer.  <br /></td></tr>
 <tr class="memitem:a5b83c5f87093d2ec01b48f394710911a" id="r_a5b83c5f87093d2ec01b48f394710911a"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a5b83c5f87093d2ec01b48f394710911a">OnWindowResize</a> (uint32_t width, uint32_t height)</td></tr>
+<tr class="memdesc:a5b83c5f87093d2ec01b48f394710911a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles window resize events by resizing the viewport.  <br /></td></tr>
 <tr class="memitem:af694e28df0649ed7a578db1b66ca2dc2" id="r_af694e28df0649ed7a578db1b66ca2dc2"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#af694e28df0649ed7a578db1b66ca2dc2">BeginScene</a> (<a class="el" href="class_vesper_1_1_orthographic_camera.html">OrthographicCamera</a> &amp;camera)</td></tr>
+<tr class="memdesc:af694e28df0649ed7a578db1b66ca2dc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begins a new scene with the given orthographic camera.  <br /></td></tr>
 <tr class="memitem:af292ee3e0d31cf60326d7d0d3c78e3c3" id="r_af292ee3e0d31cf60326d7d0d3c78e3c3"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#af292ee3e0d31cf60326d7d0d3c78e3c3">EndScene</a> ()</td></tr>
+<tr class="memdesc:af292ee3e0d31cf60326d7d0d3c78e3c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ends the current scene.  <br /></td></tr>
 <tr class="memitem:a35eb1025f99fcb30a9389024fcb0394f" id="r_a35eb1025f99fcb30a9389024fcb0394f"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a35eb1025f99fcb30a9389024fcb0394f">Submit</a> (const <a class="el" href="namespace_vesper.html#ad1f51d7e944b5e23b18b12cacd5f0d27">Ref</a>&lt; <a class="el" href="class_vesper_1_1_shader.html">Shader</a> &gt; &amp;shader, const <a class="el" href="namespace_vesper.html#ad1f51d7e944b5e23b18b12cacd5f0d27">Ref</a>&lt; <a class="el" href="class_vesper_1_1_vertex_array.html">VertexArray</a> &gt; &amp;vertexArray, const glm::mat4 &amp;transform=glm::mat4(1.0f))</td></tr>
+<tr class="memdesc:a35eb1025f99fcb30a9389024fcb0394f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Submits a draw call with the specified shader, vertex array, and transform.  <br /></td></tr>
 <tr class="memitem:af8221f49491f130b6de7feb1b5093227" id="r_af8221f49491f130b6de7feb1b5093227"><td class="memItemLeft">static <a class="el" href="class_vesper_1_1_renderer_a_p_i.html#acbef8f1a2c9546387b6513640c5c7995">RendererAPI::API</a>&#160;</td><td class="memItemRight"><a class="el" href="#af8221f49491f130b6de7feb1b5093227">GetAPI</a> ()</td></tr>
+<tr class="memdesc:af8221f49491f130b6de7feb1b5093227"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the current rendering API.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pri-static-attribs" class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
 Static Private Attributes</h2></td></tr>
 <tr class="memitem:a17756a062227bd9025f81d13b482dece" id="r_a17756a062227bd9025f81d13b482dece"><td class="memItemLeft">static <a class="el" href="#struct_vesper_1_1_renderer_1_1_scene_data">SceneData</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a17756a062227bd9025f81d13b482dece">s_SceneData</a> = new <a class="el" href="#struct_vesper_1_1_renderer_1_1_scene_data">Renderer::SceneData</a></td></tr>
+<tr class="memdesc:a17756a062227bd9025f81d13b482dece"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the current scene data.  <br /></td></tr>
 </table>
-<hr/><h2 id="header-inline_5Fclasses" class="groupheader">Class Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The main renderer class responsible for managing rendering operations. </p>
+</div><hr/><h2 id="header-inline_5Fclasses" class="groupheader">Class Documentation</h2>
 <a name="struct_vesper_1_1_renderer_1_1_scene_data" id="struct_vesper_1_1_renderer_1_1_scene_data"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#struct_vesper_1_1_renderer_1_1_scene_data">&#9670;&#160;</a></span>Vesper::Renderer::SceneData</h2>
 
@@ -129,14 +142,15 @@ Static Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="textblock"></div><table class="fieldtable">
+<div class="textblock"><p><a class="el" href="class_vesper_1_1_scene.html">Scene</a> data structure containing view-projection matrix. </p>
+</div><table class="fieldtable">
 <tr><th colspan="3">Class Members</th></tr>
 <tr><td class="fieldtype">
 <a id="af847dbebe6695a66c2ca92a9f6019518" name="af847dbebe6695a66c2ca92a9f6019518"></a>mat4</td>
 <td class="fieldname">
 ViewProjectionMatrix</td>
 <td class="fielddoc">
-</td></tr>
+The combined view-projection matrix for the scene. </td></tr>
 </table>
 
 </div>
@@ -164,12 +178,21 @@ ViewProjectionMatrix</td>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   27</span>    {</div>
-<div class="line"><span class="lineno">   28</span>        <a class="code hl_define" href="_instrumentor_8h.html#aaa03f54db70b44f8decacf111dc1109b">VZ_PROFILE_FUNCTION</a>();</div>
-<div class="line"><span class="lineno">   29</span>        <a class="code hl_variable" href="#a17756a062227bd9025f81d13b482dece">s_SceneData</a>-&gt;ViewProjectionMatrix = camera.GetViewProjectionMatrix();</div>
-<div class="line"><span class="lineno">   30</span>    }</div>
-<div class="ttc" id="a_instrumentor_8h_html_aaa03f54db70b44f8decacf111dc1109b"><div class="ttname"><a href="_instrumentor_8h.html#aaa03f54db70b44f8decacf111dc1109b">VZ_PROFILE_FUNCTION</a></div><div class="ttdeci">#define VZ_PROFILE_FUNCTION()</div><div class="ttdef"><b>Definition</b> Instrumentor.h:234</div></div>
-<div class="ttc" id="aclass_vesper_1_1_renderer_html_a17756a062227bd9025f81d13b482dece"><div class="ttname"><a href="#a17756a062227bd9025f81d13b482dece">Vesper::Renderer::s_SceneData</a></div><div class="ttdeci">static SceneData * s_SceneData</div><div class="ttdef"><b>Definition</b> Renderer.h:30</div></div>
+
+<p>Begins a new scene with the given orthographic camera. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">camera</td><td>The orthographic camera defining the view and projection for the scene. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000008">Todo</a></b></dt><dd>Support for other camera types. </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">   28</span>    {</div>
+<div class="line"><span class="lineno">   29</span>        <a class="code hl_define" href="_instrumentor_8h.html#aaa03f54db70b44f8decacf111dc1109b">VZ_PROFILE_FUNCTION</a>();</div>
+<div class="line"><span class="lineno">   30</span>        <a class="code hl_variable" href="#a17756a062227bd9025f81d13b482dece">s_SceneData</a>-&gt;ViewProjectionMatrix = camera.GetViewProjectionMatrix();</div>
+<div class="line"><span class="lineno">   31</span>    }</div>
+<div class="ttc" id="a_instrumentor_8h_html_aaa03f54db70b44f8decacf111dc1109b"><div class="ttname"><a href="_instrumentor_8h.html#aaa03f54db70b44f8decacf111dc1109b">VZ_PROFILE_FUNCTION</a></div><div class="ttdeci">#define VZ_PROFILE_FUNCTION()</div><div class="ttdef"><b>Definition</b> Instrumentor.h:240</div></div>
+<div class="ttc" id="aclass_vesper_1_1_renderer_html_a17756a062227bd9025f81d13b482dece"><div class="ttname"><a href="#a17756a062227bd9025f81d13b482dece">Vesper::Renderer::s_SceneData</a></div><div class="ttdeci">static SceneData * s_SceneData</div><div class="ttdoc">Pointer to the current scene data.</div><div class="ttdef"><b>Definition</b> Renderer.h:50</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a17756a062227bd9025f81d13b482dece">s_SceneData</a>.</p>
 
@@ -197,10 +220,13 @@ ViewProjectionMatrix</td>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   33</span>    {</div>
-<div class="line"><span class="lineno">   34</span>        <a class="code hl_define" href="_instrumentor_8h.html#aaa03f54db70b44f8decacf111dc1109b">VZ_PROFILE_FUNCTION</a>();</div>
-<div class="line"><span class="lineno">   35</span> </div>
-<div class="line"><span class="lineno">   36</span>    }</div>
+
+<p>Ends the current scene. </p>
+<dl class="section note"><dt>Note</dt><dd>Currently does nothing as scene closure is automatic, but could be useful for a render interface </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">   34</span>    {</div>
+<div class="line"><span class="lineno">   35</span>        <a class="code hl_define" href="_instrumentor_8h.html#aaa03f54db70b44f8decacf111dc1109b">VZ_PROFILE_FUNCTION</a>();</div>
+<div class="line"><span class="lineno">   36</span> </div>
+<div class="line"><span class="lineno">   37</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -226,8 +252,10 @@ ViewProjectionMatrix</td>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   23</span>{ <span class="keywordflow">return</span> <a class="code hl_function" href="class_vesper_1_1_renderer_a_p_i.html#ad6aac6c7aa5c6ed6d5148bdc227fbc16">RendererAPI::GetAPI</a>(); }</div>
-<div class="ttc" id="aclass_vesper_1_1_renderer_a_p_i_html_ad6aac6c7aa5c6ed6d5148bdc227fbc16"><div class="ttname"><a href="class_vesper_1_1_renderer_a_p_i.html#ad6aac6c7aa5c6ed6d5148bdc227fbc16">Vesper::RendererAPI::GetAPI</a></div><div class="ttdeci">static API GetAPI()</div><div class="ttdef"><b>Definition</b> RendererAPI.h:25</div></div>
+
+<p>Retrieves the current rendering API. </p>
+<div class="fragment"><div class="line"><span class="lineno">   40</span>{ <span class="keywordflow">return</span> <a class="code hl_function" href="class_vesper_1_1_renderer_a_p_i.html#ad6aac6c7aa5c6ed6d5148bdc227fbc16">RendererAPI::GetAPI</a>(); }</div>
+<div class="ttc" id="aclass_vesper_1_1_renderer_a_p_i_html_ad6aac6c7aa5c6ed6d5148bdc227fbc16"><div class="ttname"><a href="class_vesper_1_1_renderer_a_p_i.html#ad6aac6c7aa5c6ed6d5148bdc227fbc16">Vesper::RendererAPI::GetAPI</a></div><div class="ttdeci">static API GetAPI()</div><div class="ttdoc">Returns the current rendering API.</div><div class="ttdef"><b>Definition</b> RendererAPI.h:34</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="class_vesper_1_1_renderer_a_p_i.html#ad6aac6c7aa5c6ed6d5148bdc227fbc16">Vesper::RendererAPI::GetAPI()</a>.</p>
 
@@ -257,14 +285,17 @@ ViewProjectionMatrix</td>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   13</span>    {</div>
-<div class="line"><span class="lineno">   14</span>        <a class="code hl_define" href="_instrumentor_8h.html#aaa03f54db70b44f8decacf111dc1109b">VZ_PROFILE_FUNCTION</a>();</div>
-<div class="line"><span class="lineno">   15</span> </div>
-<div class="line"><span class="lineno">   16</span>        <a class="code hl_function" href="class_vesper_1_1_render_command.html#aedc33f5de25202004b79a4fa0e090919">RenderCommand::Init</a>();</div>
-<div class="line"><span class="lineno">   17</span>        <a class="code hl_function" href="class_vesper_1_1_renderer2_d.html#a4fbfb5a17dac37385dfcf13a0f457ff5">Renderer2D::Init</a>();</div>
-<div class="line"><span class="lineno">   18</span>    }</div>
-<div class="ttc" id="aclass_vesper_1_1_render_command_html_aedc33f5de25202004b79a4fa0e090919"><div class="ttname"><a href="class_vesper_1_1_render_command.html#aedc33f5de25202004b79a4fa0e090919">Vesper::RenderCommand::Init</a></div><div class="ttdeci">static void Init()</div><div class="ttdef"><b>Definition</b> RenderCommand.h:11</div></div>
-<div class="ttc" id="aclass_vesper_1_1_renderer2_d_html_a4fbfb5a17dac37385dfcf13a0f457ff5"><div class="ttname"><a href="class_vesper_1_1_renderer2_d.html#a4fbfb5a17dac37385dfcf13a0f457ff5">Vesper::Renderer2D::Init</a></div><div class="ttdeci">static void Init()</div><div class="ttdef"><b>Definition</b> Renderer2D.cpp:55</div></div>
+
+<p>Initializes the renderer. </p>
+<dl class="section note"><dt>Note</dt><dd>This initializes both the <a class="el" href="class_vesper_1_1_render_command.html" title="A static class that provides an interface for issuing rendering commands.">RenderCommand</a> and <a class="el" href="class_vesper_1_1_renderer2_d.html" title="A 2D renderer for drawing quads and sprites.">Renderer2D</a> systems. </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">   14</span>    {</div>
+<div class="line"><span class="lineno">   15</span>        <a class="code hl_define" href="_instrumentor_8h.html#aaa03f54db70b44f8decacf111dc1109b">VZ_PROFILE_FUNCTION</a>();</div>
+<div class="line"><span class="lineno">   16</span> </div>
+<div class="line"><span class="lineno">   17</span>        <a class="code hl_function" href="class_vesper_1_1_render_command.html#aedc33f5de25202004b79a4fa0e090919">RenderCommand::Init</a>();</div>
+<div class="line"><span class="lineno">   18</span>        <a class="code hl_function" href="class_vesper_1_1_renderer2_d.html#a4fbfb5a17dac37385dfcf13a0f457ff5">Renderer2D::Init</a>();</div>
+<div class="line"><span class="lineno">   19</span>    }</div>
+<div class="ttc" id="aclass_vesper_1_1_render_command_html_aedc33f5de25202004b79a4fa0e090919"><div class="ttname"><a href="class_vesper_1_1_render_command.html#aedc33f5de25202004b79a4fa0e090919">Vesper::RenderCommand::Init</a></div><div class="ttdeci">static void Init()</div><div class="ttdoc">Initializes the rendering API.</div><div class="ttdef"><b>Definition</b> RenderCommand.h:14</div></div>
+<div class="ttc" id="aclass_vesper_1_1_renderer2_d_html_a4fbfb5a17dac37385dfcf13a0f457ff5"><div class="ttname"><a href="class_vesper_1_1_renderer2_d.html#a4fbfb5a17dac37385dfcf13a0f457ff5">Vesper::Renderer2D::Init</a></div><div class="ttdeci">static void Init()</div><div class="ttdoc">Initializes the 2D renderer.</div><div class="ttdef"><b>Definition</b> Renderer2D.cpp:55</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="class_vesper_1_1_render_command.html#aedc33f5de25202004b79a4fa0e090919">Vesper::RenderCommand::Init()</a>, and <a class="el" href="class_vesper_1_1_renderer2_d.html#a4fbfb5a17dac37385dfcf13a0f457ff5">Vesper::Renderer2D::Init()</a>.</p>
 
@@ -298,11 +329,13 @@ ViewProjectionMatrix</td>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   21</span>    {</div>
-<div class="line"><span class="lineno">   22</span>        <a class="code hl_define" href="_instrumentor_8h.html#aaa03f54db70b44f8decacf111dc1109b">VZ_PROFILE_FUNCTION</a>();</div>
-<div class="line"><span class="lineno">   23</span>        <a class="code hl_function" href="class_vesper_1_1_render_command.html#a7f5374c89d005bc06c173211f51624f5">RenderCommand::SetViewport</a>(0, 0, width, height);</div>
-<div class="line"><span class="lineno">   24</span>    }</div>
-<div class="ttc" id="aclass_vesper_1_1_render_command_html_a7f5374c89d005bc06c173211f51624f5"><div class="ttname"><a href="class_vesper_1_1_render_command.html#a7f5374c89d005bc06c173211f51624f5">Vesper::RenderCommand::SetViewport</a></div><div class="ttdeci">static void SetViewport(uint32_t x, uint32_t y, uint32_t width, uint32_t height)</div><div class="ttdef"><b>Definition</b> RenderCommand.h:16</div></div>
+
+<p>Handles window resize events by resizing the viewport. </p>
+<div class="fragment"><div class="line"><span class="lineno">   22</span>    {</div>
+<div class="line"><span class="lineno">   23</span>        <a class="code hl_define" href="_instrumentor_8h.html#aaa03f54db70b44f8decacf111dc1109b">VZ_PROFILE_FUNCTION</a>();</div>
+<div class="line"><span class="lineno">   24</span>        <a class="code hl_function" href="class_vesper_1_1_render_command.html#a7f5374c89d005bc06c173211f51624f5">RenderCommand::SetViewport</a>(0, 0, width, height);</div>
+<div class="line"><span class="lineno">   25</span>    }</div>
+<div class="ttc" id="aclass_vesper_1_1_render_command_html_a7f5374c89d005bc06c173211f51624f5"><div class="ttname"><a href="class_vesper_1_1_render_command.html#a7f5374c89d005bc06c173211f51624f5">Vesper::RenderCommand::SetViewport</a></div><div class="ttdeci">static void SetViewport(uint32_t x, uint32_t y, uint32_t width, uint32_t height)</div><div class="ttdoc">Sets the viewport dimensions for the renderer.</div><div class="ttdef"><b>Definition</b> RenderCommand.h:20</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="class_vesper_1_1_render_command.html#a7f5374c89d005bc06c173211f51624f5">Vesper::RenderCommand::SetViewport()</a>.</p>
 
@@ -341,16 +374,27 @@ ViewProjectionMatrix</td>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   39</span>    {</div>
-<div class="line"><span class="lineno">   40</span>        <a class="code hl_define" href="_instrumentor_8h.html#aaa03f54db70b44f8decacf111dc1109b">VZ_PROFILE_FUNCTION</a>();</div>
-<div class="line"><span class="lineno">   41</span>        shader-&gt;Bind();</div>
-<div class="line"><span class="lineno">   42</span>        std::dynamic_pointer_cast&lt;OpenGLShader&gt;(shader)-&gt;UploadUniformMat4(<span class="stringliteral">&quot;u_ViewProjection&quot;</span>, <a class="code hl_variable" href="#a17756a062227bd9025f81d13b482dece">s_SceneData</a>-&gt;ViewProjectionMatrix);</div>
-<div class="line"><span class="lineno">   43</span>        std::dynamic_pointer_cast&lt;OpenGLShader&gt;(shader)-&gt;UploadUniformMat4(<span class="stringliteral">&quot;u_Transform&quot;</span>, transform);</div>
-<div class="line"><span class="lineno">   44</span> </div>
-<div class="line"><span class="lineno">   45</span>        vertexArray-&gt;Bind();</div>
-<div class="line"><span class="lineno">   46</span>        <a class="code hl_function" href="class_vesper_1_1_render_command.html#ae7d3374adebb2f37f3e74a10e04d405e">RenderCommand::DrawIndexed</a>(vertexArray);</div>
-<div class="line"><span class="lineno">   47</span>    }</div>
-<div class="ttc" id="aclass_vesper_1_1_render_command_html_ae7d3374adebb2f37f3e74a10e04d405e"><div class="ttname"><a href="class_vesper_1_1_render_command.html#ae7d3374adebb2f37f3e74a10e04d405e">Vesper::RenderCommand::DrawIndexed</a></div><div class="ttdeci">static void DrawIndexed(const Ref&lt; VertexArray &gt; &amp;vertexArray, uint32_t indexCount=0)</div><div class="ttdef"><b>Definition</b> RenderCommand.h:31</div></div>
+
+<p>Submits a draw call with the specified shader, vertex array, and transform. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">shader</td><td>The shader to use for rendering. </td></tr>
+    <tr><td class="paramname">vertexArray</td><td>The vertex array to draw. </td></tr>
+    <tr><td class="paramname">transform</td><td>The transformation matrix to apply. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000009">Todo</a></b></dt><dd>Set up a command list to encapsulate this for draw order control </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">   40</span>    {</div>
+<div class="line"><span class="lineno">   41</span>        <a class="code hl_define" href="_instrumentor_8h.html#aaa03f54db70b44f8decacf111dc1109b">VZ_PROFILE_FUNCTION</a>();</div>
+<div class="line"><span class="lineno">   42</span>        shader-&gt;Bind();</div>
+<div class="line"><span class="lineno">   43</span>        std::dynamic_pointer_cast&lt;OpenGLShader&gt;(shader)-&gt;UploadUniformMat4(<span class="stringliteral">&quot;u_ViewProjection&quot;</span>, <a class="code hl_variable" href="#a17756a062227bd9025f81d13b482dece">s_SceneData</a>-&gt;ViewProjectionMatrix);</div>
+<div class="line"><span class="lineno">   44</span>        std::dynamic_pointer_cast&lt;OpenGLShader&gt;(shader)-&gt;UploadUniformMat4(<span class="stringliteral">&quot;u_Transform&quot;</span>, transform);</div>
+<div class="line"><span class="lineno">   45</span> </div>
+<div class="line"><span class="lineno">   46</span>        vertexArray-&gt;Bind();</div>
+<div class="line"><span class="lineno">   47</span>        <a class="code hl_function" href="class_vesper_1_1_render_command.html#ae7d3374adebb2f37f3e74a10e04d405e">RenderCommand::DrawIndexed</a>(vertexArray);</div>
+<div class="line"><span class="lineno">   48</span>    }</div>
+<div class="ttc" id="aclass_vesper_1_1_render_command_html_ae7d3374adebb2f37f3e74a10e04d405e"><div class="ttname"><a href="class_vesper_1_1_render_command.html#ae7d3374adebb2f37f3e74a10e04d405e">Vesper::RenderCommand::DrawIndexed</a></div><div class="ttdeci">static void DrawIndexed(const Ref&lt; VertexArray &gt; &amp;vertexArray, uint32_t indexCount=0)</div><div class="ttdoc">Draws indexed geometry using the specified vertex array and index count.</div><div class="ttdef"><b>Definition</b> RenderCommand.h:38</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a17756a062227bd9025f81d13b482dece">s_SceneData</a>.</p>
 
@@ -376,6 +420,8 @@ ViewProjectionMatrix</td>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Pointer to the current scene data. </p>
 
 <p class="reference">Referenced by <a class="el" href="#af694e28df0649ed7a578db1b66ca2dc2">BeginScene()</a>, and <a class="el" href="#a35eb1025f99fcb30a9389024fcb0394f">Submit()</a>.</p>
 

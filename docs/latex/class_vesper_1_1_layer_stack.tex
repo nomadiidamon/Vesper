@@ -44,6 +44,10 @@ unsigned int \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_a2722bad174bdd9e8
 \doxysubsection{Detailed Description}
 Manages an ordered stack of \doxylink{class_vesper_1_1_layer}{Layer} pointers. Layers can be pushed or popped and the stack can be iterated in forward or reverse order. 
 
+\begin{DoxyRefDesc}{Todo}
+\item[\doxymbox{\hyperlink{todo__todo000004}{Todo}}]Add layer priority system (maybe?) \end{DoxyRefDesc}
+
+
 \label{doc-constructors}
 \Hypertarget{class_vesper_1_1_layer_stack_doc-constructors}
 \doxysubsection{Constructor \& Destructor Documentation}
@@ -93,7 +97,7 @@ Returns an iterator to the beginning of the layer stack.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00038\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_a22415e6ba25b7cf484a57548b7fce01c}{m\_Layers}}.begin();\ \}}
+\DoxyCodeLine{00042\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_a22415e6ba25b7cf484a57548b7fce01c}{m\_Layers}}.begin();\ \}}
 
 \end{DoxyCode}
 \Hypertarget{class_vesper_1_1_layer_stack_a425bad698ba5806a97a6f10c1177079a}\index{Vesper::LayerStack@{Vesper::LayerStack}!end@{end}}
@@ -108,7 +112,7 @@ Returns an iterator to the end of the layer stack.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00040\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_a22415e6ba25b7cf484a57548b7fce01c}{m\_Layers}}.end();\ \}}
+\DoxyCodeLine{00044\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_a22415e6ba25b7cf484a57548b7fce01c}{m\_Layers}}.end();\ \}}
 
 \end{DoxyCode}
 \Hypertarget{class_vesper_1_1_layer_stack_ad923292e88c1f2449bb82f28923234a4}\index{Vesper::LayerStack@{Vesper::LayerStack}!PopLayer@{PopLayer}}
@@ -233,7 +237,7 @@ Returns a reverse iterator to the beginning of the layer stack.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00042\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_a22415e6ba25b7cf484a57548b7fce01c}{m\_Layers}}.rbegin();\ \}}
+\DoxyCodeLine{00046\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_a22415e6ba25b7cf484a57548b7fce01c}{m\_Layers}}.rbegin();\ \}}
 
 \end{DoxyCode}
 \Hypertarget{class_vesper_1_1_layer_stack_a4f61004478b6d8449a9b9bf4e70dfd03}\index{Vesper::LayerStack@{Vesper::LayerStack}!rend@{rend}}
@@ -248,7 +252,7 @@ Returns a reverse iterator to the end of the layer stack.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00044\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_a22415e6ba25b7cf484a57548b7fce01c}{m\_Layers}}.rend();\ \}}
+\DoxyCodeLine{00048\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_layer_stack_a22415e6ba25b7cf484a57548b7fce01c}{m\_Layers}}.rend();\ \}}
 
 \end{DoxyCode}
 

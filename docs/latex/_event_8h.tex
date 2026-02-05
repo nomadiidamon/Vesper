@@ -1,5 +1,10 @@
 \doxysection{Vesper/\+src/\+\+Vesper/\+\+Events/\+\+Event.h File Reference}
 \hypertarget{_event_8h}{}\label{_event_8h}\index{Vesper/src/Vesper/Events/Event.h@{Vesper/src/Vesper/Events/Event.h}}
+
+
+Defines the base Event class and related enumerations and macros.  
+
+
 {\ttfamily \+\#include "{}vzpch.\+h"{}}\newline
 {\ttfamily \+\#include "{}Vesper/\+\+Core/\+\+Base.\+h"{}}\newline
 \doxysubsubsection*{Classes}
@@ -14,13 +19,6 @@ class \doxymbox{\hyperlink{class_vesper_1_1_event_dispatcher}{Vesper::\+\+Event\
 \item 
 namespace \doxymbox{\hyperlink{namespace_vesper}{Vesper}}
 \begin{DoxyCompactList}\small\item\em TEMPORARY. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsubsection*{Macros}
-\begin{DoxyCompactItemize}
-\item 
-\+\#define \doxymbox{\hyperlink{_event_8h_a80d534fc4d69a68eefd1573fd0ac2f44}{EVENT\+\_\+\+CLASS\+\_\+\+TYPE}}(type)
-\begin{DoxyCompactList}\small\item\em Macro to define event type in event subclasses. \end{DoxyCompactList}\item 
-\+\#define \doxymbox{\hyperlink{_event_8h_abd52deea587a36ef619e596a0c691839}{EVENT\+\_\+\+CLASS\+\_\+\+CATEGORY}}(category)
-\begin{DoxyCompactList}\small\item\em Macro to define event category in event subclasses. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Enumerations}
 \begin{DoxyCompactItemize}
 \item 
@@ -63,45 +61,9 @@ std::\+string \doxymbox{\hyperlink{namespace_vesper_a2ad5c87552bf4fd64385dc41197
 \begin{DoxyCompactList}\small\item\em Format an event as a string. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\label{doc-define-members}
-\Hypertarget{_event_8h_doc-define-members}
-\doxysubsection{Macro Definition Documentation}
-\Hypertarget{_event_8h_abd52deea587a36ef619e596a0c691839}\index{Event.h@{Event.h}!EVENT\_CLASS\_CATEGORY@{EVENT\_CLASS\_CATEGORY}}
-\index{EVENT\_CLASS\_CATEGORY@{EVENT\_CLASS\_CATEGORY}!Event.h@{Event.h}}
-\doxysubsubsection{\texorpdfstring{EVENT\_CLASS\_CATEGORY}{EVENT\_CLASS\_CATEGORY}}
-{\footnotesize\ttfamily \label{_event_8h_abd52deea587a36ef619e596a0c691839} 
-\+\#define EVENT\+\_\+\+CLASS\+\_\+\+CATEGORY(\begin{DoxyParamCaption}\item[{}]{category}{}\end{DoxyParamCaption})}
+\doxysubsection{Detailed Description}
+Defines the base Event class and related enumerations and macros. 
 
-{\bfseries Value:\+}
-\begin{DoxyCode}{0}
-\DoxyCodeLine{\textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ GetCategoryFlags()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ category;\ \}}
-
-\end{DoxyCode}
-
-
-Macro to define event category in event subclasses. 
-
-\Hypertarget{_event_8h_a80d534fc4d69a68eefd1573fd0ac2f44}\index{Event.h@{Event.h}!EVENT\_CLASS\_TYPE@{EVENT\_CLASS\_TYPE}}
-\index{EVENT\_CLASS\_TYPE@{EVENT\_CLASS\_TYPE}!Event.h@{Event.h}}
-\doxysubsubsection{\texorpdfstring{EVENT\_CLASS\_TYPE}{EVENT\_CLASS\_TYPE}}
-{\footnotesize\ttfamily \label{_event_8h_a80d534fc4d69a68eefd1573fd0ac2f44} 
-\+\#define EVENT\+\_\+\+CLASS\+\_\+\+TYPE(\begin{DoxyParamCaption}\item[{}]{type}{}\end{DoxyParamCaption})}
-
-{\bfseries Value:\+}
-\begin{DoxyCode}{0}
-\DoxyCodeLine{\textcolor{keyword}{static}\ EventType\ GetStaticType()\ \{\ \textcolor{keywordflow}{return}\ EventType::\#\#type;\ \}\(\backslash\)}
-\DoxyCodeLine{\textcolor{keyword}{virtual}\ EventType\ GetEventType()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ GetStaticType();\ \}\(\backslash\)}
-\DoxyCodeLine{\textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ GetName()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ \#type;\ \}}
-
-\end{DoxyCode}
-
-
-Macro to define event type in event subclasses. 
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#define\ EVENT\_CLASS\_TYPE(type)\ static\ EventType\ GetStaticType()\ \{\ return\ EventType::\#\#type;\ \}\(\backslash\) }}
-\DoxyCodeLine{00031\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ virtual\ EventType\ GetEventType()\ const\ override\ \{\ return\ GetStaticType();\ \}\(\backslash\) }}
-\DoxyCodeLine{00032\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ virtual\ const\ char*\ GetName()\ const\ override\ \{\ return\ \#type;\ \} }}
-
-\end{DoxyCode}
+\begin{DoxyAuthor}{Author}
+Damon S. Green II 
+\end{DoxyAuthor}

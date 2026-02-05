@@ -2,6 +2,11 @@
 \hypertarget{class_vesper_1_1_buffer_layout}{}\label{class_vesper_1_1_buffer_layout}\index{Vesper::BufferLayout@{Vesper::BufferLayout}}
 
 
+Represents the layout of a buffer, consisting of multiple Buffer\+Elements.  
+
+
+
+
 {\ttfamily \+\#include $<$Buffer.\+h$>$}
 
 \doxysubsubsection*{Public Member Functions}
@@ -10,11 +15,11 @@
 \doxymbox{\hyperlink{class_vesper_1_1_buffer_layout_af42572273e3499cae67a7746e4188c94}{Buffer\+Layout}} ()
 \item 
 \doxymbox{\hyperlink{class_vesper_1_1_buffer_layout_a6cc13f67f5726414dde81094fefebb6d}{Buffer\+Layout}} (const std::\+initializer\+\_\+list$<$ \doxymbox{\hyperlink{struct_vesper_1_1_buffer_element}{Buffer\+Element}} $>$ \&elements)
-\item 
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_vesper_1_1_buffer_layout}{Buffer\+Layout} with the given list of Buffer\+Elements. \end{DoxyCompactList}\item 
 const std::\+vector$<$ \doxymbox{\hyperlink{struct_vesper_1_1_buffer_element}{Buffer\+Element}} $>$ \& \doxymbox{\hyperlink{class_vesper_1_1_buffer_layout_a4702e1346df91ed8afd84821122c1dbc}{Get\+Elements}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Returns the list of Buffer\+Elements in the layout. \end{DoxyCompactList}\item 
 uint32\+\_\+t \doxymbox{\hyperlink{class_vesper_1_1_buffer_layout_a5c58e4796a33af0121cca98760a51d97}{Get\+Stride}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Returns the stride (total size in bytes) of the buffer layout. \end{DoxyCompactList}\item 
 std::\+vector$<$ \doxymbox{\hyperlink{struct_vesper_1_1_buffer_element}{Buffer\+Element}} $>$::\+iterator \doxymbox{\hyperlink{class_vesper_1_1_buffer_layout_a4d4a7a1789c40209ed53c4049e3defc2}{begin}} ()
 \item 
 std::\+vector$<$ \doxymbox{\hyperlink{struct_vesper_1_1_buffer_element}{Buffer\+Element}} $>$::\+const\+\_\+iterator \doxymbox{\hyperlink{class_vesper_1_1_buffer_layout_a7f9d92663dd39aad377b8503991cb1d9}{begin}} () const
@@ -27,7 +32,7 @@ std::\+vector$<$ \doxymbox{\hyperlink{struct_vesper_1_1_buffer_element}{Buffer\+
 \begin{DoxyCompactItemize}
 \item 
 void \doxymbox{\hyperlink{class_vesper_1_1_buffer_layout_a29341f441f4f92b60aee34e9f724ed76}{Calculate\+Offsets\+And\+Stride}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Calculates the offsets and stride for the buffer layout based on its elements. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -36,6 +41,9 @@ std::\+vector$<$ \doxymbox{\hyperlink{struct_vesper_1_1_buffer_element}{Buffer\+
 uint32\+\_\+t \doxymbox{\hyperlink{class_vesper_1_1_buffer_layout_a39873399c59065585b0c586d991ad68f}{m\+\_\+\+Stride}} = 0
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Represents the layout of a buffer, consisting of multiple Buffer\+Elements. 
 
 \label{doc-constructors}
 \Hypertarget{class_vesper_1_1_buffer_layout_doc-constructors}
@@ -48,7 +56,7 @@ Vesper::\+\+Buffer\+Layout::\+\+Buffer\+Layout (\begin{DoxyParamCaption}{}{}\end
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00067\ \{\}}
+\DoxyCodeLine{00086\ \{\}}
 
 \end{DoxyCode}
 \Hypertarget{class_vesper_1_1_buffer_layout_a6cc13f67f5726414dde81094fefebb6d}\index{Vesper::BufferLayout@{Vesper::BufferLayout}!BufferLayout@{BufferLayout}}
@@ -58,11 +66,20 @@ Vesper::\+\+Buffer\+Layout::\+\+Buffer\+Layout (\begin{DoxyParamCaption}{}{}\end
 Vesper::\+\+Buffer\+Layout::\+\+Buffer\+Layout (\begin{DoxyParamCaption}\item[{const std::\+initializer\+\_\+list$<$ \doxymbox{\hyperlink{struct_vesper_1_1_buffer_element}{Buffer\+Element}} $>$ \&}]{elements}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
+
+Constructs a \doxylink{class_vesper_1_1_buffer_layout}{Buffer\+Layout} with the given list of Buffer\+Elements. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em elements} & The list of Buffer\+Elements that make up the layout. Automatically calculates offsets and stride. \\
+\hline
+\end{DoxyParams}
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_vesper_1_1_buffer_layout_abed989662870446d5b4c8d9d9680de16}{m\_Elements}}(elements),\ \doxymbox{\hyperlink{class_vesper_1_1_buffer_layout_a39873399c59065585b0c586d991ad68f}{m\_Stride}}(0) }
-\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_buffer_layout_a29341f441f4f92b60aee34e9f724ed76}{CalculateOffsetsAndStride}}();}
-\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_vesper_1_1_buffer_layout_abed989662870446d5b4c8d9d9680de16}{m\_Elements}}(elements),\ \doxymbox{\hyperlink{class_vesper_1_1_buffer_layout_a39873399c59065585b0c586d991ad68f}{m\_Stride}}(0) }
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_buffer_layout_a29341f441f4f92b60aee34e9f724ed76}{CalculateOffsetsAndStride}}();}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \}}
 
 \end{DoxyCode}
 
@@ -86,7 +103,7 @@ std::\+vector$<$ \doxymbox{\hyperlink{struct_vesper_1_1_buffer_element}{Buffer\+
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00078\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_buffer_layout_abed989662870446d5b4c8d9d9680de16}{m\_Elements}}.begin();\ \}}
+\DoxyCodeLine{00104\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_buffer_layout_abed989662870446d5b4c8d9d9680de16}{m\_Elements}}.begin();\ \}}
 
 \end{DoxyCode}
 \Hypertarget{class_vesper_1_1_buffer_layout_a7f9d92663dd39aad377b8503991cb1d9}\index{Vesper::BufferLayout@{Vesper::BufferLayout}!begin@{begin}}
@@ -97,7 +114,7 @@ std::\+vector$<$ \doxymbox{\hyperlink{struct_vesper_1_1_buffer_element}{Buffer\+
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00079\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_buffer_layout_abed989662870446d5b4c8d9d9680de16}{m\_Elements}}.begin();\ \}}
+\DoxyCodeLine{00105\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_buffer_layout_abed989662870446d5b4c8d9d9680de16}{m\_Elements}}.begin();\ \}}
 
 \end{DoxyCode}
 \Hypertarget{class_vesper_1_1_buffer_layout_a29341f441f4f92b60aee34e9f724ed76}\index{Vesper::BufferLayout@{Vesper::BufferLayout}!CalculateOffsetsAndStride@{CalculateOffsetsAndStride}}
@@ -107,16 +124,20 @@ std::\+vector$<$ \doxymbox{\hyperlink{struct_vesper_1_1_buffer_element}{Buffer\+
 void Vesper::\+\+Buffer\+Layout::\+\+Calculate\+Offsets\+And\+Stride (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
 
 
+
+Calculates the offsets and stride for the buffer layout based on its elements. 
+
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ offset\ =\ 0;}
-\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_buffer_layout_a39873399c59065585b0c586d991ad68f}{m\_Stride}}\ =\ 0;}
-\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ element\ :\ \doxymbox{\hyperlink{class_vesper_1_1_buffer_layout_abed989662870446d5b4c8d9d9680de16}{m\_Elements}})\ \{}
-\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ element.Offset\ =\ offset;}
-\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ offset\ +=\ element.Size;}
-\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_buffer_layout_a39873399c59065585b0c586d991ad68f}{m\_Stride}}\ +=\ element.Size;}
-\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ offset\ =\ 0;}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_buffer_layout_a39873399c59065585b0c586d991ad68f}{m\_Stride}}\ =\ 0;}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ element\ :\ \doxymbox{\hyperlink{class_vesper_1_1_buffer_layout_abed989662870446d5b4c8d9d9680de16}{m\_Elements}})\ \{}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ element.Offset\ =\ offset;}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ offset\ +=\ element.Size;}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_buffer_layout_a39873399c59065585b0c586d991ad68f}{m\_Stride}}\ +=\ element.Size;}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \}}
 
 \end{DoxyCode}
 \Hypertarget{class_vesper_1_1_buffer_layout_a0278a09a483b9d9b99fef740326e7653}\index{Vesper::BufferLayout@{Vesper::BufferLayout}!end@{end}}
@@ -127,7 +148,7 @@ std::\+vector$<$ \doxymbox{\hyperlink{struct_vesper_1_1_buffer_element}{Buffer\+
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00080\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_buffer_layout_abed989662870446d5b4c8d9d9680de16}{m\_Elements}}.end();\ \}}
+\DoxyCodeLine{00106\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_buffer_layout_abed989662870446d5b4c8d9d9680de16}{m\_Elements}}.end();\ \}}
 
 \end{DoxyCode}
 \Hypertarget{class_vesper_1_1_buffer_layout_a489a3fa031d21c4a6627e234c598c3f5}\index{Vesper::BufferLayout@{Vesper::BufferLayout}!end@{end}}
@@ -138,7 +159,7 @@ std::\+vector$<$ \doxymbox{\hyperlink{struct_vesper_1_1_buffer_element}{Buffer\+
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00081\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_buffer_layout_abed989662870446d5b4c8d9d9680de16}{m\_Elements}}.end();\ \}}
+\DoxyCodeLine{00107\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_buffer_layout_abed989662870446d5b4c8d9d9680de16}{m\_Elements}}.end();\ \}}
 
 \end{DoxyCode}
 \Hypertarget{class_vesper_1_1_buffer_layout_a4702e1346df91ed8afd84821122c1dbc}\index{Vesper::BufferLayout@{Vesper::BufferLayout}!GetElements@{GetElements}}
@@ -148,8 +169,12 @@ std::\+vector$<$ \doxymbox{\hyperlink{struct_vesper_1_1_buffer_element}{Buffer\+
 const std::\+vector$<$ \doxymbox{\hyperlink{struct_vesper_1_1_buffer_element}{Buffer\+Element}} $>$ \& Vesper::\+\+Buffer\+Layout::\+\+Get\+Elements (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
+
+Returns the list of Buffer\+Elements in the layout. 
+
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00075\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_buffer_layout_abed989662870446d5b4c8d9d9680de16}{m\_Elements}};\ \}}
+\DoxyCodeLine{00100\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_buffer_layout_abed989662870446d5b4c8d9d9680de16}{m\_Elements}};\ \}}
 
 \end{DoxyCode}
 \Hypertarget{class_vesper_1_1_buffer_layout_a5c58e4796a33af0121cca98760a51d97}\index{Vesper::BufferLayout@{Vesper::BufferLayout}!GetStride@{GetStride}}
@@ -159,8 +184,12 @@ const std::\+vector$<$ \doxymbox{\hyperlink{struct_vesper_1_1_buffer_element}{Bu
 uint32\+\_\+t Vesper::\+\+Buffer\+Layout::\+\+Get\+Stride (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
+
+Returns the stride (total size in bytes) of the buffer layout. 
+
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00076\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_buffer_layout_a39873399c59065585b0c586d991ad68f}{m\_Stride}};\ \}}
+\DoxyCodeLine{00102\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_buffer_layout_a39873399c59065585b0c586d991ad68f}{m\_Stride}};\ \}}
 
 \end{DoxyCode}
 

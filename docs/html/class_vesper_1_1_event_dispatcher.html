@@ -182,10 +182,10 @@ template&lt;typename T&gt; </div>
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><span class="lineno">   82</span>            : <a class="code hl_variable" href="#a5dfa8fe5db172910af70a30ba28c3338">m_Event</a>(event)</div>
-<div class="line"><span class="lineno">   83</span>        {</div>
-<div class="line"><span class="lineno">   84</span>        }</div>
-<div class="ttc" id="aclass_vesper_1_1_event_dispatcher_html_a5dfa8fe5db172910af70a30ba28c3338"><div class="ttname"><a href="#a5dfa8fe5db172910af70a30ba28c3338">Vesper::EventDispatcher::m_Event</a></div><div class="ttdeci">Event &amp; m_Event</div><div class="ttdoc">The event to be dispatched.</div><div class="ttdef"><b>Definition</b> Event.h:103</div></div>
+<div class="fragment"><div class="line"><span class="lineno">   79</span>            : <a class="code hl_variable" href="#a5dfa8fe5db172910af70a30ba28c3338">m_Event</a>(event)</div>
+<div class="line"><span class="lineno">   80</span>        {</div>
+<div class="line"><span class="lineno">   81</span>        }</div>
+<div class="ttc" id="aclass_vesper_1_1_event_dispatcher_html_a5dfa8fe5db172910af70a30ba28c3338"><div class="ttname"><a href="#a5dfa8fe5db172910af70a30ba28c3338">Vesper::EventDispatcher::m_Event</a></div><div class="ttdeci">Event &amp; m_Event</div><div class="ttdoc">The event to be dispatched.</div><div class="ttdef"><b>Definition</b> Event.h:100</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a5dfa8fe5db172910af70a30ba28c3338">m_Event</a>.</p>
 
@@ -233,14 +233,14 @@ template&lt;typename T&gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>True if the event was handled, false otherwise. </dd></dl>
-<div class="fragment"><div class="line"><span class="lineno">   93</span>        {</div>
-<div class="line"><span class="lineno">   94</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a5dfa8fe5db172910af70a30ba28c3338">m_Event</a>.GetEventType() == T::GetStaticType())</div>
-<div class="line"><span class="lineno">   95</span>            {</div>
-<div class="line"><span class="lineno">   96</span>                <a class="code hl_variable" href="#a5dfa8fe5db172910af70a30ba28c3338">m_Event</a>.Handled = func(*(T*)&amp;<a class="code hl_variable" href="#a5dfa8fe5db172910af70a30ba28c3338">m_Event</a>);</div>
-<div class="line"><span class="lineno">   97</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   98</span>            }</div>
-<div class="line"><span class="lineno">   99</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  100</span>        }</div>
+<div class="fragment"><div class="line"><span class="lineno">   90</span>        {</div>
+<div class="line"><span class="lineno">   91</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a5dfa8fe5db172910af70a30ba28c3338">m_Event</a>.GetEventType() == T::GetStaticType())</div>
+<div class="line"><span class="lineno">   92</span>            {</div>
+<div class="line"><span class="lineno">   93</span>                <a class="code hl_variable" href="#a5dfa8fe5db172910af70a30ba28c3338">m_Event</a>.Handled = func(*(T*)&amp;<a class="code hl_variable" href="#a5dfa8fe5db172910af70a30ba28c3338">m_Event</a>);</div>
+<div class="line"><span class="lineno">   94</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   95</span>            }</div>
+<div class="line"><span class="lineno">   96</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   97</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>

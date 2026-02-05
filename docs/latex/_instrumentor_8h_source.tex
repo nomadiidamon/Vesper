@@ -2,245 +2,251 @@
 \hypertarget{_instrumentor_8h_source}{}\label{_instrumentor_8h_source}\index{Vesper/src/Vesper/Debug/Instrumentor.h@{Vesper/src/Vesper/Debug/Instrumentor.h}}
 \doxymbox{\hyperlink{_instrumentor_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00001\ \textcolor{comment}{//Copyright\ ©\ TheCherno}}
-\DoxyCodeLine{00002\ \textcolor{comment}{//Modifications\ Copyright\ ©\ 2025\ Damon\ S.Green\ II(nomad\_ii\_damon)}}
-\DoxyCodeLine{00003\ \textcolor{comment}{//}}
-\DoxyCodeLine{00004\ \textcolor{comment}{//Licensed\ under\ the\ Apache\ License,\ Version\ 2.0\ (the\ "{}License"{});}}
-\DoxyCodeLine{00005\ \textcolor{comment}{//you\ may\ not\ use\ this\ file\ except\ in\ compliance\ with\ the\ License.}}
-\DoxyCodeLine{00006\ \textcolor{comment}{//You\ may\ obtain\ a\ copy\ of\ the\ License\ at}}
-\DoxyCodeLine{00007\ \textcolor{comment}{//}}
-\DoxyCodeLine{00008\ \textcolor{comment}{//[Apache](http://www.apache.org/licenses/LICENSE-\/2.0)}}
-\DoxyCodeLine{00009\ }
-\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{pragma}\ \textcolor{preprocessor}{once}}
-\DoxyCodeLine{00011\ }
-\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\ \textcolor{preprocessor}{"{}Vesper/Core/Log.h"{}}}
-\DoxyCodeLine{00013\ }
-\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\ \textcolor{preprocessor}{<}\textcolor{preprocessor}{algorithm}\textcolor{preprocessor}{>}}
-\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\ \textcolor{preprocessor}{<}\textcolor{preprocessor}{chrono}\textcolor{preprocessor}{>}}
-\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\ \textcolor{preprocessor}{<}\textcolor{preprocessor}{fstream}\textcolor{preprocessor}{>}}
-\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\ \textcolor{preprocessor}{<}\textcolor{preprocessor}{iomanip}\textcolor{preprocessor}{>}}
-\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\ \textcolor{preprocessor}{<}\textcolor{preprocessor}{string}\textcolor{preprocessor}{>}}
-\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\ \textcolor{preprocessor}{<}\textcolor{preprocessor}{thread}\textcolor{preprocessor}{>}}
-\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\ \textcolor{preprocessor}{<}\textcolor{preprocessor}{mutex}\textcolor{preprocessor}{>}}
-\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\ \textcolor{preprocessor}{<}\textcolor{preprocessor}{sstream}\textcolor{preprocessor}{>}}
-\DoxyCodeLine{00022\ }
-\DoxyCodeLine{00023\ \textcolor{keyword}{namespace}\ Vesper\ \{}
-\DoxyCodeLine{00024\ }
-\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{using}\ FloatingPointMicroseconds\ =\ std::chrono::duration<\textcolor{keywordtype}{double},\ std::micro>;}
-\DoxyCodeLine{00026\ }
-\DoxyCodeLine{00027\ }
-\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{struct}\ ProfileResult}
-\DoxyCodeLine{00029\ \ \ \ \ \{}
-\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ std::string\ Name;}
-\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ Start,\ End;}
-\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ uint32\_t\ ThreadID;}
-\DoxyCodeLine{00033\ \ \ \ \ \};}
-\DoxyCodeLine{00034\ }
-\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{struct}\ InstrumentationSession}
-\DoxyCodeLine{00036\ \ \ \ \ \{}
-\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ std::string\ Name;}
-\DoxyCodeLine{00038\ \ \ \ \ \};}
-\DoxyCodeLine{00039\ }
-\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{class}\ Instrumentor}
-\DoxyCodeLine{00041\ \ \ \ \ \{}
-\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ InstrumentationSession*\ m\_CurrentSession;}
-\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ std::ofstream\ m\_OutputStream;}
-\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ std::mutex\ m\_Mutex;}
-\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ Instrumentor()}
-\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ :\ m\_CurrentSession(\textcolor{keywordtype}{nullptr})}
-\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00051\ }
-\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ BeginSession(\textcolor{keyword}{const}\ std::string\&\ name,\ \textcolor{keyword}{const}\ std::string\&\ filepath\ =\ \textcolor{stringliteral}{"{}results.json"{}})}
-\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ std::lock\_guard\ lock(m\_Mutex);}
-\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (m\_CurrentSession)\ \{}
-\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ If\ there\ is\ already\ a\ current\ session,\ end\ it\ and\ start\ new\ one}}
-\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Log::GetCoreLogger())}
-\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_log_8h_af9f85085b8d9825fe5d84ca485b7ee89}{VZ\_CORE\_ERROR}}(\textcolor{stringliteral}{"{}Instrumentor::BeginSession('\{0\}')\ when\ session\ '\{1\}'\ already\ open."{}},\ name,\ m\_CurrentSession-\/>Name);}
-\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ InternalEndSession();}
-\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ m\_OutputStream.open(filepath);}
-\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (m\_OutputStream.is\_open())\ \{}
-\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_CurrentSession\ =\ \textcolor{keyword}{new}\ InstrumentationSession\{\ name\ \};}
-\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ WriteHeader();}
-\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
-\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Log::GetCoreLogger())}
-\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_log_8h_af9f85085b8d9825fe5d84ca485b7ee89}{VZ\_CORE\_ERROR}}(\textcolor{stringliteral}{"{}Instrumentor\ could\ not\ open\ results\ file\ '\{0\}'."{}},\ filepath);}
-\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ \textcolor{comment}{///\ @file\ Instrumentor.h}}
+\DoxyCodeLine{00003\ \textcolor{comment}{///\ @author\ TheCherno}}
+\DoxyCodeLine{00004\ \textcolor{comment}{///\ @author\ Damon\ S.\ Green\ II}}
+\DoxyCodeLine{00005\ \textcolor{comment}{///\ @brief\ Provides\ instrumentation\ and\ profiling\ utilities.}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//Copyright\ ©\ TheCherno}}
+\DoxyCodeLine{00008\ \textcolor{comment}{//Modifications\ Copyright\ ©\ 2025\ Damon\ S.Green\ II(nomad\_ii\_damon)}}
+\DoxyCodeLine{00009\ \textcolor{comment}{//}}
+\DoxyCodeLine{00010\ \textcolor{comment}{//Licensed\ under\ the\ Apache\ License,\ Version\ 2.0\ (the\ "{}License"{});}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//you\ may\ not\ use\ this\ file\ except\ in\ compliance\ with\ the\ License.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//You\ may\ obtain\ a\ copy\ of\ the\ License\ at}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//[Apache](http://www.apache.org/licenses/LICENSE-\/2.0)}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{pragma}\ \textcolor{preprocessor}{once}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\ \textcolor{preprocessor}{"{}Vesper/Core/Log.h"{}}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\ \textcolor{preprocessor}{<}\textcolor{preprocessor}{algorithm}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\ \textcolor{preprocessor}{<}\textcolor{preprocessor}{chrono}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\ \textcolor{preprocessor}{<}\textcolor{preprocessor}{fstream}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\ \textcolor{preprocessor}{<}\textcolor{preprocessor}{iomanip}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\ \textcolor{preprocessor}{<}\textcolor{preprocessor}{string}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\ \textcolor{preprocessor}{<}\textcolor{preprocessor}{thread}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\ \textcolor{preprocessor}{<}\textcolor{preprocessor}{mutex}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\ \textcolor{preprocessor}{<}\textcolor{preprocessor}{sstream}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{namespace}\ Vesper\ \{}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{using}\ FloatingPointMicroseconds\ =\ std::chrono::duration<\textcolor{keywordtype}{double},\ std::micro>;}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{struct}\ ProfileResult}
+\DoxyCodeLine{00035\ \ \ \ \ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ std::string\ Name;}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ Start,\ End;}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ uint32\_t\ ThreadID;}
+\DoxyCodeLine{00039\ \ \ \ \ \};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{struct}\ InstrumentationSession}
+\DoxyCodeLine{00042\ \ \ \ \ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ std::string\ Name;}
+\DoxyCodeLine{00044\ \ \ \ \ \};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{class}\ Instrumentor}
+\DoxyCodeLine{00047\ \ \ \ \ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ InstrumentationSession*\ m\_CurrentSession;}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ std::ofstream\ m\_OutputStream;}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ std::mutex\ m\_Mutex;}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ Instrumentor()}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ :\ m\_CurrentSession(\textcolor{keywordtype}{nullptr})}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ BeginSession(\textcolor{keyword}{const}\ std::string\&\ name,\ \textcolor{keyword}{const}\ std::string\&\ filepath\ =\ \textcolor{stringliteral}{"{}results.json"{}})}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ std::lock\_guard\ lock(m\_Mutex);}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (m\_CurrentSession)\ \{}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ If\ there\ is\ already\ a\ current\ session,\ end\ it\ and\ start\ new\ one}}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Log::GetCoreLogger())}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_log_8h_af9f85085b8d9825fe5d84ca485b7ee89}{VZ\_CORE\_ERROR}}(\textcolor{stringliteral}{"{}Instrumentor::BeginSession('\{0\}')\ when\ session\ '\{1\}'\ already\ open."{}},\ name,\ m\_CurrentSession-\/>Name);}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ InternalEndSession();}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ m\_OutputStream.open(filepath);}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (m\_OutputStream.is\_open())\ \{}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_CurrentSession\ =\ \textcolor{keyword}{new}\ InstrumentationSession\{\ name\ \};}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ WriteHeader();}
 \DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ WriteHeader();}
-\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ m\_CurrentSession\ =\ \textcolor{keyword}{new}\ InstrumentationSession\{\ name\ \};}
-\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00077\ }
-\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ EndSession()}
-\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ std::lock\_guard\ lock(m\_Mutex);}
-\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ InternalEndSession();}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Log::GetCoreLogger())}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_log_8h_af9f85085b8d9825fe5d84ca485b7ee89}{VZ\_CORE\_ERROR}}(\textcolor{stringliteral}{"{}Instrumentor\ could\ not\ open\ results\ file\ '\{0\}'."{}},\ filepath);}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ WriteHeader();}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ m\_CurrentSession\ =\ \textcolor{keyword}{new}\ InstrumentationSession\{\ name\ \};}
 \DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{00083\ }
-\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ WriteProfile(\textcolor{keyword}{const}\ ProfileResult\&\ result)}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ EndSession()}
 \DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ m\_OutputStream\ <<\ \textcolor{stringliteral}{"{},"{}};}
-\DoxyCodeLine{00087\ }
-\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ name\ =\ result.Name;}
-\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ std::replace(name.begin(),\ name.end(),\ \textcolor{stringliteral}{'"{}'},\ \textcolor{stringliteral}{'\(\backslash\)''});}
-\DoxyCodeLine{00090\ }
-\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ m\_OutputStream\ <<\ \textcolor{stringliteral}{"{}\{"{}};}
-\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ m\_OutputStream\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)"{}cat\(\backslash\)"{}:\(\backslash\)"{}function\(\backslash\)"{},"{}};}
-\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ m\_OutputStream\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)"{}dur\(\backslash\)"{}:"{}}\ <<\ (result.End\ -\/\ result.Start)\ <<\ \textcolor{stringliteral}{','};}
-\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ m\_OutputStream\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)"{}name\(\backslash\)"{}:\(\backslash\)"{}"{}}\ <<\ name\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)"{},"{}};}
-\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ m\_OutputStream\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)"{}ph\(\backslash\)"{}:\(\backslash\)"{}X\(\backslash\)"{},"{}};}
-\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ m\_OutputStream\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)"{}pid\(\backslash\)"{}:0,"{}};}
-\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ m\_OutputStream\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)"{}tid\(\backslash\)"{}:"{}}\ <<\ result.ThreadID\ <<\ \textcolor{stringliteral}{"{},"{}};}
-\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ m\_OutputStream\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)"{}ts\(\backslash\)"{}:"{}}\ <<\ result.Start;}
-\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ m\_OutputStream\ <<\ \textcolor{stringliteral}{"{}\}"{}};}
-\DoxyCodeLine{00100\ }
-\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ std::lock\_guard\ lock(m\_Mutex);}
-\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (m\_CurrentSession)}
-\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//m\_OutputStream\ <<\ json.str();}}
-\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_OutputStream.flush();}
-\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00108\ }
-\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ WriteHeader()}
-\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ m\_OutputStream\ <<\ \textcolor{stringliteral}{"{}\{\(\backslash\)"{}otherData\(\backslash\)"{}:\ \{\},\(\backslash\)"{}traceEvents\(\backslash\)"{}:["{}};}
-\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ m\_OutputStream.flush();}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ std::lock\_guard\ lock(m\_Mutex);}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ InternalEndSession();}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ WriteProfile(\textcolor{keyword}{const}\ ProfileResult\&\ result)}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ m\_OutputStream\ <<\ \textcolor{stringliteral}{"{},"{}};}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ name\ =\ result.Name;}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ std::replace(name.begin(),\ name.end(),\ \textcolor{stringliteral}{'"{}'},\ \textcolor{stringliteral}{'\(\backslash\)''});}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ m\_OutputStream\ <<\ \textcolor{stringliteral}{"{}\{"{}};}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ m\_OutputStream\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)"{}cat\(\backslash\)"{}:\(\backslash\)"{}function\(\backslash\)"{},"{}};}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ m\_OutputStream\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)"{}dur\(\backslash\)"{}:"{}}\ <<\ (result.End\ -\/\ result.Start)\ <<\ \textcolor{stringliteral}{','};}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ m\_OutputStream\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)"{}name\(\backslash\)"{}:\(\backslash\)"{}"{}}\ <<\ name\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)"{},"{}};}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ m\_OutputStream\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)"{}ph\(\backslash\)"{}:\(\backslash\)"{}X\(\backslash\)"{},"{}};}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ m\_OutputStream\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)"{}pid\(\backslash\)"{}:0,"{}};}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ m\_OutputStream\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)"{}tid\(\backslash\)"{}:"{}}\ <<\ result.ThreadID\ <<\ \textcolor{stringliteral}{"{},"{}};}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ m\_OutputStream\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)"{}ts\(\backslash\)"{}:"{}}\ <<\ result.Start;}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ m\_OutputStream\ <<\ \textcolor{stringliteral}{"{}\}"{}};}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ std::lock\_guard\ lock(m\_Mutex);}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (m\_CurrentSession)}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//m\_OutputStream\ <<\ json.str();}}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_OutputStream.flush();}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{00114\ }
-\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ WriteFooter()}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ WriteHeader()}
 \DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ m\_OutputStream\ <<\ \textcolor{stringliteral}{"{}]\}"{}};}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ m\_OutputStream\ <<\ \textcolor{stringliteral}{"{}\{\(\backslash\)"{}otherData\(\backslash\)"{}:\ \{\},\(\backslash\)"{}traceEvents\(\backslash\)"{}:["{}};}
 \DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ m\_OutputStream.flush();}
 \DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{00120\ }
-\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ InternalEndSession()}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ WriteFooter()}
 \DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (m\_CurrentSession)}
-\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ WriteFooter();}
-\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_OutputStream.close();}
-\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ m\_CurrentSession;}
-\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_CurrentSession\ =\ \textcolor{keywordtype}{nullptr};}
-\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00131\ }
-\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ Instrumentor\&\ Get()}
-\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ Instrumentor\ instance;}
-\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ instance;}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ m\_OutputStream\ <<\ \textcolor{stringliteral}{"{}]\}"{}};}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ m\_OutputStream.flush();}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ InternalEndSession()}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (m\_CurrentSession)}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ WriteFooter();}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_OutputStream.close();}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ m\_CurrentSession;}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_CurrentSession\ =\ \textcolor{keywordtype}{nullptr};}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00137\ \ \ \ \ \};}
-\DoxyCodeLine{00138\ }
-\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keyword}{class}\ InstrumentationTimer}
-\DoxyCodeLine{00140\ \ \ \ \ \{}
-\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ InstrumentationTimer(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ name)}
-\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ :\ m\_Name(name),\ m\_Stopped(\textcolor{keyword}{false})}
-\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ m\_StartTimepoint\ =\ std::chrono::high\_resolution\_clock::now();}
-\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00147\ }
-\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \string~InstrumentationTimer()}
-\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!m\_Stopped)}
-\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Stop();}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ Instrumentor\&\ Get()}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ Instrumentor\ instance;}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ instance;}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00143\ \ \ \ \ \};}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{keyword}{class}\ InstrumentationTimer}
+\DoxyCodeLine{00146\ \ \ \ \ \{}
+\DoxyCodeLine{00147\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ InstrumentationTimer(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ name)}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ :\ m\_Name(name),\ m\_Stopped(\textcolor{keyword}{false})}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ m\_StartTimepoint\ =\ std::chrono::high\_resolution\_clock::now();}
 \DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{00153\ }
-\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ Stop()}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \string~InstrumentationTimer()}
 \DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ endTimepoint\ =\ std::chrono::high\_resolution\_clock::now();}
-\DoxyCodeLine{00157\ }
-\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ start\ =\ std::chrono::time\_point\_cast<std::chrono::microseconds>(m\_StartTimepoint).time\_since\_epoch().count();}
-\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ end\ =\ std::chrono::time\_point\_cast<std::chrono::microseconds>(endTimepoint).time\_since\_epoch().count();}
-\DoxyCodeLine{00160\ }
-\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ threadID\ =\ std::hash<std::thread::id>\{\}(std::this\_thread::get\_id());}
-\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \ \ \ \ Instrumentor::Get().WriteProfile(\{\ m\_Name,\ start,\ end,\ threadID\ \});}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!m\_Stopped)}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Stop();}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00159\ }
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ Stop()}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ endTimepoint\ =\ std::chrono::high\_resolution\_clock::now();}
 \DoxyCodeLine{00163\ }
-\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ m\_Stopped\ =\ \textcolor{keyword}{true};}
-\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00166\ \ \ \ \ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ m\_Name;}
-\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ std::chrono::time\_point<std::chrono::high\_resolution\_clock>\ m\_StartTimepoint;}
-\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ m\_Stopped;}
-\DoxyCodeLine{00170\ \ \ \ \ \};}
-\DoxyCodeLine{00171\ }
-\DoxyCodeLine{00172\ }
-\DoxyCodeLine{00173\ \}}
-\DoxyCodeLine{00174\ }
-\DoxyCodeLine{00175\ \textcolor{keyword}{namespace}\ InstrumentorUtils\ \{}
-\DoxyCodeLine{00176\ }
-\DoxyCodeLine{00177\ \ \ \ \ \textcolor{keyword}{template}\ <size\_t\ N>}
-\DoxyCodeLine{00178\ \ \ \ \ \textcolor{keyword}{struct}\ ChangeResult}
-\DoxyCodeLine{00179\ \ \ \ \ \{}
-\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ Data[N];}
-\DoxyCodeLine{00181\ \ \ \ \ \};}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ start\ =\ std::chrono::time\_point\_cast<std::chrono::microseconds>(m\_StartTimepoint).time\_since\_epoch().count();}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ end\ =\ std::chrono::time\_point\_cast<std::chrono::microseconds>(endTimepoint).time\_since\_epoch().count();}
+\DoxyCodeLine{00166\ }
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ threadID\ =\ std::hash<std::thread::id>\{\}(std::this\_thread::get\_id());}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \ \ \ \ Instrumentor::Get().WriteProfile(\{\ m\_Name,\ start,\ end,\ threadID\ \});}
+\DoxyCodeLine{00169\ }
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \ \ \ \ m\_Stopped\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00172\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ m\_Name;}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ std::chrono::time\_point<std::chrono::high\_resolution\_clock>\ m\_StartTimepoint;}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ m\_Stopped;}
+\DoxyCodeLine{00176\ \ \ \ \ \};}
+\DoxyCodeLine{00177\ }
+\DoxyCodeLine{00178\ }
+\DoxyCodeLine{00179\ \}}
+\DoxyCodeLine{00180\ }
+\DoxyCodeLine{00181\ \textcolor{keyword}{namespace}\ InstrumentorUtils\ \{}
 \DoxyCodeLine{00182\ }
-\DoxyCodeLine{00183\ \ \ \ \ \textcolor{keyword}{template}\ <size\_t\ N,\ size\_t\ K>}
-\DoxyCodeLine{00184\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ CleanupOutputString(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}(\&expr)[N],\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}(\&remove)[K])}
+\DoxyCodeLine{00183\ \ \ \ \ \textcolor{keyword}{template}\ <size\_t\ N>}
+\DoxyCodeLine{00184\ \ \ \ \ \textcolor{keyword}{struct}\ ChangeResult}
 \DoxyCodeLine{00185\ \ \ \ \ \{}
-\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ ChangeResult<N>\ result\ =\ \{\};}
-\DoxyCodeLine{00187\ }
-\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ size\_t\ srcIndex\ =\ 0;}
-\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ size\_t\ dstIndex\ =\ 0;}
-\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (srcIndex\ <\ N)}
-\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \ \ \ \ size\_t\ matchIndex\ =\ 0;}
-\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (matchIndex\ <\ K\ -\/\ 1\ \&\&\ srcIndex\ +\ matchIndex\ <\ N\ -\/\ 1\ \&\&\ expr[srcIndex\ +\ matchIndex]\ ==\ remove[matchIndex])}
-\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ matchIndex++;}
-\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (matchIndex\ ==\ K\ -\/\ 1)}
-\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ srcIndex\ +=\ matchIndex;}
-\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \ \ \ \ result.Data[dstIndex++]\ =\ expr[srcIndex]\ ==\ \textcolor{stringliteral}{'"{}'}\ ?\ \textcolor{stringliteral}{'\(\backslash\)''}\ :\ expr[srcIndex];}
-\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \ \ \ \ srcIndex++;}
-\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
-\DoxyCodeLine{00201\ \ \ \ \ \}}
-\DoxyCodeLine{00202\ \}}
-\DoxyCodeLine{00203\ }
-\DoxyCodeLine{00204\ }
-\DoxyCodeLine{00205\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{VZ\_PROFILE}\ 1}
-\DoxyCodeLine{00206\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{if}\ \doxymbox{\hyperlink{_instrumentor_8h_a2fb2d3507ac3d4aec28070e3531852f1}{VZ\_PROFILE}}}
-\DoxyCodeLine{00207\ \ \ \ \ \textcolor{comment}{//\ Resolve\ which\ function\ signature\ macro\ will\ be\ used.\ Note\ that\ this\ only}}
-\DoxyCodeLine{00208\ \ \ \ \ \textcolor{comment}{//\ is\ resolved\ when\ the\ (pre)compiler\ starts,\ so\ the\ syntax\ highlighting}}
-\DoxyCodeLine{00209\ \ \ \ \ \textcolor{comment}{//\ could\ mark\ the\ wrong\ one\ in\ your\ editor!}}
-\DoxyCodeLine{00210\ \ \ \ \ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{if}\ \textcolor{preprocessor}{defined}\textcolor{preprocessor}{(}\textcolor{preprocessor}{\_\_GNUC\_\_}\textcolor{preprocessor}{)}\ \textcolor{preprocessor}{||}\ \textcolor{preprocessor}{(}\textcolor{preprocessor}{defined}\textcolor{preprocessor}{(}\textcolor{preprocessor}{\_\_MWERKS\_\_}\textcolor{preprocessor}{)}\ \textcolor{preprocessor}{\&\&}\ \textcolor{preprocessor}{(}\textcolor{preprocessor}{\_\_MWERKS\_\_}\ \textcolor{preprocessor}{>=}\ 0x3000\textcolor{preprocessor}{)}\textcolor{preprocessor}{)}\ \textcolor{preprocessor}{||}\ \textcolor{preprocessor}{(}\textcolor{preprocessor}{defined}\textcolor{preprocessor}{(}\textcolor{preprocessor}{\_\_ICC}\textcolor{preprocessor}{)}\ \textcolor{preprocessor}{\&\&}\ \textcolor{preprocessor}{(}\textcolor{preprocessor}{\_\_ICC}\ \textcolor{preprocessor}{>=}\ 600\textcolor{preprocessor}{)}\textcolor{preprocessor}{)}\ \textcolor{preprocessor}{||}\ \textcolor{preprocessor}{defined}\textcolor{preprocessor}{(}\textcolor{preprocessor}{\_\_ghs\_\_}\textcolor{preprocessor}{)}}
-\DoxyCodeLine{00211\ \ \ \ \ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{VZ\_FUNC\_SIG}\ \textcolor{preprocessor}{\_\_PRETTY\_FUNCTION\_\_}}
-\DoxyCodeLine{00212\ \ \ \ \ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{elif}\ \textcolor{preprocessor}{defined}\textcolor{preprocessor}{(}\textcolor{preprocessor}{\_\_DMC\_\_}\textcolor{preprocessor}{)}\ \textcolor{preprocessor}{\&\&}\ \textcolor{preprocessor}{(}\textcolor{preprocessor}{\_\_DMC\_\_}\ \textcolor{preprocessor}{>=}\ 0x810\textcolor{preprocessor}{)}}
-\DoxyCodeLine{00213\ \ \ \ \ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{VZ\_FUNC\_SIG}\ \textcolor{preprocessor}{\_\_PRETTY\_FUNCTION\_\_}}
-\DoxyCodeLine{00214\ \ \ \ \ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{elif}\ \textcolor{preprocessor}{(}\textcolor{preprocessor}{defined}\textcolor{preprocessor}{(}\textcolor{preprocessor}{\_\_FUNCSIG\_\_}\textcolor{preprocessor}{)}\ \textcolor{preprocessor}{||}\ \textcolor{preprocessor}{(}\_MSC\_VER\textcolor{preprocessor}{)}\textcolor{preprocessor}{)}}
-\DoxyCodeLine{00215\ \ \ \ \ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{VZ\_FUNC\_SIG}\ \textcolor{keyword}{\_\_FUNCSIG\_\_}}
-\DoxyCodeLine{00216\ \ \ \ \ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{elif}\ \textcolor{preprocessor}{(}\textcolor{preprocessor}{defined}\textcolor{preprocessor}{(}\textcolor{preprocessor}{\_\_INTEL\_COMPILER}\textcolor{preprocessor}{)}\ \textcolor{preprocessor}{\&\&}\ \textcolor{preprocessor}{(}\textcolor{preprocessor}{\_\_INTEL\_COMPILER}\ \textcolor{preprocessor}{>=}\ 600\textcolor{preprocessor}{)}\textcolor{preprocessor}{)}\ \textcolor{preprocessor}{||}\ \textcolor{preprocessor}{(}\textcolor{preprocessor}{defined}\textcolor{preprocessor}{(}\textcolor{preprocessor}{\_\_IBMCPP\_\_}\textcolor{preprocessor}{)}\ \textcolor{preprocessor}{\&\&}\ \textcolor{preprocessor}{(}\textcolor{preprocessor}{\_\_IBMCPP\_\_}\ \textcolor{preprocessor}{>=}\ 500\textcolor{preprocessor}{)}\textcolor{preprocessor}{)}}
-\DoxyCodeLine{00217\ \ \ \ \ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{VZ\_FUNC\_SIG}\ \textcolor{preprocessor}{\_\_FUNCTION\_\_}}
-\DoxyCodeLine{00218\ \ \ \ \ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{elif}\ \textcolor{preprocessor}{defined}\textcolor{preprocessor}{(}\textcolor{preprocessor}{\_\_BORLANDC\_\_}\textcolor{preprocessor}{)}\ \textcolor{preprocessor}{\&\&}\ \textcolor{preprocessor}{(}\textcolor{preprocessor}{\_\_BORLANDC\_\_}\ \textcolor{preprocessor}{>=}\ 0x550\textcolor{preprocessor}{)}}
-\DoxyCodeLine{00219\ \ \ \ \ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{VZ\_FUNC\_SIG}\ \textcolor{preprocessor}{\_\_FUNC\_\_}}
-\DoxyCodeLine{00220\ \ \ \ \ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{elif}\ \textcolor{preprocessor}{defined}\textcolor{preprocessor}{(}\textcolor{preprocessor}{\_\_STDC\_VERSION\_\_}\textcolor{preprocessor}{)}\ \textcolor{preprocessor}{\&\&}\ \textcolor{preprocessor}{(}\textcolor{preprocessor}{\_\_STDC\_VERSION\_\_}\ \textcolor{preprocessor}{>=}\ 199901\textcolor{preprocessor}{)}}
-\DoxyCodeLine{00221\ \ \ \ \ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{VZ\_FUNC\_SIG}\ \textcolor{preprocessor}{\_\_func\_\_}}
-\DoxyCodeLine{00222\ \ \ \ \ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{elif}\ \textcolor{preprocessor}{defined}\textcolor{preprocessor}{(}\textcolor{preprocessor}{\_\_cplusplus}\textcolor{preprocessor}{)}\ \textcolor{preprocessor}{\&\&}\ \textcolor{preprocessor}{(}\textcolor{preprocessor}{\_\_cplusplus}\ \textcolor{preprocessor}{>=}\ 201103\textcolor{preprocessor}{)}}
-\DoxyCodeLine{00223\ \ \ \ \ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{VZ\_FUNC\_SIG}\ \textcolor{preprocessor}{\_\_func\_\_}}
-\DoxyCodeLine{00224\ \ \ \ \ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{else}}
-\DoxyCodeLine{00225\ \ \ \ \ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{VZ\_FUNC\_SIG}\ \textcolor{stringliteral}{"{}VZ\_FUNC\_SIG\ unknown!"{}}}
-\DoxyCodeLine{00226\ \ \ \ \ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{endif}}
-\DoxyCodeLine{00227\ }
-\DoxyCodeLine{00228\ \ \ \ \ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{VZ\_PROFILE\_BEGIN\_SESSION}\textcolor{preprocessor}{(}\textcolor{preprocessor}{name}\textcolor{preprocessor}{,}\ \textcolor{preprocessor}{filepath}\textcolor{preprocessor}{)}\ \textcolor{preprocessor}{::}\textcolor{preprocessor}{Vesper}\textcolor{preprocessor}{::}\textcolor{preprocessor}{Instrumentor}\textcolor{preprocessor}{::}\textcolor{preprocessor}{Get}\textcolor{preprocessor}{(}\textcolor{preprocessor}{)}\textcolor{preprocessor}{.}\textcolor{preprocessor}{BeginSession}\textcolor{preprocessor}{(}\textcolor{preprocessor}{name}\textcolor{preprocessor}{,}\ \textcolor{preprocessor}{filepath}\textcolor{preprocessor}{)}}
-\DoxyCodeLine{00229\ \ \ \ \ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{VZ\_PROFILE\_END\_SESSION}\textcolor{preprocessor}{(}\textcolor{preprocessor}{)}\ \textcolor{preprocessor}{::}\textcolor{preprocessor}{Vesper}\textcolor{preprocessor}{::}\textcolor{preprocessor}{Instrumentor}\textcolor{preprocessor}{::}\textcolor{preprocessor}{Get}\textcolor{preprocessor}{(}\textcolor{preprocessor}{)}\textcolor{preprocessor}{.}\textcolor{preprocessor}{EndSession}\textcolor{preprocessor}{(}\textcolor{preprocessor}{)}}
-\DoxyCodeLine{00230\ \ \ \ \ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{VZ\_PROFILE\_SCOPE\_LINE2}\textcolor{preprocessor}{(}\textcolor{preprocessor}{name}\textcolor{preprocessor}{,}\ \textcolor{preprocessor}{line}\textcolor{preprocessor}{)}\ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ \textcolor{preprocessor}{fixedName}\textcolor{preprocessor}{\#\#}\textcolor{preprocessor}{line}\ \textcolor{preprocessor}{=}\ \textcolor{preprocessor}{InstrumentorUtils}\textcolor{preprocessor}{::}\textcolor{preprocessor}{CleanupOutputString}\textcolor{preprocessor}{(}\textcolor{preprocessor}{name}\textcolor{preprocessor}{,}\ \textcolor{stringliteral}{"{}\_\_cdecl\ "{}}\textcolor{preprocessor}{)}\textcolor{preprocessor}{;}}
-\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{preprocessor}{::}\textcolor{preprocessor}{Vesper}\textcolor{preprocessor}{::}\textcolor{preprocessor}{InstrumentationTimer}\ \textcolor{preprocessor}{timer}\textcolor{preprocessor}{\#\#}\textcolor{preprocessor}{line}\textcolor{preprocessor}{(}\textcolor{preprocessor}{fixedName}\textcolor{preprocessor}{\#\#}\textcolor{preprocessor}{line}\textcolor{preprocessor}{.}\textcolor{preprocessor}{Data}\textcolor{preprocessor}{)}}
-\DoxyCodeLine{00232\ \ \ \ \ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{VZ\_PROFILE\_SCOPE\_LINE}\textcolor{preprocessor}{(}\textcolor{preprocessor}{name}\textcolor{preprocessor}{,}\ \textcolor{preprocessor}{line}\textcolor{preprocessor}{)}\ \doxymbox{\hyperlink{_instrumentor_8h_a9fe34090b32832e899c27e83680fc084}{VZ\_PROFILE\_SCOPE\_LINE2}}\textcolor{preprocessor}{(}\textcolor{preprocessor}{name}\textcolor{preprocessor}{,}\ \textcolor{preprocessor}{line}\textcolor{preprocessor}{)}}
-\DoxyCodeLine{00233\ \ \ \ \ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{VZ\_PROFILE\_SCOPE}\textcolor{preprocessor}{(}\textcolor{preprocessor}{name}\textcolor{preprocessor}{)}\ \doxymbox{\hyperlink{_instrumentor_8h_af5ced1c824cf778e06ff0099f2652397}{VZ\_PROFILE\_SCOPE\_LINE}}\textcolor{preprocessor}{(}\textcolor{preprocessor}{name}\textcolor{preprocessor}{,}\ \textcolor{preprocessor}{\_\_LINE\_\_}\textcolor{preprocessor}{)}}
-\DoxyCodeLine{00234\ \ \ \ \ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{VZ\_PROFILE\_FUNCTION}\textcolor{preprocessor}{(}\textcolor{preprocessor}{)}\ \doxymbox{\hyperlink{_instrumentor_8h_ae2376bed374f838d0047cf753f914f31}{VZ\_PROFILE\_SCOPE}}\textcolor{preprocessor}{(}\doxymbox{\hyperlink{_instrumentor_8h_a45f407f34ca8ce12d32fb3c651593426}{VZ\_FUNC\_SIG}}\textcolor{preprocessor}{)}}
-\DoxyCodeLine{00235\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{else}}
-\DoxyCodeLine{00236\ \ \ \ \ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{VZ\_PROFILE\_BEGIN\_SESSION}\textcolor{preprocessor}{(}\textcolor{preprocessor}{name}\textcolor{preprocessor}{,}\ \textcolor{preprocessor}{filepath}\textcolor{preprocessor}{)}}
-\DoxyCodeLine{00237\ \ \ \ \ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{VZ\_PROFILE\_END\_SESSION}\textcolor{preprocessor}{(}\textcolor{preprocessor}{)}}
-\DoxyCodeLine{00238\ \ \ \ \ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{VZ\_PROFILE\_FUNCTION}\textcolor{preprocessor}{(}\textcolor{preprocessor}{)}}
-\DoxyCodeLine{00239\ \ \ \ \ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{VZ\_PROFILE\_SCOPE}\textcolor{preprocessor}{(}\textcolor{preprocessor}{name}\textcolor{preprocessor}{)}}
-\DoxyCodeLine{00240\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{endif}}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ Data[N];}
+\DoxyCodeLine{00187\ \ \ \ \ \};}
+\DoxyCodeLine{00188\ }
+\DoxyCodeLine{00189\ \ \ \ \ \textcolor{keyword}{template}\ <size\_t\ N,\ size\_t\ K>}
+\DoxyCodeLine{00190\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ CleanupOutputString(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}(\&expr)[N],\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}(\&remove)[K])}
+\DoxyCodeLine{00191\ \ \ \ \ \{}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ ChangeResult<N>\ result\ =\ \{\};}
+\DoxyCodeLine{00193\ }
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ size\_t\ srcIndex\ =\ 0;}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ size\_t\ dstIndex\ =\ 0;}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (srcIndex\ <\ N)}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \ \ \ \ size\_t\ matchIndex\ =\ 0;}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (matchIndex\ <\ K\ -\/\ 1\ \&\&\ srcIndex\ +\ matchIndex\ <\ N\ -\/\ 1\ \&\&\ expr[srcIndex\ +\ matchIndex]\ ==\ remove[matchIndex])}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ matchIndex++;}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (matchIndex\ ==\ K\ -\/\ 1)}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ srcIndex\ +=\ matchIndex;}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \ \ \ \ result.Data[dstIndex++]\ =\ expr[srcIndex]\ ==\ \textcolor{stringliteral}{'"{}'}\ ?\ \textcolor{stringliteral}{'\(\backslash\)''}\ :\ expr[srcIndex];}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \ \ \ \ srcIndex++;}
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
+\DoxyCodeLine{00207\ \ \ \ \ \}}
+\DoxyCodeLine{00208\ \}}
+\DoxyCodeLine{00209\ }
+\DoxyCodeLine{00210\ }
+\DoxyCodeLine{00211\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{VZ\_PROFILE}\ 1}
+\DoxyCodeLine{00212\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{if}\ \doxymbox{\hyperlink{_instrumentor_8h_a2fb2d3507ac3d4aec28070e3531852f1}{VZ\_PROFILE}}}
+\DoxyCodeLine{00213\ \ \ \ \ \textcolor{comment}{//\ Resolve\ which\ function\ signature\ macro\ will\ be\ used.\ Note\ that\ this\ only}}
+\DoxyCodeLine{00214\ \ \ \ \ \textcolor{comment}{//\ is\ resolved\ when\ the\ (pre)compiler\ starts,\ so\ the\ syntax\ highlighting}}
+\DoxyCodeLine{00215\ \ \ \ \ \textcolor{comment}{//\ could\ mark\ the\ wrong\ one\ in\ your\ editor!}}
+\DoxyCodeLine{00216\ \ \ \ \ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{if}\ \textcolor{preprocessor}{defined}\textcolor{preprocessor}{(}\textcolor{preprocessor}{\_\_GNUC\_\_}\textcolor{preprocessor}{)}\ \textcolor{preprocessor}{||}\ \textcolor{preprocessor}{(}\textcolor{preprocessor}{defined}\textcolor{preprocessor}{(}\textcolor{preprocessor}{\_\_MWERKS\_\_}\textcolor{preprocessor}{)}\ \textcolor{preprocessor}{\&\&}\ \textcolor{preprocessor}{(}\textcolor{preprocessor}{\_\_MWERKS\_\_}\ \textcolor{preprocessor}{>=}\ 0x3000\textcolor{preprocessor}{)}\textcolor{preprocessor}{)}\ \textcolor{preprocessor}{||}\ \textcolor{preprocessor}{(}\textcolor{preprocessor}{defined}\textcolor{preprocessor}{(}\textcolor{preprocessor}{\_\_ICC}\textcolor{preprocessor}{)}\ \textcolor{preprocessor}{\&\&}\ \textcolor{preprocessor}{(}\textcolor{preprocessor}{\_\_ICC}\ \textcolor{preprocessor}{>=}\ 600\textcolor{preprocessor}{)}\textcolor{preprocessor}{)}\ \textcolor{preprocessor}{||}\ \textcolor{preprocessor}{defined}\textcolor{preprocessor}{(}\textcolor{preprocessor}{\_\_ghs\_\_}\textcolor{preprocessor}{)}}
+\DoxyCodeLine{00217\ \ \ \ \ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{VZ\_FUNC\_SIG}\ \textcolor{preprocessor}{\_\_PRETTY\_FUNCTION\_\_}}
+\DoxyCodeLine{00218\ \ \ \ \ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{elif}\ \textcolor{preprocessor}{defined}\textcolor{preprocessor}{(}\textcolor{preprocessor}{\_\_DMC\_\_}\textcolor{preprocessor}{)}\ \textcolor{preprocessor}{\&\&}\ \textcolor{preprocessor}{(}\textcolor{preprocessor}{\_\_DMC\_\_}\ \textcolor{preprocessor}{>=}\ 0x810\textcolor{preprocessor}{)}}
+\DoxyCodeLine{00219\ \ \ \ \ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{VZ\_FUNC\_SIG}\ \textcolor{preprocessor}{\_\_PRETTY\_FUNCTION\_\_}}
+\DoxyCodeLine{00220\ \ \ \ \ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{elif}\ \textcolor{preprocessor}{(}\textcolor{preprocessor}{defined}\textcolor{preprocessor}{(}\textcolor{preprocessor}{\_\_FUNCSIG\_\_}\textcolor{preprocessor}{)}\ \textcolor{preprocessor}{||}\ \textcolor{preprocessor}{(}\_MSC\_VER\textcolor{preprocessor}{)}\textcolor{preprocessor}{)}}
+\DoxyCodeLine{00221\ \ \ \ \ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{VZ\_FUNC\_SIG}\ \textcolor{keyword}{\_\_FUNCSIG\_\_}}
+\DoxyCodeLine{00222\ \ \ \ \ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{elif}\ \textcolor{preprocessor}{(}\textcolor{preprocessor}{defined}\textcolor{preprocessor}{(}\textcolor{preprocessor}{\_\_INTEL\_COMPILER}\textcolor{preprocessor}{)}\ \textcolor{preprocessor}{\&\&}\ \textcolor{preprocessor}{(}\textcolor{preprocessor}{\_\_INTEL\_COMPILER}\ \textcolor{preprocessor}{>=}\ 600\textcolor{preprocessor}{)}\textcolor{preprocessor}{)}\ \textcolor{preprocessor}{||}\ \textcolor{preprocessor}{(}\textcolor{preprocessor}{defined}\textcolor{preprocessor}{(}\textcolor{preprocessor}{\_\_IBMCPP\_\_}\textcolor{preprocessor}{)}\ \textcolor{preprocessor}{\&\&}\ \textcolor{preprocessor}{(}\textcolor{preprocessor}{\_\_IBMCPP\_\_}\ \textcolor{preprocessor}{>=}\ 500\textcolor{preprocessor}{)}\textcolor{preprocessor}{)}}
+\DoxyCodeLine{00223\ \ \ \ \ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{VZ\_FUNC\_SIG}\ \textcolor{preprocessor}{\_\_FUNCTION\_\_}}
+\DoxyCodeLine{00224\ \ \ \ \ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{elif}\ \textcolor{preprocessor}{defined}\textcolor{preprocessor}{(}\textcolor{preprocessor}{\_\_BORLANDC\_\_}\textcolor{preprocessor}{)}\ \textcolor{preprocessor}{\&\&}\ \textcolor{preprocessor}{(}\textcolor{preprocessor}{\_\_BORLANDC\_\_}\ \textcolor{preprocessor}{>=}\ 0x550\textcolor{preprocessor}{)}}
+\DoxyCodeLine{00225\ \ \ \ \ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{VZ\_FUNC\_SIG}\ \textcolor{preprocessor}{\_\_FUNC\_\_}}
+\DoxyCodeLine{00226\ \ \ \ \ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{elif}\ \textcolor{preprocessor}{defined}\textcolor{preprocessor}{(}\textcolor{preprocessor}{\_\_STDC\_VERSION\_\_}\textcolor{preprocessor}{)}\ \textcolor{preprocessor}{\&\&}\ \textcolor{preprocessor}{(}\textcolor{preprocessor}{\_\_STDC\_VERSION\_\_}\ \textcolor{preprocessor}{>=}\ 199901\textcolor{preprocessor}{)}}
+\DoxyCodeLine{00227\ \ \ \ \ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{VZ\_FUNC\_SIG}\ \textcolor{preprocessor}{\_\_func\_\_}}
+\DoxyCodeLine{00228\ \ \ \ \ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{elif}\ \textcolor{preprocessor}{defined}\textcolor{preprocessor}{(}\textcolor{preprocessor}{\_\_cplusplus}\textcolor{preprocessor}{)}\ \textcolor{preprocessor}{\&\&}\ \textcolor{preprocessor}{(}\textcolor{preprocessor}{\_\_cplusplus}\ \textcolor{preprocessor}{>=}\ 201103\textcolor{preprocessor}{)}}
+\DoxyCodeLine{00229\ \ \ \ \ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{VZ\_FUNC\_SIG}\ \textcolor{preprocessor}{\_\_func\_\_}}
+\DoxyCodeLine{00230\ \ \ \ \ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{else}}
+\DoxyCodeLine{00231\ \ \ \ \ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{VZ\_FUNC\_SIG}\ \textcolor{stringliteral}{"{}VZ\_FUNC\_SIG\ unknown!"{}}}
+\DoxyCodeLine{00232\ \ \ \ \ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{endif}}
+\DoxyCodeLine{00233\ }
+\DoxyCodeLine{00234\ \ \ \ \ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{VZ\_PROFILE\_BEGIN\_SESSION}\textcolor{preprocessor}{(}\textcolor{preprocessor}{name}\textcolor{preprocessor}{,}\ \textcolor{preprocessor}{filepath}\textcolor{preprocessor}{)}\ \textcolor{preprocessor}{::}\textcolor{preprocessor}{Vesper}\textcolor{preprocessor}{::}\textcolor{preprocessor}{Instrumentor}\textcolor{preprocessor}{::}\textcolor{preprocessor}{Get}\textcolor{preprocessor}{(}\textcolor{preprocessor}{)}\textcolor{preprocessor}{.}\textcolor{preprocessor}{BeginSession}\textcolor{preprocessor}{(}\textcolor{preprocessor}{name}\textcolor{preprocessor}{,}\ \textcolor{preprocessor}{filepath}\textcolor{preprocessor}{)}}
+\DoxyCodeLine{00235\ \ \ \ \ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{VZ\_PROFILE\_END\_SESSION}\textcolor{preprocessor}{(}\textcolor{preprocessor}{)}\ \textcolor{preprocessor}{::}\textcolor{preprocessor}{Vesper}\textcolor{preprocessor}{::}\textcolor{preprocessor}{Instrumentor}\textcolor{preprocessor}{::}\textcolor{preprocessor}{Get}\textcolor{preprocessor}{(}\textcolor{preprocessor}{)}\textcolor{preprocessor}{.}\textcolor{preprocessor}{EndSession}\textcolor{preprocessor}{(}\textcolor{preprocessor}{)}}
+\DoxyCodeLine{00236\ \ \ \ \ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{VZ\_PROFILE\_SCOPE\_LINE2}\textcolor{preprocessor}{(}\textcolor{preprocessor}{name}\textcolor{preprocessor}{,}\ \textcolor{preprocessor}{line}\textcolor{preprocessor}{)}\ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ \textcolor{preprocessor}{fixedName}\textcolor{preprocessor}{\#\#}\textcolor{preprocessor}{line}\ \textcolor{preprocessor}{=}\ \textcolor{preprocessor}{InstrumentorUtils}\textcolor{preprocessor}{::}\textcolor{preprocessor}{CleanupOutputString}\textcolor{preprocessor}{(}\textcolor{preprocessor}{name}\textcolor{preprocessor}{,}\ \textcolor{stringliteral}{"{}\_\_cdecl\ "{}}\textcolor{preprocessor}{)}\textcolor{preprocessor}{;}}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{preprocessor}{::}\textcolor{preprocessor}{Vesper}\textcolor{preprocessor}{::}\textcolor{preprocessor}{InstrumentationTimer}\ \textcolor{preprocessor}{timer}\textcolor{preprocessor}{\#\#}\textcolor{preprocessor}{line}\textcolor{preprocessor}{(}\textcolor{preprocessor}{fixedName}\textcolor{preprocessor}{\#\#}\textcolor{preprocessor}{line}\textcolor{preprocessor}{.}\textcolor{preprocessor}{Data}\textcolor{preprocessor}{)}}
+\DoxyCodeLine{00238\ \ \ \ \ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{VZ\_PROFILE\_SCOPE\_LINE}\textcolor{preprocessor}{(}\textcolor{preprocessor}{name}\textcolor{preprocessor}{,}\ \textcolor{preprocessor}{line}\textcolor{preprocessor}{)}\ \doxymbox{\hyperlink{_instrumentor_8h_a9fe34090b32832e899c27e83680fc084}{VZ\_PROFILE\_SCOPE\_LINE2}}\textcolor{preprocessor}{(}\textcolor{preprocessor}{name}\textcolor{preprocessor}{,}\ \textcolor{preprocessor}{line}\textcolor{preprocessor}{)}}
+\DoxyCodeLine{00239\ \ \ \ \ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{VZ\_PROFILE\_SCOPE}\textcolor{preprocessor}{(}\textcolor{preprocessor}{name}\textcolor{preprocessor}{)}\ \doxymbox{\hyperlink{_instrumentor_8h_af5ced1c824cf778e06ff0099f2652397}{VZ\_PROFILE\_SCOPE\_LINE}}\textcolor{preprocessor}{(}\textcolor{preprocessor}{name}\textcolor{preprocessor}{,}\ \textcolor{preprocessor}{\_\_LINE\_\_}\textcolor{preprocessor}{)}}
+\DoxyCodeLine{00240\ \ \ \ \ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{VZ\_PROFILE\_FUNCTION}\textcolor{preprocessor}{(}\textcolor{preprocessor}{)}\ \doxymbox{\hyperlink{_instrumentor_8h_ae2376bed374f838d0047cf753f914f31}{VZ\_PROFILE\_SCOPE}}\textcolor{preprocessor}{(}\doxymbox{\hyperlink{_instrumentor_8h_a45f407f34ca8ce12d32fb3c651593426}{VZ\_FUNC\_SIG}}\textcolor{preprocessor}{)}}
+\DoxyCodeLine{00241\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{else}}
+\DoxyCodeLine{00242\ \ \ \ \ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{VZ\_PROFILE\_BEGIN\_SESSION}\textcolor{preprocessor}{(}\textcolor{preprocessor}{name}\textcolor{preprocessor}{,}\ \textcolor{preprocessor}{filepath}\textcolor{preprocessor}{)}}
+\DoxyCodeLine{00243\ \ \ \ \ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{VZ\_PROFILE\_END\_SESSION}\textcolor{preprocessor}{(}\textcolor{preprocessor}{)}}
+\DoxyCodeLine{00244\ \ \ \ \ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{VZ\_PROFILE\_FUNCTION}\textcolor{preprocessor}{(}\textcolor{preprocessor}{)}}
+\DoxyCodeLine{00245\ \ \ \ \ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{VZ\_PROFILE\_SCOPE}\textcolor{preprocessor}{(}\textcolor{preprocessor}{name}\textcolor{preprocessor}{)}}
+\DoxyCodeLine{00246\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{endif}}
 
 \end{DoxyCode}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.1.29)  29 JAN 2026 13:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.1.29)  4 FEB 2026 19:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -865,7 +865,13 @@ LaTeX Warning: Label `doc-func-members' multiply defined.
 LaTeX Warning: Label `doc-func-members' multiply defined.
 
 
+LaTeX Warning: Label `doc-enum-members' multiply defined.
+
+
 LaTeX Warning: Label `doc-func-members' multiply defined.
+
+
+LaTeX Warning: Label `doc-enum-members' multiply defined.
 
 
 LaTeX Warning: Label `doc-func-members' multiply defined.
@@ -1693,15 +1699,6 @@ LaTeX Warning: Label `doc-define-members' multiply defined.
 LaTeX Warning: Label `doc-define-members' multiply defined.
 
 
-LaTeX Warning: Label `doc-define-members' multiply defined.
-
-
-LaTeX Warning: Label `doc-define-members' multiply defined.
-
-
-LaTeX Warning: Label `doc-define-members' multiply defined.
-
-
 LaTeX Warning: Label `struct_vesper_1_1_particle_props' multiply defined.
 
 
@@ -1990,22 +1987,23 @@ File: uwasy.fd 2020/01/19 v2.4 Wasy-2 symbol font definitions
 \openout6 = `refman.toc'.
 
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 8.99994pt on input line 224.
+(Font)              scaled to size 8.99994pt on input line 223.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 6.29996pt on input line 224.
+(Font)              scaled to size 6.29996pt on input line 223.
  [1]
-[2]
+[2] [3]
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 7.19995pt on input line 224.
+(Font)              scaled to size 7.19995pt on input line 223.
 LaTeX Font Info:    Trying to load font information for T1+pcr on input line 22
-4.
+3.
  (C:\Users\dman1\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-)
-[3] [4] [5] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15] [16] [17] [18]
-[19] [20] [21] [22] [23] [24] [25] [26] [27] [28] [29] [30] [31] [32] [33]
-[34] [35] [36] [37] [38] [39] [40]
-Package hyperref Info: Option `pageanchor' set `true' on input line 227.
+) [4] [5] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15] [16] [17] [18] [19]
+[20] [21] [22] [23] [24] [25] [26] [27] [28] [29] [30] [31] [32] [33] [34]
+[35] [36] [37] [38] [39] [40
+
+]
+Package hyperref Info: Option `pageanchor' set `true' on input line 226.
  (index.tex
 Chapter 1.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
@@ -2032,728 +2030,792 @@ LaTeX Font Info:    Font shape `T1/phv/b/sl' will be
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 12.9599pt on input line 18.
 
-
-! LaTeX Error: Invalid UTF-8 byte "97.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.49 \item {\ttfamily Vesper/\+} —
-                                   Engine source (core, renderer, scene, edi...
-
-? 
 [1
 
+]) (todo.tex [2]
+Chapter 2.
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--9
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--13
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--17
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--21
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--25
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--33
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--37
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--45
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--49
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 49--53
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--57
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 57--61
+
+ []
+
+[3
 
 ]
+Underfull \hbox (badness 10000) in paragraph at lines 61--65
 
-! LaTeX Error: Invalid UTF-8 byte "97.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.51 \item {\ttfamily src/\+\+Vesper} —
-                                        engine code
-? 
-
-! LaTeX Error: Invalid UTF-8 byte "97.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.52 \item {\ttfamily vendor/\+} —
-                                   third-\/party libs (GLFW, Glad, Im\+Gui)
-? 
-
-! LaTeX Error: Invalid UTF-8 byte "97.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.54 \item {\ttfamily Vesper-\/\+Editor/\+} —
-                                              Editor build that hosts engine...
-
-? 
-
-! LaTeX Error: Invalid UTF-8 byte "97.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.55 \item {\ttfamily Sandbox/\+} —
-                                    Example application(s) that use the engine
-? 
-
-! LaTeX Error: Invalid UTF-8 byte "97.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.56 ... LICENSE-\/\+Hazel\+\_\+\+Apache2.\+txt} —
-                                                   repo metadata and licensing
-? 
-
-! LaTeX Error: Invalid UTF-8 byte "97.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.61 ...vesper_8h}{Vesper/\+src/\+\+Vesper.\+h}} —
-                                                   single include for engine...
-
-? 
-
-! LaTeX Error: Invalid UTF-8 byte "97.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.62 .../\+\+Scene/\+\texorpdfstring{$\ast$}{*}} —
-                                                   Scene, Entity, Components...
-
-? 
-
-! LaTeX Error: Invalid UTF-8 byte "97.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.63 ...ditor\+Layer.\texorpdfstring{$\ast$}{*}} —
-                                                   Editor integration layer ...
-
-? 
-[2] [3]
-
-! LaTeX Error: Invalid UTF-8 byte "A9.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.162 ...ense and is provided as-\/is. Copyright ©
-                                                   2025 by Damon S. Green II...
-
-? 
-
-! LaTeX Error: Invalid UTF-8 byte "A9.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.166 ...al code in this repository is Copyright ©
-                                                   2025 Damon S. Green II (n...
-
-? 
-
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 168.
+ []
 
 
-! LaTeX Error: Invalid UTF-8 byte "A9.
+Underfull \hbox (badness 10000) in paragraph at lines 65--69
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.169 Copyright ©
-                  The\+Cherno Modifications Copyright © 2025 Damon S. Green ...
+ []
 
-? 
 
-! LaTeX Error: Invalid UTF-8 byte "A9.
+Underfull \hbox (badness 10000) in paragraph at lines 69--73
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.169 ...t © The\+Cherno Modifications Copyright ©
-                                                   2025 Damon S. Green II (n...
+ []
 
-? 
 ) [4]
-Chapter 2.
+Chapter 3.
 (dirs.tex [5
 
 ] [6] [7] [8] [9] [10] [11] [12]) [13] [14
 
 ]
-Chapter 3.
+Chapter 4.
 (namespaces.tex) [15] [16
 
 ]
-Chapter 4.
+Chapter 5.
 (hierarchy.tex [17] [18]) [19] [20
 
 ]
-Chapter 5.
-(annotated.tex [21]) [22]
 Chapter 6.
-(files.tex [23
-
-] [24]) [25] [26
+(annotated.tex [21] [22]) [23] [24
 
 ]
 Chapter 7.
-(dir_86be3d53a761b63e717fe0fc39f1fc01.tex)
-(dir_874f7433d85361bc61e9673c64ac7f2e.tex)
-(dir_2c58512a1c873ffd97abe3abaf061669.tex)
-(dir_ed3d28e9a87a71b2231bd68a543d9725.tex [27])
-(dir_bfd67956845ab3f904d9a03031253af7.tex)
-(dir_3806445d0f03bf4c66e1f37ba7766ea0.tex)
-(dir_6341ab638f3d4581f3d57fb881fe24d2.tex)
-(dir_ee3dd290b6b0ff8b5dd2fd434392f101.tex)
-(dir_e29c0189c4a3ad0cdb274ea7a05f85ef.tex [28])
-(dir_1955f52c697ec8b86685c7f55b430fcb.tex)
-(dir_a60be54d51d316223e5b67c2ea1839e3.tex)
-(dir_de8939028d2fcda6d7d967119008d683.tex)
-(dir_713de28b99fcc699e494355313548264.tex [29])
-(dir_b5dff3a4d74b0c344bce921ec49f2ea2.tex)
-(dir_5c6ed57e8d58891ae6c5bb1bb326a89c.tex)
-(dir_ecadf6c4bda97cc5301ffda374b0d1b8.tex)
-(dir_2d24e2401af5a1305b3d3f04e2d6eec4.tex [30])
-(dir_cd684de9192fc928b31a6accb18bd515.tex)
-(dir_2236d3bd0084f83a588f199af7b0ce30.tex)
-(dir_4d1c570d2521a219f8cf35a277f2bedf.tex)
-(dir_f4278d3fa8264c1197cb12764675e7c3.tex) [31] [32
+(files.tex [25] [26]) [27] [28
 
 ]
 Chapter 8.
+(dir_86be3d53a761b63e717fe0fc39f1fc01.tex
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 8.09995pt on input line 9.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 9.
+LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
+(Font)              scaled to size 8.09995pt on input line 9.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 19.
+LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
+(Font)              scaled to size 6.29996pt on input line 19.
+)
+(dir_874f7433d85361bc61e9673c64ac7f2e.tex [29])
+(dir_2c58512a1c873ffd97abe3abaf061669.tex)
+(dir_49e56c817e5e54854c35e136979f97ca.tex)
+(dir_ed3d28e9a87a71b2231bd68a543d9725.tex)
+(dir_bfd67956845ab3f904d9a03031253af7.tex)
+(dir_3806445d0f03bf4c66e1f37ba7766ea0.tex)
+(dir_6341ab638f3d4581f3d57fb881fe24d2.tex [30])
+(dir_ee3dd290b6b0ff8b5dd2fd434392f101.tex)
+(dir_e29c0189c4a3ad0cdb274ea7a05f85ef.tex)
+(dir_1955f52c697ec8b86685c7f55b430fcb.tex)
+(dir_a60be54d51d316223e5b67c2ea1839e3.tex [31])
+(dir_de8939028d2fcda6d7d967119008d683.tex)
+(dir_713de28b99fcc699e494355313548264.tex)
+(dir_b5dff3a4d74b0c344bce921ec49f2ea2.tex [32])
+(dir_5c6ed57e8d58891ae6c5bb1bb326a89c.tex)
+(dir_ecadf6c4bda97cc5301ffda374b0d1b8.tex)
+(dir_2d24e2401af5a1305b3d3f04e2d6eec4.tex)
+(dir_cd684de9192fc928b31a6accb18bd515.tex)
+(dir_2236d3bd0084f83a588f199af7b0ce30.tex [33])
+(dir_4d1c570d2521a219f8cf35a277f2bedf.tex)
+(dir_f4278d3fa8264c1197cb12764675e7c3.tex) [34]
+Chapter 9.
 (namespace_instrumentor_utils.tex
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 10.79993pt on input line 15.
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <8> not available
 (Font)              Font shape `T1/pcr/m/sl' tried instead on input line 40.
- [33]) (namespace_vesper.tex
-LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 8.09995pt on input line 27.
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 27.
-LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 8.09995pt on input line 27.
- [34] [35]
-[36]
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 299.
-LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 6.29996pt on input line 299.
- [37] [38] [39] [40] [41]
+ [35
+
+]) (namespace_vesper.tex [36] [37]
+[38] [39] [40] [41] [42]
+LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
+(Font)              scaled to size 8.99994pt on input line 617.
+
+Underfull \hbox (badness 10000) detected at line 617
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 636
+[][][]
+ []
+
+[43] [44] [45]
+Underfull \hbox (badness 10000) detected at line 1002
+[][][]
+ []
+
+[46]
+Underfull \hbox (badness 10000) detected at line 1035
+[][][]
+ []
+
+[47]
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <7> not available
-(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 1027.
- [42] [43] [44] [45] [46] [47]
-Overfull \hbox (40.5148pt too wide) in paragraph at lines 1463--1464
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 1137.
+ [48] [49] [50] [51]
+Underfull \hbox (badness 10000) detected at line 1455
+[][][]
+ []
+
+[52]
+Overfull \hbox (40.5148pt too wide) in paragraph at lines 1589--1590
 []\T1/phv/m/n/10 Referenced by [], [], [],
  []
 
 
-Overfull \hbox (73.95813pt too wide) in paragraph at lines 1463--1464
+Overfull \hbox (73.95813pt too wide) in paragraph at lines 1589--1590
 []\T1/phv/m/n/10 , [], [],
  []
 
 
-Overfull \hbox (136.75919pt too wide) in paragraph at lines 1463--1464
+Overfull \hbox (136.75919pt too wide) in paragraph at lines 1589--1590
 []\T1/phv/m/n/10 , [], [],
  []
 
 
-Overfull \hbox (93.21921pt too wide) in paragraph at lines 1463--1464
+Overfull \hbox (93.21921pt too wide) in paragraph at lines 1589--1590
 []\T1/phv/m/n/10 , [], [], [],
  []
 
 
-Overfull \hbox (95.72993pt too wide) in paragraph at lines 1463--1464
+Overfull \hbox (95.72993pt too wide) in paragraph at lines 1589--1590
 []\T1/phv/m/n/10 , [], [], [],
  []
 
-) (namespace_vesper_1_1_color.tex [48] [49]) (namespace_vesper_1_1_math.tex
-[50] [51]) (namespace_vesper_1_1_random.tex [52] [53]
+) (namespace_vesper_1_1_color.tex [53] [54] [55] [56])
+(namespace_vesper_1_1_key.tex [57] [58] [59] [60] [61] [62])
+(namespace_vesper_1_1_math.tex [63]) (namespace_vesper_1_1_mouse.tex [64])
+(namespace_vesper_1_1_random.tex [65] [66]
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 7.19995pt on input line 219.
- [54] [55])
-(namespace_y_a_m_l.tex [56]) [57] [58
+ [67] [68] [69])
+(namespace_y_a_m_l.tex [70]) [71] [72
 
 ]
-Chapter 9.
+Chapter 10.
 (class_vesper_1_1_application.tex <./class_vesper_1_1_application.pdf>
-<class_vesper_1_1_application.pdf, id=11450, 501.875pt x 142.5325pt>
+<class_vesper_1_1_application.pdf, id=12187, 501.875pt x 142.5325pt>
 File: class_vesper_1_1_application.pdf Graphic file (type pdf)
 <use class_vesper_1_1_application.pdf>
 Package pdftex.def Info: class_vesper_1_1_application.pdf  used on input line 1
-0.
+5.
 (pdftex.def)             Requested size: 200.3712pt x 56.9055pt.
- [59]
-Underfull \hbox (badness 2418) in paragraph at lines 101--102
+ [73]
+[74]
+Underfull \hbox (badness 2418) in paragraph at lines 122--123
 []\T1/phv/m/n/10 References [], [], [], [], and
  []
 
 
-Underfull \hbox (badness 2452) in paragraph at lines 158--159
+Underfull \hbox (badness 2452) in paragraph at lines 187--188
 []\T1/phv/m/n/10 Referenced by [], [], [],
  []
 
-[60] [61]
-Underfull \hbox (badness 1038) in paragraph at lines 269--270
+[75] [76]
+Underfull \hbox (badness 1038) in paragraph at lines 318--319
 []\T1/phv/m/n/10 References [], [], [],
  []
 
-[62]
-Underfull \hbox (badness 10000) in paragraph at lines 365--366
+[77]
+Underfull \hbox (badness 10000) in paragraph at lines 430--431
 []\T1/phv/m/n/10 References [], [], [], [],
  []
 
-[63]) (class_vesper_1_1_app_render_event.tex <./class_vesper_1_1_app_render_eve
+[78]) (class_vesper_1_1_app_render_event.tex <./class_vesper_1_1_app_render_eve
 nt.pdf>
-<class_vesper_1_1_app_render_event.pdf, id=11813, 501.875pt x 246.9225pt>
+<class_vesper_1_1_app_render_event.pdf, id=12580, 501.875pt x 246.9225pt>
 File: class_vesper_1_1_app_render_event.pdf Graphic file (type pdf)
 <use class_vesper_1_1_app_render_event.pdf>
 Package pdftex.def Info: class_vesper_1_1_app_render_event.pdf  used on input l
-ine 10.
+ine 15.
 (pdftex.def)             Requested size: 115.65855pt x 56.9055pt.
- [64]) (class_vesper_1_1_app_tick_event.tex <./class_vesper_1_1_app_tick_event.
-pdf>
-<class_vesper_1_1_app_tick_event.pdf, id=11858, 501.875pt x 277.035pt>
+ [79]) (class_vesper_1_1_app_tick_event.tex [80] <./class_vesper_1_1_app_tick_e
+vent.pdf>
+<class_vesper_1_1_app_tick_event.pdf, id=12638, 501.875pt x 277.035pt>
 File: class_vesper_1_1_app_tick_event.pdf Graphic file (type pdf)
 <use class_vesper_1_1_app_tick_event.pdf>
 Package pdftex.def Info: class_vesper_1_1_app_tick_event.pdf  used on input lin
-e 10.
+e 15.
 (pdftex.def)             Requested size: 103.08414pt x 56.9055pt.
- [65]) (class_vesper_1_1_app_update_event.tex <./class_vesper_1_1_app_update_ev
+ [81]) (class_vesper_1_1_app_update_event.tex <./class_vesper_1_1_app_update_ev
 ent.pdf>
-<class_vesper_1_1_app_update_event.pdf, id=11905, 501.875pt x 249.93375pt>
+<class_vesper_1_1_app_update_event.pdf, id=12684, 501.875pt x 249.93375pt>
 File: class_vesper_1_1_app_update_event.pdf Graphic file (type pdf)
 <use class_vesper_1_1_app_update_event.pdf>
 Package pdftex.def Info: class_vesper_1_1_app_update_event.pdf  used on input l
-ine 10.
+ine 15.
 (pdftex.def)             Requested size: 114.2648pt x 56.9055pt.
-) (struct_vesper_1_1_buffer_element.tex [66] [67])
-(class_vesper_1_1_buffer_layout.tex [68] [69] [70])
+ [82]) (struct_vesper_1_1_buffer_element.tex [83]
+[84]) (class_vesper_1_1_buffer_layout.tex [85] [86] [87])
 (class_vesper_1_1_camera.tex <./class_vesper_1_1_camera.pdf>
-<class_vesper_1_1_camera.pdf, id=12193, 501.875pt x 137.51375pt>
+<class_vesper_1_1_camera.pdf, id=13004, 501.875pt x 137.51375pt>
 File: class_vesper_1_1_camera.pdf Graphic file (type pdf)
 <use class_vesper_1_1_camera.pdf>
 Package pdftex.def Info: class_vesper_1_1_camera.pdf  used on input line 10.
 (pdftex.def)             Requested size: 207.68457pt x 56.9055pt.
- [71])
-(struct_vesper_1_1_camera_component.tex [72])
-(struct_y_a_m_l_1_1convert_3_01glm_1_1vec2_01_4.tex [73])
-(struct_y_a_m_l_1_1convert_3_01glm_1_1vec3_01_4.tex [74
+ [88])
+(struct_vesper_1_1_camera_component.tex [89])
+(struct_y_a_m_l_1_1convert_3_01glm_1_1vec2_01_4.tex [90])
+(struct_y_a_m_l_1_1convert_3_01glm_1_1vec3_01_4.tex [91
 pdfTeX warning (ext4): destination with the same identifier (name{struct_y_a_m_
 l_1_1convert_3_01glm_1_1vec2_01_4_a5f4cd190c09075319d138\ETC.}) has been alread
 y used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.18 \doxysubsection
-                    {Member Function Documentation}
+l.8 s
+     tatic bool \doxymbox{\hyperlink{struct_y_a_m_l_1_1convert_3_01glm_1_1ve...
+
 pdfTeX warning (ext4): destination with the same identifier (name{struct_y_a_m_
 l_1_1convert_3_01glm_1_1vec2_01_4_a03c614791e8dcc9ff30dc\ETC.}) has been alread
 y used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.18 \doxysubsection
-                    {Member Function Documentation}] [75
+l.8 s
+     tatic bool \doxymbox{\hyperlink{struct_y_a_m_l_1_1convert_3_01glm_1_1ve...
+] [92
 pdfTeX warning (ext4): destination with the same identifier (name{struct_y_a_m_
 l_1_1convert_3_01glm_1_1vec3_01_4_a728b087127b10d0ece4ae\ETC.}) has been alread
 y used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.97 V
-      esper/\+src/\+\+Vesper/\+\+Scene/\+\doxymbox{\hyperlink{_scene_seriali...
-
+l.70 ... \ \ \ node.SetStyle(EmitterStyle::Flow);}
+                                                  ]
 pdfTeX warning (ext4): destination with the same identifier (name{struct_y_a_m_
 l_1_1convert_3_01glm_1_1vec3_01_4_a8ca152d02300c3f9a6b81\ETC.}) has been alread
 y used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.97 V
-      esper/\+src/\+\+Vesper/\+\+Scene/\+\doxymbox{\hyperlink{_scene_seriali...
-]) (struct_y_a_m_l_1_1convert_3_01glm_1_1vec4_01_4.tex [76
+<to be read again> 
+                   \relax 
+l.75 ...c3_01_4_a8ca152d02300c3f9a6b8176a72452fff}
+                                                  \index{YAML::convert$<$ gl...
+) (struct_y_a_m_l_1_1convert_3_01glm_1_1vec4_01_4.tex [93
 pdfTeX warning (ext4): destination with the same identifier (name{struct_y_a_m_
 l_1_1convert_3_01glm_1_1vec4_01_4_a935e31dad7403fdefc609\ETC.}) has been alread
 y used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.69 ...\ \ \ \ \ \ \ \ \ node.push\_back(rhs.x);}
-                                                  ]
-pdfTeX warning (ext4): destination with the same identifier (name{struct_y_a_m_
-l_1_1convert_3_01glm_1_1vec4_01_4_a1d68c0c3afc6897b05686\ETC.}) has been alread
-y used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.78 ...c4_01_4_a1d68c0c3afc6897b056868c8ba516595}
-                                                  \index{YAML::convert$<$ gl...
-) (class_vesper_1_1_editor_camera.tex <./class_vesper_1_1_editor_camera.pdf>
-<class_vesper_1_1_editor_camera.pdf, id=12324, 501.875pt x 279.0425pt>
+l.51 ...[0].as<\textcolor{keywordtype}{float}>();}
+                                                  ])
+(class_vesper_1_1_editor_camera.tex <./class_vesper_1_1_editor_camera.pdf>
+<class_vesper_1_1_editor_camera.pdf, id=13134, 501.875pt x 279.0425pt>
 File: class_vesper_1_1_editor_camera.pdf Graphic file (type pdf)
 <use class_vesper_1_1_editor_camera.pdf>
 Package pdftex.def Info: class_vesper_1_1_editor_camera.pdf  used on input line
  10.
 (pdftex.def)             Requested size: 102.34897pt x 56.9055pt.
 
-[77] [78] [79] [80] [81] [82] [83] [84]) (class_vesper_1_1_editor_layer.tex <./
-class_vesper_1_1_editor_layer.pdf>
-<class_vesper_1_1_editor_layer.pdf, id=12827, 501.875pt x 302.12875pt>
+[94
+pdfTeX warning (ext4): destination with the same identifier (name{struct_y_a_m_
+l_1_1convert_3_01glm_1_1vec4_01_4_a1d68c0c3afc6897b05686\ETC.}) has been alread
+y used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.24 f
+      loat \doxymbox{\hyperlink{class_vesper_1_1_editor_camera_a41a6e0bcd333...
+] [95] [96] [97] [98]
+Overfull \hbox (63.36647pt too wide) in paragraph at lines 442--443
+[]\T1/phv/m/n/10 References [], [], [], [],
+ []
+
+[99] [100] [101]) (class_vesper_1_1_editor_layer.tex <./class_vesper_1_1_editor
+_layer.pdf>
+<class_vesper_1_1_editor_layer.pdf, id=13641, 501.875pt x 302.12875pt>
 File: class_vesper_1_1_editor_layer.pdf Graphic file (type pdf)
 <use class_vesper_1_1_editor_layer.pdf>
 Package pdftex.def Info: class_vesper_1_1_editor_layer.pdf  used on input line 
 10.
 (pdftex.def)             Requested size: 94.5225pt x 56.9055pt.
- [85] [86] [87] [88]
-Overfull \hbox (23.55554pt too wide) in paragraph at lines 293--293
+ [102] [103] [104] [105]
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 297--297
 []\T1/pcr/m/n/7 ([]"../../Vesper-Editor/assets/textures/sheets/craftpix/CursedL
 and/Tiled_files/Objects.png"[]);  
  []
 
-[89] [90]
-Overfull \hbox (39.92989pt too wide) in paragraph at lines 465--466
+[106] [107]
+Overfull \hbox (39.92989pt too wide) in paragraph at lines 469--470
 []\T1/phv/m/n/10 References [], [], [],
  []
 
-[91] [92] [93]
-Overfull \hbox (110.65186pt too wide) in paragraph at lines 758--759
+[108] [109] [110] [111]
+Overfull \hbox (110.65186pt too wide) in paragraph at lines 779--780
 []\T1/phv/m/n/10 References [], [], [], [],
  []
 
 
-Underfull \hbox (badness 3219) in paragraph at lines 758--759
-[]\T1/phv/m/n/10 , [], [], [], [], [],
+Underfull \hbox (badness 10000) in paragraph at lines 779--780
+[]\T1/phv/m/n/10 , [], [], [],
  []
 
-[94]
-Overfull \hbox (38.19298pt too wide) in paragraph at lines 822--823
+
+Overfull \hbox (18.69069pt too wide) in paragraph at lines 779--780
+[]\T1/phv/m/n/10 , [], [], [], [], [], [], [],
+ []
+
+[112]
+Overfull \hbox (38.19298pt too wide) in paragraph at lines 843--844
 []\T1/phv/m/n/10 References [], [], [],
  []
 
-[95] [96] [97]
-Overfull \hbox (32.27083pt too wide) in paragraph at lines 1033--1034
+
+Underfull \hbox (badness 10000) in paragraph at lines 843--844
+[]\T1/phv/m/n/10 , [], [], [], [], and
+ []
+
+[113] [114] [115]
+Underfull \hbox (badness 3547) in paragraph at lines 1063--1064
 []\T1/phv/m/n/10 References [], [], [],
  []
 
-[98] [99] [100] [101] [102] [103]) (class_vesper_1_1_entity.tex [104] [105]
-[106] [107]) (class_vesper_1_1_event.tex <./class_vesper_1_1_event.pdf>
-<class_vesper_1_1_event.pdf, id=14375, 501.875pt x 546.04pt>
+
+Overfull \hbox (94.87715pt too wide) in paragraph at lines 1063--1064
+[]\T1/phv/m/n/10 , [], [], [], [],
+ []
+
+[116] [117] [118] [119] [120] [121]) (class_vesper_1_1_entity.tex [122]
+[123]
+Underfull \hbox (badness 10000) detected at line 138
+[][][]
+ []
+
+[124]
+Underfull \hbox (badness 10000) detected at line 172
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 196
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 215
+[][][]
+ []
+
+[125]
+Underfull \hbox (badness 10000) detected at line 233
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 264
+[][][]
+ []
+
+[126]
+Underfull \hbox (badness 10000) detected at line 291
+[][][]
+ []
+
+[127]) (class_vesper_1_1_event.tex <./class_vesper_1_1_event.pdf>
+<class_vesper_1_1_event.pdf, id=15239, 501.875pt x 546.04pt>
 File: class_vesper_1_1_event.pdf Graphic file (type pdf)
 <use class_vesper_1_1_event.pdf>
-Package pdftex.def Info: class_vesper_1_1_event.pdf  used on input line 10.
+Package pdftex.def Info: class_vesper_1_1_event.pdf  used on input line 15.
 (pdftex.def)             Requested size: 261.51256pt x 284.52756pt.
-
-[108]
-Overfull \hbox (83.98636pt too wide) in paragraph at lines 109--110
+ [128]
+[129]
+Overfull \hbox (83.98636pt too wide) in paragraph at lines 137--138
 []\T1/phv/m/n/10 Reimplemented in [], [], [], [],
  []
 
 
-Overfull \hbox (64.62766pt too wide) in paragraph at lines 109--110
+Overfull \hbox (64.62766pt too wide) in paragraph at lines 137--138
 []\T1/phv/m/n/10 , [], [], and []. 
  []
 
-[109]) (class_vesper_1_1_event_dispatcher.tex [110])
-(class_vesper_1_1_file_dialogs.tex [111] [112])
-(class_vesper_1_1_file_system.tex [113] [114])
-(class_vesper_1_1_framebuffer.tex [115] <./class_vesper_1_1_framebuffer.pdf>
-<class_vesper_1_1_framebuffer.pdf, id=14693, 501.875pt x 218.8175pt>
+[130]) (class_vesper_1_1_event_dispatcher.tex [131] [132]
+Underfull \hbox (badness 10000) detected at line 109
+[][][]
+ []
+
+) (class_vesper_1_1_file_dialogs.tex [133]
+Underfull \hbox (badness 10000) detected at line 42
+[][][]
+ []
+
+[134]
+Underfull \hbox (badness 10000) detected at line 80
+[][][]
+ []
+
+) (class_vesper_1_1_file_system.tex [135] [136])
+(class_vesper_1_1_framebuffer.tex [137] <./class_vesper_1_1_framebuffer.pdf>
+<class_vesper_1_1_framebuffer.pdf, id=15574, 501.875pt x 218.8175pt>
 File: class_vesper_1_1_framebuffer.pdf Graphic file (type pdf)
 <use class_vesper_1_1_framebuffer.pdf>
 Package pdftex.def Info: class_vesper_1_1_framebuffer.pdf  used on input line 1
-0.
+5.
 (pdftex.def)             Requested size: 130.51505pt x 56.9055pt.
 
-[116]
-Underfull \hbox (badness 10000) in paragraph at lines 97--98
+[138]
+Underfull \hbox (badness 10000) detected at line 82
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 121--122
 \T1/pcr/m/n/8 virtual const [] & Vesper::[][]Framebuffer::[][]Get[]Specificatio
 n () const [pure
  []
 
-) (class_vesper_1_1_graphics_context.tex <./class_vesper_1_1_graphics_context.p
-df>
-<class_vesper_1_1_graphics_context.pdf, id=14777, 501.875pt x 250.9375pt>
+[139]) (class_vesper_1_1_graphics_context.tex <./class_vesper_1_1_graphics_cont
+ext.pdf>
+<class_vesper_1_1_graphics_context.pdf, id=15667, 501.875pt x 250.9375pt>
 File: class_vesper_1_1_graphics_context.pdf Graphic file (type pdf)
 <use class_vesper_1_1_graphics_context.pdf>
 Package pdftex.def Info: class_vesper_1_1_graphics_context.pdf  used on input l
-ine 10.
+ine 15.
 (pdftex.def)             Requested size: 113.80533pt x 56.9055pt.
- [117]) (class_vesper_1_1_im_gui_layer.tex <./class_vesper_1_1_im_gui_layer.pdf
+ [140]) (class_vesper_1_1_im_gui_layer.tex <./class_vesper_1_1_im_gui_layer.pdf
 >
-<class_vesper_1_1_im_gui_layer.pdf, id=14809, 501.875pt x 339.2675pt>
+<class_vesper_1_1_im_gui_layer.pdf, id=15701, 501.875pt x 339.2675pt>
 File: class_vesper_1_1_im_gui_layer.pdf Graphic file (type pdf)
 <use class_vesper_1_1_im_gui_layer.pdf>
 Package pdftex.def Info: class_vesper_1_1_im_gui_layer.pdf  used on input line 
 10.
 (pdftex.def)             Requested size: 126.26486pt x 85.35826pt.
- [118] [119]
+ [141] [142]
 Overfull \hbox (92.35504pt too wide) in paragraph at lines 156--157
 []\T1/phv/m/n/10 References [], [], [], and []. 
  []
 
-[120] [121]
-Overfull \hbox (71.26866pt too wide) in paragraph at lines 283--284
+[143] [144]
+Overfull \hbox (71.26866pt too wide) in paragraph at lines 300--301
 []\T1/phv/m/n/10 References [], [], [], [],
  []
 
-[122]) (class_vesper_1_1_index_buffer.tex <./class_vesper_1_1_index_buffer.pdf>
-<class_vesper_1_1_index_buffer.pdf, id=15023, 501.875pt x 224.84pt>
+[145]) (class_vesper_1_1_index_buffer.tex [146] <./class_vesper_1_1_index_buffe
+r.pdf>
+<class_vesper_1_1_index_buffer.pdf, id=15919, 501.875pt x 224.84pt>
 File: class_vesper_1_1_index_buffer.pdf Graphic file (type pdf)
 <use class_vesper_1_1_index_buffer.pdf>
 Package pdftex.def Info: class_vesper_1_1_index_buffer.pdf  used on input line 
-10.
+15.
 (pdftex.def)             Requested size: 127.02301pt x 56.9055pt.
-[123] [124]) (class_vesper_1_1_input.tex [125]
-Overfull \hbox (61.51125pt too wide) in paragraph at lines 122--123
+ [147]) (class_vesper_1_1_input.tex [148] [149]
+Underfull \hbox (badness 10000) detected at line 136
+[][][]
+ []
+
+
+Overfull \hbox (61.51125pt too wide) in paragraph at lines 154--155
 []\T1/phv/m/n/10 Referenced by [], [], [],
  []
 
-[126]) (class_vesper_1_1_instrumentation_timer.tex [127]
+[150]
+Underfull \hbox (badness 10000) detected at line 171
+[][][]
+ []
+
+) (class_vesper_1_1_instrumentation_timer.tex [151]
 Underfull \hbox (badness 10000) in paragraph at lines 99--100
 \T1/pcr/m/n/8 std::[]chrono::[]time[]_[]point$\OML/cmm/m/it/8 <$\T1/pcr/m/n/8 s
 td::[]chrono::[]high[]_[]resolution[]_[]clock$\OML/cmm/m/it/8 >$ \T1/pcr/m/n/8 
 Vesper::[][]Instrumentation[]Timer::[]m[]_[][]
  []
 
-) (class_vesper_1_1_instrumentor.tex [128] [129] [130])
+) (class_vesper_1_1_instrumentor.tex [152] [153] [154])
 (class_vesper_1_1_key_event.tex <./class_vesper_1_1_key_event.pdf>
-<class_vesper_1_1_key_event.pdf, id=15391, 501.875pt x 116.435pt>
+<class_vesper_1_1_key_event.pdf, id=16287, 501.875pt x 116.435pt>
 File: class_vesper_1_1_key_event.pdf Graphic file (type pdf)
 <use class_vesper_1_1_key_event.pdf>
-Package pdftex.def Info: class_vesper_1_1_key_event.pdf  used on input line 10.
+Package pdftex.def Info: class_vesper_1_1_key_event.pdf  used on input line 15.
 
 (pdftex.def)             Requested size: 367.93558pt x 85.35826pt.
- [131]
-Overfull \hbox (21.75227pt too wide) in paragraph at lines 110--111
+ [155]
+[156]
+Overfull \hbox (21.75227pt too wide) in paragraph at lines 131--132
 []\T1/phv/m/n/10 Referenced by [], [], [], [],
  []
 
-) (class_vesper_1_1_key_pressed_event.tex [132] <./class_vesper_1_1_key_pressed
-_event.pdf>
-<class_vesper_1_1_key_pressed_event.pdf, id=15477, 501.875pt x 361.35pt>
+) (class_vesper_1_1_key_pressed_event.tex <./class_vesper_1_1_key_pressed_event
+.pdf>
+<class_vesper_1_1_key_pressed_event.pdf, id=16374, 501.875pt x 361.35pt>
 File: class_vesper_1_1_key_pressed_event.pdf Graphic file (type pdf)
 <use class_vesper_1_1_key_pressed_event.pdf>
 Package pdftex.def Info: class_vesper_1_1_key_pressed_event.pdf  used on input 
-line 10.
+line 15.
 (pdftex.def)             Requested size: 118.55327pt x 85.35826pt.
- [133]) (class_vesper_1_1_key_released_event.tex [134] <./class_vesper_1_1_key_
-released_event.pdf>
-<class_vesper_1_1_key_released_event.pdf, id=15577, 501.875pt x 348.30125pt>
+ [157] [158]) (class_vesper_1_1_key_released_event.tex [159] <./class_vesper_1_
+1_key_released_event.pdf>
+<class_vesper_1_1_key_released_event.pdf, id=16495, 501.875pt x 348.30125pt>
 File: class_vesper_1_1_key_released_event.pdf Graphic file (type pdf)
 <use class_vesper_1_1_key_released_event.pdf>
 Package pdftex.def Info: class_vesper_1_1_key_released_event.pdf  used on input
- line 10.
+ line 15.
 (pdftex.def)             Requested size: 122.9949pt x 85.35826pt.
- [135]) (class_vesper_1_1_key_typed_event.tex <./class_vesper_1_1_key_typed_eve
-nt.pdf>
-<class_vesper_1_1_key_typed_event.pdf, id=15641, 501.875pt x 386.44376pt>
+ [160]) (class_vesper_1_1_key_typed_event.tex
+[161] <./class_vesper_1_1_key_typed_event.pdf>
+<class_vesper_1_1_key_typed_event.pdf, id=16578, 501.875pt x 386.44376pt>
 File: class_vesper_1_1_key_typed_event.pdf Graphic file (type pdf)
 <use class_vesper_1_1_key_typed_event.pdf>
 Package pdftex.def Info: class_vesper_1_1_key_typed_event.pdf  used on input li
-ne 10.
+ne 15.
 (pdftex.def)             Requested size: 110.84933pt x 85.35826pt.
- [136]) (class_vesper_1_1_layer.tex
-[137] <./class_vesper_1_1_layer.pdf>
-<class_vesper_1_1_layer.pdf, id=15717, 501.875pt x 169.63374pt>
+ [162])
+(class_vesper_1_1_layer.tex <./class_vesper_1_1_layer.pdf>
+<class_vesper_1_1_layer.pdf, id=16650, 501.875pt x 169.63374pt>
 File: class_vesper_1_1_layer.pdf Graphic file (type pdf)
 <use class_vesper_1_1_layer.pdf>
-Package pdftex.def Info: class_vesper_1_1_layer.pdf  used on input line 10.
+Package pdftex.def Info: class_vesper_1_1_layer.pdf  used on input line 15.
 (pdftex.def)             Requested size: 252.5374pt x 85.35826pt.
- [138] [139])
-(class_vesper_1_1_layer_stack.tex [140] [141]) (class_vesper_1_1_log.tex
-[142] [143]) (class_vesper_1_1_mouse_button_event.tex <./class_vesper_1_1_mouse
-_button_event.pdf>
-<class_vesper_1_1_mouse_button_event.pdf, id=15993, 501.875pt x 134.5025pt>
+ [163] [164] [165]
+Underfull \hbox (badness 10000) detected at line 209
+[][][]
+ []
+
+[166]) (class_vesper_1_1_layer_stack.tex [167] [168] [169])
+(class_vesper_1_1_log.tex [170] [171]) (class_vesper_1_1_mouse_button_event.tex
+ <./class_vesper_1_1_mouse_button_event.pdf>
+<class_vesper_1_1_mouse_button_event.pdf, id=16968, 501.875pt x 134.5025pt>
 File: class_vesper_1_1_mouse_button_event.pdf Graphic file (type pdf)
 <use class_vesper_1_1_mouse_button_event.pdf>
 Package pdftex.def Info: class_vesper_1_1_mouse_button_event.pdf  used on input
- line 10.
+ line 15.
 (pdftex.def)             Requested size: 318.50328pt x 85.35826pt.
- [144]
-Overfull \hbox (161.53389pt too wide) in paragraph at lines 72--73
+ [172] [173]
+Overfull \hbox (161.53389pt too wide) in paragraph at lines 89--90
 []\T1/phv/m/n/10 Referenced by [], and []. 
  []
 
 ) (class_vesper_1_1_mouse_button_pressed_event.tex <./class_vesper_1_1_mouse_bu
 tton_pressed_event.pdf>
-<class_vesper_1_1_mouse_button_pressed_event.pdf, id=16059, 501.875pt x 277.035
+<class_vesper_1_1_mouse_button_pressed_event.pdf, id=17050, 501.875pt x 277.035
 pt>
 File: class_vesper_1_1_mouse_button_pressed_event.pdf Graphic file (type pdf)
 <use class_vesper_1_1_mouse_button_pressed_event.pdf>
 Package pdftex.def Info: class_vesper_1_1_mouse_button_pressed_event.pdf  used 
-on input line 10.
+on input line 15.
 (pdftex.def)             Requested size: 154.63005pt x 85.35826pt.
- [145] [146])
+ [174] [175])
 (class_vesper_1_1_mouse_button_released_event.tex <./class_vesper_1_1_mouse_but
 ton_released_event.pdf>
-<class_vesper_1_1_mouse_button_released_event.pdf, id=16140, 501.875pt x 269.00
+<class_vesper_1_1_mouse_button_released_event.pdf, id=17137, 501.875pt x 269.00
 5pt>
 File: class_vesper_1_1_mouse_button_released_event.pdf Graphic file (type pdf)
 <use class_vesper_1_1_mouse_button_released_event.pdf>
 Package pdftex.def Info: class_vesper_1_1_mouse_button_released_event.pdf  used
- on input line 10.
+ on input line 15.
 (pdftex.def)             Requested size: 159.2478pt x 85.35826pt.
- [147]) (class_vesper_1_1_mouse_moved_event.tex <./class_vesper_1_1_mouse_moved
-_event.pdf>
-<class_vesper_1_1_mouse_moved_event.pdf, id=16201, 501.875pt x 228.855pt>
+ [176] [177]) (class_vesper_1_1_mouse_moved_event.tex <./class_vesper_1_1_mouse
+_moved_event.pdf>
+<class_vesper_1_1_mouse_moved_event.pdf, id=17220, 501.875pt x 228.855pt>
 File: class_vesper_1_1_mouse_moved_event.pdf Graphic file (type pdf)
 <use class_vesper_1_1_mouse_moved_event.pdf>
 Package pdftex.def Info: class_vesper_1_1_mouse_moved_event.pdf  used on input 
-line 10.
+line 15.
 (pdftex.def)             Requested size: 124.78687pt x 56.9055pt.
- [148] [149])
+ [178] [179] [180])
 (class_vesper_1_1_mouse_scrolled_event.tex <./class_vesper_1_1_mouse_scrolled_e
 vent.pdf>
-<class_vesper_1_1_mouse_scrolled_event.pdf, id=16308, 501.875pt x 218.8175pt>
+<class_vesper_1_1_mouse_scrolled_event.pdf, id=17335, 501.875pt x 218.8175pt>
 File: class_vesper_1_1_mouse_scrolled_event.pdf Graphic file (type pdf)
 <use class_vesper_1_1_mouse_scrolled_event.pdf>
 Package pdftex.def Info: class_vesper_1_1_mouse_scrolled_event.pdf  used on inp
-ut line 10.
+ut line 15.
 (pdftex.def)             Requested size: 130.51505pt x 56.9055pt.
- [150] [151]) (struct_vesper_1_1_name_component.tex [152] [153])
-(struct_vesper_1_1_native_script_component.tex [154])
-(class_vesper_1_1_open_g_l_context.tex <./class_vesper_1_1_open_g_l_context.pdf
->
-<class_vesper_1_1_open_g_l_context.pdf, id=16496, 501.875pt x 250.9375pt>
+ [181] [182]) (struct_vesper_1_1_name_component.tex [183] [184])
+(struct_vesper_1_1_native_script_component.tex [185])
+(class_vesper_1_1_open_g_l_context.tex [186] <./class_vesper_1_1_open_g_l_conte
+xt.pdf>
+<class_vesper_1_1_open_g_l_context.pdf, id=17536, 501.875pt x 250.9375pt>
 File: class_vesper_1_1_open_g_l_context.pdf Graphic file (type pdf)
 <use class_vesper_1_1_open_g_l_context.pdf>
 Package pdftex.def Info: class_vesper_1_1_open_g_l_context.pdf  used on input l
 ine 10.
 (pdftex.def)             Requested size: 113.80533pt x 56.9055pt.
- [155] [156]) (class_vesper_1_1_open_g_l_framebuffer.tex <./class_vesper_1_1_op
+ [187]) (class_vesper_1_1_open_g_l_framebuffer.tex [188] <./class_vesper_1_1_op
 en_g_l_framebuffer.pdf>
-<class_vesper_1_1_open_g_l_framebuffer.pdf, id=16578, 501.875pt x 218.8175pt>
+<class_vesper_1_1_open_g_l_framebuffer.pdf, id=17619, 501.875pt x 218.8175pt>
 File: class_vesper_1_1_open_g_l_framebuffer.pdf Graphic file (type pdf)
 <use class_vesper_1_1_open_g_l_framebuffer.pdf>
 Package pdftex.def Info: class_vesper_1_1_open_g_l_framebuffer.pdf  used on inp
 ut line 10.
 (pdftex.def)             Requested size: 130.51505pt x 56.9055pt.
- [157]
+ [189]
 Underfull \hbox (badness 10000) in paragraph at lines 127--128
 \T1/pcr/m/n/8 virtual uint32[]_[]t Vesper::[][]Open[]GLFramebuffer::[][]Get[]Co
 lor[]Attachment[]Renderer[]ID () const [inline],
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 146--147
+Underfull \hbox (badness 10000) in paragraph at lines 150--151
 \T1/pcr/m/n/8 virtual const [] & Vesper::[][]Open[]GLFramebuffer::[][]Get[]Spec
 ification () const
  []
 
-[158]
-Overfull \hbox (56.3747pt too wide) in paragraph at lines 235--236
+[190]
+Overfull \hbox (56.3747pt too wide) in paragraph at lines 247--248
 []\T1/phv/m/n/10 References [], [], [], and []. 
  []
 
-[159]) (class_vesper_1_1_open_g_l_im_gui_layer.tex <./class_vesper_1_1_open_g_l
+[191]) (class_vesper_1_1_open_g_l_im_gui_layer.tex <./class_vesper_1_1_open_g_l
 _im_gui_layer.pdf>
-<class_vesper_1_1_open_g_l_im_gui_layer.pdf, id=16799, 501.875pt x 339.2675pt>
+<class_vesper_1_1_open_g_l_im_gui_layer.pdf, id=17839, 501.875pt x 339.2675pt>
 File: class_vesper_1_1_open_g_l_im_gui_layer.pdf Graphic file (type pdf)
 <use class_vesper_1_1_open_g_l_im_gui_layer.pdf>
 Package pdftex.def Info: class_vesper_1_1_open_g_l_im_gui_layer.pdf  used on in
 put line 10.
 (pdftex.def)             Requested size: 126.26486pt x 85.35826pt.
- [160] [161] [162])
+ [192] [193] [194] [195])
 (class_vesper_1_1_open_g_l_index_buffer.tex <./class_vesper_1_1_open_g_l_index_
 buffer.pdf>
-<class_vesper_1_1_open_g_l_index_buffer.pdf, id=16938, 501.875pt x 224.84pt>
+<class_vesper_1_1_open_g_l_index_buffer.pdf, id=17986, 501.875pt x 224.84pt>
 File: class_vesper_1_1_open_g_l_index_buffer.pdf Graphic file (type pdf)
 <use class_vesper_1_1_open_g_l_index_buffer.pdf>
 Package pdftex.def Info: class_vesper_1_1_open_g_l_index_buffer.pdf  used on in
 put line 10.
 (pdftex.def)             Requested size: 127.02301pt x 56.9055pt.
- [163] [164]) (class_vesper_1_1_open_g_l_renderer_a_p_i.tex [165] <./class_vesp
-er_1_1_open_g_l_renderer_a_p_i.pdf>
-<class_vesper_1_1_open_g_l_renderer_a_p_i.pdf, id=17042, 501.875pt x 214.8025pt
+ [196] [197]) (class_vesper_1_1_open_g_l_renderer_a_p_i.tex <./class_vesper_1_1
+_open_g_l_renderer_a_p_i.pdf>
+<class_vesper_1_1_open_g_l_renderer_a_p_i.pdf, id=18086, 501.875pt x 214.8025pt
 >
 File: class_vesper_1_1_open_g_l_renderer_a_p_i.pdf Graphic file (type pdf)
 <use class_vesper_1_1_open_g_l_renderer_a_p_i.pdf>
 Package pdftex.def Info: class_vesper_1_1_open_g_l_renderer_a_p_i.pdf  used on 
-input line 10.
+input line 15.
 (pdftex.def)             Requested size: 132.95029pt x 56.9055pt.
- [166] [167])
-(class_vesper_1_1_open_g_l_shader.tex <./class_vesper_1_1_open_g_l_shader.pdf>
-<class_vesper_1_1_open_g_l_shader.pdf, id=17133, 501.875pt x 259.97125pt>
+ [198]
+Underfull \hbox (badness 10000) detected at line 54
+[][][]
+ []
+
+[199]) (class_vesper_1_1_open_g_l_shader.tex [200] <./class_vesper_1_1_open_g_l
+_shader.pdf>
+<class_vesper_1_1_open_g_l_shader.pdf, id=18195, 501.875pt x 259.97125pt>
 File: class_vesper_1_1_open_g_l_shader.pdf Graphic file (type pdf)
 <use class_vesper_1_1_open_g_l_shader.pdf>
 Package pdftex.def Info: class_vesper_1_1_open_g_l_shader.pdf  used on input li
 ne 10.
 (pdftex.def)             Requested size: 109.8538pt x 56.9055pt.
-
-[168] [169] [170]
-Underfull \hbox (badness 10000) in paragraph at lines 275--276
+ [201] [202] [203]
+Underfull \hbox (badness 10000) in paragraph at lines 279--280
 \T1/pcr/m/n/8 virtual const std::[]string & Vesper::[][]Open[]GLShader::[][]Get
 []Name () const [inline], [override],
  []
 
-[171] [172] [173] [174]) (class_vesper_1_1_open_g_l_texture2_d.tex <./class_ves
+[204] [205] [206] [207]) (class_vesper_1_1_open_g_l_texture2_d.tex <./class_ves
 per_1_1_open_g_l_texture2_d.pdf>
-<class_vesper_1_1_open_g_l_texture2_d.pdf, id=17434, 501.875pt x 350.30875pt>
+<class_vesper_1_1_open_g_l_texture2_d.pdf, id=18495, 501.875pt x 350.30875pt>
 File: class_vesper_1_1_open_g_l_texture2_d.pdf Graphic file (type pdf)
 <use class_vesper_1_1_open_g_l_texture2_d.pdf>
 Package pdftex.def Info: class_vesper_1_1_open_g_l_texture2_d.pdf  used on inpu
 t line 10.
 (pdftex.def)             Requested size: 122.29037pt x 85.35826pt.
- [175] [176] [177] [178] [179])
+ [208] [209] [210] [211] [212])
 (class_vesper_1_1_open_g_l_uniform_buffer.tex <./class_vesper_1_1_open_g_l_unif
 orm_buffer.pdf>
-<class_vesper_1_1_open_g_l_uniform_buffer.pdf, id=17738, 501.875pt x 209.78375p
+<class_vesper_1_1_open_g_l_uniform_buffer.pdf, id=18800, 501.875pt x 209.78375p
 t>
 File: class_vesper_1_1_open_g_l_uniform_buffer.pdf Graphic file (type pdf)
 <use class_vesper_1_1_open_g_l_uniform_buffer.pdf>
 Package pdftex.def Info: class_vesper_1_1_open_g_l_uniform_buffer.pdf  used on 
 input line 10.
 (pdftex.def)             Requested size: 136.136pt x 56.9055pt.
- [180]) (class_vesper_1_1_open_g_l_vertex_array.tex <./class_vesper_1_1_open_g_
-l_vertex_array.pdf>
-<class_vesper_1_1_open_g_l_vertex_array.pdf, id=17809, 501.875pt x 218.8175pt>
+ [213]) (class_vesper_1_1_open_g_l_vertex_array.tex [214] <./class_vesper_1_1_o
+pen_g_l_vertex_array.pdf>
+<class_vesper_1_1_open_g_l_vertex_array.pdf, id=18878, 501.875pt x 218.8175pt>
 File: class_vesper_1_1_open_g_l_vertex_array.pdf Graphic file (type pdf)
 <use class_vesper_1_1_open_g_l_vertex_array.pdf>
 Package pdftex.def Info: class_vesper_1_1_open_g_l_vertex_array.pdf  used on in
 put line 10.
 (pdftex.def)             Requested size: 130.51505pt x 56.9055pt.
- [181] [182]
-Overfull \hbox (27.3145pt too wide) in paragraph at lines 169--170
+ [215] [216]
+Overfull \hbox (27.3145pt too wide) in paragraph at lines 173--174
 \T1/pcr/m/n/8 const []$\OML/cmm/m/it/8 <$ [] $>$ \T1/pcr/m/n/8 & Vesper::[][]Op
 en[]GLVertex[]Array::[][]Get[]Index[]Buffer () const [inline], [override],
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 184--185
+Underfull \hbox (badness 10000) in paragraph at lines 188--189
 \T1/pcr/m/n/8 const std::[]vector$\OML/cmm/m/it/8 <$ []$<$ [] $>$ $>$ \T1/pcr/m
 /n/8 & Vesper::[][]Open[]GLVertex[]Array::[][]Get[]Vertex[]Buffers ()
  []
 
-[183]) (class_vesper_1_1_open_g_l_vertex_buffer.tex [184] <./class_vesper_1_1_o
-pen_g_l_vertex_buffer.pdf>
-<class_vesper_1_1_open_g_l_vertex_buffer.pdf, id=18020, 501.875pt x 216.81pt>
+[217]) (class_vesper_1_1_open_g_l_vertex_buffer.tex <./class_vesper_1_1_open_g_
+l_vertex_buffer.pdf>
+<class_vesper_1_1_open_g_l_vertex_buffer.pdf, id=19082, 501.875pt x 216.81pt>
 File: class_vesper_1_1_open_g_l_vertex_buffer.pdf Graphic file (type pdf)
 <use class_vesper_1_1_open_g_l_vertex_buffer.pdf>
 Package pdftex.def Info: class_vesper_1_1_open_g_l_vertex_buffer.pdf  used on i
 nput line 10.
 (pdftex.def)             Requested size: 131.725pt x 56.9055pt.
- [185] [186])
-(class_vesper_1_1_orthographic_camera.tex [187] [188] [189])
-(struct_vesper_1_1_orthographic_camera_bounds.tex [190] [191])
-(class_vesper_1_1_orthographic_camera_controller.tex [192] [193] [194] [195]
-[196] [197] [198]
+ [218] [219] [220])
+(class_vesper_1_1_orthographic_camera.tex [221] [222] [223])
+(struct_vesper_1_1_orthographic_camera_bounds.tex [224])
+(class_vesper_1_1_orthographic_camera_controller.tex [225] [226] [227] [228]
+[229]
+Underfull \hbox (badness 7186) in paragraph at lines 452--453
+[]\T1/phv/m/n/10 References [], [], [], [],
+ []
+
+[230] [231]
 Overfull \hbox (100.19633pt too wide) in paragraph at lines 647--648
 []\T1/phv/m/n/10 , [], [], [], and []. 
  []
 
-
+[232]
 Underfull \hbox (badness 10000) in paragraph at lines 672--673
 []\T1/phv/m/n/10 Referenced by [], [], [], [], and
  []
 
-[199]
+
 Underfull \hbox (badness 1360) in paragraph at lines 743--744
 []\T1/phv/m/n/10 Referenced by [], [], [], [], and
  []
 
-) (class_vesper_1_1_particle_system.tex [200] [201]
+) (class_vesper_1_1_particle_system.tex [233] [234] [235]
 Overfull \hbox (54.76108pt too wide) in paragraph at lines 183--184
 []\T1/phv/m/n/10 References [], [], [],
  []
@@ -2763,115 +2825,125 @@ Underfull \hbox (badness 3601) in paragraph at lines 183--184
 []\T1/phv/m/n/10 , [], [],
  []
 
-[202]) (class_vesper_1_1_render_command.tex [203] [204])
-(class_vesper_1_1_renderer.tex [205]
-Overfull \hbox (57.18352pt too wide) in paragraph at lines 101--102
+[236]) (class_vesper_1_1_render_command.tex [237] [238])
+(class_vesper_1_1_renderer.tex [239] [240]
+Underfull \hbox (badness 10000) detected at line 99
+[][][]
+ []
+
+
+Overfull \hbox (57.18352pt too wide) in paragraph at lines 131--132
 []\T1/phv/m/n/10 Referenced by [], [], [], [],
  []
 
 
-Overfull \hbox (28.43831pt too wide) in paragraph at lines 101--102
+Overfull \hbox (28.43831pt too wide) in paragraph at lines 131--132
 []\T1/phv/m/n/10 , [], [], [],
  []
 
-[206]) (class_vesper_1_1_renderer2_d.tex [207]
-Underfull \hbox (badness 2932) in paragraph at lines 43--45
+
+Underfull \hbox (badness 10000) detected at line 143
+[][][]
+ []
+
+[241]) (class_vesper_1_1_renderer2_d.tex [242]
+Underfull \hbox (badness 2932) in paragraph at lines 48--49
 []\T1/phv/m/n/10 static void [] (const glm::[]vec2 &po-si-tion, const glm::[]ve
 c2 &size, const []$\OML/cmm/m/it/10 <$
  []
 
 
-Underfull \hbox (badness 2932) in paragraph at lines 45--47
+Underfull \hbox (badness 2932) in paragraph at lines 50--51
 []\T1/phv/m/n/10 static void [] (const glm::[]vec3 &po-si-tion, const glm::[]ve
 c2 &size, const []$\OML/cmm/m/it/10 <$
  []
 
-[208]
-Underfull \hbox (badness 10000) in paragraph at lines 108--109
+[243] [244]
+Underfull \hbox (badness 10000) in paragraph at lines 127--128
+[]\T1/phv/m/n/10 References [], [],
+ []
+
+[245]
+Underfull \hbox (badness 10000) in paragraph at lines 197--198
 []\T1/phv/m/n/10 References [], [],
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 158--159
-[]\T1/phv/m/n/10 References [], [],
- []
-
-[209]
-Underfull \hbox (badness 10000) in paragraph at lines 198--199
+Underfull \hbox (badness 10000) in paragraph at lines 248--249
 []\T1/phv/m/n/10 , [], [],
  []
 
-[210]
-Underfull \hbox (badness 10000) in paragraph at lines 265--266
+[246] [247]
+Underfull \hbox (badness 10000) in paragraph at lines 352--353
 []\T1/phv/m/n/10 , [], [],
  []
 
-[211]
-Overfull \hbox (93.01933pt too wide) in paragraph at lines 345--346
+[248] [249]
+Overfull \hbox (93.01933pt too wide) in paragraph at lines 477--478
 []\T1/phv/m/n/10 , [], [],
  []
 
 
-Overfull \hbox (42.37932pt too wide) in paragraph at lines 345--346
-[]\T1/phv/m/n/10 , [], [], [],
- []
-
-[212]
-Overfull \hbox (93.01933pt too wide) in paragraph at lines 399--400
-[]\T1/phv/m/n/10 , [], [],
- []
-
-
-Overfull \hbox (42.37932pt too wide) in paragraph at lines 399--400
-[]\T1/phv/m/n/10 , [], [], [],
- []
-
-[213] [214]
-Overfull \hbox (93.01933pt too wide) in paragraph at lines 518--519
-[]\T1/phv/m/n/10 , [], [],
- []
-
-
-Overfull \hbox (42.37932pt too wide) in paragraph at lines 518--519
+Overfull \hbox (42.37932pt too wide) in paragraph at lines 477--478
 []\T1/phv/m/n/10 , [], [], [],
  []
 
 
-Overfull \hbox (93.01933pt too wide) in paragraph at lines 575--576
+Overfull \hbox (93.01933pt too wide) in paragraph at lines 546--547
 []\T1/phv/m/n/10 , [], [],
  []
 
 
-Overfull \hbox (42.37932pt too wide) in paragraph at lines 575--576
+Overfull \hbox (42.37932pt too wide) in paragraph at lines 546--547
 []\T1/phv/m/n/10 , [], [], [],
  []
 
-[215] [216]
-Overfull \hbox (18.42934pt too wide) in paragraph at lines 654--655
+[250] [251] [252]
+Overfull \hbox (93.01933pt too wide) in paragraph at lines 756--757
+[]\T1/phv/m/n/10 , [], [],
+ []
+
+
+Overfull \hbox (42.37932pt too wide) in paragraph at lines 756--757
+[]\T1/phv/m/n/10 , [], [], [],
+ []
+
+[253]
+Overfull \hbox (93.01933pt too wide) in paragraph at lines 828--829
+[]\T1/phv/m/n/10 , [], [],
+ []
+
+
+Overfull \hbox (42.37932pt too wide) in paragraph at lines 828--829
+[]\T1/phv/m/n/10 , [], [], [],
+ []
+
+[254] [255]
+Overfull \hbox (18.42934pt too wide) in paragraph at lines 979--980
 []\T1/phv/m/n/10 References [], [], [],
  []
 
 
-Underfull \hbox (badness 5203) in paragraph at lines 658--659
+Underfull \hbox (badness 5203) in paragraph at lines 983--984
 []\T1/phv/m/n/10 Referenced by [], [], [], and
  []
 
-
-Overfull \hbox (23.08228pt too wide) in paragraph at lines 705--706
+[256]
+Overfull \hbox (23.08228pt too wide) in paragraph at lines 1034--1035
 []\T1/phv/m/n/10 References [], [], [],
  []
 
-[217]
-Overfull \hbox (81.54509pt too wide) in paragraph at lines 820--821
+[257]
+Overfull \hbox (81.54509pt too wide) in paragraph at lines 1161--1162
 []\T1/phv/m/n/10 , [], [],
  []
 
-[218]
-Underfull \hbox (badness 10000) in paragraph at lines 895--896
+[258]
+Underfull \hbox (badness 10000) in paragraph at lines 1244--1245
 []\T1/phv/m/n/10 References [], [],
  []
 
-) (struct_vesper_1_1_renderer2_d_data.tex [219]
+) (struct_vesper_1_1_renderer2_d_data.tex [259]
 Overfull \hbox (133.3482pt too wide) in paragraph at lines 88--89
 []\T1/phv/m/n/10 Referenced by [], [], [],
  []
@@ -2881,7 +2953,7 @@ Overfull \hbox (136.75919pt too wide) in paragraph at lines 88--89
 []\T1/phv/m/n/10 , [], [],
  []
 
-[220]
+[260]
 Overfull \hbox (40.16235pt too wide) in paragraph at lines 104--105
 []\T1/phv/m/n/10 Referenced by [], [],
  []
@@ -2931,7 +3003,7 @@ Overfull \hbox (56.86761pt too wide) in paragraph at lines 156--157
 []\T1/phv/m/n/10 , [], [],
  []
 
-[221]
+[261]
 Overfull \hbox (133.3482pt too wide) in paragraph at lines 172--173
 []\T1/phv/m/n/10 Referenced by [], [], [],
  []
@@ -2952,82 +3024,79 @@ Overfull \hbox (136.75919pt too wide) in paragraph at lines 188--189
  []
 
 ) (class_vesper_1_1_renderer_a_p_i.tex <./class_vesper_1_1_renderer_a_p_i.pdf>
-<class_vesper_1_1_renderer_a_p_i.pdf, id=20967, 501.875pt x 214.8025pt>
+<class_vesper_1_1_renderer_a_p_i.pdf, id=22105, 501.875pt x 214.8025pt>
 File: class_vesper_1_1_renderer_a_p_i.pdf Graphic file (type pdf)
 <use class_vesper_1_1_renderer_a_p_i.pdf>
 Package pdftex.def Info: class_vesper_1_1_renderer_a_p_i.pdf  used on input lin
-e 10.
+e 15.
 (pdftex.def)             Requested size: 132.95029pt x 56.9055pt.
 
-[222] [223] [224]) (class_vesper_1_1_scene.tex [225] [226] [227] [228
+[262] [263] [264]) (class_vesper_1_1_scene.tex [265] [266] [267] [268
 pdfTeX warning (ext4): destination with the same identifier (name{class_vesper_
 1_1_scene_a757b1b3f8c18d3f102063bb5d2f683d0}) has been already used, duplicate 
 ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.295 
-      
+l.277 
+      ] [269
 pdfTeX warning (ext4): destination with the same identifier (name{class_vesper_
 1_1_scene_adc2a775bded62bf125b0aa220b5353c3}) has been already used, duplicate 
 ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.295 
-      ]
+l.342 
+      
 pdfTeX warning (ext4): destination with the same identifier (name{class_vesper_
 1_1_scene_acc62d3586e8352f98d4871385112f596}) has been already used, duplicate 
 ignored
-<to be read again> 
-                   \relax 
-l.302 ..._scene_acc62d3586e8352f98d4871385112f596}
-                                                  \index{Vesper::Scene@{Vesp...
-[229
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.342 
+      ] [270
 pdfTeX warning (ext4): destination with the same identifier (name{class_vesper_
 1_1_scene_a5bc15191710704a06ae8061d33a08122}) has been already used, duplicate 
 ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.369 ...725a5f4535330e}{VZ\_DEFAULT\_TEXTURE}});}
+l.404 ...\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
                                                   
 pdfTeX warning (ext4): destination with the same identifier (name{class_vesper_
 1_1_scene_aaf4366bfd06fcfc9c9034efed0a7d61f}) has been already used, duplicate 
 ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.369 ...725a5f4535330e}{VZ\_DEFAULT\_TEXTURE}});}
-                                                  ] [230
+l.404 ...\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+                                                  ]
 pdfTeX warning (ext4): destination with the same identifier (name{class_vesper_
 1_1_scene_a8d1ed5ca4958b7d25c401f307b95373f}) has been already used, duplicate 
 ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.443 \doxysubsubsection
-                        {\texorpdfstring{OnComponentAdded()}{OnComponentAdde...
-
+<to be read again> 
+                   \relax 
+l.409 ..._scene_a8d1ed5ca4958b7d25c401f307b95373f}
+                                                  \index{Vesper::Scene@{Vesp...
+[271
 pdfTeX warning (ext4): destination with the same identifier (name{class_vesper_
 1_1_scene_ad1f6ac49ff0681f74d1dd0f55e8ea85b}) has been already used, duplicate 
 ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.443 \doxysubsubsection
-                        {\texorpdfstring{OnComponentAdded()}{OnComponentAdde...
-] [231
+l.482 
+      
 pdfTeX warning (ext4): destination with the same identifier (name{class_vesper_
 1_1_scene_aebf83da619c1ec75dba43389ed00578e}) has been already used, duplicate 
 ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.512 ...0186\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-                                                  ] [232] [233])
-(class_vesper_1_1_scene_camera.tex <./class_vesper_1_1_scene_camera.pdf>
-<class_vesper_1_1_scene_camera.pdf, id=21522, 501.875pt x 274.02374pt>
+l.482 
+      ] [272] [273] [274]) (class_vesper_1_1_scene_camera.tex <./class_vesper_1
+_1_scene_camera.pdf>
+<class_vesper_1_1_scene_camera.pdf, id=22687, 501.875pt x 274.02374pt>
 File: class_vesper_1_1_scene_camera.pdf Graphic file (type pdf)
 <use class_vesper_1_1_scene_camera.pdf>
 Package pdftex.def Info: class_vesper_1_1_scene_camera.pdf  used on input line 
 10.
 (pdftex.def)             Requested size: 104.21753pt x 56.9055pt.
-
-[234] [235] [236] [237]
+ [275] [276] [277]
 Underfull \hbox (badness 6792) in paragraph at lines 299--300
 []\T1/phv/m/n/10 Referenced by [], [], [], [],
  []
@@ -3037,180 +3106,189 @@ Overfull \hbox (29.06154pt too wide) in paragraph at lines 299--300
 []\T1/phv/m/n/10 , [], [], [], [],
  []
 
-[238] [239] [240]) (class_vesper_1_1_scene_hierarchy_panel.tex [241] [242]
-[243] [244] [245] [246]) (class_vesper_1_1_scene_serializer.tex [247] [248])
-(class_vesper_1_1_scriptable_entity.tex [249] [250])
-(class_vesper_1_1_shader.tex <./class_vesper_1_1_shader.pdf>
-<class_vesper_1_1_shader.pdf, id=22278, 501.875pt x 259.97125pt>
+[278] [279] [280]) (class_vesper_1_1_scene_hierarchy_panel.tex [281] [282]
+[283] [284] [285] [286]) (class_vesper_1_1_scene_serializer.tex [287] [288]
+[289]) (class_vesper_1_1_scriptable_entity.tex [290]
+Underfull \hbox (badness 10000) detected at line 80
+[][][]
+ []
+
+[291]) (class_vesper_1_1_shader.tex <./class_vesper_1_1_shader.pdf>
+<class_vesper_1_1_shader.pdf, id=23452, 501.875pt x 259.97125pt>
 File: class_vesper_1_1_shader.pdf Graphic file (type pdf)
 <use class_vesper_1_1_shader.pdf>
-Package pdftex.def Info: class_vesper_1_1_shader.pdf  used on input line 10.
+Package pdftex.def Info: class_vesper_1_1_shader.pdf  used on input line 15.
 (pdftex.def)             Requested size: 109.8538pt x 56.9055pt.
- [251] [252])
-(class_vesper_1_1_shader_library.tex [253] [254])
-(struct_vesper_1_1_sprite_renderer_component.tex [255] [256])
-(struct_vesper_1_1_renderer2_d_1_1_statistics.tex [257]
-Overfull \hbox (133.3482pt too wide) in paragraph at lines 79--80
+ [292]
+[293] [294]) (class_vesper_1_1_shader_library.tex [295] [296])
+(struct_vesper_1_1_sprite_renderer_component.tex [297] [298] [299])
+(struct_vesper_1_1_renderer2_d_1_1_statistics.tex [300]
+Overfull \hbox (133.3482pt too wide) in paragraph at lines 103--104
 []\T1/phv/m/n/10 Referenced by [], [], [],
  []
 
 
-Overfull \hbox (136.75919pt too wide) in paragraph at lines 79--80
+Overfull \hbox (136.75919pt too wide) in paragraph at lines 103--104
 []\T1/phv/m/n/10 , [], [],
  []
 
-) (class_vesper_1_1_sub_texture2_d.tex [258] [259])
-(struct_vesper_1_1_sub_texture_component.tex [260] [261])
+) (class_vesper_1_1_sub_texture2_d.tex [301] [302])
+(struct_vesper_1_1_sub_texture_component.tex [303] [304] [305])
 (class_vesper_1_1_texture.tex <./class_vesper_1_1_texture.pdf>
-<class_vesper_1_1_texture.pdf, id=22841, 501.875pt x 350.30875pt>
+<class_vesper_1_1_texture.pdf, id=24055, 501.875pt x 350.30875pt>
 File: class_vesper_1_1_texture.pdf Graphic file (type pdf)
 <use class_vesper_1_1_texture.pdf>
-Package pdftex.def Info: class_vesper_1_1_texture.pdf  used on input line 10.
+Package pdftex.def Info: class_vesper_1_1_texture.pdf  used on input line 15.
 (pdftex.def)             Requested size: 122.29037pt x 85.35826pt.
- [262] [263])
-(class_vesper_1_1_texture2_d.tex <./class_vesper_1_1_texture2_d.pdf>
-<class_vesper_1_1_texture2_d.pdf, id=22896, 501.875pt x 350.30875pt>
+ [306] [307]
+[308]) (class_vesper_1_1_texture2_d.tex <./class_vesper_1_1_texture2_d.pdf>
+<class_vesper_1_1_texture2_d.pdf, id=24115, 501.875pt x 350.30875pt>
 File: class_vesper_1_1_texture2_d.pdf Graphic file (type pdf)
 <use class_vesper_1_1_texture2_d.pdf>
-Package pdftex.def Info: class_vesper_1_1_texture2_d.pdf  used on input line 10
+Package pdftex.def Info: class_vesper_1_1_texture2_d.pdf  used on input line 15
 .
 (pdftex.def)             Requested size: 122.29037pt x 85.35826pt.
- [264])
-(struct_vesper_1_1_texture_animation_component.tex [265]
-Underfull \hbox (badness 10000) in paragraph at lines 86--87
+
+[309]) (struct_vesper_1_1_texture_animation_component.tex [310] [311]
+Underfull \hbox (badness 10000) in paragraph at lines 111--112
 \T1/pcr/m/n/8 std::[]vector$\OML/cmm/m/it/8 <$ []$<$ [] $>$ $>$ \T1/pcr/m/n/8 &
  Vesper::[][]Texture[]Animation[]Component::[][]Get[]Sub[]Textures ()
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 97--98
+Underfull \hbox (badness 10000) in paragraph at lines 122--123
 \T1/pcr/m/n/8 Vesper::[][]Texture[]Animation[]Component::[]operator const std::
 []vector$\OML/cmm/m/it/8 <$ []$<$ [] $>$ $>$ \T1/pcr/m/n/8 & ()
  []
 
-[266]) (class_vesper_1_1_texture_library.tex [267] [268])
-(class_vesper_1_1_timestep.tex [269] [270])
-(struct_vesper_1_1_transform_component.tex [271])
+[312]) (class_vesper_1_1_texture_library.tex [313] [314] [315])
+(class_vesper_1_1_timestep.tex [316])
+(struct_vesper_1_1_transform_component.tex [317] [318])
 (class_vesper_1_1_uniform_buffer.tex <./class_vesper_1_1_uniform_buffer.pdf>
-<class_vesper_1_1_uniform_buffer.pdf, id=23323, 501.875pt x 209.78375pt>
+<class_vesper_1_1_uniform_buffer.pdf, id=24556, 501.875pt x 209.78375pt>
 File: class_vesper_1_1_uniform_buffer.pdf Graphic file (type pdf)
 <use class_vesper_1_1_uniform_buffer.pdf>
 Package pdftex.def Info: class_vesper_1_1_uniform_buffer.pdf  used on input lin
-e 10.
+e 15.
 (pdftex.def)             Requested size: 136.136pt x 56.9055pt.
 
-[272]) (struct_vesper_1_1_u_u_i_d.tex [273])
-(struct_vesper_1_1_u_u_i_d_component.tex [274])
-(class_vesper_1_1_vertex_array.tex [275] <./class_vesper_1_1_vertex_array.pdf>
-<class_vesper_1_1_vertex_array.pdf, id=23447, 501.875pt x 218.8175pt>
+[319] [320]) (struct_vesper_1_1_u_u_i_d.tex [321])
+(struct_vesper_1_1_u_u_i_d_component.tex [322])
+(class_vesper_1_1_vertex_array.tex <./class_vesper_1_1_vertex_array.pdf>
+<class_vesper_1_1_vertex_array.pdf, id=24694, 501.875pt x 218.8175pt>
 File: class_vesper_1_1_vertex_array.pdf Graphic file (type pdf)
 <use class_vesper_1_1_vertex_array.pdf>
 Package pdftex.def Info: class_vesper_1_1_vertex_array.pdf  used on input line 
-10.
+15.
 (pdftex.def)             Requested size: 130.51505pt x 56.9055pt.
 
-[276]
-Underfull \hbox (badness 10000) in paragraph at lines 113--114
+[323] [324]
+Underfull \hbox (badness 10000) in paragraph at lines 125--126
 \T1/pcr/m/n/8 virtual const std::[]vector$\OML/cmm/m/it/8 <$ []$<$ [] $>$ $>$ \
 T1/pcr/m/n/8 & Vesper::[][]Vertex[]Array::[][]Get[]Vertex[]Buffers ()
  []
 
-) (class_vesper_1_1_vertex_buffer.tex [277] <./class_vesper_1_1_vertex_buffer.p
-df>
-<class_vesper_1_1_vertex_buffer.pdf, id=23557, 501.875pt x 216.81pt>
+) (class_vesper_1_1_vertex_buffer.tex <./class_vesper_1_1_vertex_buffer.pdf>
+<class_vesper_1_1_vertex_buffer.pdf, id=24805, 501.875pt x 216.81pt>
 File: class_vesper_1_1_vertex_buffer.pdf Graphic file (type pdf)
 <use class_vesper_1_1_vertex_buffer.pdf>
 Package pdftex.def Info: class_vesper_1_1_vertex_buffer.pdf  used on input line
- 10.
+ 15.
 (pdftex.def)             Requested size: 131.725pt x 56.9055pt.
- [278] [279]) (class_vesper_1_1_vesper_editor.tex <./class_vesper_1_1_vesper_ed
-itor.pdf>
-<class_vesper_1_1_vesper_editor.pdf, id=23666, 501.875pt x 142.5325pt>
+
+[325] [326]) (class_vesper_1_1_vesper_editor.tex <./class_vesper_1_1_vesper_edi
+tor.pdf>
+<class_vesper_1_1_vesper_editor.pdf, id=24915, 501.875pt x 142.5325pt>
 File: class_vesper_1_1_vesper_editor.pdf Graphic file (type pdf)
 <use class_vesper_1_1_vesper_editor.pdf>
 Package pdftex.def Info: class_vesper_1_1_vesper_editor.pdf  used on input line
  6.
 (pdftex.def)             Requested size: 200.3712pt x 56.9055pt.
- [280]) (class_vesper_1_1_window.tex <./class_vesper_1_1_window.pdf>
-<class_vesper_1_1_window.pdf, id=23740, 501.875pt x 249.93375pt>
+ [327] [328]) (class_vesper_1_1_window.tex <./class_vesper_1_1_window.pdf>
+<class_vesper_1_1_window.pdf, id=24997, 501.875pt x 249.93375pt>
 File: class_vesper_1_1_window.pdf Graphic file (type pdf)
 <use class_vesper_1_1_window.pdf>
-Package pdftex.def Info: class_vesper_1_1_window.pdf  used on input line 10.
+Package pdftex.def Info: class_vesper_1_1_window.pdf  used on input line 15.
 (pdftex.def)             Requested size: 114.2648pt x 56.9055pt.
- [281
+ [329
 pdfTeX warning (ext4): destination with the same identifier (name{class_vesper_
 1_1_vesper_editor_a1a4a2b911669866b7123e1d1536870fb}) has been already used, du
 plicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.17 \end{DoxyCompactItemize}
-                             
+l.18 \doxysubsubsection
+                       *{Public Types}
 pdfTeX warning (ext4): destination with the same identifier (name{class_vesper_
 1_1_vesper_editor_a9492f993a69630a3abb1d301da614787}) has been already used, du
 plicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.17 \end{DoxyCompactItemize}
-                             ] [282]
-Overfull \hbox (45.95929pt too wide) in paragraph at lines 113--114
+l.18 \doxysubsubsection
+                       *{Public Types}] [330]
+Underfull \hbox (badness 10000) detected at line 101
+[][][]
+ []
+
+
+Overfull \hbox (45.95929pt too wide) in paragraph at lines 145--146
 []\T1/phv/m/n/10 Referenced by [], [], and []. 
  []
 
-[283]) (class_vesper_1_1_window_close_event.tex <./class_vesper_1_1_window_clos
+[331]) (class_vesper_1_1_window_close_event.tex <./class_vesper_1_1_window_clos
 e_event.pdf>
-<class_vesper_1_1_window_close_event.pdf, id=23855, 501.875pt x 229.85875pt>
+<class_vesper_1_1_window_close_event.pdf, id=25116, 501.875pt x 229.85875pt>
 File: class_vesper_1_1_window_close_event.pdf Graphic file (type pdf)
 <use class_vesper_1_1_window_close_event.pdf>
 Package pdftex.def Info: class_vesper_1_1_window_close_event.pdf  used on input
- line 10.
+ line 15.
 (pdftex.def)             Requested size: 124.24315pt x 56.9055pt.
- [284]) (struct_vesper_1_1_window_props.tex)
-(class_vesper_1_1_window_resize_event.tex [285] <./class_vesper_1_1_window_resi
-ze_event.pdf>
-<class_vesper_1_1_window_resize_event.pdf, id=23940, 501.875pt x 223.83624pt>
+ [332] [333]) (struct_vesper_1_1_window_props.tex [334])
+(class_vesper_1_1_window_resize_event.tex <./class_vesper_1_1_window_resize_eve
+nt.pdf>
+<class_vesper_1_1_window_resize_event.pdf, id=25215, 501.875pt x 223.83624pt>
 File: class_vesper_1_1_window_resize_event.pdf Graphic file (type pdf)
 <use class_vesper_1_1_window_resize_event.pdf>
 Package pdftex.def Info: class_vesper_1_1_window_resize_event.pdf  used on inpu
-t line 10.
+t line 15.
 (pdftex.def)             Requested size: 127.58969pt x 56.9055pt.
- [286]
-Overfull \hbox (31.11772pt too wide) in paragraph at lines 92--93
+ [335] [336]
+Overfull \hbox (31.11772pt too wide) in paragraph at lines 115--116
 []\T1/phv/m/n/10 Referenced by [], and []. 
  []
 
 
-Overfull \hbox (31.11772pt too wide) in paragraph at lines 111--112
+Overfull \hbox (31.11772pt too wide) in paragraph at lines 138--139
 []\T1/phv/m/n/10 Referenced by [], and []. 
  []
 
-[287]) (class_vesper_1_1_windows_window.tex <./class_vesper_1_1_windows_window.
+[337]) (class_vesper_1_1_windows_window.tex <./class_vesper_1_1_windows_window.
 pdf>
-<class_vesper_1_1_windows_window.pdf, id=24046, 501.875pt x 249.93375pt>
+<class_vesper_1_1_windows_window.pdf, id=25334, 501.875pt x 249.93375pt>
 File: class_vesper_1_1_windows_window.pdf Graphic file (type pdf)
 <use class_vesper_1_1_windows_window.pdf>
 Package pdftex.def Info: class_vesper_1_1_windows_window.pdf  used on input lin
 e 10.
 (pdftex.def)             Requested size: 114.2648pt x 56.9055pt.
- [288] [289] [290] [291]
-Underfull \hbox (badness 10000) in paragraph at lines 324--325
+ [338] [339] [340] [341]
+Underfull \hbox (badness 10000) in paragraph at lines 336--337
 []\T1/phv/m/n/10 References [], [], [],
  []
 
-[292]) [293] [294
-
-]
-Chapter 10.
+[342] [343]) [344]
+Chapter 11.
 (_r_e_a_d_m_e_8md.tex) (_editor_layer_8cpp.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--11
 
  []
 
-[295]) (_editor_layer_8h.tex
+[345
+
+]) (_editor_layer_8h.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--9
 
  []
 
-) (_editor_layer_8h_source.tex [296] [297]) (_scene_hierarchy_panel_8cpp.tex
+) (_editor_layer_8h_source.tex [346] [347]) (_scene_hierarchy_panel_8cpp.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--11
 
  []
@@ -3220,7 +3298,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--8
 
  []
 
-[298]) (_scene_hierarchy_panel_8h_source.tex) (_vesper_editor_app_8cpp.tex
+[348]) (_scene_hierarchy_panel_8h_source.tex) (_vesper_editor_app_8cpp.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--6
 
  []
@@ -3230,7 +3308,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--7
 
  []
 
-[299]) (_windows_platform_utils_8cpp.tex
+[349]) (_windows_platform_utils_8cpp.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--9
 
  []
@@ -3240,7 +3318,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--9
 
  []
 
-[300]) (_windows_window_8h.tex
+[350]) (_windows_window_8h.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--6
 
  []
@@ -3532,7 +3610,7 @@ uplicate ignored
 <to be read again> 
                    \relax 
 l.56 \end
-         {DoxyFields} [301]
+         {DoxyFields} [351]
 pdfTeX warning (ext4): destination with the same identifier (name{class_vesper_
 1_1_windows_window_aa8f7420cfc5b5936dd1810de7878767f}) has been already used, d
 uplicate ignored
@@ -3608,7 +3686,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--6
 
  []
 
-[302]) (_open_g_l_buffer_8h.tex
+[352]) (_open_g_l_buffer_8h.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
@@ -3618,7 +3696,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--8
 
  []
 
-[303]) (_open_g_l_context_8h.tex
+[353]) (_open_g_l_context_8h.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
@@ -3628,12 +3706,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--6
 
  []
 
-[304]) (_open_g_l_framebuffer_8h.tex
+[354]) (_open_g_l_framebuffer_8h.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
 
-) (_open_g_l_framebuffer_8h_source.tex [305]) (_open_g_l_im_gui_layer_8cpp.tex
+) (_open_g_l_framebuffer_8h_source.tex [355]) (_open_g_l_im_gui_layer_8cpp.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--14
 
  []
@@ -3643,7 +3721,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--10
 
  []
 
-) (_open_g_l_im_gui_layer_8h_source.tex [306])
+) (_open_g_l_im_gui_layer_8h_source.tex [356])
 (_open_g_l_renderer_a_p_i_8cpp.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--7
 
@@ -3654,7 +3732,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--6
 
  []
 
-[307]) (_open_g_l_renderer_a_p_i_8h_source.tex) (_open_g_l_shader_8cpp.tex
+[357]) (_open_g_l_renderer_a_p_i_8h_source.tex) (_open_g_l_shader_8cpp.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--7
 
  []
@@ -3664,17 +3742,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--5
 
  []
 
-[308]) (_open_g_l_shader_8h_source.tex) (_open_g_l_texture_8cpp.tex
+[358]) (_open_g_l_shader_8h_source.tex [359]) (_open_g_l_texture_8cpp.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--7
 
  []
 
-[309]) (_open_g_l_texture_8h.tex
+) (_open_g_l_texture_8h.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--5
 
  []
 
-) (_open_g_l_texture_8h_source.tex) (_open_g_l_uniform_buffer_8cpp.tex [310]
+) (_open_g_l_texture_8h_source.tex [360]) (_open_g_l_uniform_buffer_8cpp.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--6
 
  []
@@ -3684,1122 +3762,1232 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
 
-) (_open_g_l_uniform_buffer_8h_source.tex) (_open_g_l_vertex_array_8cpp.tex
+[361]) (_open_g_l_uniform_buffer_8h_source.tex)
+(_open_g_l_vertex_array_8cpp.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--6
 
  []
 
-[311]) (_open_g_l_vertex_array_8h.tex
+) (_open_g_l_vertex_array_8h.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
 
-) (_open_g_l_vertex_array_8h_source.tex) (_vesper_8h.tex)
-(_vesper_8h_source.tex
-Underfull \hbox (badness 10000) in paragraph at lines 3--1
+[362]) (_open_g_l_vertex_array_8h_source.tex) (_vesper_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 8--40
 
  []
 
-[312] [313]) (_application_8cpp.tex
+[363]
+Underfull \hbox (badness 10000) detected at line 45
+[][][]
+ []
+
+) (_vesper_8h_source.tex [364]) (_application_8cpp.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--8
 
  []
 
 ) (_application_8h.tex
-Underfull \hbox (badness 10000) in paragraph at lines 3--11
+Underfull \hbox (badness 10000) in paragraph at lines 8--16
 
  []
 
-[314]
+[365]
+Underfull \hbox (badness 10000) detected at line 38
+[][][]
+ []
+
+
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_struct_vesper_1_1_application_settings}) has been already used, duplicate i
 gnored
 <to be read again> 
                    \relax 
-l.41 ...er_struct_vesper_1_1_application_settings}
+l.48 ...er_struct_vesper_1_1_application_settings}
                                                   
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_aae07ab83a36c017b0c8a2e7be6c1f622}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
+l.99 \end
          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_aae07ab83a36c017b0c8a2e7be6c1f622}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
+l.99 \end
          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a43f486b06ce23206255777a7ce86434a}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
+l.99 \end
          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a43f486b06ce23206255777a7ce86434a}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
+l.99 \end
          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a8cca612d7aafd0950a74094c8c130884}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
+l.99 \end
          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a8cca612d7aafd0950a74094c8c130884}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
+l.99 \end
          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_acb36b4212448908d78bb98c032059e2f}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
+l.99 \end
          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_acb36b4212448908d78bb98c032059e2f}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
+l.99 \end
          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a070ef5f051d2044518b21aec7b576d6a}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
+l.99 \end
          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a070ef5f051d2044518b21aec7b576d6a}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
+l.99 \end
          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a710628604ff491eba5bcb4fada92139a}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
+l.99 \end
          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a710628604ff491eba5bcb4fada92139a}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
+l.99 \end
          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a37c7f9b296cb625432b51cc341bdceb3}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
+l.99 \end
          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a37c7f9b296cb625432b51cc341bdceb3}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
+l.99 \end
          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a022651e24a0f24c494c268171d6e1185}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
+l.99 \end
          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a022651e24a0f24c494c268171d6e1185}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
+l.99 \end
          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_aae07ab83a36c017b0c8a2e7be6c1f622}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
+l.99 \end
          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_aae07ab83a36c017b0c8a2e7be6c1f622}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
+l.99 \end
          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a43f486b06ce23206255777a7ce86434a}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
+l.99 \end
          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a43f486b06ce23206255777a7ce86434a}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
+l.99 \end
          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a8cca612d7aafd0950a74094c8c130884}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
+l.99 \end
          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a8cca612d7aafd0950a74094c8c130884}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
+l.99 \end
          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_acb36b4212448908d78bb98c032059e2f}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
+l.99 \end
          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_acb36b4212448908d78bb98c032059e2f}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
+l.99 \end
          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a070ef5f051d2044518b21aec7b576d6a}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
+l.99 \end
          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a070ef5f051d2044518b21aec7b576d6a}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
+l.99 \end
          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a710628604ff491eba5bcb4fada92139a}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
+l.99 \end
          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a710628604ff491eba5bcb4fada92139a}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
+l.99 \end
          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a37c7f9b296cb625432b51cc341bdceb3}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
+l.99 \end
          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a37c7f9b296cb625432b51cc341bdceb3}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
+l.99 \end
          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a022651e24a0f24c494c268171d6e1185}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
+l.99 \end
          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a022651e24a0f24c494c268171d6e1185}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
+l.99 \end
          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_aae07ab83a36c017b0c8a2e7be6c1f622}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
+l.99 \end
          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_aae07ab83a36c017b0c8a2e7be6c1f622}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
+l.99 \end
          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a43f486b06ce23206255777a7ce86434a}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
+l.99 \end
          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a43f486b06ce23206255777a7ce86434a}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
+l.99 \end
          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a8cca612d7aafd0950a74094c8c130884}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
+l.99 \end
          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a8cca612d7aafd0950a74094c8c130884}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
+l.99 \end
          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_acb36b4212448908d78bb98c032059e2f}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
+l.99 \end
          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_acb36b4212448908d78bb98c032059e2f}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
+l.99 \end
          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a070ef5f051d2044518b21aec7b576d6a}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
+l.99 \end
          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a070ef5f051d2044518b21aec7b576d6a}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
+l.99 \end
          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a710628604ff491eba5bcb4fada92139a}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
+l.99 \end
          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a710628604ff491eba5bcb4fada92139a}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
+l.99 \end
          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a37c7f9b296cb625432b51cc341bdceb3}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
+l.99 \end
          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a37c7f9b296cb625432b51cc341bdceb3}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
+l.99 \end
          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a022651e24a0f24c494c268171d6e1185}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
+l.99 \end
          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a022651e24a0f24c494c268171d6e1185}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
+l.99 \end
          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_aae07ab83a36c017b0c8a2e7be6c1f622}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
+l.99 \end
          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_aae07ab83a36c017b0c8a2e7be6c1f622}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
+l.99 \end
          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a43f486b06ce23206255777a7ce86434a}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
+l.99 \end
          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a43f486b06ce23206255777a7ce86434a}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
+l.99 \end
          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a8cca612d7aafd0950a74094c8c130884}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
+l.99 \end
          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a8cca612d7aafd0950a74094c8c130884}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
+l.99 \end
          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_acb36b4212448908d78bb98c032059e2f}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
+l.99 \end
          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_acb36b4212448908d78bb98c032059e2f}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
+l.99 \end
          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a070ef5f051d2044518b21aec7b576d6a}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
+l.99 \end
          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a070ef5f051d2044518b21aec7b576d6a}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
+l.99 \end
          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a710628604ff491eba5bcb4fada92139a}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
+l.99 \end
          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a710628604ff491eba5bcb4fada92139a}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
+l.99 \end
          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a37c7f9b296cb625432b51cc341bdceb3}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
+l.99 \end
          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a37c7f9b296cb625432b51cc341bdceb3}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
+l.99 \end
          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a022651e24a0f24c494c268171d6e1185}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
+l.99 \end
          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a022651e24a0f24c494c268171d6e1185}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
+l.99 \end
          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_aae07ab83a36c017b0c8a2e7be6c1f622}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
+l.99 \end
          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_aae07ab83a36c017b0c8a2e7be6c1f622}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
+l.99 \end
          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a43f486b06ce23206255777a7ce86434a}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
+l.99 \end
          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a43f486b06ce23206255777a7ce86434a}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
+l.99 \end
          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a8cca612d7aafd0950a74094c8c130884}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
+l.99 \end
          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a8cca612d7aafd0950a74094c8c130884}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
+l.99 \end
          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_acb36b4212448908d78bb98c032059e2f}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
+l.99 \end
          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_acb36b4212448908d78bb98c032059e2f}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
+l.99 \end
          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a070ef5f051d2044518b21aec7b576d6a}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
+l.99 \end
          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a070ef5f051d2044518b21aec7b576d6a}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
+l.99 \end
          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a710628604ff491eba5bcb4fada92139a}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
+l.99 \end
          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a710628604ff491eba5bcb4fada92139a}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
+l.99 \end
          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a37c7f9b296cb625432b51cc341bdceb3}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
+l.99 \end
          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a37c7f9b296cb625432b51cc341bdceb3}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
+l.99 \end
          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a022651e24a0f24c494c268171d6e1185}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
+l.99 \end
          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a022651e24a0f24c494c268171d6e1185}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.92 \end
-         {DoxyFields}) (_application_8h_source.tex [315]) (_entry_point_8h.tex)
-(_entry_point_8h_source.tex [316]) (_layer_8cpp.tex
+l.99 \end
+         {DoxyFields}) (_application_8h_source.tex [366] [367])
+(_entry_point_8h.tex) (_entry_point_8h_source.tex) (_layer_8cpp.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--5
 
  []
 
 ) (_layer_8h.tex
-Underfull \hbox (badness 10000) in paragraph at lines 3--5
+Underfull \hbox (badness 10000) in paragraph at lines 8--10
 
  []
 
-) (_layer_8h_source.tex [317]) (_layer_stack_8cpp.tex
+[368]
+Underfull \hbox (badness 10000) detected at line 25
+[][][]
+ []
+
+) (_layer_8h_source.tex [369]) (_layer_stack_8cpp.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--5
 
  []
 
 ) (_layer_stack_8h.tex
-Underfull \hbox (badness 10000) in paragraph at lines 3--5
+Underfull \hbox (badness 10000) in paragraph at lines 8--10
 
  []
 
-) (_layer_stack_8h_source.tex [318]) (_window_8h.tex
-Underfull \hbox (badness 10000) in paragraph at lines 3--6
+[370]
+Underfull \hbox (badness 10000) detected at line 25
+[][][]
+ []
+
+) (_layer_stack_8h_source.tex) (_window_8h.tex [371]
+Underfull \hbox (badness 10000) in paragraph at lines 8--11
 
  []
 
-) (_window_8h_source.tex [319]) (_asserts_8h.tex) (_asserts_8h_source.tex
-[320]) (_base_8h.tex) (_base_8h_source.tex
-Underfull \hbox (badness 10000) in paragraph at lines 3--1
+
+Underfull \hbox (badness 10000) detected at line 36
+[][][]
+ []
+
+) (_window_8h_source.tex [372]) (_asserts_8h.tex [373]
+Underfull \hbox (badness 10000) detected at line 20
+[][][]
+ []
+
+) (_asserts_8h_source.tex) (_base_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 8--12
 
  []
 
-) (_color_8h.tex
-Underfull \hbox (badness 10000) in paragraph at lines 3--4
+[374]
+Underfull \hbox (badness 10000) detected at line 17
+[][][]
+ []
+
+) (_base_8h_source.tex) (_color_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 8--9
 
  []
 
-[321]) (_color_8h_source.tex) (_config_8h.tex [322]) (_config_8h_source.tex)
-(_defines___macros_8h.tex [323]) (_defines___macros_8h_source.tex [324])
-(_log_8cpp.tex
-Underfull \hbox (badness 10000) in paragraph at lines 3--6
+[375]
+Underfull \hbox (badness 10000) detected at line 58
+[][][]
+ []
 
+) (_color_8h_source.tex [376]) (_config_8h.tex [377]
+Underfull \hbox (badness 10000) detected at line 18
+[][][]
+ []
+
+) (_config_8h_source.tex) (_defines___macros_8h.tex [378]
+Underfull \hbox (badness 10000) detected at line 45
+[][][]
+ []
+
+[379]
+Underfull \hbox (badness 10000) detected at line 93
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 96
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 99
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 102
+[][][]
+ []
+
+[380]) (_defines___macros_8h_source.tex [381]) (_log_8cpp.tex [382]
+Underfull \hbox (badness 10000) in paragraph at lines 8--11
+
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 21
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 24
+[][][]
  []
 
 ) (_log_8h.tex
-Underfull \hbox (badness 10000) in paragraph at lines 3--6
+Underfull \hbox (badness 10000) in paragraph at lines 8--11
 
  []
 
-[325] [326]) (_log_8h_source.tex [327]) (_math_8cpp.tex
+[383]
+Underfull \hbox (badness 10000) detected at line 49
+[][][]
+ []
+
+[384] [385]) (_log_8h_source.tex [386]) (_math_8cpp.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--6
 
  []
 
 ) (_math_8h.tex
-Underfull \hbox (badness 10000) in paragraph at lines 3--4
+Underfull \hbox (badness 10000) in paragraph at lines 8--9
 
  []
 
-[328]) (_math_8h_source.tex) (_platform_detection_8h.tex)
-(_platform_detection_8h_source.tex
-Underfull \hbox (badness 10000) in paragraph at lines 3--1
+[387]
+Underfull \hbox (badness 10000) detected at line 26
+[][][]
+ []
+
+) (_math_8h_source.tex) (_platform_detection_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 8--9
 
  []
 
-[329]) (_random_8h.tex
-Underfull \hbox (badness 10000) in paragraph at lines 3--8
+
+Underfull \hbox (badness 10000) detected at line 14
+[][][]
+ []
+
+) (_platform_detection_8h_source.tex [388]) (_random_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 8--13
 
  []
 
-[330]) (_random_8h_source.tex [331] [332]) (_timer_8h.tex
-Underfull \hbox (badness 10000) in paragraph at lines 3--4
+[389]
+Underfull \hbox (badness 10000) detected at line 70
+[][][]
+ []
+
+) (_random_8h_source.tex [390] [391]) (_timer_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 8--9
 
  []
 
-) (_timer_8h_source.tex) (_timestep_8h.tex) (_timestep_8h_source.tex [333])
-(_instrumentor_8h.tex
-Underfull \hbox (badness 10000) in paragraph at lines 3--12
+[392]
+Underfull \hbox (badness 10000) detected at line 19
+[][][]
+ []
+
+) (_timer_8h_source.tex) (_timestep_8h.tex
+Underfull \hbox (badness 10000) detected at line 23
+[][][]
+ []
+
+) (_timestep_8h_source.tex [393]) (_instrumentor_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 8--17
 
  []
 
-[334]
+[394]
+Underfull \hbox (badness 10000) detected at line 71
+[][][]
+ []
+
+
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_struct_vesper_1_1_profile_result}) has been already used, duplicate ignored
 
 <to be read again> 
                    \relax 
-l.66 ...e_vesper_struct_vesper_1_1_profile_result}
+l.81 ...e_vesper_struct_vesper_1_1_profile_result}
                                                   
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_ae73da7a2e69c2ae90069c0f2063da162}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.93 \end
-         {DoxyFields}
+l.108 \end
+          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_ae73da7a2e69c2ae90069c0f2063da162}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.93 \end
-         {DoxyFields}
+l.108 \end
+          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a53f86c360af0fb068e6de1778d732aa9}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.93 \end
-         {DoxyFields}
+l.108 \end
+          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a53f86c360af0fb068e6de1778d732aa9}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.93 \end
-         {DoxyFields}
+l.108 \end
+          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_ab68fdb0acd48f29f27a306fb51a2a5e4}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.93 \end
-         {DoxyFields}
+l.108 \end
+          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_ab68fdb0acd48f29f27a306fb51a2a5e4}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.93 \end
-         {DoxyFields}
+l.108 \end
+          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_aea0f113bfe4467c4ad661b1648b759c3}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.93 \end
-         {DoxyFields}
+l.108 \end
+          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_aea0f113bfe4467c4ad661b1648b759c3}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.93 \end
-         {DoxyFields}
+l.108 \end
+          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_ae73da7a2e69c2ae90069c0f2063da162}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.93 \end
-         {DoxyFields}
+l.108 \end
+          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_ae73da7a2e69c2ae90069c0f2063da162}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.93 \end
-         {DoxyFields}
+l.108 \end
+          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a53f86c360af0fb068e6de1778d732aa9}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.93 \end
-         {DoxyFields}
+l.108 \end
+          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a53f86c360af0fb068e6de1778d732aa9}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.93 \end
-         {DoxyFields}
+l.108 \end
+          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_ab68fdb0acd48f29f27a306fb51a2a5e4}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.93 \end
-         {DoxyFields}
+l.108 \end
+          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_ab68fdb0acd48f29f27a306fb51a2a5e4}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.93 \end
-         {DoxyFields}
+l.108 \end
+          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_aea0f113bfe4467c4ad661b1648b759c3}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.93 \end
-         {DoxyFields}
+l.108 \end
+          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_aea0f113bfe4467c4ad661b1648b759c3}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.93 \end
-         {DoxyFields}
+l.108 \end
+          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_ae73da7a2e69c2ae90069c0f2063da162}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.93 \end
-         {DoxyFields}
+l.108 \end
+          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_ae73da7a2e69c2ae90069c0f2063da162}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.93 \end
-         {DoxyFields}
+l.108 \end
+          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a53f86c360af0fb068e6de1778d732aa9}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.93 \end
-         {DoxyFields}
+l.108 \end
+          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a53f86c360af0fb068e6de1778d732aa9}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.93 \end
-         {DoxyFields}
+l.108 \end
+          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_ab68fdb0acd48f29f27a306fb51a2a5e4}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.93 \end
-         {DoxyFields}
+l.108 \end
+          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_ab68fdb0acd48f29f27a306fb51a2a5e4}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.93 \end
-         {DoxyFields}
+l.108 \end
+          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_aea0f113bfe4467c4ad661b1648b759c3}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.93 \end
-         {DoxyFields}
+l.108 \end
+          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_aea0f113bfe4467c4ad661b1648b759c3}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.93 \end
-         {DoxyFields}
+l.108 \end
+          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_ae73da7a2e69c2ae90069c0f2063da162}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.93 \end
-         {DoxyFields}
+l.108 \end
+          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_ae73da7a2e69c2ae90069c0f2063da162}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.93 \end
-         {DoxyFields}
+l.108 \end
+          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a53f86c360af0fb068e6de1778d732aa9}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.93 \end
-         {DoxyFields}
+l.108 \end
+          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a53f86c360af0fb068e6de1778d732aa9}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.93 \end
-         {DoxyFields}
+l.108 \end
+          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_ab68fdb0acd48f29f27a306fb51a2a5e4}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.93 \end
-         {DoxyFields}
+l.108 \end
+          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_ab68fdb0acd48f29f27a306fb51a2a5e4}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.93 \end
-         {DoxyFields}
+l.108 \end
+          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_aea0f113bfe4467c4ad661b1648b759c3}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.93 \end
-         {DoxyFields}
+l.108 \end
+          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_aea0f113bfe4467c4ad661b1648b759c3}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.93 \end
-         {DoxyFields}
+l.108 \end
+          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_ae73da7a2e69c2ae90069c0f2063da162}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.93 \end
-         {DoxyFields}
+l.108 \end
+          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_ae73da7a2e69c2ae90069c0f2063da162}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.93 \end
-         {DoxyFields}
+l.108 \end
+          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a53f86c360af0fb068e6de1778d732aa9}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.93 \end
-         {DoxyFields}
+l.108 \end
+          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a53f86c360af0fb068e6de1778d732aa9}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.93 \end
-         {DoxyFields}
+l.108 \end
+          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_ab68fdb0acd48f29f27a306fb51a2a5e4}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.93 \end
-         {DoxyFields}
+l.108 \end
+          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_ab68fdb0acd48f29f27a306fb51a2a5e4}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.93 \end
-         {DoxyFields}
+l.108 \end
+          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_aea0f113bfe4467c4ad661b1648b759c3}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.93 \end
-         {DoxyFields}
+l.108 \end
+          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_aea0f113bfe4467c4ad661b1648b759c3}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.93 \end
-         {DoxyFields}
+l.108 \end
+          {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_struct_vesper_1_1_instrumentation_session}) has been already used, duplicat
 e ignored
 <to be read again> 
                    \relax 
-l.96 ...struct_vesper_1_1_instrumentation_session}
+l.111 ...truct_vesper_1_1_instrumentation_session}
                                                   
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a9aea845bcb154f66f84398a10e599884}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.105 \end
+l.120 \end
           {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a9aea845bcb154f66f84398a10e599884}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.105 \end
+l.120 \end
           {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a9aea845bcb154f66f84398a10e599884}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.105 \end
+l.120 \end
           {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a9aea845bcb154f66f84398a10e599884}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.105 \end
+l.120 \end
           {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a9aea845bcb154f66f84398a10e599884}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.105 \end
+l.120 \end
           {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a9aea845bcb154f66f84398a10e599884}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.105 \end
+l.120 \end
           {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a9aea845bcb154f66f84398a10e599884}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.105 \end
+l.120 \end
           {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a9aea845bcb154f66f84398a10e599884}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.105 \end
+l.120 \end
+          {DoxyFields} [395]
+pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
+per_a9aea845bcb154f66f84398a10e599884}) has been already used, duplicate ignore
+d
+<to be read again> 
+                   \relax 
+l.120 \end
           {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a9aea845bcb154f66f84398a10e599884}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.105 \end
-          {DoxyFields}
-pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
-per_a9aea845bcb154f66f84398a10e599884}) has been already used, duplicate ignore
-d
-<to be read again> 
-                   \relax 
-l.105 \end
+l.120 \end
           {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ins
 trumentor_utils_struct_instrumentor_utils_1_1_change_res\ETC.}) has been alread
 y used, duplicate ignored
 <to be read again> 
                    \relax 
-l.108 ...uct_instrumentor_utils_1_1_change_result}
+l.123 ...uct_instrumentor_utils_1_1_change_result}
                                                   
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ins
 trumentor_utils_ac01edcf5dfb9a10440bf406a9fde573c}) has been already used, dupl
 icate ignored
 <to be read again> 
                    \relax 
-l.119 \end
+l.134 \end
           {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ins
 trumentor_utils_ac01edcf5dfb9a10440bf406a9fde573c}) has been already used, dupl
 icate ignored
 <to be read again> 
                    \relax 
-l.119 \end
+l.134 \end
           {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ins
 trumentor_utils_ac01edcf5dfb9a10440bf406a9fde573c}) has been already used, dupl
 icate ignored
 <to be read again> 
                    \relax 
-l.119 \end
+l.134 \end
           {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ins
 trumentor_utils_ac01edcf5dfb9a10440bf406a9fde573c}) has been already used, dupl
 icate ignored
 <to be read again> 
                    \relax 
-l.119 \end
+l.134 \end
           {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ins
 trumentor_utils_ac01edcf5dfb9a10440bf406a9fde573c}) has been already used, dupl
 icate ignored
 <to be read again> 
                    \relax 
-l.119 \end
+l.134 \end
           {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ins
 trumentor_utils_ac01edcf5dfb9a10440bf406a9fde573c}) has been already used, dupl
 icate ignored
 <to be read again> 
                    \relax 
-l.119 \end
+l.134 \end
           {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ins
 trumentor_utils_ac01edcf5dfb9a10440bf406a9fde573c}) has been already used, dupl
 icate ignored
 <to be read again> 
                    \relax 
-l.119 \end
+l.134 \end
           {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ins
 trumentor_utils_ac01edcf5dfb9a10440bf406a9fde573c}) has been already used, dupl
 icate ignored
 <to be read again> 
                    \relax 
-l.119 \end
+l.134 \end
           {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ins
 trumentor_utils_ac01edcf5dfb9a10440bf406a9fde573c}) has been already used, dupl
 icate ignored
 <to be read again> 
                    \relax 
-l.119 \end
+l.134 \end
           {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ins
 trumentor_utils_ac01edcf5dfb9a10440bf406a9fde573c}) has been already used, dupl
 icate ignored
 <to be read again> 
                    \relax 
-l.119 \end
-          {DoxyFields} [335]) (_instrumentor_8h_source.tex [336]
+l.134 \end
+          {DoxyFields} [396]) (_instrumentor_8h_source.tex
 
 ! LaTeX Error: Invalid UTF-8 byte "A9.
 
@@ -4807,7 +4995,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.5 ...tcolor{comment}{//Copyright\ ©\ TheCherno}}
+l.11 ...color{comment}{//Copyright\ ©\ TheCherno}}
                                                   
 ? 
 
@@ -4817,35 +5005,55 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.6 ...025\ Damon\ S.Green\ II(nomad\_ii\_damon)}}
+l.12 ...25\ Damon\ S.Green\ II(nomad\_ii\_damon)}}
                                                   
 ? 
-[337] [338] [339]) (_application_event_8h.tex
+[397] [398] [399]) (_application_event_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 8--11
+
+ []
+
+[400]
+Underfull \hbox (badness 10000) detected at line 34
+[][][]
+ []
+
+) (_application_event_8h_source.tex [401]) (_event_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 8--10
+
+ []
+
+[402]
+Underfull \hbox (badness 10000) detected at line 67
+[][][]
+ []
+
+) (_event_8h_source.tex [403]) (_key_event_8h.tex [404]
+Underfull \hbox (badness 10000) in paragraph at lines 8--11
+
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 32
+[][][]
+ []
+
+) (_key_event_8h_source.tex [405] [406]) (_mouse_event_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 8--11
+
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 34
+[][][]
+ []
+
+) (_mouse_event_8h_source.tex [407] [408]) (_im_gui_build_8cpp.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--6
 
  []
 
-) (_application_event_8h_source.tex [340]) (_event_8h.tex
-Underfull \hbox (badness 10000) in paragraph at lines 3--5
-
- []
-
-[341]) (_event_8h_source.tex [342]) (_key_event_8h.tex
-Underfull \hbox (badness 10000) in paragraph at lines 3--6
-
- []
-
-[343]) (_key_event_8h_source.tex [344]) (_mouse_event_8h.tex
-Underfull \hbox (badness 10000) in paragraph at lines 3--6
-
- []
-
-) (_mouse_event_8h_source.tex [345] [346]) (_im_gui_build_8cpp.tex
-Underfull \hbox (badness 10000) in paragraph at lines 3--6
-
- []
-
-) (_im_gui_layer_8cpp.tex
+) (_im_gui_layer_8cpp.tex [409]
 Underfull \hbox (badness 10000) in paragraph at lines 3--13
 
  []
@@ -4855,12 +5063,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--9
 
  []
 
-[347]) (_im_gui_layer_8h_source.tex) (_vesper_im_gui_8h.tex
+) (_im_gui_layer_8h_source.tex [410]) (_vesper_im_gui_8h.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
 
-[348]) (_vesper_im_gui_8h_source.tex [349]) (_im_guizmo_build_8cpp.tex)
+) (_vesper_im_gui_8h_source.tex [411]) (_im_guizmo_build_8cpp.tex)
 (_input_8h.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--1
 
@@ -4871,21 +5079,47 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--5
 
  []
 
-) (_input_8h_source.tex [350]) (_key_codes_8h.tex [351] [352] [353]
-LaTeX Font Info:    Trying to load font information for TS1+pcr on input line 3
-21.
+[412]) (_input_8h_source.tex) (_key_codes_8h.tex [413]
+Underfull \hbox (badness 2990) in paragraph at lines 18--169
+[] \T1/phv/m/n/10 = 91 , [] = 92 , [] = 93 ,
+ []
 
-(C:\Users\dman1\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1pcr.fd
-File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
-)
-[354] [355] [356] [357] [358] [359] [360] [361] [362] [363] [364])
-(_key_codes_8h_source.tex [365] [366]) (_mouse_button_codes_8h.tex [367])
-(_mouse_button_codes_8h_source.tex) (_particle_system_8cpp.tex
+
+Underfull \hbox (badness 3514) in paragraph at lines 18--169
+[] \T1/phv/m/n/10 = 280 , [] = 281 , [] = 282 ,
+ []
+
+
+Underfull \hbox (badness 1762) in paragraph at lines 18--169
+[] \T1/phv/m/n/10 = 334 , [] = 335 , [] = 336 ,
+ []
+
+
+Overfull \hbox (21.0299pt too wide) in paragraph at lines 18--169
+[] \T1/phv/m/n/10 = 341 , [] = 342 , [] = 343 , []
+ []
+
+
+Underfull \hbox (badness 2285) in paragraph at lines 18--169
+[] \T1/phv/m/n/10 = 345 , [] = 346 , [] = 347 ,
+ []
+
+) (_key_codes_8h_source.tex [414] [415]) (_mouse_button_codes_8h.tex
+Overfull \hbox (15.69292pt too wide) in paragraph at lines 18--34
+[] \T1/phv/m/n/10 = 0 , [] = 1 , [] = 2 , []
+ []
+
+
+Overfull \hbox (15.69292pt too wide) in paragraph at lines 18--34
+[] \T1/phv/m/n/10 = 4 , [] = 5 , [] = 6 , []
+ []
+
+[416]) (_mouse_button_codes_8h_source.tex) (_particle_system_8cpp.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--9
 
  []
 
-[368]) (_particle_system_8h.tex
+) (_particle_system_8h.tex [417]
 Underfull \hbox (badness 10000) in paragraph at lines 3--5
 
  []
@@ -5569,7 +5803,7 @@ d
 <to be read again> 
                    \relax 
 l.99 \end
-         {DoxyFields} [369]
+         {DoxyFields}
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_abd855a0552fa453544b720b76bf3a17d}) has been already used, duplicate ignore
 d
@@ -5681,7 +5915,7 @@ d
 <to be read again> 
                    \relax 
 l.99 \end
-         {DoxyFields}
+         {DoxyFields} [418]
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a90662c053ea9e19f7e985a41df3843b9}) has been already used, duplicate ignore
 d
@@ -6444,38 +6678,38 @@ duplicate ignored
 <to be read again> 
                    \relax 
 l.165 \end
-          {DoxyFields}) (_particle_system_8h_source.tex [370])
+          {DoxyFields}) (_particle_system_8h_source.tex [419])
 (_buffer_8cpp.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--7
 
  []
 
-) (_buffer_8h.tex [371]) (_buffer_8h_source.tex [372]) (_camera_8h.tex
+) (_buffer_8h.tex) (_buffer_8h_source.tex [420] [421] [422]) (_camera_8h.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
 
-[373]) (_camera_8h_source.tex) (_editor_camera_8cpp.tex
+) (_camera_8h_source.tex) (_editor_camera_8cpp.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--8
 
  []
 
-) (_editor_camera_8h.tex [374]
+[423]) (_editor_camera_8h.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--8
 
  []
 
-) (_editor_camera_8h_source.tex [375]) (_framebuffer_8cpp.tex
+) (_editor_camera_8h_source.tex [424]) (_framebuffer_8cpp.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--7
 
  []
 
-) (_framebuffer_8h.tex
+[425]) (_framebuffer_8h.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
 
-[376]
+
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_struct_vesper_1_1_framebuffer_specification}) has been already used, duplic
 ate ignored
@@ -6762,12 +6996,13 @@ d
 <to be read again> 
                    \relax 
 l.48 \end
-         {DoxyFields}) (_framebuffer_8h_source.tex) (_graphics_context_8h.tex
+         {DoxyFields}) (_framebuffer_8h_source.tex [426])
+(_graphics_context_8h.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
 
-[377]) (_graphics_context_8h_source.tex) (_orthographic_camera_8cpp.tex
+) (_graphics_context_8h_source.tex [427]) (_orthographic_camera_8cpp.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--6
 
  []
@@ -6777,7 +7012,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
 
-) (_orthographic_camera_8h_source.tex [378])
+) (_orthographic_camera_8h_source.tex [428])
 (_orthographic_camera_controller_8cpp.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--8
 
@@ -6788,7 +7023,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--7
 
  []
 
-[379]) (_orthographic_camera_controller_8h_source.tex [380])
+[429]) (_orthographic_camera_controller_8h_source.tex [430])
 (_render_command_8cpp.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--6
 
@@ -6799,7 +7034,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
 
-) (_render_command_8h_source.tex [381]) (_renderer_8cpp.tex
+) (_render_command_8h_source.tex [431]) (_renderer_8cpp.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--8
 
  []
@@ -6809,7 +7044,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--6
 
  []
 
-[382]
+[432]
 pdfTeX warning (ext4): destination with the same identifier (name{class_vesper_
 1_1_renderer_struct_vesper_1_1_renderer_1_1_scene_data}) has been already used,
  duplicate ignored
@@ -6886,12 +7121,12 @@ te ignored
 <to be read again> 
                    \relax 
 l.32 \end
-         {DoxyFields}) (_renderer_8h_source.tex) (_renderer2_d_8cpp.tex
+         {DoxyFields}) (_renderer_8h_source.tex [433]) (_renderer2_d_8cpp.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--10
 
  []
 
-[383]
+
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_struct_vesper_1_1_quad_vertex}) has been already used, duplicate ignored
 <to be read again> 
@@ -7177,7 +7412,7 @@ d
 <to be read again> 
                    \relax 
 l.67 \end
-         {DoxyFields}
+         {DoxyFields} [434]
 pdfTeX warning (ext4): destination with the same identifier (name{namespace_ves
 per_a0c6777f7a060892320669ac605c7e590}) has been already used, duplicate ignore
 d
@@ -7329,17 +7564,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--9
 
  []
 
-) (_renderer2_d_8h_source.tex [384] [385]) (_renderer_a_p_i_8cpp.tex
+) (_renderer2_d_8h_source.tex [435] [436] [437]) (_renderer_a_p_i_8cpp.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--5
 
  []
 
-) (_renderer_a_p_i_8h.tex
+[438]) (_renderer_a_p_i_8h.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--5
 
  []
 
-) (_renderer_a_p_i_8h_source.tex [386]) (_shader_8cpp.tex
+) (_renderer_a_p_i_8h_source.tex [439]) (_shader_8cpp.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--7
 
  []
@@ -7349,32 +7584,33 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--6
 
  []
 
-) (_shader_8h_source.tex [387]) (_sub_texture2_d_8cpp.tex
+) (_shader_8h_source.tex [440]) (_sub_texture2_d_8cpp.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--5
 
  []
 
-) (_sub_texture2_d_8h.tex
+[441]) (_sub_texture2_d_8h.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--5
 
  []
 
-[388]) (_sub_texture2_d_8h_source.tex) (_texture_8cpp.tex
+) (_sub_texture2_d_8h_source.tex) (_texture_8cpp.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--8
 
  []
 
-) (_texture_8h.tex [389]) (_texture_8h_source.tex) (_uniform_buffer_8cpp.tex
+[442]) (_texture_8h.tex) (_texture_8h_source.tex [443])
+(_uniform_buffer_8cpp.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--7
 
  []
 
-[390]) (_uniform_buffer_8h.tex
+) (_uniform_buffer_8h.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
 
-) (_uniform_buffer_8h_source.tex) (_vertex_array_8cpp.tex
+[444]) (_uniform_buffer_8h_source.tex) (_vertex_array_8cpp.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--7
 
  []
@@ -7384,22 +7620,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--5
 
  []
 
-[391]) (_vertex_array_8h_source.tex) (_components_8h.tex
+) (_vertex_array_8h_source.tex [445]) (_components_8h.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--10
 
  []
 
-[392]) (_components_8h_source.tex [393] [394]) (_entity_8cpp.tex
+[446]) (_components_8h_source.tex [447] [448] [449]) (_entity_8cpp.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--5
 
  []
 
-[395]) (_entity_8h.tex
+[450]) (_entity_8h.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--5
 
  []
 
-) (_entity_8h_source.tex [396]) (_scene_8cpp.tex
+) (_entity_8h_source.tex [451] [452]) (_scene_8cpp.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--10
 
  []
@@ -7409,7 +7645,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--6
 
  []
 
-[397]) (_scene_8h_source.tex) (_scene_camera_8cpp.tex
+) (_scene_8h_source.tex [453]) (_scene_camera_8cpp.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--6
 
  []
@@ -7419,39 +7655,42 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
 
-[398]) (_scene_camera_8h_source.tex [399]) (_scene_serializer_8cpp.tex
+[454]) (_scene_camera_8h_source.tex) (_scene_serializer_8cpp.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--9
 
  []
 
-) (_scene_serializer_8h.tex
+[455]) (_scene_serializer_8h.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--5
 
  []
 
-) (_scene_serializer_8h_source.tex [400]) (_scriptable_entity_8h.tex
+) (_scene_serializer_8h_source.tex [456]) (_scriptable_entity_8h.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
 
-) (_scriptable_entity_8h_source.tex [401]) (_platform_utils_8h.tex
+) (_scriptable_entity_8h_source.tex [457]) (_platform_utils_8h.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
 
-) (_platform_utils_8h_source.tex) (vzpch_8cpp.tex) (vzpch_8h.tex
+) (_platform_utils_8h_source.tex [458]) (vzpch_8cpp.tex) (vzpch_8h.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--1
 
  []
 
-[402]) (vzpch_8h_source.tex
-Underfull \hbox (badness 10000) in paragraph at lines 3--1
+
+Underfull \hbox (badness 10000) in paragraph at lines 8--22
 
  []
 
-) [403] [404
 
-]
+Underfull \hbox (badness 10000) detected at line 27
+[][][]
+ []
+
+) (vzpch_8h_source.tex [459]) [460]
 No file refman.ind.
 (refman.aux)
  ***********
@@ -7463,17 +7702,17 @@ L3 programming layer <2025-12-24>
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `refman.out' has not changed.
-(rerunfilecheck)             Checksum: 9278FFC8303094279D170D37B36640E4;370836.
+(rerunfilecheck)             Checksum: B253F36046DDB614FF3226C5E6006115;368393.
 
  ) 
 Here is how much of TeX's memory you used:
- 30633 strings out of 467871
- 710993 string characters out of 5418376
- 1368912 words of memory out of 5000000
- 54176 multiletter control sequences out of 15000+600000
- 684702 words of font info for 117 fonts, out of 8000000 for 9000
+ 33961 strings out of 467871
+ 800197 string characters out of 5418376
+ 1791061 words of memory out of 5000000
+ 57384 multiletter control sequences out of 15000+600000
+ 688357 words of font info for 119 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 103i,12n,124p,2586b,1790s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 103i,16n,124p,2738b,7192s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/dman1/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmmi10.pfb><C:/Users/dman1/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
 fonts/cm/cmmi12.pfb><C:/Users/dman1/AppData/Local/Programs/MiKTeX/fonts/type1/p
@@ -7486,13 +7725,14 @@ pData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrb8a.pfb><C:/Users/dman1/
 AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/dman
 1/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrro8a.pfb><C:/Users/d
 man1/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/User
-s/dman1/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvbo8a.pfb><C:/
-Users/dman1/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><
-C:/Users/dman1/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.p
-fb>
-Output written on refman.pdf (446 pages, 4951128 bytes).
+s/dman1/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8ac.pfb><C:/
+Users/dman1/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvbo8a.pfb>
+<C:/Users/dman1/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.p
+fb><C:/Users/dman1/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro
+8a.pfb>
+Output written on refman.pdf (502 pages, 5311170 bytes).
 PDF statistics:
- 31428 PDF objects out of 31911 (max. 8388607)
- 4333 named destinations out of 5155 (max. 500000)
- 13370 words of extra memory for PDF output out of 14400 (max. 10000000)
+ 33032 PDF objects out of 38293 (max. 8388607)
+ 4442 named destinations out of 5155 (max. 500000)
+ 12954 words of extra memory for PDF output out of 14400 (max. 10000000)
 

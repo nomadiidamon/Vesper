@@ -2,6 +2,11 @@
 \hypertarget{struct_vesper_1_1_buffer_element}{}\label{struct_vesper_1_1_buffer_element}\index{Vesper::BufferElement@{Vesper::BufferElement}}
 
 
+Represents a single element in a buffer layout.  
+
+
+
+
 {\ttfamily \+\#include $<$Buffer.\+h$>$}
 
 \doxysubsubsection*{Public Member Functions}
@@ -10,23 +15,26 @@
 \doxymbox{\hyperlink{struct_vesper_1_1_buffer_element_a03424d1361942e91c4b2188329ccfe75}{Buffer\+Element}} ()
 \item 
 \doxymbox{\hyperlink{struct_vesper_1_1_buffer_element_a497b03e769d781131a7e0461e34df975}{Buffer\+Element}} (\doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131}{Shader\+Data\+Type}} type, const std::\+string \&name, bool normalized=false)
-\item 
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{struct_vesper_1_1_buffer_element}{Buffer\+Element} with the given type, name, and normalization flag. \end{DoxyCompactList}\item 
 uint32\+\_\+t \doxymbox{\hyperlink{struct_vesper_1_1_buffer_element_a4cbb8e7a5cb10efbdd548a6adc93504e}{Get\+Component\+Count}} () const
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Returns the number of components in the buffer element based on its \doxylink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131}{Shader\+Data\+Type}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 std::\+string \doxymbox{\hyperlink{struct_vesper_1_1_buffer_element_a3be3f53afd22dbb15893cad2c15ff1fe}{Name}}
-\item 
+\begin{DoxyCompactList}\small\item\em The name of the buffer element. \end{DoxyCompactList}\item 
 \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131}{Shader\+Data\+Type}} \doxymbox{\hyperlink{struct_vesper_1_1_buffer_element_a1b71f7c0b821d8e5aa3e0a49cb275403}{Type}}
-\item 
+\begin{DoxyCompactList}\small\item\em The data type of the buffer element. \end{DoxyCompactList}\item 
 uint32\+\_\+t \doxymbox{\hyperlink{struct_vesper_1_1_buffer_element_a908616605e51c17306f49355c6d96925}{Size}}
-\item 
+\begin{DoxyCompactList}\small\item\em The size in bytes of the buffer element. \end{DoxyCompactList}\item 
 uint32\+\_\+t \doxymbox{\hyperlink{struct_vesper_1_1_buffer_element_a99ee8b05a01544b14c8e460f28cf44d5}{Offset}}
-\item 
+\begin{DoxyCompactList}\small\item\em The offset in bytes of the buffer element from the start of the buffer. \end{DoxyCompactList}\item 
 bool \doxymbox{\hyperlink{struct_vesper_1_1_buffer_element_aa7c36074287779f7c9f3e800e2b8acff}{Normalized}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Whether the buffer element is normalized. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Represents a single element in a buffer layout. 
 
 \label{doc-constructors}
 \Hypertarget{struct_vesper_1_1_buffer_element_doc-constructors}
@@ -39,7 +47,7 @@ Vesper::\+\+Buffer\+Element::\+\+Buffer\+Element (\begin{DoxyParamCaption}{}{}\e
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00039\ \{\}}
+\DoxyCodeLine{00051\ \{\}}
 
 \end{DoxyCode}
 \Hypertarget{struct_vesper_1_1_buffer_element_a497b03e769d781131a7e0461e34df975}\index{Vesper::BufferElement@{Vesper::BufferElement}!BufferElement@{BufferElement}}
@@ -49,15 +57,32 @@ Vesper::\+\+Buffer\+Element::\+\+Buffer\+Element (\begin{DoxyParamCaption}{}{}\e
 Vesper::\+\+Buffer\+Element::\+\+Buffer\+Element (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131}{Shader\+Data\+Type}}}]{type}{, }\item[{const std::\+string \&}]{name}{, }\item[{bool}]{normalized}{ = {\ttfamily false}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
+
+Constructs a \doxylink{struct_vesper_1_1_buffer_element}{Buffer\+Element} with the given type, name, and normalization flag. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & The \doxylink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131}{Shader\+Data\+Type} of the buffer element. \\
+\hline
+{\em name} & The name of the buffer element. \\
+\hline
+{\em normalized} & Whether the buffer element is normalized. \\
+\hline
+\end{DoxyParams}
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{struct_vesper_1_1_buffer_element_a3be3f53afd22dbb15893cad2c15ff1fe}{Name}}(name),\ \doxymbox{\hyperlink{struct_vesper_1_1_buffer_element_a1b71f7c0b821d8e5aa3e0a49cb275403}{Type}}(type),\ \doxymbox{\hyperlink{struct_vesper_1_1_buffer_element_a908616605e51c17306f49355c6d96925}{Size}}(\doxymbox{\hyperlink{namespace_vesper_ab245b1fa9d90c8fe2aa90c41a588c29e}{ShaderDataTypeSize}}(type)),\ \doxymbox{\hyperlink{struct_vesper_1_1_buffer_element_a99ee8b05a01544b14c8e460f28cf44d5}{Offset}}(0),\ \doxymbox{\hyperlink{struct_vesper_1_1_buffer_element_aa7c36074287779f7c9f3e800e2b8acff}{Normalized}}(normalized) }
-\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{struct_vesper_1_1_buffer_element_a3be3f53afd22dbb15893cad2c15ff1fe}{Name}}(name),\ \doxymbox{\hyperlink{struct_vesper_1_1_buffer_element_a1b71f7c0b821d8e5aa3e0a49cb275403}{Type}}(type),\ \doxymbox{\hyperlink{struct_vesper_1_1_buffer_element_a908616605e51c17306f49355c6d96925}{Size}}(\doxymbox{\hyperlink{namespace_vesper_ab245b1fa9d90c8fe2aa90c41a588c29e}{ShaderDataTypeSize}}(type)),\ \doxymbox{\hyperlink{struct_vesper_1_1_buffer_element_a99ee8b05a01544b14c8e460f28cf44d5}{Offset}}(0),\ \doxymbox{\hyperlink{struct_vesper_1_1_buffer_element_aa7c36074287779f7c9f3e800e2b8acff}{Normalized}}(normalized) }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \}}
 
 \end{DoxyCode}
 
 
-References \doxymbox{\hyperlink{struct_vesper_1_1_buffer_element_aa7c36074287779f7c9f3e800e2b8acff}{Normalized}}, \doxymbox{\hyperlink{struct_vesper_1_1_buffer_element_a99ee8b05a01544b14c8e460f28cf44d5}{Offset}}, \doxymbox{\hyperlink{namespace_vesper_ab245b1fa9d90c8fe2aa90c41a588c29e}{Vesper::\+\+Shader\+Data\+Type\+Size()}}, \doxymbox{\hyperlink{struct_vesper_1_1_buffer_element_a908616605e51c17306f49355c6d96925}{Size}}, and \doxymbox{\hyperlink{struct_vesper_1_1_buffer_element_a1b71f7c0b821d8e5aa3e0a49cb275403}{Type}}.
+References \doxymbox{\hyperlink{struct_vesper_1_1_buffer_element_a497b03e769d781131a7e0461e34df975}{Buffer\+Element()}}, \doxymbox{\hyperlink{struct_vesper_1_1_buffer_element_aa7c36074287779f7c9f3e800e2b8acff}{Normalized}}, \doxymbox{\hyperlink{struct_vesper_1_1_buffer_element_a99ee8b05a01544b14c8e460f28cf44d5}{Offset}}, \doxymbox{\hyperlink{namespace_vesper_ab245b1fa9d90c8fe2aa90c41a588c29e}{Vesper::\+\+Shader\+Data\+Type\+Size()}}, \doxymbox{\hyperlink{struct_vesper_1_1_buffer_element_a908616605e51c17306f49355c6d96925}{Size}}, and \doxymbox{\hyperlink{struct_vesper_1_1_buffer_element_a1b71f7c0b821d8e5aa3e0a49cb275403}{Type}}.
+
+
+
+Referenced by \doxymbox{\hyperlink{struct_vesper_1_1_buffer_element_a497b03e769d781131a7e0461e34df975}{Buffer\+Element()}}.
 
 
 
@@ -71,24 +96,28 @@ References \doxymbox{\hyperlink{struct_vesper_1_1_buffer_element_aa7c36074287779
 uint32\+\_\+t Vesper::\+\+Buffer\+Element::\+\+Get\+Component\+Count (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
+
+Returns the number of components in the buffer element based on its \doxylink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131}{Shader\+Data\+Type}. 
+
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (\doxymbox{\hyperlink{struct_vesper_1_1_buffer_element_a1b71f7c0b821d8e5aa3e0a49cb275403}{Type}})\ \{}
-\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a22ae0e2b89e5e3d477f988cc36d3272b}{ShaderDataType::Float}}:\ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
-\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a6694430a2b471b5d2de071f2ef1fdc57}{ShaderDataType::Float2}}:\ \ \ \ \textcolor{keywordflow}{return}\ 2;}
-\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a8a8a1d211464d4bdee46db3c75bfa121}{ShaderDataType::Float3}}:\ \ \ \ \textcolor{keywordflow}{return}\ 3;}
-\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a33116adc6690289da9b82ea736864eeb}{ShaderDataType::Float4}}:\ \ \ \ \textcolor{keywordflow}{return}\ 4;}
-\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a2495a7d9c1fab19af6441abbfed823e1}{ShaderDataType::Mat3}}:\ \ \ \ \ \ \textcolor{keywordflow}{return}\ 3\ *\ 3;}
-\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a80f7408b0a5b5d78c26adae9f6f420f9}{ShaderDataType::Mat4}}:\ \ \ \ \ \ \textcolor{keywordflow}{return}\ 4\ *\ 4;}
-\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a1686a6c336b71b36d77354cea19a8b52}{ShaderDataType::Int}}:\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
-\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a4c6bc90f2bbdf35523e29c414a57bad3}{ShaderDataType::Int2}}:\ \ \ \ \ \ \textcolor{keywordflow}{return}\ 2;}
-\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a56bf1b0e694b442bf4145a04b82ea943}{ShaderDataType::Int3}}:\ \ \ \ \ \ \textcolor{keywordflow}{return}\ 3;}
-\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a1a44f12c3427b3e11c171d09632bad8d}{ShaderDataType::Int4}}:\ \ \ \ \ \ \textcolor{keywordflow}{return}\ 4;}
-\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131ac26f15e86e3de4c398a8273272aba034}{ShaderDataType::Bool}}:\ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
-\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_asserts_8h_a3b51b77f75997760894138afc89403c9}{VZ\_CORE\_ASSERT}}(\textcolor{keyword}{false},\ \textcolor{stringliteral}{"{}Unknown\ ShaderDataType!"{}});}
-\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
-\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (\doxymbox{\hyperlink{struct_vesper_1_1_buffer_element_a1b71f7c0b821d8e5aa3e0a49cb275403}{Type}})\ \{}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a22ae0e2b89e5e3d477f988cc36d3272b}{ShaderDataType::Float}}:\ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a6694430a2b471b5d2de071f2ef1fdc57}{ShaderDataType::Float2}}:\ \ \ \ \textcolor{keywordflow}{return}\ 2;}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a8a8a1d211464d4bdee46db3c75bfa121}{ShaderDataType::Float3}}:\ \ \ \ \textcolor{keywordflow}{return}\ 3;}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a33116adc6690289da9b82ea736864eeb}{ShaderDataType::Float4}}:\ \ \ \ \textcolor{keywordflow}{return}\ 4;}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a2495a7d9c1fab19af6441abbfed823e1}{ShaderDataType::Mat3}}:\ \ \ \ \ \ \textcolor{keywordflow}{return}\ 3\ *\ 3;}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a80f7408b0a5b5d78c26adae9f6f420f9}{ShaderDataType::Mat4}}:\ \ \ \ \ \ \textcolor{keywordflow}{return}\ 4\ *\ 4;}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a1686a6c336b71b36d77354cea19a8b52}{ShaderDataType::Int}}:\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a4c6bc90f2bbdf35523e29c414a57bad3}{ShaderDataType::Int2}}:\ \ \ \ \ \ \textcolor{keywordflow}{return}\ 2;}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a56bf1b0e694b442bf4145a04b82ea943}{ShaderDataType::Int3}}:\ \ \ \ \ \ \textcolor{keywordflow}{return}\ 3;}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131a1a44f12c3427b3e11c171d09632bad8d}{ShaderDataType::Int4}}:\ \ \ \ \ \ \textcolor{keywordflow}{return}\ 4;}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131ac26f15e86e3de4c398a8273272aba034}{ShaderDataType::Bool}}:\ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_asserts_8h_a3b51b77f75997760894138afc89403c9}{VZ\_CORE\_ASSERT}}(\textcolor{keyword}{false},\ \textcolor{stringliteral}{"{}Unknown\ ShaderDataType!"{}});}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \}}
 
 \end{DoxyCode}
 
@@ -106,11 +135,19 @@ References \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a1
 {\footnotesize\ttfamily \label{struct_vesper_1_1_buffer_element_a3be3f53afd22dbb15893cad2c15ff1fe} 
 std::\+string Vesper::\+\+Buffer\+Element::\+\+Name}
 
+
+
+The name of the buffer element. 
+
 \Hypertarget{struct_vesper_1_1_buffer_element_aa7c36074287779f7c9f3e800e2b8acff}\index{Vesper::BufferElement@{Vesper::BufferElement}!Normalized@{Normalized}}
 \index{Normalized@{Normalized}!Vesper::BufferElement@{Vesper::BufferElement}}
 \doxysubsubsection{\texorpdfstring{Normalized}{Normalized}}
 {\footnotesize\ttfamily \label{struct_vesper_1_1_buffer_element_aa7c36074287779f7c9f3e800e2b8acff} 
 bool Vesper::\+\+Buffer\+Element::\+\+Normalized}
+
+
+
+Whether the buffer element is normalized. 
 
 
 
@@ -124,6 +161,10 @@ uint32\+\_\+t Vesper::\+\+Buffer\+Element::\+\+Offset}
 
 
 
+The offset in bytes of the buffer element from the start of the buffer. 
+
+
+
 Referenced by \doxymbox{\hyperlink{struct_vesper_1_1_buffer_element_a497b03e769d781131a7e0461e34df975}{Buffer\+Element()}}.
 
 \Hypertarget{struct_vesper_1_1_buffer_element_a908616605e51c17306f49355c6d96925}\index{Vesper::BufferElement@{Vesper::BufferElement}!Size@{Size}}
@@ -134,6 +175,10 @@ uint32\+\_\+t Vesper::\+\+Buffer\+Element::\+\+Size}
 
 
 
+The size in bytes of the buffer element. 
+
+
+
 Referenced by \doxymbox{\hyperlink{struct_vesper_1_1_buffer_element_a497b03e769d781131a7e0461e34df975}{Buffer\+Element()}}.
 
 \Hypertarget{struct_vesper_1_1_buffer_element_a1b71f7c0b821d8e5aa3e0a49cb275403}\index{Vesper::BufferElement@{Vesper::BufferElement}!Type@{Type}}
@@ -141,6 +186,10 @@ Referenced by \doxymbox{\hyperlink{struct_vesper_1_1_buffer_element_a497b03e769d
 \doxysubsubsection{\texorpdfstring{Type}{Type}}
 {\footnotesize\ttfamily \label{struct_vesper_1_1_buffer_element_a1b71f7c0b821d8e5aa3e0a49cb275403} 
 \doxymbox{\hyperlink{namespace_vesper_af97d3e5c1fb6c279c1b31b887687a131}{Shader\+Data\+Type}} Vesper::\+\+Buffer\+Element::\+\+Type}
+
+
+
+The data type of the buffer element. 
 
 
 

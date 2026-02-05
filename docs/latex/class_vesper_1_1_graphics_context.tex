@@ -2,6 +2,11 @@
 \hypertarget{class_vesper_1_1_graphics_context}{}\label{class_vesper_1_1_graphics_context}\index{Vesper::GraphicsContext@{Vesper::GraphicsContext}}
 
 
+Abstract class representing a graphics context.  
+
+
+
+
 {\ttfamily \+\#include $<$Graphics\+Context.\+h$>$}
 
 Inheritance diagram for Vesper::\+Graphics\+Context:\+\begin{figure}[H]
@@ -16,10 +21,13 @@ Inheritance diagram for Vesper::\+Graphics\+Context:\+\begin{figure}[H]
 virtual \doxymbox{\hyperlink{class_vesper_1_1_graphics_context_af5f44adc2b3221b0724998f669c4ce52}{\texorpdfstring{$\sim$}{\string~}\+Graphics\+Context}} ()
 \item 
 virtual void \doxymbox{\hyperlink{class_vesper_1_1_graphics_context_a69ff1719f52df244b9980617755f57e6}{Init}} ()=0
-\item 
+\begin{DoxyCompactList}\small\item\em Initializes the graphics context. \end{DoxyCompactList}\item 
 virtual void \doxymbox{\hyperlink{class_vesper_1_1_graphics_context_a91344163e3085d00661d03884cfad28a}{Swap\+Buffers}} ()=0
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Swaps the front and back buffers. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Abstract class representing a graphics context. 
 
 \label{doc-constructors}
 \Hypertarget{class_vesper_1_1_graphics_context_doc-constructors}
@@ -32,7 +40,7 @@ virtual Vesper::\+\+Graphics\+Context::\+\texorpdfstring{$\sim$}{\string~}\+Grap
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00010\ \{\}}
+\DoxyCodeLine{00012\ \{\}}
 
 \end{DoxyCode}
 
@@ -48,6 +56,10 @@ virtual void Vesper::\+\+Graphics\+Context::\+\+Init (\begin{DoxyParamCaption}{}
 
 
 
+Initializes the graphics context. 
+
+
+
 Implemented in \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_context_a1065ac4bcb2710bf216ad6ef98e73318}{Vesper::\+\+Open\+GLContext}}.
 
 
@@ -59,6 +71,10 @@ Referenced by \doxymbox{\hyperlink{class_vesper_1_1_windows_window_a5e5586fe5c6d
 \doxysubsubsection{\texorpdfstring{SwapBuffers()}{SwapBuffers()}}
 {\footnotesize\ttfamily \label{class_vesper_1_1_graphics_context_a91344163e3085d00661d03884cfad28a} 
 virtual void Vesper::\+\+Graphics\+Context::\+\+Swap\+Buffers (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Swaps the front and back buffers. 
 
 
 

@@ -98,6 +98,9 @@ $(function(){initNavTree('class_vesper_1_1_uniform_buffer.html','','class_vesper
 </div><!--header-->
 <div class="contents">
 
+<p>An abstraction for a uniform buffer object (UBO).  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_uniform_buffer_8h_source.html">UniformBuffer.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Vesper::UniformBuffer:</div>
@@ -118,7 +121,9 @@ Public Member Functions</h2></td></tr>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a03267e75be5b58c3a687b738dd3d7689" id="r_a03267e75be5b58c3a687b738dd3d7689"><td class="memItemLeft">static <a class="el" href="namespace_vesper.html#ad1f51d7e944b5e23b18b12cacd5f0d27">Ref</a>&lt; <a class="el" href="class_vesper_1_1_uniform_buffer.html">UniformBuffer</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a03267e75be5b58c3a687b738dd3d7689">Create</a> (uint32_t size, uint32_t binding)</td></tr>
 </table>
-<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>An abstraction for a uniform buffer object (UBO). </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a0e5c3de2c9790c2dc917ba1b934636ef" name="a0e5c3de2c9790c2dc917ba1b934636ef"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0e5c3de2c9790c2dc917ba1b934636ef">&#9670;&#160;</a></span>~UniformBuffer()</h2>
 
@@ -141,7 +146,7 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   10</span>{}</div>
+<div class="fragment"><div class="line"><span class="lineno">   12</span>{}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -182,11 +187,11 @@ Static Public Member Functions</h2></td></tr>
 <div class="line"><span class="lineno">   17</span>        <a class="code hl_define" href="_asserts_8h.html#a3b51b77f75997760894138afc89403c9">VZ_CORE_ASSERT</a>(<span class="keyword">false</span>, <span class="stringliteral">&quot;Unknown RendererAPI!&quot;</span>);</div>
 <div class="line"><span class="lineno">   18</span>        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
 <div class="line"><span class="lineno">   19</span>    }</div>
-<div class="ttc" id="a_asserts_8h_html_a3b51b77f75997760894138afc89403c9"><div class="ttname"><a href="_asserts_8h.html#a3b51b77f75997760894138afc89403c9">VZ_CORE_ASSERT</a></div><div class="ttdeci">#define VZ_CORE_ASSERT(x,...)</div><div class="ttdef"><b>Definition</b> Asserts.h:13</div></div>
-<div class="ttc" id="aclass_vesper_1_1_renderer_a_p_i_html_acbef8f1a2c9546387b6513640c5c7995a6adf97f83acf6453d4a6a4b1070f3754"><div class="ttname"><a href="class_vesper_1_1_renderer_a_p_i.html#acbef8f1a2c9546387b6513640c5c7995a6adf97f83acf6453d4a6a4b1070f3754">Vesper::RendererAPI::API::None</a></div><div class="ttdeci">@ None</div><div class="ttdef"><b>Definition</b> RendererAPI.h:12</div></div>
-<div class="ttc" id="aclass_vesper_1_1_renderer_a_p_i_html_acbef8f1a2c9546387b6513640c5c7995a760716b590ee7c0adc25f434f577d8be"><div class="ttname"><a href="class_vesper_1_1_renderer_a_p_i.html#acbef8f1a2c9546387b6513640c5c7995a760716b590ee7c0adc25f434f577d8be">Vesper::RendererAPI::API::OpenGL</a></div><div class="ttdeci">@ OpenGL</div><div class="ttdef"><b>Definition</b> RendererAPI.h:13</div></div>
-<div class="ttc" id="aclass_vesper_1_1_renderer_html_af8221f49491f130b6de7feb1b5093227"><div class="ttname"><a href="class_vesper_1_1_renderer.html#af8221f49491f130b6de7feb1b5093227">Vesper::Renderer::GetAPI</a></div><div class="ttdeci">static RendererAPI::API GetAPI()</div><div class="ttdef"><b>Definition</b> Renderer.h:23</div></div>
-<div class="ttc" id="anamespace_vesper_html_a313930b55375b2f4dd36375b56f11047"><div class="ttname"><a href="namespace_vesper.html#a313930b55375b2f4dd36375b56f11047">Vesper::CreateRef</a></div><div class="ttdeci">constexpr Ref&lt; T &gt; CreateRef(Args &amp;&amp;... args)</div><div class="ttdef"><b>Definition</b> Defines_Macros.h:23</div></div>
+<div class="ttc" id="a_asserts_8h_html_a3b51b77f75997760894138afc89403c9"><div class="ttname"><a href="_asserts_8h.html#a3b51b77f75997760894138afc89403c9">VZ_CORE_ASSERT</a></div><div class="ttdeci">#define VZ_CORE_ASSERT(x,...)</div><div class="ttdef"><b>Definition</b> Asserts.h:20</div></div>
+<div class="ttc" id="aclass_vesper_1_1_renderer_a_p_i_html_acbef8f1a2c9546387b6513640c5c7995a6adf97f83acf6453d4a6a4b1070f3754"><div class="ttname"><a href="class_vesper_1_1_renderer_a_p_i.html#acbef8f1a2c9546387b6513640c5c7995a6adf97f83acf6453d4a6a4b1070f3754">Vesper::RendererAPI::API::None</a></div><div class="ttdeci">@ None</div><div class="ttdef"><b>Definition</b> RendererAPI.h:15</div></div>
+<div class="ttc" id="aclass_vesper_1_1_renderer_a_p_i_html_acbef8f1a2c9546387b6513640c5c7995a760716b590ee7c0adc25f434f577d8be"><div class="ttname"><a href="class_vesper_1_1_renderer_a_p_i.html#acbef8f1a2c9546387b6513640c5c7995a760716b590ee7c0adc25f434f577d8be">Vesper::RendererAPI::API::OpenGL</a></div><div class="ttdeci">@ OpenGL</div><div class="ttdef"><b>Definition</b> RendererAPI.h:16</div></div>
+<div class="ttc" id="aclass_vesper_1_1_renderer_html_af8221f49491f130b6de7feb1b5093227"><div class="ttname"><a href="class_vesper_1_1_renderer.html#af8221f49491f130b6de7feb1b5093227">Vesper::Renderer::GetAPI</a></div><div class="ttdeci">static RendererAPI::API GetAPI()</div><div class="ttdoc">Retrieves the current rendering API.</div><div class="ttdef"><b>Definition</b> Renderer.h:40</div></div>
+<div class="ttc" id="anamespace_vesper_html_a313930b55375b2f4dd36375b56f11047"><div class="ttname"><a href="namespace_vesper.html#a313930b55375b2f4dd36375b56f11047">Vesper::CreateRef</a></div><div class="ttdeci">constexpr Ref&lt; T &gt; CreateRef(Args &amp;&amp;... args)</div><div class="ttdoc">Creates a Ref (shared_ptr) for the given type and constructor arguments.</div><div class="ttdef"><b>Definition</b> Defines_Macros.h:72</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="class_vesper_1_1_renderer.html#af8221f49491f130b6de7feb1b5093227">Vesper::Renderer::GetAPI()</a>, <a class="el" href="class_vesper_1_1_renderer_a_p_i.html#acbef8f1a2c9546387b6513640c5c7995a6adf97f83acf6453d4a6a4b1070f3754">Vesper::RendererAPI::None</a>, and <a class="el" href="class_vesper_1_1_renderer_a_p_i.html#acbef8f1a2c9546387b6513640c5c7995a760716b590ee7c0adc25f434f577d8be">Vesper::RendererAPI::OpenGL</a>.</p>
 

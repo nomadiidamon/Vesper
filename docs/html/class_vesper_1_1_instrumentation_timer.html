@@ -135,13 +135,13 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  143</span>            : <a class="code hl_variable" href="#aef10a87ac5dd8f2feb6c3849731f7749">m_Name</a>(name), <a class="code hl_variable" href="#a9c3cf2f5ce67cba09ea80271648dbe02">m_Stopped</a>(<span class="keyword">false</span>)</div>
-<div class="line"><span class="lineno">  144</span>        {</div>
-<div class="line"><span class="lineno">  145</span>            <a class="code hl_variable" href="#ae1ea475c61e06c0f7a420c8c063382fa">m_StartTimepoint</a> = std::chrono::high_resolution_clock::now();</div>
-<div class="line"><span class="lineno">  146</span>        }</div>
-<div class="ttc" id="aclass_vesper_1_1_instrumentation_timer_html_a9c3cf2f5ce67cba09ea80271648dbe02"><div class="ttname"><a href="#a9c3cf2f5ce67cba09ea80271648dbe02">Vesper::InstrumentationTimer::m_Stopped</a></div><div class="ttdeci">bool m_Stopped</div><div class="ttdef"><b>Definition</b> Instrumentor.h:169</div></div>
-<div class="ttc" id="aclass_vesper_1_1_instrumentation_timer_html_ae1ea475c61e06c0f7a420c8c063382fa"><div class="ttname"><a href="#ae1ea475c61e06c0f7a420c8c063382fa">Vesper::InstrumentationTimer::m_StartTimepoint</a></div><div class="ttdeci">std::chrono::time_point&lt; std::chrono::high_resolution_clock &gt; m_StartTimepoint</div><div class="ttdef"><b>Definition</b> Instrumentor.h:168</div></div>
-<div class="ttc" id="aclass_vesper_1_1_instrumentation_timer_html_aef10a87ac5dd8f2feb6c3849731f7749"><div class="ttname"><a href="#aef10a87ac5dd8f2feb6c3849731f7749">Vesper::InstrumentationTimer::m_Name</a></div><div class="ttdeci">const char * m_Name</div><div class="ttdef"><b>Definition</b> Instrumentor.h:167</div></div>
+<div class="fragment"><div class="line"><span class="lineno">  149</span>            : <a class="code hl_variable" href="#aef10a87ac5dd8f2feb6c3849731f7749">m_Name</a>(name), <a class="code hl_variable" href="#a9c3cf2f5ce67cba09ea80271648dbe02">m_Stopped</a>(<span class="keyword">false</span>)</div>
+<div class="line"><span class="lineno">  150</span>        {</div>
+<div class="line"><span class="lineno">  151</span>            <a class="code hl_variable" href="#ae1ea475c61e06c0f7a420c8c063382fa">m_StartTimepoint</a> = std::chrono::high_resolution_clock::now();</div>
+<div class="line"><span class="lineno">  152</span>        }</div>
+<div class="ttc" id="aclass_vesper_1_1_instrumentation_timer_html_a9c3cf2f5ce67cba09ea80271648dbe02"><div class="ttname"><a href="#a9c3cf2f5ce67cba09ea80271648dbe02">Vesper::InstrumentationTimer::m_Stopped</a></div><div class="ttdeci">bool m_Stopped</div><div class="ttdef"><b>Definition</b> Instrumentor.h:175</div></div>
+<div class="ttc" id="aclass_vesper_1_1_instrumentation_timer_html_ae1ea475c61e06c0f7a420c8c063382fa"><div class="ttname"><a href="#ae1ea475c61e06c0f7a420c8c063382fa">Vesper::InstrumentationTimer::m_StartTimepoint</a></div><div class="ttdeci">std::chrono::time_point&lt; std::chrono::high_resolution_clock &gt; m_StartTimepoint</div><div class="ttdef"><b>Definition</b> Instrumentor.h:174</div></div>
+<div class="ttc" id="aclass_vesper_1_1_instrumentation_timer_html_aef10a87ac5dd8f2feb6c3849731f7749"><div class="ttname"><a href="#aef10a87ac5dd8f2feb6c3849731f7749">Vesper::InstrumentationTimer::m_Name</a></div><div class="ttdeci">const char * m_Name</div><div class="ttdef"><b>Definition</b> Instrumentor.h:173</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -167,11 +167,11 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  149</span>        {</div>
-<div class="line"><span class="lineno">  150</span>            <span class="keywordflow">if</span> (!<a class="code hl_variable" href="#a9c3cf2f5ce67cba09ea80271648dbe02">m_Stopped</a>)</div>
-<div class="line"><span class="lineno">  151</span>                <a class="code hl_function" href="#a82fbaa34e3295e6f78511f5846dd6828">Stop</a>();</div>
-<div class="line"><span class="lineno">  152</span>        }</div>
-<div class="ttc" id="aclass_vesper_1_1_instrumentation_timer_html_a82fbaa34e3295e6f78511f5846dd6828"><div class="ttname"><a href="#a82fbaa34e3295e6f78511f5846dd6828">Vesper::InstrumentationTimer::Stop</a></div><div class="ttdeci">void Stop()</div><div class="ttdef"><b>Definition</b> Instrumentor.h:154</div></div>
+<div class="fragment"><div class="line"><span class="lineno">  155</span>        {</div>
+<div class="line"><span class="lineno">  156</span>            <span class="keywordflow">if</span> (!<a class="code hl_variable" href="#a9c3cf2f5ce67cba09ea80271648dbe02">m_Stopped</a>)</div>
+<div class="line"><span class="lineno">  157</span>                <a class="code hl_function" href="#a82fbaa34e3295e6f78511f5846dd6828">Stop</a>();</div>
+<div class="line"><span class="lineno">  158</span>        }</div>
+<div class="ttc" id="aclass_vesper_1_1_instrumentation_timer_html_a82fbaa34e3295e6f78511f5846dd6828"><div class="ttname"><a href="#a82fbaa34e3295e6f78511f5846dd6828">Vesper::InstrumentationTimer::Stop</a></div><div class="ttdeci">void Stop()</div><div class="ttdef"><b>Definition</b> Instrumentor.h:160</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -198,19 +198,19 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  155</span>        {</div>
-<div class="line"><span class="lineno">  156</span>            <span class="keyword">auto</span> endTimepoint = std::chrono::high_resolution_clock::now();</div>
-<div class="line"><span class="lineno">  157</span> </div>
-<div class="line"><span class="lineno">  158</span>            <span class="keywordtype">long</span> <span class="keywordtype">long</span> start = std::chrono::time_point_cast&lt;std::chrono::microseconds&gt;(<a class="code hl_variable" href="#ae1ea475c61e06c0f7a420c8c063382fa">m_StartTimepoint</a>).time_since_epoch().count();</div>
-<div class="line"><span class="lineno">  159</span>            <span class="keywordtype">long</span> <span class="keywordtype">long</span> end = std::chrono::time_point_cast&lt;std::chrono::microseconds&gt;(endTimepoint).time_since_epoch().count();</div>
-<div class="line"><span class="lineno">  160</span> </div>
-<div class="line"><span class="lineno">  161</span>            uint32_t threadID = std::hash&lt;std::thread::id&gt;{}(std::this_thread::get_id());</div>
-<div class="line"><span class="lineno">  162</span>            <a class="code hl_function" href="class_vesper_1_1_instrumentor.html#a43ebba932df02103a849eb617ca80114">Instrumentor::Get</a>().<a class="code hl_function" href="class_vesper_1_1_instrumentor.html#a868e96beb461ded3358a959a4aef5eda">WriteProfile</a>({ <a class="code hl_variable" href="#aef10a87ac5dd8f2feb6c3849731f7749">m_Name</a>, start, end, threadID });</div>
+<div class="fragment"><div class="line"><span class="lineno">  161</span>        {</div>
+<div class="line"><span class="lineno">  162</span>            <span class="keyword">auto</span> endTimepoint = std::chrono::high_resolution_clock::now();</div>
 <div class="line"><span class="lineno">  163</span> </div>
-<div class="line"><span class="lineno">  164</span>            <a class="code hl_variable" href="#a9c3cf2f5ce67cba09ea80271648dbe02">m_Stopped</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  165</span>        }</div>
-<div class="ttc" id="aclass_vesper_1_1_instrumentor_html_a43ebba932df02103a849eb617ca80114"><div class="ttname"><a href="class_vesper_1_1_instrumentor.html#a43ebba932df02103a849eb617ca80114">Vesper::Instrumentor::Get</a></div><div class="ttdeci">static Instrumentor &amp; Get()</div><div class="ttdef"><b>Definition</b> Instrumentor.h:132</div></div>
-<div class="ttc" id="aclass_vesper_1_1_instrumentor_html_a868e96beb461ded3358a959a4aef5eda"><div class="ttname"><a href="class_vesper_1_1_instrumentor.html#a868e96beb461ded3358a959a4aef5eda">Vesper::Instrumentor::WriteProfile</a></div><div class="ttdeci">void WriteProfile(const ProfileResult &amp;result)</div><div class="ttdef"><b>Definition</b> Instrumentor.h:84</div></div>
+<div class="line"><span class="lineno">  164</span>            <span class="keywordtype">long</span> <span class="keywordtype">long</span> start = std::chrono::time_point_cast&lt;std::chrono::microseconds&gt;(<a class="code hl_variable" href="#ae1ea475c61e06c0f7a420c8c063382fa">m_StartTimepoint</a>).time_since_epoch().count();</div>
+<div class="line"><span class="lineno">  165</span>            <span class="keywordtype">long</span> <span class="keywordtype">long</span> end = std::chrono::time_point_cast&lt;std::chrono::microseconds&gt;(endTimepoint).time_since_epoch().count();</div>
+<div class="line"><span class="lineno">  166</span> </div>
+<div class="line"><span class="lineno">  167</span>            uint32_t threadID = std::hash&lt;std::thread::id&gt;{}(std::this_thread::get_id());</div>
+<div class="line"><span class="lineno">  168</span>            <a class="code hl_function" href="class_vesper_1_1_instrumentor.html#a43ebba932df02103a849eb617ca80114">Instrumentor::Get</a>().<a class="code hl_function" href="class_vesper_1_1_instrumentor.html#a868e96beb461ded3358a959a4aef5eda">WriteProfile</a>({ <a class="code hl_variable" href="#aef10a87ac5dd8f2feb6c3849731f7749">m_Name</a>, start, end, threadID });</div>
+<div class="line"><span class="lineno">  169</span> </div>
+<div class="line"><span class="lineno">  170</span>            <a class="code hl_variable" href="#a9c3cf2f5ce67cba09ea80271648dbe02">m_Stopped</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  171</span>        }</div>
+<div class="ttc" id="aclass_vesper_1_1_instrumentor_html_a43ebba932df02103a849eb617ca80114"><div class="ttname"><a href="class_vesper_1_1_instrumentor.html#a43ebba932df02103a849eb617ca80114">Vesper::Instrumentor::Get</a></div><div class="ttdeci">static Instrumentor &amp; Get()</div><div class="ttdef"><b>Definition</b> Instrumentor.h:138</div></div>
+<div class="ttc" id="aclass_vesper_1_1_instrumentor_html_a868e96beb461ded3358a959a4aef5eda"><div class="ttname"><a href="class_vesper_1_1_instrumentor.html#a868e96beb461ded3358a959a4aef5eda">Vesper::Instrumentor::WriteProfile</a></div><div class="ttdeci">void WriteProfile(const ProfileResult &amp;result)</div><div class="ttdef"><b>Definition</b> Instrumentor.h:90</div></div>
 </div><!-- fragment -->
 </div>
 </div>

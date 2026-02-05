@@ -2,8 +2,6 @@ var _event_8h =
 [
     [ "Vesper::Event", "class_vesper_1_1_event.html", "class_vesper_1_1_event" ],
     [ "Vesper::EventDispatcher", "class_vesper_1_1_event_dispatcher.html", "class_vesper_1_1_event_dispatcher" ],
-    [ "EVENT_CLASS_CATEGORY", "_event_8h.html#abd52deea587a36ef619e596a0c691839", null ],
-    [ "EVENT_CLASS_TYPE", "_event_8h.html#a80d534fc4d69a68eefd1573fd0ac2f44", null ],
     [ "Vesper::EventCategory", "namespace_vesper.html#ad79da63be4419c3a218acaa990decabe", [
       [ "Vesper::None", "namespace_vesper.html#ad79da63be4419c3a218acaa990decabea5af280140310d5b7f04b47a0c0a49f9f", null ],
       [ "Vesper::EventCategoryApplication", "namespace_vesper.html#ad79da63be4419c3a218acaa990decabea528846d063c87fe2abe290ff90ee9eb3", null ],

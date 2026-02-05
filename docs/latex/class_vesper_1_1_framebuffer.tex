@@ -2,6 +2,11 @@
 \hypertarget{class_vesper_1_1_framebuffer}{}\label{class_vesper_1_1_framebuffer}\index{Vesper::Framebuffer@{Vesper::Framebuffer}}
 
 
+Abstract class representing a framebuffer.  
+
+
+
+
 {\ttfamily \+\#include $<$Framebuffer.\+h$>$}
 
 Inheritance diagram for Vesper::\+Framebuffer:\+\begin{figure}[H]
@@ -20,17 +25,20 @@ virtual void \doxymbox{\hyperlink{class_vesper_1_1_framebuffer_a9c97f1a6047676e9
 virtual void \doxymbox{\hyperlink{class_vesper_1_1_framebuffer_a31f13eab445119f16f84ab27beb4129f}{Unbind}} ()=0
 \item 
 virtual void \doxymbox{\hyperlink{class_vesper_1_1_framebuffer_ac044c05641dd4bef0dd2396ef871fd6b}{Resize}} (uint32\+\_\+t width, uint32\+\_\+t height)=0
-\item 
+\begin{DoxyCompactList}\small\item\em Resizes the framebuffer to the given width and height. \end{DoxyCompactList}\item 
 virtual uint32\+\_\+t \doxymbox{\hyperlink{class_vesper_1_1_framebuffer_aead3b53b3984d4924e06407afb39ee5a}{Get\+Color\+Attachment\+Renderer\+ID}} () const =0
-\item 
+\begin{DoxyCompactList}\small\item\em Returns the renderer ID of the color attachment texture. \end{DoxyCompactList}\item 
 virtual const \doxymbox{\hyperlink{namespace_vesper_struct_vesper_1_1_framebuffer_specification}{Framebuffer\+Specification}} \& \doxymbox{\hyperlink{class_vesper_1_1_framebuffer_af502dfc1bdbd1e350dba372f09916b85}{Get\+Specification}} () const =0
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Returns the specification used to create the framebuffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 static \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_framebuffer}{Framebuffer}} $>$ \doxymbox{\hyperlink{class_vesper_1_1_framebuffer_a3069ed2e67841720922623fe18d14fcb}{Create}} (const \doxymbox{\hyperlink{namespace_vesper_struct_vesper_1_1_framebuffer_specification}{Framebuffer\+Specification}} \&spec)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Creates a framebuffer with the given specification. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Abstract class representing a framebuffer. 
 
 \label{doc-constructors}
 \Hypertarget{class_vesper_1_1_framebuffer_doc-constructors}
@@ -63,6 +71,18 @@ Implemented in \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_framebuffer_adcc64
 \doxymbox{\hyperlink{namespace_vesper_ad1f51d7e944b5e23b18b12cacd5f0d27}{Ref}}$<$ \doxymbox{\hyperlink{class_vesper_1_1_framebuffer}{Framebuffer}} $>$ Vesper::\+\+Framebuffer::\+\+Create (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{namespace_vesper_struct_vesper_1_1_framebuffer_specification}{Framebuffer\+Specification}} \&}]{spec}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
+
+Creates a framebuffer with the given specification. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em spec} & The specification for the framebuffer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference-\/counted pointer to the created framebuffer. 
+\end{DoxyReturn}
+
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00010\ \ \ \ \ \{}
 \DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (\doxymbox{\hyperlink{class_vesper_1_1_renderer_af8221f49491f130b6de7feb1b5093227}{Renderer::GetAPI}}())}
@@ -88,6 +108,10 @@ virtual uint32\+\_\+t Vesper::\+\+Framebuffer::\+\+Get\+Color\+Attachment\+Rende
 
 
 
+Returns the renderer ID of the color attachment texture. 
+
+
+
 Implemented in \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_framebuffer_aa44f56c058cf1066862a18836b4d96a9}{Vesper::\+\+Open\+GLFramebuffer}}.
 
 \Hypertarget{class_vesper_1_1_framebuffer_af502dfc1bdbd1e350dba372f09916b85}\index{Vesper::Framebuffer@{Vesper::Framebuffer}!GetSpecification@{GetSpecification}}
@@ -98,6 +122,10 @@ virtual const \doxymbox{\hyperlink{namespace_vesper_struct_vesper_1_1_framebuffe
 
 
 
+Returns the specification used to create the framebuffer. 
+
+
+
 Implemented in \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_framebuffer_a947bc2bd16638f5d2fc44b4ef4801ebd}{Vesper::\+\+Open\+GLFramebuffer}}.
 
 \Hypertarget{class_vesper_1_1_framebuffer_ac044c05641dd4bef0dd2396ef871fd6b}\index{Vesper::Framebuffer@{Vesper::Framebuffer}!Resize@{Resize}}
@@ -105,6 +133,10 @@ Implemented in \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_framebuffer_a947bc
 \doxysubsubsection{\texorpdfstring{Resize()}{Resize()}}
 {\footnotesize\ttfamily \label{class_vesper_1_1_framebuffer_ac044c05641dd4bef0dd2396ef871fd6b} 
 virtual void Vesper::\+\+Framebuffer::\+\+Resize (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{width}{, }\item[{uint32\+\_\+t}]{height}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Resizes the framebuffer to the given width and height. 
 
 
 

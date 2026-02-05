@@ -20,21 +20,21 @@ Inheritance diagram for Vesper::\+Open\+GLShader:\+\begin{figure}[H]
 \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_shader_a01b3f7907f53e97c71ade1d2ba245233}{\texorpdfstring{$\sim$}{\string~}\+Open\+GLShader}} ()
 \item 
 void \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_shader_a3b693b2c8af2234d2030661f5a3fe35e}{Bind}} () const override
-\item 
+\begin{DoxyCompactList}\small\item\em connects the shader program for use. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_shader_aa25276d9979c2cba91d152196996dba5}{Unbind}} () const override
-\item 
+\begin{DoxyCompactList}\small\item\em disconnects the shader program. \end{DoxyCompactList}\item 
 virtual void \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_shader_a494316a0902f35db7a34a1e3d2641756}{Set\+Mat4}} (const std::\+string \&name, const glm::\+mat4 \&value) override
-\item 
+\begin{DoxyCompactList}\small\item\em Sets a 4x4 matrix uniform in the shader. \end{DoxyCompactList}\item 
 virtual void \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_shader_a9e55fe4fba2183704f88ba90cfc98f0b}{Set\+Float4}} (const std::\+string \&name, const glm::\+vec4 \&value) override
-\item 
+\begin{DoxyCompactList}\small\item\em Sets a 4-\/component float vector uniform in the shader. \end{DoxyCompactList}\item 
 virtual void \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_shader_a7950189b78a1c775dd779bf059c19f20}{Set\+Float3}} (const std::\+string \&name, const glm::\+vec3 \&value) override
-\item 
+\begin{DoxyCompactList}\small\item\em Sets a 3-\/component float vector uniform in the shader. \end{DoxyCompactList}\item 
 virtual void \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_shader_a710f6642c1ceed564b7eebae9ba9243f}{Set\+Float}} (const std::\+string \&name, float value) override
-\item 
+\begin{DoxyCompactList}\small\item\em Sets a single float uniform in the shader. \end{DoxyCompactList}\item 
 virtual void \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_shader_a4436d79885690690a133ac26c0ac2a7b}{Set\+Int}} (const std::\+string \&name, int value) override
-\item 
+\begin{DoxyCompactList}\small\item\em Sets a single integer uniform in the shader. \end{DoxyCompactList}\item 
 virtual void \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_shader_a1107df8d1f090ab467bbf6dc09a1e97d}{Set\+Int\+Array}} (const std::\+string \&name, int \texorpdfstring{$\ast$}{*}values, uint32\+\_\+t count) override
-\item 
+\begin{DoxyCompactList}\small\item\em Sets an array of integers uniform in the shader. \end{DoxyCompactList}\item 
 virtual const std::\+string \& \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_shader_a085d5321d4d6e432b5c642217a38f3d7}{Get\+Name}} () const override
 \item 
 void \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_shader_ad7e845977ac15ccf7a8d3b30a6d2f73e}{Upload\+Uniform\+Mat4}} (const std::\+string \&name, const glm::\+mat4 \&matrix)
@@ -162,6 +162,10 @@ References \doxymbox{\hyperlink{class_vesper_1_1_open_g_l_shader_a930b794994b6cc
 \doxysubsubsection{\texorpdfstring{Bind()}{Bind()}}
 {\footnotesize\ttfamily \label{class_vesper_1_1_open_g_l_shader_a3b693b2c8af2234d2030661f5a3fe35e} 
 void Vesper::\+\+Open\+GLShader::\+\+Bind (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+connects the shader program for use. 
 
 
 
@@ -353,6 +357,10 @@ void Vesper::\+\+Open\+GLShader::\+\+Set\+Float (\begin{DoxyParamCaption}\item[{
 
 
 
+Sets a single float uniform in the shader. 
+
+
+
 Implements \doxymbox{\hyperlink{class_vesper_1_1_shader_aef451106250c23d4ab31f5c364aa28f8}{Vesper::\+\+Shader}}.
 
 
@@ -375,6 +383,10 @@ void Vesper::\+\+Open\+GLShader::\+\+Set\+Float3 (\begin{DoxyParamCaption}\item[
 
 
 
+Sets a 3-\/component float vector uniform in the shader. 
+
+
+
 Implements \doxymbox{\hyperlink{class_vesper_1_1_shader_ad1b423de1b03aa2f8e37af728d2b29bf}{Vesper::\+\+Shader}}.
 
 
@@ -393,6 +405,10 @@ void Vesper::\+\+Open\+GLShader::\+\+Set\+Float4 (\begin{DoxyParamCaption}\item[
 
 
 
+Sets a 4-\/component float vector uniform in the shader. 
+
+
+
 Implements \doxymbox{\hyperlink{class_vesper_1_1_shader_a840ec2776c63c940b77f55f14a946e45}{Vesper::\+\+Shader}}.
 
 
@@ -408,6 +424,10 @@ Implements \doxymbox{\hyperlink{class_vesper_1_1_shader_a840ec2776c63c940b77f55f
 \doxysubsubsection{\texorpdfstring{SetInt()}{SetInt()}}
 {\footnotesize\ttfamily \label{class_vesper_1_1_open_g_l_shader_a4436d79885690690a133ac26c0ac2a7b} 
 void Vesper::\+\+Open\+GLShader::\+\+Set\+Int (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{name}{, }\item[{int}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets a single integer uniform in the shader. 
 
 
 
@@ -433,6 +453,10 @@ void Vesper::\+\+Open\+GLShader::\+\+Set\+Int\+Array (\begin{DoxyParamCaption}\i
 
 
 
+Sets an array of integers uniform in the shader. 
+
+
+
 Implements \doxymbox{\hyperlink{class_vesper_1_1_shader_a623f5f15253e3143161cb071122e9c48}{Vesper::\+\+Shader}}.
 
 
@@ -452,6 +476,10 @@ void Vesper::\+\+Open\+GLShader::\+\+Set\+Mat4 (\begin{DoxyParamCaption}\item[{c
 
 
 
+Sets a 4x4 matrix uniform in the shader. 
+
+
+
 Implements \doxymbox{\hyperlink{class_vesper_1_1_shader_ae054ea57db97bfd3920c513067f50f18}{Vesper::\+\+Shader}}.
 
 
@@ -467,6 +495,10 @@ Implements \doxymbox{\hyperlink{class_vesper_1_1_shader_ae054ea57db97bfd3920c513
 \doxysubsubsection{\texorpdfstring{Unbind()}{Unbind()}}
 {\footnotesize\ttfamily \label{class_vesper_1_1_open_g_l_shader_aa25276d9979c2cba91d152196996dba5} 
 void Vesper::\+\+Open\+GLShader::\+\+Unbind (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+disconnects the shader program. 
 
 
 

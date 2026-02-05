@@ -182,9 +182,9 @@ Additional Inherited Members</h2></td></tr>
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><span class="lineno">   20</span>            : <a class="code hl_variable" href="#ad3171f43740e9c61e3cabd106ba6a13e">m_Width</a>(width), <a class="code hl_variable" href="#a5f80f77100f9310e3d35563339b33727">m_Height</a>(height) {}</div>
-<div class="ttc" id="aclass_vesper_1_1_window_resize_event_html_a5f80f77100f9310e3d35563339b33727"><div class="ttname"><a href="#a5f80f77100f9310e3d35563339b33727">Vesper::WindowResizeEvent::m_Height</a></div><div class="ttdeci">unsigned int m_Height</div><div class="ttdef"><b>Definition</b> ApplicationEvent.h:39</div></div>
-<div class="ttc" id="aclass_vesper_1_1_window_resize_event_html_ad3171f43740e9c61e3cabd106ba6a13e"><div class="ttname"><a href="#ad3171f43740e9c61e3cabd106ba6a13e">Vesper::WindowResizeEvent::m_Width</a></div><div class="ttdeci">unsigned int m_Width</div><div class="ttdef"><b>Definition</b> ApplicationEvent.h:39</div></div>
+<div class="fragment"><div class="line"><span class="lineno">   24</span>            : <a class="code hl_variable" href="#ad3171f43740e9c61e3cabd106ba6a13e">m_Width</a>(width), <a class="code hl_variable" href="#a5f80f77100f9310e3d35563339b33727">m_Height</a>(height) {}</div>
+<div class="ttc" id="aclass_vesper_1_1_window_resize_event_html_a5f80f77100f9310e3d35563339b33727"><div class="ttname"><a href="#a5f80f77100f9310e3d35563339b33727">Vesper::WindowResizeEvent::m_Height</a></div><div class="ttdeci">unsigned int m_Height</div><div class="ttdef"><b>Definition</b> ApplicationEvent.h:43</div></div>
+<div class="ttc" id="aclass_vesper_1_1_window_resize_event_html_ad3171f43740e9c61e3cabd106ba6a13e"><div class="ttname"><a href="#ad3171f43740e9c61e3cabd106ba6a13e">Vesper::WindowResizeEvent::m_Width</a></div><div class="ttdeci">unsigned int m_Width</div><div class="ttdef"><b>Definition</b> ApplicationEvent.h:43</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a5f80f77100f9310e3d35563339b33727">m_Height</a>, and <a class="el" href="#ad3171f43740e9c61e3cabd106ba6a13e">m_Width</a>.</p>
 
@@ -215,7 +215,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get the new height of the window. </p>
-<div class="fragment"><div class="line"><span class="lineno">   25</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a5f80f77100f9310e3d35563339b33727">m_Height</a>; }</div>
+<div class="fragment"><div class="line"><span class="lineno">   29</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a5f80f77100f9310e3d35563339b33727">m_Height</a>; }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a5f80f77100f9310e3d35563339b33727">m_Height</a>.</p>
 
@@ -247,7 +247,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get the new width of the window. </p>
-<div class="fragment"><div class="line"><span class="lineno">   23</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#ad3171f43740e9c61e3cabd106ba6a13e">m_Width</a>; }</div>
+<div class="fragment"><div class="line"><span class="lineno">   27</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#ad3171f43740e9c61e3cabd106ba6a13e">m_Width</a>; }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#ad3171f43740e9c61e3cabd106ba6a13e">m_Width</a>.</p>
 
@@ -281,11 +281,11 @@ Additional Inherited Members</h2></td></tr>
 <p>Convert the event to a string representation. </p>
 
 <p>Reimplemented from <a class="el" href="class_vesper_1_1_event.html#aaba48fc434a2539c5ce000fda6aa7f05">Vesper::Event</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   29</span>        {</div>
-<div class="line"><span class="lineno">   30</span>            std::stringstream ss;</div>
-<div class="line"><span class="lineno">   31</span>            ss &lt;&lt; <span class="stringliteral">&quot;WindowResizeEvent: &quot;</span> &lt;&lt; <a class="code hl_variable" href="#ad3171f43740e9c61e3cabd106ba6a13e">m_Width</a> &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; <a class="code hl_variable" href="#a5f80f77100f9310e3d35563339b33727">m_Height</a>;</div>
-<div class="line"><span class="lineno">   32</span>            <span class="keywordflow">return</span> ss.str();</div>
-<div class="line"><span class="lineno">   33</span>        }</div>
+<div class="fragment"><div class="line"><span class="lineno">   33</span>        {</div>
+<div class="line"><span class="lineno">   34</span>            std::stringstream ss;</div>
+<div class="line"><span class="lineno">   35</span>            ss &lt;&lt; <span class="stringliteral">&quot;WindowResizeEvent: &quot;</span> &lt;&lt; <a class="code hl_variable" href="#ad3171f43740e9c61e3cabd106ba6a13e">m_Width</a> &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; <a class="code hl_variable" href="#a5f80f77100f9310e3d35563339b33727">m_Height</a>;</div>
+<div class="line"><span class="lineno">   36</span>            <span class="keywordflow">return</span> ss.str();</div>
+<div class="line"><span class="lineno">   37</span>        }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a5f80f77100f9310e3d35563339b33727">m_Height</a>, and <a class="el" href="#ad3171f43740e9c61e3cabd106ba6a13e">m_Width</a>.</p>
 

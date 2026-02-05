@@ -161,25 +161,25 @@ template&lt;size_t N, size_t K&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  185</span>    {</div>
-<div class="line"><span class="lineno">  186</span>        <a class="code hl_struct" href="#struct_instrumentor_utils_1_1_change_result">ChangeResult&lt;N&gt;</a> result = {};</div>
-<div class="line"><span class="lineno">  187</span> </div>
-<div class="line"><span class="lineno">  188</span>        <span class="keywordtype">size_t</span> srcIndex = 0;</div>
-<div class="line"><span class="lineno">  189</span>        <span class="keywordtype">size_t</span> dstIndex = 0;</div>
-<div class="line"><span class="lineno">  190</span>        <span class="keywordflow">while</span> (srcIndex &lt; N)</div>
-<div class="line"><span class="lineno">  191</span>        {</div>
-<div class="line"><span class="lineno">  192</span>            <span class="keywordtype">size_t</span> matchIndex = 0;</div>
-<div class="line"><span class="lineno">  193</span>            <span class="keywordflow">while</span> (matchIndex &lt; K - 1 &amp;&amp; srcIndex + matchIndex &lt; N - 1 &amp;&amp; expr[srcIndex + matchIndex] == remove[matchIndex])</div>
-<div class="line"><span class="lineno">  194</span>                matchIndex++;</div>
-<div class="line"><span class="lineno">  195</span>            <span class="keywordflow">if</span> (matchIndex == K - 1)</div>
-<div class="line"><span class="lineno">  196</span>                srcIndex += matchIndex;</div>
-<div class="line"><span class="lineno">  197</span>            result.<a class="code hl_variable" href="#ac01edcf5dfb9a10440bf406a9fde573c">Data</a>[dstIndex++] = expr[srcIndex] == <span class="charliteral">&#39;&quot;&#39;</span> ? <span class="charliteral">&#39;\&#39;&#39;</span> : expr[srcIndex];</div>
-<div class="line"><span class="lineno">  198</span>            srcIndex++;</div>
-<div class="line"><span class="lineno">  199</span>        }</div>
-<div class="line"><span class="lineno">  200</span>        <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno">  201</span>    }</div>
-<div class="ttc" id="anamespace_instrumentor_utils_html_ac01edcf5dfb9a10440bf406a9fde573c"><div class="ttname"><a href="#ac01edcf5dfb9a10440bf406a9fde573c">InstrumentorUtils::ChangeResult::Data</a></div><div class="ttdeci">char Data[N]</div><div class="ttdef"><b>Definition</b> Instrumentor.h:180</div></div>
-<div class="ttc" id="anamespace_instrumentor_utils_html_struct_instrumentor_utils_1_1_change_result"><div class="ttname"><a href="#struct_instrumentor_utils_1_1_change_result">InstrumentorUtils::ChangeResult</a></div><div class="ttdef"><b>Definition</b> Instrumentor.h:179</div></div>
+<div class="fragment"><div class="line"><span class="lineno">  191</span>    {</div>
+<div class="line"><span class="lineno">  192</span>        <a class="code hl_struct" href="#struct_instrumentor_utils_1_1_change_result">ChangeResult&lt;N&gt;</a> result = {};</div>
+<div class="line"><span class="lineno">  193</span> </div>
+<div class="line"><span class="lineno">  194</span>        <span class="keywordtype">size_t</span> srcIndex = 0;</div>
+<div class="line"><span class="lineno">  195</span>        <span class="keywordtype">size_t</span> dstIndex = 0;</div>
+<div class="line"><span class="lineno">  196</span>        <span class="keywordflow">while</span> (srcIndex &lt; N)</div>
+<div class="line"><span class="lineno">  197</span>        {</div>
+<div class="line"><span class="lineno">  198</span>            <span class="keywordtype">size_t</span> matchIndex = 0;</div>
+<div class="line"><span class="lineno">  199</span>            <span class="keywordflow">while</span> (matchIndex &lt; K - 1 &amp;&amp; srcIndex + matchIndex &lt; N - 1 &amp;&amp; expr[srcIndex + matchIndex] == remove[matchIndex])</div>
+<div class="line"><span class="lineno">  200</span>                matchIndex++;</div>
+<div class="line"><span class="lineno">  201</span>            <span class="keywordflow">if</span> (matchIndex == K - 1)</div>
+<div class="line"><span class="lineno">  202</span>                srcIndex += matchIndex;</div>
+<div class="line"><span class="lineno">  203</span>            result.<a class="code hl_variable" href="#ac01edcf5dfb9a10440bf406a9fde573c">Data</a>[dstIndex++] = expr[srcIndex] == <span class="charliteral">&#39;&quot;&#39;</span> ? <span class="charliteral">&#39;\&#39;&#39;</span> : expr[srcIndex];</div>
+<div class="line"><span class="lineno">  204</span>            srcIndex++;</div>
+<div class="line"><span class="lineno">  205</span>        }</div>
+<div class="line"><span class="lineno">  206</span>        <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">  207</span>    }</div>
+<div class="ttc" id="anamespace_instrumentor_utils_html_ac01edcf5dfb9a10440bf406a9fde573c"><div class="ttname"><a href="#ac01edcf5dfb9a10440bf406a9fde573c">InstrumentorUtils::ChangeResult::Data</a></div><div class="ttdeci">char Data[N]</div><div class="ttdef"><b>Definition</b> Instrumentor.h:186</div></div>
+<div class="ttc" id="anamespace_instrumentor_utils_html_struct_instrumentor_utils_1_1_change_result"><div class="ttname"><a href="#struct_instrumentor_utils_1_1_change_result">InstrumentorUtils::ChangeResult</a></div><div class="ttdef"><b>Definition</b> Instrumentor.h:185</div></div>
 </div><!-- fragment -->
 </div>
 </div>

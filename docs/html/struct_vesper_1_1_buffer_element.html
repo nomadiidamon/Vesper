@@ -98,23 +98,35 @@ $(function(){initNavTree('struct_vesper_1_1_buffer_element.html','','struct_vesp
 </div><!--header-->
 <div class="contents">
 
+<p>Represents a single element in a buffer layout.  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_buffer_8h_source.html">Buffer.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a03424d1361942e91c4b2188329ccfe75" id="r_a03424d1361942e91c4b2188329ccfe75"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a03424d1361942e91c4b2188329ccfe75">BufferElement</a> ()</td></tr>
 <tr class="memitem:a497b03e769d781131a7e0461e34df975" id="r_a497b03e769d781131a7e0461e34df975"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a497b03e769d781131a7e0461e34df975">BufferElement</a> (<a class="el" href="namespace_vesper.html#af97d3e5c1fb6c279c1b31b887687a131">ShaderDataType</a> type, const std::string &amp;name, bool normalized=false)</td></tr>
+<tr class="memdesc:a497b03e769d781131a7e0461e34df975"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="struct_vesper_1_1_buffer_element.html" title="Represents a single element in a buffer layout.">BufferElement</a> with the given type, name, and normalization flag.  <br /></td></tr>
 <tr class="memitem:a4cbb8e7a5cb10efbdd548a6adc93504e" id="r_a4cbb8e7a5cb10efbdd548a6adc93504e"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#a4cbb8e7a5cb10efbdd548a6adc93504e">GetComponentCount</a> () const</td></tr>
+<tr class="memdesc:a4cbb8e7a5cb10efbdd548a6adc93504e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of components in the buffer element based on its <a class="el" href="namespace_vesper.html#af97d3e5c1fb6c279c1b31b887687a131" title="The different data types that can be used in shaders.">ShaderDataType</a>.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a3be3f53afd22dbb15893cad2c15ff1fe" id="r_a3be3f53afd22dbb15893cad2c15ff1fe"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#a3be3f53afd22dbb15893cad2c15ff1fe">Name</a></td></tr>
+<tr class="memdesc:a3be3f53afd22dbb15893cad2c15ff1fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">The name of the buffer element.  <br /></td></tr>
 <tr class="memitem:a1b71f7c0b821d8e5aa3e0a49cb275403" id="r_a1b71f7c0b821d8e5aa3e0a49cb275403"><td class="memItemLeft"><a class="el" href="namespace_vesper.html#af97d3e5c1fb6c279c1b31b887687a131">ShaderDataType</a>&#160;</td><td class="memItemRight"><a class="el" href="#a1b71f7c0b821d8e5aa3e0a49cb275403">Type</a></td></tr>
+<tr class="memdesc:a1b71f7c0b821d8e5aa3e0a49cb275403"><td class="mdescLeft">&#160;</td><td class="mdescRight">The data type of the buffer element.  <br /></td></tr>
 <tr class="memitem:a908616605e51c17306f49355c6d96925" id="r_a908616605e51c17306f49355c6d96925"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#a908616605e51c17306f49355c6d96925">Size</a></td></tr>
+<tr class="memdesc:a908616605e51c17306f49355c6d96925"><td class="mdescLeft">&#160;</td><td class="mdescRight">The size in bytes of the buffer element.  <br /></td></tr>
 <tr class="memitem:a99ee8b05a01544b14c8e460f28cf44d5" id="r_a99ee8b05a01544b14c8e460f28cf44d5"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#a99ee8b05a01544b14c8e460f28cf44d5">Offset</a></td></tr>
+<tr class="memdesc:a99ee8b05a01544b14c8e460f28cf44d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">The offset in bytes of the buffer element from the start of the buffer.  <br /></td></tr>
 <tr class="memitem:aa7c36074287779f7c9f3e800e2b8acff" id="r_aa7c36074287779f7c9f3e800e2b8acff"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#aa7c36074287779f7c9f3e800e2b8acff">Normalized</a></td></tr>
+<tr class="memdesc:aa7c36074287779f7c9f3e800e2b8acff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether the buffer element is normalized.  <br /></td></tr>
 </table>
-<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Represents a single element in a buffer layout. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a03424d1361942e91c4b2188329ccfe75" name="a03424d1361942e91c4b2188329ccfe75"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a03424d1361942e91c4b2188329ccfe75">&#9670;&#160;</a></span>BufferElement() <span class="overload">[1/2]</span></h2>
 
@@ -137,7 +149,7 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   39</span>{}</div>
+<div class="fragment"><div class="line"><span class="lineno">   51</span>{}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -172,17 +184,29 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   41</span>            : <a class="code hl_variable" href="#a3be3f53afd22dbb15893cad2c15ff1fe">Name</a>(name), <a class="code hl_variable" href="#a1b71f7c0b821d8e5aa3e0a49cb275403">Type</a>(type), <a class="code hl_variable" href="#a908616605e51c17306f49355c6d96925">Size</a>(<a class="code hl_function" href="namespace_vesper.html#ab245b1fa9d90c8fe2aa90c41a588c29e">ShaderDataTypeSize</a>(type)), <a class="code hl_variable" href="#a99ee8b05a01544b14c8e460f28cf44d5">Offset</a>(0), <a class="code hl_variable" href="#aa7c36074287779f7c9f3e800e2b8acff">Normalized</a>(normalized)</div>
-<div class="line"><span class="lineno">   42</span>        {</div>
-<div class="line"><span class="lineno">   43</span>        }</div>
-<div class="ttc" id="anamespace_vesper_html_ab245b1fa9d90c8fe2aa90c41a588c29e"><div class="ttname"><a href="namespace_vesper.html#ab245b1fa9d90c8fe2aa90c41a588c29e">Vesper::ShaderDataTypeSize</a></div><div class="ttdeci">static uint32_t ShaderDataTypeSize(ShaderDataType type)</div><div class="ttdef"><b>Definition</b> Buffer.h:13</div></div>
-<div class="ttc" id="astruct_vesper_1_1_buffer_element_html_a1b71f7c0b821d8e5aa3e0a49cb275403"><div class="ttname"><a href="#a1b71f7c0b821d8e5aa3e0a49cb275403">Vesper::BufferElement::Type</a></div><div class="ttdeci">ShaderDataType Type</div><div class="ttdef"><b>Definition</b> Buffer.h:34</div></div>
-<div class="ttc" id="astruct_vesper_1_1_buffer_element_html_a3be3f53afd22dbb15893cad2c15ff1fe"><div class="ttname"><a href="#a3be3f53afd22dbb15893cad2c15ff1fe">Vesper::BufferElement::Name</a></div><div class="ttdeci">std::string Name</div><div class="ttdef"><b>Definition</b> Buffer.h:33</div></div>
-<div class="ttc" id="astruct_vesper_1_1_buffer_element_html_a908616605e51c17306f49355c6d96925"><div class="ttname"><a href="#a908616605e51c17306f49355c6d96925">Vesper::BufferElement::Size</a></div><div class="ttdeci">uint32_t Size</div><div class="ttdef"><b>Definition</b> Buffer.h:35</div></div>
-<div class="ttc" id="astruct_vesper_1_1_buffer_element_html_a99ee8b05a01544b14c8e460f28cf44d5"><div class="ttname"><a href="#a99ee8b05a01544b14c8e460f28cf44d5">Vesper::BufferElement::Offset</a></div><div class="ttdeci">uint32_t Offset</div><div class="ttdef"><b>Definition</b> Buffer.h:36</div></div>
-<div class="ttc" id="astruct_vesper_1_1_buffer_element_html_aa7c36074287779f7c9f3e800e2b8acff"><div class="ttname"><a href="#aa7c36074287779f7c9f3e800e2b8acff">Vesper::BufferElement::Normalized</a></div><div class="ttdeci">bool Normalized</div><div class="ttdef"><b>Definition</b> Buffer.h:37</div></div>
+
+<p>Constructs a <a class="el" href="struct_vesper_1_1_buffer_element.html" title="Represents a single element in a buffer layout.">BufferElement</a> with the given type, name, and normalization flag. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>The <a class="el" href="namespace_vesper.html#af97d3e5c1fb6c279c1b31b887687a131" title="The different data types that can be used in shaders.">ShaderDataType</a> of the buffer element. </td></tr>
+    <tr><td class="paramname">name</td><td>The name of the buffer element. </td></tr>
+    <tr><td class="paramname">normalized</td><td>Whether the buffer element is normalized. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">   58</span>            : <a class="code hl_variable" href="#a3be3f53afd22dbb15893cad2c15ff1fe">Name</a>(name), <a class="code hl_variable" href="#a1b71f7c0b821d8e5aa3e0a49cb275403">Type</a>(type), <a class="code hl_variable" href="#a908616605e51c17306f49355c6d96925">Size</a>(<a class="code hl_function" href="namespace_vesper.html#ab245b1fa9d90c8fe2aa90c41a588c29e">ShaderDataTypeSize</a>(type)), <a class="code hl_variable" href="#a99ee8b05a01544b14c8e460f28cf44d5">Offset</a>(0), <a class="code hl_variable" href="#aa7c36074287779f7c9f3e800e2b8acff">Normalized</a>(normalized)</div>
+<div class="line"><span class="lineno">   59</span>        {</div>
+<div class="line"><span class="lineno">   60</span>        }</div>
+<div class="ttc" id="anamespace_vesper_html_ab245b1fa9d90c8fe2aa90c41a588c29e"><div class="ttname"><a href="namespace_vesper.html#ab245b1fa9d90c8fe2aa90c41a588c29e">Vesper::ShaderDataTypeSize</a></div><div class="ttdeci">static uint32_t ShaderDataTypeSize(ShaderDataType type)</div><div class="ttdoc">Returns the size in bytes of the given ShaderDataType.</div><div class="ttdef"><b>Definition</b> Buffer.h:19</div></div>
+<div class="ttc" id="astruct_vesper_1_1_buffer_element_html_a1b71f7c0b821d8e5aa3e0a49cb275403"><div class="ttname"><a href="#a1b71f7c0b821d8e5aa3e0a49cb275403">Vesper::BufferElement::Type</a></div><div class="ttdeci">ShaderDataType Type</div><div class="ttdoc">The data type of the buffer element.</div><div class="ttdef"><b>Definition</b> Buffer.h:43</div></div>
+<div class="ttc" id="astruct_vesper_1_1_buffer_element_html_a3be3f53afd22dbb15893cad2c15ff1fe"><div class="ttname"><a href="#a3be3f53afd22dbb15893cad2c15ff1fe">Vesper::BufferElement::Name</a></div><div class="ttdeci">std::string Name</div><div class="ttdoc">The name of the buffer element.</div><div class="ttdef"><b>Definition</b> Buffer.h:41</div></div>
+<div class="ttc" id="astruct_vesper_1_1_buffer_element_html_a908616605e51c17306f49355c6d96925"><div class="ttname"><a href="#a908616605e51c17306f49355c6d96925">Vesper::BufferElement::Size</a></div><div class="ttdeci">uint32_t Size</div><div class="ttdoc">The size in bytes of the buffer element.</div><div class="ttdef"><b>Definition</b> Buffer.h:45</div></div>
+<div class="ttc" id="astruct_vesper_1_1_buffer_element_html_a99ee8b05a01544b14c8e460f28cf44d5"><div class="ttname"><a href="#a99ee8b05a01544b14c8e460f28cf44d5">Vesper::BufferElement::Offset</a></div><div class="ttdeci">uint32_t Offset</div><div class="ttdoc">The offset in bytes of the buffer element from the start of the buffer.</div><div class="ttdef"><b>Definition</b> Buffer.h:47</div></div>
+<div class="ttc" id="astruct_vesper_1_1_buffer_element_html_aa7c36074287779f7c9f3e800e2b8acff"><div class="ttname"><a href="#aa7c36074287779f7c9f3e800e2b8acff">Vesper::BufferElement::Normalized</a></div><div class="ttdeci">bool Normalized</div><div class="ttdoc">Whether the buffer element is normalized.</div><div class="ttdef"><b>Definition</b> Buffer.h:49</div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="#aa7c36074287779f7c9f3e800e2b8acff">Normalized</a>, <a class="el" href="#a99ee8b05a01544b14c8e460f28cf44d5">Offset</a>, <a class="el" href="namespace_vesper.html#ab245b1fa9d90c8fe2aa90c41a588c29e">Vesper::ShaderDataTypeSize()</a>, <a class="el" href="#a908616605e51c17306f49355c6d96925">Size</a>, and <a class="el" href="#a1b71f7c0b821d8e5aa3e0a49cb275403">Type</a>.</p>
+<p class="reference">References <a class="el" href="#a497b03e769d781131a7e0461e34df975">BufferElement()</a>, <a class="el" href="#aa7c36074287779f7c9f3e800e2b8acff">Normalized</a>, <a class="el" href="#a99ee8b05a01544b14c8e460f28cf44d5">Offset</a>, <a class="el" href="namespace_vesper.html#ab245b1fa9d90c8fe2aa90c41a588c29e">Vesper::ShaderDataTypeSize()</a>, <a class="el" href="#a908616605e51c17306f49355c6d96925">Size</a>, and <a class="el" href="#a1b71f7c0b821d8e5aa3e0a49cb275403">Type</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="#a497b03e769d781131a7e0461e34df975">BufferElement()</a>.</p>
 
 </div>
 </div>
@@ -209,35 +233,37 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   45</span>                                           {</div>
-<div class="line"><span class="lineno">   46</span>            <span class="keywordflow">switch</span> (<a class="code hl_variable" href="#a1b71f7c0b821d8e5aa3e0a49cb275403">Type</a>) {</div>
-<div class="line"><span class="lineno">   47</span>            <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="namespace_vesper.html#af97d3e5c1fb6c279c1b31b887687a131a22ae0e2b89e5e3d477f988cc36d3272b">ShaderDataType::Float</a>:     <span class="keywordflow">return</span> 1;</div>
-<div class="line"><span class="lineno">   48</span>            <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="namespace_vesper.html#af97d3e5c1fb6c279c1b31b887687a131a6694430a2b471b5d2de071f2ef1fdc57">ShaderDataType::Float2</a>:    <span class="keywordflow">return</span> 2;</div>
-<div class="line"><span class="lineno">   49</span>            <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="namespace_vesper.html#af97d3e5c1fb6c279c1b31b887687a131a8a8a1d211464d4bdee46db3c75bfa121">ShaderDataType::Float3</a>:    <span class="keywordflow">return</span> 3;</div>
-<div class="line"><span class="lineno">   50</span>            <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="namespace_vesper.html#af97d3e5c1fb6c279c1b31b887687a131a33116adc6690289da9b82ea736864eeb">ShaderDataType::Float4</a>:    <span class="keywordflow">return</span> 4;</div>
-<div class="line"><span class="lineno">   51</span>            <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="namespace_vesper.html#af97d3e5c1fb6c279c1b31b887687a131a2495a7d9c1fab19af6441abbfed823e1">ShaderDataType::Mat3</a>:      <span class="keywordflow">return</span> 3 * 3;</div>
-<div class="line"><span class="lineno">   52</span>            <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="namespace_vesper.html#af97d3e5c1fb6c279c1b31b887687a131a80f7408b0a5b5d78c26adae9f6f420f9">ShaderDataType::Mat4</a>:      <span class="keywordflow">return</span> 4 * 4;</div>
-<div class="line"><span class="lineno">   53</span>            <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="namespace_vesper.html#af97d3e5c1fb6c279c1b31b887687a131a1686a6c336b71b36d77354cea19a8b52">ShaderDataType::Int</a>:       <span class="keywordflow">return</span> 1;</div>
-<div class="line"><span class="lineno">   54</span>            <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="namespace_vesper.html#af97d3e5c1fb6c279c1b31b887687a131a4c6bc90f2bbdf35523e29c414a57bad3">ShaderDataType::Int2</a>:      <span class="keywordflow">return</span> 2;</div>
-<div class="line"><span class="lineno">   55</span>            <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="namespace_vesper.html#af97d3e5c1fb6c279c1b31b887687a131a56bf1b0e694b442bf4145a04b82ea943">ShaderDataType::Int3</a>:      <span class="keywordflow">return</span> 3;</div>
-<div class="line"><span class="lineno">   56</span>            <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="namespace_vesper.html#af97d3e5c1fb6c279c1b31b887687a131a1a44f12c3427b3e11c171d09632bad8d">ShaderDataType::Int4</a>:      <span class="keywordflow">return</span> 4;</div>
-<div class="line"><span class="lineno">   57</span>            <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="namespace_vesper.html#af97d3e5c1fb6c279c1b31b887687a131ac26f15e86e3de4c398a8273272aba034">ShaderDataType::Bool</a>:      <span class="keywordflow">return</span> 1;</div>
-<div class="line"><span class="lineno">   58</span>            }</div>
-<div class="line"><span class="lineno">   59</span>            <a class="code hl_define" href="_asserts_8h.html#a3b51b77f75997760894138afc89403c9">VZ_CORE_ASSERT</a>(<span class="keyword">false</span>, <span class="stringliteral">&quot;Unknown ShaderDataType!&quot;</span>);</div>
-<div class="line"><span class="lineno">   60</span>            <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">   61</span>        }</div>
-<div class="ttc" id="a_asserts_8h_html_a3b51b77f75997760894138afc89403c9"><div class="ttname"><a href="_asserts_8h.html#a3b51b77f75997760894138afc89403c9">VZ_CORE_ASSERT</a></div><div class="ttdeci">#define VZ_CORE_ASSERT(x,...)</div><div class="ttdef"><b>Definition</b> Asserts.h:13</div></div>
-<div class="ttc" id="anamespace_vesper_html_af97d3e5c1fb6c279c1b31b887687a131a1686a6c336b71b36d77354cea19a8b52"><div class="ttname"><a href="namespace_vesper.html#af97d3e5c1fb6c279c1b31b887687a131a1686a6c336b71b36d77354cea19a8b52">Vesper::ShaderDataType::Int</a></div><div class="ttdeci">@ Int</div><div class="ttdef"><b>Definition</b> Buffer.h:9</div></div>
-<div class="ttc" id="anamespace_vesper_html_af97d3e5c1fb6c279c1b31b887687a131a1a44f12c3427b3e11c171d09632bad8d"><div class="ttname"><a href="namespace_vesper.html#af97d3e5c1fb6c279c1b31b887687a131a1a44f12c3427b3e11c171d09632bad8d">Vesper::ShaderDataType::Int4</a></div><div class="ttdeci">@ Int4</div><div class="ttdef"><b>Definition</b> Buffer.h:9</div></div>
-<div class="ttc" id="anamespace_vesper_html_af97d3e5c1fb6c279c1b31b887687a131a22ae0e2b89e5e3d477f988cc36d3272b"><div class="ttname"><a href="namespace_vesper.html#af97d3e5c1fb6c279c1b31b887687a131a22ae0e2b89e5e3d477f988cc36d3272b">Vesper::ShaderDataType::Float</a></div><div class="ttdeci">@ Float</div><div class="ttdef"><b>Definition</b> Buffer.h:7</div></div>
-<div class="ttc" id="anamespace_vesper_html_af97d3e5c1fb6c279c1b31b887687a131a2495a7d9c1fab19af6441abbfed823e1"><div class="ttname"><a href="namespace_vesper.html#af97d3e5c1fb6c279c1b31b887687a131a2495a7d9c1fab19af6441abbfed823e1">Vesper::ShaderDataType::Mat3</a></div><div class="ttdeci">@ Mat3</div><div class="ttdef"><b>Definition</b> Buffer.h:8</div></div>
-<div class="ttc" id="anamespace_vesper_html_af97d3e5c1fb6c279c1b31b887687a131a33116adc6690289da9b82ea736864eeb"><div class="ttname"><a href="namespace_vesper.html#af97d3e5c1fb6c279c1b31b887687a131a33116adc6690289da9b82ea736864eeb">Vesper::ShaderDataType::Float4</a></div><div class="ttdeci">@ Float4</div><div class="ttdef"><b>Definition</b> Buffer.h:7</div></div>
-<div class="ttc" id="anamespace_vesper_html_af97d3e5c1fb6c279c1b31b887687a131a4c6bc90f2bbdf35523e29c414a57bad3"><div class="ttname"><a href="namespace_vesper.html#af97d3e5c1fb6c279c1b31b887687a131a4c6bc90f2bbdf35523e29c414a57bad3">Vesper::ShaderDataType::Int2</a></div><div class="ttdeci">@ Int2</div><div class="ttdef"><b>Definition</b> Buffer.h:9</div></div>
-<div class="ttc" id="anamespace_vesper_html_af97d3e5c1fb6c279c1b31b887687a131a56bf1b0e694b442bf4145a04b82ea943"><div class="ttname"><a href="namespace_vesper.html#af97d3e5c1fb6c279c1b31b887687a131a56bf1b0e694b442bf4145a04b82ea943">Vesper::ShaderDataType::Int3</a></div><div class="ttdeci">@ Int3</div><div class="ttdef"><b>Definition</b> Buffer.h:9</div></div>
-<div class="ttc" id="anamespace_vesper_html_af97d3e5c1fb6c279c1b31b887687a131a6694430a2b471b5d2de071f2ef1fdc57"><div class="ttname"><a href="namespace_vesper.html#af97d3e5c1fb6c279c1b31b887687a131a6694430a2b471b5d2de071f2ef1fdc57">Vesper::ShaderDataType::Float2</a></div><div class="ttdeci">@ Float2</div><div class="ttdef"><b>Definition</b> Buffer.h:7</div></div>
-<div class="ttc" id="anamespace_vesper_html_af97d3e5c1fb6c279c1b31b887687a131a80f7408b0a5b5d78c26adae9f6f420f9"><div class="ttname"><a href="namespace_vesper.html#af97d3e5c1fb6c279c1b31b887687a131a80f7408b0a5b5d78c26adae9f6f420f9">Vesper::ShaderDataType::Mat4</a></div><div class="ttdeci">@ Mat4</div><div class="ttdef"><b>Definition</b> Buffer.h:8</div></div>
-<div class="ttc" id="anamespace_vesper_html_af97d3e5c1fb6c279c1b31b887687a131a8a8a1d211464d4bdee46db3c75bfa121"><div class="ttname"><a href="namespace_vesper.html#af97d3e5c1fb6c279c1b31b887687a131a8a8a1d211464d4bdee46db3c75bfa121">Vesper::ShaderDataType::Float3</a></div><div class="ttdeci">@ Float3</div><div class="ttdef"><b>Definition</b> Buffer.h:7</div></div>
-<div class="ttc" id="anamespace_vesper_html_af97d3e5c1fb6c279c1b31b887687a131ac26f15e86e3de4c398a8273272aba034"><div class="ttname"><a href="namespace_vesper.html#af97d3e5c1fb6c279c1b31b887687a131ac26f15e86e3de4c398a8273272aba034">Vesper::ShaderDataType::Bool</a></div><div class="ttdeci">@ Bool</div><div class="ttdef"><b>Definition</b> Buffer.h:10</div></div>
+
+<p>Returns the number of components in the buffer element based on its <a class="el" href="namespace_vesper.html#af97d3e5c1fb6c279c1b31b887687a131" title="The different data types that can be used in shaders.">ShaderDataType</a>. </p>
+<div class="fragment"><div class="line"><span class="lineno">   63</span>                                           {</div>
+<div class="line"><span class="lineno">   64</span>            <span class="keywordflow">switch</span> (<a class="code hl_variable" href="#a1b71f7c0b821d8e5aa3e0a49cb275403">Type</a>) {</div>
+<div class="line"><span class="lineno">   65</span>            <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="namespace_vesper.html#af97d3e5c1fb6c279c1b31b887687a131a22ae0e2b89e5e3d477f988cc36d3272b">ShaderDataType::Float</a>:     <span class="keywordflow">return</span> 1;</div>
+<div class="line"><span class="lineno">   66</span>            <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="namespace_vesper.html#af97d3e5c1fb6c279c1b31b887687a131a6694430a2b471b5d2de071f2ef1fdc57">ShaderDataType::Float2</a>:    <span class="keywordflow">return</span> 2;</div>
+<div class="line"><span class="lineno">   67</span>            <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="namespace_vesper.html#af97d3e5c1fb6c279c1b31b887687a131a8a8a1d211464d4bdee46db3c75bfa121">ShaderDataType::Float3</a>:    <span class="keywordflow">return</span> 3;</div>
+<div class="line"><span class="lineno">   68</span>            <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="namespace_vesper.html#af97d3e5c1fb6c279c1b31b887687a131a33116adc6690289da9b82ea736864eeb">ShaderDataType::Float4</a>:    <span class="keywordflow">return</span> 4;</div>
+<div class="line"><span class="lineno">   69</span>            <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="namespace_vesper.html#af97d3e5c1fb6c279c1b31b887687a131a2495a7d9c1fab19af6441abbfed823e1">ShaderDataType::Mat3</a>:      <span class="keywordflow">return</span> 3 * 3;</div>
+<div class="line"><span class="lineno">   70</span>            <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="namespace_vesper.html#af97d3e5c1fb6c279c1b31b887687a131a80f7408b0a5b5d78c26adae9f6f420f9">ShaderDataType::Mat4</a>:      <span class="keywordflow">return</span> 4 * 4;</div>
+<div class="line"><span class="lineno">   71</span>            <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="namespace_vesper.html#af97d3e5c1fb6c279c1b31b887687a131a1686a6c336b71b36d77354cea19a8b52">ShaderDataType::Int</a>:       <span class="keywordflow">return</span> 1;</div>
+<div class="line"><span class="lineno">   72</span>            <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="namespace_vesper.html#af97d3e5c1fb6c279c1b31b887687a131a4c6bc90f2bbdf35523e29c414a57bad3">ShaderDataType::Int2</a>:      <span class="keywordflow">return</span> 2;</div>
+<div class="line"><span class="lineno">   73</span>            <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="namespace_vesper.html#af97d3e5c1fb6c279c1b31b887687a131a56bf1b0e694b442bf4145a04b82ea943">ShaderDataType::Int3</a>:      <span class="keywordflow">return</span> 3;</div>
+<div class="line"><span class="lineno">   74</span>            <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="namespace_vesper.html#af97d3e5c1fb6c279c1b31b887687a131a1a44f12c3427b3e11c171d09632bad8d">ShaderDataType::Int4</a>:      <span class="keywordflow">return</span> 4;</div>
+<div class="line"><span class="lineno">   75</span>            <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="namespace_vesper.html#af97d3e5c1fb6c279c1b31b887687a131ac26f15e86e3de4c398a8273272aba034">ShaderDataType::Bool</a>:      <span class="keywordflow">return</span> 1;</div>
+<div class="line"><span class="lineno">   76</span>            }</div>
+<div class="line"><span class="lineno">   77</span>            <a class="code hl_define" href="_asserts_8h.html#a3b51b77f75997760894138afc89403c9">VZ_CORE_ASSERT</a>(<span class="keyword">false</span>, <span class="stringliteral">&quot;Unknown ShaderDataType!&quot;</span>);</div>
+<div class="line"><span class="lineno">   78</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">   79</span>        }</div>
+<div class="ttc" id="a_asserts_8h_html_a3b51b77f75997760894138afc89403c9"><div class="ttname"><a href="_asserts_8h.html#a3b51b77f75997760894138afc89403c9">VZ_CORE_ASSERT</a></div><div class="ttdeci">#define VZ_CORE_ASSERT(x,...)</div><div class="ttdef"><b>Definition</b> Asserts.h:20</div></div>
+<div class="ttc" id="anamespace_vesper_html_af97d3e5c1fb6c279c1b31b887687a131a1686a6c336b71b36d77354cea19a8b52"><div class="ttname"><a href="namespace_vesper.html#af97d3e5c1fb6c279c1b31b887687a131a1686a6c336b71b36d77354cea19a8b52">Vesper::ShaderDataType::Int</a></div><div class="ttdeci">@ Int</div><div class="ttdef"><b>Definition</b> Buffer.h:10</div></div>
+<div class="ttc" id="anamespace_vesper_html_af97d3e5c1fb6c279c1b31b887687a131a1a44f12c3427b3e11c171d09632bad8d"><div class="ttname"><a href="namespace_vesper.html#af97d3e5c1fb6c279c1b31b887687a131a1a44f12c3427b3e11c171d09632bad8d">Vesper::ShaderDataType::Int4</a></div><div class="ttdeci">@ Int4</div><div class="ttdef"><b>Definition</b> Buffer.h:10</div></div>
+<div class="ttc" id="anamespace_vesper_html_af97d3e5c1fb6c279c1b31b887687a131a22ae0e2b89e5e3d477f988cc36d3272b"><div class="ttname"><a href="namespace_vesper.html#af97d3e5c1fb6c279c1b31b887687a131a22ae0e2b89e5e3d477f988cc36d3272b">Vesper::ShaderDataType::Float</a></div><div class="ttdeci">@ Float</div><div class="ttdef"><b>Definition</b> Buffer.h:8</div></div>
+<div class="ttc" id="anamespace_vesper_html_af97d3e5c1fb6c279c1b31b887687a131a2495a7d9c1fab19af6441abbfed823e1"><div class="ttname"><a href="namespace_vesper.html#af97d3e5c1fb6c279c1b31b887687a131a2495a7d9c1fab19af6441abbfed823e1">Vesper::ShaderDataType::Mat3</a></div><div class="ttdeci">@ Mat3</div><div class="ttdef"><b>Definition</b> Buffer.h:9</div></div>
+<div class="ttc" id="anamespace_vesper_html_af97d3e5c1fb6c279c1b31b887687a131a33116adc6690289da9b82ea736864eeb"><div class="ttname"><a href="namespace_vesper.html#af97d3e5c1fb6c279c1b31b887687a131a33116adc6690289da9b82ea736864eeb">Vesper::ShaderDataType::Float4</a></div><div class="ttdeci">@ Float4</div><div class="ttdef"><b>Definition</b> Buffer.h:8</div></div>
+<div class="ttc" id="anamespace_vesper_html_af97d3e5c1fb6c279c1b31b887687a131a4c6bc90f2bbdf35523e29c414a57bad3"><div class="ttname"><a href="namespace_vesper.html#af97d3e5c1fb6c279c1b31b887687a131a4c6bc90f2bbdf35523e29c414a57bad3">Vesper::ShaderDataType::Int2</a></div><div class="ttdeci">@ Int2</div><div class="ttdef"><b>Definition</b> Buffer.h:10</div></div>
+<div class="ttc" id="anamespace_vesper_html_af97d3e5c1fb6c279c1b31b887687a131a56bf1b0e694b442bf4145a04b82ea943"><div class="ttname"><a href="namespace_vesper.html#af97d3e5c1fb6c279c1b31b887687a131a56bf1b0e694b442bf4145a04b82ea943">Vesper::ShaderDataType::Int3</a></div><div class="ttdeci">@ Int3</div><div class="ttdef"><b>Definition</b> Buffer.h:10</div></div>
+<div class="ttc" id="anamespace_vesper_html_af97d3e5c1fb6c279c1b31b887687a131a6694430a2b471b5d2de071f2ef1fdc57"><div class="ttname"><a href="namespace_vesper.html#af97d3e5c1fb6c279c1b31b887687a131a6694430a2b471b5d2de071f2ef1fdc57">Vesper::ShaderDataType::Float2</a></div><div class="ttdeci">@ Float2</div><div class="ttdef"><b>Definition</b> Buffer.h:8</div></div>
+<div class="ttc" id="anamespace_vesper_html_af97d3e5c1fb6c279c1b31b887687a131a80f7408b0a5b5d78c26adae9f6f420f9"><div class="ttname"><a href="namespace_vesper.html#af97d3e5c1fb6c279c1b31b887687a131a80f7408b0a5b5d78c26adae9f6f420f9">Vesper::ShaderDataType::Mat4</a></div><div class="ttdeci">@ Mat4</div><div class="ttdef"><b>Definition</b> Buffer.h:9</div></div>
+<div class="ttc" id="anamespace_vesper_html_af97d3e5c1fb6c279c1b31b887687a131a8a8a1d211464d4bdee46db3c75bfa121"><div class="ttname"><a href="namespace_vesper.html#af97d3e5c1fb6c279c1b31b887687a131a8a8a1d211464d4bdee46db3c75bfa121">Vesper::ShaderDataType::Float3</a></div><div class="ttdeci">@ Float3</div><div class="ttdef"><b>Definition</b> Buffer.h:8</div></div>
+<div class="ttc" id="anamespace_vesper_html_af97d3e5c1fb6c279c1b31b887687a131ac26f15e86e3de4c398a8273272aba034"><div class="ttname"><a href="namespace_vesper.html#af97d3e5c1fb6c279c1b31b887687a131ac26f15e86e3de4c398a8273272aba034">Vesper::ShaderDataType::Bool</a></div><div class="ttdeci">@ Bool</div><div class="ttdef"><b>Definition</b> Buffer.h:11</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="namespace_vesper.html#af97d3e5c1fb6c279c1b31b887687a131ac26f15e86e3de4c398a8273272aba034">Vesper::Bool</a>, <a class="el" href="namespace_vesper.html#af97d3e5c1fb6c279c1b31b887687a131a22ae0e2b89e5e3d477f988cc36d3272b">Vesper::Float</a>, <a class="el" href="namespace_vesper.html#af97d3e5c1fb6c279c1b31b887687a131a6694430a2b471b5d2de071f2ef1fdc57">Vesper::Float2</a>, <a class="el" href="namespace_vesper.html#af97d3e5c1fb6c279c1b31b887687a131a8a8a1d211464d4bdee46db3c75bfa121">Vesper::Float3</a>, <a class="el" href="namespace_vesper.html#af97d3e5c1fb6c279c1b31b887687a131a33116adc6690289da9b82ea736864eeb">Vesper::Float4</a>, <a class="el" href="namespace_vesper.html#af97d3e5c1fb6c279c1b31b887687a131a1686a6c336b71b36d77354cea19a8b52">Vesper::Int</a>, <a class="el" href="namespace_vesper.html#af97d3e5c1fb6c279c1b31b887687a131a4c6bc90f2bbdf35523e29c414a57bad3">Vesper::Int2</a>, <a class="el" href="namespace_vesper.html#af97d3e5c1fb6c279c1b31b887687a131a56bf1b0e694b442bf4145a04b82ea943">Vesper::Int3</a>, <a class="el" href="namespace_vesper.html#af97d3e5c1fb6c279c1b31b887687a131a1a44f12c3427b3e11c171d09632bad8d">Vesper::Int4</a>, <a class="el" href="namespace_vesper.html#af97d3e5c1fb6c279c1b31b887687a131a2495a7d9c1fab19af6441abbfed823e1">Vesper::Mat3</a>, <a class="el" href="namespace_vesper.html#af97d3e5c1fb6c279c1b31b887687a131a80f7408b0a5b5d78c26adae9f6f420f9">Vesper::Mat4</a>, and <a class="el" href="#a1b71f7c0b821d8e5aa3e0a49cb275403">Type</a>.</p>
 
@@ -256,6 +282,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>The name of the buffer element. </p>
+
 </div>
 </div>
 <a id="aa7c36074287779f7c9f3e800e2b8acff" name="aa7c36074287779f7c9f3e800e2b8acff"></a>
@@ -269,6 +297,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Whether the buffer element is normalized. </p>
 
 <p class="reference">Referenced by <a class="el" href="#a497b03e769d781131a7e0461e34df975">BufferElement()</a>.</p>
 
@@ -286,6 +316,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>The offset in bytes of the buffer element from the start of the buffer. </p>
+
 <p class="reference">Referenced by <a class="el" href="#a497b03e769d781131a7e0461e34df975">BufferElement()</a>.</p>
 
 </div>
@@ -302,6 +334,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>The size in bytes of the buffer element. </p>
+
 <p class="reference">Referenced by <a class="el" href="#a497b03e769d781131a7e0461e34df975">BufferElement()</a>.</p>
 
 </div>
@@ -317,6 +351,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>The data type of the buffer element. </p>
 
 <p class="reference">Referenced by <a class="el" href="#a497b03e769d781131a7e0461e34df975">BufferElement()</a>, and <a class="el" href="#a4cbb8e7a5cb10efbdd548a6adc93504e">GetComponentCount()</a>.</p>
 

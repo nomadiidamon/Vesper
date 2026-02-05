@@ -97,6 +97,9 @@ $(function(){initNavTree('_instrumentor_8h.html','',''); });
   <div class="headertitle"><div class="title">Instrumentor.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Provides instrumentation and profiling utilities.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="_log_8h_source.html">Vesper/Core/Log.h</a>&quot;</code><br />
 <code>#include &lt;algorithm&gt;</code><br />
 <code>#include &lt;chrono&gt;</code><br />
@@ -143,7 +146,12 @@ Functions</h2></td></tr>
 <tr class="memitem:ae15d8cc9cf5564f45a9731202fd5c2ff" id="r_ae15d8cc9cf5564f45a9731202fd5c2ff"><td class="memTemplParams" colspan="2">template&lt;size_t N, size_t K&gt; </td></tr>
 <tr class="memitem:ae15d8cc9cf5564f45a9731202fd5c2ff template"><td class="memItemLeft">constexpr auto&#160;</td><td class="memItemRight"><a class="el" href="namespace_instrumentor_utils.html#ae15d8cc9cf5564f45a9731202fd5c2ff">InstrumentorUtils::CleanupOutputString</a> (const char(&amp;expr)[N], const char(&amp;remove)[K])</td></tr>
 </table>
-<hr/><h2 id="header-inline_5Fclasses" class="groupheader">Class Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Provides instrumentation and profiling utilities. </p>
+<dl class="section author"><dt>Author</dt><dd>TheCherno </dd>
+<dd>
+Damon S. Green II </dd></dl>
+</div><hr/><h2 id="header-inline_5Fclasses" class="groupheader">Class Documentation</h2>
 <a name="struct_vesper_1_1_profile_result" id="struct_vesper_1_1_profile_result"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#struct_vesper_1_1_profile_result">&#9670;&#160;</a></span>Vesper::ProfileResult</h2>
 
@@ -280,8 +288,8 @@ Data[N]</td>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><a class="code hl_function" href="class_vesper_1_1_instrumentor.html#a43ebba932df02103a849eb617ca80114">::Vesper::Instrumentor::Get</a>().<a class="code hl_function" href="class_vesper_1_1_instrumentor.html#acdc2004ddc288d58591a4f5e8bd7b5d9">BeginSession</a>(name, filepath)</div>
-<div class="ttc" id="aclass_vesper_1_1_instrumentor_html_a43ebba932df02103a849eb617ca80114"><div class="ttname"><a href="class_vesper_1_1_instrumentor.html#a43ebba932df02103a849eb617ca80114">Vesper::Instrumentor::Get</a></div><div class="ttdeci">static Instrumentor &amp; Get()</div><div class="ttdef"><b>Definition</b> Instrumentor.h:132</div></div>
-<div class="ttc" id="aclass_vesper_1_1_instrumentor_html_acdc2004ddc288d58591a4f5e8bd7b5d9"><div class="ttname"><a href="class_vesper_1_1_instrumentor.html#acdc2004ddc288d58591a4f5e8bd7b5d9">Vesper::Instrumentor::BeginSession</a></div><div class="ttdeci">void BeginSession(const std::string &amp;name, const std::string &amp;filepath=&quot;results.json&quot;)</div><div class="ttdef"><b>Definition</b> Instrumentor.h:52</div></div>
+<div class="ttc" id="aclass_vesper_1_1_instrumentor_html_a43ebba932df02103a849eb617ca80114"><div class="ttname"><a href="class_vesper_1_1_instrumentor.html#a43ebba932df02103a849eb617ca80114">Vesper::Instrumentor::Get</a></div><div class="ttdeci">static Instrumentor &amp; Get()</div><div class="ttdef"><b>Definition</b> Instrumentor.h:138</div></div>
+<div class="ttc" id="aclass_vesper_1_1_instrumentor_html_acdc2004ddc288d58591a4f5e8bd7b5d9"><div class="ttname"><a href="class_vesper_1_1_instrumentor.html#acdc2004ddc288d58591a4f5e8bd7b5d9">Vesper::Instrumentor::BeginSession</a></div><div class="ttdeci">void BeginSession(const std::string &amp;name, const std::string &amp;filepath=&quot;results.json&quot;)</div><div class="ttdef"><b>Definition</b> Instrumentor.h:58</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -300,7 +308,7 @@ Data[N]</td>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><a class="code hl_function" href="class_vesper_1_1_instrumentor.html#a43ebba932df02103a849eb617ca80114">::Vesper::Instrumentor::Get</a>().<a class="code hl_function" href="class_vesper_1_1_instrumentor.html#a396d186614575c7b0fbf84db474d807b">EndSession</a>()</div>
-<div class="ttc" id="aclass_vesper_1_1_instrumentor_html_a396d186614575c7b0fbf84db474d807b"><div class="ttname"><a href="class_vesper_1_1_instrumentor.html#a396d186614575c7b0fbf84db474d807b">Vesper::Instrumentor::EndSession</a></div><div class="ttdeci">void EndSession()</div><div class="ttdef"><b>Definition</b> Instrumentor.h:78</div></div>
+<div class="ttc" id="aclass_vesper_1_1_instrumentor_html_a396d186614575c7b0fbf84db474d807b"><div class="ttname"><a href="class_vesper_1_1_instrumentor.html#a396d186614575c7b0fbf84db474d807b">Vesper::Instrumentor::EndSession</a></div><div class="ttdeci">void EndSession()</div><div class="ttdef"><b>Definition</b> Instrumentor.h:84</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -319,8 +327,8 @@ Data[N]</td>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><a class="code hl_define" href="#ae2376bed374f838d0047cf753f914f31">VZ_PROFILE_SCOPE</a>(<a class="code hl_define" href="#a45f407f34ca8ce12d32fb3c651593426">VZ_FUNC_SIG</a>)</div>
-<div class="ttc" id="a_instrumentor_8h_html_a45f407f34ca8ce12d32fb3c651593426"><div class="ttname"><a href="#a45f407f34ca8ce12d32fb3c651593426">VZ_FUNC_SIG</a></div><div class="ttdeci">#define VZ_FUNC_SIG</div><div class="ttdef"><b>Definition</b> Instrumentor.h:225</div></div>
-<div class="ttc" id="a_instrumentor_8h_html_ae2376bed374f838d0047cf753f914f31"><div class="ttname"><a href="#ae2376bed374f838d0047cf753f914f31">VZ_PROFILE_SCOPE</a></div><div class="ttdeci">#define VZ_PROFILE_SCOPE(name)</div><div class="ttdef"><b>Definition</b> Instrumentor.h:233</div></div>
+<div class="ttc" id="a_instrumentor_8h_html_a45f407f34ca8ce12d32fb3c651593426"><div class="ttname"><a href="#a45f407f34ca8ce12d32fb3c651593426">VZ_FUNC_SIG</a></div><div class="ttdeci">#define VZ_FUNC_SIG</div><div class="ttdef"><b>Definition</b> Instrumentor.h:231</div></div>
+<div class="ttc" id="a_instrumentor_8h_html_ae2376bed374f838d0047cf753f914f31"><div class="ttname"><a href="#ae2376bed374f838d0047cf753f914f31">VZ_PROFILE_SCOPE</a></div><div class="ttdeci">#define VZ_PROFILE_SCOPE(name)</div><div class="ttdef"><b>Definition</b> Instrumentor.h:239</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -339,7 +347,7 @@ Data[N]</td>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><a class="code hl_define" href="#af5ced1c824cf778e06ff0099f2652397">VZ_PROFILE_SCOPE_LINE</a>(name, __LINE__)</div>
-<div class="ttc" id="a_instrumentor_8h_html_af5ced1c824cf778e06ff0099f2652397"><div class="ttname"><a href="#af5ced1c824cf778e06ff0099f2652397">VZ_PROFILE_SCOPE_LINE</a></div><div class="ttdeci">#define VZ_PROFILE_SCOPE_LINE(name, line)</div><div class="ttdef"><b>Definition</b> Instrumentor.h:232</div></div>
+<div class="ttc" id="a_instrumentor_8h_html_af5ced1c824cf778e06ff0099f2652397"><div class="ttname"><a href="#af5ced1c824cf778e06ff0099f2652397">VZ_PROFILE_SCOPE_LINE</a></div><div class="ttdeci">#define VZ_PROFILE_SCOPE_LINE(name, line)</div><div class="ttdef"><b>Definition</b> Instrumentor.h:238</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -362,7 +370,7 @@ Data[N]</td>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><a class="code hl_define" href="#a9fe34090b32832e899c27e83680fc084">VZ_PROFILE_SCOPE_LINE2</a>(name, line)</div>
-<div class="ttc" id="a_instrumentor_8h_html_a9fe34090b32832e899c27e83680fc084"><div class="ttname"><a href="#a9fe34090b32832e899c27e83680fc084">VZ_PROFILE_SCOPE_LINE2</a></div><div class="ttdeci">#define VZ_PROFILE_SCOPE_LINE2(name, line)</div><div class="ttdef"><b>Definition</b> Instrumentor.h:230</div></div>
+<div class="ttc" id="a_instrumentor_8h_html_a9fe34090b32832e899c27e83680fc084"><div class="ttname"><a href="#a9fe34090b32832e899c27e83680fc084">VZ_PROFILE_SCOPE_LINE2</a></div><div class="ttdeci">#define VZ_PROFILE_SCOPE_LINE2(name, line)</div><div class="ttdef"><b>Definition</b> Instrumentor.h:236</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -386,10 +394,10 @@ Data[N]</td>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><span class="keyword">constexpr</span> <span class="keyword">auto</span> fixedName##line = <a class="code hl_function" href="namespace_instrumentor_utils.html#ae15d8cc9cf5564f45a9731202fd5c2ff">InstrumentorUtils::CleanupOutputString</a>(name, <span class="stringliteral">&quot;__cdecl &quot;</span>);\</div>
 <div class="line"><a class="code hl_class" href="class_vesper_1_1_instrumentation_timer.html">::Vesper::InstrumentationTimer</a> timer##line(fixedName##line.Data)</div>
-<div class="ttc" id="aclass_vesper_1_1_instrumentation_timer_html"><div class="ttname"><a href="class_vesper_1_1_instrumentation_timer.html">Vesper::InstrumentationTimer</a></div><div class="ttdef"><b>Definition</b> Instrumentor.h:140</div></div>
-<div class="ttc" id="anamespace_instrumentor_utils_html_ae15d8cc9cf5564f45a9731202fd5c2ff"><div class="ttname"><a href="namespace_instrumentor_utils.html#ae15d8cc9cf5564f45a9731202fd5c2ff">InstrumentorUtils::CleanupOutputString</a></div><div class="ttdeci">constexpr auto CleanupOutputString(const char(&amp;expr)[N], const char(&amp;remove)[K])</div><div class="ttdef"><b>Definition</b> Instrumentor.h:184</div></div>
-</div><!-- fragment --><div class="fragment"><div class="line"><span class="lineno">  230</span><span class="preprocessor">    #define VZ_PROFILE_SCOPE_LINE2(name, line) constexpr auto fixedName##line = InstrumentorUtils::CleanupOutputString(name, &quot;__cdecl &quot;);\</span></div>
-<div class="line"><span class="lineno">  231</span><span class="preprocessor">                                                   ::Vesper::InstrumentationTimer timer##line(fixedName##line.Data)</span></div>
+<div class="ttc" id="aclass_vesper_1_1_instrumentation_timer_html"><div class="ttname"><a href="class_vesper_1_1_instrumentation_timer.html">Vesper::InstrumentationTimer</a></div><div class="ttdef"><b>Definition</b> Instrumentor.h:146</div></div>
+<div class="ttc" id="anamespace_instrumentor_utils_html_ae15d8cc9cf5564f45a9731202fd5c2ff"><div class="ttname"><a href="namespace_instrumentor_utils.html#ae15d8cc9cf5564f45a9731202fd5c2ff">InstrumentorUtils::CleanupOutputString</a></div><div class="ttdeci">constexpr auto CleanupOutputString(const char(&amp;expr)[N], const char(&amp;remove)[K])</div><div class="ttdef"><b>Definition</b> Instrumentor.h:190</div></div>
+</div><!-- fragment --><div class="fragment"><div class="line"><span class="lineno">  236</span><span class="preprocessor">    #define VZ_PROFILE_SCOPE_LINE2(name, line) constexpr auto fixedName##line = InstrumentorUtils::CleanupOutputString(name, &quot;__cdecl &quot;);\</span></div>
+<div class="line"><span class="lineno">  237</span><span class="preprocessor">                                                   ::Vesper::InstrumentationTimer timer##line(fixedName##line.Data)</span></div>
 </div><!-- fragment -->
 </div>
 </div>

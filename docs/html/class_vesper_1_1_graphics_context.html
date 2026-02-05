@@ -98,6 +98,9 @@ $(function(){initNavTree('class_vesper_1_1_graphics_context.html','','class_vesp
 </div><!--header-->
 <div class="contents">
 
+<p>Abstract class representing a graphics context.  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_graphics_context_8h_source.html">GraphicsContext.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Vesper::GraphicsContext:</div>
@@ -113,9 +116,13 @@ Inheritance diagram for Vesper::GraphicsContext:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:af5f44adc2b3221b0724998f669c4ce52" id="r_af5f44adc2b3221b0724998f669c4ce52"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="#af5f44adc2b3221b0724998f669c4ce52">~GraphicsContext</a> ()</td></tr>
 <tr class="memitem:a69ff1719f52df244b9980617755f57e6" id="r_a69ff1719f52df244b9980617755f57e6"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a69ff1719f52df244b9980617755f57e6">Init</a> ()=0</td></tr>
+<tr class="memdesc:a69ff1719f52df244b9980617755f57e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the graphics context.  <br /></td></tr>
 <tr class="memitem:a91344163e3085d00661d03884cfad28a" id="r_a91344163e3085d00661d03884cfad28a"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a91344163e3085d00661d03884cfad28a">SwapBuffers</a> ()=0</td></tr>
+<tr class="memdesc:a91344163e3085d00661d03884cfad28a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Swaps the front and back buffers.  <br /></td></tr>
 </table>
-<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Abstract class representing a graphics context. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="af5f44adc2b3221b0724998f669c4ce52" name="af5f44adc2b3221b0724998f669c4ce52"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af5f44adc2b3221b0724998f669c4ce52">&#9670;&#160;</a></span>~GraphicsContext()</h2>
 
@@ -138,7 +145,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   10</span>{}</div>
+<div class="fragment"><div class="line"><span class="lineno">   12</span>{}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -165,6 +172,8 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Initializes the graphics context. </p>
 
 <p>Implemented in <a class="el" href="class_vesper_1_1_open_g_l_context.html#a1065ac4bcb2710bf216ad6ef98e73318">Vesper::OpenGLContext</a>.</p>
 
@@ -194,6 +203,8 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Swaps the front and back buffers. </p>
 
 <p>Implemented in <a class="el" href="class_vesper_1_1_open_g_l_context.html#a6e2645931d1e2ffdd5e6f8130f17f80f">Vesper::OpenGLContext</a>.</p>
 

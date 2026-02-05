@@ -8,103 +8,107 @@
 \DoxyCodeLine{00004\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\ \textcolor{preprocessor}{"{}Vesper/Core/Base.h"{}}}
 \DoxyCodeLine{00005\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\ \textcolor{preprocessor}{"{}Vesper/Events/Event.h"{}}}
 \DoxyCodeLine{00006\ }
-\DoxyCodeLine{00007\ \textcolor{keyword}{namespace}\ \doxymbox{\hyperlink{namespace_vesper}{Vesper}}\ \{}
-\DoxyCodeLine{00008\ }
-\DoxyCodeLine{00009\ \ \ \ \ \textcolor{comment}{///\ @class\ KeyEvent}}
-\DoxyCodeLine{00010\ \ \ \ \ \textcolor{comment}{///\ @brief\ Base\ class\ for\ keyboard\ events.}}
-\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{class}\ \doxymbox{\hyperlink{class_vesper_1_1_key_event}{KeyEvent}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_vesper_1_1_event}{Event}}}
-\DoxyCodeLine{00012\ \ \ \ \ \{}
-\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00014\ }
-\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Get\ the\ key\ code\ associated\ with\ the\ event.}}
-\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_vesper_1_1_key_event_ab8b3b582c0296f0f7f24ce7a7be6996c}{GetKeyCode}}()\ \textcolor{keyword}{const}\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_key_event_a51701302ab474131751225a850bbc4ab}{m\_KeyCode}};\ \}}
-\DoxyCodeLine{00017\ }
-\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_event_8h_abd52deea587a36ef619e596a0c691839}{EVENT\_CLASS\_CATEGORY}}(\doxymbox{\hyperlink{namespace_vesper_ad79da63be4419c3a218acaa990decabeaba0edbd952a5de7d6182c0f379dd86e5}{EventCategoryKeyboard}}\ |\ \doxymbox{\hyperlink{namespace_vesper_ad79da63be4419c3a218acaa990decabea6c60ac482ece62549192596ebe2bd544}{EventCategoryInput}})}
-\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{protected}:}
-\DoxyCodeLine{00020\ }
-\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Construct\ a\ KeyEvent\ with\ the\ specified\ key\ code.}}
-\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{comment}{///}}
-\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @param\ keycode\ The\ key\ code\ associated\ with\ the\ event.}}
-\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ Restricted\ specific\ construction\ to\ derived\ classes.}}
-\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_key_event_aeaa0d8bb44aab1f6f6f946635b123ef8}{KeyEvent}}(\textcolor{keywordtype}{int}\ keycode)}
-\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_vesper_1_1_key_event_a51701302ab474131751225a850bbc4ab}{m\_KeyCode}}(keycode)\ \{\}}
-\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_vesper_1_1_key_event_a51701302ab474131751225a850bbc4ab}{m\_KeyCode}};}
-\DoxyCodeLine{00028\ \ \ \ \ \};}
-\DoxyCodeLine{00029\ }
-\DoxyCodeLine{00030\ \ \ \ \ \textcolor{comment}{///\ @class\ KeyPressedEvent}}
-\DoxyCodeLine{00031\ \ \ \ \ \textcolor{comment}{///\ @brief\ Event\ for\ registering\ key\ press.}}
-\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{class}\ \doxymbox{\hyperlink{class_vesper_1_1_key_pressed_event}{KeyPressedEvent}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_vesper_1_1_key_event}{KeyEvent}}}
-\DoxyCodeLine{00033\ \ \ \ \ \{}
-\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00035\ }
-\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Construct\ a\ KeyPressedEvent\ with\ the\ specified\ key\ code\ and\ repeat\ count.}}
-\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{comment}{///}}
-\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @param\ keycode\ The\ key\ code\ associated\ with\ the\ event.}}
-\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @param\ repeatCount\ The\ number\ of\ times\ the\ key\ press\ is\ repeated.}}
-\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_key_pressed_event_ac16b0725f611dda53bd404a30a8fa40c}{KeyPressedEvent}}(\textcolor{keywordtype}{int}\ keycode,\ \textcolor{keywordtype}{int}\ repeatCount)}
-\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_vesper_1_1_key_event}{KeyEvent}}\doxymbox{\hyperlink{class_vesper_1_1_key_event_aeaa0d8bb44aab1f6f6f946635b123ef8}{(}}keycode\doxymbox{\hyperlink{class_vesper_1_1_key_event_aeaa0d8bb44aab1f6f6f946635b123ef8}{)}},\ \doxymbox{\hyperlink{class_vesper_1_1_key_pressed_event_a0aaae299686179650f4d599dc17e403e}{m\_RepeatCount}}(repeatCount)\ \{\}}
-\DoxyCodeLine{00042\ }
-\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Get\ the\ repeat\ count\ of\ the\ key\ press\ event.}}
-\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_vesper_1_1_key_pressed_event_a50f1519ca1ef2f44e7ae6e70bd32e665}{GetRepeatCount}}()\ \textcolor{keyword}{const}\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_key_pressed_event_a0aaae299686179650f4d599dc17e403e}{m\_RepeatCount}};\ \}}
-\DoxyCodeLine{00045\ }
-\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Convert\ the\ event\ to\ a\ string\ representation.}}
-\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_key_pressed_event_a714614a3073492951b1b5001209d0d88}{std}}::\doxymbox{\hyperlink{class_vesper_1_1_key_pressed_event_a714614a3073492951b1b5001209d0d88}{string}}\ \doxymbox{\hyperlink{class_vesper_1_1_key_pressed_event_a714614a3073492951b1b5001209d0d88}{ToString}}()\ \textcolor{keyword}{const}\ \textcolor{keyword}{override}}
-\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ std::stringstream\ ss;}
-\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ ss\ <<\ \textcolor{stringliteral}{"{}KeyPressedEvent:\ "{}}\ <<\ \doxymbox{\hyperlink{class_vesper_1_1_key_event_a51701302ab474131751225a850bbc4ab}{m\_KeyCode}}\ <<\ \textcolor{stringliteral}{"{}\ ("{}}\ <<\ \doxymbox{\hyperlink{class_vesper_1_1_key_pressed_event_a0aaae299686179650f4d599dc17e403e}{m\_RepeatCount}}\ <<\ \textcolor{stringliteral}{"{}\ repeats)"{}};}
-\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ss.str();}
-\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00053\ }
-\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_event_8h_a80d534fc4d69a68eefd1573fd0ac2f44}{EVENT\_CLASS\_TYPE}}(\doxymbox{\hyperlink{namespace_vesper_ada4bc37927ce22c44ea0083a224d3bb5ac17e6984c1e5a887a49831beadee6bca}{KeyPressed}})}
-\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_vesper_1_1_key_pressed_event_a0aaae299686179650f4d599dc17e403e}{m\_RepeatCount}};}
-\DoxyCodeLine{00057\ \ \ \ \ \};}
-\DoxyCodeLine{00058\ }
-\DoxyCodeLine{00059\ \ \ \ \ \textcolor{comment}{///\ @class\ KeyReleasedEvent}}
-\DoxyCodeLine{00060\ \ \ \ \ \textcolor{comment}{///\ @brief\ Event\ for\ registering\ key\ release.}}
-\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keyword}{class}\ \doxymbox{\hyperlink{class_vesper_1_1_key_released_event}{KeyReleasedEvent}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_vesper_1_1_key_event}{KeyEvent}}}
-\DoxyCodeLine{00062\ \ \ \ \ \{}
-\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Construct\ a\ KeyReleasedEvent\ with\ the\ specified\ key\ code.}}
-\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ }}
-\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @param\ keycode\ The\ key\ code\ associated\ with\ the\ event.}}
-\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_key_released_event_a44cd82472d5625583e9ed62d85ad2fe8}{KeyReleasedEvent}}(\textcolor{keywordtype}{int}\ keycode)}
-\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_vesper_1_1_key_event}{KeyEvent}}\doxymbox{\hyperlink{class_vesper_1_1_key_event_aeaa0d8bb44aab1f6f6f946635b123ef8}{(}}keycode\doxymbox{\hyperlink{class_vesper_1_1_key_event_aeaa0d8bb44aab1f6f6f946635b123ef8}{)}}\ \{\}}
-\DoxyCodeLine{00069\ }
-\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Convert\ the\ event\ to\ a\ string\ representation.}}
-\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_key_released_event_a3b3a0210a59f5cb1f66dcf0494b739b9}{std}}::\doxymbox{\hyperlink{class_vesper_1_1_key_released_event_a3b3a0210a59f5cb1f66dcf0494b739b9}{string}}\ \doxymbox{\hyperlink{class_vesper_1_1_key_released_event_a3b3a0210a59f5cb1f66dcf0494b739b9}{ToString}}()\ \textcolor{keyword}{const}\ \textcolor{keyword}{override}}
-\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ std::stringstream\ ss;}
-\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ ss\ <<\ \textcolor{stringliteral}{"{}KeyReleasedEvent:\ "{}}\ <<\ \doxymbox{\hyperlink{class_vesper_1_1_key_event_a51701302ab474131751225a850bbc4ab}{m\_KeyCode}};}
-\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ss.str();}
-\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00077\ }
-\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_event_8h_a80d534fc4d69a68eefd1573fd0ac2f44}{EVENT\_CLASS\_TYPE}}(\doxymbox{\hyperlink{namespace_vesper_ada4bc37927ce22c44ea0083a224d3bb5a4a77f07c8ad223b71ab4ce78a63841ab}{KeyReleased}})}
-\DoxyCodeLine{00079\ \ \ \ \ \};}
-\DoxyCodeLine{00080\ }
-\DoxyCodeLine{00081\ \ \ \ \ \textcolor{comment}{///\ @class\ KeyTypedEvent}}
-\DoxyCodeLine{00082\ \ \ \ \ \textcolor{comment}{///\ @brief\ Event\ for\ registering\ key\ typing.}}
-\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keyword}{class}\ \doxymbox{\hyperlink{class_vesper_1_1_key_typed_event}{KeyTypedEvent}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_vesper_1_1_key_event}{KeyEvent}}}
-\DoxyCodeLine{00084\ \ \ \ \ \{}
-\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Construct\ a\ KeyTypedEvent\ with\ the\ specified\ key\ code.}}
-\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \textcolor{comment}{///}}
-\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @param\ keycode\ The\ key\ code\ associated\ with\ the\ event.}}
-\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_key_typed_event_a3b0658430e7cae990f527b932cbfcf99}{KeyTypedEvent}}(\textcolor{keywordtype}{int}\ keycode)}
-\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_vesper_1_1_key_event}{KeyEvent}}\doxymbox{\hyperlink{class_vesper_1_1_key_event_aeaa0d8bb44aab1f6f6f946635b123ef8}{(}}keycode\doxymbox{\hyperlink{class_vesper_1_1_key_event_aeaa0d8bb44aab1f6f6f946635b123ef8}{)}}\ \{}
-\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00092\ }
-\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Convert\ the\ event\ to\ a\ string\ representation.}}
-\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_key_typed_event_a629f52af17e5e1f56e99d006191a4518}{std}}::\doxymbox{\hyperlink{class_vesper_1_1_key_typed_event_a629f52af17e5e1f56e99d006191a4518}{string}}\ \doxymbox{\hyperlink{class_vesper_1_1_key_typed_event_a629f52af17e5e1f56e99d006191a4518}{ToString}}()\ \textcolor{keyword}{const}\ \textcolor{keyword}{override}}
-\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ std::stringstream\ ss;}
-\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ ss\ <<\ \textcolor{stringliteral}{"{}KeyTypedEvent:\ "{}}\ <<\ \doxymbox{\hyperlink{class_vesper_1_1_key_event_a51701302ab474131751225a850bbc4ab}{m\_KeyCode}};}
-\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ss.str();}
-\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00100\ }
-\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_event_8h_a80d534fc4d69a68eefd1573fd0ac2f44}{EVENT\_CLASS\_TYPE}}(\doxymbox{\hyperlink{namespace_vesper_ada4bc37927ce22c44ea0083a224d3bb5a9afbfd35b289eb4fc7f1bc148d7b422e}{KeyTyped}})}
-\DoxyCodeLine{00102\ \ \ \ \ \};}
-\DoxyCodeLine{00103\ }
-\DoxyCodeLine{00104\ \}}
+\DoxyCodeLine{00007\ \textcolor{comment}{///\ @file\ KeyEvent.h}}
+\DoxyCodeLine{00008\ \textcolor{comment}{///\ @author\ Damon\ S.\ Green\ II}}
+\DoxyCodeLine{00009\ \textcolor{comment}{///\ @brief\ Defines\ keyboard\ event\ classes.}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{namespace}\ \doxymbox{\hyperlink{namespace_vesper}{Vesper}}\ \{}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{comment}{///\ @class\ KeyEvent}}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{comment}{///\ @brief\ Base\ class\ for\ keyboard\ events.}}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{class}\ \doxymbox{\hyperlink{class_vesper_1_1_key_event}{KeyEvent}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_vesper_1_1_event}{Event}}}
+\DoxyCodeLine{00016\ \ \ \ \ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Get\ the\ key\ code\ associated\ with\ the\ event.}}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_vesper_1_1_key_event_ab8b3b582c0296f0f7f24ce7a7be6996c}{GetKeyCode}}()\ \textcolor{keyword}{const}\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_key_event_a51701302ab474131751225a850bbc4ab}{m\_KeyCode}};\ \}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_defines___macros_8h_abd52deea587a36ef619e596a0c691839}{EVENT\_CLASS\_CATEGORY}}(\doxymbox{\hyperlink{namespace_vesper_ad79da63be4419c3a218acaa990decabeaba0edbd952a5de7d6182c0f379dd86e5}{EventCategoryKeyboard}}\ |\ \doxymbox{\hyperlink{namespace_vesper_ad79da63be4419c3a218acaa990decabea6c60ac482ece62549192596ebe2bd544}{EventCategoryInput}})}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Construct\ a\ KeyEvent\ with\ the\ specified\ key\ code.}}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{comment}{///}}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @param\ keycode\ The\ key\ code\ associated\ with\ the\ event.}}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ Restricted\ specific\ construction\ to\ derived\ classes.}}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_key_event_aeaa0d8bb44aab1f6f6f946635b123ef8}{KeyEvent}}(\textcolor{keywordtype}{int}\ keycode)}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_vesper_1_1_key_event_a51701302ab474131751225a850bbc4ab}{m\_KeyCode}}(keycode)\ \{\}}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_vesper_1_1_key_event_a51701302ab474131751225a850bbc4ab}{m\_KeyCode}};}
+\DoxyCodeLine{00032\ \ \ \ \ \};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{comment}{///\ @class\ KeyPressedEvent}}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{comment}{///\ @brief\ Event\ for\ registering\ key\ press.}}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{class}\ \doxymbox{\hyperlink{class_vesper_1_1_key_pressed_event}{KeyPressedEvent}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_vesper_1_1_key_event}{KeyEvent}}}
+\DoxyCodeLine{00037\ \ \ \ \ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Construct\ a\ KeyPressedEvent\ with\ the\ specified\ key\ code\ and\ repeat\ count.}}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{comment}{///}}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @param\ keycode\ The\ key\ code\ associated\ with\ the\ event.}}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @param\ repeatCount\ The\ number\ of\ times\ the\ key\ press\ is\ repeated.}}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_key_pressed_event_ac16b0725f611dda53bd404a30a8fa40c}{KeyPressedEvent}}(\textcolor{keywordtype}{int}\ keycode,\ \textcolor{keywordtype}{int}\ repeatCount)}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_vesper_1_1_key_event}{KeyEvent}}\doxymbox{\hyperlink{class_vesper_1_1_key_event_aeaa0d8bb44aab1f6f6f946635b123ef8}{(}}keycode\doxymbox{\hyperlink{class_vesper_1_1_key_event_aeaa0d8bb44aab1f6f6f946635b123ef8}{)}},\ \doxymbox{\hyperlink{class_vesper_1_1_key_pressed_event_a0aaae299686179650f4d599dc17e403e}{m\_RepeatCount}}(repeatCount)\ \{\}}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Get\ the\ repeat\ count\ of\ the\ key\ press\ event.}}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_vesper_1_1_key_pressed_event_a50f1519ca1ef2f44e7ae6e70bd32e665}{GetRepeatCount}}()\ \textcolor{keyword}{const}\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_vesper_1_1_key_pressed_event_a0aaae299686179650f4d599dc17e403e}{m\_RepeatCount}};\ \}}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Convert\ the\ event\ to\ a\ string\ representation.}}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_vesper_1_1_key_pressed_event_a714614a3073492951b1b5001209d0d88}{ToString}}()\ \textcolor{keyword}{const}\ \textcolor{keyword}{override}}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ std::stringstream\ ss;}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ ss\ <<\ \textcolor{stringliteral}{"{}KeyPressedEvent:\ "{}}\ <<\ \doxymbox{\hyperlink{class_vesper_1_1_key_event_a51701302ab474131751225a850bbc4ab}{m\_KeyCode}}\ <<\ \textcolor{stringliteral}{"{}\ ("{}}\ <<\ \doxymbox{\hyperlink{class_vesper_1_1_key_pressed_event_a0aaae299686179650f4d599dc17e403e}{m\_RepeatCount}}\ <<\ \textcolor{stringliteral}{"{}\ repeats)"{}};}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ss.str();}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_defines___macros_8h_a80d534fc4d69a68eefd1573fd0ac2f44}{EVENT\_CLASS\_TYPE}}(\doxymbox{\hyperlink{namespace_vesper_ada4bc37927ce22c44ea0083a224d3bb5ac17e6984c1e5a887a49831beadee6bca}{KeyPressed}})}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_vesper_1_1_key_pressed_event_a0aaae299686179650f4d599dc17e403e}{m\_RepeatCount}};}
+\DoxyCodeLine{00061\ \ \ \ \ \};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{comment}{///\ @class\ KeyReleasedEvent}}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{comment}{///\ @brief\ Event\ for\ registering\ key\ release.}}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keyword}{class}\ \doxymbox{\hyperlink{class_vesper_1_1_key_released_event}{KeyReleasedEvent}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_vesper_1_1_key_event}{KeyEvent}}}
+\DoxyCodeLine{00066\ \ \ \ \ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Construct\ a\ KeyReleasedEvent\ with\ the\ specified\ key\ code.}}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ }}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @param\ keycode\ The\ key\ code\ associated\ with\ the\ event.}}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_key_released_event_a44cd82472d5625583e9ed62d85ad2fe8}{KeyReleasedEvent}}(\textcolor{keywordtype}{int}\ keycode)}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_vesper_1_1_key_event}{KeyEvent}}\doxymbox{\hyperlink{class_vesper_1_1_key_event_aeaa0d8bb44aab1f6f6f946635b123ef8}{(}}keycode\doxymbox{\hyperlink{class_vesper_1_1_key_event_aeaa0d8bb44aab1f6f6f946635b123ef8}{)}}\ \{\}}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Convert\ the\ event\ to\ a\ string\ representation.}}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_vesper_1_1_key_released_event_a3b3a0210a59f5cb1f66dcf0494b739b9}{ToString}}()\ \textcolor{keyword}{const}\ \textcolor{keyword}{override}}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ std::stringstream\ ss;}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ ss\ <<\ \textcolor{stringliteral}{"{}KeyReleasedEvent:\ "{}}\ <<\ \doxymbox{\hyperlink{class_vesper_1_1_key_event_a51701302ab474131751225a850bbc4ab}{m\_KeyCode}};}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ss.str();}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_defines___macros_8h_a80d534fc4d69a68eefd1573fd0ac2f44}{EVENT\_CLASS\_TYPE}}(\doxymbox{\hyperlink{namespace_vesper_ada4bc37927ce22c44ea0083a224d3bb5a4a77f07c8ad223b71ab4ce78a63841ab}{KeyReleased}})}
+\DoxyCodeLine{00083\ \ \ \ \ \};}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{comment}{///\ @class\ KeyTypedEvent}}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{comment}{///\ @brief\ Event\ for\ registering\ key\ typing.}}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keyword}{class}\ \doxymbox{\hyperlink{class_vesper_1_1_key_typed_event}{KeyTypedEvent}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_vesper_1_1_key_event}{KeyEvent}}}
+\DoxyCodeLine{00088\ \ \ \ \ \{}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Construct\ a\ KeyTypedEvent\ with\ the\ specified\ key\ code.}}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \textcolor{comment}{///}}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @param\ keycode\ The\ key\ code\ associated\ with\ the\ event.}}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_vesper_1_1_key_typed_event_a3b0658430e7cae990f527b932cbfcf99}{KeyTypedEvent}}(\textcolor{keywordtype}{int}\ keycode)}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_vesper_1_1_key_event}{KeyEvent}}\doxymbox{\hyperlink{class_vesper_1_1_key_event_aeaa0d8bb44aab1f6f6f946635b123ef8}{(}}keycode\doxymbox{\hyperlink{class_vesper_1_1_key_event_aeaa0d8bb44aab1f6f6f946635b123ef8}{)}}\ \{}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \textcolor{comment}{///\ @brief\ Convert\ the\ event\ to\ a\ string\ representation.}}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_vesper_1_1_key_typed_event_a629f52af17e5e1f56e99d006191a4518}{ToString}}()\ \textcolor{keyword}{const}\ \textcolor{keyword}{override}}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ std::stringstream\ ss;}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ ss\ <<\ \textcolor{stringliteral}{"{}KeyTypedEvent:\ "{}}\ <<\ \doxymbox{\hyperlink{class_vesper_1_1_key_event_a51701302ab474131751225a850bbc4ab}{m\_KeyCode}};}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ss.str();}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_defines___macros_8h_a80d534fc4d69a68eefd1573fd0ac2f44}{EVENT\_CLASS\_TYPE}}(\doxymbox{\hyperlink{namespace_vesper_ada4bc37927ce22c44ea0083a224d3bb5a9afbfd35b289eb4fc7f1bc148d7b422e}{KeyTyped}})}
+\DoxyCodeLine{00106\ \ \ \ \ \};}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \}}
 
 \end{DoxyCode}

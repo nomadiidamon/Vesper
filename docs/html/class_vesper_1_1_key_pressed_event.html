@@ -188,9 +188,9 @@ Additional Inherited Members</h2></td></tr>
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><span class="lineno">   41</span>            : <a class="code hl_function" href="class_vesper_1_1_key_event.html#aeaa0d8bb44aab1f6f6f946635b123ef8">KeyEvent</a>(keycode), <a class="code hl_variable" href="#a0aaae299686179650f4d599dc17e403e">m_RepeatCount</a>(repeatCount) {}</div>
-<div class="ttc" id="aclass_vesper_1_1_key_event_html_aeaa0d8bb44aab1f6f6f946635b123ef8"><div class="ttname"><a href="class_vesper_1_1_key_event.html#aeaa0d8bb44aab1f6f6f946635b123ef8">Vesper::KeyEvent::KeyEvent</a></div><div class="ttdeci">KeyEvent(int keycode)</div><div class="ttdoc">Construct a KeyEvent with the specified key code.</div><div class="ttdef"><b>Definition</b> KeyEvent.h:25</div></div>
-<div class="ttc" id="aclass_vesper_1_1_key_pressed_event_html_a0aaae299686179650f4d599dc17e403e"><div class="ttname"><a href="#a0aaae299686179650f4d599dc17e403e">Vesper::KeyPressedEvent::m_RepeatCount</a></div><div class="ttdeci">int m_RepeatCount</div><div class="ttdef"><b>Definition</b> KeyEvent.h:56</div></div>
+<div class="fragment"><div class="line"><span class="lineno">   45</span>            : <a class="code hl_function" href="class_vesper_1_1_key_event.html#aeaa0d8bb44aab1f6f6f946635b123ef8">KeyEvent</a>(keycode), <a class="code hl_variable" href="#a0aaae299686179650f4d599dc17e403e">m_RepeatCount</a>(repeatCount) {}</div>
+<div class="ttc" id="aclass_vesper_1_1_key_event_html_aeaa0d8bb44aab1f6f6f946635b123ef8"><div class="ttname"><a href="class_vesper_1_1_key_event.html#aeaa0d8bb44aab1f6f6f946635b123ef8">Vesper::KeyEvent::KeyEvent</a></div><div class="ttdeci">KeyEvent(int keycode)</div><div class="ttdoc">Construct a KeyEvent with the specified key code.</div><div class="ttdef"><b>Definition</b> KeyEvent.h:29</div></div>
+<div class="ttc" id="aclass_vesper_1_1_key_pressed_event_html_a0aaae299686179650f4d599dc17e403e"><div class="ttname"><a href="#a0aaae299686179650f4d599dc17e403e">Vesper::KeyPressedEvent::m_RepeatCount</a></div><div class="ttdeci">int m_RepeatCount</div><div class="ttdef"><b>Definition</b> KeyEvent.h:60</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="class_vesper_1_1_key_event.html#aeaa0d8bb44aab1f6f6f946635b123ef8">Vesper::KeyEvent::KeyEvent()</a>, and <a class="el" href="#a0aaae299686179650f4d599dc17e403e">m_RepeatCount</a>.</p>
 
@@ -221,7 +221,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get the repeat count of the key press event. </p>
-<div class="fragment"><div class="line"><span class="lineno">   44</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a0aaae299686179650f4d599dc17e403e">m_RepeatCount</a>; }</div>
+<div class="fragment"><div class="line"><span class="lineno">   48</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a0aaae299686179650f4d599dc17e403e">m_RepeatCount</a>; }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a0aaae299686179650f4d599dc17e403e">m_RepeatCount</a>.</p>
 
@@ -255,12 +255,12 @@ Additional Inherited Members</h2></td></tr>
 <p>Convert the event to a string representation. </p>
 
 <p>Reimplemented from <a class="el" href="class_vesper_1_1_event.html#aaba48fc434a2539c5ce000fda6aa7f05">Vesper::Event</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   48</span>        {</div>
-<div class="line"><span class="lineno">   49</span>            std::stringstream ss;</div>
-<div class="line"><span class="lineno">   50</span>            ss &lt;&lt; <span class="stringliteral">&quot;KeyPressedEvent: &quot;</span> &lt;&lt; <a class="code hl_variable" href="class_vesper_1_1_key_event.html#a51701302ab474131751225a850bbc4ab">m_KeyCode</a> &lt;&lt; <span class="stringliteral">&quot; (&quot;</span> &lt;&lt; <a class="code hl_variable" href="#a0aaae299686179650f4d599dc17e403e">m_RepeatCount</a> &lt;&lt; <span class="stringliteral">&quot; repeats)&quot;</span>;</div>
-<div class="line"><span class="lineno">   51</span>            <span class="keywordflow">return</span> ss.str();</div>
-<div class="line"><span class="lineno">   52</span>        }</div>
-<div class="ttc" id="aclass_vesper_1_1_key_event_html_a51701302ab474131751225a850bbc4ab"><div class="ttname"><a href="class_vesper_1_1_key_event.html#a51701302ab474131751225a850bbc4ab">Vesper::KeyEvent::m_KeyCode</a></div><div class="ttdeci">int m_KeyCode</div><div class="ttdef"><b>Definition</b> KeyEvent.h:27</div></div>
+<div class="fragment"><div class="line"><span class="lineno">   52</span>        {</div>
+<div class="line"><span class="lineno">   53</span>            std::stringstream ss;</div>
+<div class="line"><span class="lineno">   54</span>            ss &lt;&lt; <span class="stringliteral">&quot;KeyPressedEvent: &quot;</span> &lt;&lt; <a class="code hl_variable" href="class_vesper_1_1_key_event.html#a51701302ab474131751225a850bbc4ab">m_KeyCode</a> &lt;&lt; <span class="stringliteral">&quot; (&quot;</span> &lt;&lt; <a class="code hl_variable" href="#a0aaae299686179650f4d599dc17e403e">m_RepeatCount</a> &lt;&lt; <span class="stringliteral">&quot; repeats)&quot;</span>;</div>
+<div class="line"><span class="lineno">   55</span>            <span class="keywordflow">return</span> ss.str();</div>
+<div class="line"><span class="lineno">   56</span>        }</div>
+<div class="ttc" id="aclass_vesper_1_1_key_event_html_a51701302ab474131751225a850bbc4ab"><div class="ttname"><a href="class_vesper_1_1_key_event.html#a51701302ab474131751225a850bbc4ab">Vesper::KeyEvent::m_KeyCode</a></div><div class="ttdeci">int m_KeyCode</div><div class="ttdef"><b>Definition</b> KeyEvent.h:31</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="class_vesper_1_1_key_event.html#a51701302ab474131751225a850bbc4ab">Vesper::KeyEvent::m_KeyCode</a>, and <a class="el" href="#a0aaae299686179650f4d599dc17e403e">m_RepeatCount</a>.</p>
 

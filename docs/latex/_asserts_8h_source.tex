@@ -4,17 +4,24 @@
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{pragma}\ \textcolor{preprocessor}{once}}
 \DoxyCodeLine{00002\ }
-\DoxyCodeLine{00003\ \textcolor{comment}{///\ ASSERT\ MACROS}}
-\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{ifdef}\ \textcolor{preprocessor}{VZ\_DEBUG}}
-\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{VZ\_ENABLE\_ASSERTS}}
-\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{endif}}
+\DoxyCodeLine{00003\ \textcolor{comment}{///\ @file\ Asserts.h}}
+\DoxyCodeLine{00004\ \textcolor{comment}{///\ @author\ Damon\ S.\ Green\ II}}
+\DoxyCodeLine{00005\ \textcolor{comment}{///\ @brief\ Provides\ assertion\ macros\ for\ debugging\ and\ error\ handling.}}
+\DoxyCodeLine{00006\ }
 \DoxyCodeLine{00007\ }
-\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{ifdef}\ \textcolor{preprocessor}{VZ\_ENABLE\_ASSERTS}}
-\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{VZ\_ASSERT}\textcolor{preprocessor}{(}\textcolor{preprocessor}{x}\textcolor{preprocessor}{,}\ \textcolor{preprocessor}{...}\textcolor{preprocessor}{)}\ \textcolor{preprocessor}{\{}\ \textcolor{preprocessor}{if}\textcolor{preprocessor}{(}\textcolor{preprocessor}{!}\textcolor{preprocessor}{(}\textcolor{preprocessor}{x}\textcolor{preprocessor}{)}\textcolor{preprocessor}{)}\ \textcolor{preprocessor}{\{}\ \textcolor{preprocessor}{VZ\_CORE\_ERROR}\textcolor{preprocessor}{(}\textcolor{stringliteral}{"{}Assertion\ Failed:\ \{0\}"{}}\textcolor{preprocessor}{,}\ \textcolor{preprocessor}{\_\_VA\_ARGS\_\_}\textcolor{preprocessor}{)}\textcolor{preprocessor}{;}\ \textcolor{preprocessor}{\_\_debugbreak}\textcolor{preprocessor}{(}\textcolor{preprocessor}{)}\textcolor{preprocessor}{;}\ \textcolor{preprocessor}{\}}\ \textcolor{preprocessor}{\}}}
-\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{VZ\_CORE\_ASSERT}\textcolor{preprocessor}{(}\textcolor{preprocessor}{x}\textcolor{preprocessor}{,}\ \textcolor{preprocessor}{...}\textcolor{preprocessor}{)}\ \textcolor{preprocessor}{\{}\ \textcolor{preprocessor}{if}\textcolor{preprocessor}{(}\textcolor{preprocessor}{!}\textcolor{preprocessor}{(}\textcolor{preprocessor}{x}\textcolor{preprocessor}{)}\textcolor{preprocessor}{)}\ \textcolor{preprocessor}{\{}\ \textcolor{preprocessor}{VZ\_CORE\_ERROR}\textcolor{preprocessor}{(}\textcolor{stringliteral}{"{}Assertion\ Failed:\ \{0\}"{}}\textcolor{preprocessor}{,}\ \textcolor{preprocessor}{\_\_VA\_ARGS\_\_}\textcolor{preprocessor}{)}\textcolor{preprocessor}{;}\ \textcolor{preprocessor}{\_\_debugbreak}\textcolor{preprocessor}{(}\textcolor{preprocessor}{)}\textcolor{preprocessor}{;}\ \textcolor{preprocessor}{\}}\ \textcolor{preprocessor}{\}}}
-\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{else}}
-\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{VZ\_ASSERT}\textcolor{preprocessor}{(}\textcolor{preprocessor}{x}\textcolor{preprocessor}{,}\ \textcolor{preprocessor}{...}\textcolor{preprocessor}{)}}
-\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{VZ\_CORE\_ASSERT}\textcolor{preprocessor}{(}\textcolor{preprocessor}{x}\textcolor{preprocessor}{,}\ \textcolor{preprocessor}{...}\textcolor{preprocessor}{)}}
-\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{endif}}
+\DoxyCodeLine{00008\ \textcolor{comment}{///\ ASSERT\ MACROS}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{ifdef}\ \textcolor{preprocessor}{VZ\_DEBUG}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{VZ\_ENABLE\_ASSERTS}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{endif}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{ifdef}\ \textcolor{preprocessor}{VZ\_ENABLE\_ASSERTS}}
+\DoxyCodeLine{00014\ \textcolor{comment}{///\ @brief\ Asserts\ that\ the\ given\ condition\ is\ true.\ If\ not,\ logs\ an\ error\ message\ and\ triggers\ a\ breakpoint.}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{VZ\_ASSERT}\textcolor{preprocessor}{(}\textcolor{preprocessor}{x}\textcolor{preprocessor}{,}\ \textcolor{preprocessor}{...}\textcolor{preprocessor}{)}\ \textcolor{preprocessor}{\{}\ \textcolor{preprocessor}{if}\textcolor{preprocessor}{(}\textcolor{preprocessor}{!}\textcolor{preprocessor}{(}\textcolor{preprocessor}{x}\textcolor{preprocessor}{)}\textcolor{preprocessor}{)}\ \textcolor{preprocessor}{\{}\ \textcolor{preprocessor}{VZ\_CORE\_ERROR}\textcolor{preprocessor}{(}\textcolor{stringliteral}{"{}Assertion\ Failed:\ \{0\}"{}}\textcolor{preprocessor}{,}\ \textcolor{preprocessor}{\_\_VA\_ARGS\_\_}\textcolor{preprocessor}{)}\textcolor{preprocessor}{;}\ \textcolor{preprocessor}{\_\_debugbreak}\textcolor{preprocessor}{(}\textcolor{preprocessor}{)}\textcolor{preprocessor}{;}\ \textcolor{preprocessor}{\}}\ \textcolor{preprocessor}{\}}}
+\DoxyCodeLine{00016\ \textcolor{comment}{///\ @brief\ Asserts\ that\ the\ given\ condition\ is\ true\ in\ core\ code.\ If\ not,\ logs\ an\ error\ message\ and\ triggers\ a\ breakpoint.}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{VZ\_CORE\_ASSERT}\textcolor{preprocessor}{(}\textcolor{preprocessor}{x}\textcolor{preprocessor}{,}\ \textcolor{preprocessor}{...}\textcolor{preprocessor}{)}\ \textcolor{preprocessor}{\{}\ \textcolor{preprocessor}{if}\textcolor{preprocessor}{(}\textcolor{preprocessor}{!}\textcolor{preprocessor}{(}\textcolor{preprocessor}{x}\textcolor{preprocessor}{)}\textcolor{preprocessor}{)}\ \textcolor{preprocessor}{\{}\ \textcolor{preprocessor}{VZ\_CORE\_ERROR}\textcolor{preprocessor}{(}\textcolor{stringliteral}{"{}Assertion\ Failed:\ \{0\}"{}}\textcolor{preprocessor}{,}\ \textcolor{preprocessor}{\_\_VA\_ARGS\_\_}\textcolor{preprocessor}{)}\textcolor{preprocessor}{;}\ \textcolor{preprocessor}{\_\_debugbreak}\textcolor{preprocessor}{(}\textcolor{preprocessor}{)}\textcolor{preprocessor}{;}\ \textcolor{preprocessor}{\}}\ \textcolor{preprocessor}{\}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{else}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{VZ\_ASSERT}\textcolor{preprocessor}{(}\textcolor{preprocessor}{x}\textcolor{preprocessor}{,}\ \textcolor{preprocessor}{...}\textcolor{preprocessor}{)}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define}\ \textcolor{preprocessor}{VZ\_CORE\_ASSERT}\textcolor{preprocessor}{(}\textcolor{preprocessor}{x}\textcolor{preprocessor}{,}\ \textcolor{preprocessor}{...}\textcolor{preprocessor}{)}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#}\textcolor{preprocessor}{endif}}
 
 \end{DoxyCode}
