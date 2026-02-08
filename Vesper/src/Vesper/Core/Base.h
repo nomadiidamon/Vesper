@@ -1,5 +1,4 @@
 #pragma once
-
 /// @file Base.h
 /// @author Damon S. Green II
 /// @brief The base header file that includes core definitions and configurations for the Vesper engine.

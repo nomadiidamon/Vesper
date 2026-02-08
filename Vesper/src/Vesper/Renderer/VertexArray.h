@@ -1,4 +1,8 @@
 #pragma once
+/// @file VertexArray.h
+/// @author Damon S. Green II
+/// @brief Defines the VertexArray class, which is an abstraction for a vertex array object (VAO).
+/// @note The VertexArray class provides an interface for managing vertex buffers and index buffers, and includes a static Create method for instantiating vertex arrays.
 
 #include <memory>
 #include "Vesper/Renderer/Buffer.h"

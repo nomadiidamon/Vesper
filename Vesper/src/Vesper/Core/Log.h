@@ -1,11 +1,12 @@
 #pragma once
+/// @file Log.h
+/// @author Damon S. Green II
+/// @brief Declares the logging system for the Vesper engine.
+
 #include "Base.h"
 #include "spdlog/spdlog.h"
 #include "spdlog/fmt/ostr.h"
 
-/// @file Log.h
-/// @author Damon S. Green II
-/// @brief Declares the logging system for the Vesper engine.
 
 namespace Vesper {
 

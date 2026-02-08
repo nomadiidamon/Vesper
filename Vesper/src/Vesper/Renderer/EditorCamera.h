@@ -1,4 +1,7 @@
 #pragma once
+/// @file EditorCamera.h
+/// @author Damon S. Green II
+/// @brief Defines the EditorCamera class, which is responsible for displaying data when using the editor. Derives from the Camera class.
 
 #include "Camera.h"
 #include "Vesper/Core/Timestep.h"
@@ -9,6 +12,10 @@
 
 
 namespace Vesper {
+
+	/// @class Editor Camera
+	/// @brief The camera class responsible for displaying data when using the editor
+	/// @note Derives from the Camera class
 	class EditorCamera : public Camera
 	{
 	public:

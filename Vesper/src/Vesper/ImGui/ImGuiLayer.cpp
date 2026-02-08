@@ -9,13 +9,13 @@
 #include "Vesper/App/Application.h"
 #include "Vesper/App/Layer.h"
 
-// TEMPORARY
+/// @todo Remove GLFW include once abstracted
 #include <GLFW/glfw3.h>
 #include <glad/glad.h>
 
+/// @todo Abstract this class to OpenGL/DirectX/Vulkan etc ImGui layers
 #include "ImGuizmo.h"
 
-///TODO: Abstract this to OpenGL/DirectX/Vulkan etc ImGui layers
 
 namespace  Vesper {
 	ImGuiLayer::ImGuiLayer() : Layer("ImGuiLayer")

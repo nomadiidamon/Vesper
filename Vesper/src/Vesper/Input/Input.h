@@ -1,4 +1,7 @@
 #pragma once
+/// @file Input.h
+/// @author Damon S. Green II
+/// @brief Defines the Input class, which provides static methods for querying input states such as keyboard keys and mouse buttons, as well as retrieving the mouse cursor position.
 
 #include "Vesper/Core/Base.h"
 #include <glm/glm.hpp>

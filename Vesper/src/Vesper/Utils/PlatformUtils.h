@@ -1,4 +1,7 @@
 #pragma once
+/// @file PlatformUtils.h
+/// @author Damon S. Green II
+/// @brief Declares platform-specific utilities for file dialogs and file system operations.
 
 #include <string>
 
@@ -23,7 +26,7 @@ namespace Vesper {
 	};
 
 
-
+	/// WIP
 	class FileSystem
 	{
 	public:

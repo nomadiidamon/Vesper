@@ -1,8 +1,16 @@
 #pragma once
+/// @file Camera.h
+/// @author Damon S. Green II
+/// @brief Defines the base Camera class that all Camera's derive from. Only contains a projection matrix and a getter.
+
 #include <glm/glm.hpp>
+
 
 namespace Vesper {
 
+	/// @class Camera
+	/// @brief The base Camera class that all Camera's derive from
+	/// Only contains a pojection matrix and a getter
 	class Camera
 	{
 	public:

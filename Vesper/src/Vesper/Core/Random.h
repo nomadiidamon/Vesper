@@ -1,16 +1,19 @@
 #pragma once
+/// @file Random.h
+/// @author Damon S. Green II
+/// @brief Provides random number generation utilities.
+
 #include <random>
 #include <algorithm>
 #include <cstdint>
 #include <glm/glm.hpp>
 #include "Vesper/Debug/Instrumentor.h"
 
-/// @file Random.h
-/// @author Damon S. Green II
-/// @brief Provides random number generation utilities.
 
 namespace Vesper {
 
+	/// @namespace Random
+	/// @brief Provides various functions and helpers related to randomization
 	namespace Random {
 
 		inline std::mt19937& GetRNG() {

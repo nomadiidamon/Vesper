@@ -1,5 +1,4 @@
 #pragma once
-
 /// @file PlatformDetection.h
 /// @author Damon S. Green II
 /// @brief Detects the current platform and defines corresponding macros.

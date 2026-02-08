@@ -1,7 +1,10 @@
 #pragma once
+/// @file SubTexture2D.h
+/// @author Damon S. Green II
+/// @brief Defines the SubTexture2D class, which represents a sub-region of a 2D texture, useful for sprite sheets.
+/// @note The SubTexture2D class allows for easy creation of sub-textures from a larger texture, and provides access to the underlying texture and its texture coordinates.
 
 #include <glm/glm.hpp>
-
 #include "Texture.h"
 
 

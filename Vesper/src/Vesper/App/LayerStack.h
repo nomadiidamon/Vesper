@@ -1,11 +1,11 @@
 #pragma once
+/// @file LayerStack.h
+/// @author Damon S. Green II
+/// @brief Defines the LayerStack class for managing a stack of application layers.
 
 #include "Vesper/Core/Base.h"
 #include "Layer.h"
 
-/// @file LayerStack.h
-/// @author Damon S. Green II
-/// @brief Defines the LayerStack class for managing a stack of application layers.
 
 namespace Vesper {
 

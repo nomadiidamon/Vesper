@@ -1,4 +1,8 @@
 #pragma once
+/// @file RendererAPI.h
+/// @author Damon S. Green II
+/// @brief Defines the RendererAPI class, which is an abstract class that defines the interface for a rendering API. This class is used by the Renderer class to abstract away the underlying rendering API being used (e.g., OpenGL, DirectX, Vulkan, etc.).
+/// @note The RendererAPI class is not intended to be used directly by the user. Instead, the Renderer class should be used to interact with the rendering API.
 
 #include <glm/glm.hpp>
 
@@ -10,7 +14,7 @@ namespace Vesper {
 	/// @brief An abstract class defining the interface for a rendering API.
 	class RendererAPI {
 	public:
-		/// @brief API
+		/// @brief API that can be used by the Renderer.
 		enum class API {
 			None = 0,
 			OpenGL = 1,

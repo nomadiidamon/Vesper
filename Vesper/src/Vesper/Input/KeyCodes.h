@@ -1,4 +1,7 @@
 #pragma once
+/// @file KeyCodes.h
+/// @author Damon S. Green II
+/// @brief Defines key codes for keyboard input. These key codes are based on the GLFW library's key codes and are used for input handling within the Vesper engine.
 
 namespace Vesper {
 

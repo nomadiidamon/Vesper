@@ -1,4 +1,8 @@
 #pragma once
+/// @file ParticleSystem.h
+/// @author Damon S. Green II
+/// @brief Defines the ParticleSystem class, which is responsible for rendering a simple particle system. This is a temporary implementation and will be replaced with a more robust implementation in the future.
+
 
 #include "Vesper.h"
 #include "Vesper/Renderer/OrthographicCamera.h"
@@ -21,6 +25,11 @@ namespace Vesper {
 		float LifetimeVariation = 0.0f;
 	};
 
+
+	/// @class ParticleSystem
+	/// @brief A simple particle system for stress testing the renderer. This is a temporary starter particle system and will be replaced with a more robust implementation in the future.
+	/// @note Temporary implementation is not optimized for performance and is intended for testing purposes only. 
+	/// It uses a simple pool of particles and updates them each frame. The particle properties can be set using the ParticleProps struct, which allows for variation in velocity, size, rotation, and lifetime.
 	class ParticleSystem
 	{
 	public:

@@ -1,10 +1,10 @@
 #pragma once
-
-#include <glm/glm.hpp>
-
 /// @file Color.h
 /// @author Damon S. Green II
 /// @brief Provides commonly used colors and color manipulation functions.
+
+#include <glm/glm.hpp>
+
 
 namespace Vesper {
 

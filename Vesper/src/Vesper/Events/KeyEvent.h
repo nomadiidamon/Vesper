@@ -1,12 +1,12 @@
 #pragma once
+/// @file KeyEvent.h
+/// @author Damon S. Green II
+/// @brief Defines keyboard event classes.
 
 #include "vzpch.h"
 #include "Vesper/Core/Base.h"
 #include "Vesper/Events/Event.h"
 
-/// @file KeyEvent.h
-/// @author Damon S. Green II
-/// @brief Defines keyboard event classes.
 
 namespace Vesper {
 

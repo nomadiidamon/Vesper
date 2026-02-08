@@ -1,4 +1,7 @@
 #pragma once
+/// @file MouseButtonCodes.h
+/// @author Damon S. Green II
+/// @brief Defines mouse button codes for input handling within the Vesper engine.
 
 namespace Vesper {
 

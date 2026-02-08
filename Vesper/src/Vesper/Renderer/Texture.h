@@ -1,4 +1,8 @@
 #pragma once
+/// @file Texture.h
+/// @author Damon S. Green II
+/// @brief Defines the Texture class, which is an abstraction for a texture, and the TextureLibrary class, which manages and stores textures.
+/// @note The Texture class provides an interface for working with textures, while the TextureLibrary class allows for easy management and retrieval of textures by name.
 
 namespace Vesper {
 

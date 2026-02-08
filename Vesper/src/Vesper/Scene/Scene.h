@@ -1,4 +1,9 @@
 #pragma once
+/// @file Scene.h
+/// @author Damon S. Green II
+/// @brief Defines the Scene class, which represents a scene in the application and manages entities and their components.
+/// @note The Scene class provides methods for creating and destroying entities, updating the scene during runtime and editor modes, and handling viewport resizing.
+
 #include <entt.hpp>
 #include "Components.h"
 #include "Vesper/Core/Timestep.h"
@@ -9,6 +14,8 @@ namespace Vesper {
 	class Entity;
 	class EditorCamera;
 
+	/// @class Scene
+	/// @brief Represents a scene in the application and manages entities and their components.
 	class Scene
 	{
 	public:
@@ -16,7 +23,6 @@ namespace Vesper {
 		Scene(const std::string& name);
 		~Scene();
 
-		// Temp-> add entity wrapper later
 		Entity CreateEntity(const std::string& name = std::string());
 		Entity CreateEntity(const std::string& name, const std::string& uuid);
 		void DestroyEntity(Entity entity);
@@ -36,8 +42,8 @@ namespace Vesper {
 		friend class Entity;
 		friend class SceneSerializer;
 		friend class SceneHierarchyPanel;
-		/// TODO: friend class SceneCamera;
-		/// TODO: friend class SceneRenderer;
+		friend class SceneCamera;
+		/// @todo Create a friend class SceneRenderer;
 
 		void SetName(const std::string& name) { m_Name = name; }
 		const std::string& GetName() const { return m_Name; }

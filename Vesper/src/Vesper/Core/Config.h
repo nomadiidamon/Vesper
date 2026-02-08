@@ -1,5 +1,4 @@
 #pragma once
-
 /// @file Config.h
 /// @author Damon S. Green II
 /// @brief Configuration macros for the Vesper engine and editor.

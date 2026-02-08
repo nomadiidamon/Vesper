@@ -1,11 +1,12 @@
 #include "vzpch.h"
 #include "Application.h"
-
 #include "Vesper/Renderer/Renderer.h"
-
 #include "Vesper/Input/Input.h"
 
-/// TEMPORARY
+/// @file Application.cpp
+/// @author Damon S. Green II
+/// @brief Implementation of the Application class for the Vesper engine.
+/// @todo Remove include GLFW for time function, replace with Platform later
 #include <GLFW/glfw3.h>
 
 namespace Vesper {
@@ -80,14 +81,15 @@ namespace Vesper {
 		while (m_Running)
 		{
 			VZ_PROFILE_SCOPE("RunLoop");
-			float time = (float)glfwGetTime(); // TODO: Platform::GetTime()
+			/// @todo Platform::GetTime()
+			float time = (float)glfwGetTime(); 
 			Timestep timestep = time - m_LastFrameTime;
 			m_LastFrameTime = time;
 
 			if (!m_Minimized)
 			{
 				VZ_PROFILE_SCOPE("LayerStack OnUpdate");
-				// Update layers
+				/// Update layers
 				for (auto layer : m_LayerStack)
 					layer->OnUpdate(timestep);
 			}
@@ -95,14 +97,17 @@ namespace Vesper {
 			{
 				VZ_PROFILE_SCOPE("ImGuiLayer OnImGuiRender");
 				m_ImGuiLayer->Begin();
+				/// ImGui render layers
 				for (auto layer : m_LayerStack)
 					layer->OnImGuiRender();
 				m_ImGuiLayer->End();
 			}
 
+			/// @todo Add a Layer render function and call it here for all Layers
+
 			{
 				VZ_PROFILE_SCOPE("Window OnUpdate");
-				// Update window second
+				/// Update window second
 				m_Window->OnUpdate();
 			}
 		};

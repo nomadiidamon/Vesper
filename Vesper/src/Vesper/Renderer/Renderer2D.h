@@ -1,4 +1,7 @@
 #pragma once
+/// @file Renderer2D.h
+/// @author Damon S. Green II
+/// @brief Defines the Renderer2D class, which is responsible for rendering 2D quads and sprites. This class provides a simple API for drawing 2D graphics in a scene.
 
 #include "Vesper/Renderer/OrthographicCamera.h"
 
@@ -13,6 +16,7 @@ namespace Vesper {
 
 	/// @class Renderer2D
 	/// @brief A 2D renderer for drawing quads and sprites.
+	/// @todo Change draw func names to be overloaded DrawQuad and remove the "WithTexture" suffix, as the presence of a texture parameter should be sufficient to determine the type of quad being drawn. The current naming convention is a holdover from when the renderer had separate functions for textured and non-textured quads.
 	class Renderer2D
 	{
 	public:
@@ -25,6 +29,7 @@ namespace Vesper {
 		///
 		/// @param camera The camera to use for the scene.
 		/// @param transform The transform matrix for the camera.
+		/// @note Currently the intended use of this function is for rendering from a scene with an attached camera component, but it can be used for any camera and transform. The other BeginScene overloads are intended for editor use and the latter will likely be removed once we have a proper scene system in place.
 		static void BeginScene(const Camera& camera, const glm::mat4& transform); 
 
 		/// @brief Begins a new scene with the given editor camera.
@@ -201,7 +206,7 @@ namespace Vesper {
 		/// @brief Returns a reference to the default white texture that allows for coloring.
 		static Ref<Texture2D> GetWhiteTexture();
 
-		/// 2D Renderer Statistics
+		/// @brief 2D Renderer Statistics
 		struct Statistics {
 			/// @brief The number of draw calls being made
 			uint32_t DrawCalls = 0;

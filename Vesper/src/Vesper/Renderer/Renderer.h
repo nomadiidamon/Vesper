@@ -1,4 +1,8 @@
 #pragma once
+/// @file Renderer.h
+/// @author Damon S. Green II
+/// @brief Defines the Renderer class, which is responsible for managing rendering operations in the Vesper engine. The Renderer class provides a high-level interface for rendering scenes, submitting draw calls, and managing rendering state.
+/// @note The Renderer class is a static class that provides an interface for rendering operations. It abstracts away the underlying rendering API and provides a consistent interface for rendering across different platforms and graphics APIs.
 
 #include "Vesper/Renderer/RenderCommand.h"
 #include "Vesper/Renderer/OrthographicCamera.h"

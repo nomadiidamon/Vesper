@@ -1,4 +1,7 @@
 #pragma once
+/// @file Entity.h
+/// @author Damon S. Green II
+/// @brief Defines the Entity class, which represents an entity in a scene and provides methods to manipulate its components.
 
 #include "entt.hpp"
 

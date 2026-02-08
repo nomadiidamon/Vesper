@@ -1,4 +1,9 @@
 #pragma once
+/// @file Framebuffer.h
+/// @author Damon S. Green II
+/// @brief Defines the Framebuffer class, which is responsible for managing framebuffer objects in the renderer.
+/// @note The Framebuffer class is an abstract class that defines the interface for framebuffer objects. The actual implementation of the framebuffer will be done in the RendererAPI-specific classes (e.g., OpenGLFramebuffer).
+
 #include "Vesper/Core/Base.h"
 
 namespace Vesper {

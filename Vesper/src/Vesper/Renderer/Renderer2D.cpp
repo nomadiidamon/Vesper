@@ -10,6 +10,9 @@
 
 namespace Vesper {
 
+	/// @struct QuadVertex
+	/// @brief Represents a single vertex in a quad, containing position, color, texture coordinates, texture index, and tiling factor.
+	/// @todo move to Geometry dir
 	struct QuadVertex {
 		glm::vec3 Position;
 		glm::vec4 Color;
@@ -18,6 +21,9 @@ namespace Vesper {
 		float TilingFactor;
 	};
 
+	/// @struct Renderer2DData
+	/// @brief Contains all the internal data and resources used by the Renderer2D, such as vertex arrays, buffers, shaders, textures, and rendering statistics.
+	/// @todo ensure that true system limits for texture slots are respected, rather than hardcoding a value
 	struct Renderer2DData {
 
 		static const uint32_t MaxQuads = 30000;
@@ -106,6 +112,7 @@ namespace Vesper {
 
 		s_Data.TextureSlots[0] = s_Data.WhiteTexture;
 
+		
 		s_Data.QuadVertexPositions[0] = { -0.5f, -0.5f, 0.0f, 1.0f };
 		s_Data.QuadVertexPositions[1] = { 0.5f, -0.5f, 0.0f, 1.0f };
 		s_Data.QuadVertexPositions[2] = { 0.5f,  0.5f, 0.0f, 1.0f };
@@ -125,14 +132,9 @@ namespace Vesper {
 		VZ_PROFILE_FUNCTION();
 
 		glm::mat4 viewProj = camera.GetProjection() * glm::inverse(transform);
-
 		s_Data.TextureShader->Bind();
 		s_Data.TextureShader->SetMat4("u_ViewProjection", viewProj);
-
-		s_Data.QuadIndexCount = 0;
-		s_Data.QuadVertexBufferPtr = s_Data.QuadVertexBufferBase;
-
-		s_Data.TextureSlotIndex = 1;
+		StartBatch();
 	}
 
 	void Renderer2D::BeginScene(const EditorCamera& camera)
@@ -150,11 +152,7 @@ namespace Vesper {
 		VZ_PROFILE_FUNCTION();
 		s_Data.TextureShader->Bind();
 		s_Data.TextureShader->SetMat4("u_ViewProjection", camera.GetViewProjectionMatrix());
-
-		s_Data.QuadIndexCount = 0;
-		s_Data.QuadVertexBufferPtr = s_Data.QuadVertexBufferBase;
-
-		s_Data.TextureSlotIndex = 1;
+		StartBatch();
 	}
 
 	void Renderer2D::EndScene()
@@ -165,7 +163,7 @@ namespace Vesper {
 		s_Data.QuadVertexBuffer->SetData(s_Data.QuadVertexBufferBase, dataSize);
 		Flush();
 	}
-
+	
 	void Renderer2D::Flush()
 	{
 		VZ_PROFILE_FUNCTION();
@@ -176,6 +174,7 @@ namespace Vesper {
 		RenderCommand::DrawIndexed(s_Data.QuadVertexArray, s_Data.QuadIndexCount);
 		s_Data.Stats.DrawCalls++;
 	}
+#pragma region DrawQuad
 
 	void Renderer2D::DrawQuad(const glm::mat4& transform, const glm::vec4& color)
 	{
@@ -471,23 +470,7 @@ namespace Vesper {
 
 		DrawQuadRotatedWithTexture(transform, subtexture, tilingFactor, tintColor);
 	}
-
-	//void Renderer2D::DrawSprite(const glm::mat4& transform, const SpriteRendererComponent& src, int entityID)
-	//{
-	//	if (src.TextureEnabled && src.Texture)
-	//	{
-	//		DrawQuadWithTexture(transform, src.Texture, src.TilingFactor, src.Color);
-	//	}
-	//	else
-	//	{
-	//		DrawQuad(transform, src.Color);
-	//	}
-	//}
-
-	//void Renderer2D::DrawSprite(const glm::mat4& transform, const SubTextureComponent& stc, int entityID)
-	//{
-	//	DrawQuadWithTexture(transform, stc.SubTexture, stc.TilingFactor.x, glm::vec4(1.0f));
-	//}
+#pragma endregion
 
 	Ref<Texture2D> Renderer2D::GetWhiteTexture()
 	{
@@ -507,9 +490,7 @@ namespace Vesper {
 	void Renderer2D::FlushAndReset()
 	{
 		EndScene();
-		s_Data.QuadIndexCount = 0;
-		s_Data.QuadVertexBufferPtr = s_Data.QuadVertexBufferBase;
-		s_Data.TextureSlotIndex = 1;
+		StartBatch();
 	}
 
 	void Renderer2D::StartBatch()

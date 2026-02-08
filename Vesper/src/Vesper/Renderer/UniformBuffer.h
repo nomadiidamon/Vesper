@@ -1,4 +1,8 @@
 #pragma once
+/// @file UniformBuffer.h
+/// @author Damon S. Green II
+/// @brief Defines the UniformBuffer class, which is an abstraction for a uniform buffer object (UBO).
+/// @note The UniformBuffer class provides an interface for setting data in a uniform buffer, and includes a static Create method for instantiating uniform buffers.
 
 #include "Vesper/Core/Base.h"
 

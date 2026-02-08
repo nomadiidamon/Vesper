@@ -1,9 +1,13 @@
 #pragma once
+/// @file VesperImGui.h
+/// @author Damon S. Green II
+/// @brief Defines the VesperImGui class, which provides functionality for displaying information about the Vesper engine using ImGui. This includes details about the engine's features, roadmap, and controls.
 
 #include "imgui/imgui.h"
 
 namespace Vesper {
 
+	/// @brief Function to display information about the Vesper engine using ImGui. This includes details about the engine's features, roadmap, and controls.
 	static void DisplayVesperInfo_ImGui()
 	{
 		ImGui::Begin("Vesper Info");
