@@ -2,7 +2,8 @@
 /// @file Components.h
 /// @author Damon S. Green II
 /// @brief Defines various components that can be attached to entities within a scene.
-/// /// @note Components include UUID, Name, Transform, SpriteRenderer, SubTexture, TextureAnimation, Camera, and NativeScript.
+/// @note Components include UUID, Name, Transform, SpriteRenderer, SubTexture, TextureAnimation, Camera, and NativeScript.
+/// @todo Move GLM Enable Experimental to Math.h and remove from here
 
 #include "Vesper/Renderer/Texture.h"
 #include "Vesper/Renderer/SubTexture2D.h"

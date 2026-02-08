@@ -1,10 +1,13 @@
 #include "vzpch.h"
+/// @file WindowsPlatformUtils.cpp
+/// @author Damon S. Green II
+/// @brief Windows-specific implementations of file dialogs and file system utilities.
+/// @todo Move GLFW expose native win32 define to platform detection
 #include "Vesper/Utils/PlatformUtils.h"
 #include "Vesper/App/Application.h"
-
 #include <commdlg.h>
 #include <GLFW/glfw3.h>
-#define GLFW_EXPOSE_NATIVE_WIN32 /// TODO: Move to platform detection
+#define GLFW_EXPOSE_NATIVE_WIN32
 #include <GLFW/glfw3native.h>
 
 namespace Vesper {

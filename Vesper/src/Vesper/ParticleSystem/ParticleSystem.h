@@ -56,6 +56,10 @@ namespace Vesper {
 		std::vector<Particle> m_ParticlePool;
 		uint32_t m_PoolIndex = 999;
 		ParticleProps m_Props;
+
+	public:
+		float m_TimeSinceLastEmit = 0.0f;
+		bool m_IsEmitting = true;
 	};
 
 

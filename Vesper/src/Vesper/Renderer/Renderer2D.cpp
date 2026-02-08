@@ -26,7 +26,7 @@ namespace Vesper {
 	/// @todo ensure that true system limits for texture slots are respected, rather than hardcoding a value
 	struct Renderer2DData {
 
-		static const uint32_t MaxQuads = 30000;
+		static const uint32_t MaxQuads = 100000;
 		static const uint32_t MaxVertices = MaxQuads * 4;
 		static const uint32_t MaxIndices = MaxQuads * 6;
 		static const uint32_t MaxTextureSlots = 32; // TODO: RenderCaps

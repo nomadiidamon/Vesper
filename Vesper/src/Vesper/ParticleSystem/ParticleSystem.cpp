@@ -11,8 +11,8 @@ namespace Vesper {
 
 	ParticleSystem::ParticleSystem()
 	{
-		m_PoolIndex = 999;
-		m_ParticlePool.resize(1000);
+		m_PoolIndex = 3499;
+		m_ParticlePool.resize(3500);
 	}
 
 	ParticleSystem::ParticleSystem(uint32_t maxParticles)
@@ -38,6 +38,7 @@ namespace Vesper {
 			particle.Position += particle.Velocity * (float)ts;
 			particle.Rotation += 0.01f * ts;
 		}
+		m_TimeSinceLastEmit += ts;
 	}
 
 	void ParticleSystem::OnRender(Vesper::OrthographicCamera& camera)

@@ -12,8 +12,11 @@ namespace Vesper {
 
 	/// @class RendererAPI
 	/// @brief An abstract class defining the interface for a rendering API.
+	/// @todo Add abstraction layers (similar to OpenGL) for Vulkan and DirectX and implement corresponding RendererAPI subclasses for each API.
+	/// @todo Add NVRHI as an additional API for DirectX and Vulkan to simplify cross-platform rendering support.
 	class RendererAPI {
 	public:
+
 		/// @brief API that can be used by the Renderer.
 		enum class API {
 			None = 0,

@@ -16,6 +16,7 @@ namespace Vesper {
 
 	/// @class Scene
 	/// @brief Represents a scene in the application and manages entities and their components.
+	/// @todo Create a friend class SceneRenderer;
 	class Scene
 	{
 	public:
@@ -43,7 +44,7 @@ namespace Vesper {
 		friend class SceneSerializer;
 		friend class SceneHierarchyPanel;
 		friend class SceneCamera;
-		/// @todo Create a friend class SceneRenderer;
+		// friend class SceneRenderer;
 
 		void SetName(const std::string& name) { m_Name = name; }
 		const std::string& GetName() const { return m_Name; }
