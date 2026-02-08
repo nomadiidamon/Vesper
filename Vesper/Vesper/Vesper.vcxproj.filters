@@ -150,6 +150,9 @@
     <ClInclude Include="..\src\Vesper\Core\Math.h">
       <Filter>src\Vesper\Core</Filter>
     </ClInclude>
+    <ClInclude Include="..\src\Vesper\Core\Math2D.h">
+      <Filter>src\Vesper\Core</Filter>
+    </ClInclude>
     <ClInclude Include="..\src\Vesper\Core\PlatformDetection.h">
       <Filter>src\Vesper\Core</Filter>
     </ClInclude>
