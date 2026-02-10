@@ -16,7 +16,6 @@ namespace Vesper {
 		virtual ~GraphicsContext() {}
 		/// @brief Initializes the graphics context.
 		virtual void Init() = 0;
-		/// @brief Swaps the front and back buffers.
 		virtual void SwapBuffers() = 0;
 
 	};

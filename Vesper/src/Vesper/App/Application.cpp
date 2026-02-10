@@ -74,7 +74,7 @@ namespace Vesper {
 
 	}
 
-
+	/// @todo split the Run function into separate functions for update and render, and add a thread for each
 	void Application::Run()
 	{
 		VZ_PROFILE_FUNCTION();
@@ -89,6 +89,9 @@ namespace Vesper {
 			if (!m_Minimized)
 			{
 				VZ_PROFILE_SCOPE("LayerStack OnUpdate");
+
+				/// @todo Sort layers
+
 				/// Update layers
 				for (auto layer : m_LayerStack)
 					layer->OnUpdate(timestep);

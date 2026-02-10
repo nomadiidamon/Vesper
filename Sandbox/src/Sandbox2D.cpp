@@ -53,7 +53,6 @@ void Sandbox2D::OnUpdate(Vesper::Timestep ts)
 	Vesper::Renderer2D::ResetStats();
 	{
 		VZ_PROFILE_SCOPE("Renderer Prep");
-		//Vesper::RenderCommand::SetClearColor(m_ClearColor);
 		Vesper::RenderCommand::Clear();
 	}
 

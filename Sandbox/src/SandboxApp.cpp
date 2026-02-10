@@ -16,57 +16,32 @@ public:
 	ExampleLayer()
 		: Layer("Example"), m_CameraController(1280.0f / 720.0f)
 	{
-
-		//m_VertexArray = Vesper::VertexArray::Create();
-
-		float vertices[3 * 7] = {
-			-0.5f, -0.5f, 0.0f,		0.8f, 0.2f, 0.8f, 1.0f,
-			 0.5f, -0.5f, 0.0f,		0.2f, 0.3f, 0.8f, 1.0f,
-			 0.0f,  0.5f, 0.0f,		0.8f, 0.8f, 0.2f, 1.0f,
-		};
-
-		//Vesper::Ref<Vesper::VertexBuffer> vertexBuffer;
-		//vertexBuffer = (Vesper::VertexBuffer::Create(vertices, sizeof(vertices)));
-		//Vesper::BufferLayout layout = {
-		//	{ Vesper::ShaderDataType::Float3, "a_Position" },
-		//	{ Vesper::ShaderDataType::Float4, "a_Color"  }
-
-		//};
-		//vertexBuffer->SetLayout(layout);
-		//m_VertexArray->AddVertexBuffer(vertexBuffer);
-
-		//uint32_t indices[3] = { 0, 1, 2 };
-		//Vesper::Ref<Vesper::IndexBuffer> indexBuffer;
-		//indexBuffer = (Vesper::IndexBuffer::Create(indices, sizeof(indices) / sizeof(uint32_t)));
-		//m_VertexArray->SetIndexBuffer(indexBuffer);
-
-
-
-
-		//m_SquareVA = Vesper::VertexArray::Create();
-		float squareVertices[5 * 4] =
+		/// Traingle Setup
+		/// @todo Abstract triangle rendering into Renderer2D (Similar to QuadVertex struct) (will use this shape for boids)
 		{
-			-0.5f, -0.5f, 0.0f,		0.0f, 0.0f,
-			 0.5f, -0.5f, 0.0f,		1.0f, 0.0f,
-			 0.5f,  0.5f, 0.0f,		1.0f, 1.0f,
-			-0.5f,  0.5f, 0.0f,		0.0f, 1.0f
-		};
+			m_TriangleVertexArray = Vesper::VertexArray::Create();
+	
+			float triangleVertices[3 * 7] = {
+				-0.5f, -0.5f, 0.0f,		0.8f, 0.2f, 0.8f, 1.0f,
+				 0.5f, -0.5f, 0.0f,		0.2f, 0.3f, 0.8f, 1.0f,
+				 0.0f,  0.5f, 0.0f,		0.8f, 0.8f, 0.2f, 1.0f,
+			};
 
-		//Vesper::Ref<Vesper::VertexBuffer> squareVB;
-		//squareVB = (Vesper::VertexBuffer::Create(squareVertices, sizeof(squareVertices)));
+			Vesper::Ref<Vesper::VertexBuffer> vertexBuffer;
+			vertexBuffer = (Vesper::VertexBuffer::Create(triangleVertices, sizeof(triangleVertices)));
+			Vesper::BufferLayout layout = {
+				{ Vesper::ShaderDataType::Float3, "a_Position" },
+				{ Vesper::ShaderDataType::Float4, "a_Color"  }
 
-		//squareVB->SetLayout({
-		//	{ Vesper::ShaderDataType::Float3, "a_Position"  },
-		//	{ Vesper::ShaderDataType::Float2, "a_TexCoord"  }
-		//	});
-		//m_SquareVA->AddVertexBuffer(squareVB);
+			};
+			vertexBuffer->SetLayout(layout);
+			m_TriangleVertexArray->AddVertexBuffer(vertexBuffer);
+			uint32_t indices[3] = { 0, 1, 2 };
+			Vesper::Ref<Vesper::IndexBuffer> indexBuffer;
+			indexBuffer = (Vesper::IndexBuffer::Create(indices, sizeof(indices) / sizeof(uint32_t)));
+			m_TriangleVertexArray->SetIndexBuffer(indexBuffer);
 
-		//uint32_t squareIndices[6] = { 0, 1, 2, 2, 3, 0 };
-		//Vesper::Ref<Vesper::IndexBuffer> squareIB;
-		//squareIB = (Vesper::IndexBuffer::Create(squareIndices, sizeof(squareIndices) / sizeof(uint32_t)));
-		//m_SquareVA->SetIndexBuffer(squareIB);
-
-		std::string vertexSrc = R"(
+			std::string triangleVertexSrc = R"(
 			#version 330 core
 			
 			layout(location = 0) in vec3 a_Position;
@@ -84,9 +59,9 @@ public:
 				v_Color = a_Color;
 				gl_Position = u_ViewProjection * u_Transform * vec4(a_Position, 1.0);
 			}
-		)";
+			)";
 
-		std::string fragmentSrc = R"(
+			std::string triangleFragmentSrc = R"(
 			#version 330 core
 			
 			layout(location = 0) out vec4 color;
@@ -99,9 +74,32 @@ public:
 				color = vec4(v_Position * 0.5 + 0.5, 1.0);
 				color = v_Color;
 			}
-		)";
+			)";
 
-		//m_Shader = Vesper::Shader::Create("VertexPosColor", vertexSrc, fragmentSrc);
+			m_Shader = Vesper::Shader::Create("VertexPosColor", triangleVertexSrc, triangleFragmentSrc);
+		}
+
+		m_SquareVA = Vesper::VertexArray::Create();
+		float squareVertices[5 * 4] =
+		{
+			-0.5f, -0.5f, 0.0f,		0.0f, 0.0f,
+			 0.5f, -0.5f, 0.0f,		1.0f, 0.0f,
+			 0.5f,  0.5f, 0.0f,		1.0f, 1.0f,
+			-0.5f,  0.5f, 0.0f,		0.0f, 1.0f
+		};
+
+		Vesper::Ref<Vesper::VertexBuffer> squareVB;
+		squareVB = (Vesper::VertexBuffer::Create(squareVertices, sizeof(squareVertices)));
+		squareVB->SetLayout({
+			{ Vesper::ShaderDataType::Float3, "a_Position"  },
+			{ Vesper::ShaderDataType::Float2, "a_TexCoord"  }
+			});
+		m_SquareVA->AddVertexBuffer(squareVB);
+
+		uint32_t squareIndices[6] = { 0, 1, 2, 2, 3, 0 };
+		Vesper::Ref<Vesper::IndexBuffer> squareIB;
+		squareIB = (Vesper::IndexBuffer::Create(squareIndices, sizeof(squareIndices) / sizeof(uint32_t)));
+		m_SquareVA->SetIndexBuffer(squareIB);
 
 		std::string blueShaderVertexSrc = R"(
 			#version 330 core
@@ -135,59 +133,35 @@ public:
 			}
 		)";
 
-		//m_FlatColorShader = (Vesper::Shader::Create("FlatColor", blueShaderVertexSrc, flatColorShaderFragmentSrc));
-
-		//auto textureShader = m_ShaderLibrary.Load("assets/shaders/Texture.glsl");
-
-
-		//m_Texture = Vesper::Texture2D::Create("Resources/Textures/Checkerboard.png");
-		////m_Texture2 = Vesper::Texture2D::Create("assets/textures/sheets/fire_01.png");
-
-
-		//// TODO: Shader::SetMat4, Shader::SetFloat4
-		//std::dynamic_pointer_cast<Vesper::OpenGLShader>(textureShader)->Bind();
-		//std::dynamic_pointer_cast<Vesper::OpenGLShader>(textureShader)->UploadUniformInt("u_Texture", 0);
+		m_FlatColorShader = (Vesper::Shader::Create("FlatColor", blueShaderVertexSrc, flatColorShaderFragmentSrc));
 	}
 
 	void OnUpdate(Vesper::Timestep ts) override
 	{
-		//// Update
-		//m_CameraController.OnUpdate(ts);
+		// Update
+		m_CameraController.OnUpdate(ts);
 
-
-		//// Render
-		//Vesper::RenderCommand::SetClearColor({ 0.1f, 0.1f, 0.1f, 1.0f });
-		//Vesper::RenderCommand::Clear();
-
-		//Vesper::Renderer::BeginScene(m_CameraController.GetCamera());
-
-		//static glm::mat4 scale = glm::scale(glm::mat4(1.0f), glm::vec3(0.1f));
-
-		//std::dynamic_pointer_cast<Vesper::OpenGLShader>(m_FlatColorShader)->Bind();
-		//std::dynamic_pointer_cast<Vesper::OpenGLShader>(m_FlatColorShader)->UploadUniformFloat3("u_Color", m_SquareColor);
-
-		//for (int y = 0; y < 20; y++)
-		//{
-		//	for (int x = 0; x < 20; x++)
-		//	{
-		//		glm::vec3 pos(x * 0.11f, y * 0.11f, 0.0f);
-		//		glm::mat4 transform = glm::translate(glm::mat4(1.0f), pos) * scale;
-		//		Vesper::Renderer::Submit(m_FlatColorShader, m_SquareVA, transform);
-		//	}
-		//}
-
-		//auto textureShader = m_ShaderLibrary.Get("Texture");
-
-		//m_Texture->Bind();
-		//Vesper::Renderer::Submit(textureShader, m_SquareVA, glm::scale(glm::mat4(1.0f), glm::vec3(1.5f)));
-
-		//m_Texture2->Bind();
-		//Vesper::Renderer::Submit(textureShader, m_SquareVA, glm::scale(glm::mat4(1.0f), glm::vec3(1.5f)));
-
-		//// Triangle
-		////Vesper::Renderer::Submit(m_Shader, m_VertexArray);
-
-		//Vesper::Renderer::EndScene();
+		// Render
+		Vesper::RenderCommand::SetClearColor({ 0.1f, 0.1f, 0.1f, 1.0f });
+		Vesper::RenderCommand::Clear();
+		
+		Vesper::Renderer::BeginScene(m_CameraController.GetCamera());
+		// Squares
+		static glm::mat4 scale = glm::scale(glm::mat4(1.0f), glm::vec3(0.1f));
+		std::dynamic_pointer_cast<Vesper::OpenGLShader>(m_FlatColorShader)->Bind();
+		std::dynamic_pointer_cast<Vesper::OpenGLShader>(m_FlatColorShader)->UploadUniformFloat3("u_Color", m_SquareColor);
+		for (int y = 0; y < 20; y++)
+		{
+			for (int x = 0; x < 20; x++)
+			{
+				glm::vec3 pos(x * 0.11f, y * 0.11f, 0.0f);
+				glm::mat4 transform = glm::translate(glm::mat4(1.0f), pos) * scale;
+				Vesper::Renderer::Submit(m_FlatColorShader, m_SquareVA, transform);
+			}
+		}
+		// Triangle
+		Vesper::Renderer::Submit(m_Shader, m_TriangleVertexArray);
+		Vesper::Renderer::EndScene();
 	}
 
 	void OnImGuiRender() override
@@ -196,25 +170,15 @@ public:
 
 	void OnEvent(Vesper::Event& e) override
 	{
-		//m_CameraController.OnEvent(e);
-
-		//if (e.GetEventType() == Vesper::EventType::WindowResize)
-		//{
-
-		//}
+		m_CameraController.OnEvent(e);
 	}
 
 
 private:
-	Vesper::ShaderLibrary m_ShaderLibrary;
 	Vesper::Ref<Vesper::Shader> m_Shader;
-	Vesper::Ref<Vesper::VertexArray> m_VertexArray;
-
+	Vesper::Ref<Vesper::VertexArray> m_TriangleVertexArray;
 	Vesper::Ref<Vesper::Shader> m_FlatColorShader;
 	Vesper::Ref<Vesper::VertexArray> m_SquareVA;
-
-	Vesper::Ref<Vesper::Texture2D> m_Texture, m_Texture2;
-
 	Vesper::OrthographicCameraController m_CameraController;
 	glm::vec3 m_SquareColor = { 0.2f, 0.3f, 0.8f };
 };
@@ -225,8 +189,8 @@ class SandboxApp : public Vesper::Application
 public:
 	SandboxApp() {
 
-		//PushLayer(new ExampleLayer());
 		PushLayer(new Sandbox2D());
+		//PushLayer(new ExampleLayer());
 	}
 	~SandboxApp() {
 
