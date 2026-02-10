@@ -6,6 +6,7 @@
 #include "Shader.h"
 #include "RenderCommand.h"
 
+#include <glad/glad.h>
 #include <glm/gtc/matrix_transform.hpp>
 
 namespace Vesper {
@@ -158,21 +159,50 @@ namespace Vesper {
 	void Renderer2D::EndScene()
 	{
 		VZ_PROFILE_FUNCTION();
+
+		if (s_Data.QuadIndexCount == 0)
+			return; // Nothing to draw
+
 		uint32_t dataSize = (uint32_t)((uint8_t*)s_Data.QuadVertexBufferPtr - (uint8_t*)s_Data.QuadVertexBufferBase);
+
+		{
+#ifdef VZ_ENABLE_ASSERTS
+			uint32_t expectedVertices = (s_Data.QuadIndexCount / 6) * 4;
+			uint32_t expectedBytes = expectedVertices * sizeof(QuadVertex);
+			VZ_CORE_ASSERT(dataSize == expectedBytes, "Renderer2D: vertex buffer size does not match index count (possible ghosting source). dataSize = {0}, expected = {1}", dataSize, expectedBytes);
+#endif
+		}
 
 		s_Data.QuadVertexBuffer->SetData(s_Data.QuadVertexBufferBase, dataSize);
 		Flush();
 	}
 	
+	/// @brief Resets the batch for a new set of draw calls.
+	/// @todo Remove the OpenGL specific code from here
 	void Renderer2D::Flush()
 	{
 		VZ_PROFILE_FUNCTION();
+
+		// DIsable depth testing
+		GLboolean depthEnabled = glIsEnabled(GL_DEPTH_TEST);
+		GLboolean depthMask = 1;
+		glGetBooleanv(GL_DEPTH_WRITEMASK, &depthMask);
+
+		if (depthEnabled)
+			glDisable(GL_DEPTH_TEST);
+		glDepthMask(GL_FALSE);
+
 		// Bind textures
 		for (uint32_t i = 0; i < s_Data.TextureSlotIndex; i++)
 			s_Data.TextureSlots[i]->Bind(i);
 
 		RenderCommand::DrawIndexed(s_Data.QuadVertexArray, s_Data.QuadIndexCount);
 		s_Data.Stats.DrawCalls++;
+
+		// Restore depth state
+		glDepthMask(depthMask);
+		if (depthEnabled)
+			glEnable(GL_DEPTH_TEST);
 	}
 #pragma region DrawQuad
 
