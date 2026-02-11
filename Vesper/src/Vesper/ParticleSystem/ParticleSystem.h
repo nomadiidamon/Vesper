@@ -3,15 +3,15 @@
 /// @author Damon S. Green II
 /// @brief Defines the ParticleSystem class, which is responsible for rendering a simple particle system. This is a temporary implementation and will be replaced with a more robust implementation in the future.
 
-
-#include "Vesper.h"
-#include "Vesper/Renderer/OrthographicCamera.h"
+#include <glm/glm.hpp>
+#include "Vesper/Core/Timestep.h"
 
 namespace Vesper {
 
 	struct ParticleProps
 	{
 		glm::vec3 Position = { 0.0f, 0.0f, 0.0f };
+		glm::vec3 PositionVariation = { 0.0f, 0.0f, 0.0f };
 		glm::vec3 Velocity = { 0.0f, 0.0f, 0.0f };
 		glm::vec3 VelocityVariation = { 0.0f, 0.0f, 0.0f };
 		glm::vec4 ColorBegin = { 1.0f, 1.0f, 1.0f, 1.0f };
@@ -21,10 +21,21 @@ namespace Vesper {
 		float SizeVariation = 0.0f;
 		float Rotation = 0.0f;
 		float RotationVariation = 0.0f;
-		float LifeTime = 1.0f;
+		float Lifetime = 1.0f;
 		float LifetimeVariation = 0.0f;
 	};
 
+	struct Particle
+	{
+		glm::vec3 Position;
+		glm::vec3 Velocity;
+		glm::vec4 ColorBegin, ColorEnd;
+		float SizeBegin, SizeEnd;
+		float Rotation;
+		float Lifetime = 0.0f;
+		float LifeRemaining = 0.0f;
+		bool Active = false;
+	};
 
 	/// @class ParticleSystem
 	/// @brief A simple particle system for stress testing the renderer. This is a temporary starter particle system and will be replaced with a more robust implementation in the future.
@@ -37,29 +48,21 @@ namespace Vesper {
 		ParticleSystem(uint32_t maxParticles);
 
 		void OnUpdate(Timestep ts);
-		void OnRender(OrthographicCamera& camera);
+		void OnRender();
 		void Emit(const ParticleProps& particleProps);
 		void SetParticleProps(const ParticleProps& particleProps) { m_Props = particleProps; }
-
+		void ResetSystem() { m_PoolIndex = m_ParticlePool.size() - 1; m_TimeSinceLastEmit = 0.0f; m_IsEmitting = true; }
+		void ResetParticle(Particle& particle, const ParticleProps& particleProps);
 	private:
-		struct Particle
-		{
-			glm::vec3 Position;
-			glm::vec3 Velocity;
-			glm::vec4 ColorBegin, ColorEnd;
-			float SizeBegin, SizeEnd;
-			float Rotation;
-			float LifeTime = 0.0f;
-			float LifeRemaining = 0.0f;
-			bool Active = false;
-		};
 		std::vector<Particle> m_ParticlePool;
 		uint32_t m_PoolIndex = 999;
-		ParticleProps m_Props;
-
+		int m_activeParticleCount = 0;
 	public:
+		ParticleProps m_Props;
 		float m_TimeSinceLastEmit = 0.0f;
 		bool m_IsEmitting = true;
+		int m_EmitRate = 100; // Particles per second
+		bool m_Loop = true;
 	};
 
 

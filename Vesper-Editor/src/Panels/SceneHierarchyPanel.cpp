@@ -312,13 +312,13 @@ namespace Vesper {
 				//	subTexture.SetOffset(subTexture.Offset);
 				//	subTexture.SetTilingFactor(subTexture.TilingFactor);
 
-					auto tex = subTexRef->GetTexture();
-					if (tex) {
-						subTexture.SubTexture = SubTexture2D::CreateFromCoords(
-							tex, subTexture.Offset,
-							glm::vec2(static_cast<float>(tex->GetWidth()) * subTexture.TilingFactor.x,
-								static_cast<float>(tex->GetHeight()) * subTexture.TilingFactor.y));
-					}
+				auto tex = subTexRef->GetTexture();
+				if (tex) {
+					subTexture.SubTexture = SubTexture2D::CreateFromCoords(
+						tex, subTexture.Offset,
+						glm::vec2(static_cast<float>(tex->GetWidth()) * subTexture.TilingFactor.x,
+							static_cast<float>(tex->GetHeight()) * subTexture.TilingFactor.y));
+				}
 				//}
 			}
 		}
@@ -396,6 +396,7 @@ namespace Vesper {
 			//DisplayAddComponentEntry<ScriptComponent>("Script");
 			DisplayAddComponentEntry<SpriteRendererComponent>("Sprite Renderer");
 			DisplayAddComponentEntry<SubTextureComponent>("SubTexture");
+			DisplayAddComponentEntry<ParticleSystemComponent>("Particle System");
 
 			ImGui::EndPopup();
 		}
@@ -538,6 +539,48 @@ namespace Vesper {
 				SubTextureEdit(component.SubTexture->GetTexture()->GetName(), component);
 
 			});
+
+		DrawComponent<ParticleSystemComponent>("Particle System", entity, [](auto& component)
+			{
+				ParticleSystem& ps = component.ParticleSystem;
+				ParticleProps& psp = ps.m_Props;
+				ImGui::DragFloat("Lifetime", &psp.Lifetime, 0.1f, 0.0f, 10000.0f);
+				ImGui::DragFloat("Lifetime Variation", &psp.LifetimeVariation, 0.1f, 0.0f, 10000.0f);
+				ImGui::Separator();
+
+				ImGui::DragFloat("Start Size", &psp.SizeBegin, 0.1f, 0.0f, 10000.0f);
+				ImGui::DragFloat("Size Variation", &psp.SizeVariation, 0.1f, 0.0f, 10000.0f);
+				ImGui::DragFloat("End Size", &psp.SizeEnd, 0.1f, 0.0f, 10000.0f);
+				ImGui::Separator();
+
+				ImGui::ColorEdit4("Start Color", glm::value_ptr(psp.ColorBegin));
+				ImGui::ColorEdit4("End Color", glm::value_ptr(psp.ColorEnd));
+				ImGui::Separator();
+
+				ImGui::DragFloat2("Velocity", glm::value_ptr(psp.Velocity), 0.1f);
+				ImGui::DragFloat2("Velocity Variation", glm::value_ptr(psp.VelocityVariation), 0.1f);
+				ImGui::DragFloat3("Position Variation", glm::value_ptr(psp.PositionVariation), 0.1f);
+				ImGui::Separator();
+
+				ImGui::DragFloat("Rotation Speed", &psp.Rotation, 0.1f, -360.0f, 360.0f);
+				ImGui::DragFloat("Rotation Speed Variation", &psp.RotationVariation, 0.1f, 0.0f, 360.0f);
+				ImGui::Separator();
+
+				if (ImGui::Button("Reset System")) {
+					ps.ResetSystem();
+				}
+				ImGui::SameLine();
+				if (ImGui::Button("Emit")) {
+					ps.Emit(ps.m_Props);
+				}
+				ImGui::SameLine();
+				if (ImGui::Checkbox("Loop", &ps.m_Loop)) {
+	
+				}
+
+			});
+
+
 	}
 
 

@@ -81,7 +81,7 @@ namespace Vesper {
 		float m_textureScale = 1.0f;
 		float m_squareRotation = 25.0f;
 		float m_specialQuadRotation = 0.5f;
-		int ParticleEmitCount = 100;
+		int m_ParticleEmitCount = 100;
 
 		ParticleSystem m_ParticleSystem;	
 		ParticleProps m_ParticleProps;

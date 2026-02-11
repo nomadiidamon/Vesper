@@ -5,6 +5,9 @@
 #include "Vesper/Scene/Entity.h"
 #include "Vesper/Scene/ScriptableEntity.h"
 #include "Vesper/Renderer/EditorCamera.h"
+#include "Vesper/Input/Input.h"
+#include "Vesper/Input/KeyCodes.h"
+#include "Vesper/Input/MouseButtonCodes.h"
 
 namespace Vesper {
 
@@ -143,6 +146,30 @@ namespace Vesper {
 		//	Renderer2D::DrawQuadWithTexture(transform.GetTransform(), texAnim.SubTextures[texAnim.CurrentFrame], 1.0f, sprite.Color);
 		//}
 
+
+		{
+			VZ_PROFILE_SCOPE("Particle System(s) Update");
+
+			auto particleSystemView = m_Registry.group<ParticleSystemComponent>();
+			for (auto entity : particleSystemView) {
+				auto& transform = m_Registry.get<TransformComponent>(entity);
+				auto& particleSystem = m_Registry.get<ParticleSystemComponent>(entity);
+				auto& ps = particleSystem.ParticleSystem;
+				auto& props = ps.m_Props;
+				props.Position = transform.Translation;
+				ps.OnUpdate(ts);
+
+				if (ps.m_IsEmitting) {
+					for (int i = 0; i < ps.m_EmitRate; i++) {
+						ps.Emit(ps.m_Props);
+					}
+					ps.m_IsEmitting = false;
+				}
+
+				ps.OnRender();
+			}
+		}
+
 		Renderer2D::EndScene();
 
 	}
@@ -187,6 +214,29 @@ namespace Vesper {
 			}
 			Renderer2D::DrawQuad(transform.GetTransform(), subTexture.GetSubTexture(), sprite.TilingFactor, sprite.Color);
 		}
+
+		{
+			VZ_PROFILE_SCOPE("Particle System(s) Update");
+
+			auto particleSystemView = m_Registry.group<ParticleSystemComponent>();
+			for (auto entity : particleSystemView) {
+				auto& transform = m_Registry.get<TransformComponent>(entity);
+				auto& particleSystem = m_Registry.get<ParticleSystemComponent>(entity);
+				auto& ps = particleSystem.ParticleSystem;
+				auto& props = ps.m_Props;
+				props.Position = transform.Translation;
+				ps.OnUpdate(ts);
+				if (ps.m_IsEmitting) {
+					for (int i = 0; i < ps.m_EmitRate; i++) {
+						ps.Emit(ps.m_Props);
+					}
+					ps.m_IsEmitting = false;
+				}
+
+				ps.OnRender();
+			}
+		}
+
 		Renderer2D::EndScene();
 	}
 
@@ -265,4 +315,7 @@ namespace Vesper {
 	void Scene::OnComponentAdded<NativeScriptComponent>(Entity entity, NativeScriptComponent& component) {
 	}
 
+	template<>
+	void Scene::OnComponentAdded<ParticleSystemComponent>(Entity entity, ParticleSystemComponent& component) {
+	}
 }

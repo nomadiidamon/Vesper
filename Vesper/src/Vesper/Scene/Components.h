@@ -7,6 +7,7 @@
 
 #include "Vesper/Renderer/Texture.h"
 #include "Vesper/Renderer/SubTexture2D.h"
+#include "Vesper/ParticleSystem/ParticleSystem.h"
 #include "SceneCamera.h"
 #include "Vesper/Core/Random.h"
 
@@ -229,6 +230,7 @@ namespace Vesper
 
 	};
 
+
 	class ScriptableEntity;
 	class Timestep;
 
@@ -252,6 +254,19 @@ namespace Vesper
 			InstantiateScript = []() { return static_cast<ScriptableEntity*> (new T()); };
 			DestroyScript = [](NativeScriptComponent* nsc) { delete nsc->Instance; nsc->Instance = nullptr; };
 		}
+	};
+
+
+	struct ParticleSystemComponent
+	{
+		ParticleSystem ParticleSystem;
+
+		ParticleSystemComponent() = default;
+		ParticleSystemComponent(const ParticleSystemComponent&) = default;
+		ParticleSystemComponent(const int maxParticles)
+			: ParticleSystem(maxParticles) {
+		}
+
 	};
 
 }
