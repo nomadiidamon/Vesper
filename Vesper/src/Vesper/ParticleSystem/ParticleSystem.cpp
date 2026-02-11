@@ -52,7 +52,7 @@ namespace Vesper {
 			glm::vec4 color = glm::lerp(particle.ColorEnd, particle.ColorBegin, life);
 			float size = glm::lerp(particle.SizeEnd, particle.SizeBegin, life);
 
-			Vesper::Renderer2D::DrawQuadRotatedWithTexture(
+			Vesper::Renderer2D::DrawRotatedQuad(
 				{ particle.Position },
 				{ size, size },
 				Vesper::Renderer2D::GetWhiteTexture(),

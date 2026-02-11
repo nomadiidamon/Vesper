@@ -104,9 +104,9 @@ namespace Vesper {
 			}
 
 			if (sprite.TextureEnabled && !sprite.Texture)
-				Renderer2D::DrawQuadWithTexture(transform.GetTransform(), VZ_DEFAULT_TEXTURE, sprite.TilingFactor, sprite.Color);
+				Renderer2D::DrawQuad(transform.GetTransform(), VZ_DEFAULT_TEXTURE, sprite.TilingFactor, sprite.Color);
 			else if (sprite.TextureEnabled && sprite.Texture)
-				Renderer2D::DrawQuadWithTexture(transform.GetTransform(), sprite.Texture, sprite.TilingFactor, sprite.Color);
+				Renderer2D::DrawQuad(transform.GetTransform(), sprite.Texture, sprite.TilingFactor, sprite.Color);
 			else
 				Renderer2D::DrawQuad(transform.GetTransform(), sprite.Color);
 		}
@@ -130,7 +130,7 @@ namespace Vesper {
 				}
 			}
 
-			Renderer2D::DrawQuadWithTexture(transform.GetTransform(), subTexture.GetSubTexture(), sprite.TilingFactor, sprite.Color);
+			Renderer2D::DrawQuad(transform.GetTransform(), subTexture.GetSubTexture(), sprite.TilingFactor, sprite.Color);
 		}
 
 		//auto group1 = m_Registry.group<TextureAnimationComponent>();
@@ -162,9 +162,9 @@ namespace Vesper {
 				continue;
 			}
 			if (sprite.TextureEnabled && !sprite.Texture)
-				Renderer2D::DrawQuadWithTexture(transform.GetTransform(), VZ_DEFAULT_TEXTURE, sprite.TilingFactor, sprite.Color);
+				Renderer2D::DrawQuad(transform.GetTransform(), VZ_DEFAULT_TEXTURE, sprite.TilingFactor, sprite.Color);
 			else if (sprite.TextureEnabled && sprite.Texture)
-				Renderer2D::DrawQuadWithTexture(transform.GetTransform(), sprite.Texture, sprite.TilingFactor, sprite.Color);
+				Renderer2D::DrawQuad(transform.GetTransform(), sprite.Texture, sprite.TilingFactor, sprite.Color);
 			else
 				Renderer2D::DrawQuad(transform.GetTransform(), sprite.Color);
 		}
@@ -185,7 +185,7 @@ namespace Vesper {
 					subTexture.SetTexture(sprite.Texture);
 				}
 			}
-			Renderer2D::DrawQuadWithTexture(transform.GetTransform(), subTexture.GetSubTexture(), sprite.TilingFactor, sprite.Color);
+			Renderer2D::DrawQuad(transform.GetTransform(), subTexture.GetSubTexture(), sprite.TilingFactor, sprite.Color);
 		}
 		Renderer2D::EndScene();
 	}

@@ -279,16 +279,16 @@ namespace Vesper {
 					Renderer2D::BeginScene(m_CameraController.GetCamera());
 
 					// Checkerboard background
-					Renderer2D::DrawQuadWithTexture({ 0.0f, 0.0f, -0.25f }, { 25.0f, 25.0f }, m_CheckerboardTexture, 10.0f, m_BackgroundColor);
+					Renderer2D::DrawQuad({ 0.0f, 0.0f, -0.25f }, { 25.0f, 25.0f }, m_CheckerboardTexture, 10.0f, m_BackgroundColor);
 
 					// Squares
-					Renderer2D::DrawQuadRotated({ 0.0f, 1.25f, -0.165f }, { 1.0f, 1.0f }, glm::radians(45.0f + m_squareRotation + rotation), m_SquareColor);
+					Renderer2D::DrawRotatedQuad({ 0.0f, 1.25f, -0.165f }, { 1.0f, 1.0f }, glm::radians(45.0f + m_squareRotation + rotation), m_SquareColor);
 
 					// Rotated Squares
-					Renderer2D::DrawQuadRotatedWithTexture({ 0.0f, 1.25f, -0.15f }, { 0.75f, 0.75f }, m_CheckerboardTexture, glm::radians(m_squareRotation * m_specialQuadRotation * rotation), m_textureScale, m_SpecialQuadColor);
+					Renderer2D::DrawRotatedQuad({ 0.0f, 1.25f, -0.15f }, { 0.75f, 0.75f }, m_CheckerboardTexture, glm::radians(m_squareRotation * m_specialQuadRotation * rotation), m_textureScale, m_SpecialQuadColor);
 
-					Renderer2D::DrawQuadRotatedWithTexture({ 2.0f, -0.25f, -0.15f }, { 1.0f, 1.0f }, m_CheckerboardTexture, glm::radians(m_squareRotation + rotation), m_textureScale, m_TextureTintColor1);
-					Renderer2D::DrawQuadRotatedWithTexture({ -2.0f, -0.25f, -0.15f }, { 1.0f, 1.0f }, m_CheckerboardTexture, glm::radians(m_squareRotation + rotation), m_textureScale, m_TextureTintColor2);
+					Renderer2D::DrawRotatedQuad({ 2.0f, -0.25f, -0.15f }, { 1.0f, 1.0f }, m_CheckerboardTexture, glm::radians(m_squareRotation + rotation), m_textureScale, m_TextureTintColor1);
+					Renderer2D::DrawRotatedQuad({ -2.0f, -0.25f, -0.15f }, { 1.0f, 1.0f }, m_CheckerboardTexture, glm::radians(m_squareRotation + rotation), m_textureScale, m_TextureTintColor2);
 
 					glm::vec3 startPos = { 0.0f, 0.0f, -0.175f };
 					//Renderer2D::DrawQuad(pos, { 0.8f, 0.8f }, { 0.8f, 0.2f, 0.3f, 1.0f });
@@ -317,15 +317,15 @@ namespace Vesper {
 					Renderer2D::BeginScene(m_CameraController.GetCamera());
 
 					// Sprite sheet drawn as full texture
-					Renderer2D::DrawQuadWithTexture({ -1.0f, 1.5f, 0.5f }, { 1, 1 }, m_SpriteSheetFire, 1.0f, { 1.0f, 1.0f, 1.0f, 1.0f });
-					Renderer2D::DrawQuadRotatedWithTexture({ 1.5f, 0.0f, 0.0f }, { 1.78f, 1.0f }, m_SpriteSheetTown, 0, 1.0f, { 1.0f, 1.0f, 1.0f, 1.0f });
+					Renderer2D::DrawQuad({ -1.0f, 1.5f, 0.5f }, { 1, 1 }, m_SpriteSheetFire, 1.0f, { 1.0f, 1.0f, 1.0f, 1.0f });
+					Renderer2D::DrawRotatedQuad({ 1.5f, 0.0f, 0.0f }, { 1.78f, 1.0f }, m_SpriteSheetTown, 0, 1.0f, { 1.0f, 1.0f, 1.0f, 1.0f });
 
 
 					// Sprite sheet drawn as full texture rotated
-					Renderer2D::DrawQuadRotatedWithTexture({ -1.5f, 0.0f, 0.0f }, { 1.78f, 1.0f }, m_SpriteSheetTown, glm::radians(-rotation), 1.0f, { 1.0f, 1.0f, 1.0f, 1.0f });
+					Renderer2D::DrawRotatedQuad({ -1.5f, 0.0f, 0.0f }, { 1.78f, 1.0f }, m_SpriteSheetTown, glm::radians(-rotation), 1.0f, { 1.0f, 1.0f, 1.0f, 1.0f });
 
 					// Sub texture from tilesheet
-					Renderer2D::DrawQuadWithTexture({ 2.0f, -1.5f, 0.0f }, { 1.0f, 1.0f }, m_SubTextureTown, 1.0f, { 1.0f, 1.0f, 1.0f, 1.0f });
+					Renderer2D::DrawQuad({ 2.0f, -1.5f, 0.0f }, { 1.0f, 1.0f }, m_SubTextureTown, 1.0f, { 1.0f, 1.0f, 1.0f, 1.0f });
 
 					// Grid of sub textures from tilesheet
 					for (int y = -5; y < 5; y++)
@@ -333,12 +333,12 @@ namespace Vesper {
 						for (int x = -5; x < 5; x++)
 						{
 							glm::vec3 pos = glm::vec3(x * 0.09f, y * 0.09f, -0.09f);
-							Renderer2D::DrawQuadWithTexture(pos, { 0.1f, 0.1f }, m_SubTextureTown, 1.0f, glm::vec4(1.0f));
+							Renderer2D::DrawQuad(pos, { 0.1f, 0.1f }, m_SubTextureTown, 1.0f, glm::vec4(1.0f));
 						}
 					}
 
 					/// TODO: get it to animate through texture sheet sub texture indices
-					Renderer2D::DrawQuadRotatedWithTexture({ 0.0f, -1.5f, 0.0f }, { 1.0f, 1.0f }, m_SubTextureFire, 0, 1.0f, { 1.0f, 1.0f, 1.0f, 1.0f });
+					Renderer2D::DrawRotatedQuad({ 0.0f, -1.5f, 0.0f }, { 1.0f, 1.0f }, m_SubTextureFire, 0, 1.0f, { 1.0f, 1.0f, 1.0f, 1.0f });
 
 					Renderer2D::EndScene();
 				}
@@ -359,7 +359,7 @@ namespace Vesper {
 							else
 								texture = s_TextureMap['G']; // Default to grass
 
-							Renderer2D::DrawQuadWithTexture({ x - s_MapWidth / 2.0f, s_MapHeight - y - s_MapHeight / 2.0f, 0.1f }, { 1.0f, 1.0f }, texture, 1.0f, glm::vec4(1.0f));
+							Renderer2D::DrawQuad({ x - s_MapWidth / 2.0f, s_MapHeight - y - s_MapHeight / 2.0f, 0.1f }, { 1.0f, 1.0f }, texture, 1.0f, glm::vec4(1.0f));
 
 						}
 					}
