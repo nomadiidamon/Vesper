@@ -8,6 +8,7 @@
 #include <glm/gtc/type_ptr.hpp>
 
 #include "Vesper/Scene/SceneSerializer.h"
+#include "ViewportLayer.h"
 
 static const uint32_t s_MapWidth = 20;
 static const uint32_t s_MapHeight = 10;
@@ -91,6 +92,12 @@ namespace Vesper {
 			fbSpec.Width = 1280;
 			fbSpec.Height = 720;
 			m_Framebuffer = Framebuffer::Create(fbSpec);
+		}
+		{
+			FramebufferSpecification fbSpec;
+			fbSpec.Width = 1280;
+			fbSpec.Height = 720;
+			m_SecondaryFramebuffer = Framebuffer::Create(fbSpec);
 		}
 
 		// Scene setup
@@ -223,7 +230,28 @@ namespace Vesper {
 			m_EditorCamera = EditorCamera(30.0f, 1.778f, 0.1f, 1000.0f);
 		}
 
+		// create and wire the viewport layer
+		m_ViewportLayer = CreateRef<Vesper::ViewportLayer>("Viewport");
+		m_ViewportLayer->SetFramebuffer(m_Framebuffer);
 
+		m_ViewportLayer->SetOnResizeCallback([this](uint32_t w, uint32_t h) {
+			m_ViewportSize = { (float)w, (float)h };
+			m_CameraController.OnResize((float)w, (float)h);
+			m_EditorCamera.SetViewportSize((float)w, (float)h);
+			if (m_ActiveScene)
+				m_ActiveScene->OnViewportResize(w, h);
+			});
+
+		m_SecondaryViewportLayer = CreateRef<Vesper::ViewportLayer>("SecondaryViewport");
+		m_SecondaryViewportLayer->SetFramebuffer(m_SecondaryFramebuffer);
+
+		m_SecondaryViewportLayer->SetOnResizeCallback([this](uint32_t w, uint32_t h) {
+			m_ViewportSize = { (float)w, (float)h };
+			m_CameraController.OnResize((float)w, (float)h);
+			m_EditorCamera.SetViewportSize((float)w, (float)h);
+			if (m_ActiveScene)
+				m_ActiveScene->OnViewportResize(w, h);
+			});
 	}
 
 	void EditorLayer::OnDetach()
@@ -245,36 +273,63 @@ namespace Vesper {
 			m_EditorCamera.SetViewportSize(m_ViewportSize.x, m_ViewportSize.y);
 			m_ActiveScene->OnViewportResize((uint32_t)m_ViewportSize.x, (uint32_t)m_ViewportSize.y);
 		}
+		if (Vesper::FramebufferSpecification spec = m_SecondaryFramebuffer->GetSpecification();
+			m_ViewportSize.x > 0.0f && m_ViewportSize.y > 0.0f &&
+			(spec.Width != (uint32_t)m_ViewportSize.x || spec.Height != (uint32_t)m_ViewportSize.y))
+		{
+			m_SecondaryFramebuffer->Resize((uint32_t)m_ViewportSize.x, (uint32_t)m_ViewportSize.y);
+			m_CameraController.OnResize(m_ViewportSize.x, m_ViewportSize.y);
+			m_EditorCamera.SetViewportSize(m_ViewportSize.x, m_ViewportSize.y);
+			m_ActiveScene->OnViewportResize((uint32_t)m_ViewportSize.x, (uint32_t)m_ViewportSize.y);
+		}
 
 		// Update
 		if (m_ViewportFocused)
 		{
 			m_CameraController.OnUpdate(ts);
 		}
-			m_EditorCamera.OnUpdate(ts);
+		m_EditorCamera.OnUpdate(ts);
 
-
+		/// First viewport
 		// Render
 		Renderer2D::ResetStats();
 		{
-			VZ_PROFILE_SCOPE("Renderer Prep");
+			VZ_PROFILE_SCOPE("Renderer Prep 1");
 			m_Framebuffer->Bind();
 			RenderCommand::SetClearColor(m_ClearColor);
 			RenderCommand::Clear();
 		}
-
-
 		// Draw
 		{
 			{
-				VZ_PROFILE_SCOPE("Entity Scene Update");
+				VZ_PROFILE_SCOPE("Entity Scene Update 1");
 				// Update scene
-					m_ActiveScene->OnUpdateRuntime(ts);
-					m_ActiveScene->OnUpdateEditor(ts, m_EditorCamera);
+				m_ActiveScene->OnUpdateRuntime(ts);
+				m_ActiveScene->OnUpdateEditor(ts, m_EditorCamera);
 			}
 		}
-
 		m_Framebuffer->Unbind();
+		
+
+		/// Second viewport
+		// Render
+		Renderer2D::ResetStats();
+		{
+			VZ_PROFILE_SCOPE("Renderer Prep 2");
+			m_SecondaryFramebuffer->Bind();
+			RenderCommand::SetClearColor(m_ClearColor);
+			RenderCommand::Clear();
+		}
+		// Draw
+		{
+			{
+				VZ_PROFILE_SCOPE("Entity Scene Update 2");
+				// Update scene
+				m_ActiveScene->OnUpdateRuntime(ts);
+				m_ActiveScene->OnUpdateEditor(ts, m_EditorCamera);
+			}
+		}
+		m_SecondaryFramebuffer->Unbind();
 	}
 
 	void EditorLayer::OnImGuiRender()
@@ -387,83 +442,176 @@ namespace Vesper {
 		DisplayVesperInfo_ImGui();
 
 		{
-			ImGui::PushStyleVar(ImGuiStyleVar_WindowPadding, ImVec2{ 0,0 });
-			ImGui::Begin("Viewport");
-			m_ViewportFocused = ImGui::IsWindowFocused();
-			m_ViewportHovered = ImGui::IsWindowHovered();
+			//ImGui::PushStyleVar(ImGuiStyleVar_WindowPadding, ImVec2{ 0,0 });
+			//ImGui::Begin("Viewport");
+			//m_ViewportFocused = ImGui::IsWindowFocused();
+			//m_ViewportHovered = ImGui::IsWindowHovered();
+			//Application::Get().GetImGuiLayer()->SetBlockEvents(!m_ViewportFocused && !m_ViewportHovered);
+
+			//ImVec2 viewportPanelSize = ImGui::GetContentRegionAvail();
+			//if (m_ViewportSize != *((glm::vec2*)&viewportPanelSize) && viewportPanelSize.x > 0.0f && viewportPanelSize.y > 0)
+			//{
+			//	m_Framebuffer->Resize((uint32_t)viewportPanelSize.x, (uint32_t)viewportPanelSize.y);
+			//	m_ViewportSize = { viewportPanelSize.x, viewportPanelSize.y };
+
+			//	m_CameraController.OnResize(viewportPanelSize.x, viewportPanelSize.y);
+			//}
+
+			//ImVec2 viewportBoundsMin = ImGui::GetCursorScreenPos();
+			//ImVec2 viewportBoundsMax = { viewportBoundsMin.x + m_ViewportSize.x, viewportBoundsMin.y + m_ViewportSize.y };
+			//m_ViewportBounds[0] = { viewportBoundsMin.x, viewportBoundsMin.y };
+			//m_ViewportBounds[1] = { viewportBoundsMax.x, viewportBoundsMax.y };
+
+			//uint32_t textureID = m_Framebuffer->GetColorAttachmentRendererID();
+			//ImGui::Image(textureID, ImVec2(m_ViewportSize.x, m_ViewportSize.y), ImVec2(0, 1), ImVec2(1, 0));
+
+			//// Gizmos
+			//Entity selectedEntity = m_SceneHierarchyPanel.GetSelectedEntity();
+			//if (selectedEntity && m_GizmoType != -1)
+			//{
+			//	ImGuizmo::SetOrthographic(false);
+			//	ImGuizmo::SetDrawlist();
+			//	float windowWidth = (float)ImGui::GetWindowWidth();
+			//	float windowHeight = (float)ImGui::GetWindowHeight();
+			//	ImGuizmo::SetRect(ImGui::GetWindowPos().x, ImGui::GetWindowPos().y, windowWidth, windowHeight);
+
+			//	// Camera
+			//	// Runtime camera from entity
+			//	//auto cameraEntity = m_ActiveScene->GetPrimaryCameraEntity();
+			//	//const auto& camera = cameraEntity.GetComponent<CameraComponent>().Camera;
+			//	//const glm::mat4& cameraProjection = camera.GetProjection();
+			//	//glm::mat4 cameraView = glm::inverse(cameraEntity.GetComponent<TransformComponent>().GetTransform());
+
+			//	// Editor camera
+			//	const glm::mat4& cameraProjection = m_EditorCamera.GetProjection();
+			//	glm::mat4 cameraView = m_EditorCamera.GetViewMatrix();
+
+			//	// Entity Transform
+			//	auto& tc = selectedEntity.GetComponent<TransformComponent>();
+			//	glm::mat4 transform = tc.GetTransform();
+
+			//	// Snapping
+			//	bool snap = Input::IsKeyPressed(Key::LeftControl);
+			//	// use the editor layer snap values
+			//	float snapValue = m_TranslationSnap;
+			//	if (m_GizmoType == ImGuizmo::OPERATION::ROTATE)
+			//		snapValue = m_RotationSnap;
+			//	else if (m_GizmoType == ImGuizmo::OPERATION::SCALE)
+			//		snapValue = m_ScaleSnap;
+
+			//	float snapValues[3] = { snapValue, snapValue, snapValue };
+
+			//	ImGuizmo::Manipulate(glm::value_ptr(cameraView), glm::value_ptr(cameraProjection),
+			//		(ImGuizmo::OPERATION)m_GizmoType, ImGuizmo::LOCAL, glm::value_ptr(transform),
+			//		nullptr, snap ? snapValues : nullptr);
+
+			//	if (ImGuizmo::IsUsing())
+			//	{
+			//		glm::vec3 translation, rotation, scale;
+			//		Vesper::Math::DecomposeTransform(transform, translation, rotation, scale);
+			//		tc.Translation = translation;
+			//		tc.Rotation = rotation;
+			//		tc.Scale = scale;
+			//	}
+			//}
+
+			// set up in-window render callback for gizmos
+			m_ViewportLayer->SetInsideRenderCallback([this]() {
+				// Gizmos
+				Entity selectedEntity = m_SceneHierarchyPanel.GetSelectedEntity();
+				if (selectedEntity && m_GizmoType != -1)
+				{
+					ImGuizmo::SetOrthographic(false);
+					ImGuizmo::SetDrawlist();
+					float windowWidth = (float)ImGui::GetWindowWidth();
+					float windowHeight = (float)ImGui::GetWindowHeight();
+					ImGuizmo::SetRect(ImGui::GetWindowPos().x, ImGui::GetWindowPos().y, windowWidth, windowHeight);
+
+					// Editor camera
+					const glm::mat4& cameraProjection = m_EditorCamera.GetProjection();
+					glm::mat4 cameraView = m_EditorCamera.GetViewMatrix();
+
+					// Entity Transform
+					auto& tc = selectedEntity.GetComponent<TransformComponent>();
+					glm::mat4 transform = tc.GetTransform();
+
+					bool snap = Input::IsKeyPressed(Key::LeftControl);
+					float snapValue = m_TranslationSnap;
+					if (m_GizmoType == ImGuizmo::OPERATION::ROTATE)
+						snapValue = m_RotationSnap;
+					else if (m_GizmoType == ImGuizmo::OPERATION::SCALE)
+						snapValue = m_ScaleSnap;
+
+					float snapValues[3] = { snapValue, snapValue, snapValue };
+
+					ImGuizmo::Manipulate(glm::value_ptr(cameraView), glm::value_ptr(cameraProjection),
+						(ImGuizmo::OPERATION)m_GizmoType, ImGuizmo::LOCAL, glm::value_ptr(transform),
+						nullptr, snap ? snapValues : nullptr);
+
+					if (ImGuizmo::IsUsing())
+					{
+						glm::vec3 translation, rotation, scale;
+						Vesper::Math::DecomposeTransform(transform, translation, rotation, scale);
+						tc.Translation = translation;
+						tc.Rotation = rotation;
+						tc.Scale = scale;
+					}
+				}
+			});
+			m_SecondaryViewportLayer->SetInsideRenderCallback([this]() {
+				// Gizmos
+				Entity selectedEntity = m_SceneHierarchyPanel.GetSelectedEntity();
+				if (selectedEntity && m_GizmoType != -1)
+				{
+					ImGuizmo::SetOrthographic(false);
+					ImGuizmo::SetDrawlist();
+					float windowWidth = (float)ImGui::GetWindowWidth();
+					float windowHeight = (float)ImGui::GetWindowHeight();
+					ImGuizmo::SetRect(ImGui::GetWindowPos().x, ImGui::GetWindowPos().y, windowWidth, windowHeight);
+					// Editor camera
+					const glm::mat4& cameraProjection = m_EditorCamera.GetProjection();
+					glm::mat4 cameraView = m_EditorCamera.GetViewMatrix();
+					// Entity Transform
+					auto& tc = selectedEntity.GetComponent<TransformComponent>();
+					glm::mat4 transform = tc.GetTransform();
+					bool snap = Input::IsKeyPressed(Key::LeftControl);
+					float snapValue = m_TranslationSnap;
+					if (m_GizmoType == ImGuizmo::OPERATION::ROTATE)
+						snapValue = m_RotationSnap;
+					else if (m_GizmoType == ImGuizmo::OPERATION::SCALE)
+						snapValue = m_ScaleSnap;
+					float snapValues[3] = { snapValue, snapValue, snapValue };
+					ImGuizmo::Manipulate(glm::value_ptr(cameraView), glm::value_ptr(cameraProjection),
+						(ImGuizmo::OPERATION)m_GizmoType, ImGuizmo::LOCAL, glm::value_ptr(transform),
+						nullptr, snap ? snapValues : nullptr);
+					if (ImGuizmo::IsUsing())
+					{
+						glm::vec3 translation, rotation, scale;
+						Vesper::Math::DecomposeTransform(transform, translation, rotation, scale);
+						tc.Translation = translation;
+						tc.Rotation = rotation;
+						tc.Scale = scale;
+					}
+				}
+				});
+
+			// render the viewport window
+			m_ViewportLayer->OnImGuiRender();
+			m_SecondaryViewportLayer->OnImGuiRender();
+
+			// sync focus/hover state and block events for ImGui layer as before
+			m_ViewportFocused = m_ViewportLayer->IsFocused() || m_SecondaryViewportLayer->IsFocused();
+			m_ViewportHovered = m_ViewportLayer->IsHovered() || m_SecondaryViewportLayer->IsHovered();
 			Application::Get().GetImGuiLayer()->SetBlockEvents(!m_ViewportFocused && !m_ViewportHovered);
 
-			ImVec2 viewportPanelSize = ImGui::GetContentRegionAvail();
-			if (m_ViewportSize != *((glm::vec2*)&viewportPanelSize) && viewportPanelSize.x > 0.0f && viewportPanelSize.y > 0)
-			{
-				m_Framebuffer->Resize((uint32_t)viewportPanelSize.x, (uint32_t)viewportPanelSize.y);
-				m_ViewportSize = { viewportPanelSize.x, viewportPanelSize.y };
+			// update stored bounds if you rely on them elsewhere:
+			const glm::vec2* vb = m_ViewportLayer->GetViewportBounds();
+			m_ViewportBounds[0] = vb[0];
+			m_ViewportBounds[1] = vb[1];
 
-				m_CameraController.OnResize(viewportPanelSize.x, viewportPanelSize.y);
-			}
-
-			ImVec2 viewportBoundsMin = ImGui::GetCursorScreenPos();
-			ImVec2 viewportBoundsMax = { viewportBoundsMin.x + m_ViewportSize.x, viewportBoundsMin.y + m_ViewportSize.y };
-			m_ViewportBounds[0] = { viewportBoundsMin.x, viewportBoundsMin.y };
-			m_ViewportBounds[1] = { viewportBoundsMax.x, viewportBoundsMax.y };
-
-			uint32_t textureID = m_Framebuffer->GetColorAttachmentRendererID();
-			ImGui::Image(textureID, ImVec2(m_ViewportSize.x, m_ViewportSize.y), ImVec2(0, 1), ImVec2(1, 0));
-
-			// Gizmos
-			Entity selectedEntity = m_SceneHierarchyPanel.GetSelectedEntity();
-			if (selectedEntity && m_GizmoType != -1)
-			{
-				ImGuizmo::SetOrthographic(false);
-				ImGuizmo::SetDrawlist();
-				float windowWidth = (float)ImGui::GetWindowWidth();
-				float windowHeight = (float)ImGui::GetWindowHeight();
-				ImGuizmo::SetRect(ImGui::GetWindowPos().x, ImGui::GetWindowPos().y, windowWidth, windowHeight);
-
-				// Camera
-				// Runtime camera from entity
-				//auto cameraEntity = m_ActiveScene->GetPrimaryCameraEntity();
-				//const auto& camera = cameraEntity.GetComponent<CameraComponent>().Camera;
-				//const glm::mat4& cameraProjection = camera.GetProjection();
-				//glm::mat4 cameraView = glm::inverse(cameraEntity.GetComponent<TransformComponent>().GetTransform());
-
-				// Editor camera
-				const glm::mat4& cameraProjection = m_EditorCamera.GetProjection();
-				glm::mat4 cameraView = m_EditorCamera.GetViewMatrix();
-
-				// Entity Transform
-				auto& tc = selectedEntity.GetComponent<TransformComponent>();
-				glm::mat4 transform = tc.GetTransform();
-
-				// Snapping
-				bool snap = Input::IsKeyPressed(Key::LeftControl);
-				// use the editor layer snap values
-				float snapValue = m_TranslationSnap;
-				if (m_GizmoType == ImGuizmo::OPERATION::ROTATE)
-					snapValue = m_RotationSnap;
-				else if (m_GizmoType == ImGuizmo::OPERATION::SCALE)
-					snapValue = m_ScaleSnap;
-
-				float snapValues[3] = { snapValue, snapValue, snapValue };
-
-				ImGuizmo::Manipulate(glm::value_ptr(cameraView), glm::value_ptr(cameraProjection),
-					(ImGuizmo::OPERATION)m_GizmoType, ImGuizmo::LOCAL, glm::value_ptr(transform),
-					nullptr, snap ? snapValues : nullptr);
-
-				if (ImGuizmo::IsUsing())
-				{
-					glm::vec3 translation, rotation, scale;
-					Vesper::Math::DecomposeTransform(transform, translation, rotation, scale);
-					tc.Translation = translation;
-					tc.Rotation = rotation;
-					tc.Scale = scale;
-				}
-			}
 
 			ImGui::End();
-			ImGui::PopStyleVar();
 		}
-		ImGui::End();
 	}
 
 	void EditorLayer::OnEvent(Event& e)

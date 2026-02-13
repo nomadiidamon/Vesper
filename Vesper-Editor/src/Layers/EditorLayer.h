@@ -5,8 +5,9 @@
 #include "Vesper/App/Layer.h"
 #include "Vesper/ParticleSystem/ParticleSystem.h"
 #include "Vesper/Scene/Scene.h"
-#include "Panels/SceneHierarchyPanel.h"
+#include "../Panels/SceneHierarchyPanel.h"
 #include "Vesper/Renderer/EditorCamera.h"
+#include "ViewportLayer.h"
 
 namespace Vesper {
 
@@ -74,7 +75,10 @@ namespace Vesper {
 		//Ref<SubTexture2D> m_SubTextureRock;
 		//Ref<SubTexture2D> m_SubTexturePlant;
 
+		Ref<ViewportLayer> m_ViewportLayer;
+		Ref<ViewportLayer> m_SecondaryViewportLayer;
 		Ref<Framebuffer> m_Framebuffer;
+		Ref<Framebuffer> m_SecondaryFramebuffer;
 
 		EditorCamera m_EditorCamera;
 
