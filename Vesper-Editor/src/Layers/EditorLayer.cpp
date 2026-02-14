@@ -10,19 +10,19 @@
 #include "Vesper/Scene/SceneSerializer.h"
 #include "ViewportLayer.h"
 
-static const uint32_t s_MapWidth = 20;
-static const uint32_t s_MapHeight = 10;
-static const char* s_MapTiles =
-"GGGGGGGGGGGGGGGGGGGG"
-"GGGCCCCCCCCCCCCCCGGG"
-"GGGCGGGGGGGGGGGGCGGG"
-"GGGCGGRGGGGGGRGGCGGG"
-"GGGCGGGGGGGGGGGGCGGG"
-"GGGCGGGGGGGGGGGGCGGG"
-"GGGCGGPGGGGGGPGGCGGG"
-"GGGCGGGGGGGGGGGGCGGG"
-"GGGCCCCCCCCCCCCCCGGG"
-"GGGGGGGGGGGGGGGGGGGG";
+//static const uint32_t s_MapWidth = 20;
+//static const uint32_t s_MapHeight = 10;
+//static const char* s_MapTiles =
+//"GGGGGGGGGGGGGGGGGGGG"
+//"GGGCCCCCCCCCCCCCCGGG"
+//"GGGCGGGGGGGGGGGGCGGG"
+//"GGGCGGRGGGGGGRGGCGGG"
+//"GGGCGGGGGGGGGGGGCGGG"
+//"GGGCGGGGGGGGGGGGCGGG"
+//"GGGCGGPGGGGGGPGGCGGG"
+//"GGGCGGGGGGGGGGGGCGGG"
+//"GGGCCCCCCCCCCCCCCGGG"
+//"GGGGGGGGGGGGGGGGGGGG";
 
 // G - Grass - SpriteSheetTown -> subTexture(4.25, 0.75) (64, 64) (1, 1)
 // C - Crystal - SpriteSheetCrystals -> subTexture { 0, 1.25 }, { 64, 64 }, { 1, 1 }
@@ -52,7 +52,7 @@ namespace Vesper {
 			/// TODO: move to resource manager
 			/// TODO: fix pathing
 			m_CheckerboardTexture = Texture2D::Create("../../Vesper-Editor/assets/textures/Checkerboard.png");
-			m_SpriteSheetFire = Texture2D::Create("../../Vesper-Editor/assets/textures/sheets/fire_01.png");
+			/*m_SpriteSheetFire = Texture2D::Create("../../Vesper-Editor/assets/textures/sheets/fire_01.png");
 			m_SpriteSheetSmoke = Texture2D::Create("../../Vesper-Editor/assets/textures/sheets/fire_02.png");
 			m_SpriteSheetTown = Texture2D::Create("../../Vesper-Editor/assets/textures/sheets/town_tilesheet.png");
 			m_SpriteSheetCrystals = Texture2D::Create("../../Vesper-Editor/assets/textures/sheets/craftpix/Crystals/Crystals.png");
@@ -66,7 +66,7 @@ namespace Vesper {
 			s_TextureMap['G'] = SubTexture2D::CreateFromCoords(m_SpriteSheetTown, { 4.25, 0.75 }, { 64, 64 }, { 1, 1 });
 			s_TextureMap['C'] = SubTexture2D::CreateFromCoords(m_SpriteSheetCrystals, { 0, 1.25 }, { 64, 64 }, { 1, 1 });
 			s_TextureMap['R'] = SubTexture2D::CreateFromCoords(m_SpriteSheetRocks, { 0, 3.75 }, { 64, 64 }, { 1, 1 });
-			s_TextureMap['P'] = SubTexture2D::CreateFromCoords(m_SpriteSheetCursedLands, { 0, 1.875 }, { 128, 128 }, { 1, 1 });
+			s_TextureMap['P'] = SubTexture2D::CreateFromCoords(m_SpriteSheetCursedLands, { 0, 1.875 }, { 128, 128 }, { 1, 1 });*/
 		}
 
 
@@ -77,8 +77,8 @@ namespace Vesper {
 			m_ParticleProps.VelocityVariation = { 1.0f, 1.0f, 0.0f };
 			m_ParticleProps.ColorBegin = { 1.0f, 0.5f, 0.2f, 1.0f };
 			m_ParticleProps.ColorEnd = { 0.2f, 0.3f, 0.8f, 1.0f };
-			m_ParticleProps.SizeBegin = 0.5f;
-			m_ParticleProps.SizeEnd = 0.0f;
+			m_ParticleProps.SizeBegin = { 0.5f, 0.5f };
+			m_ParticleProps.SizeEnd = { 0.0f, 0.0f };
 			m_ParticleProps.Lifetime = 3.0f;
 			m_ParticleProps.Rotation = 0.0f;
 			m_ParticleProps.RotationVariation = 27.0f;
@@ -106,18 +106,6 @@ namespace Vesper {
 			m_ActiveScene = CreateRef<Scene>();
 
 #if 0
-			m_CameraEntity = m_ActiveScene->CreateEntity("Primary Camera Entity");
-
-			auto& pCam = m_CameraEntity.AddComponent<CameraComponent>();
-			pCam.Primary = true;
-			pCam.Camera.SetPerspective(glm::radians(45.0f), 0.1f, 1000.0f);
-			auto& pos = m_CameraEntity.GetComponent<TransformComponent>().Translation;
-			pos.x += 1.25f;
-			pos.z += 5.0f;
-
-			auto fbSpec = m_Framebuffer->GetSpecification();
-			m_ActiveScene->OnViewportResize(fbSpec.Width, fbSpec.Height);
-
 			// Animation 1
 			{
 				auto square = m_ActiveScene->CreateEntity("Fire Animation");
@@ -137,34 +125,6 @@ namespace Vesper {
 				square.AddComponent<TextureAnimationComponent>(texAnim);
 				m_FireEntity = square;
 			}
-
-			// Animation 2
-			{
-				auto square = m_ActiveScene->CreateEntity("Smoke Animation");
-				auto& transform = square.GetComponent<TransformComponent>();
-				// adjust the position of the square entity
-				transform.Translation = (glm::vec3(0.5f, 0.0f, 1.5f));
-
-				square.AddComponent<SpriteRendererComponent>(glm::vec4{ 0.8f, 0.8f, 0.2f, 1.0f });
-				std::vector<Ref<SubTexture2D>> smokeFrames;
-				for (int x = 0; x < 63; x++)
-				{
-					for (int y = 0; y < 2; y++)
-					{
-						smokeFrames.push_back(SubTexture2D::CreateFromCoords(m_SpriteSheetSmoke, { (float)y, (float)x }, { 128, 128 }));
-					}
-
-				}
-				TextureAnimationComponent texAnim(smokeFrames, 0.05f);
-				square.AddComponent<TextureAnimationComponent>(texAnim);
-				m_SmokeEntity = square;
-			}
-
-			auto quadEntity = m_ActiveScene->CreateEntity("Quad Entity");
-			quadEntity.AddComponent<SpriteRendererComponent>(glm::vec4{ 0.2f, 0.3f, 0.8f, 1.0f });
-			quadEntity.GetComponent<TransformComponent>().Scale = { 0.5f, 0.5f, 1.0f };
-			quadEntity.GetComponent<TransformComponent>().Translation = { 1.5f, 0.0f, 0.0f };
-
 
 			class CameraController : public ScriptableEntity {
 			public:
@@ -201,7 +161,6 @@ namespace Vesper {
 			};
 
 			m_CameraEntity.AddComponent<NativeScriptComponent>().Bind<CameraController>();
-			m_SecondaryCameraEntity.AddComponent<NativeScriptComponent>().Bind<CameraController>();
 
 #endif
 

@@ -16,9 +16,9 @@ namespace Vesper {
 		glm::vec3 VelocityVariation = { 0.0f, 0.0f, 0.0f };
 		glm::vec4 ColorBegin = { 1.0f, 1.0f, 1.0f, 1.0f };
 		glm::vec4 ColorEnd = { 1.0f, 1.0f, 1.0f, 1.0f };
-		float SizeBegin = 1.0f;
-		float SizeEnd = 0.0f;
-		float SizeVariation = 0.0f;
+		glm::vec2 SizeBegin = { 1.0f, 1.0f };
+		glm::vec2 SizeEnd = { 0.0f, 0.0f };
+		glm::vec2 SizeVariation = { 0.0f, 0.0f };
 		float Rotation = 0.0f;
 		float RotationVariation = 0.0f;
 		float Lifetime = 1.0f;
@@ -30,7 +30,7 @@ namespace Vesper {
 		glm::vec3 Position;
 		glm::vec3 Velocity;
 		glm::vec4 ColorBegin, ColorEnd;
-		float SizeBegin, SizeEnd;
+		glm::vec2 SizeBegin, SizeEnd;
 		float Rotation;
 		float Lifetime = 0.0f;
 		float LifeRemaining = 0.0f;
@@ -50,9 +50,11 @@ namespace Vesper {
 		void OnUpdate(Timestep ts);
 		void OnRender();
 		void Emit(const ParticleProps& particleProps);
+		void Emit(const ParticleProps& particleProps, int count);
 		void SetParticleProps(const ParticleProps& particleProps) { m_Props = particleProps; }
 		void ResetSystem() { m_PoolIndex = m_ParticlePool.size() - 1; m_TimeSinceLastEmit = 0.0f; m_IsEmitting = true; }
 		void ResetParticle(Particle& particle, const ParticleProps& particleProps);
+		int ActiveParticleCount() { return m_activeParticleCount; }
 	private:
 		std::vector<Particle> m_ParticlePool;
 		uint32_t m_PoolIndex = 999;

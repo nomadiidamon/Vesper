@@ -82,11 +82,11 @@ namespace Vesper {
 
 			float life = particle.LifeRemaining / particle.Lifetime;
 			glm::vec4 color = glm::lerp(particle.ColorEnd, particle.ColorBegin, life);
-			float size = glm::lerp(particle.SizeEnd, particle.SizeBegin, life);
+			glm::vec2 size = glm::lerp(particle.SizeEnd, particle.SizeBegin, life);
 
 			Vesper::Renderer2D::DrawRotatedQuad(
 				{ particle.Position },
-				{ size, size },
+				{ size.x, size.y },
 				Vesper::Renderer2D::GetWhiteTexture(),
 				particle.Rotation, 1.0f, color);
 
@@ -115,6 +115,13 @@ namespace Vesper {
 
 		uint32_t poolSize = static_cast<uint32_t>(m_ParticlePool.size());
 		m_PoolIndex = (m_PoolIndex == 0) ? (poolSize - 1) : (m_PoolIndex - 1);
+	}
+
+	void ParticleSystem::Emit(const ParticleProps& particleProps, int count) {
+		if (count <= 0) return;
+		for (int i = 0; i < count; i++) {
+			Emit(particleProps);
+		}
 	}
 
 	void ParticleSystem::ResetParticle(Particle& particle, const ParticleProps& particleProps)

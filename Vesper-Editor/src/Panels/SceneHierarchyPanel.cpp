@@ -548,9 +548,9 @@ namespace Vesper {
 				ImGui::DragFloat("Lifetime Variation", &psp.LifetimeVariation, 0.1f, 0.0f, 10000.0f);
 				ImGui::Separator();
 
-				ImGui::DragFloat("Start Size", &psp.SizeBegin, 0.1f, 0.0f, 10000.0f);
-				ImGui::DragFloat("Size Variation", &psp.SizeVariation, 0.1f, 0.0f, 10000.0f);
-				ImGui::DragFloat("End Size", &psp.SizeEnd, 0.1f, 0.0f, 10000.0f);
+				ImGui::DragFloat2("Start Size", glm::value_ptr(psp.SizeBegin), 0.01f, 0.0f, 10000.0f);
+				ImGui::DragFloat2("Size Variation", glm::value_ptr(psp.SizeVariation), 0.01f, 0.0f, 10000.0f);
+				ImGui::DragFloat2("End Size", glm::value_ptr(psp.SizeEnd), 0.01f, 0.001f, 10000.0f);
 				ImGui::Separator();
 
 				ImGui::ColorEdit4("Start Color", glm::value_ptr(psp.ColorBegin));
@@ -570,8 +570,14 @@ namespace Vesper {
 					ps.ResetSystem();
 				}
 				ImGui::SameLine();
-				if (ImGui::Button("Emit")) {
-					ps.Emit(ps.m_Props);
+				ImGui::Text("Active Particles: ");
+				ImGui::SameLine();
+				ImGui::Text(std::to_string(ps.ActiveParticleCount()).c_str());
+				ImGui::DragInt("Particle Emission Count", &ps.m_EmitRate, 1, 1, 500);
+				std::string count = std::to_string(ps.m_EmitRate);
+				std::string button = "Emit " + count + " particles";
+				if (ImGui::Button(button.c_str())) {
+					ps.Emit(ps.m_Props, ps.m_EmitRate);
 				}
 				ImGui::SameLine();
 				if (ImGui::Checkbox("Loop", &ps.m_Loop)) {
