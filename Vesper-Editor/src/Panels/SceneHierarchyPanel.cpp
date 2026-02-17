@@ -294,6 +294,128 @@ namespace Vesper {
 		ImGui::PopID();
 	}
 
+	static void DrawColorControl(const std::string& label, glm::vec4& color)
+	{
+		ImGui::ColorEdit4(label.c_str(), glm::value_ptr(color));
+	}
+
+	static void DrawTextureControl(const std::string& label, Ref<Texture2D>& texture, bool& textureEnabled, float& tilingFactor)
+	{
+		// Separate checkbox for enabling/disabling texture usage
+		if (ImGui::Checkbox("Texture Enabled", &textureEnabled)) {
+
+		}
+
+		// Display current texture name (if any) and buttons to Set / Change / Clear the texture
+		if (texture && textureEnabled)
+		{
+			ImGui::TextUnformatted(texture->GetName().c_str());
+			ImGui::SameLine();
+			if (ImGui::Button("Change Texture"))
+			{
+				std::string filePath = FileDialogs::OpenFile("Image Files (*.png;*.jpg;*.jpeg;*.bmp;*.tga)\0*.png;*.jpg;*.jpeg;*.bmp;*.tga\0All Files (*.*)\0*.*\0");
+				if (!filePath.empty())
+				{
+					auto tex = Texture2D::Create(filePath);
+					if (tex)
+					{
+						texture = tex;
+						textureEnabled = true;
+					}
+					else
+					{
+						VZ_WARN("Could not load texture {0}", filePath);
+					}
+				}
+			}
+			ImGui::SameLine();
+			if (ImGui::Button("Clear Texture"))
+			{
+				texture = nullptr;
+				textureEnabled = false;
+			}
+		}
+		else
+		{
+			ImGui::SameLine();
+			if (ImGui::Button("Set Texture"))
+			{
+				std::string filePath = FileDialogs::OpenFile("Image Files (*.png;*.jpg;*.jpeg;*.bmp;*.tga)\0*.png;*.jpg;*.jpeg;*.bmp;*.tga\0All Files (*.*)\0*.*\0");
+				if (!filePath.empty())
+				{
+					auto tex = Texture2D::Create(filePath);
+					if (tex)
+					{
+						texture = tex;
+						textureEnabled = true;
+					}
+					else
+					{
+						VZ_WARN("Could not load texture {0}", filePath);
+					}
+				}
+			}
+		}
+
+		ImGui::DragFloat("Tiling Factor", &tilingFactor, 0.01f, 0.0f, 100.0f);
+
+	}
+
+	static void DrawParticeSystemComponent(ParticleSystemComponent& particleSystem)
+	{
+		ParticleSystem& ps = particleSystem.ParticleSystem;
+		ParticleProps& psp = ps.m_Props;
+		ImGui::DragFloat("Lifetime", &psp.Lifetime, 0.1f, 0.0f, 10000.0f);
+		ImGui::DragFloat("Lifetime Variation", &psp.LifetimeVariation, 0.1f, 0.0f, 10000.0f);
+		ImGui::Separator();
+
+		DrawVec2Control("Start Size", psp.SizeBegin, 0.75f);
+		DrawVec2Control("Size Variation", psp.SizeVariation, 0.5f);
+		DrawVec2Control("End Size", psp.SizeEnd, 0.0f);
+		ImGui::Separator();
+
+		DrawColorControl("Start Color", psp.ColorBegin);
+		DrawColorControl("End Color", psp.ColorEnd);
+		ImGui::Separator();
+
+		DrawVec3Control("Velocity", psp.Velocity, -0.1f);
+		DrawVec3Control("Velocity Variation", psp.VelocityVariation, 0.5f);
+		DrawVec3Control("Position Variation", psp.PositionVariation, 0.5f);
+		ImGui::Separator();
+
+		ImGui::DragFloat("Rotation Speed", &psp.Rotation, 0.1f, -360.0f, 360.0f);
+		ImGui::DragFloat("Rotation Speed Variation", &psp.RotationVariation, 0.1f, 0.0f, 360.0f);
+		ImGui::Separator();
+
+		static bool textureAssigned = false;
+		DrawTextureControl("Particle Texture", psp.Texture, textureAssigned, psp.TextureScale);
+		if (psp.Texture) {
+			for (int i = 0; i < ps.ActiveParticleCount(); i++) {
+				Particle& particle = ps.m_ParticlePool[i];
+				particle.Texture = psp.Texture;
+			}
+		}
+		ImGui::Separator();
+
+		if (ImGui::Button("Reset System")) {
+			ps.ResetSystem();
+		}
+		ImGui::SameLine();
+		ImGui::Text("Active Particles: ");
+		ImGui::SameLine();
+		ImGui::Text(std::to_string(ps.ActiveParticleCount()).c_str());
+		ImGui::DragInt("Particle Emission Count", &ps.m_EmitRate, 1, 1, 500);
+		std::string count = std::to_string(ps.m_EmitRate);
+		std::string button = "Emit " + count + " particles";
+		if (ImGui::Button(button.c_str())) {
+			ps.Emit(ps.m_Props, ps.m_EmitRate);
+		}
+		ImGui::SameLine();
+		if (ImGui::Checkbox("Loop", &ps.m_Loop)) {
+
+		}
+	}
+
 	static void SubTextureEdit(const std::string& label, SubTextureComponent& subTexture)
 	{
 		ImGui::Text(label.c_str());
@@ -308,10 +430,6 @@ namespace Vesper {
 
 			if (subTexRef->GetTexture())
 			{
-				//if (oldOffset != subTexture.Offset || oldTiling != subTexture.TilingFactor) {
-				//	subTexture.SetOffset(subTexture.Offset);
-				//	subTexture.SetTilingFactor(subTexture.TilingFactor);
-
 				auto tex = subTexRef->GetTexture();
 				if (tex) {
 					subTexture.SubTexture = SubTexture2D::CreateFromCoords(
@@ -319,7 +437,6 @@ namespace Vesper {
 						glm::vec2(static_cast<float>(tex->GetWidth()) * subTexture.TilingFactor.x,
 							static_cast<float>(tex->GetHeight()) * subTexture.TilingFactor.y));
 				}
-				//}
 			}
 		}
 		else {
@@ -473,117 +590,18 @@ namespace Vesper {
 
 		DrawComponent<SpriteRendererComponent>("Sprite Renderer", entity, [](auto& component)
 			{
-				ImGui::ColorEdit4("Color", glm::value_ptr(component.Color));
-
-				// Separate checkbox for enabling/disabling texture usage
-				ImGui::Checkbox("Texture Enabled", &component.TextureEnabled);
-				ImGui::SameLine();
-
-				// Display current texture name (if any) and buttons to Set / Change / Clear the texture
-				if (component.Texture)
-				{
-					ImGui::TextUnformatted(component.Texture->GetName().c_str());
-					ImGui::SameLine();
-					if (ImGui::Button("Change Texture"))
-					{
-						std::string filePath = FileDialogs::OpenFile("Image Files (*.png;*.jpg;*.jpeg;*.bmp;*.tga)\0*.png;*.jpg;*.jpeg;*.bmp;*.tga\0All Files (*.*)\0*.*\0");
-						if (!filePath.empty())
-						{
-							auto tex = Texture2D::Create(filePath);
-							if (tex)
-							{
-								component.Texture = tex;
-								component.TextureEnabled = true;
-							}
-							else
-							{
-								VZ_WARN("Could not load texture {0}", filePath);
-							}
-						}
-					}
-					ImGui::SameLine();
-					if (ImGui::Button("Clear Texture"))
-					{
-						component.Texture = nullptr;
-						component.TextureEnabled = false;
-					}
-				}
-				else
-				{
-					ImGui::SameLine();
-					if (ImGui::Button("Set Texture"))
-					{
-						std::string filePath = FileDialogs::OpenFile("Image Files (*.png;*.jpg;*.jpeg;*.bmp;*.tga)\0*.png;*.jpg;*.jpeg;*.bmp;*.tga\0All Files (*.*)\0*.*\0");
-						if (!filePath.empty())
-						{
-							auto tex = Texture2D::Create(filePath);
-							if (tex)
-							{
-								component.Texture = tex;
-								component.TextureEnabled = true;
-							}
-							else
-							{
-								VZ_WARN("Could not load texture {0}", filePath);
-							}
-						}
-					}
-				}
-
-				ImGui::DragFloat("Tiling Factor", &component.TilingFactor, 0.1f, 0.0f, 100.0f);
-
+				DrawColorControl("Color", component.Color);
+				DrawTextureControl("Texture", component.Texture, component.TextureEnabled, component.TilingFactor);
 			});
 
 		DrawComponent<SubTextureComponent>("SubTexture", entity, [](auto& component)
 			{
 				SubTextureEdit(component.SubTexture->GetTexture()->GetName(), component);
-
 			});
 
 		DrawComponent<ParticleSystemComponent>("Particle System", entity, [](auto& component)
 			{
-				ParticleSystem& ps = component.ParticleSystem;
-				ParticleProps& psp = ps.m_Props;
-				ImGui::DragFloat("Lifetime", &psp.Lifetime, 0.1f, 0.0f, 10000.0f);
-				ImGui::DragFloat("Lifetime Variation", &psp.LifetimeVariation, 0.1f, 0.0f, 10000.0f);
-				ImGui::Separator();
-
-				ImGui::DragFloat2("Start Size", glm::value_ptr(psp.SizeBegin), 0.01f, 0.0f, 10000.0f);
-				ImGui::DragFloat2("Size Variation", glm::value_ptr(psp.SizeVariation), 0.01f, 0.0f, 10000.0f);
-				ImGui::DragFloat2("End Size", glm::value_ptr(psp.SizeEnd), 0.01f, 0.001f, 10000.0f);
-				ImGui::Separator();
-
-				ImGui::ColorEdit4("Start Color", glm::value_ptr(psp.ColorBegin));
-				ImGui::ColorEdit4("End Color", glm::value_ptr(psp.ColorEnd));
-				ImGui::Separator();
-
-				ImGui::DragFloat2("Velocity", glm::value_ptr(psp.Velocity), 0.1f);
-				ImGui::DragFloat2("Velocity Variation", glm::value_ptr(psp.VelocityVariation), 0.1f);
-				ImGui::DragFloat3("Position Variation", glm::value_ptr(psp.PositionVariation), 0.1f);
-				ImGui::Separator();
-
-				ImGui::DragFloat("Rotation Speed", &psp.Rotation, 0.1f, -360.0f, 360.0f);
-				ImGui::DragFloat("Rotation Speed Variation", &psp.RotationVariation, 0.1f, 0.0f, 360.0f);
-				ImGui::Separator();
-
-				if (ImGui::Button("Reset System")) {
-					ps.ResetSystem();
-				}
-				ImGui::SameLine();
-				ImGui::Text("Active Particles: ");
-				ImGui::SameLine();
-				ImGui::Text(std::to_string(ps.ActiveParticleCount()).c_str());
-				ImGui::DragInt("Particle Emission Count", &ps.m_EmitRate, 1, 1, 500);
-				std::string count = std::to_string(ps.m_EmitRate);
-				std::string button = "Emit " + count + " particles";
-				if (ImGui::Button(button.c_str())) {
-					ps.Emit(ps.m_Props, ps.m_EmitRate);
-				}
-				ImGui::SameLine();
-				if (ImGui::Checkbox("Loop", &ps.m_Loop)) {
-	
-				}
-
+				DrawParticeSystemComponent(component);
 			});
 
 
