@@ -12,7 +12,7 @@ namespace Vesper {
 
 	/// @class SubTexture2D
 	/// @brief Represents a sub-region of a 2D texture, useful for sprite sheets.
-	class SubTexture2D 
+	class SubTexture2D
 	{
 	public:
 		/// @brief Constructs a SubTexture2D from the given texture and texture coordinates.
@@ -24,6 +24,12 @@ namespace Vesper {
 
 		/// @brief Returns the underlying texture of the sub-texture.
 		const Ref<Texture2D> GetTexture() { return m_Texture; }
+
+		/// @brief Sets the underlying texture of the sub-texture.
+		///
+		/// @param texture The new texture to set for the sub-texture.
+		void SetTexture(const Ref<Texture2D>& texture) { m_Texture = texture; CreateFromCoords(m_Texture, {0, 0}, {1, 1}); }
+
 		/// @brief Returns the texture coordinates of the sub-texture.
 		glm::vec2* GetTexCoords() { return m_TexCoords; }
 
@@ -33,7 +39,7 @@ namespace Vesper {
 		/// @param coords The coordinates of the cell in the grid.
 		/// @param cellSize The size of each cell in the grid.
 		/// @param spriteSize The size of the sprite in cells (default is 1x1).
-		static Ref<SubTexture2D> CreateFromCoords(const Ref<Texture2D>& texture, const glm::vec2& coords, const glm::vec2& cellSize, const glm::vec2& spriteSize = {1, 1});
+		static Ref<SubTexture2D> CreateFromCoords(const Ref<Texture2D>& texture, const glm::vec2& coords, const glm::vec2& cellSize, const glm::vec2& spriteSize = { 1, 1 });
 	private:
 		/// @brief The underlying texture of the sub-texture.
 		Ref<Texture2D> m_Texture;

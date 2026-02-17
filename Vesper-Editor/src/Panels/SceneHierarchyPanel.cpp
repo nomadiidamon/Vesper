@@ -152,7 +152,7 @@ namespace Vesper {
 		}
 	}
 
-	static void DrawVec3Control(const std::string& label, glm::vec3& values, float resetValue = 0.0f, float columnWidth = 100.0f)
+	static void DrawVec3Control(const std::string& label, glm::vec3& values, float resetValue = 0.0f, float columnWidth = 100.0f, float v_speed = 0.1f, float v_min = 0.0f, float v_max = 0.0f, const char* format = "%.2f")
 	{
 		ImGuiIO& io = ImGui::GetIO();
 		auto boldFont = io.Fonts->Fonts[0];
@@ -190,7 +190,7 @@ namespace Vesper {
 
 		ImGui::SameLine();
 		ImGui::PushItemWidth(itemWidth);
-		ImGui::DragFloat("##X", &values.x, 0.1f, 0.0f, 0.0f, "%.2f");
+		ImGui::DragFloat("##X", &values.x, v_speed, v_min, v_max, format);
 		ImGui::PopItemWidth();
 		ImGui::SameLine();
 
@@ -205,7 +205,7 @@ namespace Vesper {
 
 		ImGui::SameLine();
 		ImGui::PushItemWidth(itemWidth);
-		ImGui::DragFloat("##Y", &values.y, 0.1f, 0.0f, 0.0f, "%.2f");
+		ImGui::DragFloat("##Y", &values.y, v_speed, v_min, v_max, format);
 		ImGui::PopItemWidth();
 		ImGui::SameLine();
 
@@ -220,7 +220,7 @@ namespace Vesper {
 
 		ImGui::SameLine();
 		ImGui::PushItemWidth(itemWidth);
-		ImGui::DragFloat("##Z", &values.z, 0.1f, 0.0f, 0.0f, "%.2f");
+		ImGui::DragFloat("##Z", &values.z, v_speed, v_min, v_max, format);
 		ImGui::PopItemWidth();
 
 		ImGui::PopStyleVar();
@@ -230,7 +230,7 @@ namespace Vesper {
 		ImGui::PopID();
 	}
 
-	static void DrawVec2Control(const std::string& label, glm::vec2& values, float resetValue = 0.0f, float columnWidth = 100.0f)
+	static void DrawVec2Control(const std::string& label, glm::vec2& values, float resetValue = 0.0f, float columnWidth = 100.0f, float v_speed = 0.1f, float v_min = 0.0f, float v_max = 0.0f, const char* format = "%.2f")
 	{
 		ImGuiIO& io = ImGui::GetIO();
 		auto boldFont = io.Fonts->Fonts[0];
@@ -268,7 +268,7 @@ namespace Vesper {
 
 		ImGui::SameLine();
 		ImGui::PushItemWidth(itemWidth);
-		ImGui::DragFloat("##X", &values.x, 0.1f, 0.0f, 0.0f, "%.2f");
+		ImGui::DragFloat("##X", &values.x, v_speed, v_min, v_max, format);
 		ImGui::PopItemWidth();
 		ImGui::SameLine();
 
@@ -283,7 +283,7 @@ namespace Vesper {
 
 		ImGui::SameLine();
 		ImGui::PushItemWidth(itemWidth);
-		ImGui::DragFloat("##Y", &values.y, 0.1f, 0.0f, 0.0f, "%.2f");
+		ImGui::DragFloat("##Y", &values.y, v_speed, v_min, v_max, format);
 		ImGui::PopItemWidth();
 		ImGui::SameLine();
 
@@ -299,7 +299,7 @@ namespace Vesper {
 		ImGui::ColorEdit4(label.c_str(), glm::value_ptr(color));
 	}
 
-	static void DrawTextureControl(const std::string& label, Ref<Texture2D>& texture, bool& textureEnabled, float& tilingFactor)
+	static void DrawTextureControl(const std::string& label, Ref<Texture2D>& texture, bool& textureEnabled, float tilingFactor)
 	{
 		// Separate checkbox for enabling/disabling texture usage
 		if (ImGui::Checkbox("Texture Enabled", &textureEnabled)) {
@@ -357,8 +357,64 @@ namespace Vesper {
 			}
 		}
 
-		ImGui::DragFloat("Tiling Factor", &tilingFactor, 0.01f, 0.0f, 100.0f);
+		ImGui::DragFloat("Tiling Factor", &tilingFactor, 0.01f);
+	}
 
+	static void SubTextureEdit(const std::string& label, const Ref<Texture2D>& texture, Ref<SubTexture2D>& subTexture, glm::vec2& tilingFactor, glm::vec2& offset)
+	{
+		ImGui::Text(label.c_str());
+
+
+		if (texture) {
+			if (!subTexture) {
+				subTexture = SubTexture2D::CreateFromCoords(
+					texture, offset,
+					glm::vec2(static_cast<float>(texture->GetWidth()) * tilingFactor.x,
+						static_cast<float>(texture->GetHeight()) * tilingFactor.y));
+			}
+			//subTexture->SetTexture(texture);
+			if (subTexture->GetTexture() && subTexture->GetTexture() == texture) {
+
+				DrawVec2Control("Offset", offset);
+				DrawVec2Control("Scale", tilingFactor, 1.0f);
+
+				subTexture = SubTexture2D::CreateFromCoords(
+					texture, offset,
+					glm::vec2(static_cast<float>(texture->GetWidth()) * tilingFactor.x,
+						static_cast<float>(texture->GetHeight()) * tilingFactor.y));
+
+			}
+			else {
+				ImGui::Text("SubTexture is not compatible with the assigned texture.");
+			}
+		}
+		else {
+			ImGui::Text("No texture assigned.");
+		}
+
+	}
+
+	static void DrawSubTextureControl(const std::string& label, Ref<Texture2D>& texture, Ref<SubTexture2D>& subTexture, glm::vec2& tilingFactor, glm::vec2& offset)
+	{
+		if (texture) {
+			ImGui::TextUnformatted(texture->GetName().c_str());
+			ImGui::SameLine();
+			SubTextureEdit(label, texture, subTexture, tilingFactor, offset);
+
+		}
+		else {
+			ImGui::Text("No texture assigned.");
+		}
+
+	}
+
+
+
+	static void DrawSpriteRendererComponent(SpriteRendererComponent& src)
+	{
+		DrawColorControl("Color", src.Color);
+		ImGui::Separator();
+		DrawTextureControl("Texture", src.Texture, src.TextureEnabled, src.TilingFactor);
 	}
 
 	static void DrawParticeSystemComponent(ParticleSystemComponent& particleSystem)
@@ -388,7 +444,8 @@ namespace Vesper {
 		ImGui::Separator();
 
 		static bool textureAssigned = false;
-		DrawTextureControl("Particle Texture", psp.Texture, textureAssigned, psp.TextureScale);
+		DrawTextureControl("Particle Texture", psp.Texture, textureAssigned, psp.TilingFactor);
+		DrawSubTextureControl("Particle SubTexture", psp.Texture, psp.SubTexture, psp.TextureScale, psp.TextureOffset);
 		if (psp.Texture) {
 			for (int i = 0; i < ps.ActiveParticleCount(); i++) {
 				Particle& particle = ps.m_ParticlePool[i];
@@ -404,7 +461,11 @@ namespace Vesper {
 		ImGui::Text("Active Particles: ");
 		ImGui::SameLine();
 		ImGui::Text(std::to_string(ps.ActiveParticleCount()).c_str());
-		ImGui::DragInt("Particle Emission Count", &ps.m_EmitRate, 1, 1, 500);
+		int lastVal = ps.m_EmitRate;
+		ImGui::DragInt("Particle Emission Count", &ps.m_EmitRate, 1, 1, 1500);
+		if (lastVal != ps.m_EmitRate) {
+			ps.ResizePool(ps.m_EmitRate);
+		}
 		std::string count = std::to_string(ps.m_EmitRate);
 		std::string button = "Emit " + count + " particles";
 		if (ImGui::Button(button.c_str())) {
@@ -416,34 +477,7 @@ namespace Vesper {
 		}
 	}
 
-	static void SubTextureEdit(const std::string& label, SubTextureComponent& subTexture)
-	{
-		ImGui::Text(label.c_str());
 
-		auto& subTexRef = subTexture.GetSubTexture();
-		if (subTexRef && subTexRef->GetTexture()) {
-			glm::vec2 oldOffset = subTexture.Offset;
-			glm::vec2 oldTiling = subTexture.TilingFactor;
-
-			DrawVec2Control("Offset", subTexture.Offset);
-			DrawVec2Control("Scale", subTexture.TilingFactor, 1.0f);
-
-			if (subTexRef->GetTexture())
-			{
-				auto tex = subTexRef->GetTexture();
-				if (tex) {
-					subTexture.SubTexture = SubTexture2D::CreateFromCoords(
-						tex, subTexture.Offset,
-						glm::vec2(static_cast<float>(tex->GetWidth()) * subTexture.TilingFactor.x,
-							static_cast<float>(tex->GetHeight()) * subTexture.TilingFactor.y));
-				}
-			}
-		}
-		else {
-			ImGui::Text("No texture assigned.");
-		}
-
-	}
 
 	template<typename T, typename UIFunction>
 	static void DrawComponent(const std::string& name, Entity entity, UIFunction uiFunction)
@@ -590,13 +624,12 @@ namespace Vesper {
 
 		DrawComponent<SpriteRendererComponent>("Sprite Renderer", entity, [](auto& component)
 			{
-				DrawColorControl("Color", component.Color);
-				DrawTextureControl("Texture", component.Texture, component.TextureEnabled, component.TilingFactor);
+				DrawSpriteRendererComponent(component);
 			});
 
 		DrawComponent<SubTextureComponent>("SubTexture", entity, [](auto& component)
 			{
-				SubTextureEdit(component.SubTexture->GetTexture()->GetName(), component);
+				SubTextureEdit(component.SubTexture->GetTexture()->GetName(), component.SubTexture->GetTexture(), component.SubTexture, component.TilingFactor, component.Offset);
 			});
 
 		DrawComponent<ParticleSystemComponent>("Particle System", entity, [](auto& component)

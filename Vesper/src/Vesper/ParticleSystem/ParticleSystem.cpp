@@ -83,20 +83,27 @@ namespace Vesper {
 			float life = particle.LifeRemaining / particle.Lifetime;
 			glm::vec4 color = glm::lerp(particle.ColorEnd, particle.ColorBegin, life);
 			glm::vec2 size = glm::lerp(particle.SizeEnd, particle.SizeBegin, life);
-			
-			if (particle.Texture) {
+
+			if (particle.SubTexture)
+			{
+				Vesper::Renderer2D::DrawRotatedQuad(
+					{ particle.Position },
+					{ size.x, size.y },
+					particle.SubTexture, particle.Rotation, m_Props.TilingFactor, color);
+			}
+			else if (particle.Texture) {
 				Vesper::Renderer2D::DrawRotatedQuad(
 					{ particle.Position },
 					{ size.x, size.y },
 					particle.Texture,
-					particle.Rotation, m_Props.TextureScale, color);
+					particle.Rotation, m_Props.TilingFactor, color);
 			}
 			else
-			Vesper::Renderer2D::DrawRotatedQuad(
-				{ particle.Position },
-				{ size.x, size.y },
-				Vesper::Renderer2D::GetWhiteTexture(),
-				particle.Rotation, m_Props.TextureScale, color);
+				Vesper::Renderer2D::DrawRotatedQuad(
+					{ particle.Position },
+					{ size.x, size.y },
+					Vesper::Renderer2D::GetWhiteTexture(),
+					particle.Rotation, 1.0f, color);
 
 		}
 	}
@@ -157,6 +164,14 @@ namespace Vesper {
 		particle.Lifetime = particleProps.Lifetime + particleProps.LifetimeVariation * (Vesper::Random::Float1() - 0.5f);
 		particle.LifeRemaining = particle.Lifetime;
 		particle.Texture = particleProps.Texture;
+		particle.SubTexture = particleProps.SubTexture;
+	}
+
+	void ParticleSystem::ResizePool(uint32_t newSize)
+	{
+		m_ParticlePool.resize(newSize);
+		m_PoolIndex = newSize - 1;
+		ResetSystem();
 	}
 
 }
