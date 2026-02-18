@@ -83,6 +83,7 @@ namespace Vesper {
 			if (ImGui::MenuItem("Delete Entity"))
 				entityDeleted = true;
 
+			/// @todo extract this into a separate function and add support for more components
 			if (ImGui::MenuItem("Duplicate Entity"))
 			{
 				Entity newEntity = m_Context->CreateEntity(name);
@@ -90,7 +91,7 @@ namespace Vesper {
 				if (entity.HasComponent<NameComponent>()) {
 					auto& src = entity.GetComponent<NameComponent>();
 					auto& newEntName = newEntity.GetComponent<NameComponent>();
-					///TODO: Improve name duplication logic
+					/// @todo Improve name duplication logic
 					if (src.Name.capacity() > 0 && isdigit(src.Name.back()))
 					{
 						// Increment trailing number
@@ -138,7 +139,7 @@ namespace Vesper {
 			bool opened = ImGui::TreeNodeEx((void*)9817239, flags, name.c_str());
 			if (opened)
 			{
-				/// TODO: Draw child entities here in the future
+				/// @todo Draw child entities here in the future
 				ImGui::TreePop();
 			}
 			ImGui::TreePop();
@@ -152,7 +153,7 @@ namespace Vesper {
 		}
 	}
 
-	static void DrawVec3Control(const std::string& label, glm::vec3& values, float resetValue = 0.0f, float columnWidth = 100.0f, float v_speed = 0.1f, float v_min = 0.0f, float v_max = 0.0f, const char* format = "%.2f")
+	static bool DrawVec3Control(const std::string& label, glm::vec3& values, float resetValue = 0.0f, float columnWidth = 100.0f, float v_speed = 0.1f, float v_min = 0.0f, float v_max = 0.0f, const char* format = "%.2f")
 	{
 		ImGuiIO& io = ImGui::GetIO();
 		auto boldFont = io.Fonts->Fonts[0];
@@ -228,9 +229,11 @@ namespace Vesper {
 		ImGui::Columns(1);
 
 		ImGui::PopID();
+
+		return true;
 	}
 
-	static void DrawVec2Control(const std::string& label, glm::vec2& values, float resetValue = 0.0f, float columnWidth = 100.0f, float v_speed = 0.1f, float v_min = 0.0f, float v_max = 0.0f, const char* format = "%.2f")
+	static bool DrawVec2Control(const std::string& label, glm::vec2& values, float resetValue = 0.0f, float columnWidth = 100.0f, float v_speed = 0.1f, float v_min = 0.0f, float v_max = 0.0f, const char* format = "%.2f")
 	{
 		ImGuiIO& io = ImGui::GetIO();
 		auto boldFont = io.Fonts->Fonts[0];
@@ -292,14 +295,18 @@ namespace Vesper {
 		ImGui::Columns(1);
 
 		ImGui::PopID();
+
+		return true;
+
 	}
 
-	static void DrawColorControl(const std::string& label, glm::vec4& color)
+	static bool DrawColorControl(const std::string& label, glm::vec4& color)
 	{
 		ImGui::ColorEdit4(label.c_str(), glm::value_ptr(color));
+		return true;
 	}
 
-	static void DrawTextureControl(const std::string& label, Ref<Texture2D>& texture, bool& textureEnabled, float tilingFactor)
+	static bool DrawTextureControl(const std::string& label, Ref<Texture2D>& texture, bool& textureEnabled, float tilingFactor)
 	{
 		// Separate checkbox for enabling/disabling texture usage
 		if (ImGui::Checkbox("Texture Enabled", &textureEnabled)) {
@@ -358,9 +365,11 @@ namespace Vesper {
 		}
 
 		ImGui::DragFloat("Tiling Factor", &tilingFactor, 0.01f);
+
+		return true;
 	}
 
-	static void SubTextureEdit(const std::string& label, const Ref<Texture2D>& texture, Ref<SubTexture2D>& subTexture, glm::vec2& tilingFactor, glm::vec2& offset)
+	static bool SubTextureEdit(const std::string& label, const Ref<Texture2D>& texture, Ref<SubTexture2D>& subTexture, glm::vec2& tilingFactor, glm::vec2& offset)
 	{
 		ImGui::Text(label.c_str());
 
@@ -372,11 +381,10 @@ namespace Vesper {
 					glm::vec2(static_cast<float>(texture->GetWidth()) * tilingFactor.x,
 						static_cast<float>(texture->GetHeight()) * tilingFactor.y));
 			}
-			//subTexture->SetTexture(texture);
 			if (subTexture->GetTexture() && subTexture->GetTexture() == texture) {
 
-				DrawVec2Control("Offset", offset);
-				DrawVec2Control("Scale", tilingFactor, 1.0f);
+				DrawVec2Control("Offset", offset, 0.0f, 100.0f, 0.01f);
+				DrawVec2Control("Scale", tilingFactor, 1.0f, 100.0f, 0.01f);
 
 				subTexture = SubTexture2D::CreateFromCoords(
 					texture, offset,
@@ -385,16 +393,22 @@ namespace Vesper {
 
 			}
 			else {
-				ImGui::Text("SubTexture is not compatible with the assigned texture.");
+				if (subTexture->GetTexture()) {
+					ImGui::TextColored(ImVec4(1.0f, 0.5f, 0.5f, 1.0f), "SubTexture does not match the assigned texture!");
+				}
+				else {
+					ImGui::TextColored(ImVec4(1.0f, 0.5f, 0.5f, 1.0f), "SubTexture is not valid!");
+				}
 			}
 		}
 		else {
-			ImGui::Text("No texture assigned.");
+			ImGui::TextColored(ImVec4(1.0f, 0.5f, 0.5f, 1.0f), "No texture assigned!");
 		}
 
+		return true;
 	}
 
-	static void DrawSubTextureControl(const std::string& label, Ref<Texture2D>& texture, Ref<SubTexture2D>& subTexture, glm::vec2& tilingFactor, glm::vec2& offset)
+	static bool DrawSubTextureControl(const std::string& label, Ref<Texture2D>& texture, Ref<SubTexture2D>& subTexture, glm::vec2& tilingFactor, glm::vec2& offset)
 	{
 		if (texture) {
 			ImGui::TextUnformatted(texture->GetName().c_str());
@@ -403,14 +417,55 @@ namespace Vesper {
 
 		}
 		else {
-			ImGui::Text("No texture assigned.");
+			ImGui::TextColored(ImVec4(1.0f, 0.5f, 0.5f, 1.0f), "No texture assigned!");
 		}
 
+		return true;
 	}
 
+	static bool TextureAnimationEdit(const std::string& label, const Ref<Texture2D>& texture, Ref<SubTexture2D>& subTexture, TextureAnimationComponent& tac)
+	{
+		ImGui::Text(label.c_str());
+		static bool changed = false;
 
+		ImGui::Text("Current Frame: {%d}", tac.CurrentFrame);
+		if (ImGui::DragInt("Frame Count", &tac.FrameCount, 1, 1, 1000)) {
+			changed = true;
+		}
+		if (ImGui::DragFloat("Frame Time", &tac.FrameTime, 0.01f, 0.01f, 10.0f)) {
+			changed = true;
+		}
+		if (DrawVec2Control("Coords", tac.Coords)) {
+			changed = true;
+		}
+		if (DrawVec2Control("Cell Size", tac.CellSize)) {
+			changed = true;
+		}
+		if (DrawVec2Control("Sprite Size", tac.SpriteSize)) {
+			changed = true;
+		}
+		if (changed) {
+			if (ImGui::Button("Reset Animation")) {
+				tac.Reset(tac.Texture, tac.FrameCount, tac.Coords, tac.CellSize, tac.SpriteSize);
+			}
+			if (ImGui::Button("Add Repeat Frames")) {
+				tac.AddFrames(tac.GetSubTextures());
+				changed = true;
+			}
+			if (ImGui::Button("Add Reversed Frames")) {
+				tac.AddReveresedFrames(tac.GetSubTextures());
+				changed = true;
+			}
+			if (ImGui::Button("Sync Textures")) {
+				tac.SynchronizeTextures(texture, subTexture, tac.GetSubTextures());
+				changed = true;
+			}
+		}
 
-	static void DrawSpriteRendererComponent(SpriteRendererComponent& src)
+		return changed;
+	}
+
+	static bool DrawSpriteRendererComponent(SpriteRendererComponent& src)
 	{
 		DrawColorControl("Color", src.Color);
 		ImGui::Separator();
@@ -547,6 +602,7 @@ namespace Vesper {
 			//DisplayAddComponentEntry<ScriptComponent>("Script");
 			DisplayAddComponentEntry<SpriteRendererComponent>("Sprite Renderer");
 			DisplayAddComponentEntry<SubTextureComponent>("SubTexture");
+			DisplayAddComponentEntry<TextureAnimationComponent>("Texture Animation");
 			DisplayAddComponentEntry<ParticleSystemComponent>("Particle System");
 
 			ImGui::EndPopup();
@@ -632,10 +688,16 @@ namespace Vesper {
 				SubTextureEdit(component.SubTexture->GetTexture()->GetName(), component.SubTexture->GetTexture(), component.SubTexture, component.TilingFactor, component.Offset);
 			});
 
+		DrawComponent<TextureAnimationComponent>("Texture Animation", entity, [](auto& component)
+			{
+				TextureAnimationEdit("Texture Animation", component.Texture, component.SubTextures[0], component);
+			});
+
 		DrawComponent<ParticleSystemComponent>("Particle System", entity, [](auto& component)
 			{
 				DrawParticeSystemComponent(component);
 			});
+
 
 
 	}

@@ -28,7 +28,19 @@ namespace Vesper {
 		/// @brief Sets the underlying texture of the sub-texture.
 		///
 		/// @param texture The new texture to set for the sub-texture.
-		void SetTexture(const Ref<Texture2D>& texture) { m_Texture = texture; CreateFromCoords(m_Texture, {0, 0}, {1, 1}); }
+		void SetTexture(const Ref<Texture2D>& texture) {			
+			// Ensure texture is valid before creating coords
+			if (!texture)
+				return;
+			m_Texture = texture;
+			Ref<SubTexture2D> st = CreateFromCoords(m_Texture, { 0, 0 }, { (float)texture->GetWidth(), (float)texture->GetHeight() });
+			if (st)
+			{
+				const glm::vec2* src = st->GetTexCoords();
+				for (int i = 0; i < 4; ++i)
+					m_TexCoords[i] = src[i];
+			}
+		}
 
 		/// @brief Returns the texture coordinates of the sub-texture.
 		glm::vec2* GetTexCoords() { return m_TexCoords; }

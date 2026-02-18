@@ -120,6 +120,11 @@ namespace Vesper {
 			auto& sprite = m_Registry.get<SpriteRendererComponent>(entity);
 			auto& subTexture = m_Registry.get<SubTextureComponent>(entity);
 
+			auto texAnim = m_Registry.try_get<TextureAnimationComponent>(entity);
+			if (texAnim) {
+				continue;
+				// Do not render texture animations here
+			}
 
 			if (!sprite.TextureEnabled) sprite.TextureEnabled = true;
 			if (subTexture.SubTexture == nullptr)
@@ -136,15 +141,33 @@ namespace Vesper {
 			Renderer2D::DrawQuad(transform.GetTransform(), subTexture.GetSubTexture(), sprite.TilingFactor, sprite.Color);
 		}
 
-		//auto group1 = m_Registry.group<TextureAnimationComponent>();
-		//for (auto entity : group1)
-		//{
-		//	auto& transform = m_Registry.get<TransformComponent>(entity);
-		//	auto& texAnim = m_Registry.get<TextureAnimationComponent>(entity);
-		//	auto& sprite = m_Registry.get<SpriteRendererComponent>(entity);
-		//	texAnim.Update(ts.GetSeconds());
-		//	Renderer2D::DrawQuadWithTexture(transform.GetTransform(), texAnim.SubTextures[texAnim.CurrentFrame], 1.0f, sprite.Color);
-		//}
+		auto texAnimGroup = m_Registry.group<TextureAnimationComponent>();
+		for (auto entity : texAnimGroup)
+		{
+			auto& transform = m_Registry.get<TransformComponent>(entity);
+			auto& texAnim = m_Registry.get<TextureAnimationComponent>(entity);
+
+			auto sprite = m_Registry.try_get<SpriteRendererComponent>(entity);
+			if (sprite && sprite->Texture && sprite->TextureEnabled) {
+
+				auto subTex = m_Registry.try_get<SubTextureComponent>(entity);
+				if (subTex && subTex->SubTexture &&
+					subTex->SubTexture->GetTexture() &&
+					subTex->SubTexture->GetTexture() == sprite->Texture) {
+
+					if (texAnim.SubTextures.empty()) {
+						texAnim.SubTextures.push_back(subTex->SubTexture);
+						texAnim.CurrentFrame = 0;
+						texAnim.FrameTime = 0.16f; // Default frame time, can be adjusted as needed
+						texAnim.TimeAccumulator = 0.0f;
+						texAnim.tintColor = sprite->Color;
+						continue;
+					}
+					texAnim.Update(ts.GetSeconds());
+					Renderer2D::DrawQuad(transform.GetTransform(), texAnim.SubTextures[texAnim.CurrentFrame], 1.0f, texAnim.tintColor);
+				}
+			}
+		}
 
 
 		{
@@ -200,6 +223,11 @@ namespace Vesper {
 			auto& transform = m_Registry.get<TransformComponent>(entity);
 			auto& sprite = m_Registry.get<SpriteRendererComponent>(entity);
 			auto& subTexture = m_Registry.get<SubTextureComponent>(entity);
+			auto texAnim = m_Registry.try_get<TextureAnimationComponent>(entity);
+			if (texAnim) {
+				continue;
+				// Do not render texture animations here
+			}
 			if (!sprite.TextureEnabled) sprite.TextureEnabled = true;
 			if (subTexture.SubTexture == nullptr)
 			{
@@ -213,6 +241,85 @@ namespace Vesper {
 				}
 			}
 			Renderer2D::DrawQuad(transform.GetTransform(), subTexture.GetSubTexture(), sprite.TilingFactor, sprite.Color);
+		}
+
+		auto texAnimGroup = m_Registry.group<TextureAnimationComponent>();
+		for (auto entity : texAnimGroup)
+		{
+			auto& name = m_Registry.get<NameComponent>(entity).Name;
+			auto& transform = m_Registry.get<TransformComponent>(entity);
+			auto& texAnim = m_Registry.get<TextureAnimationComponent>(entity);
+
+			auto sprite = m_Registry.try_get<SpriteRendererComponent>(entity);
+			if (sprite && sprite->Texture && sprite->TextureEnabled) {
+
+				auto subTex = m_Registry.try_get<SubTextureComponent>(entity);
+				if (subTex && subTex->SubTexture) {
+
+					if (subTex->SubTexture->GetTexture() &&
+						subTex->SubTexture->GetTexture() == sprite->Texture) {
+
+						if (texAnim.SubTextures.empty()) {
+							texAnim.SubTextures.push_back(subTex->SubTexture);
+							texAnim.CurrentFrame = 0;
+							texAnim.FrameTime = 0.16f; // Default frame time, can be adjusted as needed
+							texAnim.TimeAccumulator = 0.0f;
+							texAnim.tintColor = sprite->Color;
+							continue;
+						}
+						texAnim.tintColor = sprite->Color;
+						texAnim.Update(ts.GetSeconds());
+						Renderer2D::DrawQuad(transform.GetTransform(), texAnim.SubTextures[texAnim.CurrentFrame], 1.0f, texAnim.tintColor);
+
+					}
+					else {
+
+						if (subTex->SubTexture->GetTexture()) {
+							//VZ_CORE_WARN("Entity %s has SubTextureComponent with a texture that does not match the SpriteRendererComponent's texture. Animation will not play.", name);
+							subTex->SubTexture->SetTexture(sprite->Texture);
+							subTex->SubTexture = SubTexture2D::CreateFromCoords(sprite->Texture, { 0, 0 }, { sprite->Texture->GetWidth(), sprite->Texture->GetHeight() });
+						}
+						else {
+							//VZ_CORE_WARN("Entity %s has SubTextureComponent with no texture. Animation will not play.", name);
+							subTex->SubTexture->SetTexture(sprite->Texture);
+							subTex->SubTexture = SubTexture2D::CreateFromCoords(sprite->Texture, { 0, 0 }, { sprite->Texture->GetWidth(), sprite->Texture->GetHeight() });
+
+						}
+
+					}
+				}
+				else {
+
+					if (subTex) {
+						VZ_CORE_WARN("Entity %s has SubTextureComponent but it has no SubTexture. Animation will not play.", name);
+						m_Registry.emplace_or_replace<SubTextureComponent>(entity, sprite->Texture);
+
+					}
+					else {
+						VZ_CORE_WARN("Entity %s has no SubTextureComponent. Animation will not play.", name);
+						m_Registry.emplace<SubTextureComponent>(entity, sprite->Texture);
+
+					}
+				}
+			}
+			else {
+				if (sprite) {
+					if (!sprite->Texture) {
+						VZ_CORE_WARN("Entity %s has SpriteRendererComponent with no texture. Animation will not play.", name);
+						//sprite->Texture = Renderer2D::GetWhiteTexture();
+					}
+					
+					if (!sprite->TextureEnabled) {
+						sprite->TextureEnabled = true;
+					}
+					
+					texAnim.Texture = sprite->Texture;
+					texAnim.tintColor = sprite->Color;
+				}
+				else {
+					VZ_CORE_WARN("Entity %s has no SpriteRendererComponent. Animation will not play.", name);
+				}
+			}
 		}
 
 		{
@@ -297,19 +404,48 @@ namespace Vesper {
 
 	template<>
 	void Scene::OnComponentAdded<SpriteRendererComponent>(Entity entity, SpriteRendererComponent& component) {
+		component.Texture = Renderer2D::GetWhiteTexture();
 	}
 
 	template<>
 	void Scene::OnComponentAdded<SubTextureComponent>(Entity entity, SubTextureComponent& component) {
 		auto& src = entity.GetOrAddComponent<SpriteRendererComponent>();
-		if (!src.TextureEnabled) src.TextureEnabled = true;
-		component.SetTexture(src.Texture ? src.Texture : VZ_DEFAULT_TEXTURE);
+		//if (!src.TextureEnabled) src.TextureEnabled = true;
+		component.SetTexture(src.Texture ? src.Texture : Renderer2D::GetWhiteTexture());
+		component.SubTexture = SubTexture2D::CreateFromCoords(src.Texture, { 0,0 }, { src.Texture->GetWidth(), src.Texture->GetHeight() });
 	}
 
 	template<>
 	void Scene::OnComponentAdded<TextureAnimationComponent>(Entity entity, TextureAnimationComponent& component) {
+		auto& sprc = entity.GetOrAddComponent<SpriteRendererComponent>();
+		auto& stc = entity.GetOrAddComponent<SubTextureComponent>();
+		stc.SetTexture(sprc.Texture);
+		component.Texture = sprc.Texture;
+		//if (sprc.Texture) {
+		//	if (!stc.SubTexture) {
+		//		stc.SetTexture(sprc.Texture);
+		//		stc.SubTexture = SubTexture2D::CreateFromCoords(sprc.Texture, { 0, 0 }, { sprc.Texture->GetWidth(), sprc.Texture->GetHeight() });
+		//	}
+		//	else if (stc.SubTexture->GetTexture() != sprc.Texture) {
+		//		stc.SetTexture(sprc.Texture);
+		//		stc.SubTexture = SubTexture2D::CreateFromCoords(sprc.Texture, { 0, 0 }, { sprc.Texture->GetWidth(), sprc.Texture->GetHeight() });
+		//	}
+		//}
+		//else if (stc.SubTexture) {
+		//	sprc.Texture = stc.SubTexture->GetTexture();
+		//}
+		//else {
+		//	stc.SetTexture(Renderer2D::GetWhiteTexture());
 
+		//}
+		//if (sprc.Texture)
+		//	component.Texture = sprc.Texture;
+		//else if (stc.SubTexture)
+		//	component.Texture = stc.SubTexture->GetTexture();
+		//else
+		//	component.Texture = Renderer2D::GetWhiteTexture();
 	}
+
 
 	template<>
 	void Scene::OnComponentAdded<NativeScriptComponent>(Entity entity, NativeScriptComponent& component) {
