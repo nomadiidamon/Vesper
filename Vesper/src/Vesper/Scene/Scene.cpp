@@ -308,11 +308,11 @@ namespace Vesper {
 						VZ_CORE_WARN("Entity %s has SpriteRendererComponent with no texture. Animation will not play.", name);
 						//sprite->Texture = Renderer2D::GetWhiteTexture();
 					}
-					
+
 					if (!sprite->TextureEnabled) {
 						sprite->TextureEnabled = true;
 					}
-					
+
 					texAnim.Texture = sprite->Texture;
 					texAnim.tintColor = sprite->Color;
 				}
@@ -344,6 +344,64 @@ namespace Vesper {
 			}
 		}
 
+		{
+			auto shadowCloneView = m_Registry.group<ShadowCloneComponent>();
+			for (auto entity : shadowCloneView) {
+				UUID& originalEntityID = m_Registry.get<UUIDComponent>(entity).ID;
+				auto& shadowClone = m_Registry.get<ShadowCloneComponent>(entity);
+				for (auto& cloneID : shadowClone.CloneEntities) {
+					Entity cloneEntity = GetEntityFromUUID(cloneID);
+					if (cloneEntity) {
+						if (shadowClone.SyncWithOriginal) {
+							shadowClone.Independent = false; // Ensure independent is false if syncing
+
+							auto& originalTransform = m_Registry.get<TransformComponent>(entity);
+							auto& cloneTransform = cloneEntity.GetComponent<TransformComponent>();
+							cloneTransform.Translation = originalTransform.Translation + shadowClone.PositionVariation;
+							cloneTransform.Rotation = originalTransform.Rotation;
+							cloneTransform.Scale = originalTransform.Scale;
+						}
+						else if (shadowClone.Independent) {
+							shadowClone.SyncWithOriginal = false; // Ensure syncing is false if independent
+
+							if (cloneEntity.HasComponent<CloneBehaviorComponent>()) {
+								auto& cloneBehavior = cloneEntity.GetComponent<CloneBehaviorComponent>();
+								
+								/// Should do this in on add. just testing for now
+								if (!cloneBehavior.CustomUpdateFunction) {
+									cloneBehavior.SetCustomUpdateFunction([](Scene* context, UUID originalEntityID, UUID cloneEntityID, float deltaTime) {
+										// Custom behavior for independent shadow clones
+										// For example, we can make the clone orbit around the original entity
+										Entity originalEntity = context->GetEntityFromUUID(originalEntityID);
+										Entity cloneEntity = context->GetEntityFromUUID(cloneEntityID);
+										auto& originalTransform = originalEntity.GetComponent<TransformComponent>();
+										auto& cloneTransform = cloneEntity.GetComponent<TransformComponent>();
+										float orbitRadius = 1.0f; // Distance from the original entity
+										float orbitSpeed = 1.0f; // Speed of orbiting
+										// Calculate the angle based on time
+										static float angle = 0.0f;
+										angle += orbitSpeed * deltaTime;
+										// Update the clone's position to orbit around the original entity
+										cloneTransform.Translation.x = originalTransform.Translation.x + orbitRadius * cos(angle);
+										cloneTransform.Translation.y = originalTransform.Translation.y + orbitRadius * sin(angle);
+										}
+									);
+								}
+								else {
+									cloneBehavior.CloneBehaviorUpdate(this, originalEntityID, cloneID, ts);
+								}
+
+
+							}
+							else {
+								VZ_CORE_WARN("Entity %s has Independent Shadow Clone but no CloneBehaviorComponent. Clone will not update.", cloneEntity.GetName().c_str());
+							}
+						}
+					}
+				}
+			}
+		}
+
 		Renderer2D::EndScene();
 	}
 
@@ -369,6 +427,17 @@ namespace Vesper {
 
 			const auto& camera = view.get<CameraComponent>(entity);
 			if (camera.Primary)
+				return Entity{ entity, this };
+		}
+		return {};
+	}
+
+	Entity Scene::GetEntityFromUUID(const UUID& id)
+	{
+		auto view = m_Registry.view<UUIDComponent>();
+		for (auto entity : view) {
+			const auto& uuid = view.get<UUIDComponent>(entity);
+			if (uuid.ID.ID == id.ID)
 				return Entity{ entity, this };
 		}
 		return {};
@@ -453,5 +522,32 @@ namespace Vesper {
 
 	template<>
 	void Scene::OnComponentAdded<ParticleSystemComponent>(Entity entity, ParticleSystemComponent& component) {
+	}
+
+	template<>
+	void Scene::OnComponentAdded<ShadowCloneComponent>(Entity entity, ShadowCloneComponent& component) {
+		for (int i = 0; i < component.NumberOfClones; i++) {
+			Entity clone = CreateEntity(entity.GetComponent<NameComponent>().Name + "_Clone" + std::to_string(i));
+			//clone.Duplicate(entity);
+			clone.GetComponent<TransformComponent>() = entity.GetComponent<TransformComponent>();
+			clone.GetComponent<TransformComponent>().Translation += component.PositionVariation * static_cast<float>(i);
+
+			if (entity.HasComponent<SpriteRendererComponent>()) {
+				clone.AddComponent<SpriteRendererComponent>(entity.GetComponent<SpriteRendererComponent>());
+			}
+			if (entity.HasComponent<SubTextureComponent>()) {
+				clone.AddComponent<SubTextureComponent>(entity.GetComponent<SubTextureComponent>());
+			}
+			if (entity.HasComponent<TextureAnimationComponent>()) {
+				clone.AddComponent<TextureAnimationComponent>(entity.GetComponent<TextureAnimationComponent>());
+			}
+
+			clone.AddComponent<CloneBehaviorComponent>();
+			component.CloneEntities.push_back(clone.GetID());
+		}
+	}
+
+	template<>
+	void Scene::OnComponentAdded<CloneBehaviorComponent>(Entity entity, CloneBehaviorComponent& component) {
 	}
 }

@@ -604,6 +604,7 @@ namespace Vesper {
 			DisplayAddComponentEntry<SubTextureComponent>("SubTexture");
 			DisplayAddComponentEntry<TextureAnimationComponent>("Texture Animation");
 			DisplayAddComponentEntry<ParticleSystemComponent>("Particle System");
+			DisplayAddComponentEntry<ShadowCloneComponent>("Shadow Clone");
 
 			ImGui::EndPopup();
 		}
@@ -696,6 +697,14 @@ namespace Vesper {
 		DrawComponent<ParticleSystemComponent>("Particle System", entity, [](auto& component)
 			{
 				DrawParticeSystemComponent(component);
+			});
+
+		DrawComponent<ShadowCloneComponent>("Shadow Clone", entity, [](auto& component)
+			{
+				ImGui::DragInt("Clone Count", &component.NumberOfClones, 1, 1, 100);
+				DrawVec3Control("Clone Offset", component.PositionVariation, 0.1f);
+				ImGui::Checkbox("Sync with original", &component.SyncWithOriginal);
+				ImGui::Checkbox("Independent Clones", &component.Independent);
 			});
 
 

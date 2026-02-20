@@ -395,4 +395,57 @@ namespace Vesper
 
 	};
 
+	struct CloneTagComponent {};
+
+	class Entity;
+	class Scene;
+
+	struct CloneBehaviorComponent {
+		bool SyncPosition = true;
+		bool SyncRotation = true;
+		bool SyncScale = true;
+		std::function<void(Scene* context, UUID originalEntity, UUID cloneEntity, float deltaTime)> CustomUpdateFunction = nullptr;
+
+		CloneBehaviorComponent() = default;
+		CloneBehaviorComponent(const CloneBehaviorComponent&) = default;
+		CloneBehaviorComponent(bool syncPosition, bool syncRotation, bool syncScale, std::function<void(Scene* context, UUID originalEntity, UUID cloneEntity, float deltaTime)> customUpdateFunction = nullptr)
+			: SyncPosition(syncPosition), SyncRotation(syncRotation), SyncScale(syncScale), CustomUpdateFunction(customUpdateFunction) {
+		}
+
+
+		void CloneBehaviorUpdate(Scene* context, UUID originalEntity, UUID cloneEntity, float deltaTime)
+		{
+			if (CustomUpdateFunction) {
+				CustomUpdateFunction(context, originalEntity, cloneEntity, deltaTime);
+			}
+			else {
+				
+			}
+		}
+
+		void SetCustomUpdateFunction(std::function<void(Scene* context, UUID originalEntity, UUID cloneEntity, float deltaTime)> customUpdateFunction) {
+			CustomUpdateFunction = customUpdateFunction;
+		}
+
+		void SetCustomUpdateFunction(void (*customUpdateFunction)(Scene* context, UUID originalEntity, UUID cloneEntity, float deltaTime)) {
+			CustomUpdateFunction = customUpdateFunction;
+		}
+
+		template<typename Func>
+		void SetCustomUpdateFunction(Func&& func)
+		{
+			SetCustomUpdateFunction(std::function<void(Scene* context, UUID originalEntity, UUID cloneEntity, float deltaTime)>(std::forward<Func>(func)));
+		}
+
+
+	};
+
+	struct ShadowCloneComponent {
+		int NumberOfClones = 3;
+		std::vector<UUID> CloneEntities;
+		bool SyncWithOriginal = true;
+		bool Independent = false;
+		glm::vec3 PositionVariation = { 0.5f, 0.5f, 0.0f };
+	};
+
 }
