@@ -142,9 +142,7 @@
     <ClInclude Include="..\src\Panels\SceneHierarchyPanel.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\src\Layers\EditorLayer.cpp">
-      <ObjectFileName>$(IntDir)\EditorLayer1.obj</ObjectFileName>
-    </ClCompile>
+    <ClCompile Include="..\src\Layers\EditorLayer.cpp" />
     <ClCompile Include="..\src\Layers\ViewportLayer.cpp" />
     <ClCompile Include="..\src\Panels\SceneHierarchyPanel.cpp" />
     <ClCompile Include="..\src\VesperEditorApp.cpp" />
