@@ -570,8 +570,43 @@ namespace Vesper {
 				ImGui::TreePop();
 			}
 
-			if (removeComponent)
+			if (removeComponent) {
+				// Non-Removable components
+				if (typeid(T) == typeid(TransformComponent))
+				{
+					VZ_WARN("Cannot remove TransformComponent from entity {0}!", entity.GetComponent<NameComponent>().Name);
+				}
+				else if (typeid(T) == typeid(UUIDComponent))
+				{
+					VZ_WARN("Cannot remove UUIDComponent from entity {0}!", entity.GetComponent<NameComponent>().Name);
+				}
+				// Sprite Renderer dependencies
+				else if (typeid(T) == typeid(SpriteRendererComponent)) {
+					if (entity.HasComponent<TextureAnimationComponent>()) {
+						VZ_WARN("Cannot remove SpriteRendererComponent from entity {0} because it has a TextureAnimationComponent!", entity.GetComponent<NameComponent>().Name);
+						return;
+					}
+					if (entity.HasComponent<SubTextureComponent>()) {
+						VZ_WARN("Cannot remove SpriteRendererComponent from entity {0} because it has a SubTextureComponent!", entity.GetComponent<NameComponent>().Name);
+						return;
+					}
+				}
+				// SubTexture dependencies
+				else if (typeid(T) == typeid(SubTextureComponent)) {
+					if (entity.HasComponent<TextureAnimationComponent>()) {
+						VZ_WARN("Cannot remove SubTextureComponent from entity {0} because it has a TextureAnimationComponent!", entity.GetComponent<NameComponent>().Name);
+						return;
+					}
+				}
+				
+
+
+
+
+				
 				entity.RemoveComponent<T>();
+
+			}
 		}
 	}
 

@@ -404,37 +404,42 @@ namespace Vesper
 		bool SyncPosition = true;
 		bool SyncRotation = true;
 		bool SyncScale = true;
-		std::function<void(Scene* context, UUID originalEntity, UUID cloneEntity, float deltaTime)> CustomUpdateFunction = nullptr;
+		float orbitSpeed = 1.0f;
+		float orbitRadius = 1.0f;
+		UUID OriginalEntityID;
+
+		std::function<void(Scene* context, UUID originalEntity, UUID cloneEntity, float deltaTime, float orbitSpeed, float orbitRadius)> CustomUpdateFunction = nullptr;
 
 		CloneBehaviorComponent() = default;
 		CloneBehaviorComponent(const CloneBehaviorComponent&) = default;
-		CloneBehaviorComponent(bool syncPosition, bool syncRotation, bool syncScale, std::function<void(Scene* context, UUID originalEntity, UUID cloneEntity, float deltaTime)> customUpdateFunction = nullptr)
-			: SyncPosition(syncPosition), SyncRotation(syncRotation), SyncScale(syncScale), CustomUpdateFunction(customUpdateFunction) {
+		CloneBehaviorComponent(bool syncPosition, bool syncRotation, bool syncScale, std::function<void(Scene* context, UUID originalEntity, UUID cloneEntity, float deltaTime, float orbitSpeed, float orbitRadius)> customUpdateFunction = nullptr)
+			: SyncPosition(syncPosition), SyncRotation(syncRotation), SyncScale(syncScale), CustomUpdateFunction(customUpdateFunction), orbitSpeed(orbitSpeed), orbitRadius(orbitRadius)
+		{
 		}
 
 
-		void CloneBehaviorUpdate(Scene* context, UUID originalEntity, UUID cloneEntity, float deltaTime)
+		void CloneBehaviorUpdate(Scene* context, UUID originalEntity, UUID cloneEntity, float deltaTime, float orbitSpeed, float orbitRadius)
 		{
 			if (CustomUpdateFunction) {
-				CustomUpdateFunction(context, originalEntity, cloneEntity, deltaTime);
+				CustomUpdateFunction(context, originalEntity, cloneEntity, deltaTime, orbitSpeed, orbitRadius);
 			}
 			else {
 				
 			}
 		}
 
-		void SetCustomUpdateFunction(std::function<void(Scene* context, UUID originalEntity, UUID cloneEntity, float deltaTime)> customUpdateFunction) {
+		void SetCustomUpdateFunction(std::function<void(Scene* context, UUID originalEntity, UUID cloneEntity, float deltaTime, float orbitSpeed, float orbitRadius)> customUpdateFunction) {
 			CustomUpdateFunction = customUpdateFunction;
 		}
 
-		void SetCustomUpdateFunction(void (*customUpdateFunction)(Scene* context, UUID originalEntity, UUID cloneEntity, float deltaTime)) {
+		void SetCustomUpdateFunction(void (*customUpdateFunction)(Scene* context, UUID originalEntity, UUID cloneEntity, float deltaTime, float orbitSpeed, float orbitRadius)) {
 			CustomUpdateFunction = customUpdateFunction;
 		}
 
 		template<typename Func>
 		void SetCustomUpdateFunction(Func&& func)
 		{
-			SetCustomUpdateFunction(std::function<void(Scene* context, UUID originalEntity, UUID cloneEntity, float deltaTime)>(std::forward<Func>(func)));
+			SetCustomUpdateFunction(std::function<void(Scene* context, UUID originalEntity, UUID cloneEntity, float deltaTime, float orbitSpeed, float orbitRadius)>(std::forward<Func>(func)));
 		}
 
 

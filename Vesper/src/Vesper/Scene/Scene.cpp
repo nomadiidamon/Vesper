@@ -349,6 +349,47 @@ namespace Vesper {
 			for (auto entity : shadowCloneView) {
 				UUID& originalEntityID = m_Registry.get<UUIDComponent>(entity).ID;
 				auto& shadowClone = m_Registry.get<ShadowCloneComponent>(entity);
+
+				if (shadowClone.CloneEntities.empty()) {
+					// If there are no clones, create them
+					for (int i = 0; i < shadowClone.NumberOfClones; i++) {
+						Entity cloneEntity = CreateEntity("Shadow Clone " + std::to_string(i + 1));
+						
+						auto& transform = cloneEntity.GetComponent<TransformComponent>();
+						int order = shadowClone.CloneEntities.size();
+						transform.Translation = { transform.Translation.x + shadowClone.PositionVariation.x * order, transform.Translation.y + shadowClone.PositionVariation.y * order, transform.Translation.z };
+
+						cloneEntity.AddComponent<CloneBehaviorComponent>();
+						cloneEntity.GetComponent<CloneBehaviorComponent>().OriginalEntityID = originalEntityID;
+						shadowClone.CloneEntities.push_back(cloneEntity.GetComponent<UUIDComponent>().ID);
+					}
+				}
+				else if (shadowClone.NumberOfClones != shadowClone.CloneEntities.size()) {
+					// If the number of clones has changed, add or remove clones accordingly
+					int currentClones = static_cast<int>(shadowClone.CloneEntities.size());
+					if (shadowClone.NumberOfClones > currentClones) {
+						for (int i = currentClones; i < shadowClone.NumberOfClones; i++) {
+							Entity cloneEntity = CreateEntity("Shadow Clone " + std::to_string(i + 1));
+
+							auto& transform = cloneEntity.GetComponent<TransformComponent>();
+							int order = shadowClone.CloneEntities.size();
+							transform.Translation = { transform.Translation.x + shadowClone.PositionVariation.x * order, transform.Translation.y + shadowClone.PositionVariation.y * order, transform.Translation.z };
+
+							cloneEntity.AddComponent<CloneBehaviorComponent>();
+							cloneEntity.GetComponent<CloneBehaviorComponent>().OriginalEntityID = originalEntityID;
+							shadowClone.CloneEntities.push_back(cloneEntity.GetComponent<UUIDComponent>().ID);
+						}
+					}
+					else {
+						for (int i = currentClones - 1; i >= shadowClone.NumberOfClones; i--) {
+							Entity cloneEntity = GetEntityFromUUID(shadowClone.CloneEntities[i]);
+							if (cloneEntity) {
+								DestroyEntity(cloneEntity);
+							}
+							shadowClone.CloneEntities.pop_back();
+						}
+					}
+				}
 				for (auto& cloneID : shadowClone.CloneEntities) {
 					Entity cloneEntity = GetEntityFromUUID(cloneID);
 					if (cloneEntity) {
@@ -369,15 +410,13 @@ namespace Vesper {
 								
 								/// Should do this in on add. just testing for now
 								if (!cloneBehavior.CustomUpdateFunction) {
-									cloneBehavior.SetCustomUpdateFunction([](Scene* context, UUID originalEntityID, UUID cloneEntityID, float deltaTime) {
+									cloneBehavior.SetCustomUpdateFunction([](Scene* context, UUID originalEntityID, UUID cloneEntityID, float deltaTime, float orbitSpeed, float orbitRadius) {
 										// Custom behavior for independent shadow clones
 										// For example, we can make the clone orbit around the original entity
 										Entity originalEntity = context->GetEntityFromUUID(originalEntityID);
 										Entity cloneEntity = context->GetEntityFromUUID(cloneEntityID);
 										auto& originalTransform = originalEntity.GetComponent<TransformComponent>();
 										auto& cloneTransform = cloneEntity.GetComponent<TransformComponent>();
-										float orbitRadius = 1.0f; // Distance from the original entity
-										float orbitSpeed = 1.0f; // Speed of orbiting
 										// Calculate the angle based on time
 										static float angle = 0.0f;
 										angle += orbitSpeed * deltaTime;
@@ -388,7 +427,7 @@ namespace Vesper {
 									);
 								}
 								else {
-									cloneBehavior.CloneBehaviorUpdate(this, originalEntityID, cloneID, ts);
+									cloneBehavior.CloneBehaviorUpdate(this, originalEntityID, cloneID, ts, cloneBehavior.orbitSpeed, cloneBehavior.orbitRadius);
 								}
 
 
@@ -530,7 +569,7 @@ namespace Vesper {
 			Entity clone = CreateEntity(entity.GetComponent<NameComponent>().Name + "_Clone" + std::to_string(i));
 			//clone.Duplicate(entity);
 			clone.GetComponent<TransformComponent>() = entity.GetComponent<TransformComponent>();
-			clone.GetComponent<TransformComponent>().Translation += component.PositionVariation * static_cast<float>(i);
+			clone.GetComponent<TransformComponent>().Translation += glm::vec3(component.PositionVariation.x * static_cast<float>(i), component.PositionVariation.y * static_cast<float>(i), component.PositionVariation.z * static_cast<float>(i));
 
 			if (entity.HasComponent<SpriteRendererComponent>()) {
 				clone.AddComponent<SpriteRendererComponent>(entity.GetComponent<SpriteRendererComponent>());
@@ -542,12 +581,33 @@ namespace Vesper {
 				clone.AddComponent<TextureAnimationComponent>(entity.GetComponent<TextureAnimationComponent>());
 			}
 
-			clone.AddComponent<CloneBehaviorComponent>();
+			auto& cloneBehavior = clone.AddComponent<CloneBehaviorComponent>();
+			cloneBehavior.OriginalEntityID = entity.GetID();
+			cloneBehavior.orbitRadius *= (i + 1);
+			//cloneBehavior.orbitSpeed *= (i + 1);
 			component.CloneEntities.push_back(clone.GetID());
 		}
 	}
 
 	template<>
 	void Scene::OnComponentAdded<CloneBehaviorComponent>(Entity entity, CloneBehaviorComponent& component) {
+	
+		component.SetCustomUpdateFunction([](Scene* context, UUID originalEntityID, UUID cloneEntityID, float deltaTime, float orbitSpeed, float orbitRadius) {
+			// Custom behavior for independent shadow clones
+			// For example, we can make the clone orbit around the original entity
+			Entity originalEntity = context->GetEntityFromUUID(originalEntityID);
+			Entity cloneEntity = context->GetEntityFromUUID(cloneEntityID);
+			auto& originalTransform = originalEntity.GetComponent<TransformComponent>();
+			auto& cloneTransform = cloneEntity.GetComponent<TransformComponent>();
+			// Calculate the angle based on time
+			static float angle = 0.0f;
+			angle += orbitSpeed * deltaTime;
+			// Update the clone's position to orbit around the original entity
+			cloneTransform.Translation.x = originalTransform.Translation.x + orbitRadius * cos(angle);
+			cloneTransform.Translation.y = originalTransform.Translation.y + orbitRadius * sin(angle);
+			}
+		);
+
+
 	}
 }
