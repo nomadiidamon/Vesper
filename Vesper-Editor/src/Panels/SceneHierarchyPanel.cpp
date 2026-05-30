@@ -570,6 +570,9 @@ namespace Vesper {
 				ImGui::TreePop();
 			}
 
+			/// TODO: This is a temporary solution to prevent users from removing essential components and breaking the entity. 
+			/// The goal is a registry that will handle dependencies and prevent invalid states, but for now this will do.
+
 			if (removeComponent) {
 				// Non-Removable components
 				if (typeid(T) == typeid(TransformComponent))
