@@ -5,6 +5,7 @@
 /// @note Components include UUID, Name, Transform, SpriteRenderer, SubTexture, TextureAnimation, Camera, and NativeScript.
 /// @todo Move GLM Enable Experimental to Math.h and remove from here
 
+#include "Vesper/Renderer/Renderer2D.h"
 #include "Vesper/Renderer/Texture.h"
 #include "Vesper/Renderer/SubTexture2D.h"
 #include "Vesper/ParticleSystem/ParticleSystem.h"
@@ -32,7 +33,7 @@ namespace Vesper
 		operator std::string& () { return ID; }
 		operator const std::string& () const { return ID; }
 	};
-	
+
 	/// @brief Component that holds a UUID.
 	struct UUIDComponent {
 		/// @brief The UUID of the owning entity.
@@ -149,7 +150,7 @@ namespace Vesper
 		void SetTexture(const Ref<Texture2D>& texture) {
 			SubTexture = SubTexture2D::CreateFromCoords(texture, { 0, 0 }, { texture->GetWidth(), texture->GetHeight() });
 		}
-		
+
 		/// @brief Sets the tiling factor for the sub-texture.
 		void SetTilingFactor(const glm::vec2& tiling) {
 			TilingFactor = tiling;
@@ -170,6 +171,7 @@ namespace Vesper
 	/// (can be used with full textures)
 	struct TextureAnimationComponent
 	{
+		Ref<Texture2D> Texture = nullptr;
 		/// @brief The list of sub-textures for the animation.
 		std::vector<Ref<SubTexture2D>> SubTextures;
 		/// @brief The current frame index.
@@ -178,6 +180,14 @@ namespace Vesper
 		float FrameTime = 0.6f; // Time per frame in seconds
 		/// @brief Accumulated time for frame switching.
 		float TimeAccumulator = 0.0f; // per-instance accumulator
+
+
+		bool m_IsReseting = false;
+		int FrameCount = 0;
+		glm::vec2 Coords = { 0.0f, 0.0f };
+		glm::vec2 CellSize = { 1.0f, 1.0f };
+		glm::vec2 SpriteSize = { 1.0f, 1.0f };
+		glm::vec4 tintColor = { 1.0f, 1.0f, 1.0f, 1.0f };
 
 		TextureAnimationComponent() = default;
 		TextureAnimationComponent(const TextureAnimationComponent&) = default;
@@ -188,7 +198,123 @@ namespace Vesper
 		TextureAnimationComponent(const std::vector<Ref<SubTexture2D>>& subTextures, float frameTime)
 			: SubTextures(subTextures), FrameTime(frameTime) {
 		}
+
+		void Reset(const Ref<Texture2D>& texture, const int& frameCount, const glm::vec2& coords, const glm::vec2& cellSize, const glm::vec2& spriteSize) {
+			if (texture == nullptr) {
+				VZ_CORE_WARN("Texture is null, returning.");
+				return;
+			}
+
+			m_IsReseting = true;
+			SubTextures.clear();
+			FrameCount = frameCount;
+			SubTextures.reserve(FrameCount);
+			Coords = coords;
+			CellSize = cellSize;
+			SpriteSize = spriteSize;
+			for (int i = 0; i < FrameCount; i++) {
+				SubTextures.push_back(SubTexture2D::CreateFromCoords(
+					texture,
+					{ Coords.x + CellSize.x * i, Coords.y },
+					CellSize * SpriteSize));
+			}
+			Texture = texture;
+			CurrentFrame = 0;
+			TimeAccumulator = 0.0f;
+			m_IsReseting = false;
+		}
+
+		void AddFrames(const std::vector<Ref<SubTexture2D>>& subTextures) {
+			SubTextures.insert(SubTextures.end(), subTextures.begin(), subTextures.end());
+			FrameCount = static_cast<int>(SubTextures.size());
+		}
+
+		void AddReveresedFrames(const std::vector<Ref<SubTexture2D>>& subTextures) {
+			SubTextures.insert(SubTextures.end(), subTextures.rbegin() + 1, subTextures.rend());
+			FrameCount = static_cast<int>(SubTextures.size());
+		}
+
+		void AddFrame(const Ref<SubTexture2D>& subTexture) {
+			SubTextures.push_back(subTexture);
+			FrameCount = static_cast<int>(SubTextures.size());
+		}
+
+		void AddFrameAt(const Ref<SubTexture2D>& subTexture, uint32_t index) {
+			if (index > SubTextures.size()) {
+				SubTextures.push_back(subTexture);
+			}
+			else {
+				SubTextures.insert(SubTextures.begin() + index, subTexture);
+			}
+			FrameCount = static_cast<int>(SubTextures.size());
+		}
+
+		void RemoveFrameAt(uint32_t index) {
+			if (index < SubTextures.size()) {
+				SubTextures.erase(SubTextures.begin() + index);
+				FrameCount = static_cast<int>(SubTextures.size());
+			}
+		}
+
+		void SynchronizeTextures(const Ref<Texture2D>& texture, const Ref<SubTexture2D>& subTexture, std::vector<Ref<SubTexture2D>>& allSubTextures) {
+			std::list<int> indicesToRemove;
+
+			if (!texture) {
+				VZ_CORE_WARN("Texture is null.");
+				if (subTexture) {
+					VZ_CORE_WARN("SubTexture is not null. Recreating SubTexture as full Texture.");
+					Ref<SubTexture2D> newSubTexture = SubTexture2D::CreateFromCoords(subTexture->GetTexture(), { 0, 0 }, { subTexture->GetTexture()->GetWidth(), subTexture->GetTexture()->GetHeight() });
+					if (newSubTexture) {
+						allSubTextures.push_back(newSubTexture);
+					}
+					VZ_CORE_WARN("SubTexture recreated as full Texture from its original texture.");
+					if (subTexture->GetTexture()) {
+						VZ_CORE_WARN("Setting Texture to SubTexture's original texture.");
+						Texture = subTexture->GetTexture();
+					}
+				}
+				return;
+			}
+
+			// Remove any sub-textures that do not match the new texture
+			for (size_t i = 0; i < allSubTextures.size(); ++i) {
+				if (allSubTextures[i] == nullptr) {
+					indicesToRemove.push_back(static_cast<int>(i));
+				}
+				else if (allSubTextures[i]->GetTexture() != texture) {
+					indicesToRemove.push_back(static_cast<int>(i));
+				}
+			}
+			for (auto it = indicesToRemove.rbegin(); it != indicesToRemove.rend(); ++it) {
+				allSubTextures.erase(allSubTextures.begin() + *it);
+			}
+
+			// Add the new sub-texture if it's not already in the list
+			if (subTexture) {
+				if (allSubTextures.empty())
+					allSubTextures.push_back(subTexture);
+				else
+				{
+					bool found = false;
+					for (size_t i = 0; i < allSubTextures.size(); ++i) {
+						if (allSubTextures[i] == subTexture) {
+							found = true;
+							break;
+						}
+					}
+					if (!found) {
+						allSubTextures.push_back(subTexture);
+					}
+				}
+			}
+			else {
+				VZ_CORE_WARN("SubTexture is null. Recreating SubTexture as full Texture.");
+				allSubTextures.push_back(SubTexture2D::CreateFromCoords(texture, { 0, 0 }, { texture->GetWidth(), texture->GetHeight() }));
+			}
+		}
+
 		operator std::vector<Ref<SubTexture2D>>& () { return SubTextures; }
+
 		operator const std::vector<Ref<SubTexture2D>>& () const { return SubTextures; }
 
 		std::vector<Ref<SubTexture2D>>& GetSubTextures() { return SubTextures; }
@@ -267,6 +393,64 @@ namespace Vesper
 			: ParticleSystem(maxParticles) {
 		}
 
+	};
+
+	struct CloneTagComponent {};
+
+	class Entity;
+	class Scene;
+
+	struct CloneBehaviorComponent {
+		bool SyncPosition = true;
+		bool SyncRotation = true;
+		bool SyncScale = true;
+		float orbitSpeed = 1.0f;
+		float orbitRadius = 1.0f;
+		UUID OriginalEntityID;
+
+		std::function<void(Scene* context, UUID originalEntity, UUID cloneEntity, float deltaTime, float orbitSpeed, float orbitRadius)> CustomUpdateFunction = nullptr;
+
+		CloneBehaviorComponent() = default;
+		CloneBehaviorComponent(const CloneBehaviorComponent&) = default;
+		CloneBehaviorComponent(bool syncPosition, bool syncRotation, bool syncScale, std::function<void(Scene* context, UUID originalEntity, UUID cloneEntity, float deltaTime, float orbitSpeed, float orbitRadius)> customUpdateFunction = nullptr)
+			: SyncPosition(syncPosition), SyncRotation(syncRotation), SyncScale(syncScale), CustomUpdateFunction(customUpdateFunction), orbitSpeed(orbitSpeed), orbitRadius(orbitRadius)
+		{
+		}
+
+
+		void CloneBehaviorUpdate(Scene* context, UUID originalEntity, UUID cloneEntity, float deltaTime, float orbitSpeed, float orbitRadius)
+		{
+			if (CustomUpdateFunction) {
+				CustomUpdateFunction(context, originalEntity, cloneEntity, deltaTime, orbitSpeed, orbitRadius);
+			}
+			else {
+				
+			}
+		}
+
+		void SetCustomUpdateFunction(std::function<void(Scene* context, UUID originalEntity, UUID cloneEntity, float deltaTime, float orbitSpeed, float orbitRadius)> customUpdateFunction) {
+			CustomUpdateFunction = customUpdateFunction;
+		}
+
+		void SetCustomUpdateFunction(void (*customUpdateFunction)(Scene* context, UUID originalEntity, UUID cloneEntity, float deltaTime, float orbitSpeed, float orbitRadius)) {
+			CustomUpdateFunction = customUpdateFunction;
+		}
+
+		template<typename Func>
+		void SetCustomUpdateFunction(Func&& func)
+		{
+			SetCustomUpdateFunction(std::function<void(Scene* context, UUID originalEntity, UUID cloneEntity, float deltaTime, float orbitSpeed, float orbitRadius)>(std::forward<Func>(func)));
+		}
+
+
+	};
+
+	struct ShadowCloneComponent {
+		int NumberOfClones = 3;
+		std::vector<UUID> CloneEntities;
+		bool SyncWithOriginal = true;
+		bool Independent = false;
+		glm::vec3 PositionVariation = { 0.5f, 0.5f, 0.0f };
 	};
 
 }

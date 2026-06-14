@@ -32,6 +32,7 @@ namespace Vesper {
 		void OnUpdateEditor(Timestep ts, EditorCamera& camera);
 		void OnViewportResize(uint32_t width, uint32_t height);
 		Entity GetPrimaryCameraEntity();
+		Entity GetEntityFromUUID(const UUID& id);
 	private:
 		template<typename T>
 		void OnComponentAdded(Entity entity, T& component);

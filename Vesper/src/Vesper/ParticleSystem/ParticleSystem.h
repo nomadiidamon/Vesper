@@ -5,6 +5,8 @@
 
 #include <glm/glm.hpp>
 #include "Vesper/Core/Timestep.h"
+#include "Vesper/Renderer/Texture.h"
+#include "Vesper/Renderer/SubTexture2D.h"
 
 namespace Vesper {
 
@@ -16,21 +18,28 @@ namespace Vesper {
 		glm::vec3 VelocityVariation = { 0.0f, 0.0f, 0.0f };
 		glm::vec4 ColorBegin = { 1.0f, 1.0f, 1.0f, 1.0f };
 		glm::vec4 ColorEnd = { 1.0f, 1.0f, 1.0f, 1.0f };
-		float SizeBegin = 1.0f;
-		float SizeEnd = 0.0f;
-		float SizeVariation = 0.0f;
+		glm::vec2 SizeBegin = { 1.0f, 1.0f };
+		glm::vec2 SizeEnd = { 0.0f, 0.0f };
+		glm::vec2 SizeVariation = { 0.0f, 0.0f };
 		float Rotation = 0.0f;
 		float RotationVariation = 0.0f;
 		float Lifetime = 1.0f;
 		float LifetimeVariation = 0.0f;
+		Ref<Texture2D> Texture = nullptr;
+		Ref<SubTexture2D> SubTexture = nullptr;
+		float TilingFactor = 1.0f;
+		glm::vec2 TextureScale = { 1.0f, 1.0f };
+		glm::vec2 TextureOffset = { 0.0f, 0.0f };
 	};
 
 	struct Particle
 	{
-		glm::vec3 Position;
-		glm::vec3 Velocity;
-		glm::vec4 ColorBegin, ColorEnd;
-		float SizeBegin, SizeEnd;
+		glm::vec3 Position = { 0.0f, 0.0f, 0.0f };
+		glm::vec3 Velocity = { 0.0f, 0.0f, 0.0f };
+		glm::vec4 ColorBegin = { 1.0f, 1.0f, 1.0f, 1.0f }, ColorEnd = { 1.0f, 1.0f, 1.0f, 1.0f };
+		glm::vec2 SizeBegin = { 1.0f, 1.0f }, SizeEnd = { 0.0f, 0.0f };
+		Ref<Texture2D> Texture = nullptr;
+		Ref<SubTexture2D> SubTexture = nullptr;
 		float Rotation;
 		float Lifetime = 0.0f;
 		float LifeRemaining = 0.0f;
@@ -50,13 +59,17 @@ namespace Vesper {
 		void OnUpdate(Timestep ts);
 		void OnRender();
 		void Emit(const ParticleProps& particleProps);
+		void Emit(const ParticleProps& particleProps, int count);
 		void SetParticleProps(const ParticleProps& particleProps) { m_Props = particleProps; }
-		void ResetSystem() { m_PoolIndex = m_ParticlePool.size() - 1; m_TimeSinceLastEmit = 0.0f; m_IsEmitting = true; }
+		void ResetSystem(); /*{ m_PoolIndex = m_ParticlePool.size() - 1; m_TimeSinceLastEmit = 0.0f; m_IsEmitting = true; }*/
 		void ResetParticle(Particle& particle, const ParticleProps& particleProps);
-	private:
+		void ResizePool(uint32_t newSize);
+		int ActiveParticleCount() { return m_activeParticleCount; }
 		std::vector<Particle> m_ParticlePool;
+	private:
 		uint32_t m_PoolIndex = 999;
 		int m_activeParticleCount = 0;
+
 	public:
 		ParticleProps m_Props;
 		float m_TimeSinceLastEmit = 0.0f;

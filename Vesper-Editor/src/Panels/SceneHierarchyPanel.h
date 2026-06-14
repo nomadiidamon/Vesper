@@ -30,7 +30,6 @@ namespace Vesper {
 		Ref<Scene> m_Context;
 		Entity m_SelectionContext;
 		Ref<Framebuffer> m_Framebuffer;
-
 	};
 
 }

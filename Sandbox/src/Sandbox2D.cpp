@@ -24,8 +24,8 @@ void Sandbox2D::OnAttach()
 	m_ParticleProps.VelocityVariation = { 1.0f, 1.0f, 0.0f };
 	m_ParticleProps.ColorBegin = { 1.0f, 0.5f, 0.2f, 1.0f };
 	m_ParticleProps.ColorEnd = { 0.2f, 0.3f, 0.8f, 1.0f };
-	m_ParticleProps.SizeBegin = 0.5f;
-	m_ParticleProps.SizeEnd = 0.0f;
+	m_ParticleProps.SizeBegin = { 0.5f, 0.5f };
+	m_ParticleProps.SizeEnd = { 0.0f, 0.0f };
 	m_ParticleProps.Lifetime = 3.0f;
 	m_ParticleProps.Rotation = 0.0f;
 	m_ParticleProps.RotationVariation = 27.0f;
@@ -108,7 +108,10 @@ void Sandbox2D::OnImGuiRender()
 		ImGui::DragFloat("Particle Lifetime", &m_ParticleProps.Lifetime, 0.1f, 0.0f, 15.0f);
 		ImGui::DragFloat("Particle Lifetime Variation", &m_ParticleProps.LifetimeVariation, 0.1f, 0.0f, 10.0f);
 		ImGui::DragFloat3("Particle Velocity Variation", glm::value_ptr(m_ParticleProps.VelocityVariation), 0.05f, -10.0f, 10.0f);
-		ImGui::SliderFloat("Particle Size", &m_ParticleProps.SizeBegin, 0.05f, 5.0f);
+		ImGui::DragFloat2("Particle Size Start", glm::value_ptr(m_ParticleProps.SizeBegin), 0.05f, -10.0f, 10.0f);
+		ImGui::DragFloat2("Particle Size End", glm::value_ptr(m_ParticleProps.SizeEnd), 0.05f, -10.0f, 10.0f);
+		ImGui::DragFloat2("Particle Size Variation", glm::value_ptr(m_ParticleProps.SizeVariation), 0.05f, -10.0f, 10.0f);
+		ImGui::DragFloat("Particle Rotation", &m_ParticleProps.Rotation, 0.1f, 0.0f, 360.0f);
 		ImGui::ColorEdit4("Particle Color Begin", glm::value_ptr(m_ParticleProps.ColorBegin));
 		ImGui::ColorEdit4("Particle Color End", glm::value_ptr(m_ParticleProps.ColorEnd));
 

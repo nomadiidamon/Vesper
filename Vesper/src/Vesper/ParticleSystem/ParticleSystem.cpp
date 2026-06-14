@@ -82,13 +82,28 @@ namespace Vesper {
 
 			float life = particle.LifeRemaining / particle.Lifetime;
 			glm::vec4 color = glm::lerp(particle.ColorEnd, particle.ColorBegin, life);
-			float size = glm::lerp(particle.SizeEnd, particle.SizeBegin, life);
+			glm::vec2 size = glm::lerp(particle.SizeEnd, particle.SizeBegin, life);
 
-			Vesper::Renderer2D::DrawRotatedQuad(
-				{ particle.Position },
-				{ size, size },
-				Vesper::Renderer2D::GetWhiteTexture(),
-				particle.Rotation, 1.0f, color);
+			if (particle.SubTexture)
+			{
+				Vesper::Renderer2D::DrawRotatedQuad(
+					{ particle.Position },
+					{ size.x, size.y },
+					particle.SubTexture, particle.Rotation, m_Props.TilingFactor, color);
+			}
+			else if (particle.Texture) {
+				Vesper::Renderer2D::DrawRotatedQuad(
+					{ particle.Position },
+					{ size.x, size.y },
+					particle.Texture,
+					particle.Rotation, m_Props.TilingFactor, color);
+			}
+			else
+				Vesper::Renderer2D::DrawRotatedQuad(
+					{ particle.Position },
+					{ size.x, size.y },
+					Vesper::Renderer2D::GetWhiteTexture(),
+					particle.Rotation, 1.0f, color);
 
 		}
 	}
@@ -97,24 +112,41 @@ namespace Vesper {
 	{
 		Particle& particle = m_ParticlePool[m_PoolIndex];
 		particle.Active = true;
-		particle.Position = particleProps.Position + particleProps.PositionVariation * (Vesper::Random::Float3() - glm::vec3(0.5f));
-		particle.Rotation = particleProps.Rotation + particleProps.RotationVariation * (Vesper::Random::Float1() - 0.5f);
+		particle.Position = particleProps.Position + particleProps.PositionVariation * (Random::Float3() - glm::vec3(0.5f));
+		particle.Rotation = particleProps.Rotation + particleProps.RotationVariation * (Random::Float1() - 0.5f);
 
 		particle.Velocity = particleProps.Velocity;
-		particle.Velocity.x += particleProps.VelocityVariation.x * (Vesper::Random::Float1() - 0.5f);
-		particle.Velocity.y += particleProps.VelocityVariation.y * (Vesper::Random::Float1() - 0.5f);
-
+		particle.Velocity.x += particleProps.VelocityVariation.x * (Random::Float1() - 0.5f);
+		particle.Velocity.y += particleProps.VelocityVariation.y * (Random::Float1() - 0.5f);
 		particle.ColorBegin = particleProps.ColorBegin;
 		particle.ColorEnd = particleProps.ColorEnd;
 
-		particle.SizeBegin = particleProps.SizeBegin + particleProps.SizeVariation * (Vesper::Random::Float1() - 0.5f);
+		particle.SizeBegin = particleProps.SizeBegin + particleProps.SizeVariation * (Random::Float1() - 0.5f);
 		particle.SizeEnd = particleProps.SizeEnd;
 
-		particle.Lifetime = particleProps.Lifetime + particleProps.LifetimeVariation * (Vesper::Random::Float1() - 0.5f);
+		particle.Lifetime = particleProps.Lifetime + particleProps.LifetimeVariation * (Random::Float1() - 0.5f);
 		particle.LifeRemaining = particle.Lifetime;
 
 		uint32_t poolSize = static_cast<uint32_t>(m_ParticlePool.size());
 		m_PoolIndex = (m_PoolIndex == 0) ? (poolSize - 1) : (m_PoolIndex - 1);
+	}
+
+	void ParticleSystem::Emit(const ParticleProps& particleProps, int count) {
+		if (count <= 0) return;
+		for (int i = 0; i < count; i++) {
+			Emit(particleProps);
+		}
+	}
+
+	void ParticleSystem::ResetSystem()
+	{
+		for (auto& particle : m_ParticlePool)
+		{
+			ResetParticle(particle, m_Props);
+		}
+		m_PoolIndex = m_ParticlePool.size() - 1;
+		m_TimeSinceLastEmit = 0.0f;
+		m_IsEmitting = true;
 	}
 
 	void ParticleSystem::ResetParticle(Particle& particle, const ParticleProps& particleProps)
@@ -131,6 +163,15 @@ namespace Vesper {
 		particle.SizeEnd = particleProps.SizeEnd;
 		particle.Lifetime = particleProps.Lifetime + particleProps.LifetimeVariation * (Vesper::Random::Float1() - 0.5f);
 		particle.LifeRemaining = particle.Lifetime;
+		particle.Texture = particleProps.Texture;
+		particle.SubTexture = particleProps.SubTexture;
+	}
+
+	void ParticleSystem::ResizePool(uint32_t newSize)
+	{
+		m_ParticlePool.resize(newSize);
+		m_PoolIndex = newSize - 1;
+		ResetSystem();
 	}
 
 }
