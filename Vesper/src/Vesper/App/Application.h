@@ -1,4 +1,9 @@
 #pragma once
+/// @file Application.h
+/// @author Damon S. Green II
+/// @brief Controls the run of the Vesper Engine
+/// @todo Convert all files/classes in App directory to Vesper::Engine namespace (create it)
+
 #include "../Core/Base.h"
 #include "Window.h"
 #include "Vesper/App/LayerStack.h"
@@ -8,10 +13,6 @@
 #include "Vesper/ImGui/ImGuiLayer.h"
 #include "Vesper/Renderer/RendererAPI.h"
 
-/// @file Application.h
-/// @author Damon S. Green II
-/// @brief Controls the run of the Vesper Engine
-/// @todo Convert all files/classes in App directory to Vesper::App namespace (create it)
 
 namespace Vesper {
 

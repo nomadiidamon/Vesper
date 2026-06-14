@@ -6,10 +6,14 @@
 #include "Shader.h"
 #include "RenderCommand.h"
 
+#include <glad/glad.h>
 #include <glm/gtc/matrix_transform.hpp>
 
 namespace Vesper {
 
+	/// @struct QuadVertex
+	/// @brief Represents a single vertex in a quad, containing position, color, texture coordinates, texture index, and tiling factor.
+	/// @todo move to Geometry dir
 	struct QuadVertex {
 		glm::vec3 Position;
 		glm::vec4 Color;
@@ -18,9 +22,12 @@ namespace Vesper {
 		float TilingFactor;
 	};
 
+	/// @struct Renderer2DData
+	/// @brief Contains all the internal data and resources used by the Renderer2D, such as vertex arrays, buffers, shaders, textures, and rendering statistics.
+	/// @todo ensure that true system limits for texture slots are respected, rather than hardcoding a value
 	struct Renderer2DData {
 
-		static const uint32_t MaxQuads = 30000;
+		static const uint32_t MaxQuads = 100000;
 		static const uint32_t MaxVertices = MaxQuads * 4;
 		static const uint32_t MaxIndices = MaxQuads * 6;
 		static const uint32_t MaxTextureSlots = 32; // TODO: RenderCaps
@@ -106,6 +113,7 @@ namespace Vesper {
 
 		s_Data.TextureSlots[0] = s_Data.WhiteTexture;
 
+		
 		s_Data.QuadVertexPositions[0] = { -0.5f, -0.5f, 0.0f, 1.0f };
 		s_Data.QuadVertexPositions[1] = { 0.5f, -0.5f, 0.0f, 1.0f };
 		s_Data.QuadVertexPositions[2] = { 0.5f,  0.5f, 0.0f, 1.0f };
@@ -125,14 +133,9 @@ namespace Vesper {
 		VZ_PROFILE_FUNCTION();
 
 		glm::mat4 viewProj = camera.GetProjection() * glm::inverse(transform);
-
 		s_Data.TextureShader->Bind();
 		s_Data.TextureShader->SetMat4("u_ViewProjection", viewProj);
-
-		s_Data.QuadIndexCount = 0;
-		s_Data.QuadVertexBufferPtr = s_Data.QuadVertexBufferBase;
-
-		s_Data.TextureSlotIndex = 1;
+		StartBatch();
 	}
 
 	void Renderer2D::BeginScene(const EditorCamera& camera)
@@ -150,32 +153,58 @@ namespace Vesper {
 		VZ_PROFILE_FUNCTION();
 		s_Data.TextureShader->Bind();
 		s_Data.TextureShader->SetMat4("u_ViewProjection", camera.GetViewProjectionMatrix());
-
-		s_Data.QuadIndexCount = 0;
-		s_Data.QuadVertexBufferPtr = s_Data.QuadVertexBufferBase;
-
-		s_Data.TextureSlotIndex = 1;
+		StartBatch();
 	}
 
 	void Renderer2D::EndScene()
 	{
 		VZ_PROFILE_FUNCTION();
+
+		if (s_Data.QuadIndexCount == 0)
+			return; // Nothing to draw
+
 		uint32_t dataSize = (uint32_t)((uint8_t*)s_Data.QuadVertexBufferPtr - (uint8_t*)s_Data.QuadVertexBufferBase);
+
+		{
+#ifdef VZ_ENABLE_ASSERTS
+			uint32_t expectedVertices = (s_Data.QuadIndexCount / 6) * 4;
+			uint32_t expectedBytes = expectedVertices * sizeof(QuadVertex);
+			VZ_CORE_ASSERT(dataSize == expectedBytes, "Renderer2D: vertex buffer size does not match index count (possible ghosting source). dataSize = {0}, expected = {1}", dataSize, expectedBytes);
+#endif
+		}
 
 		s_Data.QuadVertexBuffer->SetData(s_Data.QuadVertexBufferBase, dataSize);
 		Flush();
 	}
-
+	
+	/// @brief Resets the batch for a new set of draw calls.
+	/// @todo Remove the OpenGL specific code from here
 	void Renderer2D::Flush()
 	{
 		VZ_PROFILE_FUNCTION();
+
+		// DIsable depth testing
+		GLboolean depthEnabled = glIsEnabled(GL_DEPTH_TEST);
+		GLboolean depthMask = 1;
+		glGetBooleanv(GL_DEPTH_WRITEMASK, &depthMask);
+
+		if (depthEnabled)
+			glDisable(GL_DEPTH_TEST);
+		glDepthMask(GL_FALSE);
+
 		// Bind textures
 		for (uint32_t i = 0; i < s_Data.TextureSlotIndex; i++)
 			s_Data.TextureSlots[i]->Bind(i);
 
 		RenderCommand::DrawIndexed(s_Data.QuadVertexArray, s_Data.QuadIndexCount);
 		s_Data.Stats.DrawCalls++;
+
+		// Restore depth state
+		glDepthMask(depthMask);
+		if (depthEnabled)
+			glEnable(GL_DEPTH_TEST);
 	}
+#pragma region DrawQuad
 
 	void Renderer2D::DrawQuad(const glm::mat4& transform, const glm::vec4& color)
 	{
@@ -215,7 +244,7 @@ namespace Vesper {
 
 	}
 
-	void Renderer2D::DrawQuadWithTexture(const glm::mat4& transform, const Ref<Texture2D>& texture, float tilingFactor, const glm::vec4 tintColor)
+	void Renderer2D::DrawQuad(const glm::mat4& transform, const Ref<Texture2D>& texture, float tilingFactor, const glm::vec4 tintColor)
 	{
 		VZ_PROFILE_FUNCTION();
 		constexpr size_t quadVertexCount = 4;
@@ -259,19 +288,19 @@ namespace Vesper {
 		s_Data.Stats.QuadCount++;
 
 	}
-	void Renderer2D::DrawQuadWithTexture(const glm::vec2& position, const glm::vec2& size, const Ref<Texture2D>& texture, float tilingFactor, const glm::vec4 tintColor)
+	void Renderer2D::DrawQuad(const glm::vec2& position, const glm::vec2& size, const Ref<Texture2D>& texture, float tilingFactor, const glm::vec4 tintColor)
 	{
-		DrawQuadWithTexture({ position.x, position.y, 0.0f }, size, texture, tilingFactor, tintColor);
+		DrawQuad({ position.x, position.y, 0.0f }, size, texture, tilingFactor, tintColor);
 	}
-	void Renderer2D::DrawQuadWithTexture(const glm::vec3& position, const glm::vec2& size, const Ref<Texture2D>& texture, float tilingFactor, const glm::vec4 tintColor)
+	void Renderer2D::DrawQuad(const glm::vec3& position, const glm::vec2& size, const Ref<Texture2D>& texture, float tilingFactor, const glm::vec4 tintColor)
 	{
 		VZ_PROFILE_FUNCTION();
 
 		glm::mat4 transform = glm::translate(glm::mat4(1.0f), position) * glm::scale(glm::mat4(1.0f), { size.x, size.y, 1.0f });
-		DrawQuadWithTexture(transform, texture, tilingFactor, tintColor);
+		DrawQuad(transform, texture, tilingFactor, tintColor);
 	}
 
-	void Renderer2D::DrawQuadWithTexture(const glm::mat4& transform, const Ref<SubTexture2D>& subtexture, float tilingFactor, const glm::vec4 tintColor)
+	void Renderer2D::DrawQuad(const glm::mat4& transform, const Ref<SubTexture2D>& subtexture, float tilingFactor, const glm::vec4 tintColor)
 	{
 		VZ_PROFILE_FUNCTION();
 
@@ -315,19 +344,19 @@ namespace Vesper {
 		s_Data.QuadIndexCount += 6;
 		s_Data.Stats.QuadCount++;
 	}
-	void Renderer2D::DrawQuadWithTexture(const glm::vec2& position, const glm::vec2& size, const Ref<SubTexture2D>& subtexture, float tilingFactor, const glm::vec4 tintColor)
+	void Renderer2D::DrawQuad(const glm::vec2& position, const glm::vec2& size, const Ref<SubTexture2D>& subtexture, float tilingFactor, const glm::vec4 tintColor)
 	{
-		DrawQuadWithTexture({ position.x, position.y, 0.0f }, size, subtexture, tilingFactor, tintColor);
+		DrawQuad({ position.x, position.y, 0.0f }, size, subtexture, tilingFactor, tintColor);
 	}
-	void Renderer2D::DrawQuadWithTexture(const glm::vec3& position, const glm::vec2& size, const Ref<SubTexture2D>& subtexture, float tilingFactor, const glm::vec4 tintColor)
+	void Renderer2D::DrawQuad(const glm::vec3& position, const glm::vec2& size, const Ref<SubTexture2D>& subtexture, float tilingFactor, const glm::vec4 tintColor)
 	{
 		VZ_PROFILE_FUNCTION();
 
 		glm::mat4 transform = glm::translate(glm::mat4(1.0f), position) * glm::scale(glm::mat4(1.0f), { size.x, size.y, 1.0f });
-		DrawQuadWithTexture(transform, subtexture, tilingFactor, tintColor);
+		DrawQuad(transform, subtexture, tilingFactor, tintColor);
 	}
 
-	void Renderer2D::DrawQuadRotated(const glm::mat4& transform, const glm::vec4& color)
+	void Renderer2D::DrawRotatedQuad(const glm::mat4& transform, const glm::vec4& color)
 	{
 		VZ_PROFILE_FUNCTION();
 		constexpr size_t quadVertexCount = 4;
@@ -353,19 +382,19 @@ namespace Vesper {
 		s_Data.QuadIndexCount += 6;
 		s_Data.Stats.QuadCount++;
 	}
-	void Renderer2D::DrawQuadRotated(const glm::vec2& position, const glm::vec2& size, float rotationRads, const glm::vec4& color)
+	void Renderer2D::DrawRotatedQuad(const glm::vec2& position, const glm::vec2& size, float rotationRads, const glm::vec4& color)
 	{
-		DrawQuadRotated({ position.x, position.y, 0.0f }, size, rotationRads, color);
+		DrawRotatedQuad({ position.x, position.y, 0.0f }, size, rotationRads, color);
 	}
-	void Renderer2D::DrawQuadRotated(const glm::vec3& position, const glm::vec2& size, float rotationRads, const glm::vec4& color)
+	void Renderer2D::DrawRotatedQuad(const glm::vec3& position, const glm::vec2& size, float rotationRads, const glm::vec4& color)
 	{
 		glm::mat4 transform = glm::translate(glm::mat4(1.0f), position)
 			* glm::rotate(glm::mat4(1.0f), rotationRads, { 0.0f, 0.0f, 1.0f })
 			* glm::scale(glm::mat4(1.0f), { size.x, size.y, 1.0f });
-		DrawQuadRotated(transform, color);
+		DrawRotatedQuad(transform, color);
 	}
 
-	void Renderer2D::DrawQuadRotatedWithTexture(const glm::mat4& transform, const Ref<Texture2D>& texture, float tilingFactor, const glm::vec4 tintColor)
+	void Renderer2D::DrawRotatedQuad(const glm::mat4& transform, const Ref<Texture2D>& texture, float tilingFactor, const glm::vec4 tintColor)
 	{
 		VZ_PROFILE_FUNCTION();
 		constexpr size_t quadVertexCount = 4;
@@ -406,20 +435,20 @@ namespace Vesper {
 		s_Data.QuadIndexCount += 6;
 		s_Data.Stats.QuadCount++;
 	}
-	void Renderer2D::DrawQuadRotatedWithTexture(const glm::vec2& position, const glm::vec2& size, const Ref<Texture2D>& texture, float rotationRads, float tilingFactor, const glm::vec4 tintColor)
+	void Renderer2D::DrawRotatedQuad(const glm::vec2& position, const glm::vec2& size, const Ref<Texture2D>& texture, float rotationRads, float tilingFactor, const glm::vec4 tintColor)
 	{
-		DrawQuadRotatedWithTexture({ position.x, position.y, 0.0f }, size, texture, rotationRads, tilingFactor, tintColor);
+		DrawRotatedQuad({ position.x, position.y, 0.0f }, size, texture, rotationRads, tilingFactor, tintColor);
 	}
-	void Renderer2D::DrawQuadRotatedWithTexture(const glm::vec3& position, const glm::vec2& size, const Ref<Texture2D>& texture, float rotationRads, float tilingFactor, const glm::vec4 tintColor)
+	void Renderer2D::DrawRotatedQuad(const glm::vec3& position, const glm::vec2& size, const Ref<Texture2D>& texture, float rotationRads, float tilingFactor, const glm::vec4 tintColor)
 	{
 		glm::mat4 transform = glm::translate(glm::mat4(1.0f), position)
 			* glm::rotate(glm::mat4(1.0f), rotationRads, { 0.0f, 0.0f, 1.0f })
 			* glm::scale(glm::mat4(1.0f), { size.x, size.y, 1.0f });
 
-		DrawQuadRotatedWithTexture(transform, texture, tilingFactor, tintColor);
+		DrawRotatedQuad(transform, texture, tilingFactor, tintColor);
 	}
 
-	void Renderer2D::DrawQuadRotatedWithTexture(const glm::mat4& transform, const Ref<SubTexture2D>& subtexture, float tilingFactor, const glm::vec4 tintColor)
+	void Renderer2D::DrawRotatedQuad(const glm::mat4& transform, const Ref<SubTexture2D>& subtexture, float tilingFactor, const glm::vec4 tintColor)
 	{
 		VZ_PROFILE_FUNCTION();
 		constexpr size_t quadVertexCount = 4;
@@ -457,11 +486,11 @@ namespace Vesper {
 		s_Data.Stats.QuadCount++;
 
 	}
-	void Renderer2D::DrawQuadRotatedWithTexture(const glm::vec2& position, const glm::vec2& size, const Ref<SubTexture2D>& subtexture, float rotationRads, float tilingFactor, const glm::vec4 tintColor)
+	void Renderer2D::DrawRotatedQuad(const glm::vec2& position, const glm::vec2& size, const Ref<SubTexture2D>& subtexture, float rotationRads, float tilingFactor, const glm::vec4 tintColor)
 	{
-		DrawQuadRotatedWithTexture({ position.x, position.y, 0.0f }, size, subtexture, rotationRads, tilingFactor, tintColor);
+		DrawRotatedQuad({ position.x, position.y, 0.0f }, size, subtexture, rotationRads, tilingFactor, tintColor);
 	}
-	void Renderer2D::DrawQuadRotatedWithTexture(const glm::vec3& position, const glm::vec2& size, const Ref<SubTexture2D>& subtexture, float rotationRads, float tilingFactor, const glm::vec4 tintColor)
+	void Renderer2D::DrawRotatedQuad(const glm::vec3& position, const glm::vec2& size, const Ref<SubTexture2D>& subtexture, float rotationRads, float tilingFactor, const glm::vec4 tintColor)
 	{
 		VZ_PROFILE_FUNCTION();
 
@@ -469,25 +498,9 @@ namespace Vesper {
 			* glm::rotate(glm::mat4(1.0f), rotationRads, { 0.0f, 0.0f, 1.0f })
 			* glm::scale(glm::mat4(1.0f), { size.x, size.y, 1.0f });
 
-		DrawQuadRotatedWithTexture(transform, subtexture, tilingFactor, tintColor);
+		DrawRotatedQuad(transform, subtexture, tilingFactor, tintColor);
 	}
-
-	//void Renderer2D::DrawSprite(const glm::mat4& transform, const SpriteRendererComponent& src, int entityID)
-	//{
-	//	if (src.TextureEnabled && src.Texture)
-	//	{
-	//		DrawQuadWithTexture(transform, src.Texture, src.TilingFactor, src.Color);
-	//	}
-	//	else
-	//	{
-	//		DrawQuad(transform, src.Color);
-	//	}
-	//}
-
-	//void Renderer2D::DrawSprite(const glm::mat4& transform, const SubTextureComponent& stc, int entityID)
-	//{
-	//	DrawQuadWithTexture(transform, stc.SubTexture, stc.TilingFactor.x, glm::vec4(1.0f));
-	//}
+#pragma endregion
 
 	Ref<Texture2D> Renderer2D::GetWhiteTexture()
 	{
@@ -507,9 +520,7 @@ namespace Vesper {
 	void Renderer2D::FlushAndReset()
 	{
 		EndScene();
-		s_Data.QuadIndexCount = 0;
-		s_Data.QuadVertexBufferPtr = s_Data.QuadVertexBufferBase;
-		s_Data.TextureSlotIndex = 1;
+		StartBatch();
 	}
 
 	void Renderer2D::StartBatch()

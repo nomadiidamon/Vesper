@@ -1,11 +1,10 @@
 #pragma once
-
-#include "vzpch.h"
-#include "Vesper/Core/Base.h"
-
 /// @file Event.h
 /// @author Damon S. Green II
 /// @brief Defines the base Event class and related enumerations and macros.
+
+#include "vzpch.h"
+#include "Vesper/Core/Base.h"
 
 namespace Vesper
 {

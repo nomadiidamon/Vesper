@@ -1,8 +1,16 @@
 #pragma once
+/// @file OrthographicCamera.h
+/// @author Damon S. Green II
+/// @brief Defines the OrthographicCamera class, which is responsible for rendering a scene in an Orthographic view. Currently does not derive from the Camera class, but should in the future.
+
 #include <glm/glm.hpp>
 
 namespace Vesper {
 
+	/// @class Orthographic Camera
+	/// @brief Responsible for rendering a scene in an Orthographic view
+	/// @note Currently does not derive from the Camera class
+	/// @todo Inherit the Camera class
 	class OrthographicCamera
 	{
 	public:

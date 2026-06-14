@@ -1,4 +1,7 @@
 #pragma once
+/// @file RenderCommand.h
+/// @author Damon S. Green II
+/// @brief Defines the RenderCommand class, which provides an interface for issuing rendering commands. The RenderCommand class is a static
 
 #include "RendererAPI.h"
 

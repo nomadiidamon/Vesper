@@ -1,4 +1,7 @@
 #pragma once
+/// @file Buffer.h
+/// @author Damon S. Green II
+/// @brief Defines the Buffer classes used for vertex and index data in rendering.
 
 namespace Vesper {
 

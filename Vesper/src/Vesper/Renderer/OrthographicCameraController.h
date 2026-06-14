@@ -1,4 +1,8 @@
 #pragma once
+/// @file OrthographicCameraController.h
+/// @author Damon S. Green II
+/// @brief Defines the OrthographicCameraController class, which is responsible for controlling an OrthographicCamera. This includes handling input and updating the camera's position and rotation based on that input.
+/// @todo Document the OrthographicCameraController class and its methods.
 
 #include "Vesper/Renderer/OrthographicCamera.h"
 #include "Vesper/Core/Timestep.h"

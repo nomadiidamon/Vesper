@@ -1,4 +1,8 @@
 #pragma once
+/// @file Shader.h
+/// @author Damon S. Green II
+/// @brief Defines the Shader class, which is an abstraction for a shader program, and the ShaderLibrary class, which manages and stores shaders.
+/// @note The Shader class provides an interface for setting uniform variables in the shader program, while the ShaderLibrary class allows for easy management and retrieval of shaders by name.
 
 #include <string>
 #include <unordered_map>

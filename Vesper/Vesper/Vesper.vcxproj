@@ -169,6 +169,7 @@
     <ClInclude Include="..\src\Vesper\Core\Defines_Macros.h" />
     <ClInclude Include="..\src\Vesper\Core\Log.h" />
     <ClInclude Include="..\src\Vesper\Core\Math.h" />
+    <ClInclude Include="..\src\Vesper\Core\Math2D.h" />
     <ClInclude Include="..\src\Vesper\Core\PlatformDetection.h" />
     <ClInclude Include="..\src\Vesper\Core\Random.h" />
     <ClInclude Include="..\src\Vesper\Core\Timer.h" />

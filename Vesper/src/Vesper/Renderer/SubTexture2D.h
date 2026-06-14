@@ -1,7 +1,10 @@
 #pragma once
+/// @file SubTexture2D.h
+/// @author Damon S. Green II
+/// @brief Defines the SubTexture2D class, which represents a sub-region of a 2D texture, useful for sprite sheets.
+/// @note The SubTexture2D class allows for easy creation of sub-textures from a larger texture, and provides access to the underlying texture and its texture coordinates.
 
 #include <glm/glm.hpp>
-
 #include "Texture.h"
 
 
@@ -9,7 +12,7 @@ namespace Vesper {
 
 	/// @class SubTexture2D
 	/// @brief Represents a sub-region of a 2D texture, useful for sprite sheets.
-	class SubTexture2D 
+	class SubTexture2D
 	{
 	public:
 		/// @brief Constructs a SubTexture2D from the given texture and texture coordinates.
@@ -21,6 +24,24 @@ namespace Vesper {
 
 		/// @brief Returns the underlying texture of the sub-texture.
 		const Ref<Texture2D> GetTexture() { return m_Texture; }
+
+		/// @brief Sets the underlying texture of the sub-texture.
+		///
+		/// @param texture The new texture to set for the sub-texture.
+		void SetTexture(const Ref<Texture2D>& texture) {			
+			// Ensure texture is valid before creating coords
+			if (!texture)
+				return;
+			m_Texture = texture;
+			Ref<SubTexture2D> st = CreateFromCoords(m_Texture, { 0, 0 }, { (float)texture->GetWidth(), (float)texture->GetHeight() });
+			if (st)
+			{
+				const glm::vec2* src = st->GetTexCoords();
+				for (int i = 0; i < 4; ++i)
+					m_TexCoords[i] = src[i];
+			}
+		}
+
 		/// @brief Returns the texture coordinates of the sub-texture.
 		glm::vec2* GetTexCoords() { return m_TexCoords; }
 
@@ -30,7 +51,7 @@ namespace Vesper {
 		/// @param coords The coordinates of the cell in the grid.
 		/// @param cellSize The size of each cell in the grid.
 		/// @param spriteSize The size of the sprite in cells (default is 1x1).
-		static Ref<SubTexture2D> CreateFromCoords(const Ref<Texture2D>& texture, const glm::vec2& coords, const glm::vec2& cellSize, const glm::vec2& spriteSize = {1, 1});
+		static Ref<SubTexture2D> CreateFromCoords(const Ref<Texture2D>& texture, const glm::vec2& coords, const glm::vec2& cellSize, const glm::vec2& spriteSize = { 1, 1 });
 	private:
 		/// @brief The underlying texture of the sub-texture.
 		Ref<Texture2D> m_Texture;

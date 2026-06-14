@@ -1,4 +1,9 @@
 #pragma once
+/// @file SceneCamera.h
+/// @author Damon S. Green II
+/// @brief Defines the SceneCamera class, which represents a camera within a scene and provides functionality for both perspective and orthographic projections.
+/// @note The SceneCamera class allows for switching between perspective and orthographic projection types, as well as adjusting parameters such as field of view, clipping planes, and viewport size.
+
 #include "Vesper/Renderer/Camera.h"
 
 namespace Vesper {

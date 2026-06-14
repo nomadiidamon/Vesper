@@ -1,14 +1,13 @@
 #pragma once
-
+/// @file Window.h
+/// @author Damon S. Green II
+/// @brief Defines the abstract Window class and WindowProps struct for window management.
+/// @todo Add support for different window modes (windowed, fullscreen, borderless).
 #include "vzpch.h"
 
 #include "Vesper/Core/Base.h"
 #include "Vesper/Events/Event.h"
 
-/// @file Window.h
-/// @author Damon S. Green II
-/// @brief Defines the abstract Window class and WindowProps struct for window management.
-/// @todo Add support for different window modes (windowed, fullscreen, borderless).
 namespace Vesper {
 
 	/// WIP

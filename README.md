@@ -33,20 +33,6 @@ It is generally usable as an easily modifiable base line for creating graphics a
   - Input and event handling
   - Starter particle system and instrumentation
 
-## Repository layout (high level)
-
-- `Vesper/` — Engine source (core, renderer, scene, editor integration)
-  - `src/Vesper` — engine code
-  - `vendor/` — third-party libs (GLFW, Glad, ImGui)
-- `Vesper-Editor/` — Editor build that hosts engine in an editor UI
-- `Sandbox/` — Example application(s) that use the engine
-- `README.md`, `LICENSE-Hazel_Apache2.txt` — repo metadata and licensing
-
-Notable engine files:
-- `Vesper/src/Vesper.h` — single include for engine public API
-- `Vesper/src/Vesper/Scene/*` — Scene, Entity, Components, Camera
-- `Vesper-Editor/src/EditorLayer.*` — Editor integration layer and UI panels
-
 ## Getting started (clone + third-party libs)
 
 ```bash
@@ -66,13 +52,6 @@ Troubleshooting:
 - Ensure the Windows SDK and Visual C++ toolset for VS2022 are installed.
 - If include or linker errors appear, confirm vendor project builds (GLFW, Glad, ImGui, etc.) and that project dependencies are set correctly.
 - For unresolved externals, confirm platform (x86/x64) consistency across projects.
-
-## Run the editor or sandbox
-
-- Start the editor by launching the `Vesper-Editor` startup project.
-- Use the `Sandbox` project to iterate small demos that use the engine API.
-  - Modify or add new demo source files in the `Sandbox/src` folder.
-- Create new projects that link against the Vesper engine.
 
 ## New Project example code
 ```cpp

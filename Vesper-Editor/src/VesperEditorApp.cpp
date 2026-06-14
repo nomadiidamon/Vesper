@@ -1,7 +1,7 @@
 #include <Vesper.h>
 #include <Vesper/App/EntryPoint.h>
 
-#include "EditorLayer.h"
+#include "Layers/EditorLayer.h"
 
 namespace Vesper {
 

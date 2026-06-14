@@ -1,9 +1,12 @@
 #include "vzpch.h"
+/// @file Renderer.cpp
+/// @author Damon S. Green II
+/// @brief Implementation of the Renderer class for the Vesper engine.
+/// @todo Remove temporary include of OpenGLShader. Should be able to tell the type from our api and cast accordingly, but for now this is fine since we only have one API
 
 #include "Renderer.h"
 #include "RenderCommand.h"
 #include "Renderer2D.h"
-/// @todo Temporary
 #include "RenderAPI/OpenGL/OpenGLShader.h"
 
 namespace Vesper {
@@ -40,8 +43,8 @@ namespace Vesper {
 	{
 		VZ_PROFILE_FUNCTION();
 		shader->Bind();
-		std::dynamic_pointer_cast<OpenGLShader>(shader)->UploadUniformMat4("u_ViewProjection", s_SceneData->ViewProjectionMatrix);
-		std::dynamic_pointer_cast<OpenGLShader>(shader)->UploadUniformMat4("u_Transform", transform);
+		shader->SetMat4("u_ViewProjection", s_SceneData->ViewProjectionMatrix);
+		shader->SetMat4("u_Transform", transform);
 
 		vertexArray->Bind();
 		RenderCommand::DrawIndexed(vertexArray);

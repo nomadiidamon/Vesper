@@ -36,9 +36,14 @@ namespace Vesper {
 	void OpenGLRendererAPI::DrawIndexed(const Ref<VertexArray>& vertexArray, uint32_t indexCount)
 	{
 		VZ_PROFILE_FUNCTION();
-
+		
 		uint32_t count = indexCount ? indexCount : vertexArray->GetIndexBuffer()->GetCount();
+		if (count == 0)
+			return;
+
+		vertexArray->Bind();
 		glDrawElements(GL_TRIANGLES, count, GL_UNSIGNED_INT, nullptr);
 		glBindTexture(GL_TEXTURE_2D, 0);
+		vertexArray->Unbind();
 	}
 }

@@ -1,5 +1,4 @@
 #pragma once
-
 /// @file Asserts.h
 /// @author Damon S. Green II
 /// @brief Provides assertion macros for debugging and error handling.

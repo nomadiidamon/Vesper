@@ -1,4 +1,7 @@
 #pragma once
+/// @file ImGuiLayer.h
+/// @author Damon S. Green II
+/// @brief Defines the ImGuiLayer class, which is responsible for rendering the ImGui interface. Derives from the Layer class.
 
 #include "Vesper/Core/Base.h"
 #include "Vesper/Events/Event.h"

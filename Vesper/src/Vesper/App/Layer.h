@@ -1,12 +1,12 @@
 #pragma once
-
-#include "Vesper/Core/Timestep.h"
-#include "Vesper/Events/Event.h"
-
 /// @file Layer.h
 /// @author Damon S. Green II
 /// @brief Defines the Layer class for creating reusable application layers.
 /// @todo Add layer priority system (maybe?)
+
+#include "Vesper/Core/Timestep.h"
+#include "Vesper/Events/Event.h"
+
 
 namespace Vesper {
 

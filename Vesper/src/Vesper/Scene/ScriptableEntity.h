@@ -1,4 +1,7 @@
 #pragma once
+/// @file ScriptableEntity.h
+/// @author Damon S. Green II
+/// @brief Defines the ScriptableEntity class, which serves as a base for scriptable entities in a scene.
 
 #include "Entity.h"
 

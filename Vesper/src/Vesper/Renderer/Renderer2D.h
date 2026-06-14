@@ -1,4 +1,7 @@
 #pragma once
+/// @file Renderer2D.h
+/// @author Damon S. Green II
+/// @brief Defines the Renderer2D class, which is responsible for rendering 2D quads and sprites. This class provides a simple API for drawing 2D graphics in a scene.
 
 #include "Vesper/Renderer/OrthographicCamera.h"
 
@@ -13,6 +16,7 @@ namespace Vesper {
 
 	/// @class Renderer2D
 	/// @brief A 2D renderer for drawing quads and sprites.
+	/// @todo Change draw func names to be overloaded DrawQuad and remove the "WithTexture" suffix, as the presence of a texture parameter should be sufficient to determine the type of quad being drawn. The current naming convention is a holdover from when the renderer had separate functions for textured and non-textured quads.
 	class Renderer2D
 	{
 	public:
@@ -25,6 +29,7 @@ namespace Vesper {
 		///
 		/// @param camera The camera to use for the scene.
 		/// @param transform The transform matrix for the camera.
+		/// @note Currently the intended use of this function is for rendering from a scene with an attached camera component, but it can be used for any camera and transform. The other BeginScene overloads are intended for editor use and the latter will likely be removed once we have a proper scene system in place.
 		static void BeginScene(const Camera& camera, const glm::mat4& transform); 
 
 		/// @brief Begins a new scene with the given editor camera.
@@ -70,7 +75,7 @@ namespace Vesper {
 		/// @param texture The texture to apply to the quad.
 		/// @param tilingFactor The tiling factor for the texture.
 		/// @param tintColor The tint color to apply to the texture.	
-		static void DrawQuadWithTexture(const glm::mat4& transform, const Ref<Texture2D>& texture, float tilingFactor, const glm::vec4 tintColor);
+		static void DrawQuad(const glm::mat4& transform, const Ref<Texture2D>& texture, float tilingFactor, const glm::vec4 tintColor);
 		
 		/// @brief Draws a textured quad at the specified position and size.
 		///
@@ -79,7 +84,7 @@ namespace Vesper {
 		/// @param texture The texture to apply to the quad.
 		/// @param tilingFactor The tiling factor for the texture.
 		/// @param tintColor The tint color to apply to the texture.
-		static void DrawQuadWithTexture(const glm::vec2& position, const glm::vec2& size, const Ref<Texture2D>& texture, float tilingFactor, const glm::vec4 tintColor);
+		static void DrawQuad(const glm::vec2& position, const glm::vec2& size, const Ref<Texture2D>& texture, float tilingFactor, const glm::vec4 tintColor);
 		
 		/// @brief Draws a textured quad at the specified position and size.
 		///
@@ -88,7 +93,7 @@ namespace Vesper {
 		/// @param texture The texture to apply to the quad.
 		/// @param tilingFactor The tiling factor for the texture.
 		/// @param tintColor The tint color to apply to the texture.
-		static void DrawQuadWithTexture(const glm::vec3& position, const glm::vec2& size, const Ref<Texture2D>& texture, float tilingFactor, const glm::vec4 tintColor);
+		static void DrawQuad(const glm::vec3& position, const glm::vec2& size, const Ref<Texture2D>& texture, float tilingFactor, const glm::vec4 tintColor);
 
 		/// @brief Draws a textured quad with the given transform, subtexture, tiling factor, and tint color.
 		///
@@ -96,7 +101,7 @@ namespace Vesper {
 		/// @param subtexture The subtexture to apply to the quad.
 		/// @param tilingFactor The tiling factor for the texture.
 		/// @param tintColor The tint color to apply to the texture.
-		static void DrawQuadWithTexture(const glm::mat4& transform, const Ref<SubTexture2D>& subtexture, float tilingFactor, const glm::vec4 tintColor);
+		static void DrawQuad(const glm::mat4& transform, const Ref<SubTexture2D>& subtexture, float tilingFactor, const glm::vec4 tintColor);
 		
 		/// @brief Draws a textured quad at the specified position and size.
 		///
@@ -105,7 +110,7 @@ namespace Vesper {
 		/// @param subtexture The subtexture to apply to the quad.
 		/// @param tilingFactor The tiling factor for the texture.
 		/// @param tintColor The tint color to apply to the texture.
-		static void DrawQuadWithTexture(const glm::vec2& position, const glm::vec2& size, const Ref<SubTexture2D>& subtexture, float tilingFactor, const glm::vec4 tintColor);
+		static void DrawQuad(const glm::vec2& position, const glm::vec2& size, const Ref<SubTexture2D>& subtexture, float tilingFactor, const glm::vec4 tintColor);
 		
 		/// @brief Draws a textured quad at the specified position and size.
 		///
@@ -114,13 +119,13 @@ namespace Vesper {
 		/// @param subtexture The subtexture to apply to the quad.
 		/// @param tilingFactor The tiling factor for the texture.
 		/// @param tintColor The tint color to apply to the texture.
-		static void DrawQuadWithTexture(const glm::vec3& position, const glm::vec2& size, const Ref<SubTexture2D>& subtexture, float tilingFactor, const glm::vec4 tintColor);
+		static void DrawQuad(const glm::vec3& position, const glm::vec2& size, const Ref<SubTexture2D>& subtexture, float tilingFactor, const glm::vec4 tintColor);
 
 		/// @brief Draws a rotated colored quad with the given transform and color.
 		///
 		/// @param transform The transform matrix for the quad.
 		/// @param color The color of the quad.
-		static void DrawQuadRotated(const glm::mat4& transform, const glm::vec4& color);
+		static void DrawRotatedQuad(const glm::mat4& transform, const glm::vec4& color);
 
 		/// @brief Draws a rotated colored quad at the specified position, size, and rotation.
 		///
@@ -128,7 +133,7 @@ namespace Vesper {
 		/// @param size The size of the quad.
 		/// @param rotationRads The rotation of the quad in radians.
 		/// @param color The color of the quad.
-		static void DrawQuadRotated(const glm::vec2& position, const glm::vec2& size, float rotationRads, const glm::vec4& color);
+		static void DrawRotatedQuad(const glm::vec2& position, const glm::vec2& size, float rotationRads, const glm::vec4& color);
 
 		/// @brief Draws a rotated colored quad at the specified position, size, and rotation.
 		///
@@ -136,7 +141,7 @@ namespace Vesper {
 		/// @param size The size of the quad.
 		/// @param rotationRads The rotation of the quad in radians.
 		/// @param color The color of the quad.
-		static void DrawQuadRotated(const glm::vec3& position, const glm::vec2& size, float rotationRads, const glm::vec4& color);
+		static void DrawRotatedQuad(const glm::vec3& position, const glm::vec2& size, float rotationRads, const glm::vec4& color);
 
 		/// @brief Draws a rotated textured quad with the given transform, texture, tiling factor, and tint color.
 		///
@@ -144,7 +149,7 @@ namespace Vesper {
 		/// @param texture The texture to apply to the quad.
 		/// @param tilingFactor The tiling factor for the texture.
 		/// @param tintColor The tint color to apply to the texture.
-		static void DrawQuadRotatedWithTexture(const glm::mat4& transform, const Ref<Texture2D>& texture, float tilingFactor, const glm::vec4 tintColor);
+		static void DrawRotatedQuad(const glm::mat4& transform, const Ref<Texture2D>& texture, float tilingFactor, const glm::vec4 tintColor);
 		
 		/// @brief Draws a rotated textured quad at the specified position, size, and rotation.
 		///
@@ -154,7 +159,7 @@ namespace Vesper {
 		/// @param texture The texture to apply to the quad.
 		/// @param tilingFactor The tiling factor for the texture.
 		/// @param tintColor The tint color to apply to the texture.
-		static void DrawQuadRotatedWithTexture(const glm::vec2& position, const glm::vec2& size, const Ref<Texture2D>& texture, float rotationRads, float tilingFactor, const glm::vec4 tintColor);
+		static void DrawRotatedQuad(const glm::vec2& position, const glm::vec2& size, const Ref<Texture2D>& texture, float rotationRads, float tilingFactor, const glm::vec4 tintColor);
 		
 		/// @brief Draws a rotated textured quad at the specified position, size, and rotation.
 		///
@@ -164,7 +169,7 @@ namespace Vesper {
 		/// @param texture The texture to apply to the quad.
 		/// @param tilingFactor The tiling factor for the texture.
 		/// @param tintColor The tint color to apply to the texture.
-		static void DrawQuadRotatedWithTexture(const glm::vec3& position, const glm::vec2& size, const Ref<Texture2D>& texture, float rotationRads, float tilingFactor, const glm::vec4 tintColor);
+		static void DrawRotatedQuad(const glm::vec3& position, const glm::vec2& size, const Ref<Texture2D>& texture, float rotationRads, float tilingFactor, const glm::vec4 tintColor);
 
 		/// @brief Draws a rotated textured quad with the given transform, subtexture, tiling factor, and tint color.
 		///
@@ -172,7 +177,7 @@ namespace Vesper {
 		/// @param subtexture The subtexture to apply to the quad.
 		/// @param tilingFactor The tiling factor for the texture.
 		/// @param tintColor The tint color to apply to the texture.
-		static void DrawQuadRotatedWithTexture(const glm::mat4& transform, const Ref<SubTexture2D>& subtexture, float tilingFactor, const glm::vec4 tintColor);
+		static void DrawRotatedQuad(const glm::mat4& transform, const Ref<SubTexture2D>& subtexture, float tilingFactor, const glm::vec4 tintColor);
 		
 		/// @brief Draws a rotated textured quad at the specified position, size, and rotation.
 		///
@@ -182,7 +187,7 @@ namespace Vesper {
 		/// @param subtexture The subtexture to apply to the quad.
 		/// @param tilingFactor The tiling factor for the texture.
 		/// @param tintColor The tint color to apply to the texture.
-		static void DrawQuadRotatedWithTexture(const glm::vec2& position, const glm::vec2& size, const Ref<SubTexture2D>& subtexture, float rotationRads, float tilingFactor, const glm::vec4 tintColor);
+		static void DrawRotatedQuad(const glm::vec2& position, const glm::vec2& size, const Ref<SubTexture2D>& subtexture, float rotationRads, float tilingFactor, const glm::vec4 tintColor);
 		
 		/// @brief Draws a rotated textured quad at the specified position, size, and rotation.
 		///
@@ -192,7 +197,7 @@ namespace Vesper {
 		/// @param subtexture The subtexture to apply to the quad.
 		/// @param tilingFactor The tiling factor for the texture.
 		/// @param tintColor The tint color to apply to the texture.
-		static void DrawQuadRotatedWithTexture(const glm::vec3& position, const glm::vec2& size, const Ref<SubTexture2D>& subtexture, float rotationRads, float tilingFactor, const glm::vec4 tintColor);
+		static void DrawRotatedQuad(const glm::vec3& position, const glm::vec2& size, const Ref<SubTexture2D>& subtexture, float rotationRads, float tilingFactor, const glm::vec4 tintColor);
 
 
 		//static void DrawSprite(const glm::mat4& transform, const SpriteRendererComponent& src, int entityID);
@@ -201,7 +206,7 @@ namespace Vesper {
 		/// @brief Returns a reference to the default white texture that allows for coloring.
 		static Ref<Texture2D> GetWhiteTexture();
 
-		/// 2D Renderer Statistics
+		/// @brief 2D Renderer Statistics
 		struct Statistics {
 			/// @brief The number of draw calls being made
 			uint32_t DrawCalls = 0;

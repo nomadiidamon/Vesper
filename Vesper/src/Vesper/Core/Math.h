@@ -1,11 +1,13 @@
 #pragma once
-
-#include <glm/glm.hpp>
-
 /// @file Math.h
 /// @author Damon S. Green II
 /// @brief Provides mathematical utility functions.
 
+#include <glm/glm.hpp>
+
+
+/// @namespace Vesper::Math
+/// @brief Contains mathematical utility functions for the Vesper engine.
 namespace Vesper::Math {
 
 	/// @brief Decomposes a transformation matrix into its translation, rotation, and scale components.

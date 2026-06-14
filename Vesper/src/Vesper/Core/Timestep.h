@@ -1,5 +1,4 @@
 #pragma once
-
 /// @file Timestep.h
 /// @author Damon S. Green II
 /// @brief Declares the Timestep class representing a time step in seconds.
