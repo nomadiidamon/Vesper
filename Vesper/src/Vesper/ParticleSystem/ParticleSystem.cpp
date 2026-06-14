@@ -11,14 +11,16 @@ namespace Vesper {
 	ParticleSystem::ParticleSystem()
 	{
 		m_PoolIndex = 999;
-		m_ParticlePool.resize(1000);
+		m_ParticlePool.resize(50);
 		m_activeParticleCount = 0;
+		m_EmitRate = m_ParticlePool.size();
 	}
 
 	ParticleSystem::ParticleSystem(uint32_t maxParticles)
 		: m_PoolIndex(maxParticles - 1), m_activeParticleCount(0)
 	{
 		m_ParticlePool.resize(maxParticles);
+		m_EmitRate = m_ParticlePool.size();
 	}
 
 	void ParticleSystem::OnUpdate(Vesper::Timestep ts)

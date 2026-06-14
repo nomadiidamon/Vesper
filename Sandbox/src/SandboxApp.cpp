@@ -145,23 +145,23 @@ public:
 		Vesper::RenderCommand::SetClearColor({ 0.1f, 0.1f, 0.1f, 1.0f });
 		Vesper::RenderCommand::Clear();
 		
-		Vesper::Renderer::BeginScene(m_CameraController.GetCamera());
+		//Vesper::Renderer::BeginScene(m_CameraController.GetCamera());
 		// Squares
-		static glm::mat4 scale = glm::scale(glm::mat4(1.0f), glm::vec3(0.1f));
-		std::dynamic_pointer_cast<Vesper::OpenGLShader>(m_FlatColorShader)->Bind();
-		std::dynamic_pointer_cast<Vesper::OpenGLShader>(m_FlatColorShader)->UploadUniformFloat3("u_Color", m_SquareColor);
-		for (int y = 0; y < 20; y++)
-		{
-			for (int x = 0; x < 20; x++)
-			{
-				glm::vec3 pos(x * 0.11f, y * 0.11f, 0.0f);
-				glm::mat4 transform = glm::translate(glm::mat4(1.0f), pos) * scale;
-				Vesper::Renderer::Submit(m_FlatColorShader, m_SquareVA, transform);
-			}
-		}
+		//static glm::mat4 scale = glm::scale(glm::mat4(1.0f), glm::vec3(0.1f));
+		//std::dynamic_pointer_cast<Vesper::OpenGLShader>(m_FlatColorShader)->Bind();
+		//std::dynamic_pointer_cast<Vesper::OpenGLShader>(m_FlatColorShader)->UploadUniformFloat3("u_Color", m_SquareColor);
+		//for (int y = 0; y < 20; y++)
+		//{
+		//	for (int x = 0; x < 20; x++)
+		//	{
+		//		glm::vec3 pos(x * 0.11f, y * 0.11f, 0.0f);
+		//		glm::mat4 transform = glm::translate(glm::mat4(1.0f), pos) * scale;
+		//		Vesper::Renderer::Submit(m_FlatColorShader, m_SquareVA, transform);
+		//	}
+		//}
 		// Triangle
-		Vesper::Renderer::Submit(m_Shader, m_TriangleVertexArray);
-		Vesper::Renderer::EndScene();
+		//Vesper::Renderer::Submit(m_Shader, m_TriangleVertexArray);
+		//Vesper::Renderer::EndScene();
 	}
 
 	void OnImGuiRender() override

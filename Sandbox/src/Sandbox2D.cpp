@@ -30,7 +30,7 @@ void Sandbox2D::OnAttach()
 	m_ParticleProps.Rotation = 0.0f;
 	m_ParticleProps.RotationVariation = 27.0f;
 
-	m_ParticleSystem = Vesper::ParticleSystem(35000);
+	m_ParticleSystem = Vesper::ParticleSystem(30);
 	m_ParticleSystem.SetParticleProps(m_ParticleProps);
 	Vesper::RenderCommand::SetClearColor(m_ClearColor);
 	Vesper::RenderCommand::Clear();
@@ -72,9 +72,9 @@ void Sandbox2D::OnUpdate(Vesper::Timestep ts)
 					m_ParticleProps.Position.x = (mousePos.x / width) * bounds.GetWidth() - bounds.GetWidth() * 0.5f + m_CameraController.GetPosition().x;
 					m_ParticleProps.Position.y = bounds.GetHeight() * 0.5f - (mousePos.y / height) * bounds.GetHeight() + m_CameraController.GetPosition().y;
 					m_ParticleSystem.m_IsEmitting = true;
-					for (int i = 0; i < ParticleEmitCount; i++) {
-						m_ParticleSystem.Emit(m_ParticleProps);
-					}
+					//for (int i = 0; i < ParticleEmitCount; i++) {
+					//	m_ParticleSystem.Emit(m_ParticleProps);
+					//}
 					m_ParticleSystem.m_TimeSinceLastEmit = 0.0f;
 				}
 			}
@@ -104,7 +104,11 @@ void Sandbox2D::OnImGuiRender()
 		ImGui::Separator();
 
 		ImGui::Text("Particle System Settings:");
-		ImGui::DragInt("Particle Emit Count", &ParticleEmitCount, 1, 0, 1000);
+		ImGui::Checkbox("Loop", &m_ParticleSystem.m_Loop);
+		if (ImGui::DragInt("Particle Emit Count", &ParticleEmitCount, 1, 0, 100)) {
+			m_ParticleSystem.m_EmitRate = ParticleEmitCount;
+			m_ParticleSystem.ResetSystem();
+		}
 		ImGui::DragFloat("Particle Lifetime", &m_ParticleProps.Lifetime, 0.1f, 0.0f, 15.0f);
 		ImGui::DragFloat("Particle Lifetime Variation", &m_ParticleProps.LifetimeVariation, 0.1f, 0.0f, 10.0f);
 		ImGui::DragFloat3("Particle Velocity Variation", glm::value_ptr(m_ParticleProps.VelocityVariation), 0.05f, -10.0f, 10.0f);
@@ -114,6 +118,7 @@ void Sandbox2D::OnImGuiRender()
 		ImGui::DragFloat("Particle Rotation", &m_ParticleProps.Rotation, 0.1f, 0.0f, 360.0f);
 		ImGui::ColorEdit4("Particle Color Begin", glm::value_ptr(m_ParticleProps.ColorBegin));
 		ImGui::ColorEdit4("Particle Color End", glm::value_ptr(m_ParticleProps.ColorEnd));
+		m_ParticleSystem.SetParticleProps(m_ParticleProps);
 
 		if (ImGui::ColorEdit4("Background Color", glm::value_ptr(m_ClearColor)))
 		{
