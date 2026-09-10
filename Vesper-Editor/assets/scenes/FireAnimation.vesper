@@ -1,0 +1,10 @@
+Scene: Untitled Scene
+Entities:
+  - Entity: FA97DAC1-29E5-E8E6-2EF1-1BF88CA59581
+    NameComponent: FireAnimation
+    TransformComponent:
+      Translation: [0, 0, 0]
+      Rotation: [0, 0, 0]
+      Scale: [1, 1, 1]
+    SpriteRendererComponent:
+      Color: [1, 1, 1, 1]
