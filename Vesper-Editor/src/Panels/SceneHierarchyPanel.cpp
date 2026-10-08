@@ -470,6 +470,7 @@ namespace Vesper {
 		DrawColorControl("Color", src.Color);
 		ImGui::Separator();
 		DrawTextureControl("Texture", src.Texture, src.TextureEnabled, src.TilingFactor);
+		return true;
 	}
 
 	static void DrawParticeSystemComponent(ParticleSystemComponent& particleSystem)

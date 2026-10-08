@@ -2,8 +2,17 @@
 .vs/
 bin/
 bin-int/
+Vesper/Vesper/
+Vesper-Editor/Vesper-Editor/
+Sandbox/Sandbox/
+Makefile
+
 
 # Files
 *.user
 *.sln
 *.vcxproj
+*.filters
+*Runtime.json
+*Shutdown.json
+*Startup.json
