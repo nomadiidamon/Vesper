@@ -14,7 +14,7 @@
 #include <unordered_map>
 #include <unordered_set>
 
-#include "Vesper/Core/Log.h"
+#include "Vesper/Core/Base.h"
 
 
 #include "Vesper/Debug/Instrumentor.h"

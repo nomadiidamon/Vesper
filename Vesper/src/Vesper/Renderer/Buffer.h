@@ -3,6 +3,8 @@
 /// @author Damon S. Green II
 /// @brief Defines the Buffer classes used for vertex and index data in rendering.
 
+#include  "Vesper/Core/Base.h"
+
 namespace Vesper {
 
 	/// @brief The different data types that can be used in shaders.

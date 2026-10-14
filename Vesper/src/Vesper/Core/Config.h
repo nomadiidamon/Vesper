@@ -7,8 +7,11 @@
 
 /// Editor Configurations
 #ifdef VZ_EDITOR_USE_DEFAULT_SCENE 
-#define VZ_EDITOR_DEFAULT_SCENE "Resources/Scenes/TriColored3DCubeAndSpriteAnims.vesper"
+#define VZ_EDITOR_DEFAULT_SCENE "TriColored3DCubeAndSpriteAnims.vesper"
 #endif
 
 #define VZ_DEFAULT_TEXTURE Texture2D::Create("Resources/Textures/Checkerboard.png")
 
+/// Gateware config
+#define GATEWARE_ENABLE_CORE
+#define GATEWARE_ENABLE_SYSTEM

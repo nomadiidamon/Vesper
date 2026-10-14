@@ -16,6 +16,7 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 IncludeDir = {}
 IncludeDir["entt"] = "%{wks.location}/Vesper/vendor/entt/include"
+IncludeDir["Gateware"] = "%{wks.location}/Vesper/vendor/Gateware"
 IncludeDir["Glad"] = "%{wks.location}/Vesper/vendor/Glad/include"
 IncludeDir["GLFW"] = "%{wks.location}/Vesper/vendor/GLFW/include"
 IncludeDir["glm"] = "%{wks.location}/Vesper/vendor/glm"

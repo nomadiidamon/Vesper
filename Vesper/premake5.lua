@@ -17,6 +17,7 @@ project "Vesper"
 		"src/**.cpp",
 		"vendor/stb_image/**.h",
 		"vendor/stb_image/**.cpp",
+		"vendor/Gateware/Gateware.h",
 		"vendor/glm/glm/**.hpp",
 		"vendor/glm/glm/**.inl",
 
@@ -28,12 +29,15 @@ project "Vesper"
 		flags { "NoPCH" }
 	filter "files:vendor/ImGuizmo/ImGuizmo.cpp"
 		flags { "NoPCH" }
+	filter "files:vendor/stb_image/stb_image.cpp"
+		flags { "NoPCH" }
 	filter {}
 
 	includedirs
 	{
 		"src",
 		"vendor/spdlog/include",
+		"%{IncludeDir.Gateware}",
 		"%{IncludeDir.GLFW}",
 		"%{IncludeDir.Glad}",
 		"%{IncludeDir.ImGui}",
@@ -57,16 +61,15 @@ project "Vesper"
 	filter "system:windows"
 		systemversion "latest"
 
-    buildoptions { "/utf-8" }
+		buildoptions { "/utf-8" }
 
-
-	defines
-	{
-		"VZ_PLATFORM_WINDOWS", 
-		"GLFW_INCLUDE_NONE",
-		"_CRT_SECURE_NO_WARNINGS",
-		"YAML_CPP_STATIC_DEFINE"
-	}
+		defines
+		{
+			"VZ_PLATFORM_WINDOWS", 
+			"GLFW_INCLUDE_NONE",
+			"_CRT_SECURE_NO_WARNINGS",
+			"YAML_CPP_STATIC_DEFINE"
+		}
 
 	filter "configurations:Debug"
 		defines "VZ_DEBUG"

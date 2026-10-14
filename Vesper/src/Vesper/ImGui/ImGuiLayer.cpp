@@ -8,6 +8,7 @@
 
 #include "Vesper/App/Application.h"
 #include "Vesper/App/Layer.h"
+#include <filesystem>
 
 /// @todo Remove GLFW include once abstracted
 #include <GLFW/glfw3.h>
@@ -39,8 +40,42 @@ namespace  Vesper {
 		//io.ConfigFlags |= ImGuiConfigFlags_ViewportsNoTaskBarIcons; // Disable Platform Windows task bar icons
 		//io.ConfigFlags |= ImGuiConfigFlags_ViewportsNoMerge;      // Disable Platform Windows merging into host window
 
-		io.Fonts->AddFontFromFileTTF("../../Vesper-Editor/assets/fonts/RedHatMono/static/RedHatMono-Bold.ttf", 18.0f);
-		io.FontDefault = io.Fonts->AddFontFromFileTTF("../../Vesper-Editor/assets/fonts/RedHatMono/static/RedHatMono-Light.ttf", 18.0f);
+		//io.Fonts->AddFontFromFileTTF(Application::Get().GetResourceManager().ResolvePath("fonts/RedHatMono/static/RedHatMono-Bold.ttf", PathResolveMode::AssetsDirectory).c_str(), 18.0f);		//io.FontDefault = io.Fonts->AddFontFromFileTTF(Application::Get().GetResourceManager().ResolvePath("fonts/RedHatMono/static/RedHatMono-Light.ttf", PathResolveMode::AssetsDirectory).c_str(), 18.0f);
+
+		//std::filesystem::path mainFontPath = Application::Get().GetResourceManager().ResolvePath("fonts/RedHatMono/static/RedHatMono-Bold.ttf", PathResolveMode::AssetsDirectory);
+		//if (!std::filesystem::exists(mainFontPath))
+		//{
+		//	mainFontPath = std::filesystem::path("Vesper-Editor/src/assets") / "fonts/RedHatMono/static/RedHatMono-Bold.ttf";
+		//}
+		//if (std::filesystem::exists(mainFontPath))
+		//{
+		//	io.Fonts->AddFontFromFileTTF(mainFontPath.string().c_str(), 24.0f);
+		//	VZ_CORE_WARN("Main font: {0} at size {1}.", mainFontPath.string(), 24.0f);
+		//}
+		//else
+		//{
+		//	io.FontDefault = io.Fonts->AddFontDefault();
+		//	VZ_CORE_WARN("Failed to load font: {0}. Using default font.", mainFontPath.string());
+		//}
+
+
+		std::filesystem::path defaultFontPath = Application::Get().GetResourceManager().ResolvePath("fonts/RedHatMono/static/RedHatMono-Light.ttf", PathResolveMode::AssetsDirectory);
+		if (!std::filesystem::exists(defaultFontPath))
+		{
+			defaultFontPath = std::filesystem::path("Vesper-Editor/src/assets") / "fonts/RedHatMono/static/RedHatMono-Light.ttf";
+		}
+		if (std::filesystem::exists(defaultFontPath))
+		{
+			io.FontDefault = io.Fonts->AddFontFromFileTTF(defaultFontPath.string().c_str(), 24.0f);
+			VZ_CORE_WARN("Default font: {0} at size {1}.", defaultFontPath.string(), 24.0f);
+		}
+		else
+		{
+			io.FontDefault = io.Fonts->AddFontDefault();
+			VZ_CORE_WARN("Failed to load font: {0}. Using default font.", defaultFontPath.string());
+		}
+
+
 
 
 		ImGui::StyleColorsDark();

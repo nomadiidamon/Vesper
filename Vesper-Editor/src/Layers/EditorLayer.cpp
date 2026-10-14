@@ -10,6 +10,8 @@
 #include "Vesper/Scene/SceneSerializer.h"
 #include "ViewportLayer.h"
 
+#include "Vesper/App/ResourceManager.h"
+
 //static const uint32_t s_MapWidth = 20;
 //static const uint32_t s_MapHeight = 10;
 //static const char* s_MapTiles =
@@ -168,22 +170,23 @@ namespace Vesper {
 
 			SceneSerializer serializer(m_ActiveScene);
 
-			FileSystem::Initialize();
-
 			if (VZ_EDITOR_USE_DEFAULT_SCENE) {
 				/// TODO: Get an automatic path to resource that is NOT hardcoded
-				std::string loadedScene = FileSystem::GetAbsolutePath("../../" + std::string(VZ_EDITOR_DEFAULT_SCENE));
+				std::string sceneName = VZ_EDITOR_DEFAULT_SCENE;
+				std::filesystem::path sceneDirectory = Vesper::ResourceManager::JoinPaths(Vesper::Application::Get().GetResourceManager().GetResourcesDirectory(), "Scenes");
+				std::filesystem::path scenePath = Vesper::ResourceManager::JoinPaths(sceneDirectory.string(), sceneName);
+				std::filesystem::path loadedScene = Vesper::ResourceManager::NormalizePath(scenePath.string());
 
-				bool valid = serializer.Deserialize(loadedScene);
+				bool valid = serializer.Deserialize(loadedScene.string());
 				if (!valid) {
-					VZ_CORE_ERROR("Failed to load default scene: " + loadedScene);
-					VZ_CORE_ERROR("Attempted Scene: " + std::string(VZ_EDITOR_DEFAULT_SCENE));
-					VZ_CORE_ERROR("Current Working Directory: " + FileSystem::GetCurrentWorkingDirectory());
-					VZ_CORE_ERROR("Absolute Path Attempted: " + FileSystem::GetAbsolutePath(loadedScene));
+					VZ_CORE_ERROR("Failed to load default scene: " + loadedScene.string());
+					VZ_CORE_ERROR("Attempted Scene: " + std::string(scenePath.string()));
+					VZ_CORE_ERROR("Current Working Directory: " + Vesper::Application::Get().GetResourceManager().GetWorkingDirectory());
+					VZ_CORE_ERROR("Absolute Path Attempted: " + loadedScene.string());
 					VZ_CORE_ERROR("Error loading the scene, please check the paths and file availability.");
 				}
 				else {
-					VZ_CORE_INFO("Successfully loaded the default scene: " + loadedScene);
+					VZ_CORE_INFO("Successfully loaded the default scene: " + loadedScene.string());
 				}
 			}
 			m_EditorCamera = EditorCamera(30.0f, 1.778f, 0.1f, 1000.0f);

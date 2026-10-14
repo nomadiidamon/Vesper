@@ -5,29 +5,16 @@
 /// @todo Convert all files/classes in App directory to Vesper::Engine namespace (create it)
 
 #include "../Core/Base.h"
-#include "Window.h"
-#include "Vesper/App/LayerStack.h"
-#include "Vesper/Events/Event.h"
+#include "Vesper/App/ApplicationSettings.h"
 #include "Vesper/Events/ApplicationEvent.h"
+#include "Vesper/Events/Event.h"
 #include "Vesper/Core/Timestep.h"
+#include "Vesper/App/LayerStack.h"
 #include "Vesper/ImGui/ImGuiLayer.h"
-#include "Vesper/Renderer/RendererAPI.h"
+#include "Vesper/App/ResourceManager.h"
 
 
 namespace Vesper {
-
-
-	/// WIP
-	struct ApplicationSettings {
-		std::string ApplicationName = "Vesper Application";
-		std::string WorkingDirectory;
-		RendererAPI::API RendererAPI = RendererAPI::API::OpenGL;
-		uint32_t Width = 1280;
-		uint32_t Height = 720;
-		WindowMode Mode = WindowMode::Windowed;
-		bool EnableImGui = true;
-		bool EnableVSync = false;
-	};
 
 	/// @class Application
 	/// @brief The core application class that manages the main loop, window, layers, and event handling.
@@ -40,6 +27,11 @@ namespace Vesper {
 		///
 		/// @param name The name of the application. Defaults to an empty string.
 		Application(const std::string& name = "");
+
+		/// @brief Constructs the Application with the given settings.
+		///
+		/// @param settings The settings to configure the application.
+		Application(ApplicationSettings settings);
 
 		virtual ~Application();
 
@@ -69,6 +61,18 @@ namespace Vesper {
 
 		/// @brief Retrieves the application window.
 		inline Window& GetWindow() { return *m_Window; }
+
+		/// @brief Retrieves the application settings.
+		inline ApplicationSettings& GetSettings() { return *m_Settings; }
+
+		/// @brief Retrieves the application settings as a const reference.
+		inline const ApplicationSettings& GetSettings() const { return *m_Settings; }
+
+		/// @brief Retrieves the resource manager for the application.
+		inline ResourceManager& GetResourceManager() { return *m_ResourceManager; }
+
+		/// @brief Retrieves the resource manager for the application as a const reference.
+		inline const ResourceManager& GetResourceManager() const { return *m_ResourceManager; }
 	private:
 
 		/// @brief Event handler for window close events.
@@ -78,14 +82,25 @@ namespace Vesper {
 
 		/// @brief Scoped pointer to the applications underlying window.
 		Scope<Window> m_Window;
+
+		/// @brief The resource manager for the application, responsible for loading and managing resources.
+		Scope<ResourceManager> m_ResourceManager;
+
+		/// @brief Scoped pointer to the application settings.
+		Scope<ApplicationSettings> m_Settings;
+
 		/// @brief ImGui layer for rendering GUI elements
 		ImGuiLayer* m_ImGuiLayer;
+
 		/// @brief Flag indicating whether the application is running.
 		bool m_Running = true;
+
 		/// @brief Flag indicating whether the application is minimized.
 		bool m_Minimized = false;
+
 		/// @brief Stack of layers managed by the application.
 		LayerStack m_LayerStack;
+
 		/// @brief Time of the last frame, used for calculating timestep.
 		float m_LastFrameTime = 0.0f;
 

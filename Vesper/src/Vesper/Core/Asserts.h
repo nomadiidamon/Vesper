@@ -3,6 +3,7 @@
 /// @author Damon S. Green II
 /// @brief Provides assertion macros for debugging and error handling.
 
+#include "Vesper/Core/Log.h"
 
 /// ASSERT MACROS
 #ifdef VZ_DEBUG

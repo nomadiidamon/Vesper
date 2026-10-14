@@ -18,7 +18,6 @@ namespace Vesper {
 	Application::Application(const std::string& name)
 	{
 		VZ_PROFILE_FUNCTION();
-
 		VZ_CORE_ASSERT(!s_Instance, "Application already exists!");
 		s_Instance = this;
 
@@ -26,13 +25,62 @@ namespace Vesper {
 		m_Window->SetEventCallback(BIND_EVENT_FN(OnEvent));
 		m_Window->SetVSync(false);
 
-
-		Renderer::Init();
-
-
 		m_ImGuiLayer = new ImGuiLayer();
 		PushOverlay(m_ImGuiLayer);
 
+		m_Settings = CreateScope<ApplicationSettings>(ApplicationSettings());
+		m_Settings->ApplicationName = name;
+		m_Settings->Width = m_Window->GetWidth();
+		m_Settings->Height = m_Window->GetHeight();
+
+		m_ResourceManager = CreateScope<ResourceManager>(ResourceManager(*m_Settings));
+
+		VesperResult result = m_ResourceManager->InitFileSystem(*m_Settings);
+		if (!result.IsSuccess())
+		{
+			VZ_CORE_ERROR("Application::InitFileSystem() was not successful. Message: {0}", result.ResultMessage);
+			VZ_CORE_ASSERT(false, result.ReturnError());
+		}
+
+		Renderer::Init();
+	}
+
+	Application::Application(ApplicationSettings settings)
+	{
+		VZ_PROFILE_FUNCTION();
+		VZ_CORE_ASSERT(!s_Instance, "Application already exists!");
+		s_Instance = this;
+
+		m_Window = Window::Create(WindowProps(settings.ApplicationName, settings.Width, settings.Height));
+		m_Window->SetEventCallback(BIND_EVENT_FN(OnEvent));
+		m_Window->SetVSync(false);
+
+		m_Settings = CreateScope<ApplicationSettings>(settings);
+		if (m_Settings->RendererAPIType == RendererAPI::API::None)
+		{
+			m_Settings->EnableImGui = false;
+			VZ_CORE_WARN("ApplicationSettings::RendererAPIType is set to None. ImGui will be disabled.");
+		}
+		
+		m_ResourceManager = CreateScope<ResourceManager>(ResourceManager(*m_Settings));
+		VesperResult result = m_ResourceManager->InitFileSystem(*m_Settings);
+		if (!result.IsSuccess())
+		{
+			VZ_CORE_ERROR("Application::InitFileSystem( *m_Settings ) was not successful. Message: {0}", result.ResultMessage);
+			VZ_CORE_ASSERT(false, result.ReturnError());
+		}
+		
+		// Create the ImGui layer after  the ResourceManager has been initialized, and only if ImGui is enabled in the settings
+		if (m_Settings->EnableImGui)
+		{
+			m_ImGuiLayer = new ImGuiLayer();
+			PushOverlay(m_ImGuiLayer);
+		}
+		else {
+			m_ImGuiLayer = nullptr;
+		}
+
+		Renderer::Init();
 	}
 
 	Application::~Application()

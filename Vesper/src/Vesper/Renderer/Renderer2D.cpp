@@ -9,6 +9,8 @@
 #include <glad/glad.h>
 #include <glm/gtc/matrix_transform.hpp>
 
+#include "Vesper/App/Application.h"
+
 namespace Vesper {
 
 	/// @struct QuadVertex
@@ -106,8 +108,8 @@ namespace Vesper {
 		for (uint32_t i = 0; i < s_Data.MaxTextureSlots; i++)
 			samplers[i] = i;
 
-
-		s_Data.TextureShader = Shader::Create("../../Vesper-Editor/assets/shaders/Texture.glsl");
+		std::string pathJoined = Vesper::ResourceManager::JoinPaths("shaders", "Texture.glsl");
+		s_Data.TextureShader = Shader::Create(Vesper::Application::Get().GetResourceManager().ResolvePath(pathJoined, PathResolveMode::AssetsDirectory));
 		s_Data.TextureShader->Bind();
 		s_Data.TextureShader->SetIntArray("u_Textures", samplers, s_Data.MaxTextureSlots);
 

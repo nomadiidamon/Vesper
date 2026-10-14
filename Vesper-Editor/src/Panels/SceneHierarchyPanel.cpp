@@ -602,12 +602,12 @@ namespace Vesper {
 						return;
 					}
 				}
-				
 
 
 
 
-				
+
+
 				entity.RemoveComponent<T>();
 
 			}
@@ -730,7 +730,14 @@ namespace Vesper {
 
 		DrawComponent<TextureAnimationComponent>("Texture Animation", entity, [](auto& component)
 			{
-				TextureAnimationEdit("Texture Animation", component.Texture, component.SubTextures[0], component);
+				if (component.SubTextures.size() <= 0) {
+					VZ_CORE_WARN("Component's SubTexture array is empty or null");
+					return;
+				}
+				else
+				{
+					TextureAnimationEdit("Texture Animation", component.Texture, component.SubTextures[0], component);
+				}
 			});
 
 		DrawComponent<ParticleSystemComponent>("Particle System", entity, [](auto& component)
