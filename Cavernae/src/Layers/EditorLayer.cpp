@@ -12,33 +12,12 @@
 
 #include "Vesper/App/ResourceManager.h"
 
-//static const uint32_t s_MapWidth = 20;
-//static const uint32_t s_MapHeight = 10;
-//static const char* s_MapTiles =
-//"GGGGGGGGGGGGGGGGGGGG"
-//"GGGCCCCCCCCCCCCCCGGG"
-//"GGGCGGGGGGGGGGGGCGGG"
-//"GGGCGGRGGGGGGRGGCGGG"
-//"GGGCGGGGGGGGGGGGCGGG"
-//"GGGCGGGGGGGGGGGGCGGG"
-//"GGGCGGPGGGGGGPGGCGGG"
-//"GGGCGGGGGGGGGGGGCGGG"
-//"GGGCCCCCCCCCCCCCCGGG"
-//"GGGGGGGGGGGGGGGGGGGG";
-
-// G - Grass - SpriteSheetTown -> subTexture(4.25, 0.75) (64, 64) (1, 1)
-// C - Crystal - SpriteSheetCrystals -> subTexture { 0, 1.25 }, { 64, 64 }, { 1, 1 }
-// R - Rock - SpriteSheetRocks -> subTexture { 0, 3.75 }, { 64, 64 }, { 1, 1 }
-// P - Plant - SpriteSheetCursedLands -> subTexture { 0, 1.875 }, { 128, 128 }, { 1, 1 }
-
-
-
 
 namespace Vesper {
 
 
 	EditorLayer::EditorLayer()
-		: Layer("Sandbox2D"), m_CameraController(1280.0f / 720.0f, true)
+		: Layer("Editor Layer"), m_CameraController(2160.0f / 1400.0f, true)
 	{
 		VZ_PROFILE_FUNCTION();
 	}
@@ -51,10 +30,12 @@ namespace Vesper {
 
 		// Texture / SubTexture setup
 		{
-			/// TODO: move to resource manager
-			/// TODO: fix pathing
+			/// TODO: Move predefined textures to resource manager
+			/// TODO: Fix pathing to use the resource manager utils
 			m_CheckerboardTexture = Texture2D::Create("Cavernae/assets/textures/Checkerboard.png");
-			/*m_SpriteSheetFire = Texture2D::Create("../../Cavernae/assets/textures/sheets/fire_01.png");
+			
+			/*
+			m_SpriteSheetFire = Texture2D::Create("../../Cavernae/assets/textures/sheets/fire_01.png");
 			m_SpriteSheetSmoke = Texture2D::Create("../../Cavernae/assets/textures/sheets/fire_02.png");
 			m_SpriteSheetTown = Texture2D::Create("../../Cavernae/assets/textures/sheets/town_tilesheet.png");
 			m_SpriteSheetCrystals = Texture2D::Create("../../Cavernae/assets/textures/sheets/craftpix/Crystals/Crystals.png");
@@ -68,7 +49,9 @@ namespace Vesper {
 			s_TextureMap['G'] = SubTexture2D::CreateFromCoords(m_SpriteSheetTown, { 4.25, 0.75 }, { 64, 64 }, { 1, 1 });
 			s_TextureMap['C'] = SubTexture2D::CreateFromCoords(m_SpriteSheetCrystals, { 0, 1.25 }, { 64, 64 }, { 1, 1 });
 			s_TextureMap['R'] = SubTexture2D::CreateFromCoords(m_SpriteSheetRocks, { 0, 3.75 }, { 64, 64 }, { 1, 1 });
-			s_TextureMap['P'] = SubTexture2D::CreateFromCoords(m_SpriteSheetCursedLands, { 0, 1.875 }, { 128, 128 }, { 1, 1 });*/
+			s_TextureMap['P'] = SubTexture2D::CreateFromCoords(m_SpriteSheetCursedLands, { 0, 1.875 }, { 128, 128 }, { 1, 1 });
+			*/
+		
 		}
 
 
@@ -95,76 +78,10 @@ namespace Vesper {
 			fbSpec.Height = 720;
 			m_Framebuffer = Framebuffer::Create(fbSpec);
 		}
-		//{
-		//	FramebufferSpecification fbSpec;
-		//	fbSpec.Width = 1280;
-		//	fbSpec.Height = 720;
-		//	m_SecondaryFramebuffer = Framebuffer::Create(fbSpec);
-		//}
 
 		// Scene setup
 		{
-			//m_CameraController.SetZoomLevel(5.5f);
 			m_ActiveScene = CreateRef<Scene>();
-
-#if 0
-			// Animation 1
-			{
-				auto square = m_ActiveScene->CreateEntity("Fire Animation");
-				auto& transform = square.GetComponent<TransformComponent>();
-				transform.Translation = (glm::vec3(-0.5f, 0.0f, -1.5f));
-
-				square.AddComponent<SpriteRendererComponent>(glm::vec4{ 0.8f, 0.8f, 0.2f, 1.0f });
-				std::vector<Ref<SubTexture2D>> fireFrames;
-				for (int x = 0; x < 63; x++)
-				{
-					for (int y = 0; y < 2; y++)
-					{
-						fireFrames.push_back(SubTexture2D::CreateFromCoords(m_SpriteSheetFire, { (float)y, (float)x }, { 128, 128 }));
-					}
-				}
-				TextureAnimationComponent texAnim(fireFrames, 0.05f);
-				square.AddComponent<TextureAnimationComponent>(texAnim);
-				m_FireEntity = square;
-			}
-
-			class CameraController : public ScriptableEntity {
-			public:
-				void OnCreate()
-				{
-					GetComponent<TransformComponent>().Translation = (glm::vec3(Random::RangeF1(-3.0f, 3.0f), Random::RangeF1(-3.0f, 3.0f), 0.0f));
-
-				}
-
-				void OnDestroy()
-				{
-
-				}
-
-				void OnUpdate(Timestep ts)
-				{
-					auto& transform = GetComponent<TransformComponent>().GetTransform();
-					float speed = 5.0f;
-
-
-					if (Input::IsKeyPressed(VZ_KEY_A))
-						transform[3][0] -= speed * ts;
-
-					if (Input::IsKeyPressed(VZ_KEY_D))
-						transform[3][0] += speed * ts;
-
-					if (Input::IsKeyPressed(VZ_KEY_W))
-						transform[3][1] += speed * ts;
-
-					if (Input::IsKeyPressed(VZ_KEY_S))
-						transform[3][1] -= speed * ts;
-				}
-
-			};
-
-			m_CameraEntity.AddComponent<NativeScriptComponent>().Bind<CameraController>();
-
-#endif
 
 			m_SceneHierarchyPanel.SetContext(m_ActiveScene);
 
@@ -203,17 +120,6 @@ namespace Vesper {
 			if (m_ActiveScene)
 				m_ActiveScene->OnViewportResize(w, h);
 			});
-
-		//m_SecondaryViewportLayer = CreateRef<Vesper::ViewportLayer>("SecondaryViewport");
-		//m_SecondaryViewportLayer->SetFramebuffer(m_SecondaryFramebuffer);
-
-		//m_SecondaryViewportLayer->SetOnResizeCallback([this](uint32_t w, uint32_t h) {
-		//	m_ViewportSize = { (float)w, (float)h };
-		//	m_CameraController.OnResize((float)w, (float)h);
-		//	m_EditorCamera.SetViewportSize((float)w, (float)h);
-		//	if (m_ActiveScene)
-		//		m_ActiveScene->OnViewportResize(w, h);
-		//	});
 	}
 
 	void EditorLayer::OnDetach()
@@ -235,15 +141,6 @@ namespace Vesper {
 			m_EditorCamera.SetViewportSize(m_ViewportSize.x, m_ViewportSize.y);
 			m_ActiveScene->OnViewportResize((uint32_t)m_ViewportSize.x, (uint32_t)m_ViewportSize.y);
 		}
-		//if (Vesper::FramebufferSpecification spec = m_SecondaryFramebuffer->GetSpecification();
-		//	m_ViewportSize.x > 0.0f && m_ViewportSize.y > 0.0f &&
-		//	(spec.Width != (uint32_t)m_ViewportSize.x || spec.Height != (uint32_t)m_ViewportSize.y))
-		//{
-		//	m_SecondaryFramebuffer->Resize((uint32_t)m_ViewportSize.x, (uint32_t)m_ViewportSize.y);
-		//	m_CameraController.OnResize(m_ViewportSize.x, m_ViewportSize.y);
-		//	m_EditorCamera.SetViewportSize(m_ViewportSize.x, m_ViewportSize.y);
-		//	m_ActiveScene->OnViewportResize((uint32_t)m_ViewportSize.x, (uint32_t)m_ViewportSize.y);
-		//}
 
 		// Update
 		if (m_ViewportFocused)
@@ -252,46 +149,21 @@ namespace Vesper {
 		}
 		m_EditorCamera.OnUpdate(ts);
 
-		/// First viewport
-		// Render
 		Renderer2D::ResetStats();
 		{
-			VZ_PROFILE_SCOPE("Renderer Prep 1");
+			VZ_PROFILE_SCOPE("Renderer Prep");
 			m_Framebuffer->Bind();
 			RenderCommand::SetClearColor(m_ClearColor);
 			RenderCommand::Clear();
 		}
-		// Draw
 		{
-			{
-				VZ_PROFILE_SCOPE("Entity Scene Update 1");
-				// Update scene
-				m_ActiveScene->OnUpdateRuntime(ts);
-				m_ActiveScene->OnUpdateEditor(ts, m_EditorCamera);
-			}
+			VZ_PROFILE_SCOPE("Entity Scene Update");
+			// Update scene
+			m_ActiveScene->OnUpdateRuntime(ts);
+			m_ActiveScene->OnUpdateEditor(ts, m_EditorCamera);
 		}
-		m_Framebuffer->Unbind();
 		
-
-		///// Second viewport
-		//// Render
-		//Renderer2D::ResetStats();
-		//{
-		//	VZ_PROFILE_SCOPE("Renderer Prep 2");
-		//	m_SecondaryFramebuffer->Bind();
-		//	RenderCommand::SetClearColor(m_ClearColor);
-		//	RenderCommand::Clear();
-		//}
-		//// Draw
-		//{
-		//	{
-		//		VZ_PROFILE_SCOPE("Entity Scene Update 2");
-		//		// Update scene
-		//		m_ActiveScene->OnUpdateRuntime(ts);
-		//		m_ActiveScene->OnUpdateEditor(ts, m_EditorCamera);
-		//	}
-		//}
-		//m_SecondaryFramebuffer->Unbind();
+		m_Framebuffer->Unbind();
 	}
 
 	void EditorLayer::OnImGuiRender()
@@ -404,78 +276,6 @@ namespace Vesper {
 		DisplayVesperInfo_ImGui();
 
 		{
-			//ImGui::PushStyleVar(ImGuiStyleVar_WindowPadding, ImVec2{ 0,0 });
-			//ImGui::Begin("Viewport");
-			//m_ViewportFocused = ImGui::IsWindowFocused();
-			//m_ViewportHovered = ImGui::IsWindowHovered();
-			//Application::Get().GetImGuiLayer()->SetBlockEvents(!m_ViewportFocused && !m_ViewportHovered);
-
-			//ImVec2 viewportPanelSize = ImGui::GetContentRegionAvail();
-			//if (m_ViewportSize != *((glm::vec2*)&viewportPanelSize) && viewportPanelSize.x > 0.0f && viewportPanelSize.y > 0)
-			//{
-			//	m_Framebuffer->Resize((uint32_t)viewportPanelSize.x, (uint32_t)viewportPanelSize.y);
-			//	m_ViewportSize = { viewportPanelSize.x, viewportPanelSize.y };
-
-			//	m_CameraController.OnResize(viewportPanelSize.x, viewportPanelSize.y);
-			//}
-
-			//ImVec2 viewportBoundsMin = ImGui::GetCursorScreenPos();
-			//ImVec2 viewportBoundsMax = { viewportBoundsMin.x + m_ViewportSize.x, viewportBoundsMin.y + m_ViewportSize.y };
-			//m_ViewportBounds[0] = { viewportBoundsMin.x, viewportBoundsMin.y };
-			//m_ViewportBounds[1] = { viewportBoundsMax.x, viewportBoundsMax.y };
-
-			//uint32_t textureID = m_Framebuffer->GetColorAttachmentRendererID();
-			//ImGui::Image(textureID, ImVec2(m_ViewportSize.x, m_ViewportSize.y), ImVec2(0, 1), ImVec2(1, 0));
-
-			//// Gizmos
-			//Entity selectedEntity = m_SceneHierarchyPanel.GetSelectedEntity();
-			//if (selectedEntity && m_GizmoType != -1)
-			//{
-			//	ImGuizmo::SetOrthographic(false);
-			//	ImGuizmo::SetDrawlist();
-			//	float windowWidth = (float)ImGui::GetWindowWidth();
-			//	float windowHeight = (float)ImGui::GetWindowHeight();
-			//	ImGuizmo::SetRect(ImGui::GetWindowPos().x, ImGui::GetWindowPos().y, windowWidth, windowHeight);
-
-			//	// Camera
-			//	// Runtime camera from entity
-			//	//auto cameraEntity = m_ActiveScene->GetPrimaryCameraEntity();
-			//	//const auto& camera = cameraEntity.GetComponent<CameraComponent>().Camera;
-			//	//const glm::mat4& cameraProjection = camera.GetProjection();
-			//	//glm::mat4 cameraView = glm::inverse(cameraEntity.GetComponent<TransformComponent>().GetTransform());
-
-			//	// Editor camera
-			//	const glm::mat4& cameraProjection = m_EditorCamera.GetProjection();
-			//	glm::mat4 cameraView = m_EditorCamera.GetViewMatrix();
-
-			//	// Entity Transform
-			//	auto& tc = selectedEntity.GetComponent<TransformComponent>();
-			//	glm::mat4 transform = tc.GetTransform();
-
-			//	// Snapping
-			//	bool snap = Input::IsKeyPressed(Key::LeftControl);
-			//	// use the editor layer snap values
-			//	float snapValue = m_TranslationSnap;
-			//	if (m_GizmoType == ImGuizmo::OPERATION::ROTATE)
-			//		snapValue = m_RotationSnap;
-			//	else if (m_GizmoType == ImGuizmo::OPERATION::SCALE)
-			//		snapValue = m_ScaleSnap;
-
-			//	float snapValues[3] = { snapValue, snapValue, snapValue };
-
-			//	ImGuizmo::Manipulate(glm::value_ptr(cameraView), glm::value_ptr(cameraProjection),
-			//		(ImGuizmo::OPERATION)m_GizmoType, ImGuizmo::LOCAL, glm::value_ptr(transform),
-			//		nullptr, snap ? snapValues : nullptr);
-
-			//	if (ImGuizmo::IsUsing())
-			//	{
-			//		glm::vec3 translation, rotation, scale;
-			//		Vesper::Math::DecomposeTransform(transform, translation, rotation, scale);
-			//		tc.Translation = translation;
-			//		tc.Rotation = rotation;
-			//		tc.Scale = scale;
-			//	}
-			//}
 
 			// set up in-window render callback for gizmos
 			m_ViewportLayer->SetInsideRenderCallback([this]() {
@@ -520,50 +320,13 @@ namespace Vesper {
 					}
 				}
 			});
-			//m_SecondaryViewportLayer->SetInsideRenderCallback([this]() {
-			//	// Gizmos
-			//	Entity selectedEntity = m_SceneHierarchyPanel.GetSelectedEntity();
-			//	if (selectedEntity && m_GizmoType != -1)
-			//	{
-			//		ImGuizmo::SetOrthographic(false);
-			//		ImGuizmo::SetDrawlist();
-			//		float windowWidth = (float)ImGui::GetWindowWidth();
-			//		float windowHeight = (float)ImGui::GetWindowHeight();
-			//		ImGuizmo::SetRect(ImGui::GetWindowPos().x, ImGui::GetWindowPos().y, windowWidth, windowHeight);
-			//		// Editor camera
-			//		const glm::mat4& cameraProjection = m_EditorCamera.GetProjection();
-			//		glm::mat4 cameraView = m_EditorCamera.GetViewMatrix();
-			//		// Entity Transform
-			//		auto& tc = selectedEntity.GetComponent<TransformComponent>();
-			//		glm::mat4 transform = tc.GetTransform();
-			//		bool snap = Input::IsKeyPressed(Key::LeftControl);
-			//		float snapValue = m_TranslationSnap;
-			//		if (m_GizmoType == ImGuizmo::OPERATION::ROTATE)
-			//			snapValue = m_RotationSnap;
-			//		else if (m_GizmoType == ImGuizmo::OPERATION::SCALE)
-			//			snapValue = m_ScaleSnap;
-			//		float snapValues[3] = { snapValue, snapValue, snapValue };
-			//		ImGuizmo::Manipulate(glm::value_ptr(cameraView), glm::value_ptr(cameraProjection),
-			//			(ImGuizmo::OPERATION)m_GizmoType, ImGuizmo::LOCAL, glm::value_ptr(transform),
-			//			nullptr, snap ? snapValues : nullptr);
-			//		if (ImGuizmo::IsUsing())
-			//		{
-			//			glm::vec3 translation, rotation, scale;
-			//			Vesper::Math::DecomposeTransform(transform, translation, rotation, scale);
-			//			tc.Translation = translation;
-			//			tc.Rotation = rotation;
-			//			tc.Scale = scale;
-			//		}
-			//	}
-			//	});
 
 			// render the viewport window
 			m_ViewportLayer->OnImGuiRender();
-			//m_SecondaryViewportLayer->OnImGuiRender();
 
 			// sync focus/hover state and block events for ImGui layer as before
-			m_ViewportFocused = m_ViewportLayer->IsFocused();// || m_SecondaryViewportLayer->IsFocused();
-			m_ViewportHovered = m_ViewportLayer->IsHovered();// || m_SecondaryViewportLayer->IsHovered();
+			m_ViewportFocused = m_ViewportLayer->IsFocused();
+			m_ViewportHovered = m_ViewportLayer->IsHovered();
 			Application::Get().GetImGuiLayer()->SetBlockEvents(!m_ViewportFocused && !m_ViewportHovered);
 
 			// update stored bounds if you rely on them elsewhere:

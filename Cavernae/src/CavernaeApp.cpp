@@ -1,6 +1,7 @@
 #include <Vesper.h>
 #include <Vesper/App/EntryPoint.h>
 
+#include "EditorSettings.h"
 #include "Layers/EditorLayer.h"
 
 namespace Vesper {
@@ -47,7 +48,10 @@ namespace Vesper {
 		settings.Mode = WindowMode::Windowed;
 		settings.EnableImGui = true;
 		settings.EnableVSync = true;
-		
+
+		// Overrides the defaults above; edit the ini to change settings without recompiling.
+		LoadEditorSettings("Cavernae/Cavernae.ini", settings);
+
 		return new Cavernae(settings);
 	}
 
