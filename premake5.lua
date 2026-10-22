@@ -3,7 +3,7 @@ include "./vendor/premake/premake_customization/solution_items.lua"
 workspace "Vesper"
 	architecture "x64"
 
-	startproject "Vesper-Editor"
+	startproject "Cavernae"
 
 	configurations 
 	{ 
@@ -41,7 +41,7 @@ group ""
 
 
 group "Tools"
-	include "Vesper-Editor"
+	include "Cavernae"
 group ""
 
 

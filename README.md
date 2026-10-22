@@ -45,7 +45,7 @@ git clone --recursive https://github.com/nomadiidamon/Vesper <desiredLocation>
 	- This runs Premake5 which is located in 'Vesper/Vendor/bin/premake'.
 2. Open the solution in Visual Studio 2022.
 3. Select the desired configuration (e.g. `Debug` or `Release`) and platform (`x64`).
-4. Right-click the project you want to run (`Vesper-Editor` or `Sandbox`) and choose __Set as Startup Project__.
+4. Right-click the project you want to run (`Cavernae` or `Sandbox`) and choose __Set as Startup Project__.
 5. Build and run (F5).
 
 Troubleshooting:

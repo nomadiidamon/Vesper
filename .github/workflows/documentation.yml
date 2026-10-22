@@ -5,7 +5,7 @@ on:
     branches: [ main, master ]
     paths:
       - 'Vesper/src/**'
-      - 'Vesper-Editor/src/**'
+      - 'Cavernae/src/**'
       - 'Docs/**'
       - 'Doxyfile'
       - '.github/workflows/documentation.yml'

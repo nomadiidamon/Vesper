@@ -1,5 +1,5 @@
-project "Vesper-Editor"
-	location "Vesper-Editor"
+project "Cavernae"
+	location "Cavernae"
 	kind "ConsoleApp"
 	language "C++"
 	cppdialect "C++17"

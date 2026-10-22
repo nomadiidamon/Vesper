@@ -15,7 +15,7 @@ EXTENSIONS = {
 
 ROOT_FOLDERS = {
     "Vesper/src",
-    "Vesper-Editor/src",
+    "Cavernae/src",
     "Sandbox",
 }
 

@@ -5,24 +5,24 @@
 
 namespace Vesper {
 
-	class VesperEditor : public Vesper::Application
+	class Cavernae : public Vesper::Application
 	{
 	public:
 
-		VesperEditor() 
-			: Application("Vesper Editor")
+		Cavernae() 
+			: Application("Cavernae")
 		{
 
 			PushLayer(new EditorLayer());
 		}
 
-		VesperEditor(ApplicationSettings settings)
+		Cavernae(ApplicationSettings settings)
 			: Application(settings)
 		{
 			PushLayer(new EditorLayer());
 		}
 
-		~VesperEditor() {
+		~Cavernae() {
 
 		}
 	};
@@ -30,15 +30,15 @@ namespace Vesper {
 	Application* CreateApplication()
 	{
 		/// Default Editor path
-		//return new VesperEditor();
+		//return new Cavernae();
 
 
 		/// Custom Editor path
 		ApplicationSettings settings;
-		settings.ApplicationName = "Caverna";
+		settings.ApplicationName = "Cavernae";
 
 		settings.ProjectDirectory = "";
-		settings.AssetsDirectory = ("Vesper-Editor/assets");
+		settings.AssetsDirectory = ("Cavernae/assets");
 		settings.ResourcesDirectory = ("Vesper/src/Resources");
 
 		settings.RendererAPIType = RendererAPI::API::OpenGL;
@@ -48,7 +48,7 @@ namespace Vesper {
 		settings.EnableImGui = true;
 		settings.EnableVSync = true;
 		
-		return new VesperEditor(settings);
+		return new Cavernae(settings);
 	}
 
 }

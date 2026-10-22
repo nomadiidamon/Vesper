@@ -3,7 +3,7 @@
 bin/
 bin-int/
 Vesper/Vesper/
-Vesper-Editor/Vesper-Editor/
+Cavernae/Cavernae/
 Sandbox/Sandbox/
 Makefile
 *.venv/

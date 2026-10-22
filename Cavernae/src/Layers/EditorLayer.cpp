@@ -53,13 +53,13 @@ namespace Vesper {
 		{
 			/// TODO: move to resource manager
 			/// TODO: fix pathing
-			m_CheckerboardTexture = Texture2D::Create("Vesper-Editor/assets/textures/Checkerboard.png");
-			/*m_SpriteSheetFire = Texture2D::Create("../../Vesper-Editor/assets/textures/sheets/fire_01.png");
-			m_SpriteSheetSmoke = Texture2D::Create("../../Vesper-Editor/assets/textures/sheets/fire_02.png");
-			m_SpriteSheetTown = Texture2D::Create("../../Vesper-Editor/assets/textures/sheets/town_tilesheet.png");
-			m_SpriteSheetCrystals = Texture2D::Create("../../Vesper-Editor/assets/textures/sheets/craftpix/Crystals/Crystals.png");
-			m_SpriteSheetRocks = Texture2D::Create("../../Vesper-Editor/assets/textures/sheets/craftpix/Rocks/Rocks_source.png");
-			m_SpriteSheetCursedLands = Texture2D::Create("../../Vesper-Editor/assets/textures/sheets/craftpix/CursedLand/Tiled_files/Objects.png");
+			m_CheckerboardTexture = Texture2D::Create("Cavernae/assets/textures/Checkerboard.png");
+			/*m_SpriteSheetFire = Texture2D::Create("../../Cavernae/assets/textures/sheets/fire_01.png");
+			m_SpriteSheetSmoke = Texture2D::Create("../../Cavernae/assets/textures/sheets/fire_02.png");
+			m_SpriteSheetTown = Texture2D::Create("../../Cavernae/assets/textures/sheets/town_tilesheet.png");
+			m_SpriteSheetCrystals = Texture2D::Create("../../Cavernae/assets/textures/sheets/craftpix/Crystals/Crystals.png");
+			m_SpriteSheetRocks = Texture2D::Create("../../Cavernae/assets/textures/sheets/craftpix/Rocks/Rocks_source.png");
+			m_SpriteSheetCursedLands = Texture2D::Create("../../Cavernae/assets/textures/sheets/craftpix/CursedLand/Tiled_files/Objects.png");
 
 			m_SubTextureFire = SubTexture2D::CreateFromCoords(m_SpriteSheetFire, { 1, 0 }, { 128, 127 });
 			m_SubTextureSmoke = SubTexture2D::CreateFromCoords(m_SpriteSheetSmoke, { 1, 0 }, { 128, 127 });
