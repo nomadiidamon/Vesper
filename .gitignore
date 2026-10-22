@@ -5,6 +5,7 @@ bin-int/
 Vesper/Vesper/
 Cavernae/Cavernae/
 Sandbox/Sandbox/
+Tests/Tests/
 Makefile
 *.venv/
 

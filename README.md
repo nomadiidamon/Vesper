@@ -106,6 +106,20 @@ Vesper::Application* Vesper::CreateApplication() {
 }
 ```
 
+## Tests
+
+Tests use GoogleTest/GoogleMock and live in `Tests/src`, mirroring the engine layout. Run them on Windows, Linux or macOS with:
+
+```
+python tools/run_tests.py [--config Debug|Release|Dist] [-- <gtest args>]
+```
+
+Output is also saved to `Tests/Tests/test_output.txt`.
+
+`scripts/RunTests.bat` and `scripts/run-tests.sh` are thin wrappers. The pre-commit hook runs the suite when engine, test or premake files are staged; set `SKIP_TESTS=1` to bypass it.
+
+A test that is expected to fail can be listed as `Suite.Name` in `Tests/known_failures.txt`. It runs separately and does not block commits.
+
 ## Documentation
 Documentation for this project was auto generated using Doxygen version 1.16.1 and can be found at the following: https://nomadiidamon.github.io/Vesper/
 

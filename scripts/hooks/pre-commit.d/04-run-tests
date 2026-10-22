@@ -1,0 +1,43 @@
+#!/bin/sh
+
+echo "Running tests..."
+
+if [ "$SKIP_TESTS" = "1" ]; then
+    echo "SKIP_TESTS=1 set, skipping tests."
+    exit 0
+fi
+
+RELEVANT=$(git diff --cached --name-only --diff-filter=ACMR | \
+  grep -E '^(Vesper|Tests|Cavernae)/|premake5\.lua$' || true)
+
+if [ -z "$RELEVANT" ]; then
+    echo "No engine, test or build files staged, skipping tests."
+    exit 0
+fi
+
+ROOT="$(git rev-parse --show-toplevel)"
+
+PY=""
+# Run each candidate; the Windows Store python3 stub passes `command -v` but fails to execute.
+for candidate in python3 python "py -3"; do
+    if $candidate -c "import sys" >/dev/null 2>&1; then
+        PY="$candidate"
+        break
+    fi
+done
+
+if [ -z "$PY" ]; then
+    echo "ERROR: no working Python found (tried python3, python, py -3)."
+    exit 1
+fi
+
+$PY "$ROOT/tools/run_tests.py"
+STATUS=$?
+
+if [ $STATUS -ne 0 ]; then
+    echo ""
+    echo "ERROR: tests failed. Fix them, list known failures in Tests/known_failures.txt, or set SKIP_TESTS=1."
+    exit 1
+fi
+
+exit 0

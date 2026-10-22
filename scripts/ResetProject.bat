@@ -33,6 +33,11 @@ if exist "Cavernae/Cavernae" (
     rmdir /S /Q "Cavernae/Cavernae"
 )
 
+if exist "Tests/Tests" (
+    echo Removing Tests/Tests...
+    rmdir /S /Q "Tests/Tests"
+)
+
 for %%F in (*.sln) do (
     echo Removing %%F...
     del /Q "%%F"

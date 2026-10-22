@@ -16,3 +16,7 @@
 [submodule "Vesper/vendor/ImGuizmo"]
 	path = Vesper/vendor/ImGuizmo
 	url = https://github.com/nomadiidamon/ImGuizmo
+[submodule "Vesper/vendor/googletest"]
+	path = Vesper/vendor/googletest
+	url = https://github.com/nomadiidamon/googletest
+	branch = vesper-premake

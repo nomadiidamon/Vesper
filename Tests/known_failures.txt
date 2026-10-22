@@ -1,0 +1,2 @@
+# Tests allowed to fail without blocking a commit, one GoogleTest name per line (Suite.Name).
+# Add a comment above each entry explaining why it fails.

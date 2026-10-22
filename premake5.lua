@@ -20,6 +20,8 @@ IncludeDir["Gateware"] = "%{wks.location}/Vesper/vendor/Gateware"
 IncludeDir["Glad"] = "%{wks.location}/Vesper/vendor/Glad/include"
 IncludeDir["GLFW"] = "%{wks.location}/Vesper/vendor/GLFW/include"
 IncludeDir["glm"] = "%{wks.location}/Vesper/vendor/glm"
+IncludeDir["googletest"] = "%{wks.location}/Vesper/vendor/googletest/googletest/include"
+IncludeDir["googlemock"] = "%{wks.location}/Vesper/vendor/googletest/googlemock/include"
 IncludeDir["ImGui"] = "%{wks.location}/Vesper/vendor/imgui"
 IncludeDir["ImGuizmo"] = "%{wks.location}/Vesper/vendor/ImGuizmo"
 IncludeDir["stb_image"] = "%{wks.location}/Vesper/vendor/stb_image"
@@ -31,6 +33,7 @@ group "Dependencies"
 	include "Vesper/vendor/Glad"
 	include "Vesper/vendor/imgui"
 	include "Vesper/vendor/yaml-cpp"
+	include "Vesper/vendor/googletest"
 
 group ""
 
@@ -42,6 +45,11 @@ group ""
 
 group "Tools"
 	include "Cavernae"
+group ""
+
+
+group "Tests"
+	include "Tests"
 group ""
 
 
