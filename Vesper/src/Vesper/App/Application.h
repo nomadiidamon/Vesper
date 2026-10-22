@@ -10,7 +10,7 @@
 #include "Vesper/Events/Event.h"
 #include "Vesper/Core/Timestep.h"
 #include "Vesper/App/LayerStack.h"
-#include "Vesper/ImGui/ImGuiLayer.h"
+#include "Vesper/GUI/ImGui/ImGuiLayer.h"
 #include "Vesper/App/ResourceManager.h"
 
 

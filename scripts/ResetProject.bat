@@ -23,6 +23,16 @@ if exist "bin-int" (
     rmdir /S /Q "bin-int"
 )
 
+if exist "Vesper/Vesper" (
+    echo Removing Vesper/Vesper...
+    rmdir /S /Q "Vesper/Vesper"
+)
+
+if exist "Cavernae/Cavernae" (
+    echo Removing Cavernae/Cavernae...
+    rmdir /S /Q "Cavernae/Cavernae"
+)
+
 for %%F in (*.sln) do (
     echo Removing %%F...
     del /Q "%%F"

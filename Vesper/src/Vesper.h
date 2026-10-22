@@ -27,8 +27,8 @@
 #include "Vesper/Input/MouseButtonCodes.h"
 
 /// GUI
-/// @todo Abstract this to OpenGL/DirectX/Vulkan etc ImGui layers
-#include "Vesper/ImGui/ImGuiLayer.h"					
+/// @todo Abstract this to Vulkan/NVRHI ImGui layers
+#include "Vesper/GUI/ImGui/ImGuiLayer.h"					
 
 #include "Vesper/ParticleSystem/ParticleSystem.h"		
 

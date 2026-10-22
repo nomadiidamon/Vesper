@@ -40,6 +40,11 @@ namespace Vesper {
 		/// @brief Returns the current rendering API.
 		inline static API GetAPI() { return s_API; }
 	private:
+		friend class Application;
+		/// @brief Selects the API at startup only; changing it at runtime requires a renderer restart.
+		/// @todo Implement renderer restart so the API can be switched after initialization.
+		inline static void SetAPI(API api) { s_API = api; }
+
 		static API s_API;
 	};
 

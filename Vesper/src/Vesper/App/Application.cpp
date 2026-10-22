@@ -2,6 +2,7 @@
 #include "Application.h"
 #include "Vesper/Renderer/Renderer.h"
 #include "Vesper/Input/Input.h"
+#include "Vesper/GUI/ImGui/OpenGL/ImGuiLayer_OpenGL.h"
 
 /// @file Application.cpp
 /// @author Damon S. Green II
@@ -14,6 +15,18 @@ namespace Vesper {
 
 	Application* Application::s_Instance = nullptr;
 
+	static ImGuiLayer* CreateImGuiLayer(RendererAPI::API api)
+	{
+		switch (api)
+		{
+			case RendererAPI::API::OpenGL: return new ImGuiLayer_OpenGL();
+			default: break;
+		}
+
+		VZ_CORE_ASSERT(false, "Unsupported RendererAPI for ImGuiLayer!");
+		return nullptr;
+	}
+
 
 	Application::Application(const std::string& name)
 	{
@@ -25,13 +38,11 @@ namespace Vesper {
 		m_Window->SetEventCallback(BIND_EVENT_FN(OnEvent));
 		m_Window->SetVSync(false);
 
-		m_ImGuiLayer = new ImGuiLayer();
-		PushOverlay(m_ImGuiLayer);
-
 		m_Settings = CreateScope<ApplicationSettings>(ApplicationSettings());
 		m_Settings->ApplicationName = name;
 		m_Settings->Width = m_Window->GetWidth();
 		m_Settings->Height = m_Window->GetHeight();
+		RendererAPI::SetAPI(m_Settings->RendererAPIType);
 
 		m_ResourceManager = CreateScope<ResourceManager>(ResourceManager(*m_Settings));
 
@@ -41,6 +52,10 @@ namespace Vesper {
 			VZ_CORE_ERROR("Application::InitFileSystem() was not successful. Message: {0}", result.ResultMessage);
 			VZ_CORE_ASSERT(false, result.ReturnError());
 		}
+
+		// Created after the ResourceManager is initialized since OnAttach loads fonts
+		m_ImGuiLayer = CreateImGuiLayer(m_Settings->RendererAPIType);
+		PushOverlay(m_ImGuiLayer);
 
 		Renderer::Init();
 	}
@@ -56,6 +71,7 @@ namespace Vesper {
 		m_Window->SetVSync(false);
 
 		m_Settings = CreateScope<ApplicationSettings>(settings);
+		RendererAPI::SetAPI(m_Settings->RendererAPIType);
 		if (m_Settings->RendererAPIType == RendererAPI::API::None)
 		{
 			m_Settings->EnableImGui = false;
@@ -73,7 +89,7 @@ namespace Vesper {
 		// Create the ImGui layer after  the ResourceManager has been initialized, and only if ImGui is enabled in the settings
 		if (m_Settings->EnableImGui)
 		{
-			m_ImGuiLayer = new ImGuiLayer();
+			m_ImGuiLayer = CreateImGuiLayer(m_Settings->RendererAPIType);
 			PushOverlay(m_ImGuiLayer);
 		}
 		else {
